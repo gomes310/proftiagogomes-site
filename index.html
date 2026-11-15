@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prof. Tiago Gomes — Raciocínio Lógico para concursos</title>
+<meta name="description" content="Raciocínio Lógico para concursos, questão por questão. Aulas grátis no YouTube, materiais por banca e questões comentadas no seu e-mail.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --papel: #F1F4F8;
+    --folha: #FFFFFF;
+    --tinta: #172238;
+    --tinta-2: #4E5A70;
+    --linha: #CDD5E1;
+    --marca: #FFD84D;
+    --verde: #1E7A4C;
+    --erro: #B3261E;
+    --raio: 6px;
+    --fonte: 'Familjen Grotesk', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--papel); color: var(--tinta); font-family: var(--fonte); font-size: 18px; line-height: 1.55; }
+  a { color: var(--tinta); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; }
+  .wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+
+  /* Cabeçalho */
+  .topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; }
+  .marca { font-weight: 700; font-size: 19px; text-decoration: none; letter-spacing: -0.01em; }
+  .topo nav { display: flex; gap: 22px; font-size: 16px; }
+  .topo nav a { text-decoration: none; color: var(--tinta-2); }
+  .topo nav a:hover { color: var(--tinta); text-decoration: underline; }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; padding: 48px 0 88px; }
+  .hero h1 { font-size: clamp(40px, 5.6vw, 68px); line-height: 1.02; letter-spacing: -0.035em; margin: 0 0 22px; font-weight: 700; }
+  .hero p.lead { font-size: 20px; color: var(--tinta-2); max-width: 34ch; margin: 0 0 30px; }
+  .acoes { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 26px; border-radius: var(--raio); font: 600 17px var(--fonte); text-decoration: none; cursor: pointer; border: 2px solid var(--tinta); }
+  .btn-pri { background: var(--tinta); color: var(--folha); }
+  .btn-pri:hover { background: #24345A; }
+  .btn-sec { background: transparent; color: var(--tinta); }
+  .btn-sec:hover { background: var(--folha); }
+  .prova { margin-top: 26px; font-size: 15px; color: var(--tinta-2); }
+  .prova b { color: var(--tinta); font-weight: 600; }
+
+  /* Tabela-verdade */
+  .folha { background: var(--folha); border: 1px solid var(--linha); border-radius: 10px; padding: 26px 26px 22px; box-shadow: 0 1px 0 var(--linha), 0 18px 40px -28px rgba(23,34,56,.45); }
+  .folha h2 { font-size: 17px; font-weight: 600; margin: 0 0 4px; }
+  .folha .dica { font-size: 15px; color: var(--tinta-2); margin: 0 0 18px; }
+  .conectivos { display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; }
+  .conectivos button { min-width: 64px; min-height: 44px; border: 1.5px solid var(--linha); background: var(--papel); border-radius: var(--raio); font: 600 20px var(--fonte); color: var(--tinta); cursor: pointer; }
+  .conectivos button[aria-pressed="true"] { border-color: var(--tinta); background: var(--tinta); color: var(--folha); }
+  table.tv { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  table.tv th { font-size: 18px; font-weight: 600; padding: 6px 0 10px; text-align: center; border-bottom: 1.5px solid var(--tinta); }
+  table.tv th.res { font-size: 19px; }
+  table.tv td { text-align: center; padding: 9px 0; border-bottom: 1px dashed var(--linha); }
+  table.tv tr:last-child td { border-bottom: 0; }
+  .bolha { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--tinta-2); font-weight: 600; font-size: 15px; color: var(--tinta-2); }
+  .bolha.v { color: var(--tinta); }
+  td.res .bolha { width: 38px; height: 38px; border-color: var(--tinta); color: var(--tinta); }
+  td.res .bolha.v { background: var(--marca); border-color: var(--tinta); }
+  .leitura { margin: 16px 0 0; font-size: 15px; color: var(--tinta-2); min-height: 3em; }
+  .leitura b { color: var(--tinta); }
+
+  /* Seções */
+  section.bloco { padding: 84px 0; border-top: 1px solid var(--linha); }
+  .bloco h2 { font-size: clamp(30px, 3.6vw, 42px); line-height: 1.1; letter-spacing: -0.025em; margin: 0 0 14px; font-weight: 700; max-width: 22ch; }
+  .bloco .sub { color: var(--tinta-2); max-width: 56ch; margin: 0 0 36px; }
+
+  /* Formulário */
+  .inscricao { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .lista-ganhos { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+  .lista-ganhos li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; }
+  .lista-ganhos li::before { content: ""; width: 18px; height: 18px; margin-top: 4px; border-radius: 50%; border: 1.5px solid var(--tinta); background: var(--marca); }
+  form.cad { background: var(--folha); border: 1px solid var(--linha); border-radius: 10px; padding: 28px; display: grid; gap: 18px; }
+  .campo { display: grid; gap: 6px; }
+  .campo label { font-size: 15px; font-weight: 600; }
+  .campo input, .campo select { min-height: 50px; padding: 0 14px; border: 1.5px solid var(--linha); border-radius: var(--raio); font: 400 17px var(--fonte); color: var(--tinta); background: var(--folha); width: 100%; }
+  .campo input:focus, .campo select:focus { border-color: var(--tinta); }
+  .campo .msg { font-size: 14px; color: var(--erro); min-height: 0; }
+  .aceite { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: 15px; color: var(--tinta-2); align-items: start; }
+  .aceite input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--tinta); }
+  .oculto { position: absolute; left: -9999px; }
+  form.cad .btn { width: 100%; }
+  form.cad .btn[disabled] { opacity: .6; cursor: progress; }
+  .resultado { border-radius: var(--raio); padding: 14px 16px; font-size: 16px; }
+  .resultado.ok { background: #E6F4EC; color: var(--verde); }
+  .resultado.falha { background: #FBEAE8; color: var(--erro); }
+
+  /* Bancas */
+  .bancas { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); column-gap: 28px; border-top: 1.5px solid var(--tinta); }
+  .bancas a { display: flex; flex-direction: column; gap: 2px; padding: 16px 4px; border-bottom: 1px solid var(--linha); text-decoration: none; font-weight: 600; font-size: 19px; line-height: 1.3; }
+  .bancas a span { font-weight: 400; font-size: 15px; color: var(--tinta-2); }
+  .bancas a:hover { background: var(--folha); }
+  .guia { margin-top: 40px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; background: var(--tinta); color: var(--folha); border-radius: 10px; padding: 30px 32px; }
+  .guia h3 { margin: 0 0 6px; font-size: 24px; letter-spacing: -0.015em; }
+  .guia p { margin: 0; color: #C8D1E2; max-width: 52ch; }
+  .guia .btn { background: var(--marca); color: var(--tinta); border-color: var(--marca); }
+  .guia .btn:hover { background: #FFE27A; }
+
+  /* Sobre */
+  .sobre { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: start; }
+  .sobre p { margin: 0 0 16px; max-width: 58ch; }
+  .numeros { display: grid; gap: 22px; margin: 0; }
+  .numeros div { border-left: 3px solid var(--marca); padding-left: 16px; }
+  .numeros dt { font-size: 15px; color: var(--tinta-2); }
+  .numeros dd { margin: 0; font-size: 34px; font-weight: 700; letter-spacing: -0.02em; }
+
+  footer { padding: 40px 0 56px; border-top: 1px solid var(--linha); font-size: 15px; color: var(--tinta-2); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+
+  @media (max-width: 900px) {
+    .hero, .inscricao, .sobre { grid-template-columns: 1fr; gap: 40px; }
+    .hero { padding-top: 16px; }
+    .guia { grid-template-columns: 1fr; }
+    .topo nav { display: none; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    td.res .bolha { transition: background-color .25s ease; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap topo">
+  <a class="marca" href="/">Prof. Tiago Gomes</a>
+  <nav aria-label="Seções">
+    <a href="#questoes">Questões grátis</a>
+    <a href="#materiais">Materiais por banca</a>
+    <a href="#sobre">Sobre</a>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <div>
+      <h1>Raciocínio Lógico para concursos, questão por questão.</h1>
+      <p class="lead">Aulas grátis no YouTube, materiais organizados por banca e questões comentadas no seu e-mail toda semana.</p>
+      <div class="acoes">
+        <a class="btn btn-pri" href="#questoes">Receber questões comentadas</a>
+        <a class="btn btn-sec" href="https://www.youtube.com/@proftiagogomes">Ver as aulas no YouTube</a>
+      </div>
+      <p class="prova">Mais de <b>46 mil inscritos</b> e <b>5,6 milhões de visualizações</b> no canal.</p>
+    </div>
+
+    <div class="folha" aria-labelledby="tv-titulo">
+      <h2 id="tv-titulo">Tabela-verdade</h2>
+      <p class="dica">Escolha um conectivo e veja quando a proposição composta é verdadeira.</p>
+      <div class="conectivos" role="group" aria-label="Conectivo">
+        <button type="button" data-op="e" aria-pressed="false" aria-label="Conjunção, e">∧</button>
+        <button type="button" data-op="ou" aria-pressed="false" aria-label="Disjunção, ou">∨</button>
+        <button type="button" data-op="se" aria-pressed="true" aria-label="Condicional, se então">→</button>
+        <button type="button" data-op="sse" aria-pressed="false" aria-label="Bicondicional, se e somente se">↔</button>
+      </div>
+      <table class="tv">
+        <thead><tr><th scope="col">p</th><th scope="col">q</th><th scope="col" class="res" id="tv-expr">p → q</th></tr></thead>
+        <tbody id="tv-corpo"></tbody>
+      </table>
+      <p class="leitura" id="tv-leitura" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="bloco" id="questoes">
+    <div class="wrap inscricao">
+      <div>
+        <h2>Questões comentadas no seu e-mail</h2>
+        <p class="sub">Uma vez por semana, sem enrolação. Você escolhe a banca e recebe o que mais cai nela.</p>
+        <ul class="lista-ganhos">
+          <li>Questões resolvidas passo a passo da banca que você vai enfrentar.</li>
+          <li>Aviso quando sair edital com Raciocínio Lógico.</li>
+          <li>Material novo antes de ir para a loja.</li>
+        </ul>
+      </div>
+
+      <form class="cad" id="form-inscricao" novalidate>
+        <div class="campo">
+          <label for="f-nome">Seu primeiro nome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="given-name" maxlength="60">
+        </div>
+        <div class="campo">
+          <label for="f-email">Seu melhor e-mail</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-msg">
+          <span class="msg" id="f-email-msg"></span>
+        </div>
+        <div class="campo">
+          <label for="f-banca">Banca da sua prova</label>
+          <select id="f-banca" name="banca">
+            <option value="">Ainda não sei</option>
+            <option>IDECAN</option><option>AOCP</option><option>FGV</option><option>CEBRASPE</option>
+            <option>IBFC</option><option>Fundatec</option><option>IBGP</option><option>Legalle</option>
+            <option>MS CONCURSOS</option><option>Vunesp</option><option>FCC</option><option>Outra</option>
+          </select>
+        </div>
+        <div class="oculto" aria-hidden="true"><label>Não preencha<input name="site" tabindex="-1" autocomplete="off"></label></div>
+        <label class="aceite">
+          <input type="checkbox" name="aceite" id="f-aceite">
+          <span>Quero receber e-mails do Prof. Tiago Gomes. Posso sair quando quiser, com um clique. <a href="/privacidade.html">Como uso seus dados</a>.</span>
+        </label>
+        <button class="btn btn-pri" type="submit" id="f-enviar">Receber questões comentadas</button>
+        <div class="resultado" id="f-resultado" role="status" hidden></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="bloco" id="materiais">
+    <div class="wrap">
+      <h2>Materiais por banca</h2>
+      <p class="sub">Ebooks com questões gabaritadas e resolvidas, separados pela banca que vai aplicar a sua prova.</p>
+      <div class="bancas">
+        <a href="https://proftiagogomes.my.canva.site/">AOCP <span>questões resolvidas</span></a>
+        <a href="https://proftiagogomes.my.canva.site/">FGV <span>questões resolvidas</span></a>
+        <a href="https://proftiagogomes.my.canva.site/">IBFC <span>questões resolvidas</span></a>
+        <a href="https://proftiagogomes.my.canva.site/">CEBRASPE <span>questões resolvidas</span></a>
+        <a href="https://proftiagogomes.my.canva.site/">IBGP <span>questões gabaritadas</span></a>
+        <a href="https://proftiagogomes.my.canva.site/">Fundatec <span>questões gabaritadas</span></a>
+        <a href="https://proftiagogomes.my.canva.site/">Legalle <span>questões gabaritadas</span></a>
+        <a href="https://proftiagogomes.my.canva.site/">MS CONCURSOS <span>questões resolvidas</span></a>
+      </div>
+      <div class="guia">
+        <div>
+          <h3>Guia do Raciocínio Lógico para Concursos</h3>
+          <p>O conteúdo completo de RLM num só material: teoria direta e questões de várias bancas, para estudar do zero até a prova.</p>
+        </div>
+        <a class="btn" href="https://proftiagogomes.my.canva.site/">Conhecer o Guia</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="sobre">
+    <div class="wrap sobre">
+      <div>
+        <h2>Quem dá as aulas</h2>
+        <p>Sou o Tiago Gomes, professor de Raciocínio Lógico para concursos públicos. No canal, resolvo questões reais de prova, uma a uma, mostrando o caminho mais curto até a resposta.</p>
+        <p>Os materiais nasceram das dúvidas que mais aparecem nos comentários: cada ebook reúne as questões de uma banca ou de um tema, com gabarito e resolução.</p>
+      </div>
+      <dl class="numeros">
+        <div><dt>Inscritos no YouTube</dt><dd>46 mil</dd></div>
+        <div><dt>Visualizações</dt><dd>5,6 milhões</dd></div>
+        <div><dt>Vídeos publicados</dt><dd>4.900+</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 Prof. Tiago Gomes, Campo Grande (MS)</span>
+  <span><a href="/privacidade.html">Privacidade</a> &nbsp; <a href="https://www.youtube.com/@proftiagogomes">YouTube</a></span>
+</footer>
+
+<script>
+(function () {
+  // Tabela-verdade interativa
+  var ops = {
+    e:   { simb: '∧', nome: 'conjunção (e)', f: function (p, q) { return p && q; }, regra: 'só é verdadeira quando <b>p e q são verdadeiras</b>.' },
+    ou:  { simb: '∨', nome: 'disjunção (ou)', f: function (p, q) { return p || q; }, regra: 'só é falsa quando <b>p e q são falsas</b>.' },
+    se:  { simb: '→', nome: 'condicional (se… então)', f: function (p, q) { return !p || q; }, regra: 'só é falsa quando <b>p é verdadeira e q é falsa</b> — a famosa “Vera Fischer”.' },
+    sse: { simb: '↔', nome: 'bicondicional (se e somente se)', f: function (p, q) { return p === q; }, regra: 'é verdadeira quando <b>p e q têm o mesmo valor</b>.' }
+  };
+  var linhas = [[true, true], [true, false], [false, true], [false, false]];
+  var corpo = document.getElementById('tv-corpo');
+  var expr = document.getElementById('tv-expr');
+  var leitura = document.getElementById('tv-leitura');
+  function bolha(v) { var s = document.createElement('span'); s.className = 'bolha' + (v ? ' v' : ''); s.textContent = v ? 'V' : 'F'; return s; }
+  function desenhar(chave) {
+    var op = ops[chave];
+    expr.textContent = 'p ' + op.simb + ' q';
+    corpo.replaceChildren();
+    linhas.forEach(function (l) {
+      var tr = document.createElement('tr');
+      [l[0], l[1]].forEach(function (v) { var td = document.createElement('td'); td.append(bolha(v)); tr.append(td); });
+      var td = document.createElement('td'); td.className = 'res'; td.append(bolha(op.f(l[0], l[1]))); tr.append(td);
+      corpo.append(tr);
+    });
+    leitura.innerHTML = 'A ' + op.nome + ' ' + op.regra;
+    document.querySelectorAll('.conectivos button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.op === chave)); });
+  }
+  document.querySelectorAll('.conectivos button').forEach(function (b) { b.addEventListener('click', function () { desenhar(b.dataset.op); }); });
+  desenhar('se');
+
+  // Formulário de inscrição
+  var form = document.getElementById('form-inscricao');
+  var email = document.getElementById('f-email');
+  var msg = document.getElementById('f-email-msg');
+  var aceite = document.getElementById('f-aceite');
+  var botao = document.getElementById('f-enviar');
+  var res = document.getElementById('f-resultado');
+  function emailValido(v) { return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v.trim()); }
+  email.addEventListener('blur', function () { msg.textContent = email.value && !emailValido(email.value) ? 'Confira o e-mail: falta o @ ou o final (.com, .br).' : ''; });
+  function mostrar(tipo, texto) { res.hidden = false; res.className = 'resultado ' + tipo; res.textContent = texto; }
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (!emailValido(email.value)) { msg.textContent = 'Digite um e-mail válido para receber as questões.'; email.focus(); return; }
+    if (!aceite.checked) { mostrar('falha', 'Marque a caixa de autorização para receber os e-mails.'); aceite.focus(); return; }
+    botao.disabled = true; botao.textContent = 'Enviando…';
+    fetch('/api/inscrever', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nome: form.nome.value, email: email.value, banca: form.banca.value, site: form.site.value, aceite: true })
+    }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (x) {
+        if (x.ok) { form.reset(); mostrar('ok', 'Inscrição feita. As próximas questões comentadas chegam no seu e-mail.'); botao.textContent = 'Inscrição feita'; }
+        else { throw new Error(x.j && x.j.erro || 'falha'); }
+      })
+      .catch(function (e) {
+        mostrar('falha', e.message && e.message !== 'falha' ? e.message : 'Não foi possível registrar agora. Tente de novo em alguns minutos.');
+        botao.disabled = false; botao.textContent = 'Receber questões comentadas';
+      });
+  });
+})();
+</script>
+</body>
+</html>
