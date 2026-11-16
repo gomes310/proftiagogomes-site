@@ -332,7 +332,7 @@ for (const { caminho, html } of geradas) {
 }
 
 // versão nos arquivos de estilo: cada deploy força o navegador a baixar o CSS novo
-const VERSAO = (process.env.COMMIT_REF || Date.now().toString(36)).slice(0, 8);
+const VERSAO = (process.env.COMMIT_REF || process.env.CF_PAGES_COMMIT_SHA || Date.now().toString(36)).slice(0, 8);
 (function carimbar(d) {
   for (const f of readdirSync(d, { withFileTypes: true })) {
     const p = join(d, f.name);
@@ -354,4 +354,28 @@ ${[...fixas, ...geradas.map((g) => g.caminho)].map((c) => `  <url><loc>${SITE}${
 `;
 writeFileSync(join(DIST, 'sitemap.xml'), sitemap);
 writeFileSync(join(DIST, 'urls.txt'), [...fixas, ...geradas.map((g) => g.caminho)].map((c) => SITE + c).join('\n') + '\n');
+// cabeçalhos para a Cloudflare Pages (equivalente ao netlify.toml)
+writeFileSync(join(DIST, '_headers'), `/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+
+/assets/*
+  Cache-Control: public, max-age=604800
+`);
+
+// IndexNow: avisa Bing e outros buscadores no build de produção da Cloudflare (ligar com INDEXNOW_ATIVO=1)
+if (process.env.INDEXNOW_ATIVO === '1' && process.env.CF_PAGES_BRANCH === 'main') {
+  const CHAVE = 'ce41f06d84d18b931a56b37efb8e0c5c';
+  const urlList = [...fixas, ...geradas.map((g) => g.caminho)].map((c) => SITE + c);
+  try {
+    const r = await fetch('https://api.indexnow.org/indexnow', {
+      method: 'POST', headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify({ host: 'proftiagogomes.com.br', key: CHAVE, keyLocation: `${SITE}/${CHAVE}.txt`, urlList }),
+    });
+    console.log('IndexNow', r.status, urlList.length, 'URLs');
+  } catch (e) { console.log('IndexNow falhou', e.message); }
+}
 console.log(`OK: ${geradas.length} páginas geradas (${completas.length} questões, ${bancasComPagina.length} bancas, ${temasComPagina.length} temas). ${todas.length - completas.length} questões com lacunas ficaram de fora (data/lacunas.csv).`);
