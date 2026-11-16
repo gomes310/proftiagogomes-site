@@ -381,9 +381,9 @@
 (function () {
   // Tabela-verdade interativa
   var ops = {
-    e:   { simb: '∧', nome: 'conjunção (e)', f: function (p, q) { return p && q; }, regra: 'só é verdadeira quando <b>p e q são verdadeiras</b>.' },
-    ou:  { simb: '∨', nome: 'disjunção (ou)', f: function (p, q) { return p || q; }, regra: 'só é falsa quando <b>p e q são falsas</b>.' },
-    se:  { simb: '→', nome: 'condicional (se… então)', f: function (p, q) { return !p || q; }, regra: 'só é falsa quando <b>p é verdadeira e q é falsa</b> — a famosa “Vera Fischer”.' },
+    e:   { titulo: 'Conjunção', simb: '∧', nome: 'conjunção (e)', f: function (p, q) { return p && q; }, regra: 'só é verdadeira quando <b>p e q são verdadeiras</b>.' },
+    ou:  { titulo: 'Disjunção', simb: '∨', nome: 'disjunção (ou)', f: function (p, q) { return p || q; }, regra: 'só é falsa quando <b>p e q são falsas</b>.' },
+    se:  { titulo: 'Condicional', simb: '→', nome: 'condicional (se… então)', f: function (p, q) { return !p || q; }, regra: 'só é falsa quando <b>p é verdadeira e q é falsa</b> — a famosa “Vera Fischer”.' },
     xou: { titulo: 'Disjunção exclusiva', simb: '⊻', nome: 'disjunção exclusiva (ou… ou…)', f: function (p, q) { return p !== q; }, regra: 'é verdadeira quando <b>p e q têm valores diferentes</b>: só um dos dois pode ser verdadeiro.' },
     sse: { titulo: 'Bicondicional', simb: '↔', nome: 'bicondicional (se e somente se)', f: function (p, q) { return p === q; }, regra: 'é verdadeira quando <b>p e q têm o mesmo valor</b>.' }
   };
