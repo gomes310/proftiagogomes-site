@@ -29,12 +29,14 @@ async function idDaLista(chave) {
   if (process.env.BREVO_LISTA_LEADS) return Number(process.env.BREVO_LISTA_LEADS);
   if (listaEmCache) return listaEmCache;
   const r = await brevo(chave, 'GET', '/contacts/lists?limit=50');
+  if (r.status >= 300) console.error('Brevo listas', r.status, JSON.stringify(r.corpo));
   const lista = (r.corpo?.lists || []).find((l) => l.name === 'Leads YouTube');
   if (lista) return (listaEmCache = lista.id);
   const pastas = await brevo(chave, 'GET', '/contacts/folders?limit=10&offset=0');
   const pasta = pastas.corpo?.folders?.[0]?.id;
-  if (!pasta) return null;
+  if (!pasta) { console.error('Brevo pastas', pastas.status, JSON.stringify(pastas.corpo)); return null; }
   const nova = await brevo(chave, 'POST', '/contacts/lists', { name: 'Leads YouTube', folderId: pasta });
+  if (!nova.corpo?.id) console.error('Brevo criar lista', nova.status, JSON.stringify(nova.corpo));
   return nova.corpo?.id ? (listaEmCache = nova.corpo.id) : null;
 }
 
