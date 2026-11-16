@@ -116,8 +116,8 @@
   .fim { text-align: center; padding-top: 24px; }
   .fim .grande { font-size: 54px; letter-spacing: 6px; color: #C9A92B; margin: 0; }
   .fim .grande .apagada { color: var(--bloq); }
-  .placar { display: flex; justify-content: center; gap: 12px; margin: 18px 0; flex-wrap: wrap; }
-  .placar div { background: var(--folha); border: 1px solid var(--linha); border-radius: 12px; padding: 12px 18px; min-width: 120px; }
+  .placar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 18px auto; max-width: 420px; }
+  .placar div { background: var(--folha); border: 1px solid var(--linha); border-radius: 12px; padding: 12px 8px; }
   .placar b { display: block; font-size: 26px; }
   .placar small { color: var(--tinta-2); }
   .conquista { margin: 16px auto; max-width: 460px; background: var(--tinta); color: #fff; border-radius: 12px; padding: 18px; }
