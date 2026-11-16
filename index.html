@@ -199,7 +199,7 @@
     </div>
 
     <div class="folha" aria-labelledby="tv-titulo">
-      <h2 id="tv-titulo">Tabela-verdade</h2>
+      <h2 id="tv-titulo">Tabela-verdade da Condicional</h2>
       <p class="dica">Escolha um conectivo e veja quando a proposição composta é verdadeira.</p>
       <div class="conectivos" role="group" aria-label="Conectivo">
         <button type="button" data-op="e" aria-pressed="false" aria-label="Conjunção, e">∧</button>
@@ -384,8 +384,8 @@
     e:   { simb: '∧', nome: 'conjunção (e)', f: function (p, q) { return p && q; }, regra: 'só é verdadeira quando <b>p e q são verdadeiras</b>.' },
     ou:  { simb: '∨', nome: 'disjunção (ou)', f: function (p, q) { return p || q; }, regra: 'só é falsa quando <b>p e q são falsas</b>.' },
     se:  { simb: '→', nome: 'condicional (se… então)', f: function (p, q) { return !p || q; }, regra: 'só é falsa quando <b>p é verdadeira e q é falsa</b> — a famosa “Vera Fischer”.' },
-    xou: { simb: '⊻', nome: 'disjunção exclusiva (ou… ou…)', f: function (p, q) { return p !== q; }, regra: 'é verdadeira quando <b>p e q têm valores diferentes</b>: só um dos dois pode ser verdadeiro.' },
-    sse: { simb: '↔', nome: 'bicondicional (se e somente se)', f: function (p, q) { return p === q; }, regra: 'é verdadeira quando <b>p e q têm o mesmo valor</b>.' }
+    xou: { titulo: 'Disjunção exclusiva', simb: '⊻', nome: 'disjunção exclusiva (ou… ou…)', f: function (p, q) { return p !== q; }, regra: 'é verdadeira quando <b>p e q têm valores diferentes</b>: só um dos dois pode ser verdadeiro.' },
+    sse: { titulo: 'Bicondicional', simb: '↔', nome: 'bicondicional (se e somente se)', f: function (p, q) { return p === q; }, regra: 'é verdadeira quando <b>p e q têm o mesmo valor</b>.' }
   };
   var linhas = [[true, true], [true, false], [false, true], [false, false]];
   var corpo = document.getElementById('tv-corpo');
@@ -395,6 +395,7 @@
   function desenhar(chave) {
     var op = ops[chave];
     expr.textContent = 'p ' + op.simb + ' q';
+    document.getElementById('tv-titulo').textContent = 'Tabela-verdade da ' + op.titulo;
     corpo.replaceChildren();
     linhas.forEach(function (l) {
       var tr = document.createElement('tr');
