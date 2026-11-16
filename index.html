@@ -113,6 +113,19 @@
 
   footer { padding: 40px 0 56px; border-top: 1px solid var(--linha); font-size: 15px; color: var(--tinta-2); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
 
+  .videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px 24px; }
+  .video { display: grid; gap: 8px; text-decoration: none; }
+  .video img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--raio); border: 1px solid var(--linha); background: var(--linha); }
+  .video .v-tit { font-weight: 600; font-size: 18px; line-height: 1.3; }
+  .video .v-meta { font-size: 14px; color: var(--tinta-2); }
+  .video:hover .v-tit { text-decoration: underline; }
+  .series { margin-top: 48px; }
+  .series h3 { font-size: 22px; margin: 0 0 10px; letter-spacing: -0.015em; }
+  .series ul { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--tinta); }
+  .series li { display: grid; grid-template-columns: minmax(220px, 1fr) 2fr; gap: 4px 24px; padding: 14px 4px; border-bottom: 1px solid var(--linha); }
+  .series li a { font-weight: 600; }
+  .series li span { color: var(--tinta-2); font-size: 16px; }
+  .tv-link { margin: 14px 0 0; font-size: 15px; }
   .opcional { font-weight: 400; color: var(--tinta-2); }
   .aceite-msg { font-size: 14px; color: var(--erro); margin: -10px 0 0 32px; }
   .resultado.ok a { color: var(--verde); font-weight: 600; }
@@ -128,6 +141,7 @@
     .hero, .inscricao, .sobre { grid-template-columns: 1fr; gap: 40px; }
     .hero { padding-top: 16px; }
     .guia { grid-template-columns: 1fr; }
+    .series li { grid-template-columns: 1fr; }
     .topo { flex-wrap: wrap; padding-bottom: 8px; }
     .topo nav { width: 100%; overflow-x: auto; gap: 18px; padding-bottom: 6px; }
     .topo nav a { white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; }
@@ -148,6 +162,7 @@
   <a class="marca" href="/">Prof. Tiago Gomes</a>
   <nav aria-label="Seções">
     <a href="#questoes">Questões grátis</a>
+    <a href="#aulas">Aulas</a>
     <a href="#materiais">Materiais por banca</a>
     <a href="#sobre">Sobre</a>
   </nav>
@@ -162,7 +177,7 @@
         <a class="btn btn-pri" href="#questoes">Receber questões comentadas</a>
         <a class="btn btn-sec" href="https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ">Ver as aulas no YouTube</a>
       </div>
-      <p class="prova">Mais de <b>46 mil inscritos</b> e <b>5,6 milhões de visualizações</b> no canal.</p>
+      <p class="prova">Mais de <b>46 mil inscritos</b> e <b>5,7 milhões de visualizações</b> no canal.</p>
     </div>
 
     <div class="folha" aria-labelledby="tv-titulo">
@@ -179,6 +194,7 @@
         <tbody id="tv-corpo"></tbody>
       </table>
       <p class="leitura" id="tv-leitura" aria-live="polite"></p>
+      <p class="tv-link"><a href="https://www.youtube.com/watch?v=DjgHeLCanpg">Treine com 100 questões de tabela-verdade resolvidas</a></p>
     </div>
   </section>
 
@@ -210,7 +226,8 @@
             <option value="">Ainda não sei</option>
             <option>IDECAN</option><option>AOCP</option><option>FGV</option><option>CEBRASPE</option>
             <option>IBFC</option><option>Fundatec</option><option>IBGP</option><option>Legalle</option>
-            <option>MS CONCURSOS</option><option>Vunesp</option><option>FCC</option><option>Outra</option>
+            <option>MS CONCURSOS</option><option>Vunesp</option><option>FCC</option>
+            <option>Selecon</option><option>Consulplan</option><option>Cesgranrio</option><option>FUNDEP</option><option>Outra</option>
           </select>
         </div>
         <div class="oculto" aria-hidden="true"><label>Não preencha<input name="site" tabindex="-1" autocomplete="off"></label></div>
@@ -225,10 +242,57 @@
     </div>
   </section>
 
+  <section class="bloco" id="aulas">
+    <div class="wrap">
+      <h2>Aulões mais assistidos</h2>
+      <p class="sub">Cada aulão resolve dezenas de questões de concurso sobre um assunto, do início ao fim. Comece pelo assunto que mais te trava.</p>
+      <div class="videos">
+        <a class="video" href="https://www.youtube.com/watch?v=ryxofLmdqeI">
+          <img src="https://i.ytimg.com/vi/ryxofLmdqeI/mqdefault.jpg" alt="" width="320" height="180" loading="lazy">
+          <span class="v-tit">Proposições lógicas: 100 questões resolvidas</span>
+          <span class="v-meta">1h31 de aula · 140 mil visualizações</span>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=X9Z9xqFqsV0">
+          <img src="https://i.ytimg.com/vi/X9Z9xqFqsV0/mqdefault.jpg" alt="" width="320" height="180" loading="lazy">
+          <span class="v-tit">Conectivos lógicos: 100 questões resolvidas</span>
+          <span class="v-meta">1h16 de aula · 30 mil visualizações</span>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=-PC9G3zIkHc">
+          <img src="https://i.ytimg.com/vi/-PC9G3zIkHc/mqdefault.jpg" alt="" width="320" height="180" loading="lazy">
+          <span class="v-tit">Equivalências e negações: 100 questões resolvidas</span>
+          <span class="v-meta">2h53 de aula · 30 mil visualizações</span>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=DjgHeLCanpg">
+          <img src="https://i.ytimg.com/vi/DjgHeLCanpg/mqdefault.jpg" alt="" width="320" height="180" loading="lazy">
+          <span class="v-tit">Tabela-verdade: 100 questões resolvidas</span>
+          <span class="v-meta">4h06 de aula · 29 mil visualizações</span>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=KT5I1XQK_Nk">
+          <img src="https://i.ytimg.com/vi/KT5I1XQK_Nk/mqdefault.jpg" alt="" width="320" height="180" loading="lazy">
+          <span class="v-tit">Análise combinatória: questões da banca IBFC</span>
+          <span class="v-meta">1h27 de aula · 28 mil visualizações</span>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=_4KjMjdl7BQ">
+          <img src="https://i.ytimg.com/vi/_4KjMjdl7BQ/mqdefault.jpg" alt="" width="320" height="180" loading="lazy">
+          <span class="v-tit">Argumentação lógica: 50 questões de todo, algum e nenhum</span>
+          <span class="v-meta">1h51 de aula · 16 mil visualizações</span>
+        </a>
+      </div>
+      <div class="series">
+        <h3>Séries em andamento no canal</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=dWEe53LcsFE">Banca IBGP, questão por questão</a><span>Proposições, operadores, tabela-verdade e equivalências. Novos vídeos toda semana.</span></li>
+          <li><a href="https://www.youtube.com/watch?v=w8049-aThFE">Verdades e mentiras</a><span>Questões de FGV, AOCP, Consulplan, FUNDEP e outras bancas.</span></li>
+          <li><a href="https://www.youtube.com/watch?v=kN9bvoWENQw">Banca MS CONCURSOS</a><span>Mais de 100 questões resolvidas da banca.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="bloco" id="materiais">
     <div class="wrap">
       <h2>Materiais por banca</h2>
-      <p class="sub">Escolha a banca da sua prova. Onde já existe material pago, o link leva direto à página de compra na Hotmart; nas outras, você cai nas aulas grátis daquela banca no canal.</p>
+      <p class="sub">O canal já resolveu questões de mais de 15 bancas. Escolha a da sua prova. Onde já existe material pago, o link leva direto à página de compra na Hotmart; nas outras, você cai nas aulas grátis daquela banca no canal.</p>
       <div class="bancas">
         <a href="https://go.hotmart.com/K101890013D?dp=1">IBFC <span>curso completo com PDFs e vídeos</span><span class="tag">Curso</span></a>
         <a href="https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ/search?query=IDECAN">IDECAN <span>aulas grátis no canal</span></a>
@@ -240,6 +304,11 @@
         <a href="https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ/search?query=Legalle">Legalle <span>aulas grátis no canal</span></a>
         <a href="https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ/search?query=MS+CONCURSOS">MS CONCURSOS <span>aulas grátis no canal</span></a>
         <a href="https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ/search?query=Vunesp">Vunesp <span>aulas grátis no canal</span></a>
+        <a href="https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ/search?query=Selecon">Selecon <span>aulas grátis no canal</span></a>
+        <a href="https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ/search?query=Consulplan">Consulplan <span>aulas grátis no canal</span></a>
+        <a href="https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ/search?query=Cesgranrio">Cesgranrio <span>aulas grátis no canal</span></a>
+        <a href="https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ/search?query=FUNDEP">FUNDEP <span>aulas grátis no canal</span></a>
+        <a href="https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ/search?query=FCC">FCC <span>aulas grátis no canal</span></a>
       </div>
       <div class="temas">
         <h3>Por assunto</h3>
@@ -259,8 +328,8 @@
       </div>
       <dl class="numeros">
         <div><dt>Inscritos no YouTube</dt><dd>46 mil</dd></div>
-        <div><dt>Visualizações</dt><dd>5,6 milhões</dd></div>
-        <div><dt>Vídeos publicados</dt><dd>4.900+</dd></div>
+        <div><dt>Visualizações</dt><dd>5,7 milhões</dd></div>
+        <div><dt>Vídeos publicados</dt><dd>4.950+</dd></div>
       </dl>
     </div>
   </section>

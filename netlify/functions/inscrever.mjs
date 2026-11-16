@@ -5,7 +5,7 @@
 
 const BREVO = 'https://api.brevo.com/v3';
 const EMAIL_OK = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
-const BANCAS = ['IDECAN', 'AOCP', 'FGV', 'CEBRASPE', 'IBFC', 'Fundatec', 'IBGP', 'Legalle', 'MS CONCURSOS', 'Vunesp', 'FCC', 'Outra'];
+const BANCAS = ['IDECAN', 'AOCP', 'FGV', 'CEBRASPE', 'IBFC', 'Fundatec', 'IBGP', 'Legalle', 'MS CONCURSOS', 'Vunesp', 'FCC', 'Selecon', 'Consulplan', 'Cesgranrio', 'FUNDEP', 'Outra'];
 
 const resposta = (status, corpo) => new Response(JSON.stringify(corpo), {
   status, headers: { 'Content-Type': 'application/json; charset=utf-8' }
