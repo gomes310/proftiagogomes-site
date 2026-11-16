@@ -1,6 +1,6 @@
 # App Trilha do RLM (Android)
 
-App Android da trilha de Raciocínio Lógico. Ele usa o mesmo código da página https://proftiagogomes.com.br/trilha/ e funciona sem internet. O progresso fica salvo no celular.
+App Android da trilha de Raciocínio Lógico. Ele usa o mesmo código React da página https://proftiagogomes.com.br/trilha/ (pasta `trilha-app/` do repositório do site): lições, missões do dia, painel do aluno, login por código no e-mail e ranking semanal. As lições funcionam sem internet; login e ranking precisam de conexão.
 
 - **Pacote:** `br.com.proftiagogomes.trilha` (não dá para mudar depois de publicar)
 - **Nome na loja:** Trilha do RLM
@@ -11,7 +11,7 @@ App Android da trilha de Raciocínio Lógico. Ele usa o mesmo código da página
 | Pasta / arquivo | Para que serve |
 |---|---|
 | `android/` | Projeto Android. É esta pasta que você abre no Android Studio. |
-| `www/` | A trilha já adaptada para o app. Não edite à mão: ela é gerada por `gerar-www.mjs`. |
+| `www/` | A trilha já compilada para o app. Não edite à mão: ela é gerada por `gerar-www.mjs`, que compila `../trilha-app` no modo app (sem links de compra). |
 | `assets/` | Ícone, tela de abertura e imagens para a Play Store. |
 | `assets/loja/` | 5 capturas de tela do celular para a página da loja. |
 | `LOJA.md` | Textos prontos para a página da Play Store. |

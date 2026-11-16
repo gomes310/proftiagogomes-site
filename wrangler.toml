@@ -1,0 +1,16 @@
+# Configuração da Cloudflare Pages (o site é montado por scripts/build.mjs)
+name = "proftiagogomes"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-11-01"
+
+# Banco da Trilha do RLM: contas, sessões e ranking (criado em 16/11/2026)
+[[d1_databases]]
+binding = "DB"
+database_name = "trilha-rlm"
+database_id = "a60b2805-51ad-4289-b436-2259bbcf21ca"
+migrations_dir = "migrations"
+
+# Segredos NÃO ficam aqui. Configure no painel da Cloudflare
+# (Workers & Pages > proftiagogomes > Settings > Variables and Secrets):
+#   BREVO_API_KEY  – chave da API do Brevo (envio do código de login)
+#   AUTH_SEGREDO   – um texto aleatório longo

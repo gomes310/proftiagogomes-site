@@ -4,6 +4,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(RAIZ, 'dist');
@@ -323,6 +324,15 @@ mkdirSync(DIST, { recursive: true });
 const ESTATICOS = ['index.html', 'privacidade.html', '404.html', 'robots.txt', 'llms.txt', 'guia', 'trilha', 'assets'];
 for (const f of ESTATICOS) if (existsSync(join(RAIZ, f))) cpSync(join(RAIZ, f), join(DIST, f), { recursive: true });
 for (const f of readdirSync(RAIZ)) if (/^[0-9a-f]{32}\.txt$/.test(f)) cpSync(join(RAIZ, f), join(DIST, f)); // chave do IndexNow
+
+// Trilha do RLM (app React em trilha-app/): compila e coloca em /trilha/, ao lado do roteiro e do PDF
+{
+  const APPDIR = join(RAIZ, 'trilha-app');
+  const sh = (c) => execSync(c, { cwd: APPDIR, stdio: 'inherit', env: { ...process.env, VITE_APP: '' } });
+  if (!existsSync(join(APPDIR, 'node_modules'))) sh('npm ci --no-audit --no-fund');
+  if (!process.env.PULAR_TRILHA) sh('npx vite build');
+  cpSync(join(APPDIR, 'dist'), join(DIST, 'trilha'), { recursive: true });
+}
 
 const geradas = [paginaHub(), paginaBancas(), ...bancasComPagina.map(paginaBanca), ...temasComPagina.map(paginaTema), ...completas.map(paginaQuestao)];
 for (const { caminho, html } of geradas) {
