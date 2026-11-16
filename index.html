@@ -70,10 +70,13 @@
   table.tv th.res { font-size: 19px; }
   table.tv td { text-align: center; padding: 9px 0; border-bottom: 1px dashed var(--linha); }
   table.tv tr:last-child td { border-bottom: 0; }
-  .bolha { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--tinta-2); font-weight: 600; font-size: 15px; color: var(--tinta-2); }
-  .bolha.v { color: var(--tinta); }
-  td.res .bolha { width: 38px; height: 38px; border-color: var(--tinta); color: var(--tinta); }
-  td.res .bolha.v { background: var(--marca); border-color: var(--tinta); }
+  .bolha { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #B3261E; background: #FBEAE8; font-weight: 700; font-size: 15px; color: #B3261E; }
+  .bolha.v { border-color: #1E7A4C; background: #E6F4EC; color: #1E7A4C; }
+  td.res .bolha { width: 38px; height: 38px; background: #B3261E; border-color: #B3261E; color: #fff; }
+  td.res .bolha.v { background: #1E7A4C; border-color: #1E7A4C; color: #fff; }
+  .legenda { display: flex; gap: 16px; margin: 0 0 14px; font-size: 14px; color: var(--tinta-2); }
+  .legenda span { display: inline-flex; align-items: center; gap: 6px; }
+  .legenda i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
   .leitura { margin: 16px 0 0; font-size: 15px; color: var(--tinta-2); min-height: 3em; }
   .leitura b { color: var(--tinta); }
 
@@ -201,9 +204,11 @@
       <div class="conectivos" role="group" aria-label="Conectivo">
         <button type="button" data-op="e" aria-pressed="false" aria-label="Conjunção, e">∧</button>
         <button type="button" data-op="ou" aria-pressed="false" aria-label="Disjunção, ou">∨</button>
+        <button type="button" data-op="xou" aria-pressed="false" aria-label="Disjunção exclusiva, ou… ou…">⊻</button>
         <button type="button" data-op="se" aria-pressed="true" aria-label="Condicional, se então">→</button>
         <button type="button" data-op="sse" aria-pressed="false" aria-label="Bicondicional, se e somente se">↔</button>
       </div>
+      <p class="legenda" aria-hidden="true"><span><i style="background:#1E7A4C"></i>V = verdadeiro</span><span><i style="background:#B3261E"></i>F = falso</span></p>
       <table class="tv">
         <thead><tr><th scope="col">p</th><th scope="col">q</th><th scope="col" class="res" id="tv-expr">p → q</th></tr></thead>
         <tbody id="tv-corpo"></tbody>
@@ -379,6 +384,7 @@
     e:   { simb: '∧', nome: 'conjunção (e)', f: function (p, q) { return p && q; }, regra: 'só é verdadeira quando <b>p e q são verdadeiras</b>.' },
     ou:  { simb: '∨', nome: 'disjunção (ou)', f: function (p, q) { return p || q; }, regra: 'só é falsa quando <b>p e q são falsas</b>.' },
     se:  { simb: '→', nome: 'condicional (se… então)', f: function (p, q) { return !p || q; }, regra: 'só é falsa quando <b>p é verdadeira e q é falsa</b> — a famosa “Vera Fischer”.' },
+    xou: { simb: '⊻', nome: 'disjunção exclusiva (ou… ou…)', f: function (p, q) { return p !== q; }, regra: 'é verdadeira quando <b>p e q têm valores diferentes</b>: só um dos dois pode ser verdadeiro.' },
     sse: { simb: '↔', nome: 'bicondicional (se e somente se)', f: function (p, q) { return p === q; }, regra: 'é verdadeira quando <b>p e q têm o mesmo valor</b>.' }
   };
   var linhas = [[true, true], [true, false], [false, true], [false, false]];
