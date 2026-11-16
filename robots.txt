@@ -1,0 +1,43 @@
+# Site público do Prof. Tiago Gomes: todo o conteúdo pode ser rastreado.
+# Buscadores e buscas com IA citados explicitamente para deixar a intenção clara.
+# Nenhuma regra para robôs de treinamento foi criada (não havia preferência anterior);
+# para bloquear, adicione por exemplo: "User-agent: GPTBot" + "Disallow: /".
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: redditbot
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://proftiagogomes.com.br/sitemap.xml

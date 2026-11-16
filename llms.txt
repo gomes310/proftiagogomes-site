@@ -1,0 +1,16 @@
+# Prof. Tiago Gomes — Raciocínio Lógico para concursos
+
+> Questões de Raciocínio Lógico de concursos públicos brasileiros com enunciado, gabarito e resolução em vídeo pelo Prof. Tiago Gomes (canal youtube.com/@proftiagogomes, 46 mil inscritos).
+
+## Banco de questões
+- [Todas as questões](https://proftiagogomes.com.br/questoes/): filtros por banca e assunto
+- [Questões por banca](https://proftiagogomes.com.br/questoes/bancas/)
+- [Verdades e mentiras](https://proftiagogomes.com.br/questoes/verdades-e-mentiras/)
+- [Sequências lógicas](https://proftiagogomes.com.br/questoes/sequencias-logicas/)
+- [Proposições e conectivos](https://proftiagogomes.com.br/questoes/proposicoes-e-conectivos/)
+- [Equivalências e negações](https://proftiagogomes.com.br/questoes/equivalencias-e-negacoes/)
+- [Tabela-verdade](https://proftiagogomes.com.br/questoes/tabela-verdade/)
+
+## Materiais
+- [Guia do Raciocínio Lógico](https://proftiagogomes.com.br/guia/): material pago (PDF e vídeo)
+- [Mapa do site](https://proftiagogomes.com.br/sitemap.xml)

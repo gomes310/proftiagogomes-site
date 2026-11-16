@@ -1,0 +1,3566 @@
+{
+ "fonte": "Descrições dos vídeos do canal youtube.com/@proftiagogomes (coletadas via vidIQ em 2026-11-16)",
+ "questoes": [
+  {
+   "video": "M2Q-EbXmYog",
+   "titulo_video": "Questão 85 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-17T16:04:44Z",
+   "duracao": "PT3M1S",
+   "prova": "MS (SARMENTO) - Prof (Pref Turvelândia)/Pref Turvelândia/Matemática/2023",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2023,
+   "orgao": "Pref Turvelândia",
+   "gabarito": "C",
+   "enunciado": "Na figura chamada de “Aritmongo”, o número que aparece em um quadrado é a soma dos números dentro dos círculos conectados a esse quadrado. Qual é o número do círculo indicado pela letra “z”?",
+   "alternativas": [
+    [
+     "a",
+     "14."
+    ],
+    [
+     "b",
+     "18."
+    ],
+    [
+     "c",
+     "22."
+    ],
+    [
+     "d",
+     "27."
+    ]
+   ],
+   "numero_serie": 85,
+   "lacunas": [
+    "enunciado depende de figura"
+   ],
+   "completa": false
+  },
+  {
+   "video": "aoil5pK-HVg",
+   "titulo_video": "Questão 6 Banca IBGP: Operadores Lógicos | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-03T17:14:59Z",
+   "duracao": "PT57S",
+   "prova": "IBGP - Fisc Mun (Pref Monte Negro)/Pref Monte Negro/2025",
+   "assunto": "Operadores Lógicos (Representação Simbólica; Diferença entre Proposição Simples e Composta)",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2025,
+   "orgao": "Pref Monte Negro",
+   "gabarito": "D",
+   "enunciado": "Considere as proposições:\n\nP: “Lúcio treina.”\n\nQ: “Marta nada.”\n\nA sentença “Lúcio treina se, e somente se, Marta nada” está representada CORRETAMENTE por:",
+   "alternativas": [
+    [
+     "a",
+     "p ∨ q"
+    ],
+    [
+     "b",
+     "p ∧ q"
+    ],
+    [
+     "c",
+     "p → q"
+    ],
+    [
+     "d",
+     "p ↔ q"
+    ]
+   ],
+   "numero_serie": 6,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "Rfky6yomYkA",
+   "titulo_video": "Questão 13 Banca IBGP: Tautologia | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-12T19:36:47Z",
+   "duracao": "PT4M7S",
+   "prova": "IBGP - Proc (CM P Velho)/CM Porto Velho/2026",
+   "assunto": "Tautologia, Contradição e Contingência",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Tautologia, contradição e contingência",
+   "tema_slug": "tautologia",
+   "ano": 2026,
+   "orgao": "CM Porto Velho",
+   "gabarito": "E",
+   "enunciado": "Analise as fórmulas a seguir:\n\nI) A ∨ ¬B\nII) ((A → B) ∧ B) → A\nIII) ((A ∨ B) ∧ ¬A) ∧ ¬A\nIV) ((A → B) ∧ (C → D)) ∧ ¬(A → D)\nV) P → ¬(P ∨ P)\n\nSão tautologias:",
+   "alternativas": [
+    [
+     "a",
+     "I e V"
+    ],
+    [
+     "b",
+     "I e III"
+    ],
+    [
+     "c",
+     "III e V"
+    ],
+    [
+     "d",
+     "Apenas I"
+    ],
+    [
+     "e",
+     "Nenhuma das anteriores"
+    ]
+   ],
+   "numero_serie": 13,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "62l4NCx7_8g",
+   "titulo_video": "Questão 98 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-30T16:58:11Z",
+   "duracao": "PT1M23S",
+   "prova": "MS (SARMENTO) - Ass (IF Sertão PE)/IF Sertão PE/Laboratório/2014",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2014,
+   "orgao": "IF Sertão PE",
+   "gabarito": "D",
+   "enunciado": "Observe que nos dois primeiros pares de palavras dadas a palavra da direita foi obtida da palavra da esquerda segundo determinado critério. Descubra esse critério para encontrar a palavra que deve ser colocada no lugar do ponto de interrogação.\n\nAumento → nem\nGoverno → rev\nPlaneta → ?",
+   "alternativas": [
+    [
+     "a",
+     "ane"
+    ],
+    [
+     "b",
+     "ate"
+    ],
+    [
+     "c",
+     "nal"
+    ],
+    [
+     "d",
+     "ena"
+    ],
+    [
+     "e",
+     "ten"
+    ]
+   ],
+   "numero_serie": 98,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "Olk1nXmHNV0",
+   "titulo_video": "Verdades e Mentiras: Questão 36 Banca Instituto Consulplan | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-15T19:11:26Z",
+   "duracao": "PT3M53S",
+   "prova": "Instituto Consulplan - Ana (Divinópolis)/Pref Divinópolis/Ambiental/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "Consulplan",
+   "banca_slug": "consulplan",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "Pref Divinópolis",
+   "gabarito": "B",
+   "enunciado": "Arthur, Bernardo, Celso e Diego são netos de Geralda e possuem 4, 6, 8 e 10 bolinhas de gude, mas não necessariamente nessa ordem. Quando questionados pela avó a respeito da quantidade de bolinhas de gude de cada um, responderam:\n\nArthur: Eu possuo 4 bolinhas de gude;\nBernardo: Eu possuo 10 bolinhas de gude;\nCelso: Arthur possui 8 bolinhas de gude;\nDiego: Eu possuo 8 bolinhas de gude.\n\nSe somente um dos quatro netos mentiu, de modo que os demais disseram a verdade, qual a soma das quantidades de bolinhas de gude de Arthur, Bernardo e Celso?",
+   "alternativas": [
+    [
+     "a",
+     "18."
+    ],
+    [
+     "b",
+     "20."
+    ],
+    [
+     "c",
+     "22."
+    ],
+    [
+     "d",
+     "24."
+    ]
+   ],
+   "numero_serie": 36,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "miexgtXP49k",
+   "titulo_video": "Questão 7 Banca IBGP: Operadores Lógicos | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-03T18:01:42Z",
+   "duracao": "PT1M41S",
+   "prova": "IBGP - Fisc Mun (Pref Monte Negro)/Pref Monte Negro/2025",
+   "assunto": "Operadores Lógicos (Representação Simbólica; Diferença entre Proposição Simples e Composta)",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2025,
+   "orgao": "Pref Monte Negro",
+   "gabarito": "B",
+   "enunciado": "Considere a proposição: “Se Gilmar corre e Priscila treina, então Rafael nada.”\n\nA representação simbólica para a proposição encontra-se CORRETAMENTE expressa em:",
+   "alternativas": [
+    [
+     "a",
+     "p → q"
+    ],
+    [
+     "b",
+     "(p ∧ q) → r"
+    ],
+    [
+     "c",
+     "(p ∨ q) → r"
+    ],
+    [
+     "d",
+     "p ↔ q"
+    ]
+   ],
+   "numero_serie": 7,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "TBbh0oXUn0E",
+   "titulo_video": "Questão 95 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-26T22:30:25Z",
+   "duracao": "PT4M27S",
+   "prova": "MS (SARMENTO) - Ag Fis (Mozarlândia)/Pref Mozarlândia/Municipal/2016",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2016,
+   "orgao": "Pref Mozarlândia",
+   "gabarito": "C",
+   "enunciado": "Seja (1,4,9,16...) uma sequência cuja lei de formação é An = n 2, para n ≥ 1. O número 10^8 é o penúltimo termo desta sequência. Dadas essas condições, o último termo dessa sequência é:",
+   "alternativas": [
+    [
+     "a",
+     "(10^8)²"
+    ],
+    [
+     "b",
+     "(10^4)²+ 1"
+    ],
+    [
+     "c",
+     "(10^4 + 1)²"
+    ],
+    [
+     "d",
+     "(10^8 + 1)²"
+    ]
+   ],
+   "numero_serie": 95,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "a1i8BXEboRo",
+   "titulo_video": "Verdades e Mentiras: Questão 38 Banca FUNDEP | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-26T13:33:04Z",
+   "duracao": "PT4M20S",
+   "prova": "FUNDEP - Tec (Pref 7 Lagoas)/Pref Sete Lagoas/Nível Superior/Administrador de Empresas/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "FUNDEP",
+   "banca_slug": "fundep",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "Pref Sete Lagoas",
+   "gabarito": "B",
+   "enunciado": "Dos quatro suspeitos de terem cometido um crime, apenas um responde sempre a verdade e os outros três respondem sempre mentira. É sabido que há um culpado e 3 inocentes nesse grupo. Ao serem interrogados, os quatro responderam à seguinte pergunta: “você é culpado?”\n\nSabendo que todos responderam utilizando apenas as repostas “sim” ou “não”, a quantidade exata de respostas “sim” pode ser igual a",
+   "alternativas": [
+    [
+     "a",
+     "2 ou 3."
+    ],
+    [
+     "b",
+     "2 ou 4."
+    ],
+    [
+     "c",
+     "3 ou 4."
+    ],
+    [
+     "d",
+     "2, 3 ou 4."
+    ]
+   ],
+   "numero_serie": 38,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "D7eD_tGqctY",
+   "titulo_video": "Questão 5 Banca IBGP: Operadores Lógicos | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-02T15:42:17Z",
+   "duracao": "PT5M54S",
+   "prova": "IBGP - Adv (CREA MA)/CREA MA/2025",
+   "assunto": "Operadores Lógicos (Representação Simbólica; Diferença entre Proposição Simples e Composta)",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2025,
+   "orgao": "CREA MA",
+   "gabarito": "B",
+   "enunciado": "“Se tomarmos café ou comermos um bolo, chegaremos atrasados à festa. No entanto, se isso for um problema, é melhor nos\napressarmos agora.”\n\nAssinale a alternativa que expressa CORRETAMENTE toda a afirmação em linguagem simbólica:",
+   "alternativas": [
+    [
+     "a",
+     "(F ∨ L) ∧ (A → C)"
+    ],
+    [
+     "b",
+     "(F ∨ L) → A) ∧ (C → T)"
+    ],
+    [
+     "c",
+     "(F ∨ L) → (A ∨ C)"
+    ],
+    [
+     "d",
+     "(F ∧ L) → A) ∧ (C → T)"
+    ],
+    [
+     "e",
+     "(F ∨ L) → A) ∨ (C → T)"
+    ]
+   ],
+   "numero_serie": 5,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "9bH8ClTmaWA",
+   "titulo_video": "Questão 91 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-25T13:49:07Z",
+   "duracao": "PT2M56S",
+   "prova": "MS (SARMENTO) - Tec Info (CRECI 1)/CRECI 1 (RJ)/2016",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2016,
+   "orgao": "CRECI 1 (RJ)",
+   "gabarito": "D",
+   "enunciado": "Observando as figuras a seguir, e sabendo que elas formam uma sequência infinita, que se repete sempre da mesma forma, é correto afirmar que a figura que aparece na 2016º posição é:",
+   "alternativas": [
+    [
+     "a",
+     ""
+    ],
+    [
+     "b",
+     ""
+    ],
+    [
+     "c",
+     ""
+    ],
+    [
+     "d",
+     ""
+    ]
+   ],
+   "numero_serie": 91,
+   "lacunas": [
+    "alternativas são imagens",
+    "enunciado depende de figura"
+   ],
+   "completa": false
+  },
+  {
+   "video": "HxiDGRAPLhc",
+   "titulo_video": "Questão 89 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-22T11:07:46Z",
+   "duracao": "PT3M26S",
+   "prova": "MS (SARMENTO) - Estag (CM POA)/CM POA/Ensino Superior/2017",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2017,
+   "orgao": "CM POA",
+   "gabarito": "B",
+   "enunciado": "Jarbas escreveu a sequência numérica “–12, –15, –21, –33, –57, ...” inspirado na sequência de Fibonacci. O oitavo elemento dessa sequência escrita por Jarbas é igual a:",
+   "alternativas": [
+    [
+     "a",
+     "–407"
+    ],
+    [
+     "b",
+     "–393"
+    ],
+    [
+     "c",
+     "–377"
+    ],
+    [
+     "d",
+     "–351"
+    ]
+   ],
+   "numero_serie": 89,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "kN9bvoWENQw",
+   "titulo_video": "Questão 100 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-10-01T13:37:47Z",
+   "duracao": "PT6M58S",
+   "prova": "MS (SARMENTO) - PEBTT (IF AC)/IF AC/Administração/2014",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2014,
+   "orgao": "IF AC",
+   "gabarito": "B",
+   "enunciado": "É dado um sistema pictográfico que consiste em substituir cada letra pela terceira que a antecede no alfabeto. Assim, por exemplo, a letra H deve ser substituída pela letra E. Considerando este sistema pictográfico, qual será o significado da mensagem a seguir?\n\n\"D qrlwhwrgrvrvjdwrvdsduhfhj\"",
+   "alternativas": [
+    [
+     "a",
+     "\"A noite todos os gatos somem\"."
+    ],
+    [
+     "b",
+     "\"A noite todos os gatos aparecem\"."
+    ],
+    [
+     "c",
+     "\"Anoite todos os ratos aparecem\"."
+    ],
+    [
+     "d",
+     "\"A noite todos os ratos dormem\"."
+    ]
+   ],
+   "numero_serie": 100,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "W3XzlIT2c1g",
+   "titulo_video": "Questão 15 Banca IBGP: Equivalências Lógicas | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-15T22:13:09Z",
+   "duracao": "PT3M28S",
+   "prova": "IBGP - Cont (Pref B Vista MG)/Pref B Vista MG/2026",
+   "assunto": "Equivalências Lógicas (Inclui Negação de Proposições Compostas)",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": 2026,
+   "orgao": "Pref B Vista MG",
+   "gabarito": "A",
+   "enunciado": "Uma cláusula contratual estabelece a seguinte premissa: \"Se a licitação for aprovada, então a obra iniciará imediatamente\".\n\nAssinale a alternativa que apresenta a proposição logicamente equivalente a essa diretriz administrativa.",
+   "alternativas": [
+    [
+     "a",
+     "Se a obra não iniciou imediatamente, então a licitação não foi aprovada."
+    ],
+    [
+     "b",
+     "A licitação foi aprovada e a obra não iniciou imediatamente."
+    ],
+    [
+     "c",
+     "Se a obra iniciou imediatamente, então a licitação foi aprovada."
+    ],
+    [
+     "d",
+     "A licitação não foi aprovada e a obra iniciou imediatamente."
+    ]
+   ],
+   "numero_serie": 15,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "GfKmOwbw_IY",
+   "titulo_video": "Verdades e Mentiras: Questão 29 Banca FGV | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-05T22:02:15Z",
+   "duracao": "PT4M51S",
+   "prova": "FGV - Ana Prev (MACAEPREV)/MACAEPREV/Administração/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "FGV",
+   "banca_slug": "fgv",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "MACAEPREV",
+   "gabarito": "E",
+   "enunciado": "Paulo, Ricardo, Sílvio e Tales deram, nessa ordem, as seguintes declarações:\nPaulo: “Eu sou professor”.\nRicardo: “Paulo não é professor”.\nSílvio: “Ricardo está mentindo”.\nTales: “Sílvio falou a verdade”.\nA respeito dessas declarações, é possível que",
+   "alternativas": [
+    [
+     "a",
+     "todos estejam mentindo."
+    ],
+    [
+     "b",
+     "todos estejam falando a verdade."
+    ],
+    [
+     "c",
+     "Paulo e Ricardo estejam ambos mentindo."
+    ],
+    [
+     "d",
+     "Ricardo e Sílvio estejam ambos mentindo."
+    ],
+    [
+     "e",
+     "Silvio e Tales estejam ambos mentindo."
+    ]
+   ],
+   "numero_serie": 29,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "nmV3-eoXRtU",
+   "titulo_video": "Verdades e Mentiras: Questão 28 Banca Instituto AOCP | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-05T18:27:29Z",
+   "duracao": "PT8M26S",
+   "prova": "Instituto AOCP - Ana (MPE PR)/MPE PR/Tecnologia da Informação/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "Instituto AOCP",
+   "banca_slug": "aocp",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "MPE PR",
+   "gabarito": "C",
+   "enunciado": "Em um experimento secreto, três androides idênticos: Alfa, Lambda e Sigma, dotados de inteligência artificial, foram testados exaustivamente. Após várias baterias de testes, foi possível perceber que duas das três máquinas adquiriram grande autonomia e eram capazes de mentir, enquanto a terceira máquina seguia falando apenas a verdade. Diante desse fato, novos testes deveriam ser conduzidos em um espaço com melhor tecnologia. Infelizmente, durante o transporte, os androides acabaram sendo misturados e não se sabia qual, entre eles, era qual. Dispostos lado a lado, cada androide fez uma declaração:\n\n• a máquina da esquerda disse “Eu sou Alfa”;\n• a máquina do centro disse “Eu não sou Alfa”;\n• a máquina da direita disse “Eu não sou Sigma”.\n\nSe os androides que têm capacidade de mentir fizeram afirmações falsas, então, é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "a máquina do centro é Sigma."
+    ],
+    [
+     "b",
+     "Lambda mente e Alfa mente."
+    ],
+    [
+     "c",
+     "Alfa está à direita ou Sigma mente."
+    ],
+    [
+     "d",
+     "Lambda mente e está à esquerda."
+    ],
+    [
+     "e",
+     "a ordem das máquinas, da esquerda para a direita, é: Alfa, Lambda e Sigma."
+    ]
+   ],
+   "numero_serie": 28,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "6545QpCwC1Y",
+   "titulo_video": "Verdades e Mentiras: Questão 34 Banca Instituto Consulplan | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-14T21:20:27Z",
+   "duracao": "PT5M22S",
+   "prova": "Instituto Consulplan - Enf (Pref Além Paraíba)/Pref Além Paraíba/PSF/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "Consulplan",
+   "banca_slug": "consulplan",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "Pref Além Paraíba",
+   "gabarito": "A",
+   "enunciado": "Durante um plantão, três médicos – Aluísio, Benjamin e César, estão discutindo sobre os tempos distintos de experiência profissional que possuem. Cada um fez a\nseguinte declaração:\nAluísio:  “Eu tenho mais anos de experiência do que Benjamin.”\nBenjamin: “César tem mais anos de experiência do que Aluísio.”\nCésar: “Aluísio tem o maior tempo de experiência de todos.”\nSabe-se que apenas uma dessas declarações é verdadeira, de modo que as demais são falsas. Dessa forma, é correto concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "César tem o maior tempo de experiência de todos."
+    ],
+    [
+     "b",
+     "Aluísio tem o maior tempo de experiência de todos."
+    ],
+    [
+     "c",
+     "Aluísio tem mais tempo de experiência do que César."
+    ],
+    [
+     "d",
+     "César tem menos tempo de experiência do que Benjamin."
+    ]
+   ],
+   "numero_serie": 34,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "csMY66XGZq4",
+   "titulo_video": "Questão 14 Banca IBGP: Equivalências Lógicas | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-14T15:40:40Z",
+   "duracao": "PT4M23S",
+   "prova": "IBGP - Proc (CM P Velho)/CM Porto Velho/2026",
+   "assunto": "Equivalências Lógicas (Inclui Negação de Proposições Compostas)",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": 2026,
+   "orgao": "CM Porto Velho",
+   "gabarito": "C",
+   "enunciado": "A linguagem formal, desenvolvida pelos lógicos, possui o objetivo de eliminar, sobretudo, três problemas causados pela\nlinguagem comum. São eles:\n\n(1) ambiguidade;\n(2) vaguidade;\n(3) redundância.\n\nConsiderando o que se afirmou anteriormente, a única alternativa equivalente, na linguagem da lógica proposicional, de forma\nCORRETA, para a afirmação de que não é fato que P assim como Q é:",
+   "alternativas": [
+    [
+     "a",
+     "¬(P ↔ Q)"
+    ],
+    [
+     "b",
+     "¬(P ∨ ¬Q)"
+    ],
+    [
+     "c",
+     "(¬P ∨ ¬Q)"
+    ],
+    [
+     "d",
+     "¬(P ∧ Q)"
+    ],
+    [
+     "e",
+     "¬(P → Q)"
+    ]
+   ],
+   "numero_serie": 14,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "jXTbx-ZQXro",
+   "titulo_video": "Questão 101 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-10-01T15:27:27Z",
+   "duracao": "PT2M52S",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": null,
+   "orgao": null,
+   "gabarito": "C",
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 101,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado"
+   ],
+   "completa": false
+  },
+  {
+   "video": "8L_rH7fQuic",
+   "titulo_video": "Verdades e Mentiras: Questão 39 Banca FUNDEP | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-30T17:23:06Z",
+   "duracao": "PT4M27S",
+   "prova": "FUNDEP - Tec (Pref 7 Lagoas)/Pref Sete Lagoas/Nível Superior/Auditor Técnico Fiscal de Tributos Municipais I/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "FUNDEP",
+   "banca_slug": "fundep",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "Pref Sete Lagoas",
+   "gabarito": "B",
+   "enunciado": "Leia a história fictícia a seguir.\n\n“Victor estava preso em um labirinto e se deparou com duas saídas indistinguíveis, cada uma guardada por um anjo. O Anjo da Luz guardava a saída do labirinto de volta para a família de Victor, enquanto o Anjo das Trevas guardava a saída para um abismo sem fundo. Enquanto o Anjo da Luz respondia a verdade para qualquer pergunta, o Anjo das Trevas sempre respondia a mentira. Ambos, indistinguíveis tais como as saídas que guardavam, só respondiam com ‘sim’ ou ‘não’ a cada pergunta. Victor se voltou a um dos anjos, sem saber qual ele era, e perguntou: ‘se eu fizer uma pergunta para o outro anjo, ele mentirá para mim?’”\n\nA resposta recebida por Victor na história narrada acima foi",
+   "alternativas": [
+    [
+     "a",
+     "‘não’, não importando para qual anjo ele fez a pergunta."
+    ],
+    [
+     "b",
+     "‘sim’, não importando para qual anjo ele fez a pergunta."
+    ],
+    [
+     "c",
+     "‘não’, caso ele tenha perguntado ao Anjo da Luz e ‘sim’, caso ele tenha perguntado ao ‘Anjo das Trevas’."
+    ],
+    [
+     "d",
+     "‘sim, caso ele tenha perguntado ao Anjo da Luz e ‘não, caso ele tenha perguntado ao ‘Anjo das Trevas’."
+    ]
+   ],
+   "numero_serie": 39,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "HSQrWRxZ6aI",
+   "titulo_video": "Questão 93 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-25T21:32:15Z",
+   "duracao": "PT5M5S",
+   "prova": "MS (SARMENTO) - Dsg (CRECI 1)/CRECI 1 (RJ)/2016",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2016,
+   "orgao": "CRECI 1 (RJ)",
+   "gabarito": "B",
+   "enunciado": "A sequência a seguir, foi construída seguindo um determinado critério.\n\nSe para as próximas figuras for mantido o mesmo critério, na 108ª posição, teremos:",
+   "alternativas": [
+    [
+     "a",
+     "35 bolinhas pretas"
+    ],
+    [
+     "b",
+     "36 bolinhas brancas"
+    ],
+    [
+     "c",
+     "37 bolinhas pretas"
+    ],
+    [
+     "d",
+     "36 bolinhas cinzas"
+    ]
+   ],
+   "numero_serie": 93,
+   "lacunas": [
+    "enunciado depende de figura"
+   ],
+   "completa": false
+  },
+  {
+   "video": "IrqaeiSmETI",
+   "titulo_video": "Questão 12 Banca IBGP: Tabela Verdade das Proposições Compostas | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-11T18:38:59Z",
+   "duracao": "PT3M13S",
+   "prova": "IBGP - GM (Pref Betim)/Pref Betim/2022",
+   "assunto": "Tabela Verdade das Proposições Compostas",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Tabela-verdade",
+   "tema_slug": "tabela-verdade",
+   "ano": 2022,
+   "orgao": "Pref Betim",
+   "gabarito": "B",
+   "enunciado": "Tendo-se como premissa que a proposição simples “agentes municipais são públicos” tenha valor falso, é CORRETO deduzir\nque o valor lógico da proposição “agentes municipais são públicos, logo devem ser concursados” é:",
+   "alternativas": [
+    [
+     "a",
+     "Falso."
+    ],
+    [
+     "b",
+     "Verdadeiro."
+    ],
+    [
+     "c",
+     "Inconclusivo."
+    ],
+    [
+     "d",
+     "Não se trata de uma proposição."
+    ]
+   ],
+   "numero_serie": 12,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "7qlmk3PULjM",
+   "titulo_video": "Verdades e Mentiras: Questão 35 Banca AVANÇASP | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-14T22:13:51Z",
+   "duracao": "PT2M54S",
+   "prova": "AVANÇASP - Ana RH (CM Osasco)/CM Osasco/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "AVANÇASP",
+   "banca_slug": "avancasp",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "CM Osasco",
+   "gabarito": "D",
+   "enunciado": "Em uma sala há cinco pessoas: Ana, Bruno, Carla, Daniel e Eduardo. Sabe-se que:\n\n•  Ana sempre fala a verdade.\n•  Bruno mente apenas às segundas-feiras.\n•  Carla mente apenas às quartas-feiras.\n•  Daniel sempre mente.\n•  Eduardo mente apenas aos sábados.\n\nSabe-se que numa quinta-feira uma dessas pessoas fez a seguinte afirmação: \"Bruno mentiu ontem.\" Quem fez essa afirmação foi:",
+   "alternativas": [
+    [
+     "a",
+     "Ana."
+    ],
+    [
+     "b",
+     "Bruno."
+    ],
+    [
+     "c",
+     "Carla."
+    ],
+    [
+     "d",
+     "Daniel."
+    ],
+    [
+     "e",
+     "Eduardo."
+    ]
+   ],
+   "numero_serie": 35,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "hbbJYP7uKOY",
+   "titulo_video": "Questão 84 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-17T14:06:01Z",
+   "duracao": "PT5M27S",
+   "prova": "MS (SARMENTO) - ACS (Pref Pontalina)/Pref Pontalina/2023",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2023,
+   "orgao": "Pref Pontalina",
+   "gabarito": null,
+   "enunciado": "Tendo como base o estudo de sequências numéricas, sabemos que algumas sequências podem ser descritas por uma fórmula que gera os seus termos. Essa fórmula é conhecida como lei de formação. Diante disto, dado a sequência (-3, -1, 1, 3, 5 ...) a lei de formação dessa sequência pode ser expressa da seguinte forma:",
+   "alternativas": [
+    [
+     "a",
+     "An =−2n −5."
+    ],
+    [
+     "b",
+     ".An =2n −5."
+    ],
+    [
+     "c",
+     "An =−2n +5."
+    ],
+    [
+     "d",
+     "An =2n +5."
+    ],
+    [
+     "e",
+     "An =5n −2."
+    ]
+   ],
+   "numero_serie": 84,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "tEj09bFrYoI",
+   "titulo_video": "Questão 92 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-25T21:29:29Z",
+   "duracao": "PT2M22S",
+   "prova": "MS (SARMENTO) - Sec Exe (CRECI 1)/CRECI 1 (RJ)/2016",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2016,
+   "orgao": "CRECI 1 (RJ)",
+   "gabarito": "D",
+   "enunciado": "Amanda escreveu em seu caderno as três sequências com letras:\n\nI – A, D, G, J, M.\nII – B, E, H, K, N.\nIII – C, ?, I, ?, O.\n\nConsiderando que tais sequências possuem determinada lógica, se substituirmos corretamente o símbolo “?” na sequência “III”, ela poderá ser reescrita de que maneira?",
+   "alternativas": [
+    [
+     "a",
+     "C, F, L, O."
+    ],
+    [
+     "b",
+     "C, L, M, O."
+    ],
+    [
+     "c",
+     "C, D, I, J, O."
+    ],
+    [
+     "d",
+     "C, F, I, L, O."
+    ]
+   ],
+   "numero_serie": 92,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "c-OUxb5heTo",
+   "titulo_video": "Questão 10 Banca IBGP: Tabela Verdade das Proposições Compostas | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-05T23:21:18Z",
+   "duracao": "PT3M37S",
+   "prova": "IBGP - Tec (CM Porto Velho)/CM Porto Velho/Informática/2026",
+   "assunto": "Tabela Verdade das Proposições Compostas",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Tabela-verdade",
+   "tema_slug": "tabela-verdade",
+   "ano": 2026,
+   "orgao": "CM Porto Velho",
+   "gabarito": "E",
+   "enunciado": "Considerando os valores lógicos de proposições simples p e q, é CORRETO afirmar que p ⊻ q (disjunção exclusiva) será\nfalsa somente quando:",
+   "alternativas": [
+    [
+     "a",
+     "p e q assumirem valores verdadeiros, restritamente."
+    ],
+    [
+     "b",
+     "p assumir valor verdadeiro e q assumir valor falso."
+    ],
+    [
+     "c",
+     "p assumir valor falso e q assumir valor verdadeiro."
+    ],
+    [
+     "d",
+     "p e q assumirem valores falsos, restritamente."
+    ],
+    [
+     "e",
+     "p e q assumirem valores lógicos iguais, sejam ambos verdadeiros ou ambos falsos."
+    ]
+   ],
+   "numero_serie": 10,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "i0NgTBLrm-A",
+   "titulo_video": "Questão 104 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-10-03T18:44:06Z",
+   "duracao": "PT4M13S",
+   "prova": "MS (SARMENTO) - PSTE (CRECI 14)/CRECI 14 (MS)/Contador/2015",
+   "assunto": "Princípio da Casa dos Pombos",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Princípio da casa dos pombos",
+   "tema_slug": "casa-dos-pombos",
+   "ano": 2015,
+   "orgao": "CRECI 14 (MS)",
+   "gabarito": "B",
+   "enunciado": "Uma viagem com todas as despesas pagas está sendo disputada por Ana e Bianca. A disputa consiste em lançar um dado honesto e verificar se o número da face voltada para cima é par ou ímpar. O dado será lançado seguidas vezes. Ana será declarada vencedora caso ocorram três resultados pares consecutivos, e Bianca será declarada vencedora caso ocorram três resultados ímpares, também consecutivos. Considere que tenha ocorrido resultado par em 20 lançamentos, sem que ainda tenha ocorrido uma vencedora para o jogo. Dessa forma, o número mínimo de lançamentos já realizados neste jogo é igual a:",
+   "alternativas": [
+    [
+     "a",
+     "30"
+    ],
+    [
+     "b",
+     "29"
+    ],
+    [
+     "c",
+     "28"
+    ],
+    [
+     "d",
+     "24"
+    ]
+   ],
+   "numero_serie": 104,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "-WV02ldlG-M",
+   "titulo_video": "Verdades e Mentiras: Questão 37 Banca Instituto Consulplan | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-26T12:20:54Z",
+   "duracao": "PT4M17S",
+   "prova": "Instituto Consulplan - Adv AS (Divinópolis)/Pref Divinópolis/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "Consulplan",
+   "banca_slug": "consulplan",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "Pref Divinópolis",
+   "gabarito": "A",
+   "enunciado": "Fernando, Cícero, Hamilton e Anderson são estagiários e atuam no setor de tecnologia da informação em uma instituição. Em determinado dia de trabalho, apenas um deles propagou, por descuido, um vírus no sistema. Ao notar os efeitos prejudiciais no sistema, o chefe do setor questionou os 5 estagiários se algum deles foi o responsável pela propagação do vírus. Ele obteve as seguintes respostas:\n\n∙ Fernando: Eu não propaguei o vírus no sistema;\n∙ Cícero: Foi o Fernando quem propagou o vírus no sistema;\n∙ Hamilton: Fernando está mentindo;\n∙ Anderson: Não foi Cícero quem propagou o vírus no sistema.\n\nSe somente um dos quatro estagiários disse a verdade e, consequentemente, os demais mentiram, quem propagou o vírus no sistema?",
+   "alternativas": [
+    [
+     "a",
+     "Cícero."
+    ],
+    [
+     "b",
+     "Hamilton."
+    ],
+    [
+     "c",
+     "Fernando."
+    ],
+    [
+     "d",
+     "Anderson."
+    ]
+   ],
+   "numero_serie": 37,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "3tTA24qwaqQ",
+   "titulo_video": "Questão 103 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-10-02T14:01:17Z",
+   "duracao": "PT4M51S",
+   "prova": "MS (SARMENTO) - Prof (Pref Pelotas)/Pref Pelotas/Matemática/2011",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2011,
+   "orgao": "Pref Pelotas",
+   "gabarito": "A",
+   "enunciado": "Considere k=1, 2, 3, ..., n. A soma de todos os números da forma 2k+3\né:",
+   "alternativas": [
+    [
+     "a",
+     "n²+4n."
+    ],
+    [
+     "b",
+     "n²+3n."
+    ],
+    [
+     "c",
+     "2n+3."
+    ],
+    [
+     "d",
+     "2n²+8n."
+    ]
+   ],
+   "numero_serie": 103,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "3ra5k_bHpT4",
+   "titulo_video": "Questão 97 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-30T14:42:21Z",
+   "duracao": "PT2M18S",
+   "prova": "MS (SARMENTO) - Ass (IF Sertão PE)/IF Sertão PE/Alunos/2014",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2014,
+   "orgao": "IF Sertão PE",
+   "gabarito": "C",
+   "enunciado": "Ana Cláudia pegou seu livro de matemática e achou nele várias sequências numéricas, uma delas estava faltando um número. Veja a sequência e descubra que número faltava para que ela ficasse completa: 625, 576, 529,        , 441, 400, 361.",
+   "alternativas": [
+    [
+     "a",
+     "444"
+    ],
+    [
+     "b",
+     "458"
+    ],
+    [
+     "c",
+     "484"
+    ],
+    [
+     "d",
+     "485"
+    ],
+    [
+     "e",
+     "500"
+    ]
+   ],
+   "numero_serie": 97,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "zEv9JnhVXVY",
+   "titulo_video": "Questão 2 Banca IBGP: Proposições | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-01T22:29:31Z",
+   "duracao": "PT4M11S",
+   "prova": "IBGP - Tec (CM Porto Velho)/CM Porto Velho/Informática/2026",
+   "assunto": "Proposições: Definição, Reconhecimento, Princípios Lógicos",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2026,
+   "orgao": "CM Porto Velho",
+   "gabarito": "D",
+   "enunciado": "Assinale a alternativa que apresenta uma sentença que NÃO representa uma proposição lógica.",
+   "alternativas": [
+    [
+     "a",
+     "Rondônia possui limites com outros estados brasileiros."
+    ],
+    [
+     "b",
+     "Porto Velho e Vilhena são municípios de Rondônia."
+    ],
+    [
+     "c",
+     "O sol está a 255 km da Terra."
+    ],
+    [
+     "d",
+     "Preserve o patrimônio histórico da cidade!"
+    ],
+    [
+     "e",
+     "O rio Madeira atravessa o município de Porto Velho."
+    ]
+   ],
+   "numero_serie": 2,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "bp21614cUYY",
+   "titulo_video": "Questão 16 Banca IBGP: Equivalências Lógicas | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-15T22:33:00Z",
+   "duracao": "PT2M40S",
+   "prova": "IBGP - Ana Prev (Carandaí-Prev)/Carandaí-Prev/2026",
+   "assunto": "Equivalências Lógicas (Inclui Negação de Proposições Compostas)",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": 2026,
+   "orgao": "Carandaí-Prev",
+   "gabarito": "A",
+   "enunciado": "A contrapositiva de \"Se chove, então o evento é cancelado\" é equivalente a:",
+   "alternativas": [
+    [
+     "a",
+     "Se o evento não é cancelado, então não chove"
+    ],
+    [
+     "b",
+     "Se não chove, então o evento não é cancelado"
+    ],
+    [
+     "c",
+     "Se o evento é cancelado, então chove"
+    ],
+    [
+     "d",
+     "Chove e o evento é cancelado"
+    ]
+   ],
+   "numero_serie": 16,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "L-nBNWpcuj0",
+   "titulo_video": "Verdades e Mentiras: Questão 32 Banca Instituto Consulplan | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-06T13:28:55Z",
+   "duracao": "PT4M16S",
+   "prova": "Instituto Consulplan - Ag Cont (CM Cotia)/CM Cotia/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "Consulplan",
+   "banca_slug": "consulplan",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "CM Cotia",
+   "gabarito": "D",
+   "enunciado": "Durante uma tarde de estudos, Lucas, Pedro e João estavam em um laboratório de química da escola quando, de repente, somente um deles deixou um dos frascos de vidro cair e quebrou. O professor, ao ouvir o barulho, pediu que os meninos explicassem quem foi o responsável pelo acidente:\n\n“Foi João!”, disse Lucas.\n\n“Fui eu!”, disse Pedro.\n\n“Foi Pedro!”, disse João.\n\nSabendo que apenas um dos meninos disse a verdade e que o professor tinha certeza de que Pedro mentiu, é correto afirmar que:",
+   "alternativas": [
+    [
+     "a",
+     "Lucas mentiu."
+    ],
+    [
+     "b",
+     "João disse a verdade."
+    ],
+    [
+     "c",
+     "Lucas quebrou o frasco."
+    ],
+    [
+     "d",
+     "João mentiu e quebrou o frasco."
+    ],
+    [
+     "e",
+     "Lucas mentiu e não quebrou frasco."
+    ]
+   ],
+   "numero_serie": 32,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "S3fgQTzUSkI",
+   "titulo_video": "Questão 94 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-26T21:58:25Z",
+   "duracao": "PT2M49S",
+   "prova": "MS (SARMENTO) - Prof (Pref Tremembé)/Pref Tremembé/6º ao 9º Ano/Matemática/2016",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2016,
+   "orgao": "Pref Tremembé",
+   "gabarito": "D",
+   "enunciado": "Uma propriedade lógica define a sequência de palavras: olá, como, estão, ? , amáveis.\n\nAssinale a alternativa em que consta a palavra que pode substituir corretamente o símbolo “?”:",
+   "alternativas": [
+    [
+     "a",
+     "Pessoas"
+    ],
+    [
+     "b",
+     "Vaquinhas"
+    ],
+    [
+     "c",
+     "Irmãs"
+    ],
+    [
+     "d",
+     "Amigos"
+    ]
+   ],
+   "numero_serie": 94,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "75rABE0nU3Y",
+   "titulo_video": "Questão 4 Banca IBGP: Operadores Lógicos | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-02T15:01:38Z",
+   "duracao": "PT1M32S",
+   "prova": "IBGP - Adv (CREA MA)/CREA MA/2025",
+   "assunto": "Operadores Lógicos (Representação Simbólica; Diferença entre Proposição Simples e Composta)",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2025,
+   "orgao": "CREA MA",
+   "gabarito": "D",
+   "enunciado": "Considere a seguinte afirmação: Fernanda passou no vestibular e Lucas conseguiu um emprego.\n\nSimbolicamente, é CORRETO afirmar que as proposições são representadas por:",
+   "alternativas": [
+    [
+     "a",
+     "~P ∨ Q"
+    ],
+    [
+     "b",
+     "P → Q"
+    ],
+    [
+     "c",
+     "P ∨ Q"
+    ],
+    [
+     "d",
+     "P ∧ Q"
+    ],
+    [
+     "e",
+     "P ↔ Q"
+    ]
+   ],
+   "numero_serie": 4,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "ukQT0s7G9Wo",
+   "titulo_video": "Verdades e Mentiras: Questão 33 Banca Instituto Verbena | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-07T16:22:04Z",
+   "duracao": "PT4M4S",
+   "prova": "Instituto Verbena - Tr (SEBRAE GO)/SEBRAE GO/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "Instituto Verbena",
+   "banca_slug": "verbena",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "SEBRAE GO",
+   "gabarito": "C",
+   "enunciado": "Leia o caso a seguir.\n\nQuatro estudantes: A., B., J. e P. combinaram de levar, cada um deles, uma maçã para a professora aniversariante, mas no dia do aniversário a professora recebeu apenas 3 maçãs.\n\nEles conversaram para descobrir quem não entregou a maçã:\n\n- Eu dei uma maçã, diz A.;\n\n- B. não deu uma maçã, diz P.;\n\n- P. não deu uma maçã, afirma J.;\n\n- J. não disse a verdade, diz B.\n\nElaborado pelo(a) autor(a).\n\nBaseado no fato de que apenas um deles não disse a verdade, os estudantes que entregaram as maçãs foram",
+   "alternativas": [
+    [
+     "a",
+     "B., J. e P."
+    ],
+    [
+     "b",
+     "B., A. e P."
+    ],
+    [
+     "c",
+     "A., J. e P."
+    ],
+    [
+     "d",
+     "A., B. e J."
+    ]
+   ],
+   "numero_serie": 33,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "LoSVZvx6toY",
+   "titulo_video": "Questão 90 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-25T01:18:52Z",
+   "duracao": "PT1M55S",
+   "prova": "MS (SARMENTO) - Tec Info (CRECI 1)/CRECI 1 (RJ)/2016",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2016,
+   "orgao": "CRECI 1 (RJ)",
+   "gabarito": "C",
+   "enunciado": "O número que completa a sequência 2, 5, 10, 17, 26, ___ é:",
+   "alternativas": [
+    [
+     "a",
+     "28"
+    ],
+    [
+     "b",
+     "33"
+    ],
+    [
+     "c",
+     "37"
+    ],
+    [
+     "d",
+     "41"
+    ]
+   ],
+   "numero_serie": 90,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "nxZXyEzMm48",
+   "titulo_video": "Questão 87 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-18T14:20:16Z",
+   "duracao": "PT1M27S",
+   "prova": "MS (SARMENTO) - Estag (CM POA)/CM POA/Ensino Superior/2018",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2018,
+   "orgao": "CM POA",
+   "gabarito": "B",
+   "enunciado": "Considere a sucessão abaixo:\n\n0, 1, 3, 7, 15, 31, ...\n\nQual será o valor do próximo termo?",
+   "alternativas": [
+    [
+     "a",
+     "46"
+    ],
+    [
+     "b",
+     "63"
+    ],
+    [
+     "c",
+     "47"
+    ],
+    [
+     "d",
+     "39"
+    ]
+   ],
+   "numero_serie": 87,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "rydw5Ga6ouU",
+   "titulo_video": "Questão 96 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-29T17:15:08Z",
+   "duracao": "PT2M",
+   "prova": "MS (SARMENTO) - Proc Jur (CM Jaru)/CM Jaru/2014",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2014,
+   "orgao": "CM Jaru",
+   "gabarito": "A",
+   "enunciado": "Dada a sequência numérica 9120, 1824, 456, 152, 76, ___; o número que completa esta sequência lógica é:",
+   "alternativas": [
+    [
+     "a",
+     "76"
+    ],
+    [
+     "b",
+     "38"
+    ],
+    [
+     "c",
+     "19"
+    ],
+    [
+     "d",
+     "1"
+    ]
+   ],
+   "numero_serie": 96,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "P8Uf9x3QZpM",
+   "titulo_video": "Questão 9 Banca IBGP: Operadores Lógicos | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-05T23:05:18Z",
+   "duracao": "PT3M24S",
+   "prova": "IBGP - Mon Mus (Pref Sarzedo)/Pref Sarzedo/2024",
+   "assunto": "Operadores Lógicos (Representação Simbólica; Diferença entre Proposição Simples e Composta)",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2024,
+   "orgao": "Pref Sarzedo",
+   "gabarito": "B",
+   "enunciado": "Traduza a seguinte sentença para a lógica simbólica:\n\nA:\"SePedroensinaeMariaestuda,entãoJorgenãofatura.\"\n\nA representação da sentença em linguagem simbólica é:",
+   "alternativas": [
+    [
+     "a",
+     "A:~ (p ∨ q) → r"
+    ],
+    [
+     "b",
+     "A:(p ∧ q) → ~ r"
+    ],
+    [
+     "c",
+     "A: p ∧ q ∨ r"
+    ],
+    [
+     "d",
+     "A:(p → q) ⊕ r"
+    ]
+   ],
+   "numero_serie": 9,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "zFW2Wy5FVPU",
+   "titulo_video": "Questão 3 Banca IBGP: Operadores Lógicos | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-02T14:43:05Z",
+   "duracao": "PT3M37S",
+   "prova": "IBGP - Ana Prev (Carandaí-Prev)/Carandaí-Prev/2026",
+   "assunto": "Operadores Lógicos (Representação Simbólica; Diferença entre Proposição Simples e Composta)",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2026,
+   "orgao": "Carandaí-Prev",
+   "gabarito": "B",
+   "enunciado": "“O candidato estudou, mas não foi aprovado” corresponde, em notação lógica (P = estudou; Q = aprovado), a:",
+   "alternativas": [
+    [
+     "a",
+     "P →∼Q"
+    ],
+    [
+     "b",
+     "P∧∼Q"
+    ],
+    [
+     "c",
+     "∼P ∧Q"
+    ],
+    [
+     "d",
+     "P ↔Q"
+    ]
+   ],
+   "numero_serie": 3,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "tGDE8xCOj1o",
+   "titulo_video": "Questão 102 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-10-02T13:06:54Z",
+   "duracao": "PT3M36S",
+   "prova": "MS (SARMENTO) - Asst (IF AC)/IF AC/Laboratório/2014",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2014,
+   "orgao": "IF AC",
+   "gabarito": "A",
+   "enunciado": "Considere a seguinte sequência de números naturais: 0, 1 , 2 , 3, 4, ... Pode-se afirmar que uma pessoa que está escrevendo esta sequência em uma folha de papel, escreverá o algarismo 3 pela 22ª segunda vez ao escrever o número:",
+   "alternativas": [
+    [
+     "a",
+     "113"
+    ],
+    [
+     "b",
+     "103"
+    ],
+    [
+     "c",
+     "93"
+    ],
+    [
+     "d",
+     "83"
+    ]
+   ],
+   "numero_serie": 102,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "y5hv5ds9s0Y",
+   "titulo_video": "Verdades e Mentiras: Questão 30 Banca FGV | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-05T23:27:10Z",
+   "duracao": "PT4M16S",
+   "prova": "FGV - Asst Prev (MACAEPREV)/MACAEPREV/Sem Área/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "FGV",
+   "banca_slug": "fgv",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "MACAEPREV",
+   "gabarito": "D",
+   "enunciado": "Aluísio, Benjamin e César têm idades distintas. Em certa ocasião, eles deram as seguintes declarações:\n\nAluísio: “Eu sou mais velho que Benjamin.”\n\nBenjamin: “César é mais velho que Aluísio.”\n\nCésar: “Aluísio é o mais velho dos três.”\n\nSe apenas um deles falou a verdade, então é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Aluísio é o mais velho dos três."
+    ],
+    [
+     "b",
+     "Benjamin é o mais velho dos três."
+    ],
+    [
+     "c",
+     "César é o mais velho dos três."
+    ],
+    [
+     "d",
+     "Aluísio é mais novo que César."
+    ],
+    [
+     "e",
+     "César é mais novo que Benjamin."
+    ]
+   ],
+   "numero_serie": 30,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "58J_TS9L9ow",
+   "titulo_video": "Questão 86 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-17T23:59:19Z",
+   "duracao": "PT3M39S",
+   "prova": "MS (SARMENTO) - Prof (Pref Mogi Mirim)/Pref Mogi Mirim/Educação Básica/Matemática/2022",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2022,
+   "orgao": "Pref Mogi Mirim",
+   "gabarito": "E",
+   "enunciado": "Considere a sequência: 5, 8, 11, 14, 17, ....; a expressão algébrica do termo geral dessa sequência é:",
+   "alternativas": [
+    [
+     "a",
+     "n²+4"
+    ],
+    [
+     "b",
+     "4n+1"
+    ],
+    [
+     "c",
+     "n²"
+    ],
+    [
+     "d",
+     "2n+3"
+    ],
+    [
+     "e",
+     "3n+2"
+    ]
+   ],
+   "numero_serie": 86,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "uHPBpL77d8w",
+   "titulo_video": "Questão 11 Banca IBGP: Tabela Verdade das Proposições Compostas | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-10T22:34:45Z",
+   "duracao": "PT2M47S",
+   "prova": "IBGP - ACI (Pref Igarapé)/Pref Igarapé/2026",
+   "assunto": "Tabela Verdade das Proposições Compostas",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Tabela-verdade",
+   "tema_slug": "tabela-verdade",
+   "ano": 2026,
+   "orgao": "Pref Igarapé",
+   "gabarito": "C",
+   "enunciado": "No setor de planejamento da Prefeitura de Igarapé-MG, três proposições simples foram estabelecidas para análise lógica:\n\nP: “O Plano Diretor foi revisado neste ano.”\n\nQ: “A audiência pública foi realizada.”\n\nR: “O relatório técnico foi aprovado.”\n\nAo se elaborar a tabela-verdade completa que contempla todas as combinações possíveis de valores lógicos dessas três\nproposições independentes, é correto afirmar que o total de linhas obtidas será:",
+   "alternativas": [
+    [
+     "a",
+     "4"
+    ],
+    [
+     "b",
+     "6"
+    ],
+    [
+     "c",
+     "8"
+    ],
+    [
+     "d",
+     "12"
+    ]
+   ],
+   "numero_serie": 11,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "vDH8TIwSKk0",
+   "titulo_video": "Questão 88 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-09-18T14:26:55Z",
+   "duracao": "PT2M24S",
+   "prova": "MS (SARMENTO) - Estag (CM POA)/CM POA/Ensino Superior/2017",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2017,
+   "orgao": "CM POA",
+   "gabarito": "C",
+   "enunciado": "Considere a palavra AMIGOS. Caso essa palavra seja repetida várias vezes, sendo escrita na forma “AMIGOSAMIGOSAMIGOS...”, a centésima septuagésima terceira letra a ser escrita será:",
+   "alternativas": [
+    [
+     "a",
+     "M"
+    ],
+    [
+     "b",
+     "G"
+    ],
+    [
+     "c",
+     "O"
+    ],
+    [
+     "d",
+     "S"
+    ]
+   ],
+   "numero_serie": 88,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "dWEe53LcsFE",
+   "titulo_video": "Questão 1 Banca IBGP: Proposições | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-01T18:20:00Z",
+   "duracao": "PT5M8S",
+   "prova": "IBGP - Tec (CM Porto Velho)/CM Porto Velho/Informática/2026",
+   "assunto": "Proposições: Definição, Reconhecimento, Princípios Lógicos",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2026,
+   "orgao": "CM Porto Velho",
+   "gabarito": "C",
+   "enunciado": "Sobre o uso de proposições e conectivos em raciocínio lógico, analise as afirmativas a seguir:\n\nI. A frase “Porto Velho é capital de Rondônia” pode ser classificada como proposição simples ou atômica.\nII. A sentença “Se a licitação for homologada, o contrato será assinado” representa uma proposição composta ou molecular.\nIII. A expressão lógica associada ao conectivo “ou” é representada simbolicamente por ∧.\n\nEstá(ão) CORRETA(S) a(s) afirmativa(s):",
+   "alternativas": [
+    [
+     "a",
+     "I, apenas."
+    ],
+    [
+     "b",
+     "II e III, apenas."
+    ],
+    [
+     "c",
+     "I e II, apenas."
+    ],
+    [
+     "d",
+     "I, II e III."
+    ],
+    [
+     "e",
+     "I e III, apenas."
+    ]
+   ],
+   "numero_serie": 1,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "I0LzaJC9Eu0",
+   "titulo_video": "Questão 8 Banca IBGP: Operadores Lógicos | Raciocínio Lógico para Concursos",
+   "publicado": "2026-11-05T22:51:12Z",
+   "duracao": "PT4M19S",
+   "prova": "IBGP - Ana Leg (ALES)/ALES/Secretaria Legislativa e Secretaria Administrativa/2025",
+   "assunto": "Operadores Lógicos (Representação Simbólica; Diferença entre Proposição Simples e Composta)",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2025,
+   "orgao": "ALES",
+   "gabarito": "D",
+   "enunciado": "As letras sentenciais K, L, M e N foram utilizadas para formalizar as proposições apresentadas a seguir:\n\nK: O triângulo ABC é congruente ao triângulo DEF\nL: CA = FD\n\nM: BC ≠ EF\n\nN: AB = DE\n\nA partir dessas informações, é CORRETO dizer que a formalização para “Dois triângulos são congruentes se os três lados de um\nsão iguais, respectivamente aos três lados do outro” encontra-se na opção:",
+   "alternativas": [
+    [
+     "a",
+     "(K ∨L) ∪˙M →N"
+    ],
+    [
+     "b",
+     "K ∪˙(¬L ∪˙M) →N"
+    ],
+    [
+     "c",
+     "((K →L) ∪˙M) →N"
+    ],
+    [
+     "d",
+     "Nenhuma das anteriores."
+    ]
+   ],
+   "numero_serie": 8,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "92KMUD5m3EQ",
+   "titulo_video": "Questão 105 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-10-05T12:46:02Z",
+   "duracao": "PT4M",
+   "prova": "MS (SARMENTO) - Estag (CM POA)/CM POA/Ensino Médio e Técnico/2017",
+   "assunto": "Exercícios Envolvendo Datas e Calendários",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Datas e calendários",
+   "tema_slug": "datas-e-calendarios",
+   "ano": 2017,
+   "orgao": "CM POA",
+   "gabarito": "C",
+   "enunciado": "Considere como verdadeira a afirmativa “hoje é sábado”. Então, daqui a 829 dias será:",
+   "alternativas": [
+    [
+     "a",
+     "Domingo"
+    ],
+    [
+     "b",
+     "Segunda-feira"
+    ],
+    [
+     "c",
+     "Terça-feira"
+    ],
+    [
+     "d",
+     "Quarta-feira"
+    ]
+   ],
+   "numero_serie": 105,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "ltSbJAYekAo",
+   "titulo_video": "Questão 99 Raciocínio Lógico | BANCA MS CONCURSOS",
+   "publicado": "2026-10-01T12:33:58Z",
+   "duracao": "PT6M11S",
+   "prova": "MS (SARMENTO) - PEBTT (IF AC)/IF AC/Administração/2014",
+   "assunto": "Sequências de Números, Figuras, Letras e Palavras",
+   "banca": "MS CONCURSOS",
+   "banca_slug": "ms-concursos",
+   "tema": "Sequências lógicas",
+   "tema_slug": "sequencias-logicas",
+   "ano": 2014,
+   "orgao": "IF AC",
+   "gabarito": "C",
+   "enunciado": "É dada uma sequência de números inteiros positivos, em ordem crescente, dos números que são iguais ao produto de seus divisores positivos (exceto ele mesmo). Nessas condições, o sexto termo desta sequencia é:",
+   "alternativas": [
+    [
+     "a",
+     "14"
+    ],
+    [
+     "b",
+     "15"
+    ],
+    [
+     "c",
+     "21"
+    ],
+    [
+     "d",
+     "22"
+    ]
+   ],
+   "numero_serie": 99,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "w8049-aThFE",
+   "titulo_video": "Verdades e Mentiras: Questão 31 Banca Instituto Consulplan | Raciocínio Lógico para Concursos",
+   "publicado": "2026-10-06T11:58:33Z",
+   "duracao": "PT4M12S",
+   "prova": "Instituto Consulplan - ACI (Pref Sta Fé do Sul)/Pref Sta Fé do Sul/2024",
+   "assunto": "Exercícios de \"Verdade/Mentira\"",
+   "banca": "Consulplan",
+   "banca_slug": "consulplan",
+   "tema": "Verdades e mentiras",
+   "tema_slug": "verdades-e-mentiras",
+   "ano": 2024,
+   "orgao": "Pref Sta Fé do Sul",
+   "gabarito": "A",
+   "enunciado": "Adelmo, Bernardo e Celso são amigos e estavam brincando de futebol na rua quando, de repente, somente um deles acertou, de forma acidental, a bola em um carro e acabou quebrando o vidro da janela. Após ouvir o barulho, o proprietário do veículo saiu de sua residência e questionou, furioso, qual dos três amigos teria provocado o incidente. As respostas dadas por cada um deles são fornecidas a seguir:\n\nAdelmo: “Não foi o Bernardo!”\nBernardo: “Adelmo está dizendo a verdade!”\nCelso: “Não foi o Adelmo!”\n\nSe somente um dos amigos diz uma mentira e, portanto, os demais dizem a verdade, pode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Celso mentiu e Adelmo foi o culpado."
+    ],
+    [
+     "b",
+     "Adelmo mentiu e Celso foi o culpado."
+    ],
+    [
+     "c",
+     "Adelmo mentiu e Bernardo foi o culpado."
+    ],
+    [
+     "d",
+     "Bernardo mentiu e Adelmo foi o culpado."
+    ]
+   ],
+   "numero_serie": 31,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "3ORgI6oz6JY",
+   "titulo_video": "Operações com Números Reais: O Guia Completo para Gabaritar Concursos Públicos!",
+   "publicado": "2024-09-22T16:58:48Z",
+   "duracao": "PT10M17S",
+   "assunto": null,
+   "banca": null,
+   "banca_slug": null,
+   "tema": null,
+   "tema_slug": null,
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito",
+    "banca"
+   ],
+   "completa": false
+  },
+  {
+   "video": "ibDNTERMpUI",
+   "titulo_video": "Banca Cesgranrio - 50 Questões Resolvidas - Matemática Nível Médio",
+   "publicado": "2024-04-05T13:22:07Z",
+   "duracao": "PT2H52M47S",
+   "assunto": null,
+   "banca": "Cesgranrio",
+   "banca_slug": "cesgranrio",
+   "tema": null,
+   "tema_slug": null,
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "v3JpJyucCvw",
+   "titulo_video": "Matemática e Raciocínio Lógico Banca IBGP :::: Questão 001 de 100 - Conjuntos Numéricos",
+   "publicado": "2021-12-09T19:09:36Z",
+   "duracao": "PT4M8S",
+   "prova": "IBGP - Adv (CM Perdizes)/CM Perdizes/2019",
+   "assunto": "Definição, subconjuntos, inclusão e pertinência, operações, conjunto das partes",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Conjuntos",
+   "tema_slug": "conjuntos",
+   "ano": 2019,
+   "orgao": "CM Perdizes",
+   "gabarito": null,
+   "enunciado": "Considere os conjuntos A, B e C do universo S= {x ∈ N e x ≤ 12}, onde:\nA = {2,3,5,7}, B = {2,3,4,6,8,9} e C = {2,4,8,12}.\n\nSobre as operações entre esses conjuntos, assinale a alternativa CORRETA:",
+   "alternativas": [
+    [
+     "a",
+     "A ∩ C = {2,3}."
+    ],
+    [
+     "b",
+     "A ∪ (B ∩ C) = {2,3,5,7,4,8,12}."
+    ],
+    [
+     "c",
+     "A ∩ (B ∪ C) = {2,3}."
+    ],
+    [
+     "d",
+     "A ∩ B = {2,3,5}."
+    ]
+   ],
+   "numero_serie": 1,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "1UnTAO_SN9A",
+   "titulo_video": "RACIOCÍNIO LÓGICO BANCA #CEBRASPE PROPOSIÇÕES QUESTÃO 001 DE 100 TECNICO JUDICIARIO TJ PR",
+   "publicado": "2021-03-29T18:06:24Z",
+   "duracao": "PT2M59S",
+   "assunto": null,
+   "banca": "CEBRASPE",
+   "banca_slug": "cebraspe",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 1,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "ty_mpwL6n18",
+   "titulo_video": "👨‍🏫 Questão 01 BANCA #IBFC 📚 Proposições Lógicas♟️ Raciocínio Lógico para #concursos",
+   "publicado": "2022-05-05T21:58:12Z",
+   "duracao": "PT2M37S",
+   "prova": "IBFC - Sold (CBM BA)/CBM BA/2020",
+   "assunto": "Proposições: definição, reconhecimento, princípios lógicos",
+   "banca": "IBFC",
+   "banca_slug": "ibfc",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2020,
+   "orgao": "CBM BA",
+   "gabarito": null,
+   "enunciado": "Assunto: Proposições: definição, reconhecimento, princípios lógicos\nO conceito mais fundamental de lógica é a proposição. Dentre as afirmações abaixo, assinale a alternativa correta que apresenta uma proposição.",
+   "alternativas": [
+    [
+     "a",
+     "Façam silêncio."
+    ],
+    [
+     "b",
+     "Que cansaço!"
+    ],
+    [
+     "c",
+     "Onde está meu chaveiro?"
+    ],
+    [
+     "d",
+     "Um belo exemplo de vida."
+    ],
+    [
+     "e",
+     "Ainda é cedo."
+    ]
+   ],
+   "numero_serie": 1,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "POfWBfIkFpg",
+   "titulo_video": "QUESTÃO 04 Raciocínio Lógico Banca #idecan  #concurso #rlm",
+   "publicado": "2023-04-11T11:42:14Z",
+   "duracao": "PT1M41S",
+   "prova": "IDECAN - Ana (CRF SP)/CRF SP/Sistemas/2018",
+   "assunto": "Tabela verdade das proposições compostas",
+   "banca": "IDECAN",
+   "banca_slug": "idecan",
+   "tema": "Tabela-verdade",
+   "tema_slug": "tabela-verdade",
+   "ano": 2018,
+   "orgao": "CRF SP",
+   "gabarito": "D",
+   "enunciado": "Utilizando o operador lógico “e”, a tabela-verdade a seguir terá sua equivalência completada na ordem:",
+   "alternativas": [
+    [
+     "a",
+     "V, V, V, V, V."
+    ],
+    [
+     "b",
+     "F, F, F, F, F."
+    ],
+    [
+     "c",
+     "V, V, V, F, V."
+    ],
+    [
+     "d",
+     "F, F, F, V, F."
+    ]
+   ],
+   "numero_serie": 4,
+   "lacunas": [
+    "enunciado depende de figura"
+   ],
+   "completa": false
+  },
+  {
+   "video": "HoKcThNxsfc",
+   "titulo_video": "MATEMÁTICA E RACIOCÍNIO LÓGICO #SELECON OPERAÇÕES COM CONJUNTOS QUESTÃO 005",
+   "publicado": "2021-04-16T21:19:56Z",
+   "duracao": "PT3M38S",
+   "assunto": "Número de elementos da união, da intersecção, do complemento e da diferença",
+   "banca": "Selecon",
+   "banca_slug": "selecon",
+   "tema": "Conjuntos",
+   "tema_slug": "conjuntos",
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 5,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "DjgHeLCanpg",
+   "titulo_video": "Tabela Verdade para Concursos - 100 Questões Resolvidas + Ebook #rlm #concurso #concursos",
+   "publicado": "2023-04-05T16:55:18Z",
+   "duracao": "PT4H6M8S",
+   "assunto": null,
+   "banca": null,
+   "banca_slug": null,
+   "tema": "Tabela-verdade",
+   "tema_slug": "tabela-verdade",
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito",
+    "banca"
+   ],
+   "completa": false
+  },
+  {
+   "video": "Sw9oAZf6ApI",
+   "titulo_video": "👨‍🏫 Questão 03 BANCA #IBFC 📚 Proposições Simples e Compostas♟️ Raciocínio Lógico para #concursos",
+   "publicado": "2022-05-06T19:23:38Z",
+   "duracao": "PT4M9S",
+   "prova": "IBFC - Aux (FSA)/FSA/Administração I/2019",
+   "assunto": "Proposições: definição, reconhecimento, princípios lógicos",
+   "banca": "IBFC",
+   "banca_slug": "ibfc",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2019,
+   "orgao": "FSA",
+   "gabarito": null,
+   "enunciado": "Proposições são sentenças declarativas e podem ser expressadas por palavras ou símbolos. Nesse sentido, leia as sentenças a seguir.\n\nI. O auxiliar administrativo controla entrada/ saída de documentos.\nII. O auxiliar de almoxarifado controla os estoques e o auxiliar de compras controla os pedidos.\nIII. O auxiliar de compras é responsável por lançar notas no sistema?\nAssinale a alternativa incorreta.",
+   "alternativas": [
+    [
+     "a",
+     "A proposição I é uma proposição simples"
+    ],
+    [
+     "b",
+     "A proposição II é uma proposição composta"
+    ],
+    [
+     "c",
+     "A proposição III não é uma proposição"
+    ],
+    [
+     "d",
+     "A proposição III é uma proposição interrogativa"
+    ]
+   ],
+   "numero_serie": 3,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "QaKjYZ-YgSY",
+   "titulo_video": "👨‍🏫 Questão 06 BANCA #IBFC 📚 Proposições Compostas♟️ Raciocínio Lógico para #concursos",
+   "publicado": "2022-05-09T00:05:19Z",
+   "duracao": "PT2M1S",
+   "prova": "IBFC - ASG (Pref Candeias)/Pref Candeias/2019",
+   "assunto": "Proposições: definição, reconhecimento, princípios lógicos",
+   "banca": "IBFC",
+   "banca_slug": "ibfc",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2019,
+   "orgao": "Pref Candeias",
+   "gabarito": null,
+   "enunciado": "Analise as afirmativas abaixo, de valores Verdadeiro (V) ou Falso (F):\n( ) Na frase “Bianca procura ter uma alimentação saudável e pratica Yoga”, existem duas proposições simples.\n( ) As proposições que compõem uma proposição composta são chamadas de proposições simples.\n( ) Quando duas proposições simples são interligadas por “e”, trata-se de uma conjunção.\n\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+   "alternativas": [
+    [
+     "a",
+     "V, V, V"
+    ],
+    [
+     "b",
+     "V, V, F"
+    ],
+    [
+     "c",
+     "F, F, F"
+    ],
+    [
+     "d",
+     "F, V, V"
+    ]
+   ],
+   "numero_serie": 6,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "gk5G1EgMwHY",
+   "titulo_video": "Matemática e Raciocínio Lógico Banca IBGP :::Questão 003 de 100 Conjuntos das Partes - Subconjuntos",
+   "publicado": "2021-12-09T19:43:35Z",
+   "duracao": "PT2M30S",
+   "prova": "IBGP - Ana (PBH ATIVOS)/PBH ATIVOS/Administrativo e Financeiro/2018",
+   "assunto": "Definição, subconjuntos, inclusão e pertinência, operações, conjunto das partes",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Conjuntos",
+   "tema_slug": "conjuntos",
+   "ano": 2018,
+   "orgao": "PBH ATIVOS",
+   "gabarito": null,
+   "enunciado": "Em 2017 uma Prefeitura separou as manifestações de interesse da inciativa privada em dois conjuntos:\nAnalisadas (A) e Rejeitadas (R), a e r são os elementos desses conjuntos, sendo a + r = 18.\nSabe-se que a razão entre o número de subconjuntos de A e o número de subconjuntos de R é 64.\nAssinale a alternativa que apresenta CORRRETAMENTE o produto entre a e r.",
+   "alternativas": [
+    [
+     "a",
+     "12."
+    ],
+    [
+     "b",
+     "18."
+    ],
+    [
+     "c",
+     "64."
+    ],
+    [
+     "d",
+     "72."
+    ]
+   ],
+   "numero_serie": 3,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "YftZi58-2O8",
+   "titulo_video": "✅Raciocínio Lógico  📚 Banca #Consulplan📋 Questão 01 de 200 questões - Link do pdf na descrição",
+   "publicado": "2024-02-09T13:29:22Z",
+   "duracao": "PT5M43S",
+   "prova": "CONSULPLAN - Tec Leg II (CM BH)/CM BH/2018",
+   "assunto": "Operadores Lógicos (Representação Simbólica; Diferença entre Proposição Simples e Composta).",
+   "banca": "Consulplan",
+   "banca_slug": "consulplan",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2018,
+   "orgao": "CM BH",
+   "gabarito": null,
+   "enunciado": "Considere as seguintes proposições:\n\np: o Brasil é um país democrático e o time do Real Madrid, que pertence à França, foi campeão da última copa do mundo.\n\nq: O número 14 é um número par ou o número 35 é um número múltiplo.\n\nConsiderando V as proposições verdadeiras e F as falsas, é correto afirmar que as proposições p e q são, respectivamente:",
+   "alternativas": [
+    [
+     "a",
+     "V e F."
+    ],
+    [
+     "b",
+     "F e V."
+    ],
+    [
+     "c",
+     "V e V."
+    ],
+    [
+     "d",
+     "F e F."
+    ]
+   ],
+   "numero_serie": 1,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "_4KjMjdl7BQ",
+   "titulo_video": "♟️ Argumentação Lógica 👉 50 de Questões de Concursos Resolvidas | todo, algum e nenhum",
+   "publicado": "2024-08-15T15:30:12Z",
+   "duracao": "PT1H51M19S",
+   "assunto": null,
+   "banca": null,
+   "banca_slug": null,
+   "tema": null,
+   "tema_slug": null,
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito",
+    "banca"
+   ],
+   "completa": false
+  },
+  {
+   "video": "b9mCqXB2A9w",
+   "titulo_video": "Banca Cesgranrio 👉 Questão 01 Matemática 👉 Concurso Nacional Unificado CNU Bloco 8",
+   "publicado": "2024-01-24T19:56:15Z",
+   "duracao": "PT2M56S",
+   "prova": "CESGRANRIO - Esc (BANRISUL)/BANRISUL/2023",
+   "assunto": "Número de Elementos da União, da Intersecção, do Complemento e da Diferença",
+   "banca": "Cesgranrio",
+   "banca_slug": "cesgranrio",
+   "tema": "Conjuntos",
+   "tema_slug": "conjuntos",
+   "ano": 2023,
+   "orgao": "BANRISUL",
+   "gabarito": null,
+   "enunciado": "Um banco possui um total de 1000 clientes, dos quais apenas 700 investem em pelo menos um dos fundos A ou B. Sabe-se que o total de clientes que investem em ambos os fundos é igual a 250, e que pelo menos 100 clientes investem apenas no fundo B. Qual é o número máximo de clientes que investem apenas no fundo A?",
+   "alternativas": [
+    [
+     "a",
+     "350"
+    ],
+    [
+     "b",
+     "600"
+    ],
+    [
+     "c",
+     "650"
+    ],
+    [
+     "d",
+     "800"
+    ],
+    [
+     "e",
+     "900"
+    ]
+   ],
+   "numero_serie": 1,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "u35U49VfWVo",
+   "titulo_video": "✅ BANCA IBGP ✅ NÍVEL SUPERIOR 2021 ✅ Prova de Raciocínio Lógico ✅ Concurso Pref. São João Del-Rei/MG",
+   "publicado": "2021-11-04T00:08:29Z",
+   "duracao": "PT15M51S",
+   "assunto": null,
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": null,
+   "tema_slug": null,
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "GrlxTf06DnY",
+   "titulo_video": "Raciocínio Lógico Banca #FCC - Tabela Verdade - Lógica de Argumentação",
+   "publicado": "2022-11-20T19:22:35Z",
+   "duracao": "PT8M10S",
+   "prova": "FCC - Estag (SABESP)/SABESP/Ensino Superior/2019",
+   "assunto": "Tabela verdade das proposições compostas",
+   "banca": "FCC",
+   "banca_slug": "fcc",
+   "tema": "Tabela-verdade",
+   "tema_slug": "tabela-verdade",
+   "ano": 2019,
+   "orgao": "SABESP",
+   "gabarito": null,
+   "enunciado": "Considere válidas as seguintes afirmações:\n\n“Se Antônio passar no concurso, então Benedita e Carlos serão ambos promovidos.”\n“Benedita foi promovida, mas Carlos não.”\n\nCom base nessas informações, é possível concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Antônio não passou no concurso."
+    ],
+    [
+     "b",
+     "Benedita passou no concurso, mas Carlos não passou."
+    ],
+    [
+     "c",
+     "Benedita não passou no concurso, mas Carlos passou."
+    ],
+    [
+     "d",
+     "Benedita e Carlos não passaram no concurso."
+    ],
+    [
+     "e",
+     "Antônio foi promovido."
+    ]
+   ],
+   "numero_serie": null,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "GgsZcLuoCR0",
+   "titulo_video": "QUESTÃO 07 Raciocínio Lógico Banca #idecan  #concurso #rlm",
+   "publicado": "2023-04-11T21:46:57Z",
+   "duracao": "PT3M38S",
+   "prova": "IDECAN - PEBTT (IF Baiano)/IF Baiano/Matemática/2019",
+   "assunto": "Equivalências lógicas (inclui negação de proposições compostas)",
+   "banca": "IDECAN",
+   "banca_slug": "idecan",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": 2019,
+   "orgao": "IF Baiano",
+   "gabarito": "D",
+   "enunciado": "Na lógica matemática, duas proposições são equivalentes quando seus valores lógicos forem iguais.\n\nSobre o tema, analise as proposições a seguir:\n\nI.  Quem possui saúde, não sente fraqueza.\nII.  Quem não possui saúde, sente fraqueza.\nIII.  Quem sente fraqueza, possui saúde.\nIV.  Quem não possui saúde, não sente fraqueza.\n\nAssinale",
+   "alternativas": [
+    [
+     "a",
+     "se as proposições I e II forem equivalentes."
+    ],
+    [
+     "b",
+     "se as proposições I e III forem equivalentes."
+    ],
+    [
+     "c",
+     "se as proposições II e III forem equivalentes."
+    ],
+    [
+     "d",
+     "se as proposições III e IV forem equivalentes."
+    ],
+    [
+     "e",
+     "se as proposições I e IV forem equivalentes."
+    ]
+   ],
+   "numero_serie": 7,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "mjRVe3assQE",
+   "titulo_video": "RACIOCÍNIO LÓGICO BANCA #CEBRASPE PROPOSIÇÕES QUESTÃO 003 DE 100 TÉCNICO DO SEGURO SOCIAL 2016 CESPE",
+   "publicado": "2021-03-29T19:16:58Z",
+   "duracao": "PT1M41S",
+   "assunto": null,
+   "banca": "CEBRASPE",
+   "banca_slug": "cebraspe",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 3,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "fAKkW7500ek",
+   "titulo_video": "👨‍🏫 Questão 02 BANCA #IBFC 📚 Proposições Lógicas♟️ Raciocínio Lógico para #concursos",
+   "publicado": "2022-05-05T22:02:50Z",
+   "duracao": "PT3M12S",
+   "prova": "Questão 02 IBFC - Técnico (EBSERH)/Contabilidade/2020",
+   "assunto": "Proposições: definição, reconhecimento, princípios lógicos",
+   "banca": "IBFC",
+   "banca_slug": "ibfc",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2020,
+   "orgao": "Contabilidade",
+   "gabarito": null,
+   "enunciado": "Analise as sentenças a seguir.\n\nI. Marie Curie foi a primeira mulher a ganhar um prêmio Nobel.\nII. Os estudos sobre radioatividade são de extrema importância!\nIII. Como os estudos sobre radioatividade são realizados?\nIV. Estude sempre para ampliar os conhecimentos.\n\nDe acordo com as sentenças apresentadas e sabendo que a uma proposição pode-se atribuir um valor lógico, assinale a alternativa incorreta.",
+   "alternativas": [
+    [
+     "a",
+     "A sentença I trata de uma proposição"
+    ],
+    [
+     "b",
+     "As sentenças II, III e IV não possuem valor lógico atribuível"
+    ],
+    [
+     "c",
+     "A sentença II não é uma proposição"
+    ],
+    [
+     "d",
+     "A sentença III é uma sentença interrogativa"
+    ],
+    [
+     "e",
+     "A sentença IV é uma proposição"
+    ]
+   ],
+   "numero_serie": 2,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "ewr4ZoE2fpg",
+   "titulo_video": "RACIOCÍNIO LÓGICO #AOCP EQUIVALÊNCIA LÓGICA QUESTÃO 006 DE 100 DISTRIBUTIVA E COMUTATIVA",
+   "publicado": "2021-04-01T16:45:31Z",
+   "duracao": "PT3M41S",
+   "prova": "Instituto AOCP - Analista (Pref Novo Hamburgo)/Suporte/2020",
+   "assunto": "Equivalências lógicas (inclui negação de proposições compostas)",
+   "banca": "Instituto AOCP",
+   "banca_slug": "aocp",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": 2020,
+   "orgao": "Suporte",
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 6,
+   "lacunas": [
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "6K_AJALt-Wc",
+   "titulo_video": "🧑‍🏫 Implicações Lógicas👉  Raciocínio Lógico para Concursos",
+   "publicado": "2021-12-08T17:19:54Z",
+   "duracao": "PT27M13S",
+   "assunto": null,
+   "banca": null,
+   "banca_slug": null,
+   "tema": null,
+   "tema_slug": null,
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito",
+    "banca"
+   ],
+   "completa": false
+  },
+  {
+   "video": "304OZH3ozT8",
+   "titulo_video": "QUESTÃO 06 Raciocínio Lógico Banca #idecan  #concurso #rlm",
+   "publicado": "2023-04-11T15:39:50Z",
+   "duracao": "PT2M32S",
+   "prova": "IDECAN - Ass Adm (UNIVASF)/UNIVASF/2019",
+   "assunto": "negação de proposições compostas",
+   "banca": "IDECAN",
+   "banca_slug": "idecan",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": 2019,
+   "orgao": "UNIVASF",
+   "gabarito": "B",
+   "enunciado": "No conto de fadas da Cinderela, Cinderela vivia como pobre e escrava por conta de sua madrasta malvada, e o jovem príncipe, filho do rei, era muito bonito.\n\nA negação lógica para a afirmação “Cinderela não é pobre ou o príncipe é bonito” é:",
+   "alternativas": [
+    [
+     "a",
+     "Se Cinderela é pobre, então o príncipe não é bonito."
+    ],
+    [
+     "b",
+     "Cinderela é pobre e o príncipe não é bonito."
+    ],
+    [
+     "c",
+     "Cinderela é rica e o príncipe é feio."
+    ],
+    [
+     "d",
+     "Cinderela é rica ou o príncipe é feio."
+    ],
+    [
+     "e",
+     "Cinderela é pobre ou o príncipe não é bonito."
+    ]
+   ],
+   "numero_serie": 6,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "X5QGQ0xPGfw",
+   "titulo_video": "✅Raciocínio Lógico Matemático 📚 Banca Instituto #Consulplan📋Raciocínio Lógico para Concursos",
+   "publicado": "2022-07-18T21:46:31Z",
+   "duracao": "PT37M58S",
+   "assunto": null,
+   "banca": "Consulplan",
+   "banca_slug": "consulplan",
+   "tema": null,
+   "tema_slug": null,
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "sdM5fJ2UzeI",
+   "titulo_video": "QUESTÃO 08 Raciocínio Lógico Banca #idecan  #concurso #rlm",
+   "publicado": "2023-04-11T21:51:54Z",
+   "duracao": "PT1M47S",
+   "prova": "IDECAN - AAd (Damianópolis)/Pref Damianópolis/2016",
+   "assunto": "Equivalências lógicas (inclui negação de proposições compostas)",
+   "banca": "IDECAN",
+   "banca_slug": "idecan",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": 2016,
+   "orgao": "Pref Damianópolis",
+   "gabarito": "C",
+   "enunciado": "A negação da proposição composta “Patrícia gosta de comida italiana e seu prato predileto é lasanha” é:",
+   "alternativas": [
+    [
+     "a",
+     "O prato predileto de Patrícia não é lasanha e gosta de comida italiana."
+    ],
+    [
+     "b",
+     "Patrícia não gosta de comida italiana e seu prato predileto não é lasanha."
+    ],
+    [
+     "c",
+     "Patrícia não gosta de comida italiana ou seu prato predileto não é lasanha."
+    ],
+    [
+     "d",
+     "O prato predileto de Patrícia é lasanha ou ela não gosta de comida italiana."
+    ]
+   ],
+   "numero_serie": 8,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "BxzPZrBof0M",
+   "titulo_video": "RACIOCÍNIO LÓGICO #AOCP NEGAÇÃO DA DISJUNÇÃO QUESTÃO 005 DE 100 DISTRIBUTIVA",
+   "publicado": "2021-04-01T15:52:36Z",
+   "duracao": "PT1M33S",
+   "assunto": "Equivalências lógicas (inclui negação de proposições compostas)",
+   "banca": "Instituto AOCP",
+   "banca_slug": "aocp",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 5,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "KT5I1XQK_Nk",
+   "titulo_video": "Questões resolvidas || Análise Combinatória Banca IBFC | | PFC, Arranjos, Permutações, Combinações.",
+   "publicado": "2022-09-04T13:13:44Z",
+   "duracao": "PT1H27M15S",
+   "assunto": null,
+   "banca": "IBFC",
+   "banca_slug": "ibfc",
+   "tema": null,
+   "tema_slug": null,
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "DFUNyYb1D00",
+   "titulo_video": "Porcentagem Banca #IBFC - Questão 01 - Playlist com 50 Questões #concursos #concurseiros",
+   "publicado": "2022-11-16T21:40:17Z",
+   "duracao": "PT5M32S",
+   "prova": "IBFC - CCA (IBGE)/IBGE/2022",
+   "assunto": "Porcentagem",
+   "banca": "IBFC",
+   "banca_slug": "ibfc",
+   "tema": "Porcentagem",
+   "tema_slug": "porcentagem",
+   "ano": 2022,
+   "orgao": "IBGE",
+   "gabarito": null,
+   "enunciado": "Um coordenador verificou que 68% da operação censitária já estava concluída, faltando para completar 4352 visitas. Desse modo, o total de visitas já concluídas é igual a:",
+   "alternativas": [
+    [
+     "a",
+     "9248"
+    ],
+    [
+     "b",
+     "6400"
+    ],
+    [
+     "c",
+     "2048"
+    ],
+    [
+     "d",
+     "7342"
+    ],
+    [
+     "e",
+     "8356 Questões sobre Porcentagem da Banca IBFC resolvidas passo a passo."
+    ]
+   ],
+   "numero_serie": 1,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "1lX_UWGhVYI",
+   "titulo_video": "👨‍🏫 Questão 05 BANCA #IBFC 📚 Proposições Compostas♟️ Raciocínio Lógico para #concursos",
+   "publicado": "2022-05-07T23:06:42Z",
+   "duracao": "PT4M22S",
+   "prova": "IBFC - Ass (Pref Candeias)/Pref Candeias/Administrativo/2019",
+   "assunto": "Proposições: definição, reconhecimento, princípios lógicos",
+   "banca": "IBFC",
+   "banca_slug": "ibfc",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2019,
+   "orgao": "Pref Candeias",
+   "gabarito": null,
+   "enunciado": "Analise as afirmativas abaixo, de valores Verdadeiro (V) ou Falso (F):\n\n( ) Na frase “Bianca adora colecionar selos”, existem duas proposições simples.\n( ) As proposições que compõem uma proposição composta são chamadas de proposição contingencial.\n( ) Quando duas proposições simples são interligadas por “ou” a proposição composta será chamada de conjunção.\n\nAssinale a alternativa que apresente a sequência correta de cima para baixo.",
+   "alternativas": [
+    [
+     "a",
+     "V, V, V"
+    ],
+    [
+     "b",
+     "V, V, F"
+    ],
+    [
+     "c",
+     "F, F, F"
+    ],
+    [
+     "d",
+     "F, F, V"
+    ]
+   ],
+   "numero_serie": 5,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "wusdJGIfX0Q",
+   "titulo_video": "👨‍🏫 Questão 04 BANCA #IBFC 📚 Proposições Simples♟️ Raciocínio Lógico para #concursos",
+   "publicado": "2022-05-06T19:31:24Z",
+   "duracao": "PT4M12S",
+   "prova": "IBFC - Ass (Pref Candeias)/Pref Candeias/Administrativo/2019",
+   "assunto": "Proposições: definição, reconhecimento, princípios lógicos",
+   "banca": "IBFC",
+   "banca_slug": "ibfc",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2019,
+   "orgao": "Pref Candeias",
+   "gabarito": null,
+   "enunciado": "Sabe-se que Proposição é toda sentença que pode ser valorada como verdadeira ou falsa podendo ser expressada em palavras ou símbolos. Leia as afirmações a seguir.\n\nI. A gratidão gera felicidade.\nII. A gratidão gera felicidade e paz interior.\nIII. A gratidão não gera felicidade.\nIV. A gratidão gera felicidade?\n\nCom base nessas afirmativas, assinale a alternativa incorreta.",
+   "alternativas": [
+    [
+     "a",
+     "A proposição I é uma proposição simples"
+    ],
+    [
+     "b",
+     "A proposição II é uma proposição composta"
+    ],
+    [
+     "c",
+     "A proposição III é a negação da proposição I"
+    ],
+    [
+     "d",
+     "A proposição IV é uma proposição interrogativa"
+    ]
+   ],
+   "numero_serie": 4,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "GbSAZkD1S2M",
+   "titulo_video": "MATEMÁTICA E RACIOCÍNIO LÓGICO #SELECON OPERAÇÕES COM CONJUNTOS QUESTÃO 004",
+   "publicado": "2021-04-16T20:52:27Z",
+   "duracao": "PT1M31S",
+   "assunto": null,
+   "banca": "Selecon",
+   "banca_slug": "selecon",
+   "tema": "Conjuntos",
+   "tema_slug": "conjuntos",
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 4,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "3jmR3Ie_wVM",
+   "titulo_video": "RACIOCÍNIO LÓGICO #AOCP NEGAÇÃO DA DISJUNÇÃO QUESTÃO 002 DE 100",
+   "publicado": "2021-04-01T00:12:46Z",
+   "duracao": "PT1M15S",
+   "prova": "Instituto AOCP - Fiscal de Tributos Municipais I (Pref Cariacica)/Fiscalização Tributária/2020",
+   "assunto": "Equivalências lógicas (inclui negação de proposições compostas)",
+   "banca": "Instituto AOCP",
+   "banca_slug": "aocp",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": 2020,
+   "orgao": "Fiscalização Tributária",
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 2,
+   "lacunas": [
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "UVHU04dipCk",
+   "titulo_video": "MATEMÁTICA E RACIOCÍNIO LÓGICO #SELECON TABELA VERDADE DAS PROPOSIÇÕES COMPOSTAS QUESTÃO 003",
+   "publicado": "2021-04-16T17:04:56Z",
+   "duracao": "PT2M17S",
+   "prova": "SELECON - Professor (Pref Sapezal)/Ciências Biológicas/2020/Edital nº 002 2019",
+   "assunto": "Tabela verdade das proposições compostas",
+   "banca": "Selecon",
+   "banca_slug": "selecon",
+   "tema": "Tabela-verdade",
+   "tema_slug": "tabela-verdade",
+   "ano": 2020,
+   "orgao": "Ciências Biológicas",
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 3,
+   "lacunas": [
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "GBxp6SXs4S8",
+   "titulo_video": "QUESTÃO 03 Raciocínio Lógico Banca #idecan  #concurso #rlm",
+   "publicado": "2023-04-08T22:10:14Z",
+   "duracao": "PT3M52S",
+   "prova": "IDECAN - Proc Prev I (IPC)/IPC/2018",
+   "assunto": "Tabela verdade das proposições compostas",
+   "banca": "IDECAN",
+   "banca_slug": "idecan",
+   "tema": "Tabela-verdade",
+   "tema_slug": "tabela-verdade",
+   "ano": 2018,
+   "orgao": "IPC",
+   "gabarito": "B",
+   "enunciado": "Leia as assertivas abaixo e, em seguida, Assinale a alternativa correta:",
+   "alternativas": [
+    [
+     "a",
+     "2=3 e 2+3=5"
+    ],
+    [
+     "b",
+     "Se 2=3, então 2+3=7"
+    ],
+    [
+     "c",
+     "2=3 ou 2+3=7"
+    ],
+    [
+     "d",
+     "Se 2=2, então 2+3=7"
+    ]
+   ],
+   "numero_serie": 3,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "RSqCI5Gwyio",
+   "titulo_video": "QUESTÃO 01 Raciocínio Lógico Banca #idecan  #concurso #rlm",
+   "publicado": "2023-04-08T20:41:25Z",
+   "duracao": "PT3M19S",
+   "prova": "IDECAN - Ass (IF Baiano)/IF Baiano/Administração/2019",
+   "assunto": "Proposições: definição, reconhecimento, princípios lógicos",
+   "banca": "IDECAN",
+   "banca_slug": "idecan",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": 2019,
+   "orgao": "IF Baiano",
+   "gabarito": "A",
+   "enunciado": "Sabendo que proposição é o termo usado em lógica para descrever o conteúdo de orações declarativas que podem ser valoradas como verdadeiro ou falso, assinale a alternativa que indique uma proposição lógica.",
+   "alternativas": [
+    [
+     "a",
+     "O céu é azul."
+    ],
+    [
+     "b",
+     "Que dia será realizada a prova?"
+    ],
+    [
+     "c",
+     "O nome dos jogadores."
+    ],
+    [
+     "d",
+     "O quadrado de um número."
+    ],
+    [
+     "e",
+     "Ser ou não ser? Eis a questão!"
+    ]
+   ],
+   "numero_serie": 1,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "1_SzheZpR9Q",
+   "titulo_video": "RACIOCÍNIO LÓGICO BANCA #CEBRASPE PROPOSIÇÕES QUESTÃO 002 DE 100 OFICIAL CBM AL 2017",
+   "publicado": "2021-03-29T18:51:15Z",
+   "duracao": "PT1M24S",
+   "assunto": null,
+   "banca": "CEBRASPE",
+   "banca_slug": "cebraspe",
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 2,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "lywC9mA6Bp8",
+   "titulo_video": "Operações com Conjuntos 10 Questões de Concursos",
+   "publicado": "2020-10-05T15:57:52Z",
+   "duracao": "PT19M59S",
+   "prova": "05 - Instituto AOCP - Advogado (Pref Novo Hamburgo)/CREAS SUAS/2020",
+   "assunto": null,
+   "banca": "Instituto AOCP",
+   "banca_slug": "aocp",
+   "tema": "Conjuntos",
+   "tema_slug": "conjuntos",
+   "ano": 2020,
+   "orgao": "CREAS SUAS",
+   "gabarito": null,
+   "enunciado": "Considere os conjuntos A, B e C no seguinte diagrama:\n\nAssinale a alternativa que indica a região destacada desse diagrama que representa (B ∩ A) − C.",
+   "alternativas": [
+    [
+     "a",
+     ""
+    ],
+    [
+     "b",
+     ""
+    ],
+    [
+     "c",
+     ""
+    ],
+    [
+     "d",
+     ""
+    ],
+    [
+     "e",
+     "06 - Instituto AOCP - Agente Social (Pref Novo Hamburgo)/2020 De acordo com os seus conhecimentos envolvendo conjuntos, assinale a alternativa que com certeza é possível afirmar."
+    ],
+    [
+     "a",
+     "Se o conjunto A tem 2 elementos e o conjunto B tem 5 elementos, então A∪B tem 7 elementos."
+    ],
+    [
+     "b",
+     "Se o conjunto A tem 5 elementos e o conjunto B tem 4 elementos, então A∩B tem 4 elementos."
+    ],
+    [
+     "c",
+     "Se A = {1,2,3} e B = {0,1,4,5}, então A–B = {0,4,5}."
+    ],
+    [
+     "d",
+     "Se A∩B=∅, A tem 3 elementos e B tem 4 elementos, então A∪B tem 7 elementos."
+    ],
+    [
+     "e",
+     "Se A = {1} e B = {1,3,4}, então B–A = {1}. 07 - Instituto AOCP - Analista (Pref Novo Hamburgo)/Suporte/2020 A é o conjunto de todas as pessoas que dominam o idioma espanhol e B é o conjunto de todas as pessoas que dominam o idioma inglês, conforme representado no diagrama a seguir: Com base nessas informações, é correto afirmar que"
+    ],
+    [
+     "a",
+     "a região I representa o conjunto de todas as pessoas que dominam o idioma inglês, mas não dominam o idioma espanhol."
+    ],
+    [
+     "b",
+     "a região II representa o conjunto de todas as pessoas que dominam os dois idiomas."
+    ],
+    [
+     "c",
+     "a região III representa o conjunto de todas as pessoas que dominam o idioma espanhol, mas não dominam o idioma inglês."
+    ],
+    [
+     "d",
+     "a região IV representa o conjunto de todas as pessoas que dominam os dois idiomas."
+    ],
+    [
+     "e",
+     "U representa o conjunto de todas as pessoas que não dominam nenhum desses dois idiomas. 08 - Instituto AOCP - Professor (Pref Betim)/Matemática/2020 Considere os conjuntos A e B no seguinte diagrama: Com base nesse diagrama, é correto afirmar que"
+    ],
+    [
+     "a",
+     "A∪B=1,5,7,10."
+    ],
+    [
+     "b",
+     "A−B=2,9."
+    ],
+    [
+     "c",
+     "A∩B=1,2,5,7,9,10."
+    ],
+    [
+     "d",
+     "A∪B=2,9,10."
+    ],
+    [
+     "e",
+     "B−A=10. 09 - IBGP - Advogado (CM Perdizes)/2019 Considere os conjuntos A, B e C do universo S= {x ∈ N e x ≤ 12}, onde: A = {2,3,5,7}, B = {2,3,4,6,8,9} e C = {2,4,8,12}. Sobre as operações entre esses conjuntos, assinale a alternativa CORRETA:"
+    ],
+    [
+     "a",
+     "A ∩ C = {2,3}."
+    ],
+    [
+     "b",
+     "A ∪ (B ∩ C) = {2,3,5,7,4,8,12}."
+    ],
+    [
+     "c",
+     "A ∩ (B ∪ C) = {2,3}."
+    ],
+    [
+     "d",
+     "A ∩ B = {2,3,5}. 10 - FUNDATEC - Professor (Pref Sapucaia do Sul)/Área II Matemática/2019 Qual o número de subconjuntos que podem ser formados com os elementos do conjunto C={1,2,3,4,5,6}?"
+    ],
+    [
+     "a",
+     "6."
+    ],
+    [
+     "b",
+     "16."
+    ],
+    [
+     "c",
+     "32."
+    ],
+    [
+     "d",
+     "64."
+    ],
+    [
+     "e",
+     "128."
+    ]
+   ],
+   "numero_serie": null,
+   "lacunas": [
+    "gabarito",
+    "alternativas são imagens"
+   ],
+   "completa": false
+  },
+  {
+   "video": "Gcn_R3WOt3s",
+   "titulo_video": "Matemática e Raciocínio Lógico Banca IBGP ::: Questão 004 de 100 - Conjuntos Numéricos",
+   "publicado": "2021-12-10T14:43:05Z",
+   "duracao": "PT4M3S",
+   "prova": "IBGP - Ass Adm (CISSUL)/CISSUL/2016",
+   "assunto": "Definição, subconjuntos, inclusão e pertinência, operações, conjunto das partes",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Conjuntos",
+   "tema_slug": "conjuntos",
+   "ano": 2016,
+   "orgao": "CISSUL",
+   "gabarito": null,
+   "enunciado": "Analisando-se os conjuntos A e B, abaixo expostos, é CORRETO afirmar que o conjunto formado por A U B será:\n\nConjunto A dado por: A = {a ∈ R | 2a² + 5(a-1) =a (a+1) ou -15 + 5a = 25}\nConjunto B dado por: B = {b ∈ R | 1 – b² = -3 e 6b – 7 = 5}",
+   "alternativas": [
+    [
+     "a",
+     "A U B = {-2; -1; 2; 5; 8}"
+    ],
+    [
+     "b",
+     "A U B = {-5; 1; 2; 8}"
+    ],
+    [
+     "c",
+     "A U B = {-5; -2; 1; 2; 8}"
+    ],
+    [
+     "d",
+     "A U B = {-1; 2; 5; 8}"
+    ]
+   ],
+   "numero_serie": 4,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "z_26RF_T5h8",
+   "titulo_video": "2019 #SELECON PREF DE CUIABA MÉDIO PROVA DE RACIOCÍNIO LÓGICO MATEMÁTICO RESOLVIDA",
+   "publicado": "2020-12-10T18:21:05Z",
+   "duracao": "PT9M20S",
+   "assunto": null,
+   "banca": "Selecon",
+   "banca_slug": "selecon",
+   "tema": null,
+   "tema_slug": null,
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "TLT5hPl67oM",
+   "titulo_video": "RACIOCÍNIO LÓGICO #AOCP NEGAÇÃO DA CONJUNÇÃO QUESTÃO 003 DE 100",
+   "publicado": "2021-04-01T14:40:39Z",
+   "duracao": "PT1M20S",
+   "prova": "Instituto AOCP - Advogado (Pref Novo Hamburgo)/CREAS SUAS/2020",
+   "assunto": "Equivalências lógicas (inclui negação de proposições compostas)",
+   "banca": "Instituto AOCP",
+   "banca_slug": "aocp",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": 2020,
+   "orgao": "CREAS SUAS",
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 3,
+   "lacunas": [
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "X9Z9xqFqsV0",
+   "titulo_video": "Raciocínio Lógico - Conectivos Lógicos 100 Questões Resolvidas passo a passo",
+   "publicado": "2021-12-12T17:21:51Z",
+   "duracao": "PT1H16M41S",
+   "assunto": "Conectivos Lógicos 100 Questões Resolvidas passo a passo",
+   "banca": null,
+   "banca_slug": null,
+   "tema": null,
+   "tema_slug": null,
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito",
+    "banca"
+   ],
+   "completa": false
+  },
+  {
+   "video": "-bwTp9DoX8Q",
+   "titulo_video": "Matemática e Raciocínio Lógico Banca IBGP :::: Questão 002 de 100 - Conjuntos Numéricos",
+   "publicado": "2021-12-10T12:35:44Z",
+   "duracao": "PT1M26S",
+   "prova": "IBGP - GM (Pref Uberaba)/Pref Uberaba/II/2019",
+   "assunto": "Definição, subconjuntos, inclusão e pertinência, operações, conjunto das partes",
+   "banca": "IBGP",
+   "banca_slug": "ibgp",
+   "tema": "Conjuntos",
+   "tema_slug": "conjuntos",
+   "ano": 2019,
+   "orgao": "Pref Uberaba",
+   "gabarito": null,
+   "enunciado": "Sendo A = {x | x par positivo menor que 10} e B = {x | x ímpar compreendido entre 0 e 8}, assinale a alternativa\nque apresenta CORRETAMENTE A U B.",
+   "alternativas": [
+    [
+     "a",
+     "{0,1,2,3,4,5,6,7,8,10}."
+    ],
+    [
+     "b",
+     "{0,2,4,6,8}."
+    ],
+    [
+     "c",
+     "{0,1,2,3,4,5,6,7,8}."
+    ],
+    [
+     "d",
+     "{1,3,5,7}."
+    ]
+   ],
+   "numero_serie": 2,
+   "lacunas": [
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "MV_kK4MmoFY",
+   "titulo_video": "QUESTÃO 05 Raciocínio Lógico Banca #idecan  #concurso #rlm",
+   "publicado": "2023-04-11T12:07:03Z",
+   "duracao": "PT2M59S",
+   "prova": "IDECAN - Ana TI (UNIVASF)/UNIVASF/2019",
+   "assunto": "negação de proposições",
+   "banca": "IDECAN",
+   "banca_slug": "idecan",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": 2019,
+   "orgao": "UNIVASF",
+   "gabarito": "D",
+   "enunciado": "A alternativa que apresenta corretamente a negação da frase “Se passar no concurso público é ótimo, então eu preciso estudar” é",
+   "alternativas": [
+    [
+     "a",
+     "“Se passar no concurso público não é ótimo, então eu preciso estudar”."
+    ],
+    [
+     "b",
+     "“Passar no concurso público não é ótimo ou eu não preciso estudar”."
+    ],
+    [
+     "c",
+     "“Passar no concurso público não é ótimo e eu não preciso estudar”."
+    ],
+    [
+     "d",
+     "“Passar no concurso público é ótimo mas eu não preciso estudar”."
+    ],
+    [
+     "e",
+     "“Ou estudo ou passo no concurso público”."
+    ]
+   ],
+   "numero_serie": 5,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "Ioz1XvwTSbY",
+   "titulo_video": "RACIOCÍNIO LÓGICO #AOCP NÚMERO DE LINHAS DA TABELA VERDADE QUESTÃO 001 DE 100",
+   "publicado": "2021-04-01T00:02:54Z",
+   "duracao": "PT1M20S",
+   "prova": "Instituto AOCP - Analista (MJSP)/Big Data/Governança de Dados/2020",
+   "assunto": "Tabela verdade das proposições compostas",
+   "banca": "Instituto AOCP",
+   "banca_slug": "aocp",
+   "tema": "Tabela-verdade",
+   "tema_slug": "tabela-verdade",
+   "ano": 2020,
+   "orgao": "Big Data",
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 1,
+   "lacunas": [
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "9h59T8-zW2o",
+   "titulo_video": "✅ Implicações Lógicas para Concursos  #RLM Raciocínio Lógico",
+   "publicado": "2021-11-22T00:12:05Z",
+   "duracao": "PT13M5S",
+   "assunto": null,
+   "banca": null,
+   "banca_slug": null,
+   "tema": null,
+   "tema_slug": null,
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito",
+    "banca"
+   ],
+   "completa": false
+  },
+  {
+   "video": "lg0H9CQUpK0",
+   "titulo_video": "QUESTÃO 02 Raciocínio Lógico Banca #idecan  #concurso #rlm",
+   "publicado": "2023-04-08T21:44:43Z",
+   "duracao": "PT9M28S",
+   "prova": "IDECAN - PEBTT (IF Baiano)/IF Baiano/Matemática/2019",
+   "assunto": "Tabela verdade das proposições compostas",
+   "banca": "IDECAN",
+   "banca_slug": "idecan",
+   "tema": "Tabela-verdade",
+   "tema_slug": "tabela-verdade",
+   "ano": 2019,
+   "orgao": "IF Baiano",
+   "gabarito": "D",
+   "enunciado": "Assinale a alternativa que contém a proposição que define corretamente a seguinte tabela verdade:\n\np q ?\nV     V      F\nF     V      F\nV     F     V\nV     V     F",
+   "alternativas": [
+    [
+     "a",
+     "p ∨∼(p∧q)"
+    ],
+    [
+     "b",
+     "p∨(p ∧∼q)"
+    ],
+    [
+     "c",
+     "(p↔q)→ ∼(p ∨∼q)"
+    ],
+    [
+     "d",
+     "p∨(q↔ ∼p)"
+    ],
+    [
+     "e",
+     "p↔q"
+    ]
+   ],
+   "numero_serie": 2,
+   "lacunas": [],
+   "completa": true
+  },
+  {
+   "video": "IchUTU77YO0",
+   "titulo_video": "MATEMÁTICA E RACIOCÍNIO LÓGICO #SELECON CONJUNTOS QUESTÃO 002",
+   "publicado": "2021-04-16T16:43:02Z",
+   "duracao": "PT3M58S",
+   "prova": "SELECON - Técnico de Nível Superior (SME Cuiabá)/Administrador/2018",
+   "assunto": "Definição, subconjuntos, inclusão e pertinência, operações, conjunto das partes",
+   "banca": "Selecon",
+   "banca_slug": "selecon",
+   "tema": "Conjuntos",
+   "tema_slug": "conjuntos",
+   "ano": 2018,
+   "orgao": "Administrador",
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 2,
+   "lacunas": [
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "-PC9G3zIkHc",
+   "titulo_video": "100 Questões Resolvidas | Equivalências e Negações das Proposições | Todas de #concursos",
+   "publicado": "2022-06-03T00:33:45Z",
+   "duracao": "PT2H53M16S",
+   "assunto": null,
+   "banca": null,
+   "banca_slug": null,
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito",
+    "banca"
+   ],
+   "completa": false
+  },
+  {
+   "video": "tmPKOh9rAF8",
+   "titulo_video": "MATEMÁTICA E RACIOCÍNIO LÓGICO #SELECON CONJUNTOS QUESTÃO 001",
+   "publicado": "2021-04-15T00:43:08Z",
+   "duracao": "PT3M4S",
+   "prova": "SELECON - Professor (SME Cuiabá)/Artes/Ensino Fundamental/2019",
+   "assunto": "Número de elementos da união, da intersecção, do complemento e da diferença",
+   "banca": "Selecon",
+   "banca_slug": "selecon",
+   "tema": "Conjuntos",
+   "tema_slug": "conjuntos",
+   "ano": 2019,
+   "orgao": "Artes",
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 1,
+   "lacunas": [
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  },
+  {
+   "video": "ryxofLmdqeI",
+   "titulo_video": "Proposições Lógicas ::: Princípios da Lógica ::: 100 Questões de Concursos Resolvidas Passo a Passo",
+   "publicado": "2021-12-08T16:17:30Z",
+   "duracao": "PT1H31M53S",
+   "assunto": null,
+   "banca": null,
+   "banca_slug": null,
+   "tema": "Proposições e conectivos",
+   "tema_slug": "proposicoes-e-conectivos",
+   "ano": null,
+   "orgao": null,
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": null,
+   "lacunas": [
+    "cabeçalho da prova",
+    "enunciado",
+    "gabarito",
+    "banca"
+   ],
+   "completa": false
+  },
+  {
+   "video": "9k0Vrr3kSn4",
+   "titulo_video": "RACIOCÍNIO LÓGICO #AOCP EQUIVALÊNCIA LÓGICA DAS PROPOSIÇÕES QUESTÃO 004 DE 100 DISTRIBUTIVA",
+   "publicado": "2021-04-01T15:05:37Z",
+   "duracao": "PT3M",
+   "prova": "Instituto AOCP - Advogado (Pref Novo Hamburgo)/CREAS SUAS/2020",
+   "assunto": "Equivalências lógicas (inclui negação de proposições compostas)",
+   "banca": "Instituto AOCP",
+   "banca_slug": "aocp",
+   "tema": "Equivalências e negações",
+   "tema_slug": "equivalencias-e-negacoes",
+   "ano": 2020,
+   "orgao": "CREAS SUAS",
+   "gabarito": null,
+   "enunciado": null,
+   "alternativas": [],
+   "numero_serie": 4,
+   "lacunas": [
+    "enunciado",
+    "gabarito"
+   ],
+   "completa": false
+  }
+ ]
+}
