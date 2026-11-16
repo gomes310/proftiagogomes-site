@@ -21,11 +21,29 @@ async function brevo(chave, metodo, caminho, corpo) {
   return { status: r.status, corpo: texto ? JSON.parse(texto) : null };
 }
 
+let listaEmCache = null;
+let atributosProntos = false;
+
+// Acha a lista "Leads YouTube"; se ela ainda não existir, cria (na primeira pasta da conta).
 async function idDaLista(chave) {
   if (process.env.BREVO_LISTA_LEADS) return Number(process.env.BREVO_LISTA_LEADS);
+  if (listaEmCache) return listaEmCache;
   const r = await brevo(chave, 'GET', '/contacts/lists?limit=50');
   const lista = (r.corpo?.lists || []).find((l) => l.name === 'Leads YouTube');
-  return lista ? lista.id : null;
+  if (lista) return (listaEmCache = lista.id);
+  const pastas = await brevo(chave, 'GET', '/contacts/folders?limit=10&offset=0');
+  const pasta = pastas.corpo?.folders?.[0]?.id;
+  if (!pasta) return null;
+  const nova = await brevo(chave, 'POST', '/contacts/lists', { name: 'Leads YouTube', folderId: pasta });
+  return nova.corpo?.id ? (listaEmCache = nova.corpo.id) : null;
+}
+
+// Garante os campos usados pelo formulário (se já existirem, a Brevo só responde erro e seguimos).
+async function garantirAtributos(chave) {
+  if (atributosProntos) return;
+  await Promise.all(['ORIGEM', 'BANCAS'].map((nome) =>
+    brevo(chave, 'POST', `/contacts/attributes/normal/${nome}`, { type: 'text' }).catch(() => null)));
+  atributosProntos = true;
 }
 
 export default async (req) => {
@@ -46,6 +64,7 @@ export default async (req) => {
   const lista = await idDaLista(chave);
   if (!lista) return resposta(500, { erro: 'Inscrições ainda não configuradas. Tente de novo mais tarde.' });
 
+  await garantirAtributos(chave);
   const atributos = { ORIGEM: 'youtube', OPT_IN: true };
   if (nome) atributos.NOME = nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase();
   if (banca && banca !== 'Outra') atributos.BANCAS = banca;
