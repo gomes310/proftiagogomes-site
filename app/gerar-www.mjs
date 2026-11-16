@@ -1,7 +1,7 @@
 // Gera app/www a partir da trilha do site (trilha/index.html), adaptada para o app Android:
 // fonte embutida (funciona sem internet), sem navegação do site e sem links de compra
 // (a Google Play não permite levar o usuário a pagar fora dela por conteúdo digital).
-import { readFileSync, writeFileSync, mkdirSync, cpSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, cpSync, rmSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -10,13 +10,15 @@ const WWW = join(AQUI, 'www');
 const FONTE = join(AQUI, 'node_modules/@fontsource/familjen-grotesk/files');
 const CANAL = 'https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ';
 
-let s = readFileSync(join(AQUI, '..', 'trilha', 'index.html'), 'utf8');
+// no repositório do site a trilha fica em ../trilha; na pasta do PC, uma cópia fica em trilha-do-site/
+const ORIGEM = existsSync(join(AQUI, '..', 'trilha', 'index.html')) ? join(AQUI, '..') : join(AQUI, 'trilha-do-site');
+let s = readFileSync(existsSync(join(ORIGEM, 'trilha', 'index.html')) ? join(ORIGEM, 'trilha', 'index.html') : join(ORIGEM, 'index.html'), 'utf8');
 function troca(de, para) { if (de instanceof RegExp ? !de.test(s) : !s.includes(de)) throw new Error('Trecho não encontrado: ' + String(de).slice(0, 80)); s = s.replace(de, para); }
 
 rmSync(WWW, { recursive: true, force: true });
 mkdirSync(join(WWW, 'fontes'), { recursive: true });
 for (const p of [400, 500, 600, 700]) cpSync(join(FONTE, `familjen-grotesk-latin-${p}-normal.woff2`), join(WWW, 'fontes', `fg-${p}.woff2`));
-cpSync(join(AQUI, '..', 'assets', 'whatsapp.css'), join(WWW, 'whatsapp.css'));
+cpSync(existsSync(join(ORIGEM, 'assets', 'whatsapp.css')) ? join(ORIGEM, 'assets', 'whatsapp.css') : join(ORIGEM, 'whatsapp.css'), join(WWW, 'whatsapp.css'));
 
 // cabeça: fontes locais, sem SEO de página web
 troca(/<link rel="preconnect"[^>]*>\s*<link rel="preconnect"[^>]*>\s*<link href="https:\/\/fonts\.googleapis[^>]*>/,
