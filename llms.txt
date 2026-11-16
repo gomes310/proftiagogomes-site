@@ -11,6 +11,10 @@
 - [Equivalências e negações](https://proftiagogomes.com.br/questoes/equivalencias-e-negacoes/)
 - [Tabela-verdade](https://proftiagogomes.com.br/questoes/tabela-verdade/)
 
+## Para quem está começando
+- [Trilha interativa de Raciocínio Lógico](https://proftiagogomes.com.br/trilha/): 11 lições com exercícios
+- [Roteiro da trilha (texto)](https://proftiagogomes.com.br/trilha/roteiro/)
+
 ## Materiais
 - [Guia do Raciocínio Lógico](https://proftiagogomes.com.br/guia/): material pago (PDF e vídeo)
 - [Mapa do site](https://proftiagogomes.com.br/sitemap.xml)

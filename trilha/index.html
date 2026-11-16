@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trilha de Raciocínio Lógico do zero: aprenda jogando | Prof. Tiago Gomes</title>
+<meta name="description" content="Trilha gratuita e interativa de Raciocínio Lógico para quem nunca estudou: 11 lições curtas, exercícios na hora, XP, estrelas e níveis. Do básico às questões de concurso.">
+<link rel="canonical" href="https://proftiagogomes.com.br/trilha/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prof. Tiago Gomes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Trilha de Raciocínio Lógico do zero: aprenda jogando">
+<meta property="og:description" content="11 lições curtas com exercícios, XP e níveis. Grátis, no celular, do básico às questões de concurso.">
+<meta property="og:url" content="https://proftiagogomes.com.br/trilha/">
+<meta property="og:image" content="https://proftiagogomes.com.br/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/whatsapp.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://proftiagogomes.com.br/"},{"@type":"ListItem","position":2,"name":"Trilha de estudos","item":"https://proftiagogomes.com.br/trilha/"}]},{"@type":"LearningResource","name":"Trilha interativa de Raciocínio Lógico para iniciantes","url":"https://proftiagogomes.com.br/trilha/","inLanguage":"pt-BR","educationalLevel":"Iniciante","learningResourceType":"Curso interativo","isAccessibleForFree":true,"teaches":["Conjuntos","Proposições","Tabela-verdade","Equivalências e negações","Tautologia","Diagramas lógicos","Implicações lógicas","Associação de informações","Sequências lógicas","Princípio da casa dos pombos","Datas e calendários"],"author":{"@type":"Person","name":"Tiago Gomes","jobTitle":"Professor de Raciocínio Lógico","url":"https://proftiagogomes.com.br/","sameAs":["https://www.youtube.com/channel/UCMIAzvrCpApjss0Gwd0u0kQ"]}}]}</script>
+<style>
+  :root { --papel: #F1F4F8; --folha: #FFFFFF; --tinta: #172238; --tinta-2: #4E5A70; --linha: #CDD5E1; --marca: #FFD84D; --verde: #1E7A4C; --verde-claro: #E6F4EC; --erro: #B3261E; --erro-claro: #FBEAE8; --bloq: #B9C3D2; --raio: 8px; --fonte: 'Familjen Grotesk', system-ui, sans-serif; }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--papel); color: var(--tinta); font-family: var(--fonte); font-size: 18px; line-height: 1.55; }
+  a { color: var(--tinta); text-underline-offset: 3px; }
+  button { font-family: var(--fonte); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; }
+  .wrap { width: min(720px, 100% - 32px); margin-inline: auto; }
+  .topo { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 0; flex-wrap: wrap; }
+  .marca { font-weight: 700; font-size: 18px; text-decoration: none; }
+  .topo nav { display: flex; gap: 18px; font-size: 15px; overflow-x: auto; }
+  .topo nav a { color: var(--tinta-2); text-decoration: none; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; }
+
+  /* painel de status */
+  .status { position: sticky; top: 0; z-index: 5; background: var(--papel); border-bottom: 1px solid var(--linha); }
+  .status .wrap { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 0; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 16px; padding: 6px 12px; border-radius: 99px; background: var(--folha); border: 1px solid var(--linha); white-space: nowrap; }
+  .chip svg { width: 18px; height: 18px; }
+  .nivel-barra { flex: 1; max-width: 220px; }
+  .nivel-barra small { display: block; font-size: 13px; color: var(--tinta-2); }
+  .trilho { height: 10px; border-radius: 99px; background: var(--linha); overflow: hidden; }
+  .trilho span { display: block; height: 100%; width: 0; background: var(--verde); }
+
+  .abertura { padding: 18px 0 8px; }
+  h1 { font-size: clamp(32px, 5.4vw, 50px); line-height: 1.04; letter-spacing: -0.035em; margin: 0 0 12px; }
+  .abertura p { color: var(--tinta-2); margin: 0 0 8px; max-width: 46ch; }
+  .abertura .links { font-size: 15px; }
+
+  /* caminho */
+  .unidade { margin: 36px 0 10px; }
+  .unidade-cab { background: var(--tinta); color: var(--folha); border-radius: 12px; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .unidade-cab h2 { margin: 0; font-size: 20px; }
+  .unidade-cab p { margin: 2px 0 0; font-size: 15px; color: #C8D1E2; }
+  .selo { font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: rgba(255,255,255,.12); white-space: nowrap; }
+  .selo.ganho { background: var(--marca); color: var(--tinta); }
+  .caminho { list-style: none; margin: 0; padding: 22px 0 6px; display: grid; gap: 18px; }
+  .caminho li { display: flex; flex-direction: column; align-items: center; }
+  .caminho li:nth-child(4n+2) { transform: translateX(-70px); }
+  .caminho li:nth-child(4n+4) { transform: translateX(70px); }
+  .no { width: 78px; height: 72px; border-radius: 50%; border: 0; cursor: pointer; position: relative; display: grid; place-items: center;
+        background: var(--verde); color: #fff; box-shadow: 0 7px 0 #135233; font-size: 26px; font-weight: 700; }
+  .no:active { transform: translateY(4px); box-shadow: 0 3px 0 #135233; }
+  .no.bloqueado { background: var(--bloq); box-shadow: 0 7px 0 #95A1B3; cursor: not-allowed; color: #fff; }
+  .no.atual { background: var(--marca); color: var(--tinta); box-shadow: 0 7px 0 #C9A92B; }
+  .no.atual::after { content: ""; position: absolute; inset: -9px; border-radius: 50%; border: 3px solid var(--marca); }
+  .no svg { width: 30px; height: 30px; }
+  .no-nome { margin-top: 12px; font-weight: 600; font-size: 15px; text-align: center; max-width: 180px; line-height: 1.25; }
+  .estrelas { color: #C9A92B; font-size: 14px; letter-spacing: 2px; min-height: 18px; }
+  .estrelas .apagada { color: var(--bloq); }
+  .comecar { margin-top: 6px; font-size: 13px; font-weight: 700; background: var(--tinta); color: #fff; padding: 3px 10px; border-radius: 99px; }
+  @media (prefers-reduced-motion: no-preference) { .no.atual::after { animation: pulso 1.6s ease-in-out infinite; } @keyframes pulso { 50% { transform: scale(1.08); opacity: .5; } } }
+
+  .bau { margin: 8px auto 0; text-align: center; font-size: 15px; color: var(--tinta-2); }
+  .bau a { font-weight: 700; color: var(--tinta); }
+  .rodape-trilha { margin: 48px 0 24px; padding: 26px; background: var(--folha); border: 1px solid var(--linha); border-radius: 12px; }
+  .rodape-trilha h2 { margin: 0 0 8px; font-size: 24px; }
+  .rodape-trilha p { margin: 0 0 14px; color: var(--tinta-2); }
+  .acoes { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 20px; border-radius: var(--raio); font: 700 17px var(--fonte); text-decoration: none; cursor: pointer; border: 2px solid var(--tinta); background: var(--folha); color: var(--tinta); }
+  .btn-pri { background: var(--tinta); color: #fff; }
+  .btn-ok { background: var(--verde); border-color: var(--verde); color: #fff; box-shadow: 0 4px 0 #135233; }
+  .btn-ok[disabled] { background: var(--bloq); border-color: var(--bloq); box-shadow: 0 4px 0 #95A1B3; cursor: not-allowed; }
+  .btn-guia { background: var(--marca); border-color: var(--tinta); }
+  footer { padding: 20px 0 48px; font-size: 14px; color: var(--tinta-2); }
+
+  /* lição em tela cheia */
+  .licao { position: fixed; inset: 0; z-index: 30; background: var(--papel); display: none; flex-direction: column; }
+  .licao.aberta { display: flex; }
+  .licao-topo { display: flex; align-items: center; gap: 14px; padding: 14px 16px; }
+  .fechar { width: 44px; height: 44px; border-radius: 50%; border: 0; background: transparent; font-size: 28px; color: var(--tinta-2); cursor: pointer; }
+  .licao-topo .trilho { flex: 1; height: 14px; }
+  .licao-corpo { flex: 1; overflow-y: auto; }
+  .licao-corpo .wrap { padding: 8px 0 24px; }
+  .licao h2 { font-size: clamp(24px, 4vw, 30px); line-height: 1.15; margin: 8px 0 12px; letter-spacing: -0.02em; }
+  .rotulo { font-size: 14px; font-weight: 700; color: var(--verde); text-transform: none; }
+  .teoria ul { padding-left: 20px; margin: 8px 0; }
+  .teoria li { margin: 6px 0; }
+  .caixa-ex { background: var(--folha); border: 1px solid var(--linha); border-left: 4px solid var(--marca); border-radius: var(--raio); padding: 14px 16px; margin-top: 14px; }
+  .opcoes { display: grid; gap: 10px; margin-top: 14px; }
+  .opcao { text-align: left; min-height: 54px; padding: 12px 16px; border: 2px solid var(--linha); border-bottom-width: 4px; border-radius: 12px; background: var(--folha); font: 500 18px var(--fonte); color: var(--tinta); cursor: pointer; }
+  .opcao[aria-pressed="true"] { border-color: #3B7BD9; background: #EAF2FD; }
+  .opcao.certa { border-color: var(--verde); background: var(--verde-claro); }
+  .opcao.errada { border-color: var(--erro); background: var(--erro-claro); }
+  .opcao[disabled] { cursor: default; }
+  .licao-base { border-top: 1px solid var(--linha); padding: 14px 0 calc(14px + env(safe-area-inset-bottom)); background: var(--papel); }
+  .licao-base.acerto { background: var(--verde-claro); border-color: var(--verde); }
+  .licao-base.erro { background: var(--erro-claro); border-color: var(--erro); }
+  .licao-base .wrap { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+  .retorno { flex: 1 1 280px; font-size: 16px; }
+  .retorno strong { display: block; font-size: 19px; }
+  .licao-base.acerto .retorno strong { color: var(--verde); }
+  .licao-base.erro .retorno strong { color: var(--erro); }
+  .licao-base .btn { min-width: 160px; }
+  .fim { text-align: center; padding-top: 24px; }
+  .fim .grande { font-size: 54px; letter-spacing: 6px; color: #C9A92B; margin: 0; }
+  .fim .grande .apagada { color: var(--bloq); }
+  .placar { display: flex; justify-content: center; gap: 12px; margin: 18px 0; flex-wrap: wrap; }
+  .placar div { background: var(--folha); border: 1px solid var(--linha); border-radius: 12px; padding: 12px 18px; min-width: 120px; }
+  .placar b { display: block; font-size: 26px; }
+  .placar small { color: var(--tinta-2); }
+  .conquista { margin: 16px auto; max-width: 460px; background: var(--tinta); color: #fff; border-radius: 12px; padding: 18px; }
+  .conquista p { margin: 6px 0 12px; color: #DCE3EF; }
+  .confete { position: fixed; inset: 0; pointer-events: none; z-index: 40; overflow: hidden; }
+  .confete i { position: absolute; top: -12px; width: 10px; height: 14px; border-radius: 2px; }
+  @media (prefers-reduced-motion: no-preference) { .confete i { animation: cair 1.8s ease-in forwards; } @keyframes cair { to { transform: translateY(105vh) rotate(540deg); } } }
+  @media (prefers-reduced-motion: reduce) { .confete { display: none; } }
+  @media (max-width: 520px) {
+    .caminho li:nth-child(4n+2) { transform: translateX(-46px); }
+    .caminho li:nth-child(4n+4) { transform: translateX(46px); }
+    .licao-base .btn { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap topo">
+  <a class="marca" href="/">Prof. Tiago Gomes</a>
+  <nav aria-label="Seções"><a href="/questoes/">Banco de questões</a><a href="/trilha/">Trilha</a><a href="/guia/">Guia do RLM</a></nav>
+</header>
+
+<div class="status" aria-label="Seu progresso">
+  <div class="wrap">
+    <span class="chip" title="Dias seguidos estudando"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E8590C" d="M12 2s5 4.6 5 9.6A5 5 0 0 1 7 11.6C7 9 9 7 9 7s.4 2.6 2.4 3.6C11 6.6 12 2 12 2Zm0 20a7 7 0 0 1-7-7c0-1.4.4-2.7 1-3.8.2 3.7 3 6.8 6 6.8s5.8-3.1 6-6.8c.6 1.1 1 2.4 1 3.8a7 7 0 0 1-7 7Z"/></svg><span id="ofensiva">0</span><span class="sr">&nbsp;dias</span></span>
+    <div class="nivel-barra"><small id="nivel-texto">Nível 1 · 0 XP</small><div class="trilho" aria-hidden="true"><span id="nivel-barra"></span></div></div>
+    <span class="chip" title="Estrelas conquistadas"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E0B400" d="m12 2 3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6Z"/></svg><span id="total-estrelas">0</span></span>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="abertura">
+    <h1>Raciocínio Lógico do zero, uma lição por vez</h1>
+    <p>11 lições curtas, na ordem certa para quem nunca estudou. Leia a explicação, responda 3 exercícios e libere a próxima. Seu progresso fica salvo neste aparelho.</p>
+    <p class="links">Prefere ler tudo de uma vez? <a href="/trilha/roteiro/">Veja o roteiro completo</a> ou <a href="/trilha/trilha-de-estudos-raciocinio-logico.pdf" download>baixe em PDF</a>.</p>
+  </section>
+  <div id="mapa"></div>
+
+  <section class="rodape-trilha">
+    <h2>Quer ir além da trilha?</h2>
+    <p>A trilha ensina o básico de cada assunto. O Guia do Raciocínio Lógico tem a teoria completa dos mesmos 11 temas e muito mais questões de concurso resolvidas em PDF e vídeo.</p>
+    <div class="acoes">
+      <a class="btn btn-guia" href="/guia/">Conhecer o Guia</a>
+      <a class="btn" href="https://wa.me/?text=Estou%20fazendo%20a%20trilha%20gr%C3%A1tis%20de%20Racioc%C3%ADnio%20L%C3%B3gico%20do%20Prof.%20Tiago%20Gomes%3A%20https%3A%2F%2Fproftiagogomes.com.br%2Ftrilha%2F">Convidar um amigo</a>
+    </div>
+  </section>
+</main>
+<footer class="wrap">Trilha gratuita do Prof. Tiago Gomes. Pode compartilhar à vontade.</footer>
+
+<div class="licao" id="licao" role="dialog" aria-modal="true" aria-labelledby="licao-titulo">
+  <div class="licao-topo">
+    <button class="fechar" type="button" id="fechar" aria-label="Sair da lição">×</button>
+    <div class="trilho" aria-hidden="true"><span id="licao-barra"></span></div>
+  </div>
+  <div class="licao-corpo"><div class="wrap" id="licao-conteudo"></div></div>
+  <div class="licao-base" id="licao-base"><div class="wrap"><div class="retorno" id="retorno" aria-live="polite"></div><button class="btn btn-ok" type="button" id="acao">Continuar</button></div></div>
+</div>
+
+<script>
+(function () {
+  var UNIDADES = [
+    { nome: 'Unidade 1 · A base', desc: 'A linguagem dos conjuntos', selo: 'Base sólida', licoes: [0] },
+    { nome: 'Unidade 2 · Lógica proposicional', desc: 'O coração do Raciocínio Lógico', selo: 'Lógico de carteirinha', licoes: [1, 2, 3, 4] },
+    { nome: 'Unidade 3 · Argumentação', desc: 'Conclusões que valem e as que não valem', selo: 'Argumentador', licoes: [5, 6] },
+    { nome: 'Unidade 4 · Raciocínio aplicado', desc: 'Organização e atenção para ganhar pontos', selo: 'Mestre do raciocínio', licoes: [7, 8, 9, 10] }
+  ];
+  var LICOES = [
+    { titulo: 'Conjuntos', teoria: ['Conjunto é uma coleção de elementos, escrita entre chaves: {1, 2, 3}.', 'União (∪) junta tudo; interseção (∩) fica só com o que é comum; diferença (A − B) fica com o que é de A e não é de B.', 'Um conjunto com n elementos tem 2ⁿ subconjuntos.'],
+      exemplo: 'A = {1, 2, 3, 4} e B = {3, 4, 5}: A ∩ B = {3, 4}, A ∪ B = {1, 2, 3, 4, 5} e A − B = {1, 2}.',
+      questoes: [
+        { p: 'Se A = {1, 2, 3, 4} e B = {3, 4, 5}, quanto é A ∩ B?', o: ['{3, 4}', '{1, 2, 3, 4, 5}', '{1, 2}', '{5}'], c: 0, e: 'A interseção fica só com os elementos que estão nos dois conjuntos: 3 e 4.' },
+        { p: 'Com os mesmos A e B, quanto é A ∪ B?', o: ['{3, 4}', '{1, 2, 5}', '{1, 2, 3, 4, 5}', '{1, 2}'], c: 2, e: 'A união junta todos os elementos, sem repetir: 1, 2, 3, 4 e 5.' },
+        { p: 'Quantos subconjuntos tem o conjunto {a, b, c}?', o: ['3', '6', '8', '9'], c: 2, e: 'São 3 elementos, então 2³ = 8 subconjuntos (contando o vazio e o próprio conjunto).' }
+      ] },
+    { titulo: 'Proposições', teoria: ['Proposição é uma frase declarativa que pode ser julgada verdadeira (V) ou falsa (F).', 'Perguntas, ordens e exclamações não são proposições.', 'Conectivos ligam proposições: e (∧), ou (∨), ou… ou… (⊻), se… então (→), se e somente se (↔). A negação é ~.'],
+      exemplo: '"Brasília é a capital do Brasil" é proposição. "Que horas são?" não é.',
+      questoes: [
+        { p: 'Qual destas frases é uma proposição?', o: ['Que horas são?', 'Feche a porta!', 'Brasília é a capital do Brasil.', 'Que dia lindo!'], c: 2, e: 'É a única frase declarativa: dá para dizer que é verdadeira.' },
+        { p: '"Estudo e trabalho" é uma proposição:', o: ['simples', 'composta, com conjunção', 'composta, com disjunção', 'que não é proposição'], c: 1, e: 'São duas proposições ligadas pelo "e", que é a conjunção.' },
+        { p: 'Com p = "chove" e q = "fico em casa", como se escreve "Se chove, então fico em casa"?', o: ['p ∧ q', 'p ∨ q', 'p → q', 'p ↔ q'], c: 2, e: '"Se… então" é a condicional, representada por →.' }
+      ] },
+    { titulo: 'Tabela-verdade', teoria: ['A tabela mostra o valor da proposição composta em todas as combinações de V e F.', 'Com n proposições simples, a tabela tem 2ⁿ linhas.', 'Regra mais cobrada: p → q só é falsa quando p é V e q é F.'],
+      exemplo: '"Se 2 + 2 = 5, então a Lua é de queijo" é verdadeira: uma condicional que começa com F é sempre verdadeira.',
+      questoes: [
+        { p: 'Quantas linhas tem a tabela-verdade de uma proposição com 3 proposições simples?', o: ['3', '6', '8', '9'], c: 2, e: '2³ = 8 linhas.' },
+        { p: 'Quando p → q é falsa?', o: ['p V e q F', 'p F e q V', 'p e q falsas', 'p e q verdadeiras'], c: 0, e: 'É o único caso falso da condicional: a primeira parte verdadeira e a segunda falsa.' },
+        { p: 'Se p é V e q é F, qual o valor de p ∧ q?', o: ['V', 'F'], c: 1, e: 'A conjunção só é verdadeira quando as duas partes são verdadeiras.' }
+      ] },
+    { titulo: 'Equivalências e negações', teoria: ['Negar "e" vira "ou" (e vice-versa), negando as duas partes: ~(p ∧ q) = ~p ∨ ~q.', 'Negar a condicional: ~(p → q) = p ∧ ~q.', 'Equivalentes da condicional: p → q = ~q → ~p = ~p ∨ q.'],
+      exemplo: 'A negação de "Se eu estudo, então eu passo" é "Eu estudo e não passo".',
+      questoes: [
+        { p: 'Qual é a negação de "Estudo e trabalho"?', o: ['Não estudo e não trabalho', 'Não estudo ou não trabalho', 'Estudo ou trabalho', 'Não estudo e trabalho'], c: 1, e: 'Nega as duas partes e troca o "e" por "ou".' },
+        { p: 'Qual é a negação de "Se estudo, então passo"?', o: ['Se não estudo, então não passo', 'Não estudo e passo', 'Estudo e não passo', 'Se passo, então estudo'], c: 2, e: 'Mantém a primeira parte, troca por "e" e nega a segunda: p ∧ ~q.' },
+        { p: 'Qual frase é equivalente a "Se chove, a rua molha"?', o: ['Se a rua molha, então chove', 'Se a rua não molha, então não chove', 'Se não chove, a rua não molha', 'Chove e a rua não molha'], c: 1, e: 'É a contrapositiva: inverte e nega as duas partes (~q → ~p).' }
+      ] },
+    { titulo: 'Tautologia', teoria: ['Tautologia: a última coluna da tabela é toda V, como p ∨ ~p.', 'Contradição: a última coluna é toda F, como p ∧ ~p.', 'Contingência: a última coluna tem V e F.'],
+      exemplo: '"Ou chove ou não chove" (p ∨ ~p) é sempre verdadeira: é tautologia.',
+      questoes: [
+        { p: 'A proposição p ∨ ~p é:', o: ['tautologia', 'contradição', 'contingência'], c: 0, e: 'Uma das duas partes é sempre verdadeira, então o "ou" é sempre V.' },
+        { p: 'A proposição p ∧ ~p é:', o: ['tautologia', 'contradição', 'contingência'], c: 1, e: 'p e ~p nunca são verdadeiras ao mesmo tempo, então o "e" é sempre F.' },
+        { p: 'A proposição p ∧ q é:', o: ['tautologia', 'contradição', 'contingência'], c: 2, e: 'É V quando as duas são V e F nos outros casos: tem V e F, então é contingência.' }
+      ] },
+    { titulo: 'Diagramas lógicos', teoria: ['Frases com todo, algum e nenhum viram círculos: "Todo A é B" põe o círculo A dentro de B.', 'A negação de "Todo A é B" é "Algum A não é B".', 'A negação de "Nenhum A é B" é "Algum A é B".'],
+      exemplo: '"Todo médico é responsável" e "Paulo é médico": então Paulo é responsável.',
+      questoes: [
+        { p: 'Qual é a negação de "Todo gato é preto"?', o: ['Nenhum gato é preto', 'Algum gato não é preto', 'Todo gato não é preto', 'Algum gato é preto'], c: 1, e: 'Para negar "todo", basta um exemplo contrário: algum gato não é preto.' },
+        { p: '"Todo médico é responsável" e "Paulo é médico". Conclui-se que:', o: ['Paulo é responsável', 'Todo responsável é médico', 'Paulo não é responsável', 'Nada se pode concluir'], c: 0, e: 'Paulo está no círculo dos médicos, que fica dentro do círculo dos responsáveis.' },
+        { p: 'Qual é a negação de "Nenhum aluno faltou"?', o: ['Todo aluno faltou', 'Algum aluno não faltou', 'Algum aluno faltou', 'Nenhum aluno compareceu'], c: 2, e: 'Basta um aluno ter faltado para a frase original ser falsa.' }
+      ] },
+    { titulo: 'Implicações lógicas', teoria: ['Modus ponens: de "p → q" e "p", conclui-se "q".', 'Modus tollens: de "p → q" e "não q", conclui-se "não p".', 'Cuidado: de "p → q" e "q", não dá para concluir "p".'],
+      exemplo: '"Se chove, a rua fica molhada. A rua não está molhada." Logo, não choveu.',
+      questoes: [
+        { p: 'Se "p → q" e "p" são verdadeiras, o que se conclui?', o: ['q', 'não q', 'não p', 'nada'], c: 0, e: 'É o modus ponens: a condição aconteceu, então a consequência acontece.' },
+        { p: '"Se chove, a rua molha. A rua não está molhada." Conclusão válida:', o: ['Choveu', 'Não choveu', 'A rua molhou', 'Nada se conclui'], c: 1, e: 'É o modus tollens: se tivesse chovido, a rua estaria molhada.' },
+        { p: '"Se estudo, passo. Passei." Dá para concluir que estudei?', o: ['Sim', 'Não'], c: 1, e: 'Dá para passar por outro motivo. Concluir "estudei" é a falácia de afirmar o consequente.' }
+      ] },
+    { titulo: 'Associação de informações', teoria: ['Monte uma tabela: pessoas nas linhas, características nas colunas.', 'Marque ✓ e ✗ a cada pista, começando pelas diretas.', 'Cada linha e cada coluna tem um único ✓.'],
+      exemplo: 'Ana, Bia e Caio têm carro, moto e bicicleta. Ana não tem carro nem moto; Caio não tem carro. Logo: Ana tem a bicicleta, Caio a moto e Bia o carro.',
+      questoes: [
+        { p: 'No exemplo acima, quem tem a moto?', o: ['Ana', 'Bia', 'Caio'], c: 2, e: 'Ana ficou com a bicicleta e Caio não tem carro, então Caio tem a moto.' },
+        { p: 'Qual é o jeito mais seguro de resolver uma associação?', o: ['Chutar e testar', 'Tabela marcando ✓ e ✗', 'Decorar fórmulas'], c: 1, e: 'A tabela mostra o que já foi descartado e evita erro de memória.' },
+        { p: 'Davi, Eva e Fábio comem maçã, uva e pera. Eva não come maçã nem uva; Davi não come uva. Quem come uva?', o: ['Davi', 'Eva', 'Fábio'], c: 2, e: 'Eva come pera. Davi não come uva, então come maçã. Sobra a uva para Fábio.' }
+      ] },
+    { titulo: 'Sequências lógicas', teoria: ['Olhe primeiro a diferença entre termos vizinhos.', 'Se não der, teste multiplicação, quadrados e a posição das letras no alfabeto.', 'Em sequências que se repetem, use o resto da divisão para achar um termo distante.'],
+      exemplo: '2, 5, 10, 17, 26: as diferenças são 3, 5, 7, 9. A próxima é 11, então o próximo termo é 37.',
+      questoes: [
+        { p: 'Qual é o próximo termo de 2, 5, 10, 17, 26, …?', o: ['35', '36', '37', '39'], c: 2, e: 'As diferenças crescem de 2 em 2: +3, +5, +7, +9, +11. 26 + 11 = 37.' },
+        { p: 'Qual é o próximo termo de 3, 6, 12, 24, …?', o: ['27', '30', '36', '48'], c: 3, e: 'Cada termo é o dobro do anterior: 24 × 2 = 48.' },
+        { p: 'Qual é a próxima letra de A, C, E, G, …?', o: ['H', 'I', 'J', 'K'], c: 1, e: 'Pula uma letra a cada passo: A (b) C (d) E (f) G (h) I.' }
+      ] },
+    { titulo: 'Casa dos pombos', teoria: ['Se há mais pombos do que casas, pelo menos uma casa fica com dois.', 'Pense no pior caso: distribua o máximo sem cumprir a condição e some 1.'],
+      exemplo: 'Para garantir duas pessoas nascidas no mesmo mês: 12 podem nascer em meses diferentes; a 13ª força a repetição.',
+      questoes: [
+        { p: 'Quantas pessoas, no mínimo, garantem duas nascidas no mesmo mês?', o: ['2', '12', '13', '24'], c: 2, e: 'São 12 meses (casas). Com 13 pessoas (pombos), algum mês se repete.' },
+        { p: 'Uma gaveta tem meias pretas e brancas misturadas. Quantas tirar, no escuro, para garantir um par da mesma cor?', o: ['2', '3', '4', '5'], c: 1, e: 'No pior caso, as duas primeiras são de cores diferentes. A terceira forma par com uma delas.' },
+        { p: 'Com 6 pombos em 5 casas, o que é garantido?', o: ['Todas as casas têm 2 pombos', 'Alguma casa fica vazia', 'Pelo menos uma casa tem 2 pombos', 'Cada casa tem 1 pombo'], c: 2, e: 'Mesmo distribuindo um em cada casa, sobra um pombo para dividir casa.' }
+      ] },
+    { titulo: 'Datas e calendários', teoria: ['A semana se repete a cada 7 dias: divida o número de dias por 7 e use o resto.', 'Ano comum: 365 dias = 52 semanas + 1 dia. Bissexto: 366 dias.'],
+      exemplo: 'Hoje é sábado. Daqui a 829 dias: 829 ÷ 7 dá resto 3. Três dias depois de sábado é terça.',
+      questoes: [
+        { p: 'Hoje é sábado. Que dia será daqui a 829 dias?', o: ['Domingo', 'Segunda', 'Terça', 'Quarta'], c: 2, e: '829 = 7 × 118 + 3. Andando 3 dias a partir de sábado: domingo, segunda, terça.' },
+        { p: 'Hoje é segunda. Que dia será daqui a 365 dias (ano comum)?', o: ['Segunda', 'Terça', 'Quarta', 'Domingo'], c: 1, e: '365 = 52 semanas + 1 dia. Um dia depois de segunda é terça.' },
+        { p: 'Hoje é quinta. Que dia será daqui a 14 dias?', o: ['Quarta', 'Quinta', 'Sexta', 'Sábado'], c: 1, e: '14 é múltiplo de 7: o resto é 0, então cai no mesmo dia da semana.' }
+      ] }
+  ];
+
+  // ---------- estado salvo ----------
+  var CHAVE = 'trilha-rlm-v1';
+  var est = { xp: 0, estrelas: {}, ofensiva: 0, ultimoDia: null };
+  try { var s = JSON.parse(localStorage.getItem(CHAVE)); if (s) est = Object.assign(est, s); } catch (e) {}
+  function salvar() { try { localStorage.setItem(CHAVE, JSON.stringify(est)); } catch (e) {} }
+  function hoje() { var d = new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+  function ontem() { var d = new Date(Date.now() - 864e5); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+  if (est.ultimoDia && est.ultimoDia !== hoje() && est.ultimoDia !== ontem()) { est.ofensiva = 0; salvar(); }
+  var XP_NIVEL = 60;
+  function concluidas() { return Object.keys(est.estrelas).length; }
+  function liberada(i) { return i === 0 || est.estrelas[i - 1] != null; }
+
+  var ICONE_CADEADO = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-7-2a2 2 0 0 1 4 0v2h-4Z"/></svg>';
+  var ICONE_OK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6 11-11-1.4-1.4Z"/></svg>';
+  function estrelasHtml(n) { var h = ''; for (var i = 0; i < 3; i++) h += i < n ? '★' : '<span class="apagada">★</span>'; return h; }
+
+  // ---------- mapa ----------
+  function desenharMapa() {
+    var atual = LICOES.findIndex(function (_, i) { return liberada(i) && est.estrelas[i] == null; });
+    var html = '';
+    UNIDADES.forEach(function (u) {
+      var completa = u.licoes.every(function (i) { return est.estrelas[i] != null; });
+      html += '<section class="unidade"><div class="unidade-cab"><div><h2>' + u.nome + '</h2><p>' + u.desc + '</p></div><span class="selo' + (completa ? ' ganho' : '') + '">' + (completa ? '🏅 ' : '') + u.selo + '</span></div><ol class="caminho">';
+      u.licoes.forEach(function (i) {
+        var l = LICOES[i], feita = est.estrelas[i] != null, livre = liberada(i);
+        var cls = feita ? '' : (i === atual ? ' atual' : (livre ? '' : ' bloqueado'));
+        var rotulo = l.titulo + (feita ? ', concluída com ' + est.estrelas[i] + ' de 3 estrelas' : (livre ? ', disponível' : ', bloqueada'));
+        html += '<li><button class="no' + cls + '" type="button" data-i="' + i + '" aria-label="Lição ' + (i + 1) + ': ' + rotulo + '"' + (livre ? '' : ' aria-disabled="true"') + '>' + (feita ? ICONE_OK : (livre ? (i + 1) : ICONE_CADEADO)) + '</button>' +
+          '<span class="no-nome">' + l.titulo + '</span>' + (feita ? '<span class="estrelas" aria-hidden="true">' + estrelasHtml(est.estrelas[i]) + '</span>' : (i === atual ? '<span class="comecar">COMEÇAR</span>' : '')) + '</li>';
+      });
+      html += '</ol>' + (completa ? '<p class="bau">Unidade concluída! Aprofunde com o <a href="/guia/">Guia do Raciocínio Lógico</a>.</p>' : '') + '</section>';
+    });
+    document.getElementById('mapa').innerHTML = html;
+    document.querySelectorAll('.no').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var i = +b.dataset.i;
+        if (!liberada(i)) { b.animate && b.animate([{ transform: 'translateX(-4px)' }, { transform: 'translateX(4px)' }, { transform: 'none' }], { duration: 200 }); return; }
+        abrirLicao(i);
+      });
+    });
+    var total = 0; Object.keys(est.estrelas).forEach(function (k) { total += est.estrelas[k]; });
+    document.getElementById('total-estrelas').textContent = total;
+    document.getElementById('ofensiva').textContent = est.ofensiva;
+    var nivel = Math.floor(est.xp / XP_NIVEL) + 1;
+    document.getElementById('nivel-texto').textContent = 'Nível ' + nivel + ' · ' + est.xp + ' XP';
+    document.getElementById('nivel-barra').style.width = ((est.xp % XP_NIVEL) / XP_NIVEL * 100) + '%';
+  }
+
+  // ---------- lição ----------
+  var tela = document.getElementById('licao'), conteudo = document.getElementById('licao-conteudo'), base = document.getElementById('licao-base');
+  var retorno = document.getElementById('retorno'), acao = document.getElementById('acao'), barra = document.getElementById('licao-barra');
+  var L, idx, fila, etapa, escolha, acertosPrimeira, total, origemFoco;
+
+  function abrirLicao(i) {
+    origemFoco = document.activeElement;
+    L = LICOES[i]; idx = i; acertosPrimeira = 0; total = L.questoes.length;
+    fila = L.questoes.map(function (q, k) { return { q: q, k: k, tentativa: 0 }; });
+    etapa = 'teoria';
+    tela.classList.add('aberta'); document.body.style.overflow = 'hidden';
+    mostrarTeoria();
+  }
+  function fechar() { tela.classList.remove('aberta'); document.body.style.overflow = ''; desenharMapa(); if (origemFoco) origemFoco.focus(); }
+  document.getElementById('fechar').addEventListener('click', fechar);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && tela.classList.contains('aberta')) fechar(); });
+
+  function progresso(feitas) { barra.style.width = (feitas / (total + 1) * 100) + '%'; }
+  function base0() { base.className = 'licao-base'; retorno.innerHTML = ''; }
+
+  function mostrarTeoria() {
+    base0(); progresso(0);
+    conteudo.innerHTML = '<p class="rotulo">Lição ' + (idx + 1) + ' de 11 · Aprenda</p><h2 id="licao-titulo">' + L.titulo + '</h2>' +
+      '<div class="teoria"><ul>' + L.teoria.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>' +
+      '<div class="caixa-ex"><strong>Exemplo:</strong> ' + L.exemplo + '</div></div>';
+    acao.disabled = false; acao.textContent = 'Praticar';
+    acao.onclick = function () { etapa = 'questao'; mostrarQuestao(); };
+    acao.focus();
+  }
+
+  function mostrarQuestao() {
+    base0(); escolha = null;
+    var item = fila[0], q = item.q;
+    progresso(1 + (total - fila.filter(function (x) { return true; }).length));
+    conteudo.innerHTML = '<p class="rotulo">' + (item.tentativa ? 'Tente de novo' : 'Exercício') + '</p><h2 id="licao-titulo">' + q.p + '</h2>' +
+      '<div class="opcoes" role="group" aria-label="Alternativas">' + q.o.map(function (t, k) { return '<button class="opcao" type="button" aria-pressed="false" data-k="' + k + '">' + t + '</button>'; }).join('') + '</div>';
+    conteudo.querySelectorAll('.opcao').forEach(function (b) {
+      b.addEventListener('click', function () {
+        conteudo.querySelectorAll('.opcao').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        b.setAttribute('aria-pressed', 'true'); escolha = +b.dataset.k; acao.disabled = false;
+      });
+    });
+    acao.disabled = true; acao.textContent = 'Verificar';
+    acao.onclick = verificar;
+  }
+
+  function verificar() {
+    if (escolha == null) return;
+    var item = fila.shift(), q = item.q, ok = escolha === q.c;
+    conteudo.querySelectorAll('.opcao').forEach(function (b) { b.disabled = true; var k = +b.dataset.k; if (k === q.c) b.classList.add('certa'); else if (k === escolha) b.classList.add('errada'); });
+    if (ok) { if (!item.tentativa) acertosPrimeira++; }
+    else { item.tentativa++; fila.push(item); }
+    base.className = 'licao-base ' + (ok ? 'acerto' : 'erro');
+    retorno.innerHTML = '<strong>' + (ok ? ['Mandou bem!', 'Isso aí!', 'Perfeito!'][Math.floor(Math.random() * 3)] : 'Resposta certa: ' + q.o[q.c]) + '</strong>' + q.e;
+    acao.textContent = 'Continuar';
+    acao.onclick = function () { fila.length ? mostrarQuestao() : terminar(); };
+    progresso(total - fila.length);
+    acao.focus();
+  }
+
+  function terminar() {
+    base0(); progresso(total + 1);
+    var estrelas = acertosPrimeira === total ? 3 : acertosPrimeira === total - 1 ? 2 : 1;
+    var primeiraVez = est.estrelas[idx] == null;
+    var ganho = acertosPrimeira * 10 + (estrelas === 3 ? 5 : 0);
+    if (!primeiraVez) ganho = Math.round(ganho / 2);
+    var nivelAntes = Math.floor(est.xp / XP_NIVEL) + 1;
+    est.xp += ganho;
+    est.estrelas[idx] = Math.max(est.estrelas[idx] || 0, estrelas);
+    if (est.ultimoDia !== hoje()) { est.ofensiva = est.ultimoDia === ontem() ? est.ofensiva + 1 : 1; est.ultimoDia = hoje(); }
+    salvar();
+    var nivelDepois = Math.floor(est.xp / XP_NIVEL) + 1;
+    var unidade = UNIDADES.find(function (u) { return u.licoes.indexOf(idx) > -1; });
+    var fechouUnidade = primeiraVez && unidade.licoes.every(function (i) { return est.estrelas[i] != null; });
+    var tudo = concluidas() === LICOES.length;
+    var compart = encodeURIComponent((fechouUnidade ? 'Ganhei o selo "' + unidade.selo + '" na' : 'Estou fazendo a') + ' trilha grátis de Raciocínio Lógico do Prof. Tiago Gomes: https://proftiagogomes.com.br/trilha/');
+    conteudo.innerHTML = '<div class="fim"><p class="grande" aria-label="' + estrelas + ' de 3 estrelas">' + estrelasHtml(estrelas) + '</p>' +
+      '<h2 id="licao-titulo">' + (estrelas === 3 ? 'Lição perfeita!' : 'Lição concluída!') + '</h2>' +
+      '<div class="placar"><div><b>+' + ganho + '</b><small>XP</small></div><div><b>' + acertosPrimeira + '/' + total + '</b><small>de primeira</small></div><div><b>' + est.ofensiva + '</b><small>' + (est.ofensiva === 1 ? 'dia seguido' : 'dias seguidos') + '</small></div></div>' +
+      (nivelDepois > nivelAntes ? '<p><strong>Você subiu para o nível ' + nivelDepois + '!</strong></p>' : '') +
+      (fechouUnidade ? '<div class="conquista"><strong>🏅 Selo conquistado: ' + unidade.selo + '</strong><p>' + (tudo ? 'Você terminou a trilha inteira! Para chegar na prova com segurança, o Guia tem a teoria completa e muito mais questões resolvidas.' : 'Você fechou a ' + unidade.nome.split(' · ')[0] + '. Quer se aprofundar nesses assuntos?') + '</p><a class="btn btn-guia" href="/guia/">Conhecer o Guia do RLM</a></div>' : '') +
+      '<p><a href="https://wa.me/?text=' + compart + '">Compartilhar no WhatsApp</a></p></div>';
+    acao.disabled = false; acao.textContent = tudo && fechouUnidade ? 'Ver minha trilha' : 'Continuar a trilha';
+    acao.onclick = fechar; acao.focus();
+    if (estrelas === 3 || fechouUnidade) confete();
+  }
+
+  function confete() {
+    var c = document.createElement('div'); c.className = 'confete'; var cores = ['#FFD84D', '#1E7A4C', '#172238', '#3B7BD9', '#E8590C'];
+    for (var i = 0; i < 60; i++) { var p = document.createElement('i'); p.style.left = Math.random() * 100 + '%'; p.style.background = cores[i % cores.length]; p.style.animationDelay = (Math.random() * .6) + 's'; c.appendChild(p); }
+    document.body.appendChild(c); setTimeout(function () { c.remove(); }, 2600);
+  }
+
+  desenharMapa();
+})();
+</script>
+<style>.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }</style>
+<a class="wa" href="https://wa.me/5567981457668?text=Ol%C3%A1%2C%20Professor%20Tiago!%20Vim%20pelo%20site%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener" aria-label="Falar com o Prof. Tiago no WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.2.6 4.4 1.7 6.3L3.2 28.8l7.1-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3Zm0 23.1c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.2 1.1 1.1-4.1-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5.3 9.8 10.1 5.1 16 5.1s10.7 4.7 10.7 10.5S21.9 26.1 16 26.1Zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.3 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z"/></svg><span class="wa-rotulo">Fale comigo no WhatsApp</span></a>
+</body>
+</html>

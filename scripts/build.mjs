@@ -113,7 +113,7 @@ ${blocos}
   <a class="marca" href="/">Prof. Tiago Gomes</a>
   <nav aria-label="Seções">
     <a href="/questoes/">Banco de questões</a>
-    <a href="/#aulas">Aulas</a>
+    <a href="/trilha/">Trilha</a>
     <a href="/guia/">Guia do RLM</a>
   </nav>
 </header>
@@ -320,7 +320,7 @@ function paginaHub() {
 // ---------- gravação ----------
 rmSync(DIST, { recursive: true, force: true });
 mkdirSync(DIST, { recursive: true });
-const ESTATICOS = ['index.html', 'privacidade.html', '404.html', 'robots.txt', 'llms.txt', 'guia', 'assets'];
+const ESTATICOS = ['index.html', 'privacidade.html', '404.html', 'robots.txt', 'llms.txt', 'guia', 'trilha', 'assets'];
 for (const f of ESTATICOS) if (existsSync(join(RAIZ, f))) cpSync(join(RAIZ, f), join(DIST, f), { recursive: true });
 for (const f of readdirSync(RAIZ)) if (/^[0-9a-f]{32}\.txt$/.test(f)) cpSync(join(RAIZ, f), join(DIST, f)); // chave do IndexNow
 
@@ -346,7 +346,7 @@ const VERSAO = (process.env.COMMIT_REF || Date.now().toString(36)).slice(0, 8);
 })(DIST);
 
 // sitemap: só URLs canônicas públicas que este build publica
-const fixas = ['/', '/guia/', '/privacidade.html'];
+const fixas = ['/', '/trilha/', '/trilha/roteiro/', '/guia/', '/privacidade.html'];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${[...fixas, ...geradas.map((g) => g.caminho)].map((c) => `  <url><loc>${SITE}${c}</loc><lastmod>${HOJE}</lastmod></url>`).join('\n')}
