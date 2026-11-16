@@ -331,6 +331,16 @@ for (const { caminho, html } of geradas) {
   writeFileSync(join(dir, 'index.html'), html);
 }
 
+// versão nos arquivos de estilo: cada deploy força o navegador a baixar o CSS novo
+const VERSAO = (process.env.COMMIT_REF || Date.now().toString(36)).slice(0, 8);
+(function carimbar(d) {
+  for (const f of readdirSync(d, { withFileTypes: true })) {
+    const p = join(d, f.name);
+    if (f.isDirectory()) carimbar(p);
+    else if (f.name.endsWith('.html')) writeFileSync(p, readFileSync(p, 'utf8').replace(/\/assets\/(\w+)\.css"/g, `/assets/$1.css?v=${VERSAO}"`));
+  }
+})(DIST);
+
 // sitemap: só URLs canônicas públicas que este build publica
 const fixas = ['/', '/guia/', '/privacidade.html'];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
