@@ -105,6 +105,7 @@ function pagina({ caminho, titulo, descricao, h1Extra = '', corpo, ld = [], og =
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/questoes.css">
+<link rel="stylesheet" href="/assets/whatsapp.css">
 ${blocos}
 </head>
 <body>
@@ -124,6 +125,7 @@ ${corpo}
   <p>Resoluções do Prof. Tiago Gomes, professor de Raciocínio Lógico para concursos. Enunciados reproduzidos das provas indicadas em cada questão.</p>
   <p><a href="/questoes/">Banco de questões</a> · <a href="/#questoes">Questões no seu e-mail</a> · <a href="${CANAL}">YouTube</a> · <a href="/privacidade.html">Privacidade</a></p>
 </footer>
+<a class="wa" href="https://wa.me/5567981457668?text=Ol%C3%A1%2C%20Professor%20Tiago!%20Vim%20pelo%20site%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener" aria-label="Falar com o Prof. Tiago no WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.2.6 4.4 1.7 6.3L3.2 28.8l7.1-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3Zm0 23.1c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.2 1.1 1.1-4.1-.3-.4c-1-1.6-1.6-3.5-1.6-5.5C5.3 9.8 10.1 5.1 16 5.1s10.7 4.7 10.7 10.5S21.9 26.1 16 26.1Zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.3 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z"/></svg><span class="wa-rotulo">Fale comigo no WhatsApp</span></a>
 </body>
 </html>
 `;
