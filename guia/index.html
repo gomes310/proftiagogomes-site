@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia do Raciocínio Lógico — Prof. Tiago Gomes</title>
+<meta name="description" content="Teoria direta e questões de concurso resolvidas em PDF e vídeo. Do zero à prova em Raciocínio Lógico. Acesso vitalício por R$ 19,97, com 7 dias de garantia.">
+<meta property="og:title" content="Guia do Raciocínio Lógico — Prof. Tiago Gomes">
+<meta property="og:description" content="Teoria direta e questões de concurso resolvidas em PDF e vídeo. Acesso vitalício por R$ 19,97.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --papel: #F1F4F8; --folha: #FFFFFF; --tinta: #172238; --tinta-2: #4E5A70; --linha: #CDD5E1;
+    --marca: #FFD84D; --verde: #1E7A4C; --raio: 6px; --fonte: 'Familjen Grotesk', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--papel); color: var(--tinta); font-family: var(--fonte); font-size: 18px; line-height: 1.55; }
+  a { color: var(--tinta); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; }
+  .wrap { width: min(1080px, 100% - 40px); margin-inline: auto; }
+  h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.1; letter-spacing: -0.025em; margin: 0 0 14px; }
+  .sub { color: var(--tinta-2); max-width: 56ch; margin: 0 0 32px; }
+  section.bloco { padding: 76px 0; border-top: 1px solid var(--linha); }
+
+  .topo { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; }
+  .marca { font-weight: 700; font-size: 19px; text-decoration: none; }
+  .topo a.voltar { font-size: 16px; color: var(--tinta-2); }
+
+  /* Botão de compra: a única peça amarela clicável da página */
+  .comprar { display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 30px; border-radius: var(--raio);
+    background: var(--marca); color: var(--tinta); border: 2px solid var(--tinta); font: 700 18px var(--fonte); text-decoration: none; }
+  .comprar:hover { background: #FFE27A; }
+  .comprar:active { transform: translateY(1px); }
+  .garantias { margin: 12px 0 0; font-size: 15px; color: var(--tinta-2); }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; padding: 40px 0 80px; }
+  .hero h1 { font-size: clamp(42px, 6vw, 72px); line-height: 1; letter-spacing: -0.04em; margin: 0 0 18px; }
+  .hero .promessa { font-size: 21px; color: var(--tinta-2); max-width: 32ch; margin: 0 0 28px; }
+  .preco { display: flex; align-items: baseline; gap: 12px; margin: 0 0 18px; }
+  .preco s { color: var(--tinta-2); font-size: 18px; }
+  .preco strong { font-size: 40px; letter-spacing: -0.02em; }
+  .preco span { font-size: 15px; color: var(--tinta-2); }
+
+  /* Questão de amostra */
+  .questao { background: var(--folha); border: 1px solid var(--linha); border-radius: 10px; padding: 26px; box-shadow: 0 18px 40px -28px rgba(23,34,56,.45); }
+  .questao .rot { font-size: 14px; color: var(--tinta-2); margin: 0 0 8px; }
+  .questao h2 { font-size: 21px; letter-spacing: -0.01em; margin: 0 0 16px; line-height: 1.35; }
+  .alts { display: grid; gap: 10px; }
+  .alts button { text-align: left; min-height: 48px; padding: 10px 14px; border: 1.5px solid var(--linha); border-radius: var(--raio); background: var(--papel);
+    font: 400 17px var(--fonte); color: var(--tinta); cursor: pointer; display: grid; grid-template-columns: 28px 1fr; gap: 8px; }
+  .alts button b { font-weight: 700; }
+  .alts button:hover:not([disabled]) { border-color: var(--tinta); }
+  .alts button.certa { border-color: var(--verde); background: #E6F4EC; }
+  .alts button.errada { border-color: #B3261E; background: #FBEAE8; }
+  .alts button[disabled] { cursor: default; }
+  .explica { margin: 16px 0 0; font-size: 16px; color: var(--tinta-2); }
+  .explica b { color: var(--tinta); }
+
+  /* Recebe */
+  .recebe { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1.5px solid var(--tinta); }
+  .recebe div { padding: 22px 24px 8px 0; }
+  .recebe h3 { margin: 0 0 6px; font-size: 21px; }
+  .recebe p { margin: 0; color: var(--tinta-2); font-size: 16px; }
+
+  /* Conteúdo */
+  ol.conteudo { columns: 2; column-gap: 48px; margin: 0; padding: 0; list-style: none; counter-reset: c; border-top: 1.5px solid var(--tinta); }
+  ol.conteudo li { break-inside: avoid; counter-increment: c; display: grid; grid-template-columns: 40px 1fr; padding: 13px 0; border-bottom: 1px solid var(--linha); font-weight: 600; }
+  ol.conteudo li::before { content: counter(c, decimal-leading-zero); color: var(--tinta-2); font-weight: 400; font-variant-numeric: tabular-nums; }
+
+  /* Vídeos */
+  .videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .video { display: grid; gap: 8px; text-decoration: none; }
+  .video img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--raio); border: 1px solid var(--linha); background: var(--linha); }
+  .video span { font-weight: 600; line-height: 1.3; }
+  .video small { color: var(--tinta-2); font-size: 14px; }
+  .video:hover span { text-decoration: underline; }
+
+  /* Professor */
+  .prof { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; }
+  .prof p { margin: 0 0 14px; max-width: 58ch; }
+  dl.numeros { margin: 0; display: grid; gap: 20px; }
+  dl.numeros div { border-left: 3px solid var(--marca); padding-left: 16px; }
+  dl.numeros dt { font-size: 15px; color: var(--tinta-2); }
+  dl.numeros dd { margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -0.02em; }
+
+  /* Oferta */
+  .oferta { background: var(--tinta); color: var(--folha); border-radius: 12px; padding: 44px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+  .oferta h2 { color: var(--folha); }
+  .oferta ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; color: #DCE3EF; }
+  .oferta li { display: grid; grid-template-columns: 26px 1fr; }
+  .oferta li::before { content: "✓"; color: var(--marca); font-weight: 700; }
+  .oferta .preco s, .oferta .preco span { color: #B9C3D6; }
+  .oferta .comprar { border-color: var(--marca); width: 100%; }
+  .oferta .garantias { color: #B9C3D6; }
+
+  /* FAQ */
+  .faq details { border-bottom: 1px solid var(--linha); }
+  .faq details:first-of-type { border-top: 1.5px solid var(--tinta); }
+  .faq summary { cursor: pointer; padding: 18px 36px 18px 0; font-weight: 600; font-size: 19px; list-style: none; position: relative; min-height: 44px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 4px; top: 14px; font-size: 26px; font-weight: 400; }
+  .faq details[open] summary::after { content: "−"; }
+  .faq details p { margin: 0 0 18px; color: var(--tinta-2); max-width: 64ch; }
+
+  footer { padding: 36px 0 48px; border-top: 1px solid var(--linha); font-size: 15px; color: var(--tinta-2); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+  .barra { display: none; }
+
+  @media (max-width: 900px) {
+    .hero, .prof, .oferta { grid-template-columns: 1fr; gap: 36px; }
+    .hero { padding-top: 12px; }
+    .recebe, .videos { grid-template-columns: 1fr; }
+    .recebe div { padding-right: 0; border-bottom: 1px solid var(--linha); padding-bottom: 18px; }
+    ol.conteudo { columns: 1; }
+    .oferta { padding: 28px 22px; }
+    .hero .comprar { width: 100%; }
+    .barra { display: flex; align-items: center; gap: 14px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: var(--folha); border-top: 1px solid var(--linha); }
+    .barra.some { transform: translateY(110%); }
+    .barra strong { font-size: 20px; white-space: nowrap; }
+    .barra .comprar { flex: 1; min-height: 50px; font-size: 16px; padding: 0 12px; }
+    body { padding-bottom: 76px; }
+  }
+  @media (prefers-reduced-motion: no-preference) { .barra { transition: transform .2s ease; } }
+</style>
+</head>
+<body>
+<header class="wrap topo">
+  <a class="marca" href="/">Prof. Tiago Gomes</a>
+  <a class="voltar" href="/">Voltar ao site</a>
+</header>
+
+<main>
+  <section class="wrap hero" id="topo">
+    <div>
+      <h1>Guia do Raciocínio Lógico</h1>
+      <p class="promessa">Teoria direta e questões de concurso resolvidas, em PDF e vídeo, para estudar RLM do zero até a prova.</p>
+      <p class="preco"><s>R$ 47,97</s> <strong>R$ 19,97</strong> <span>pagamento único</span></p>
+      <a class="comprar" href="https://pay.hotmart.com/G104334718H">Quero meu acesso por R$ 19,97</a>
+      <p class="garantias">Acesso vitalício · 7 dias de garantia · compra segura pela Hotmart</p>
+    </div>
+
+    <div class="questao" aria-labelledby="q-enunciado">
+      <p class="rot">Tente uma questão do tipo que cai na prova</p>
+      <h2 id="q-enunciado">Qual é a negação de “Se eu estudo, então eu passo”?</h2>
+      <div class="alts" id="alts">
+        <button type="button" data-ok="0"><b>A</b> Se eu não estudo, então eu não passo.</button>
+        <button type="button" data-ok="0"><b>B</b> Eu não estudo e não passo.</button>
+        <button type="button" data-ok="1"><b>C</b> Eu estudo e não passo.</button>
+        <button type="button" data-ok="0"><b>D</b> Eu não estudo ou eu passo.</button>
+      </div>
+      <p class="explica" id="explica" aria-live="polite" hidden></p>
+    </div>
+  </section>
+
+  <section class="bloco">
+    <div class="wrap">
+      <h2>O que você recebe</h2>
+      <div class="recebe">
+        <div><h3>Teoria mastigada</h3><p>Cada assunto explicado do jeito que a banca cobra, sem rodeio.</p></div>
+        <div><h3>Questões de concurso resolvidas</h3><p>Resolução passo a passo, para você aprender o caminho e não só o gabarito.</p></div>
+        <div><h3>PDF e vídeo</h3><p>Leia no material ou assista à explicação. Baixe e estude quantas vezes quiser.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco">
+    <div class="wrap">
+      <h2>Conteúdo do Guia</h2>
+      <p class="sub">Os assuntos de Raciocínio Lógico que mais aparecem nos editais, na ordem certa para estudar.</p>
+      <ol class="conteudo">
+        <li>Conjuntos</li>
+        <li>Proposições simples e compostas</li>
+        <li>Tabela-verdade</li>
+        <li>Equivalências e negações</li>
+        <li>Tautologia, contradição e contingência</li>
+        <li>Diagramas lógicos</li>
+        <li>Implicações lógicas</li>
+        <li>Associação de informações</li>
+        <li>Sequências lógicas</li>
+        <li>Princípio da casa dos pombos</li>
+        <li>Datas e calendários</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="bloco">
+    <div class="wrap">
+      <h2>Veja como o professor explica</h2>
+      <p class="sub">Antes de comprar, assista de graça. São aulas do canal sobre os mesmos assuntos do Guia.</p>
+      <div class="videos">
+        <a class="video" href="https://www.youtube.com/watch?v=ryxofLmdqeI"><img src="https://i.ytimg.com/vi/ryxofLmdqeI/mqdefault.jpg" alt="" width="320" height="180" loading="lazy"><span>Proposições lógicas: 100 questões resolvidas</span><small>140 mil visualizações</small></a>
+        <a class="video" href="https://www.youtube.com/watch?v=DjgHeLCanpg"><img src="https://i.ytimg.com/vi/DjgHeLCanpg/mqdefault.jpg" alt="" width="320" height="180" loading="lazy"><span>Tabela-verdade: 100 questões resolvidas</span><small>29 mil visualizações</small></a>
+        <a class="video" href="https://www.youtube.com/watch?v=-PC9G3zIkHc"><img src="https://i.ytimg.com/vi/-PC9G3zIkHc/mqdefault.jpg" alt="" width="320" height="180" loading="lazy"><span>Equivalências e negações: 100 questões resolvidas</span><small>30 mil visualizações</small></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco">
+    <div class="wrap prof">
+      <div>
+        <h2>Quem ensina</h2>
+        <p>Sou o Tiago Gomes, professor de Raciocínio Lógico para concursos públicos. No YouTube, resolvo questões reais de prova, uma a uma, de bancas como IBFC, IDECAN, AOCP, FGV, CEBRASPE, IBGP, Consulplan e MS CONCURSOS.</p>
+        <p>O Guia junta num só lugar o que eu explico no canal, organizado do primeiro assunto ao último, para você não depender de achar o vídeo certo.</p>
+      </div>
+      <dl class="numeros">
+        <div><dt>Inscritos no canal</dt><dd>46 mil</dd></div>
+        <div><dt>Visualizações</dt><dd>5,7 milhões</dd></div>
+        <div><dt>Vídeos publicados</dt><dd>4.950+</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="bloco" id="oferta">
+    <div class="wrap">
+      <div class="oferta">
+        <div>
+          <h2>Comece hoje</h2>
+          <ul>
+            <li>Os 11 assuntos de RLM que mais caem</li>
+            <li>Teoria e questões resolvidas em PDF e vídeo</li>
+            <li>Acesso vitalício, sem mensalidade</li>
+            <li>7 dias de garantia: se não servir, você pede o dinheiro de volta</li>
+          </ul>
+        </div>
+        <div>
+          <p class="preco"><s>R$ 47,97</s> <strong>R$ 19,97</strong> <span>pagamento único</span></p>
+          <a class="comprar" href="https://pay.hotmart.com/G104334718H">Quero meu acesso por R$ 19,97</a>
+          <p class="garantias">Você paga na Hotmart e recebe o acesso no e-mail.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco faq">
+    <div class="wrap">
+      <h2>Perguntas frequentes</h2>
+      <details><summary>Como recebo o material?</summary><p>Depois do pagamento, a Hotmart envia o acesso para o seu e-mail. Entre na Hotmart (site ou aplicativo), abra “Meus cursos” e o Guia estará lá para assistir e baixar.</p></details>
+      <details><summary>Pago todo mês?</summary><p>Não. É pagamento único de R$ 19,97 e o acesso é vitalício.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Peça o reembolso pela própria Hotmart dentro desse prazo.</p></details>
+      <details><summary>Serve para a banca da minha prova?</summary><p>Os assuntos do Guia são a base de Raciocínio Lógico cobrada pelas principais bancas. Se quiser treinar uma banca específica, o canal tem questões resolvidas por banca.</p></details>
+      <details><summary>Tenho outra dúvida</summary><p>Fale direto comigo pelo <a href="https://wa.me/5567981457668?text=Ol%C3%A1%20Professor%20Tiago,%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20Guia%20do%20RLM">WhatsApp</a>. Quem responde sou eu.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 Prof. Tiago Gomes</span>
+  <span><a href="/">Site</a> &nbsp; <a href="/privacidade.html">Privacidade</a></span>
+</footer>
+
+<div class="barra" id="barra"><strong>R$ 19,97</strong><a class="comprar" href="https://pay.hotmart.com/G104334718H">Quero meu acesso</a></div>
+
+<script>
+(function () {
+  var alts = document.querySelectorAll('#alts button');
+  var explica = document.getElementById('explica');
+  alts.forEach(function (b) {
+    b.addEventListener('click', function () {
+      alts.forEach(function (x) { x.disabled = true; if (x.dataset.ok === '1') x.classList.add('certa'); });
+      var acertou = b.dataset.ok === '1';
+      if (!acertou) b.classList.add('errada');
+      explica.hidden = false;
+      explica.innerHTML = (acertou ? '<b>Isso!</b> ' : '<b>Quase.</b> A resposta é a C. ') +
+        'Para negar “se p, então q”, mantenha o p e negue o q: <b>p e não q</b>. No Guia, cada regra vem com questões assim, resolvidas passo a passo.';
+    });
+  });
+
+  var barra = document.getElementById('barra');
+  if ('IntersectionObserver' in window) {
+    var visiveis = new Set();
+    var obs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { e.isIntersecting ? visiveis.add(e.target) : visiveis.delete(e.target); });
+      barra.classList.toggle('some', visiveis.size > 0);
+    }, { threshold: 0.1 });
+    ['#topo', '#oferta'].forEach(function (s) { obs.observe(document.querySelector(s)); });
+  }
+})();
+</script>
+</body>
+</html>
