@@ -1,0 +1,12 @@
+/* Botão fixo de contato pelo WhatsApp (todas as páginas) */
+.wa { position: fixed; right: 18px; bottom: calc(76px + var(--wa-offset, 0px) + env(safe-area-inset-bottom)); z-index: 20;
+  width: 60px; height: 60px; border-radius: 50%; background: #25D366; color: #fff; display: grid; place-items: center;
+  box-shadow: 0 6px 18px -6px rgba(23,34,56,.55); border: 2px solid #fff; text-decoration: none; }
+.wa:hover { background: #1EBE5A; }
+.wa:focus-visible { outline: 3px solid #172238; outline-offset: 3px; }
+.wa svg { width: 32px; height: 32px; }
+.wa-rotulo { position: absolute; right: 70px; white-space: nowrap; background: #172238; color: #fff; font: 600 15px 'Familjen Grotesk', system-ui, sans-serif;
+  padding: 8px 12px; border-radius: 6px; opacity: 0; transform: translateX(6px); pointer-events: none; }
+.wa:hover .wa-rotulo, .wa:focus-visible .wa-rotulo { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: no-preference) { .wa-rotulo { transition: opacity .15s ease, transform .15s ease; } }
+@media print { .wa { display: none; } }

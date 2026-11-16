@@ -1,0 +1,6 @@
+node_modules/
+# chave de assinatura: NUNCA vai para o GitHub
+*.jks
+*.keystore
+chave/
+android/app/release/

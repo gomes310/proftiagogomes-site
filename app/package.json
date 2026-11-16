@@ -1,0 +1,22 @@
+{
+  "name": "trilha-do-rlm-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "App Android da Trilha de Raciocínio Lógico do Prof. Tiago Gomes",
+  "type": "module",
+  "scripts": {
+    "www": "node gerar-www.mjs",
+    "sync": "node gerar-www.mjs && npx cap sync android",
+    "icones": "npx @capacitor/assets generate --android --iconBackgroundColor '#172238' --splashBackgroundColor '#F1F4F8'"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.2",
+    "@capacitor/core": "^8.6.2",
+    "@capacitor/status-bar": "^8.0.4",
+    "@fontsource/familjen-grotesk": "^5.3.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^4.0.0",
+    "@capacitor/cli": "^8.6.2"
+  }
+}

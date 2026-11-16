@@ -1,0 +1,9 @@
+{
+  "appId": "br.com.proftiagogomes.trilha",
+  "appName": "Trilha do RLM",
+  "webDir": "www",
+  "android": { "backgroundColor": "#F1F4F8" },
+  "plugins": {
+    "StatusBar": { "style": "LIGHT", "backgroundColor": "#F1F4F8", "overlaysWebView": false }
+  }
+}
