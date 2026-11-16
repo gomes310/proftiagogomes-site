@@ -337,7 +337,11 @@ const VERSAO = (process.env.COMMIT_REF || Date.now().toString(36)).slice(0, 8);
   for (const f of readdirSync(d, { withFileTypes: true })) {
     const p = join(d, f.name);
     if (f.isDirectory()) carimbar(p);
-    else if (f.name.endsWith('.html')) writeFileSync(p, readFileSync(p, 'utf8').replace(/\/assets\/(\w+)\.css"/g, `/assets/$1.css?v=${VERSAO}"`));
+    else if (f.name.endsWith('.html')) writeFileSync(p, readFileSync(p, 'utf8')
+      .replace(/\/assets\/(\w+)\.css"/g, `/assets/$1.css?v=${VERSAO}"`)
+      // links para fora do site abrem em outra aba, para o aluno não sair do site
+      .replace(/<a ((?:(?!>)[^])*?)href="(https?:\/\/(?!proftiagogomes\.com\.br)[^"]+)"((?:(?!>)[^])*)>/g, (m, a, href, b) =>
+        /target=/.test(a + b) ? m : `<a ${a}href="${href}"${b} target="_blank" rel="noopener">`));
   }
 })(DIST);
 
