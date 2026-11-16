@@ -1,4 +1,4 @@
-# proftiagogomes.com
+# proftiagogomes.com.br
 
 Site do Prof. Tiago Gomes. Publicado pela Netlify a cada push na branch `main`.
 
