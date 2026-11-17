@@ -21,9 +21,9 @@ Cada lição tem:
 • Exemplo resolvido para você pensar antes de ver a resposta
 • Exercícios no estilo das bancas, com explicação de cada resposta
 
-Estude como num jogo: ganhe XP, estrelas e selos, mantenha a sua ofensiva de dias seguidos e suba de nível. Errou? A questão volta no fim da lição para você tentar de novo.
+Estude como num jogo: ganhe XP, estrelas e conquistas, cumpra as missões do dia, bata sua meta diária, mantenha a ofensiva de dias seguidos e suba no ranking semanal. Errou? A questão volta no fim da lição para você tentar de novo.
 
-Funciona sem internet e não pede cadastro. Seu progresso fica salvo no próprio celular.
+Comece sem cadastro: as lições funcionam até sem internet. Se quiser, crie uma conta grátis só com o e-mail para guardar o progresso na nuvem e disputar a liga semanal. Ative o lembrete diário para não perder a ofensiva.
 
 Feito pelo Prof. Tiago Gomes, professor de Raciocínio Lógico para concursos e criador do canal no YouTube com aulões e questões resolvidas de bancas como IDECAN, IBFC, Consulplan, IBGP e MS Concursos.
 
@@ -41,4 +41,4 @@ concursos, raciocínio lógico, estudo, lógica
 ## Imagens
 - Ícone 512×512: `assets/play-icone-512.png`
 - Imagem de destaque 1024×500: `assets/play-destaque-1024x500.png`
-- Capturas de celular (1082×1922): `assets/loja/1-mapa.png` a `5-exercicio.png`
+- Capturas de celular (1082×1922): os 6 arquivos de `assets/loja/`
