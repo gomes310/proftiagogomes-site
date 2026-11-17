@@ -10,7 +10,8 @@ App Android da trilha de Raciocínio Lógico. Ele usa o mesmo código React da p
 
 | Pasta / arquivo | Para que serve |
 |---|---|
-| `android/` | Projeto Android. É esta pasta que você abre no Android Studio. |
+| `android/` | Projeto Android (o GitHub compila; o Android Studio é opcional). |
+| `TrilhaDoRLM-teste.apk` | App de teste para instalar no celular. |
 | `www/` | A trilha já compilada para o app. Não edite à mão: ela é gerada por `gerar-www.mjs`, que compila `../trilha-app` no modo app (sem links de compra). |
 | `assets/` | Ícone, tela de abertura e imagens para a Play Store. |
 | `assets/loja/` | 5 capturas de tela do celular para a página da loja. |
@@ -19,19 +20,31 @@ App Android da trilha de Raciocínio Lógico. Ele usa o mesmo código React da p
 
 **A chave de assinatura nunca vai para o GitHub.** O `.gitignore` já bloqueia arquivos `.jks` e `.keystore`.
 
-## Passo a passo: gerar o arquivo para a Play Store (.aab)
+## Como o app é gerado (sem Android Studio)
 
-1. **Instale o Android Studio:** https://developer.android.com/studio (instalação padrão).
-2. **Abra o projeto:** em *File → Open*, escolha a pasta `android` desta pasta e espere a sincronização do Gradle terminar. Na primeira vez ele baixa alguns arquivos e pode demorar uns minutos.
-3. **Gere o pacote assinado:** *Build → Generate Signed App Bundle or APK → Android App Bundle → Next*.
-4. **Crie a chave de envio (só na primeira vez):** clique em *Create new…*.
-   - Caminho da chave: `trilhadoRLM\chave\trilha-rlm-upload.jks` (crie a pasta `chave`).
-   - Crie uma senha forte e anote num lugar seguro, como um gerenciador de senhas.
-   - Alias: `upload`.
-   - Validade: 25 anos.
-   - Preencha seu nome no certificado.
-5. **Escolha o tipo de build:** variante **release**, depois *Create*. O arquivo sai em `android/app/release/app-release.aab`.
-6. **Faça backup da chave:** copie a pasta `chave` para um pendrive ou para o Google Drive. Sem essa chave e a senha, você não consegue enviar atualizações. Se perder, dá para pedir à Google para trocar a chave, mas o processo é demorado.
+O GitHub monta o app sozinho, a cada mudança na trilha (arquivo `.github/workflows/android.yml` do repositório do site).
+
+- **APK de teste.** Instale direto no celular para testar:
+  - Link fixo, sempre a versão mais nova: https://github.com/gomes310/proftiagogomes-site/releases/download/app-teste/TrilhaDoRLM.apk
+  - No Android, abra o link, baixe e toque no arquivo.
+  - Na primeira vez, o celular pede para permitir "instalar apps desta fonte". Permita para o navegador.
+- **AAB da Play Store (assinado).** Só é gerado depois que a chave de envio for cadastrada no GitHub. Veja abaixo.
+  - O arquivo aparece em: GitHub → aba **Actions** → última execução de "App Android" → **Artifacts** → `trilha-do-rlm-android`.
+
+### Chave de envio (upload key): fazer uma vez só
+
+A Play Store exige que todo AAB seja assinado com a mesma chave. Ela fica na pasta `chave/` desta pasta (nunca vai para o GitHub).
+
+**Faça backup da pasta `chave/` num pendrive ou no Google Drive.** Se perder a chave, dá para pedir à Google para trocar, mas o processo demora alguns dias.
+
+Para o GitHub assinar o app, cadastre 2 segredos em github.com/gomes310/proftiagogomes-site → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**:
+
+1. `CHAVE_BASE64`: o conteúdo do arquivo `chave/trilha-rlm-upload.base64.txt`. Abra no Bloco de Notas, selecione tudo e cole.
+2. `CHAVE_SENHA`: a senha que está em `chave/SENHA-DA-CHAVE.txt`.
+
+Depois disso, vá em **Actions** → **App Android** → **Run workflow**. Em uns 5 minutos o AAB assinado aparece nos Artifacts.
+
+A versão sobe sozinha a cada execução (1.0.1, 1.0.2…). A Play Store exige isso.
 
 ## Passo a passo: publicar no Play Console
 
@@ -42,7 +55,8 @@ App Android da trilha de Raciocínio Lógico. Ele usa o mesmo código React da p
    - Anúncios: não.
    - Classificação de conteúdo: questionário, categoria Educação. Não há violência nem interação entre usuários.
    - Público-alvo: 18+ (concurseiros). Isso evita as regras de apps para crianças.
-   - Segurança dos dados: o app **não coleta nem compartilha dados**. O progresso fica só no aparelho.
+   - Segurança dos dados: marque que o app **coleta e-mail e apelido** (informações pessoais) e **progresso no app**, apenas para funcionalidade do app e gerenciamento da conta. Os dados **não são compartilhados**, são **criptografados em trânsito** e o aluno **pode pedir a exclusão**. Criar conta é opcional.
+   - Exclusão de conta: informe o link https://proftiagogomes.com.br/privacidade.html#apagar-conta (dentro do app, a opção fica em Painel → Sua conta → Apagar minha conta).
    - App de governo / notícias / saúde financeira: não.
 3. **Monte a página da loja:** em *Presença na loja → Página principal*, cole os textos do `LOJA.md` e envie:
    - Ícone: `assets/play-icone-512.png`
@@ -50,14 +64,14 @@ App Android da trilha de Raciocínio Lógico. Ele usa o mesmo código React da p
    - Capturas de celular: as 5 de `assets/loja/`
 4. **Cumpra o teste fechado obrigatório.** Contas pessoais novas precisam de um teste fechado com **pelo menos 12 testadores por 14 dias seguidos** antes de liberar a produção.
    - Em *Testar → Teste fechado*, crie uma faixa.
-   - Envie o `app-release.aab`.
+   - Envie o arquivo `TrilhaDoRLM-loja-v….aab` baixado dos Artifacts do GitHub.
    - Adicione os e-mails dos testadores, que podem ser alunos ou amigos com Android.
    - Mande o link de participação para eles.
 5. **Peça acesso à produção:** depois dos 14 dias, peça o acesso em *Painel*, envie para Produção e aguarde a revisão (normalmente de 1 a 7 dias).
 
 ## Para atualizar o app depois
 
-Quando a trilha do site mudar, peça ao Claude para "atualizar o app". Ele gera o `www` de novo, sincroniza o projeto Android e aumenta a versão. Depois você só repete o passo 3 do primeiro passo a passo e envia o novo `.aab` no Play Console.
+Toda mudança na trilha gera automaticamente um APK de teste novo e, com a chave cadastrada, um AAB novo. Baixe o AAB nos Artifacts e envie no Play Console (Testes ou Produção → Criar nova versão).
 
 Comandos, para quem tiver Node.js instalado:
 
