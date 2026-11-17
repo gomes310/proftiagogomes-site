@@ -1,0 +1,71 @@
+# Gera o app Android da Trilha do RLM sem precisar de Android Studio.
+# - APK de teste (instala direto no celular): sempre.
+# - AAB da Play Store (assinado): quando os segredos CHAVE_BASE64 e CHAVE_SENHA existirem no repositório.
+name: App Android
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['trilha-app/**', 'app/**', '.github/workflows/android.yml']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      VERSAO_CODIGO: ${{ github.run_number }}
+      VERSAO_NOME: 1.0.${{ github.run_number }}
+      TEM_CHAVE: ${{ secrets.CHAVE_BASE64 != '' && 'sim' || 'nao' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 21 }
+      - uses: android-actions/setup-android@v3
+
+      - name: Instalar dependências
+        run: |
+          npm ci --prefix trilha-app --no-audit --no-fund
+          npm ci --prefix app --no-audit --no-fund
+
+      - name: Gerar o app (modo app, sem links de compra) e sincronizar com o Android
+        working-directory: app
+        run: |
+          node gerar-www.mjs
+          npx cap sync android
+
+      - name: APK de teste
+        working-directory: app/android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: AAB assinado para a Play Store
+        if: ${{ env.TEM_CHAVE == 'sim' }}
+        working-directory: app/android
+        env:
+          CHAVE_SENHA: ${{ secrets.CHAVE_SENHA }}
+          CHAVE_ALIAS: upload
+        run: |
+          echo "${{ secrets.CHAVE_BASE64 }}" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          CHAVE_ARQUIVO="$RUNNER_TEMP/upload.jks" ./gradlew bundleRelease --no-daemon
+          rm -f "$RUNNER_TEMP/upload.jks"
+
+      - name: Copiar resultados
+        run: |
+          mkdir -p saida
+          cp app/android/app/build/outputs/apk/debug/app-debug.apk "saida/TrilhaDoRLM-teste-v${VERSAO_NOME}.apk"
+          ls app/android/app/build/outputs/bundle/release/*.aab 2>/dev/null && cp app/android/app/build/outputs/bundle/release/*.aab "saida/TrilhaDoRLM-loja-v${VERSAO_NOME}.aab" || true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: trilha-do-rlm-android
+          path: saida/
+          retention-days: 30

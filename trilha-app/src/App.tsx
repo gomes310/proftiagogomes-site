@@ -7,6 +7,9 @@ import Entrar from './telas/Entrar';
 import { Meta, Missoes, Status } from './componentes/Widgets';
 import { sincronizarAgora, useSessao } from './api';
 import { APP } from './plataforma';
+import BoasVindas, { jaViuBoasVindas } from './telas/BoasVindas';
+import { aoVoltar } from './nativo';
+import { obter } from './estado';
 
 const ROTAS = ['', 'ranking', 'painel', 'entrar'] as const;
 type Rota = (typeof ROTAS)[number];
@@ -22,6 +25,14 @@ export default function App() {
   const [rota, setRota] = useState<Rota>(lerRota());
   const [licao, setLicao] = useState<number | null>(null);
   const sessao = useSessao();
+  const [boasVindas, setBoasVindas] = useState(() => !jaViuBoasVindas() && obter().licoesFeitas === 0 && lerRota() === '');
+
+  // botão "voltar" do Android: fecha a lição, depois volta para a trilha, depois minimiza
+  useEffect(() => aoVoltar(() => {
+    if (licao !== null) { setLicao(null); return true; }
+    if (lerRota() !== '') { history.back(); return true; }
+    return false;
+  }), [licao]);
 
   useEffect(() => {
     const f = () => { setRota(lerRota()); window.scrollTo(0, 0); };
@@ -57,7 +68,7 @@ export default function App() {
         <main id="conteudo">
           {rota === '' && <Trilha abrir={setLicao} irPara={irPara} />}
           {rota === 'ranking' && <Ranking irPara={irPara} />}
-          {rota === 'painel' && <><div className="so-celular"><Meta /><Missoes /></div><Painel irPara={irPara} /></>}
+          {rota === 'painel' && <Painel irPara={irPara} />}
           {rota === 'entrar' && <Entrar irPara={irPara} />}
         </main>
 
@@ -82,6 +93,7 @@ export default function App() {
 
       {!APP && <footer className="wrap-largo rodape">Trilha gratuita do Prof. Tiago Gomes · <a href="/privacidade.html">Privacidade</a></footer>}
       {licao !== null && <TelaLicao key={licao} idx={licao} onFechar={() => setLicao(null)} />}
+      {boasVindas && licao === null && <BoasVindas irPara={irPara} onFim={(comecar) => { setBoasVindas(false); if (comecar) setLicao(0); }} />}
     </div>
   );
 }

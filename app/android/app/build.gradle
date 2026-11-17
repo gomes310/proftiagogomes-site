@@ -7,8 +7,9 @@ android {
         applicationId "br.com.proftiagogomes.trilha"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0.0"
+        // a cada envio para a Play Store, aumente o versionCode (o build do GitHub usa o número da execução)
+        versionCode (System.getenv("VERSAO_CODIGO") ?: "1").toInteger()
+        versionName System.getenv("VERSAO_NOME") ?: "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -16,8 +17,24 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    // assinatura da versão da loja: vem de variáveis de ambiente (segredos do GitHub) ou de keystore.properties local
+    def props = new Properties()
+    def arq = rootProject.file('keystore.properties')
+    if (arq.exists()) props.load(new FileInputStream(arq))
+    def chave = System.getenv("CHAVE_ARQUIVO") ?: props['storeFile']
+    signingConfigs {
+        release {
+            if (chave) {
+                storeFile file(chave)
+                storePassword System.getenv("CHAVE_SENHA") ?: props['storePassword']
+                keyAlias System.getenv("CHAVE_ALIAS") ?: (props['keyAlias'] ?: 'upload')
+                keyPassword System.getenv("CHAVE_SENHA_ALIAS") ?: (System.getenv("CHAVE_SENHA") ?: props['keyPassword'])
+            }
+        }
+    }
     buildTypes {
         release {
+            if (chave) signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

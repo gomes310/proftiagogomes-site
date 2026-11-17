@@ -2,7 +2,38 @@ import { useState } from 'react';
 import { LICOES, UNIDADES } from '../dados/licoes';
 import { CONQUISTAS, XP_NIVEL, mudarMeta, nivelDe, totalEstrelas, ultimos7, useEstado } from '../estado';
 import { apagarConta, mudarApelido, sair, useSessao, ErroApi } from '../api';
-import { IconeEstrela, IconeFogo } from '../componentes/Widgets';
+import { IconeEstrela, IconeFogo, Meta, Missoes } from '../componentes/Widgets';
+import { APP } from '../plataforma';
+import { lerLembrete, salvarLembrete } from '../nativo';
+
+function LembreteDiario() {
+  const [l, setL] = useState(lerLembrete());
+  const [msg, setMsg] = useState('');
+  const [ocupado, setOcupado] = useState(false);
+  async function aplicar(novo: { ativo: boolean; hora: number }) {
+    setOcupado(true); setMsg('');
+    const r = await salvarLembrete(novo);
+    setOcupado(false);
+    if (r.ok) { setL(novo); setMsg(novo.ativo ? 'Lembrete marcado para as ' + novo.hora + 'h todos os dias.' : 'Lembrete desligado.'); }
+    else setMsg(r.motivo || 'Não deu para salvar.');
+  }
+  return (
+    <section className="card" aria-labelledby="lem-t">
+      <div className="card-cab">
+        <h2 id="lem-t">Lembrete diário</h2>
+        <label className="interruptor">
+          <input type="checkbox" role="switch" checked={l.ativo} disabled={ocupado} onChange={(e) => void aplicar({ ...l, ativo: e.target.checked })} />
+          <span aria-hidden="true" /><span className="sr">Lembrete diário {l.ativo ? 'ligado' : 'desligado'}</span>
+        </label>
+      </div>
+      <p className="nota">Uma notificação por dia para não perder sua ofensiva.</p>
+      <div className="bv-horas" role="radiogroup" aria-label="Horário do lembrete">
+        {[8, 12, 19, 21].map((h) => <button key={h} type="button" role="radio" aria-checked={l.hora === h} disabled={ocupado} className={'chip-b' + (l.hora === h ? ' sel' : '')} onClick={() => void aplicar({ ativo: true, hora: h })}>{h}h</button>)}
+      </div>
+      {msg && <p className="nota" role="status">{msg}</p>}
+    </section>
+  );
+}
 
 const DIAS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
 
@@ -89,6 +120,8 @@ export default function Painel({ irPara }: { irPara: (r: string) => void }) {
         <div className="card kpi"><span className="kpi-ico" aria-hidden="true">🎯</span><b>{precisao === null ? '—' : precisao + '%'}</b><small>de acertos<br />{e.respostas} respostas</small></div>
       </div>
 
+      <div className="so-celular"><Meta /><Missoes /></div>
+
       <section className="card" aria-labelledby="sem-t">
         <div className="card-cab"><h2 id="sem-t">Seus últimos 7 dias</h2>
           <label className="campo inline">Meta diária
@@ -132,6 +165,8 @@ export default function Painel({ irPara }: { irPara: (r: string) => void }) {
           })}
         </ul>
       </section>
+
+      {APP && <LembreteDiario />}
 
       <Conta />
     </div>

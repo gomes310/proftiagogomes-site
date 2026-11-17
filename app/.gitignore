@@ -4,3 +4,4 @@ node_modules/
 *.keystore
 chave/
 android/app/release/
+android/keystore.properties

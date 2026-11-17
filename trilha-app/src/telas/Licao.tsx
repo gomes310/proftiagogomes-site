@@ -6,6 +6,7 @@ import { registrarLicao, registrarResposta, type ResultadoLicao } from '../estad
 import { alternarSom, som, somLigado } from '../som';
 import { confete } from '../componentes/confete';
 import { APP } from '../plataforma';
+import { vibrar } from '../nativo';
 
 type Passo = { tipo: 'ideia'; t: string; k: number } | { tipo: 'lab' } | { tipo: 'exemplo' } | { tipo: 'vf' };
 type Item = { q: Questao; tentativa: number };
@@ -48,7 +49,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
   const progresso = etapa === 'fim' ? 1 : etapa === 'aprenda' ? passo / (passos.length + total) : (passos.length + respondidas) / (passos.length + total);
 
   useEffect(() => { const h = document.getElementById('licao-titulo'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); } }, [etapa, passo, fila.length]);
-  useEffect(() => { document.body.style.overflow = 'hidden'; return () => { document.body.style.overflow = ''; }; }, []);
+  useEffect(() => { document.body.style.overflow = 'hidden'; return () => { document.body.style.overflow = ''; document.querySelectorAll('.confete').forEach((c) => c.remove()); }; }, []);
 
   // ---------- ações ----------
   const p = passos[passo];
@@ -70,7 +71,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
     if (ok && !item.tentativa) setAcertosPrimeira((n) => n + 1);
     elogio.current = ELOGIOS[Math.floor(Math.random() * ELOGIOS.length)];
     registrarResposta(ok, novoCombo);
-    som(ok ? 'certo' : 'erro');
+    som(ok ? 'certo' : 'erro'); vibrar(ok ? 'certo' : 'erro');
     setVerificado({ ok, item });
   }
   function proxima() {
@@ -82,7 +83,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
     setFila(nova);
     const r = registrarLicao(idx, acertosPrimeira, total);
     setResultado(r); setEtapa('fim');
-    som(r.nivelDepois > r.nivelAntes ? 'nivel' : 'fim');
+    som(r.nivelDepois > r.nivelAntes ? 'nivel' : 'fim'); vibrar('fim');
     if (r.estrelas === 3 || r.unidadeFechada !== null || r.nivelDepois > r.nivelAntes) confete();
   }
 
@@ -120,7 +121,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
         {[true, false].map((v) => {
           const cls = vf === null ? '' : v === E.vf.v ? ' certa' : v === vf ? ' errada' : '';
           return <button key={String(v)} type="button" className={'opcao vf-b' + cls} disabled={vf !== null}
-            onClick={() => { setVf(v); som(v === E.vf.v ? 'certo' : 'erro'); }}><Html h={bol(v)} /> {v ? 'Verdadeiro' : 'Falso'}</button>;
+            onClick={() => { setVf(v); som(v === E.vf.v ? 'certo' : 'erro'); vibrar(v === E.vf.v ? 'certo' : 'erro'); }}><Html h={bol(v)} /> {v ? 'Verdadeiro' : 'Falso'}</button>;
         })}
       </div></>;
   } else if (etapa === 'questao') {
@@ -151,10 +152,14 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
         <div><b>{acertosPrimeira}/{total}</b><small>de primeira</small></div>
         <div><b>{Math.round(acertosPrimeira / total * 100)}%</b><small>precisão</small></div>
       </div>
-      {r.nivelDepois > r.nivelAntes && <p className="novidade">⬆️ <strong>Você subiu para o nível {r.nivelDepois}!</strong></p>}
-      {r.metaBatida && <p className="novidade">🎯 <strong>Meta do dia batida!</strong></p>}
-      {r.missoesConcluidas.map((m) => <p className="novidade" key={m.id}>✅ Missão: {m.titulo} <small>(+{m.bonus} XP)</small></p>)}
-      {r.novasConquistas.map((c) => <p className="novidade" key={c.id}>{c.icone} <strong>Conquista: {c.nome}</strong></p>)}
+      {(r.nivelDepois > r.nivelAntes || r.metaBatida || r.missoesConcluidas.length > 0 || r.novasConquistas.length > 0) && (
+        <ul className="ganhos" aria-label="O que você ganhou">
+          {r.nivelDepois > r.nivelAntes && <li className="destaque">⬆️ Nível {r.nivelDepois}!</li>}
+          {r.metaBatida && <li>🎯 Meta do dia batida</li>}
+          {r.missoesConcluidas.map((m) => <li key={m.id}>✅ {m.titulo} <small>+{m.bonus} XP</small></li>)}
+          {r.novasConquistas.map((c) => <li key={c.id}>{c.icone} {c.nome}</li>)}
+        </ul>
+      )}
       {u && <div className="conquista"><strong>🏅 Selo conquistado: {u.selo}</strong>{APP ? <p>Você fechou a {u.nome.split(' · ')[0]}. Siga para a próxima unidade!</p> : <><p>Você fechou a {u.nome.split(' · ')[0]}. Quer se aprofundar? O Guia do RLM tem a teoria completa e muitas questões resolvidas.</p><a className="btn btn-guia" href="https://proftiagogomes.com.br/guia/" target="_blank" rel="noopener">Conhecer o Guia do RLM</a></>}</div>}
       <p><a href={'https://wa.me/?text=' + compart} target="_blank" rel="noopener">Compartilhar no WhatsApp</a></p>
     </div>;
@@ -171,6 +176,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
       <div className="licao-topo">
         <button className="fechar" type="button" onClick={onFechar} aria-label="Sair da lição">×</button>
         <div className="trilho" aria-hidden="true"><span style={{ width: progresso * 100 + '%' }} /></div>
+        {combo >= 2 && etapa === 'questao' && <span className="combo" aria-label={combo + ' acertos seguidos'}>🔥 {combo}</span>}
         <button className="fechar som" type="button" aria-pressed={sons} aria-label={sons ? 'Desligar sons' : 'Ligar sons'} onClick={() => setSons(alternarSom())}>{sons ? '🔊' : '🔇'}</button>
       </div>
       <div className="licao-corpo"><div className="wrap" key={etapa + passo + fila.length}><div className="cartao">{corpo}</div></div></div>

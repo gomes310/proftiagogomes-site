@@ -2,8 +2,26 @@
   "appId": "br.com.proftiagogomes.trilha",
   "appName": "Trilha do RLM",
   "webDir": "www",
-  "android": { "backgroundColor": "#F1F4F8" },
+  "android": {
+    "backgroundColor": "#F1F4F8",
+    "allowMixedContent": false
+  },
   "plugins": {
-    "StatusBar": { "style": "LIGHT", "backgroundColor": "#F1F4F8", "overlaysWebView": false }
+    "StatusBar": {
+      "style": "LIGHT",
+      "backgroundColor": "#F1F4F8",
+      "overlaysWebView": false
+    },
+    "SplashScreen": {
+      "launchShowDuration": 1500,
+      "launchAutoHide": false,
+      "backgroundColor": "#F1F4F8",
+      "showSpinner": false,
+      "androidScaleType": "CENTER_CROP"
+    },
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_trilha",
+      "iconColor": "#1E7A4C"
+    }
   }
 }
