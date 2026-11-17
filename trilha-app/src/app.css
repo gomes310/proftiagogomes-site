@@ -323,3 +323,8 @@ a.chip { text-decoration: none; color: inherit; }
 .chips-dir .chip { min-height: 44px; }
 .grafico text { font-size: 13px; }
 .calendario li.sem { font-size: 14px; }
+/* boas-vindas: conteúdo e botões juntos, centralizados na tela (sem buraco no meio) */
+.bv-corpo { flex: 0 1 auto; justify-content: flex-start; margin-top: auto; padding-top: 0; }
+.bv-base { margin-bottom: auto; padding-top: 20px; }
+.bv-ilus { margin-top: 0; }
+@media (max-height: 700px) { .bv-corpo { margin-top: 0; } }
