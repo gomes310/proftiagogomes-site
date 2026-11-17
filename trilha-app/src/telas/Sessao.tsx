@@ -6,6 +6,7 @@ import { som } from '../som';
 import { vibrar } from '../nativo';
 import Lumi from '../componentes/Lumi';
 import { Icone } from '../componentes/Icones';
+import { BotaoLeitura, BotaoMicrofone, LumiFalando, useLeituraAuto } from '../componentes/Voz';
 import { confete } from '../componentes/confete';
 
 const Html = ({ h, as: Tag = 'span', ...r }: { h: string; as?: 'span' | 'h2'; id?: string }) => <Tag {...r} dangerouslySetInnerHTML={{ __html: h }} />;
@@ -54,6 +55,9 @@ export default function Sessao({ tipo, ids, onFechar }: { tipo: 'revisao' | 'rel
     setPos((p) => p + 1);
   }
 
+  const [avisoVoz, setAvisoVoz] = useState('');
+  useEffect(() => setAvisoVoz(''), [pos, escolha]);
+  useLeituraAuto(fim ? 'fim' : 's' + pos, escolha !== null && !fim && tipo === 'revisao' ? 'r' + pos : '');
   if (!itens.length) return null;
   const progresso = tipo === 'relampago' ? resto / TEMPO : (pos + (escolha !== null ? 1 : 0)) / itens.length;
   const ok = escolha !== null && escolha === item.q.c;
@@ -63,6 +67,7 @@ export default function Sessao({ tipo, ids, onFechar }: { tipo: 'revisao' | 'rel
       <div className="licao-topo">
         <button className="fechar" type="button" onClick={onFechar} aria-label="Sair da prática">×</button>
         <div className={'trilho' + (tipo === 'relampago' ? ' tempo' + (resto <= 10 ? ' acabando' : '') : '')} aria-hidden="true"><span style={{ width: progresso * 100 + '%' }} /></div>
+        <BotaoLeitura />
         {tipo === 'relampago' && !fim ? <span className="relogio" aria-live="off"><Icone nome="relogio" tamanho={22} />{resto}s</span> : combo >= 2 ? <span className="combo"><Icone nome="ofensiva" tamanho={22} />{combo}</span> : <span className="bv-espaco" />}
       </div>
       <div className="licao-corpo"><div className="wrap" key={fim ? 'fim' : pos}><div className="cartao">
@@ -92,11 +97,14 @@ export default function Sessao({ tipo, ids, onFechar }: { tipo: 'revisao' | 'rel
         )}
       </div></div></div>
       <div className={'licao-base' + (escolha !== null && !fim ? (ok ? ' acerto' : ' erro') : '')}><div className="wrap">
+        <LumiFalando esconder={escolha !== null && !fim} />
         <div className="retorno" aria-live="polite">
-          {!fim && escolha !== null && tipo === 'revisao' && <><strong>{ok ? 'Certo!' : 'Resposta certa: '}{!ok && <Html h={item.q.o[item.q.c]} />}</strong><Html h={item.q.e} /></>}
-          {!fim && escolha !== null && tipo === 'relampago' && <strong>{ok ? 'Certo!' : 'Errou, vai a próxima!'}</strong>}
-          {!fim && escolha === null && tipo === 'relampago' && <span className="dica-base">Responda o máximo que conseguir antes do tempo acabar.</span>}
+          {avisoVoz && <span className="aviso-voz">{avisoVoz}</span>}
+          {!avisoVoz && !fim && escolha !== null && tipo === 'revisao' && <><strong>{ok ? 'Certo!' : 'Resposta certa: '}{!ok && <Html h={item.q.o[item.q.c]} />}</strong><Html h={item.q.e} /></>}
+          {!avisoVoz && !fim && escolha !== null && tipo === 'relampago' && <strong>{ok ? 'Certo!' : 'Errou, vai a próxima!'}</strong>}
+          {!avisoVoz && !fim && escolha === null && tipo === 'relampago' && <span className="dica-base">Responda o máximo que conseguir antes do tempo acabar.</span>}
         </div>
+        {!fim && <BotaoMicrofone acao={() => { const b = document.querySelector<HTMLButtonElement>('.licao-base .btn-ok'); if (b && !b.disabled) b.click(); }} aviso={setAvisoVoz} />}
         {fim ? <button className="btn btn-ok" type="button" onClick={onFechar}>Concluir</button>
           : tipo === 'revisao' ? <button className="btn btn-ok" type="button" disabled={escolha === null} onClick={proxima}>{pos + 1 >= itens.length && escolha !== null ? 'Ver resultado' : 'Continuar'}</button>
             : <button className="btn" type="button" onClick={terminar}>Encerrar</button>}

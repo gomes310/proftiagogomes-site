@@ -4,6 +4,8 @@ import { CONQUISTAS, XP_NIVEL, mudarMeta, nivelDe, totalEstrelas, ultimos7, useE
 import { apagarConta, mudarApelido, sair, useSessao, ErroApi } from '../api';
 import { IconeEstrela, IconeFogo, Meta, Missoes } from '../componentes/Widgets';
 import { Icone, Selo } from '../componentes/Icones';
+import { InterruptorLeitura } from '../componentes/Voz';
+import { falar } from '../voz';
 import { APP } from '../plataforma';
 import { lerLembrete, salvarLembrete } from '../nativo';
 
@@ -161,6 +163,10 @@ export default function Painel({ irPara }: { irPara: (r: string) => void }) {
       <div className="so-celular"><Meta /><Missoes /></div>
 
       <Calendario />
+
+      <section className="card" aria-label="Voz">
+        <InterruptorLeitura aoLigar={() => void falar('Combinado! Vou ler as lições em voz alta para você.')} />
+      </section>
 
       <section className="card" aria-labelledby="sem-t">
         <div className="card-cab"><h2 id="sem-t">Seus últimos 7 dias</h2>

@@ -55,7 +55,7 @@ A versão sobe sozinha a cada execução (1.0.1, 1.0.2…). A Play Store exige i
    - Anúncios: não.
    - Classificação de conteúdo: questionário, categoria Educação. Não há violência nem interação entre usuários.
    - Público-alvo: 18+ (concurseiros). Isso evita as regras de apps para crianças.
-   - Segurança dos dados: marque que o app **coleta e-mail e apelido** (informações pessoais) e **progresso no app**, apenas para funcionalidade do app e gerenciamento da conta. Os dados **não são compartilhados**, são **criptografados em trânsito** e o aluno **pode pedir a exclusão**. Criar conta é opcional.
+   - Segurança dos dados: marque que o app **coleta e-mail e apelido** (informações pessoais) e **progresso no app**, apenas para funcionalidade do app e gerenciamento da conta. Os dados **não são compartilhados**, são **criptografados em trânsito** e o aluno **pode pedir a exclusão**. Criar conta é opcional. Sobre o **microfone** (responder falando): o áudio vai só para o reconhecimento de voz do próprio Android e o app não recebe nem guarda nada, então **não marque "Áudio" como coletado**. Na pergunta de permissões, o RECORD_AUDIO é usado só quando o aluno toca no botão do microfone.
    - Exclusão de conta: informe o link https://proftiagogomes.com.br/privacidade.html#apagar-conta (dentro do app, a opção fica em Painel → Sua conta → Apagar minha conta).
    - App de governo / notícias / saúde financeira: não.
 3. **Monte a página da loja:** em *Presença na loja → Página principal*, cole os textos do `LOJA.md` e envie:

@@ -6,7 +6,7 @@ export type NomeIcone =
   | 'ofensiva' | 'xp' | 'estrela' | 'moeda' | 'escudo'
   | 'trilha' | 'praticar' | 'ranking' | 'painel'
   | 'missao' | 'missaoFeita' | 'revisao' | 'relampago' | 'caderno' | 'cadeado' | 'verdade'
-  | 'som' | 'semSom' | 'relogio' | 'venn' | 'nivel' | 'meta' | 'loja' | 'precisao';
+  | 'som' | 'semSom' | 'voz' | 'microfone' | 'relogio' | 'venn' | 'nivel' | 'meta' | 'loja' | 'precisao';
 
 const L = { fill: 'none', stroke: 'currentColor', strokeWidth: 2.2, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
 
@@ -43,6 +43,10 @@ const DESENHOS: Record<NomeIcone, ReactNode> = {
   verdade: <path d="m6 6 6 12.5L18 6" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />,
   som: <g {...L}><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" /><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" /></g>,
   semSom: <g {...L}><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" /><path d="M15.5 10h5v4" /></g>,
+  // balão de fala com ondas: a Lumi lê em voz alta
+  voz: <g {...L}><path d="M4 5.5h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3.5v-3.5H4a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2z" /><path d="M6.5 10.5h1M9 9v3M11.5 8v5" /><path d="M19 8.5a4.5 4.5 0 0 1 0 6M21.3 6.5a7.5 7.5 0 0 1 0 10" /></g>,
+  // microfone com a base em "∧"
+  microfone: <g {...L}><rect x="9" y="2.8" width="6" height="11" rx="3" /><path d="M5.5 11a6.5 6.5 0 0 0 13 0" /><path d="M8.5 21.5 12 17.5l3.5 4" /></g>,
   // relógio com os ponteiros formando "∧"
   relogio: <><circle cx="12" cy="13" r="8.5" fill="#EAF2FD" stroke="#3B7BD9" strokeWidth="2" /><path d="M8.6 16.2 12 9.3l3.4 6.9" fill="none" stroke="#172238" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /><path d="M10 2.5h4" stroke="#3B7BD9" strokeWidth="2.2" strokeLinecap="round" /></>,
   // diagrama de Venn com a interseção destacada

@@ -12,6 +12,7 @@ import Pares from '../componentes/Pares';
 import Lumi, { Efe, Ve } from '../componentes/Lumi';
 import { Icone, Selo } from '../componentes/Icones';
 import { SIMBOLO_UNIDADE } from '../estado';
+import { BotaoLeitura, BotaoMicrofone, LumiFalando, useLeituraAuto } from '../componentes/Voz';
 
 type Passo = { tipo: 'imersao' } | { tipo: 'ideia'; t: string; k: number } | { tipo: 'lab' } | { tipo: 'pares' } | { tipo: 'exemplo' } | { tipo: 'vf' };
 type Item = { q: Questao; tentativa: number };
@@ -55,6 +56,8 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
   const [resultado, setResultado] = useState<ResultadoLicao | null>(null);
   const [sons, setSons] = useState(somLigado());
   const acaoRef = useRef<HTMLButtonElement>(null);
+  const [avisoVoz, setAvisoVoz] = useState('');
+  useEffect(() => setAvisoVoz(''), [etapa, passo, fila.length, escolha]);
   const elogio = useRef(ELOGIOS[0]);
 
   const respondidas = total - fila.length;
@@ -212,18 +215,23 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
   else if (etapa === 'aprenda' && p.tipo === 'vf' && vf !== null) retorno = <><strong>{vf === E.vf.v ? 'Isso! Agora é hora de praticar.' : 'Quase! A resposta é ' + (E.vf.v ? 'verdadeiro' : 'falso') + '.'}</strong><Html h={E.vf.e} /></>;
   else if (etapa === 'aprenda' && p.tipo === 'exemplo' && !revelado) retorno = <span className="dica-base">Tente responder de cabeça antes de abrir.</span>;
 
+  const chaveTela = etapa + '-' + passo + '-' + fila.length + (resultado ? '-fim' : '');
+  useLeituraAuto(chaveTela, base ? chaveTela + base + (verificado ? respondidas : '') : '');
   return (
     <div className="licao aberta" role="dialog" aria-modal="true" aria-labelledby="licao-titulo">
       <div className="licao-topo">
         <button className="fechar" type="button" onClick={onFechar} aria-label="Sair da lição">×</button>
         <div className="trilho" aria-hidden="true"><span style={{ width: progresso * 100 + '%' }} /></div>
         {combo >= 2 && etapa === 'questao' && <span className="combo" aria-label={combo + ' acertos seguidos'}><Icone nome="ofensiva" tamanho={22} />{combo}</span>}
+        <BotaoLeitura />
         <button className="fechar som" type="button" aria-pressed={sons} aria-label={sons ? 'Desligar sons' : 'Ligar sons'} onClick={() => setSons(alternarSom())}><Icone nome={sons ? 'som' : 'semSom'} /></button>
       </div>
       <div className="licao-corpo"><div className="wrap" key={etapa + passo + fila.length}><div className="cartao">{corpo}</div></div></div>
       <div className={'licao-base' + base}><div className="wrap">
+        <LumiFalando esconder={!!base} />
         {base && retorno && <span className="reacao" aria-hidden="true">{base === ' acerto' ? <Ve key="ve" humor="festa" tamanho={64} /> : <Efe key="efe" humor="ops" tamanho={64} />}</span>}
-        <div className="retorno" aria-live="polite">{retorno}</div>
+        <div className="retorno" aria-live="polite">{avisoVoz ? <span className="aviso-voz">{avisoVoz}</span> : retorno}</div>
+        {etapa !== 'fim' && !resultado && <BotaoMicrofone acao={() => acaoRef.current && !acaoRef.current.disabled && acaoRef.current.click()} aviso={setAvisoVoz} />}
         <button ref={acaoRef} className="btn btn-ok" type="button" disabled={!acaoOk} onClick={acao}>{acaoTexto}</button>
       </div></div>
     </div>

@@ -5,6 +5,8 @@ import { salvarLembrete } from '../nativo';
 import { som } from '../som';
 import { Selo } from '../componentes/Icones';
 import Lumi, { Efe, Ve } from '../componentes/Lumi';
+import { InterruptorLeitura } from '../componentes/Voz';
+import { falar, leituraLigada, parar } from '../voz';
 
 const CHAVE = 'trilha-boas-vindas';
 export const jaViuBoasVindas = () => { try { return localStorage.getItem(CHAVE) === '1'; } catch { return true; } };
@@ -29,6 +31,7 @@ export const BANCAS = [
 const CHAVE_BANCA = 'trilha-banca';
 export const bancaEscolhida = () => { try { return localStorage.getItem(CHAVE_BANCA) || ''; } catch { return ''; } };
 
+const OI = 'Oi! Eu sou a Lumi, a lâmpada das ideias. Vou te guiar na Trilha do RLM!';
 const SIMBOLOS = ['∧', '∨', '¬', '→', '∴', '≡', 'V', 'F', '↔', '∀'];
 
 // texto que aparece letra por letra (leitores de tela recebem tudo de uma vez)
@@ -45,6 +48,7 @@ function Digitando({ texto }: { texto: string }) {
 
 // a Lumi fala em um balão; o texto do balão é o título da tela
 function Fala({ texto, humor = 'falando', menor }: { texto: string; humor?: 'falando' | 'acenando' | 'feliz' | 'pensando'; menor?: boolean }) {
+  useEffect(() => { if (leituraLigada()) void falar(texto); return () => { void parar(); }; }, [texto]);
   return (
     <div className={'bv-fala' + (menor ? ' menor' : '')}>
       <Lumi humor={humor} tamanho={menor ? 70 : 150} className="bv-fala-lumi" />
@@ -109,7 +113,10 @@ export default function BoasVindas({ onFim, irPara }: { onFim: (comecar: boolean
       </div>
 
       <div className="bv-corpo" key={passo}>
-        {passo === 1 && <div className="bv-centro"><Fala humor="acenando" texto="Oi! Eu sou a Lumi, a lâmpada das ideias. Vou te guiar na Trilha do RLM!" /></div>}
+        {passo === 1 && <div className="bv-centro">
+          <Fala humor="acenando" texto={OI} />
+          <div className="bv-voz"><InterruptorLeitura aoLigar={() => void falar(OI)} /></div>
+        </div>}
         {passo === 2 && <div className="bv-centro">
           <Fala texto="Estes são o Vê e o Efe. Um sempre diz a verdade… o outro, nem sempre. Descobrir quem tem razão é com você!" menor />
           <div className="bv-turma" aria-hidden="true">

@@ -10,6 +10,8 @@
     "icones": "npx @capacitor/assets generate --android --iconBackgroundColor '#172238' --splashBackgroundColor '#F1F4F8'"
   },
   "dependencies": {
+    "@capacitor-community/speech-recognition": "^7.0.1",
+    "@capacitor-community/text-to-speech": "^8.0.2",
     "@capacitor/android": "^8.6.2",
     "@capacitor/app": "^8.1.2",
     "@capacitor/core": "^8.6.2",
