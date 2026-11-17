@@ -23,6 +23,11 @@ export interface Estado {
   meta: number; // meta diária de XP
   missoes: { dia: string; feitas: string[]; combo: number; licoes: number; perfeitas: number };
   conquistas: Record<string, string>; // id -> data
+  moedas: number;
+  escudos: number; // escudos de ofensiva guardados (máx. 2)
+  diasEscudo: string[]; // dias salvos por escudo
+  srs: Record<string, { cx: number; prox: string; erros: number }>; // revisão espaçada por questão "licao-indice"
+  recordeRelampago: number;
   atualizado: number;
 }
 
@@ -46,7 +51,7 @@ function novo(): Estado {
   return {
     v: 2, xp: 0, estrelas: {}, ofensiva: 0, maiorOfensiva: 0, ultimoDia: null, xpDia: {}, respostas: 0, acertos: 0,
     maiorCombo: 0, perfeitas: 0, licoesFeitas: 0, meta: META_PADRAO,
-    missoes: { dia: diaLocal(), feitas: [], combo: 0, licoes: 0, perfeitas: 0 }, conquistas: {}, atualizado: 0
+    missoes: { dia: diaLocal(), feitas: [], combo: 0, licoes: 0, perfeitas: 0 }, conquistas: {}, moedas: 0, escudos: 0, diasEscudo: [], srs: {}, recordeRelampago: 0, atualizado: 0
   };
 }
 
@@ -75,9 +80,20 @@ export function normalizar(bruto: unknown): Estado {
   }
   if (s.conquistas && typeof s.conquistas === 'object') for (const [k, v] of Object.entries(s.conquistas)) if (typeof v === 'string' && k.length < 40) e.conquistas[k] = v;
   e.atualizado = num(s.atualizado, 1e14);
-  // ofensiva quebrada se passou mais de um dia sem estudar
+  e.moedas = num(s.moedas, 1e6); e.escudos = Math.min(2, num(s.escudos, 2)); e.recordeRelampago = num(s.recordeRelampago, 1000);
+  e.diasEscudo = Array.isArray(s.diasEscudo) ? s.diasEscudo.filter((d) => typeof d === 'string').slice(-60) : [];
+  if (s.srs && typeof s.srs === 'object') for (const [k, v] of Object.entries(s.srs)) {
+    if (/^\d+-\d+$/.test(k) && v && typeof v === 'object') e.srs[k] = { cx: Math.min(5, Math.max(1, num(v.cx, 5) || 1)), prox: normalizaDia(v.prox) || diaLocal(), erros: num(v.erros, 1000) };
+  }
+  // ofensiva: escudos cobrem os dias perdidos; sem escudo suficiente, a ofensiva zera
   const hoje = diaLocal();
-  if (e.ultimoDia && e.ultimoDia !== hoje && e.ultimoDia !== diaAntes(hoje)) e.ofensiva = 0;
+  if (e.ultimoDia && e.ultimoDia !== hoje && e.ultimoDia !== diaAntes(hoje)) {
+    const perdidos: string[] = [];
+    for (let d = diaAntes(hoje); d > e.ultimoDia; d = diaAntes(d)) perdidos.push(d);
+    if (e.ofensiva > 0 && perdidos.length <= e.escudos) {
+      e.escudos -= perdidos.length; e.diasEscudo.push(...perdidos.reverse()); e.ultimoDia = diaAntes(hoje);
+    } else e.ofensiva = 0;
+  }
   // guarda só os últimos 60 dias de XP diário
   const corte = diaAntes(hoje, 60);
   for (const d of Object.keys(e.xpDia)) if (d < corte) delete e.xpDia[d];
@@ -85,6 +101,7 @@ export function normalizar(bruto: unknown): Estado {
 }
 
 let estado: Estado = (() => { try { return normalizar(JSON.parse(localStorage.getItem(CHAVE) || 'null')); } catch { return novo(); } })();
+try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch { /* ok */ }
 const ouvintes = new Set<() => void>();
 const aoMudar = new Set<(e: Estado) => void>();
 
@@ -140,13 +157,29 @@ export const CONQUISTAS: Conquista[] = [
   { id: 'ofensiva7', nome: 'Uma semana firme', desc: '7 dias seguidos estudando', icone: '📅', ok: (e) => e.maiorOfensiva >= 7 },
   { id: 'xp300', nome: '300 XP', desc: 'Juntou 300 pontos de experiência', icone: '💎', ok: (e) => e.xp >= 300 },
   ...UNIDADES.map((u, k) => ({ id: 'unidade' + (k + 1), nome: u.selo, desc: 'Fechou a ' + u.nome.split(' · ')[0], icone: '🏅', ok: (e: Estado) => u.licoes.every((i) => e.estrelas[i] != null) })),
+  { id: 'relampago', nome: 'Raio', desc: '10 acertos no desafio relâmpago', icone: '⚡', ok: (e) => e.recordeRelampago >= 10 },
+  { id: 'revisor', nome: 'Memória de elefante', desc: 'Levou 10 questões à caixa 3 da revisão', icone: '🧠', ok: (e) => Object.values(e.srs).filter((v) => v.cx >= 3).length >= 10 },
   { id: 'trilha', nome: 'Trilha completa', desc: 'Terminou as 11 lições', icone: '🏆', ok: (e) => Object.keys(e.estrelas).length === LICOES.length },
   { id: 'estrelas', nome: 'Colecionador', desc: 'Todas as lições com 3 estrelas', icone: '⭐', ok: (e) => LICOES.every((_, i) => e.estrelas[i] === 3) }
 ];
 
 // ---------- eventos ----------
-export function registrarResposta(ok: boolean, combo: number) {
+const INTERVALOS = [1, 3, 7, 14, 30]; // dias até rever, por caixa (método de Leitner)
+function revisar(e: Estado, id: string, ok: boolean) {
+  const h = diaLocal();
+  const atual = e.srs[id] || { cx: 1, prox: h, erros: 0 };
+  const cx = ok ? Math.min(5, atual.cx + (e.srs[id] ? 1 : 1)) : 1;
+  const [a, m, d] = h.split('-').map(Number);
+  e.srs[id] = { cx, prox: ok ? diaLocal(new Date(a, m - 1, d + INTERVALOS[cx - 1])) : h, erros: atual.erros + (ok ? 0 : 1) };
+}
+export function questoesParaRevisar(e: Estado) {
+  const h = diaLocal();
+  return Object.entries(e.srs).filter(([, v]) => v.prox <= h).sort((x, y) => x[1].cx - y[1].cx || y[1].erros - x[1].erros).map(([k]) => k);
+}
+
+export function registrarResposta(ok: boolean, combo: number, id?: string) {
   const e = normalizar(estado);
+  if (id) revisar(e, id, ok);
   e.respostas++; if (ok) e.acertos++;
   e.maiorCombo = Math.max(e.maiorCombo, combo);
   e.missoes.combo = Math.max(e.missoes.combo, combo);
@@ -155,6 +188,7 @@ export function registrarResposta(ok: boolean, combo: number) {
 }
 
 export interface ResultadoLicao {
+  moedas: number;
   ganho: number; bonusMissoes: number; estrelas: number; nivelAntes: number; nivelDepois: number;
   primeiraVez: boolean; unidadeFechada: number | null; novasConquistas: Conquista[]; missoesConcluidas: Missao[]; metaBatida: boolean;
 }
@@ -186,6 +220,8 @@ export function registrarLicao(idx: number, acertosPrimeira: number, total: numb
     if (!e.missoes.feitas.includes(m.id) && m.progresso(e) >= m.alvo) { e.missoes.feitas.push(m.id); concluidas.push(m); bonus += m.bonus; }
   }
   e.xp += bonus; e.xpDia[hoje] += bonus;
+  const moedas = 5 + (estrelas === 3 ? 5 : 0) + concluidas.length * 5;
+  e.moedas += moedas;
 
   const novas: Conquista[] = [];
   for (const c of CONQUISTAS) if (!conquistasAntes.has(c.id) && c.ok(e)) { e.conquistas[c.id] = hoje; novas.push(c); }
@@ -194,9 +230,33 @@ export function registrarLicao(idx: number, acertosPrimeira: number, total: numb
   e.atualizado = Date.now();
   definir(e);
   return {
-    ganho, bonusMissoes: bonus, estrelas, nivelAntes, nivelDepois: nivelDe(e.xp), primeiraVez, unidadeFechada,
+    moedas, ganho, bonusMissoes: bonus, estrelas, nivelAntes, nivelDepois: nivelDe(e.xp), primeiraVez, unidadeFechada,
     novasConquistas: novas, missoesConcluidas: concluidas, metaBatida: !metaAntes && (e.xpDia[hoje] || 0) >= e.meta
   };
+}
+
+// prática (revisão e desafio relâmpago): 2 XP por acerto, conta para a ofensiva e a meta
+export function registrarPratica(acertos: number, tipo: 'revisao' | 'relampago') {
+  const e = normalizar(estado);
+  const hoje = diaLocal();
+  const ganho = acertos * 2;
+  if (acertos > 0 && e.ultimoDia !== hoje) { e.ofensiva = e.ultimoDia === diaAntes(hoje) ? e.ofensiva + 1 : 1; e.ultimoDia = hoje; }
+  e.maiorOfensiva = Math.max(e.maiorOfensiva, e.ofensiva);
+  e.xp += ganho; e.xpDia[hoje] = (e.xpDia[hoje] || 0) + ganho;
+  e.moedas += acertos;
+  const recorde = tipo === 'relampago' && acertos > e.recordeRelampago;
+  if (recorde) e.recordeRelampago = acertos;
+  for (const c of CONQUISTAS) if (!e.conquistas[c.id] && c.ok(e)) e.conquistas[c.id] = hoje;
+  e.atualizado = Date.now();
+  definir(e);
+  return { ganho, moedas: acertos, recorde };
+}
+export const PRECO_ESCUDO = 50;
+export function comprarEscudo(): string | null {
+  const e = normalizar(estado);
+  if (e.escudos >= 2) return 'Você já tem o máximo de 2 escudos.';
+  if (e.moedas < PRECO_ESCUDO) return 'Faltam ' + (PRECO_ESCUDO - e.moedas) + ' moedas. Faça lições e práticas para juntar.';
+  e.moedas -= PRECO_ESCUDO; e.escudos++; e.atualizado = Date.now(); definir(e); return null;
 }
 
 export function mudarMeta(meta: number) { const e = normalizar(estado); e.meta = meta; e.atualizado = Date.now(); definir(e); }
@@ -213,6 +273,8 @@ export function mesclar(a: Estado, b: Estado): Estado {
   r.respostas = Math.max(a.respostas, b.respostas); r.acertos = Math.max(a.acertos, b.acertos);
   r.perfeitas = Math.max(a.perfeitas, b.perfeitas); r.licoesFeitas = Math.max(a.licoesFeitas, b.licoesFeitas);
   for (const [k, v] of Object.entries(outro.conquistas)) if (!r.conquistas[k]) r.conquistas[k] = v;
+  for (const [k, v] of Object.entries(outro.srs)) if (!r.srs[k]) r.srs[k] = v;
+  r.recordeRelampago = Math.max(a.recordeRelampago, b.recordeRelampago);
   r.atualizado = Math.max(a.atualizado, b.atualizado);
   return r;
 }

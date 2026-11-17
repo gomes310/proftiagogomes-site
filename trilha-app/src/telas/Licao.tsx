@@ -7,8 +7,11 @@ import { alternarSom, som, somLigado } from '../som';
 import { confete } from '../componentes/confete';
 import { APP } from '../plataforma';
 import { vibrar } from '../nativo';
+import { CONTEUDO } from '../dados/imersao';
+import Pares from '../componentes/Pares';
+import Lumi from '../componentes/Lumi';
 
-type Passo = { tipo: 'ideia'; t: string; k: number } | { tipo: 'lab' } | { tipo: 'exemplo' } | { tipo: 'vf' };
+type Passo = { tipo: 'imersao' } | { tipo: 'ideia'; t: string; k: number } | { tipo: 'lab' } | { tipo: 'pares' } | { tipo: 'exemplo' } | { tipo: 'vf' };
 type Item = { q: Questao; tentativa: number };
 const REDUZ = typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 const ELOGIOS = ['Mandou bem!', 'Isso aí!', 'Perfeito!', 'Boa!', 'Certíssimo!'];
@@ -24,8 +27,10 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
   const L = LICOES[idx];
   const E = EXTRA[idx];
   const passos = useMemo<Passo[]>(() => {
-    const p: Passo[] = L.teoria.map((t, k) => ({ tipo: 'ideia' as const, t, k }));
+    // Rosetta Stone: primeiro os exemplos, o aluno descobre a regra; depois a explicação
+    const p: Passo[] = [{ tipo: 'imersao' }, ...L.teoria.map((t, k) => ({ tipo: 'ideia' as const, t, k }))];
     if (LABS[idx]) p.push({ tipo: 'lab' });
+    p.push({ tipo: 'pares' });
     p.push({ tipo: 'exemplo' }, { tipo: 'vf' });
     return p;
   }, [idx, L]);
@@ -35,6 +40,11 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
   const [passo, setPasso] = useState(0);
   const [revelado, setRevelado] = useState(false);
   const [vf, setVf] = useState<boolean | null>(null);
+  const [imer, setImer] = useState<number | null>(null);
+  const [paresOk, setParesOk] = useState(false);
+  const C = CONTEUDO[idx];
+  // embaralha as opções da imersão (a certa não fica sempre em primeiro)
+  const ordemImer = useMemo(() => C.imersao.opcoes.map((_, k) => (k + idx) % C.imersao.opcoes.length), [idx, C]);
   const [fila, setFila] = useState<Item[]>(() => L.questoes.map((q) => ({ q, tentativa: 0 })));
   const [escolha, setEscolha] = useState<number | null>(null);
   const [verificado, setVerificado] = useState<null | { ok: boolean; item: Item }>(null);
@@ -56,6 +66,8 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
   let acaoTexto = 'Continuar', acaoOk = true, acao: () => void = () => setPasso(passo + 1);
   if (etapa === 'aprenda') {
     if (p.tipo === 'exemplo' && !revelado) acaoOk = false;
+    if (p.tipo === 'imersao') acaoOk = imer !== null;
+    if (p.tipo === 'pares') acaoOk = paresOk;
     if (p.tipo === 'vf') { acaoTexto = 'Praticar'; acaoOk = vf !== null; acao = () => setEtapa('questao'); }
   } else if (etapa === 'questao') {
     if (!verificado) { acaoTexto = 'Verificar'; acaoOk = escolha !== null; acao = verificar; }
@@ -70,7 +82,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
     setCombo(novoCombo);
     if (ok && !item.tentativa) setAcertosPrimeira((n) => n + 1);
     elogio.current = ELOGIOS[Math.floor(Math.random() * ELOGIOS.length)];
-    registrarResposta(ok, novoCombo);
+    registrarResposta(ok, novoCombo, idx + '-' + L.questoes.indexOf(item.q));
     som(ok ? 'certo' : 'erro'); vibrar(ok ? 'certo' : 'erro');
     setVerificado({ ok, item });
   }
@@ -112,6 +124,24 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
     if (p.tipo === 'ideia') corpo = <>{topo}<p className="contador">Ideia {p.k + 1} de {L.teoria.length}</p>
       <Html as="h2" h={p.t} className="ideia" id="licao-titulo" />
       <div className="pontos" aria-hidden="true">{L.teoria.map((_, k) => <i key={k} className={k <= p.k ? 'on' : ''} />)}</div></>;
+    else if (p.tipo === 'imersao') corpo = <>{topo}<p className="contador">Descubra a regra</p>
+      <div className="imersao">
+        <Lumi humor={imer === null ? 'pensando' : imer === C.imersao.c ? 'festa' : 'feliz'} tamanho={64} className="imersao-lumi" />
+        <ol className="exemplos" aria-label="Exemplos">
+          {C.imersao.exemplos.map(([a, b], k) => <li key={k} style={{ animationDelay: k * 0.18 + 's' }}><span>{a}</span><b aria-hidden="true">→</b><strong>{b}</strong></li>)}
+        </ol>
+      </div>
+      <h2 id="licao-titulo">{C.imersao.pergunta}</h2>
+      <div className="opcoes" role="group" aria-label="Sua resposta">
+        {ordemImer.map((k, pos) => {
+          const o = C.imersao.opcoes[k];
+          const cls = imer === null ? '' : k === C.imersao.c ? ' certa' : k === imer ? ' errada' : '';
+          return <button key={k} type="button" className={'opcao' + cls} disabled={imer !== null} onClick={() => { setImer(k); const ok = k === C.imersao.c; som(ok ? 'certo' : 'erro'); vibrar(ok ? 'certo' : 'erro'); }}><span className="tecla" aria-hidden="true">{pos + 1}</span>{o}</button>;
+        })}
+      </div></>;
+    else if (p.tipo === 'pares') corpo = <>{topo}<p className="contador">Ligue os pares</p><h2 id="licao-titulo">Toque em um item de cada lado para formar os pares.</h2>
+      <Pares pares={C.pares} semente={idx + 3} onFim={() => setParesOk(true)} />
+      {paresOk && <p className="pares-ok" role="status"><Lumi humor="festa" tamanho={36} /> Todos os pares certos!</p>}</>;
     else if (p.tipo === 'lab') corpo = <>{topo}<p className="contador">Experimente</p><Html as="h2" h={LABS[idx].dica} id="licao-titulo" /><Lab idx={idx} /></>;
     else if (p.tipo === 'exemplo') corpo = <>{topo}<p className="contador">Exemplo resolvido</p><Html as="h2" h={E.ex[0]} id="licao-titulo" />
       {!revelado ? <button type="button" className="revelar" onClick={() => { som('toque'); setRevelado(true); }}>Pense um pouco e toque para ver a resolução</button>
@@ -145,10 +175,12 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
     const u = r.unidadeFechada !== null ? UNIDADES[r.unidadeFechada] : null;
     const compart = encodeURIComponent((u ? 'Ganhei o selo "' + u.selo + '" na' : 'Estou fazendo a') + ' Trilha do RLM, grátis, do Prof. Tiago Gomes: https://proftiagogomes.com.br/trilha/');
     corpo = <div className="fim">
+      <Lumi humor={r.estrelas === 3 ? 'festa' : 'feliz'} tamanho={88} className="fim-lumi" />
       <p className="grande" aria-label={r.estrelas + ' de 3 estrelas'}>{[0, 1, 2].map((i) => <span key={i} className={i < r.estrelas ? '' : 'apagada'}>★</span>)}</p>
       <h2 id="licao-titulo">{r.estrelas === 3 ? 'Lição perfeita!' : 'Lição concluída!'}</h2>
       <div className="placar">
         <div><b>+{r.ganho + r.bonusMissoes}</b><small>XP</small></div>
+        <div><b>+{r.moedas}</b><small>moedas</small></div>
         <div><b>{acertosPrimeira}/{total}</b><small>de primeira</small></div>
         <div><b>{Math.round(acertosPrimeira / total * 100)}%</b><small>precisão</small></div>
       </div>
@@ -165,9 +197,12 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
     </div>;
   }
 
-  const base = etapa === 'questao' && verificado ? (verificado.ok ? ' acerto' : ' erro') : etapa === 'aprenda' && p.tipo === 'vf' && vf !== null ? (vf === E.vf.v ? ' acerto' : ' erro') : '';
+  const base = etapa === 'questao' && verificado ? (verificado.ok ? ' acerto' : ' erro')
+    : etapa === 'aprenda' && p.tipo === 'vf' && vf !== null ? (vf === E.vf.v ? ' acerto' : ' erro')
+      : etapa === 'aprenda' && p.tipo === 'imersao' && imer !== null ? (imer === C.imersao.c ? ' acerto' : ' erro') : '';
   let retorno: React.ReactNode = null;
   if (etapa === 'questao' && verificado) retorno = <><strong>{verificado.ok ? (combo >= 2 ? '🔥 ' + combo + ' seguidas!' : elogio.current) : <>Resposta certa: <Html h={verificado.item.q.o[verificado.item.q.c]} /></>}</strong><Html h={verificado.item.q.e} /></>;
+  else if (etapa === 'aprenda' && p.tipo === 'imersao' && imer !== null) retorno = <><strong>{imer === C.imersao.c ? 'Você descobriu a regra!' : 'Quase! Veja de novo os exemplos.'}</strong>{C.imersao.e}</>;
   else if (etapa === 'aprenda' && p.tipo === 'vf' && vf !== null) retorno = <><strong>{vf === E.vf.v ? 'Isso! Agora é hora de praticar.' : 'Quase! A resposta é ' + (E.vf.v ? 'verdadeiro' : 'falso') + '.'}</strong><Html h={E.vf.e} /></>;
   else if (etapa === 'aprenda' && p.tipo === 'exemplo' && !revelado) retorno = <span className="dica-base">Tente responder de cabeça antes de abrir.</span>;
 

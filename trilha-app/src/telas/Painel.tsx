@@ -36,6 +36,43 @@ function LembreteDiario() {
 }
 
 const DIAS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
+const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+
+// calendário da ofensiva (dias estudados no mês)
+function Calendario() {
+  const e = useEstado();
+  const [desloc, setDesloc] = useState(0);
+  const hoje = new Date();
+  const base = new Date(hoje.getFullYear(), hoje.getMonth() + desloc, 1);
+  const ano = base.getFullYear(), mes = base.getMonth();
+  const dias = new Date(ano, mes + 1, 0).getDate();
+  const p = (n: number) => String(n).padStart(2, '0');
+  const hojeS = hoje.getFullYear() + '-' + p(hoje.getMonth() + 1) + '-' + p(hoje.getDate());
+  let estudados = 0;
+  const celulas = Array.from({ length: dias }, (_, k) => {
+    const d = ano + '-' + p(mes + 1) + '-' + p(k + 1);
+    const estudou = (e.xpDia[d] || 0) > 0, escudo = e.diasEscudo.includes(d);
+    if (estudou) estudados++;
+    return <li key={d} className={(estudou ? 'estudou' : escudo ? 'escudo' : '') + (d === hojeS ? ' hoje' : '')} aria-label={(k + 1) + (estudou ? ', estudou' : escudo ? ', protegido por escudo' : '')}>{escudo && !estudou ? '🛡️' : k + 1}</li>;
+  });
+  return (
+    <section className="card" aria-labelledby="cal-t">
+      <div className="card-cab">
+        <h2 id="cal-t">Calendário da ofensiva</h2>
+        <div className="cal-nav">
+          <button type="button" className="fechar" aria-label="Mês anterior" onClick={() => setDesloc(desloc - 1)} disabled={desloc <= -1}>‹</button>
+          <span>{MESES[mes]}</span>
+          <button type="button" className="fechar" aria-label="Próximo mês" onClick={() => setDesloc(desloc + 1)} disabled={desloc >= 0}>›</button>
+        </div>
+      </div>
+      <ol className="calendario" style={{ ['--inicio' as string]: String(new Date(ano, mes, 1).getDay() + 1) }}>
+        {DIAS.map((d) => <li key={d} className="sem" aria-hidden="true">{d.slice(0, 1).toUpperCase()}</li>)}
+        {celulas}
+      </ol>
+      <p className="nota">{estudados} {estudados === 1 ? 'dia estudado' : 'dias estudados'} em {MESES[mes]}{e.escudos ? ' · 🛡️ ' + e.escudos + ' escudo(s) guardado(s)' : ''}.</p>
+    </section>
+  );
+}
 
 function Grafico7() {
   const e = useEstado();
@@ -121,6 +158,8 @@ export default function Painel({ irPara }: { irPara: (r: string) => void }) {
       </div>
 
       <div className="so-celular"><Meta /><Missoes /></div>
+
+      <Calendario />
 
       <section className="card" aria-labelledby="sem-t">
         <div className="card-cab"><h2 id="sem-t">Seus últimos 7 dias</h2>

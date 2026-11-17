@@ -63,6 +63,18 @@ with sync_playwright() as p:
     for _ in range(60):
         if pg.locator('.fim').count(): break
         if pg.locator('.revelar').count(): tocar('.revelar'); continue
+        if pg.locator('.imersao').count() and pg.locator('.opcoes .opcao:not([disabled])').count():
+            if not r['telas'].get('02b-imersao'): auditar_tela(pg, '02b-imersao')
+            tocar('.opcoes .opcao >> nth=0')
+        if pg.locator('.pares').count() and pg.locator('.par:not([disabled])').count():
+            if not r['telas'].get('03b-pares'): auditar_tela(pg, '03b-pares')
+            cols = pg.locator('.pares-col')
+            for i in range(cols.nth(0).locator('.par').count()):
+                for j in range(cols.nth(1).locator('.par').count()):
+                    if cols.nth(0).locator('.par').nth(i).is_disabled(): break
+                    if cols.nth(1).locator('.par').nth(j).is_disabled(): continue
+                    cols.nth(0).locator('.par').nth(i).tap(); cols.nth(1).locator('.par').nth(j).tap(); toques[0] += 2; pg.wait_for_timeout(80)
+            pg.wait_for_timeout(400)
         if pg.locator('.vf-b:not([disabled])').count():
             tocar('.vf-b >> nth=1')  # "Falso" é a resposta da lição 1
             continue
@@ -72,14 +84,26 @@ with sync_playwright() as p:
             alvo = next((q['c'] for q in questoes if q['p'][:20] in enun.replace('\n', ' ')), 0)
             tocar(f'.opcao >> nth={alvo}')
             if feitas == 0: auditar_tela(pg, '04-questao-escolhida')
-            tocar('.btn-ok')
+            tocar('.licao-base .btn-ok')
             if feitas == 0: auditar_tela(pg, '05-questao-feedback')
             feitas += 1
-        tocar('.btn-ok')
+        tocar('.licao-base .btn-ok')
     pg.wait_for_selector('.fim'); auditar_tela(pg, '06-fim-licao')
     r['tarefas']['T2 completar a lição 1'] = {'toques': toques[0], 'segundos': round(time.time() - t0, 1)}
-    tocar('.btn-ok')
+    tocar('.licao-base .btn-ok')
     auditar_tela(pg, '01-inicio')
+
+    # T7: abrir a prática e fazer a revisão inteligente
+    toques[0] = 0; tocar('.nav-inferior a[href="#/praticar"]'); pg.wait_for_timeout(300)
+    auditar_tela(pg, '06b-praticar')
+    tocar('.destaque-rev .btn-ok')
+    n = 0
+    while pg.locator('.licao.aberta').count() and n < 15:
+        if pg.locator('.fim').count(): break
+        tocar('.opcao >> nth=0'); tocar('.licao-base .btn-ok'); n += 1
+    auditar_tela(pg, '06c-revisao-fim')
+    tocar('.licao-base .btn-ok')
+    r['tarefas']['T7 fazer a revisão inteligente'] = {'toques': toques[0]}
 
     # T3: encontrar o ranking
     toques[0] = 0; tocar('.nav-inferior a[href="#/ranking"]'); pg.wait_for_timeout(1200)
@@ -95,7 +119,7 @@ with sync_playwright() as p:
 
     # T5: sair no meio de uma lição (botão voltar do celular = Escape aqui)
     pg.goto(URL); pg.wait_for_timeout(400)
-    tocar('.no.atual'); pg.wait_for_selector('.licao.aberta'); tocar('.btn-ok')
+    tocar('.no.atual'); pg.wait_for_selector('.licao.aberta'); tocar('.licao-base .btn-ok')
     pg.go_back(); pg.wait_for_timeout(400)
     r['tarefas']['T5 voltar do Android fecha a lição sem sair do app'] = {'licao_fechou': not pg.locator('.licao.aberta').count(), 'ainda_no_app': pg.url.startswith(URL.split('#')[0])}
 

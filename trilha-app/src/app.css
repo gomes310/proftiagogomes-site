@@ -244,3 +244,82 @@ html, body { overflow-x: clip; }
 .missoes small, .unidades-prog small { font-size: 14px; }
 :root { --azul-texto: #1D5BB8; }
 .nav-inferior a.ativo, .nav-lateral a.ativo svg { color: var(--azul-texto); }
+
+/* ===== v2.2: Duolingo + Rosetta Stone ===== */
+.lumi { display: block; flex: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .lumi-festa { animation: lumi-pula .6s ease-out 2; }
+  .lumi-pensando { animation: lumi-balanca 2.4s ease-in-out infinite; transform-origin: 50% 90%; }
+  @keyframes lumi-pula { 40% { transform: translateY(-10px) rotate(-4deg); } }
+  @keyframes lumi-balanca { 50% { transform: rotate(-5deg); } }
+}
+.fim-lumi { margin: 0 auto 4px; }
+.placar { grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)) !important; }
+
+/* imersão: exemplos antes da regra */
+.imersao { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; margin: 8px 0 16px; }
+.exemplos { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.exemplos li { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 8px; align-items: center; background: var(--folha); border: 2px solid var(--linha); border-radius: 12px; padding: 10px 12px; font-size: 16px; line-height: 1.35; }
+.exemplos li b { color: var(--tinta-2); }
+.exemplos li strong { color: var(--verde); }
+@media (prefers-reduced-motion: no-preference) { .exemplos li { animation: entra .35s ease-out both; } }
+@media (max-width: 420px) { .imersao { grid-template-columns: 1fr; } .imersao-lumi { display: none; } }
+
+/* ligue os pares */
+.pares { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.pares-col { display: grid; gap: 10px; align-content: start; }
+.par { min-height: 56px; padding: 8px 10px; border: 2px solid var(--linha); border-bottom-width: 4px; border-radius: 12px; background: var(--folha); color: var(--tinta); font: 600 16px var(--fonte); line-height: 1.25; cursor: pointer; }
+.par.sel { border-color: var(--azul); background: var(--azul-claro); }
+.par.feito { border-color: #b9dcc8; background: var(--verde-claro); color: var(--verde); opacity: .75; cursor: default; }
+.par.errado { border-color: var(--erro); background: var(--erro-claro); }
+@media (prefers-reduced-motion: no-preference) { .par.errado { animation: treme .3s; } @keyframes treme { 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } } }
+.pares-ok { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--verde); margin-top: 14px; }
+
+/* prática */
+.praticar { padding-top: 18px; display: flex; flex-direction: column; gap: 18px; }
+.praticar h1 { font-size: clamp(28px, 4.4vw, 40px); margin: 0; }
+.pratica-card { display: grid; grid-template-columns: 56px 1fr; gap: 6px 14px; align-items: center; }
+.pratica-card > .btn { grid-column: 1 / -1; }
+.pratica-ico { font-size: 34px; width: 56px; height: 56px; border-radius: 16px; background: var(--papel); display: grid; place-items: center; }
+.pratica-txt h2 { margin: 0 0 4px; }
+.pratica-txt p { margin: 0; color: var(--tinta-2); font-size: 16px; }
+.pratica-txt p strong { color: var(--tinta); }
+.destaque-rev { border-color: var(--verde); }
+.vazio { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+.caderno { display: grid; gap: 8px; }
+.caderno-item { border: 2px solid var(--linha); border-radius: 12px; background: var(--folha); }
+.caderno-item summary { cursor: pointer; padding: 12px 14px; min-height: 48px; display: flex; align-items: center; font-weight: 700; list-style: none; }
+.caderno-item summary::after { content: '+'; margin-left: auto; font-size: 22px; color: var(--tinta-2); }
+.caderno-item[open] summary::after { content: '−'; }
+.caderno-item ul { margin: 0; padding: 0 16px 6px 34px; }
+.caderno-item li { margin-bottom: 6px; }
+.dica-prova { margin: 0 14px 14px; background: #FFF9DD; border-radius: 10px; padding: 10px 12px; font-size: 15px; }
+.caderno-item.bloqueado { padding: 12px 14px; display: flex; flex-direction: column; color: var(--tinta-2); background: var(--papel); }
+.caderno-item.bloqueado small { font-size: 14px; }
+.loja-item { display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center; }
+.loja-item p { margin: 2px 0 0; color: var(--tinta-2); font-size: 15px; }
+@media (max-width: 480px) { .loja-item { grid-template-columns: 56px 1fr; } .loja-item .btn { grid-column: 1 / -1; } }
+
+/* sessão de prática: relógio */
+.relogio { font-weight: 700; font-variant-numeric: tabular-nums; min-width: 56px; text-align: right; }
+.trilho.tempo span { background: var(--azul); transition: width 1s linear; }
+.trilho.tempo.acabando span { background: var(--erro); }
+
+/* status: moedas e escudo */
+.chips-dir { display: flex; gap: 8px; }
+a.chip { text-decoration: none; color: inherit; }
+.mini-escudo { font-size: 12px; margin-left: 2px; }
+
+/* calendário da ofensiva */
+.cal-nav { display: flex; align-items: center; gap: 6px; font-weight: 700; text-transform: capitalize; }
+.cal-nav .fechar[disabled] { opacity: .3; }
+.calendario { list-style: none; margin: 8px 0 10px; padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; text-align: center; }
+.calendario li { aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; font-size: 14px; font-variant-numeric: tabular-nums; color: var(--tinta-2); }
+.calendario li.sem { aspect-ratio: auto; font-weight: 700; font-size: 13px; }
+.calendario li:nth-child(8) { grid-column-start: var(--inicio); }
+.calendario li.estudou { background: #FDE7D2; color: #9A3412; font-weight: 700; }
+.calendario li.escudo { background: var(--azul-claro); }
+.calendario li.hoje { outline: 2px solid var(--tinta); outline-offset: -2px; }
+.chips-dir .chip { min-height: 44px; }
+.grafico text { font-size: 13px; }
+.calendario li.sem { font-size: 14px; }

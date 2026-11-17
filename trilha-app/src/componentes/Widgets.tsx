@@ -8,9 +8,12 @@ export function Status() {
   const nivel = nivelDe(e.xp);
   return (
     <div className="status-linha" aria-label="Seu progresso">
-      <span className="chip" title="Dias seguidos estudando"><IconeFogo />{e.ofensiva}<span className="sr">&nbsp;{e.ofensiva === 1 ? 'dia seguido' : 'dias seguidos'}</span></span>
+      <span className="chip" title={'Dias seguidos estudando' + (e.escudos ? ' · ' + e.escudos + ' escudo(s) guardado(s)' : '')}><IconeFogo />{e.ofensiva}{e.escudos > 0 && <span className="mini-escudo" aria-hidden="true">🛡️</span>}<span className="sr">&nbsp;{e.ofensiva === 1 ? 'dia seguido' : 'dias seguidos'}</span></span>
       <div className="nivel-barra"><small>Nível {nivel} · {e.xp} XP</small><div className="trilho" aria-hidden="true"><span style={{ width: (e.xp % XP_NIVEL) / XP_NIVEL * 100 + '%' }} /></div></div>
-      <span className="chip" title="Estrelas conquistadas"><IconeEstrela />{totalEstrelas(e)}<span className="sr">&nbsp;estrelas</span></span>
+      <span className="chips-dir">
+        <span className="chip" title="Estrelas conquistadas"><IconeEstrela />{totalEstrelas(e)}<span className="sr">&nbsp;estrelas</span></span>
+        <a className="chip" href="#/praticar" title="Moedas (use na loja da aba Praticar)"><span aria-hidden="true">🪙</span>{e.moedas}<span className="sr">&nbsp;moedas</span></a>
+      </span>
     </div>
   );
 }
