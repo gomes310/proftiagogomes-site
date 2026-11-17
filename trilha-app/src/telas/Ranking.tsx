@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { buscarRanking, useSessao, ErroApi, type Ranking as R } from '../api';
 import { useEstado } from '../estado';
+import { Selo } from '../componentes/Icones';
 
-const MEDALHA = ['🥇', '🥈', '🥉'];
+const MEDALHA = ['ouro', 'prata', 'bronze'] as const;
 
 function fimDaSemana(iso: string) {
   const fim = new Date(iso);
@@ -49,7 +50,7 @@ export default function Ranking({ irPara }: { irPara: (r: string) => void }) {
             <ol className="lista-ranking" aria-label={'Ranking da semana, ' + dados.total + ' participantes'}>
               {dados.lista.map((l) => (
                 <li key={l.pos + l.apelido} className={(l.eu ? 'eu ' : '') + (l.pos <= 3 ? 'podio' : '')}>
-                  <span className="pos">{l.pos <= 3 ? <span aria-label={l.pos + 'º'}>{MEDALHA[l.pos - 1]}</span> : l.pos}</span>
+                  <span className="pos">{l.pos <= 3 ? <Selo simbolo={l.pos + 'º'} cor={MEDALHA[l.pos - 1]} tamanho={34} rotulo={l.pos + 'º lugar'} /> : l.pos}</span>
                   <span className="avatar" aria-hidden="true">{l.apelido.slice(0, 1).toUpperCase()}</span>
                   <span className="nome">{l.apelido}{l.eu && <small> (você)</small>}</span>
                   <span className="xp">{l.xp} XP</span>

@@ -1,18 +1,19 @@
+import { Icone } from './Icones';
 import { CONQUISTAS, XP_NIVEL, missoesDoDia, mudarMeta, nivelDe, totalEstrelas, useEstado, xpHoje } from '../estado';
 
-export const IconeFogo = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E8590C" d="M12 2s5 4.6 5 9.6A5 5 0 0 1 7 11.6C7 9 9 7 9 7s.4 2.6 2.4 3.6C11 6.6 12 2 12 2Zm0 20a7 7 0 0 1-7-7c0-1.4.4-2.7 1-3.8.2 3.7 3 6.8 6 6.8s5.8-3.1 6-6.8c.6 1.1 1 2.4 1 3.8a7 7 0 0 1-7 7Z" /></svg>;
-export const IconeEstrela = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E0B400" d="m12 2 3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.5 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6Z" /></svg>;
+export const IconeFogo = () => <Icone nome="ofensiva" />;
+export const IconeEstrela = () => <Icone nome="estrela" />;
 
 export function Status() {
   const e = useEstado();
   const nivel = nivelDe(e.xp);
   return (
     <div className="status-linha" aria-label="Seu progresso">
-      <span className="chip" title={'Dias seguidos estudando' + (e.escudos ? ' · ' + e.escudos + ' escudo(s) guardado(s)' : '')}><IconeFogo />{e.ofensiva}{e.escudos > 0 && <span className="mini-escudo" aria-hidden="true">🛡️</span>}<span className="sr">&nbsp;{e.ofensiva === 1 ? 'dia seguido' : 'dias seguidos'}</span></span>
+      <span className="chip" title={'Dias seguidos estudando' + (e.escudos ? ' · ' + e.escudos + ' escudo(s) guardado(s)' : '')}><IconeFogo />{e.ofensiva}{e.escudos > 0 && <Icone nome="escudo" tamanho={16} className="mini-escudo" />}<span className="sr">&nbsp;{e.ofensiva === 1 ? 'dia seguido' : 'dias seguidos'}</span></span>
       <div className="nivel-barra"><small>Nível {nivel} · {e.xp} XP</small><div className="trilho" aria-hidden="true"><span style={{ width: (e.xp % XP_NIVEL) / XP_NIVEL * 100 + '%' }} /></div></div>
       <span className="chips-dir">
         <span className="chip" title="Estrelas conquistadas"><IconeEstrela />{totalEstrelas(e)}<span className="sr">&nbsp;estrelas</span></span>
-        <a className="chip" href="#/praticar" title="Moedas (use na loja da aba Praticar)"><span aria-hidden="true">🪙</span>{e.moedas}<span className="sr">&nbsp;moedas</span></a>
+        <a className="chip" href="#/praticar" title="Moedas (use na loja da aba Praticar)"><Icone nome="moeda" />{e.moedas}<span className="sr">&nbsp;moedas</span></a>
       </span>
     </div>
   );
@@ -56,7 +57,7 @@ export function Missoes() {
           const pct = prog / m.alvo;
           return (
             <li key={m.id} className={feita ? 'feita' : ''}>
-              <span className="missao-ico" aria-hidden="true">{feita ? '✅' : '🎯'}</span>
+              <Icone nome={feita ? 'missaoFeita' : 'missao'} tamanho={26} className="missao-ico" />
               <div>
                 <p>{m.titulo} <small>+{m.bonus} XP</small></p>
                 <div className="trilho fino" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(pct * 100)} aria-label={m.titulo}><span style={{ width: pct * 100 + '%' }} /></div>

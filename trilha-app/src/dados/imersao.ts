@@ -19,8 +19,8 @@ export const CONTEUDO: ConteudoExtra[] = [
   },
   { // 1 Proposições
     imersao: {
-      exemplos: [['"O Brasil fica na América."', '✅ proposição'], ['"Que horas são?"', '❌ não é'], ['"2 + 2 = 5"', '✅ proposição'], ['"Feche a janela!"', '❌ não é']],
-      pergunta: 'O que as frases marcadas com ✅ têm em comum?',
+      exemplos: [['"O Brasil fica na América."', 'é proposição'], ['"Que horas são?"', 'não é'], ['"2 + 2 = 5"', 'é proposição'], ['"Feche a janela!"', 'não é']],
+      pergunta: 'O que as frases que são proposição têm em comum?',
       opcoes: ['Dá para dizer se são verdadeiras ou falsas', 'São todas verdadeiras', 'São frases curtas'],
       c: 0, e: 'Proposição é a frase que pode ser julgada V ou F, mesmo que seja falsa, como "2 + 2 = 5". Perguntas e ordens não podem ser julgadas.'
     },
@@ -69,7 +69,7 @@ export const CONTEUDO: ConteudoExtra[] = [
   },
   { // 6 Implicações
     imersao: {
-      exemplos: [['Se chove, molha. Choveu.', '✅ Logo, molhou.'], ['Se chove, molha. Não molhou.', '✅ Logo, não choveu.'], ['Se chove, molha. Molhou.', '❌ Nada se conclui.']],
+      exemplos: [['Se chove, molha. Choveu.', 'Logo, molhou.'], ['Se chove, molha. Não molhou.', 'Logo, não choveu.'], ['Se chove, molha. Molhou.', 'Nada se conclui.']],
       pergunta: 'Em "se p, então q", o que garante uma conclusão?',
       opcoes: ['Afirmar p ou negar q', 'Afirmar q', 'Negar p'],
       c: 0, e: 'Afirmar p dá q (modus ponens). Negar q dá não p (modus tollens). Afirmar q ou negar p não garante nada.'

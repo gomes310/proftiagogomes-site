@@ -10,6 +10,8 @@ import { vibrar } from '../nativo';
 import { CONTEUDO } from '../dados/imersao';
 import Pares from '../componentes/Pares';
 import Lumi from '../componentes/Lumi';
+import { Icone, Selo } from '../componentes/Icones';
+import { SIMBOLO_UNIDADE } from '../estado';
 
 type Passo = { tipo: 'imersao' } | { tipo: 'ideia'; t: string; k: number } | { tipo: 'lab' } | { tipo: 'pares' } | { tipo: 'exemplo' } | { tipo: 'vf' };
 type Item = { q: Questao; tentativa: number };
@@ -176,7 +178,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
     const compart = encodeURIComponent((u ? 'Ganhei o selo "' + u.selo + '" na' : 'Estou fazendo a') + ' Trilha do RLM, grátis, do Prof. Tiago Gomes: https://proftiagogomes.com.br/trilha/');
     corpo = <div className="fim">
       <Lumi humor={r.estrelas === 3 ? 'festa' : 'feliz'} tamanho={88} className="fim-lumi" />
-      <p className="grande" aria-label={r.estrelas + ' de 3 estrelas'}>{[0, 1, 2].map((i) => <span key={i} className={i < r.estrelas ? '' : 'apagada'}>★</span>)}</p>
+      <p className="grande" role="img" aria-label={r.estrelas + ' de 3 estrelas'}>{[0, 1, 2].map((i) => <Icone key={i} nome="estrela" tamanho={52} className={i < r.estrelas ? '' : 'apagada'} />)}</p>
       <h2 id="licao-titulo">{r.estrelas === 3 ? 'Lição perfeita!' : 'Lição concluída!'}</h2>
       <div className="placar">
         <div><b>+{r.ganho + r.bonusMissoes}</b><small>XP</small></div>
@@ -186,13 +188,13 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
       </div>
       {(r.nivelDepois > r.nivelAntes || r.metaBatida || r.missoesConcluidas.length > 0 || r.novasConquistas.length > 0) && (
         <ul className="ganhos" aria-label="O que você ganhou">
-          {r.nivelDepois > r.nivelAntes && <li className="destaque">⬆️ Nível {r.nivelDepois}!</li>}
-          {r.metaBatida && <li>🎯 Meta do dia batida</li>}
-          {r.missoesConcluidas.map((m) => <li key={m.id}>✅ {m.titulo} <small>+{m.bonus} XP</small></li>)}
-          {r.novasConquistas.map((c) => <li key={c.id}>{c.icone} {c.nome}</li>)}
+          {r.nivelDepois > r.nivelAntes && <li className="destaque"><Icone nome="nivel" tamanho={20} /> Nível {r.nivelDepois}!</li>}
+          {r.metaBatida && <li><Icone nome="meta" tamanho={20} /> Meta do dia batida</li>}
+          {r.missoesConcluidas.map((m) => <li key={m.id}><Icone nome="missaoFeita" tamanho={20} /> {m.titulo} <small>+{m.bonus} XP</small></li>)}
+          {r.novasConquistas.map((c) => <li key={c.id}><Selo simbolo={c.simbolo} cor={c.cor} tamanho={22} /> {c.nome}</li>)}
         </ul>
       )}
-      {u && <div className="conquista"><strong>🏅 Selo conquistado: {u.selo}</strong>{APP ? <p>Você fechou a {u.nome.split(' · ')[0]}. Siga para a próxima unidade!</p> : <><p>Você fechou a {u.nome.split(' · ')[0]}. Quer se aprofundar? O Guia do RLM tem a teoria completa e muitas questões resolvidas.</p><a className="btn btn-guia" href="https://proftiagogomes.com.br/guia/" target="_blank" rel="noopener">Conhecer o Guia do RLM</a></>}</div>}
+      {u && <div className="conquista"><strong className="selo-titulo"><Selo simbolo={SIMBOLO_UNIDADE[r.unidadeFechada!]} cor="ouro" tamanho={30} /> Selo conquistado: {u.selo}</strong>{APP ? <p>Você fechou a {u.nome.split(' · ')[0]}. Siga para a próxima unidade!</p> : <><p>Você fechou a {u.nome.split(' · ')[0]}. Quer se aprofundar? O Guia do RLM tem a teoria completa e muitas questões resolvidas.</p><a className="btn btn-guia" href="https://proftiagogomes.com.br/guia/" target="_blank" rel="noopener">Conhecer o Guia do RLM</a></>}</div>}
       <p><a href={'https://wa.me/?text=' + compart} target="_blank" rel="noopener">Compartilhar no WhatsApp</a></p>
     </div>;
   }
@@ -201,7 +203,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
     : etapa === 'aprenda' && p.tipo === 'vf' && vf !== null ? (vf === E.vf.v ? ' acerto' : ' erro')
       : etapa === 'aprenda' && p.tipo === 'imersao' && imer !== null ? (imer === C.imersao.c ? ' acerto' : ' erro') : '';
   let retorno: React.ReactNode = null;
-  if (etapa === 'questao' && verificado) retorno = <><strong>{verificado.ok ? (combo >= 2 ? '🔥 ' + combo + ' seguidas!' : elogio.current) : <>Resposta certa: <Html h={verificado.item.q.o[verificado.item.q.c]} /></>}</strong><Html h={verificado.item.q.e} /></>;
+  if (etapa === 'questao' && verificado) retorno = <><strong>{verificado.ok ? (combo >= 2 ? <><Icone nome="ofensiva" tamanho={20} /> {combo} seguidas!</> : elogio.current) : <>Resposta certa: <Html h={verificado.item.q.o[verificado.item.q.c]} /></>}</strong><Html h={verificado.item.q.e} /></>;
   else if (etapa === 'aprenda' && p.tipo === 'imersao' && imer !== null) retorno = <><strong>{imer === C.imersao.c ? 'Você descobriu a regra!' : 'Quase! Veja de novo os exemplos.'}</strong>{C.imersao.e}</>;
   else if (etapa === 'aprenda' && p.tipo === 'vf' && vf !== null) retorno = <><strong>{vf === E.vf.v ? 'Isso! Agora é hora de praticar.' : 'Quase! A resposta é ' + (E.vf.v ? 'verdadeiro' : 'falso') + '.'}</strong><Html h={E.vf.e} /></>;
   else if (etapa === 'aprenda' && p.tipo === 'exemplo' && !revelado) retorno = <span className="dica-base">Tente responder de cabeça antes de abrir.</span>;
@@ -211,8 +213,8 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
       <div className="licao-topo">
         <button className="fechar" type="button" onClick={onFechar} aria-label="Sair da lição">×</button>
         <div className="trilho" aria-hidden="true"><span style={{ width: progresso * 100 + '%' }} /></div>
-        {combo >= 2 && etapa === 'questao' && <span className="combo" aria-label={combo + ' acertos seguidos'}>🔥 {combo}</span>}
-        <button className="fechar som" type="button" aria-pressed={sons} aria-label={sons ? 'Desligar sons' : 'Ligar sons'} onClick={() => setSons(alternarSom())}>{sons ? '🔊' : '🔇'}</button>
+        {combo >= 2 && etapa === 'questao' && <span className="combo" aria-label={combo + ' acertos seguidos'}><Icone nome="ofensiva" tamanho={22} />{combo}</span>}
+        <button className="fechar som" type="button" aria-pressed={sons} aria-label={sons ? 'Desligar sons' : 'Ligar sons'} onClick={() => setSons(alternarSom())}><Icone nome={sons ? 'som' : 'semSom'} /></button>
       </div>
       <div className="licao-corpo"><div className="wrap" key={etapa + passo + fila.length}><div className="cartao">{corpo}</div></div></div>
       <div className={'licao-base' + base}><div className="wrap">

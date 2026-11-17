@@ -147,20 +147,22 @@ export function missoesDoDia(dia = diaLocal()): Missao[] {
 }
 
 // ---------- conquistas ----------
-export interface Conquista { id: string; nome: string; desc: string; icone: string; ok: (e: Estado) => boolean }
+export interface Conquista { id: string; nome: string; desc: string; simbolo: string; cor: 'ouro' | 'prata' | 'bronze' | 'verde' | 'azul' | 'laranja'; ok: (e: Estado) => boolean }
+// símbolo de cada unidade: conjuntos, conectivos, argumentação (portanto) e raciocínio aplicado
+export const SIMBOLO_UNIDADE = ['∪', '∧', '∴', '#'];
 export const CONQUISTAS: Conquista[] = [
-  { id: 'primeira', nome: 'Primeiro passo', desc: 'Concluiu a primeira lição', icone: '👣', ok: (e) => e.licoesFeitas >= 1 },
-  { id: 'perfeita', nome: 'Gabaritou', desc: 'Fez uma lição sem errar nada', icone: '🎯', ok: (e) => e.perfeitas >= 1 },
-  { id: 'combo5', nome: 'Embalado', desc: 'Acertou 5 seguidas', icone: '⚡', ok: (e) => e.maiorCombo >= 5 },
-  { id: 'combo10', nome: 'Imparável', desc: 'Acertou 10 seguidas', icone: '🚀', ok: (e) => e.maiorCombo >= 10 },
-  { id: 'ofensiva3', nome: 'Pegando o ritmo', desc: '3 dias seguidos estudando', icone: '🔥', ok: (e) => e.maiorOfensiva >= 3 },
-  { id: 'ofensiva7', nome: 'Uma semana firme', desc: '7 dias seguidos estudando', icone: '📅', ok: (e) => e.maiorOfensiva >= 7 },
-  { id: 'xp300', nome: '300 XP', desc: 'Juntou 300 pontos de experiência', icone: '💎', ok: (e) => e.xp >= 300 },
-  ...UNIDADES.map((u, k) => ({ id: 'unidade' + (k + 1), nome: u.selo, desc: 'Fechou a ' + u.nome.split(' · ')[0], icone: '🏅', ok: (e: Estado) => u.licoes.every((i) => e.estrelas[i] != null) })),
-  { id: 'relampago', nome: 'Raio', desc: '10 acertos no desafio relâmpago', icone: '⚡', ok: (e) => e.recordeRelampago >= 10 },
-  { id: 'revisor', nome: 'Memória de elefante', desc: 'Levou 10 questões à caixa 3 da revisão', icone: '🧠', ok: (e) => Object.values(e.srs).filter((v) => v.cx >= 3).length >= 10 },
-  { id: 'trilha', nome: 'Trilha completa', desc: 'Terminou as 11 lições', icone: '🏆', ok: (e) => Object.keys(e.estrelas).length === LICOES.length },
-  { id: 'estrelas', nome: 'Colecionador', desc: 'Todas as lições com 3 estrelas', icone: '⭐', ok: (e) => LICOES.every((_, i) => e.estrelas[i] === 3) }
+  { id: 'primeira', nome: 'Primeiro passo', desc: 'Concluiu a primeira lição', simbolo: '1º', cor: 'verde', ok: (e) => e.licoesFeitas >= 1 },
+  { id: 'perfeita', nome: 'Gabaritou', desc: 'Fez uma lição sem errar nada', simbolo: '≡', cor: 'ouro', ok: (e) => e.perfeitas >= 1 },
+  { id: 'combo5', nome: 'Embalado', desc: 'Acertou 5 seguidas', simbolo: '⇒', cor: 'azul', ok: (e) => e.maiorCombo >= 5 },
+  { id: 'combo10', nome: 'Imparável', desc: 'Acertou 10 seguidas', simbolo: '∞', cor: 'azul', ok: (e) => e.maiorCombo >= 10 },
+  { id: 'ofensiva3', nome: 'Pegando o ritmo', desc: '3 dias seguidos estudando', simbolo: '3d', cor: 'laranja', ok: (e) => e.maiorOfensiva >= 3 },
+  { id: 'ofensiva7', nome: 'Uma semana firme', desc: '7 dias seguidos estudando', simbolo: '7d', cor: 'laranja', ok: (e) => e.maiorOfensiva >= 7 },
+  { id: 'xp300', nome: '300 XP', desc: 'Juntou 300 pontos de experiência', simbolo: 'Σ', cor: 'azul', ok: (e) => e.xp >= 300 },
+  ...UNIDADES.map((u, k) => ({ id: 'unidade' + (k + 1), nome: u.selo, desc: 'Fechou a ' + u.nome.split(' · ')[0], simbolo: SIMBOLO_UNIDADE[k], cor: 'prata' as const, ok: (e: Estado) => u.licoes.every((i) => e.estrelas[i] != null) })),
+  { id: 'relampago', nome: 'Raio', desc: '10 acertos no desafio relâmpago', simbolo: '↯', cor: 'ouro', ok: (e) => e.recordeRelampago >= 10 },
+  { id: 'revisor', nome: 'Memória de elefante', desc: 'Levou 10 questões à caixa 3 da revisão', simbolo: '↻', cor: 'verde', ok: (e) => Object.values(e.srs).filter((v) => v.cx >= 3).length >= 10 },
+  { id: 'trilha', nome: 'Trilha completa', desc: 'Terminou as 11 lições', simbolo: '∀', cor: 'ouro', ok: (e) => Object.keys(e.estrelas).length === LICOES.length },
+  { id: 'estrelas', nome: 'Colecionador', desc: 'Todas as lições com 3 estrelas', simbolo: '★', cor: 'ouro', ok: (e) => LICOES.every((_, i) => e.estrelas[i] === 3) }
 ];
 
 // ---------- eventos ----------

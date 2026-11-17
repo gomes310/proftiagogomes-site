@@ -3,6 +3,7 @@ import { LICOES, UNIDADES } from '../dados/licoes';
 import { CONQUISTAS, XP_NIVEL, mudarMeta, nivelDe, totalEstrelas, ultimos7, useEstado } from '../estado';
 import { apagarConta, mudarApelido, sair, useSessao, ErroApi } from '../api';
 import { IconeEstrela, IconeFogo, Meta, Missoes } from '../componentes/Widgets';
+import { Icone, Selo } from '../componentes/Icones';
 import { APP } from '../plataforma';
 import { lerLembrete, salvarLembrete } from '../nativo';
 
@@ -53,7 +54,7 @@ function Calendario() {
     const d = ano + '-' + p(mes + 1) + '-' + p(k + 1);
     const estudou = (e.xpDia[d] || 0) > 0, escudo = e.diasEscudo.includes(d);
     if (estudou) estudados++;
-    return <li key={d} className={(estudou ? 'estudou' : escudo ? 'escudo' : '') + (d === hojeS ? ' hoje' : '')} aria-label={(k + 1) + (estudou ? ', estudou' : escudo ? ', protegido por escudo' : '')}>{escudo && !estudou ? '🛡️' : k + 1}</li>;
+    return <li key={d} className={(estudou ? 'estudou' : escudo ? 'escudo' : '') + (d === hojeS ? ' hoje' : '')} aria-label={(k + 1) + (estudou ? ', estudou' : escudo ? ', protegido por escudo' : '')}>{escudo && !estudou ? <Icone nome="escudo" tamanho={18} /> : k + 1}</li>;
   });
   return (
     <section className="card" aria-labelledby="cal-t">
@@ -69,7 +70,7 @@ function Calendario() {
         {DIAS.map((d) => <li key={d} className="sem" aria-hidden="true">{d.slice(0, 1).toUpperCase()}</li>)}
         {celulas}
       </ol>
-      <p className="nota">{estudados} {estudados === 1 ? 'dia estudado' : 'dias estudados'} em {MESES[mes]}{e.escudos ? ' · 🛡️ ' + e.escudos + ' escudo(s) guardado(s)' : ''}.</p>
+      <p className="nota">{estudados} {estudados === 1 ? 'dia estudado' : 'dias estudados'} em {MESES[mes]}{e.escudos ? ' · ' + e.escudos + ' escudo(s) guardado(s)' : ''}.</p>
     </section>
   );
 }
@@ -152,9 +153,9 @@ export default function Painel({ irPara }: { irPara: (r: string) => void }) {
 
       <div className="kpis">
         <div className="card kpi"><IconeFogo /><b>{e.ofensiva}</b><small>{e.ofensiva === 1 ? 'dia seguido' : 'dias seguidos'}<br />recorde {e.maiorOfensiva}</small></div>
-        <div className="card kpi"><span className="kpi-ico" aria-hidden="true">⚡</span><b>{e.xp}</b><small>XP total<br />nível {nivel}</small></div>
+        <div className="card kpi"><Icone nome="xp" /><b>{e.xp}</b><small>XP total<br />nível {nivel}</small></div>
         <div className="card kpi"><IconeEstrela /><b>{totalEstrelas(e)}</b><small>de {LICOES.length * 3} estrelas</small></div>
-        <div className="card kpi"><span className="kpi-ico" aria-hidden="true">🎯</span><b>{precisao === null ? '—' : precisao + '%'}</b><small>de acertos<br />{e.respostas} respostas</small></div>
+        <div className="card kpi"><Icone nome="precisao" /><b>{precisao === null ? '—' : precisao + '%'}</b><small>de acertos<br />{e.respostas} respostas</small></div>
       </div>
 
       <div className="so-celular"><Meta /><Missoes /></div>
@@ -181,7 +182,7 @@ export default function Painel({ irPara }: { irPara: (r: string) => void }) {
             const est = u.licoes.reduce((s, i) => s + (e.estrelas[i] || 0), 0);
             return (
               <li key={u.nome}>
-                <div><strong>{u.nome.split(' · ')[1]}</strong><small>{n}/{u.licoes.length} lições · {est}/{u.licoes.length * 3} ★</small></div>
+                <div><strong>{u.nome.split(' · ')[1]}</strong><small>{n}/{u.licoes.length} lições · {est}/{u.licoes.length * 3} estrelas</small></div>
                 <div className="trilho fino" aria-hidden="true"><span style={{ width: (n / u.licoes.length) * 100 + '%' }} /></div>
               </li>
             );
@@ -196,7 +197,7 @@ export default function Painel({ irPara }: { irPara: (r: string) => void }) {
             const ganha = e.conquistas[c.id];
             return (
               <li key={c.id} className={ganha ? 'ganha' : ''}>
-                <span className="medalha" aria-hidden="true">{ganha ? c.icone : '🔒'}</span>
+                <span className="medalha">{ganha ? <Selo simbolo={c.simbolo} cor={c.cor} tamanho={44} /> : <Selo simbolo="?" cor="cinza" tamanho={44} />}</span>
                 <strong>{c.nome}</strong>
                 <small>{c.desc}{ganha ? ' · ' + ganha.split('-').reverse().join('/') : ''}</small>
               </li>

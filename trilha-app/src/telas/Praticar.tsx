@@ -4,6 +4,7 @@ import { LICOES } from '../dados/licoes';
 import { CONTEUDO } from '../dados/imersao';
 import { PRECO_ESCUDO, comprarEscudo, questoesParaRevisar, useEstado } from '../estado';
 import Lumi from '../componentes/Lumi';
+import { Icone } from '../componentes/Icones';
 import { som } from '../som';
 
 function sortear<T>(a: T[], n: number) { const r = [...a]; for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; } return r.slice(0, n); }
@@ -32,7 +33,7 @@ export default function Praticar({ iniciar, irPara }: { iniciar: (tipo: 'revisao
       <h1>Praticar</h1>
 
       <section className="card pratica-card destaque-rev" aria-labelledby="rev-t">
-        <div className="pratica-ico" aria-hidden="true">🧠</div>
+        <div className="pratica-ico"><Icone nome="revisao" tamanho={32} /></div>
         <div className="pratica-txt">
           <h2 id="rev-t">Revisão inteligente</h2>
           {pendentes.length
@@ -45,7 +46,7 @@ export default function Praticar({ iniciar, irPara }: { iniciar: (tipo: 'revisao
       </section>
 
       <section className="card pratica-card" aria-labelledby="rel-t">
-        <div className="pratica-ico" aria-hidden="true">⚡</div>
+        <div className="pratica-ico"><Icone nome="relampago" tamanho={32} /></div>
         <div className="pratica-txt">
           <h2 id="rel-t">Desafio relâmpago</h2>
           <p>60 segundos para acertar o máximo de questões das lições que você já fez. {e.recordeRelampago ? <>Seu recorde: <strong>{e.recordeRelampago}</strong>.</> : 'Defina seu primeiro recorde!'}</p>
@@ -54,12 +55,12 @@ export default function Praticar({ iniciar, irPara }: { iniciar: (tipo: 'revisao
       </section>
 
       <section className="card" aria-labelledby="cad-t">
-        <h2 id="cad-t">📒 Caderno de regras</h2>
+        <h2 id="cad-t" className="com-icone"><Icone nome="caderno" tamanho={26} /> Caderno de regras</h2>
         <p className="nota">O resumo de cada lição fica aqui depois que você a conclui. Ótimo para revisar antes da prova.</p>
         <div className="caderno">
           {LICOES.map((l, i) => {
             const livre = e.estrelas[i] != null;
-            if (!livre) return <div key={i} className="caderno-item bloqueado"><span>🔒 {i + 1}. {l.titulo}</span><small>Conclua a lição para liberar</small></div>;
+            if (!livre) return <div key={i} className="caderno-item bloqueado"><span className="com-icone"><Icone nome="cadeado" tamanho={20} /> {i + 1}. {l.titulo}</span><small>Conclua a lição para liberar</small></div>;
             const c = CONTEUDO[i].caderno;
             return (
               <details key={i} className="caderno-item">
@@ -73,15 +74,15 @@ export default function Praticar({ iniciar, irPara }: { iniciar: (tipo: 'revisao
       </section>
 
       <section className="card loja" aria-labelledby="loja-t">
-        <div className="card-cab"><h2 id="loja-t">Loja</h2><span className="chip" aria-label={e.moedas + ' moedas'}>🪙 {e.moedas}</span></div>
+        <div className="card-cab"><h2 id="loja-t" className="com-icone"><Icone nome="loja" tamanho={26} /> Loja</h2><span className="chip" aria-label={e.moedas + ' moedas'}><Icone nome="moeda" />{e.moedas}</span></div>
         <div className="loja-item">
-          <span className="pratica-ico" aria-hidden="true">🛡️</span>
+          <span className="pratica-ico"><Icone nome="escudo" tamanho={32} /></span>
           <div className="pratica-txt">
             <strong>Escudo de ofensiva</strong>
             <p>Protege sua ofensiva se você ficar um dia sem estudar. Você tem <strong>{e.escudos} de 2</strong>.</p>
           </div>
           <button type="button" className="btn" disabled={e.escudos >= 2} onClick={() => { const m = comprarEscudo(); setMsgLoja(m || 'Escudo comprado! Ele é usado sozinho se você faltar um dia.'); som(m ? 'erro' : 'certo'); }}>
-            {e.escudos >= 2 ? 'Máximo' : 'Comprar · 🪙 ' + PRECO_ESCUDO}
+            {e.escudos >= 2 ? 'Máximo' : <>Comprar · <Icone nome="moeda" tamanho={20} /> {PRECO_ESCUDO}</>}
           </button>
         </div>
         {msgLoja && <p className="nota" role="status">{msgLoja}</p>}

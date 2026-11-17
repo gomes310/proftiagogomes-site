@@ -328,3 +328,21 @@ a.chip { text-decoration: none; color: inherit; }
 .bv-base { margin-bottom: auto; padding-top: 20px; }
 .bv-ilus { margin-top: 0; }
 @media (max-height: 700px) { .bv-corpo { margin-top: 0; } }
+
+/* ===== Ícones autorais ===== */
+.ic { display: inline-block; flex: none; vertical-align: -0.2em; }
+.ic.apagada { filter: grayscale(1); opacity: .3; }
+.selo-hex { display: inline-block; flex: none; vertical-align: middle; }
+.chip { display: inline-flex; align-items: center; gap: 6px; }
+.missao-ico { display: block; }
+.kpi .ic { width: 28px; height: 28px; }
+.pratica-ico .ic { width: 32px; height: 32px; }
+.bv-lista li > .ic { justify-self: center; }
+.combo, .relogio { display: inline-flex; align-items: center; gap: 4px; justify-content: flex-end; }
+.com-icone { display: inline-flex; align-items: center; gap: 8px; }
+.selo { display: inline-flex !important; align-items: center; gap: 6px; }
+.selo-titulo { display: inline-flex; align-items: center; gap: 8px; }
+.ganhos li { display: flex; align-items: center; gap: 8px; }
+.mini-escudo { margin-left: 2px; vertical-align: -3px; }
+.medalha { display: grid; place-items: center; }
+.btn .ic { vertical-align: -5px; }

@@ -3,6 +3,7 @@ import { META_PADRAO, mudarMeta } from '../estado';
 import { APP } from '../plataforma';
 import { salvarLembrete } from '../nativo';
 import { som } from '../som';
+import { Icone } from '../componentes/Icones';
 
 const CHAVE = 'trilha-boas-vindas';
 export const jaViuBoasVindas = () => { try { return localStorage.getItem(CHAVE) === '1'; } catch { return true; } };
@@ -58,9 +59,9 @@ export default function BoasVindas({ onFim, irPara }: { onFim: (comecar: boolean
           <Ilustracao />
           <h1 id="bv-titulo" tabIndex={-1}>Raciocínio Lógico do zero, jogando</h1>
           <ul className="bv-lista">
-            <li><span aria-hidden="true">⏱️</span><div><strong>Lições de 5 minutos</strong><small>Uma ideia por tela, na ordem certa.</small></div></li>
-            <li><span aria-hidden="true">🎮</span><div><strong>Aprenda praticando</strong><small>Experimente, erre sem medo e veja a explicação.</small></div></li>
-            <li><span aria-hidden="true">🏆</span><div><strong>XP, ofensiva e ranking</strong><small>Estude um pouco todo dia e suba na liga.</small></div></li>
+            <li><Icone nome="relogio" tamanho={34} /><div><strong>Lições de 5 minutos</strong><small>Uma ideia por tela, na ordem certa.</small></div></li>
+            <li><Icone nome="venn" tamanho={34} /><div><strong>Aprenda praticando</strong><small>Experimente, erre sem medo e veja a explicação.</small></div></li>
+            <li><Icone nome="xp" tamanho={34} /><div><strong>XP, ofensiva e ranking</strong><small>Estude um pouco todo dia e suba na liga.</small></div></li>
           </ul>
         </>}
         {passo === 1 && <>

@@ -5,6 +5,7 @@ import { registrarPratica, registrarResposta } from '../estado';
 import { som } from '../som';
 import { vibrar } from '../nativo';
 import Lumi from '../componentes/Lumi';
+import { Icone } from '../componentes/Icones';
 import { confete } from '../componentes/confete';
 
 const Html = ({ h, as: Tag = 'span', ...r }: { h: string; as?: 'span' | 'h2'; id?: string }) => <Tag {...r} dangerouslySetInnerHTML={{ __html: h }} />;
@@ -62,7 +63,7 @@ export default function Sessao({ tipo, ids, onFechar }: { tipo: 'revisao' | 'rel
       <div className="licao-topo">
         <button className="fechar" type="button" onClick={onFechar} aria-label="Sair da prática">×</button>
         <div className={'trilho' + (tipo === 'relampago' ? ' tempo' + (resto <= 10 ? ' acabando' : '') : '')} aria-hidden="true"><span style={{ width: progresso * 100 + '%' }} /></div>
-        {tipo === 'relampago' && !fim ? <span className="relogio" aria-live="off">⏱ {resto}s</span> : combo >= 2 ? <span className="combo">🔥 {combo}</span> : <span className="bv-espaco" />}
+        {tipo === 'relampago' && !fim ? <span className="relogio" aria-live="off"><Icone nome="relogio" tamanho={22} />{resto}s</span> : combo >= 2 ? <span className="combo"><Icone nome="ofensiva" tamanho={22} />{combo}</span> : <span className="bv-espaco" />}
       </div>
       <div className="licao-corpo"><div className="wrap" key={fim ? 'fim' : pos}><div className="cartao">
         {fim ? (
