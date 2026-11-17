@@ -20,7 +20,11 @@ export default function Entrar({ irPara }: { irPara: (r: string) => void }) {
   useEffect(() => { if (sessao) irPara('painel'); }, [sessao]);
 
   async function enviarEmail(ev?: React.FormEvent) {
-    ev?.preventDefault(); setErro(''); setOcupado(true);
+    ev?.preventDefault(); setErro('');
+    const em = email.trim();
+    if (!em) { setErro('Digite seu e-mail para receber o código.'); campo.current?.focus(); return; }
+    if (!/^\S+@\S+\.\S+$/.test(em)) { setErro('Esse e-mail parece incompleto. Confira, por exemplo: voce@gmail.com'); campo.current?.focus(); return; }
+    setOcupado(true);
     try {
       const r = await pedirCodigo(email.trim().toLowerCase());
       setNovo(r.novo); setEtapa('codigo'); setEspera(45);
@@ -35,15 +39,15 @@ export default function Entrar({ irPara }: { irPara: (r: string) => void }) {
   return (
     <div className="entrar">
       <div className="card">
-        <h1>{etapa === 'email' ? 'Entrar na Trilha do RLM' : 'Digite o código'}</h1>
+        <h1>{etapa === 'email' ? 'Entre ou crie sua conta grátis' : 'Digite o código'}</h1>
         {etapa === 'email' ? (
-          <form onSubmit={enviarEmail} noValidate={false}>
-            <p className="lead">Sem senha: mandamos um código de 6 dígitos para o seu e-mail. Serve para entrar e para criar a conta.</p>
+          <form onSubmit={enviarEmail} noValidate>
+            <p className="lead">Sem senha: digite seu e-mail e mandamos um código de 6 dígitos. Se você ainda não tem conta, ela é criada nesse momento.</p>
             <label className="campo">Seu e-mail
-              <input ref={campo} type="email" inputMode="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="voce@email.com" />
+              <input ref={campo} type="email" inputMode="email" autoComplete="email" value={email} onChange={(e) => { setEmail(e.target.value); if (erro) setErro(''); }} placeholder="voce@email.com" aria-invalid={!!erro} aria-describedby={erro ? 'erro-email' : undefined} />
             </label>
-            {erro && <p className="msg-erro" role="alert">{erro}</p>}
-            <button className="btn btn-pri largo" disabled={ocupado || !/^\S+@\S+\.\S+$/.test(email.trim())}>{ocupado ? 'Enviando…' : 'Receber código'}</button>
+            {erro && <p className="msg-erro" role="alert" id="erro-email">{erro}</p>}
+            <button className="btn btn-pri largo" disabled={ocupado}>{ocupado ? 'Enviando…' : 'Receber código no e-mail'}</button>
           </form>
         ) : (
           <form onSubmit={confirmar}>

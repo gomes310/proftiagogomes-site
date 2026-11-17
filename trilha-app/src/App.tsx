@@ -82,7 +82,7 @@ export default function App() {
         <aside className="lateral" aria-label="Metas e missões">
           <Meta />
           <Missoes />
-          {!sessao && (
+          {!sessao && rota !== 'entrar' && (
             <section className="card">
               <h2>Salve seu progresso</h2>
               <p className="nota">Com a conta grátis, seu XP vale no ranking e nada se perde se trocar de aparelho.</p>
