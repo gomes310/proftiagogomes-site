@@ -9,7 +9,7 @@ import { APP } from '../plataforma';
 import { vibrar } from '../nativo';
 import { CONTEUDO } from '../dados/imersao';
 import Pares from '../componentes/Pares';
-import Lumi from '../componentes/Lumi';
+import Lumi, { Efe, Ve } from '../componentes/Lumi';
 import { Icone, Selo } from '../componentes/Icones';
 import { SIMBOLO_UNIDADE } from '../estado';
 
@@ -177,7 +177,11 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
     const u = r.unidadeFechada !== null ? UNIDADES[r.unidadeFechada] : null;
     const compart = encodeURIComponent((u ? 'Ganhei o selo "' + u.selo + '" na' : 'Estou fazendo a') + ' Trilha do RLM, grátis, do Prof. Tiago Gomes: https://proftiagogomes.com.br/trilha/');
     corpo = <div className="fim">
-      <Lumi humor={r.estrelas === 3 ? 'festa' : 'feliz'} tamanho={88} className="fim-lumi" />
+      <div className="fim-turma" aria-hidden="true">
+        <Ve humor={r.estrelas >= 2 ? 'festa' : 'feliz'} tamanho={62} className="entra" />
+        <Lumi humor={r.estrelas === 3 ? 'festa' : 'feliz'} tamanho={88} />
+        <Efe humor={r.estrelas === 3 ? 'festa' : 'acenando'} tamanho={62} className="entra atraso" />
+      </div>
       <p className="grande" role="img" aria-label={r.estrelas + ' de 3 estrelas'}>{[0, 1, 2].map((i) => <Icone key={i} nome="estrela" tamanho={52} className={i < r.estrelas ? '' : 'apagada'} />)}</p>
       <h2 id="licao-titulo">{r.estrelas === 3 ? 'Lição perfeita!' : 'Lição concluída!'}</h2>
       <div className="placar">
@@ -218,6 +222,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
       </div>
       <div className="licao-corpo"><div className="wrap" key={etapa + passo + fila.length}><div className="cartao">{corpo}</div></div></div>
       <div className={'licao-base' + base}><div className="wrap">
+        {base && retorno && <span className="reacao" aria-hidden="true">{base === ' acerto' ? <Ve key="ve" humor="festa" tamanho={64} /> : <Efe key="efe" humor="ops" tamanho={64} />}</span>}
         <div className="retorno" aria-live="polite">{retorno}</div>
         <button ref={acaoRef} className="btn btn-ok" type="button" disabled={!acaoOk} onClick={acao}>{acaoTexto}</button>
       </div></div>

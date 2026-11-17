@@ -3,7 +3,8 @@ import { META_PADRAO, mudarMeta } from '../estado';
 import { APP } from '../plataforma';
 import { salvarLembrete } from '../nativo';
 import { som } from '../som';
-import { Icone } from '../componentes/Icones';
+import { Selo } from '../componentes/Icones';
+import Lumi, { Efe, Ve } from '../componentes/Lumi';
 
 const CHAVE = 'trilha-boas-vindas';
 export const jaViuBoasVindas = () => { try { return localStorage.getItem(CHAVE) === '1'; } catch { return true; } };
@@ -17,27 +18,58 @@ const METAS = [
 ];
 const HORAS = [8, 12, 19, 21];
 
-// ilustração própria: trilha em zigue-zague com nós e uma estrela no fim
-const Ilustracao = () => (
-  <svg className="bv-ilus" viewBox="0 0 240 180" aria-hidden="true">
-    <path d="M40 160 C 40 120, 200 130, 200 95 S 60 70, 70 35" fill="none" stroke="#CDD5E1" strokeWidth="10" strokeLinecap="round" strokeDasharray="2 18" />
-    <g><circle cx="40" cy="158" r="20" fill="#135233" /><circle cx="40" cy="152" r="20" fill="#1E7A4C" /><path d="M31 152l6 6 12-12" stroke="#fff" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" /></g>
-    <g><circle cx="200" cy="99" r="22" fill="#C9A92B" /><circle cx="200" cy="93" r="22" fill="#FFD84D" /><text x="200" y="101" textAnchor="middle" fontSize="22" fontWeight="700" fill="#172238">2</text></g>
-    <g><circle cx="70" cy="41" r="20" fill="#95A1B3" /><circle cx="70" cy="35" r="20" fill="#B9C3D2" /><path d="M64 33v-4a6 6 0 0 1 12 0v4m-14 0h16v12h-16z" fill="#fff" /></g>
-    <path d="M165 22l4.5 9.5 10.5 1.4-7.6 7.3 1.9 10.4-9.3-5-9.3 5 1.9-10.4-7.6-7.3 10.5-1.4z" fill="#E0B400" />
-  </svg>
-);
+export const BANCAS = [
+  { id: 'idecan', nome: 'IDECAN', sigla: 'ID', cor: 'azul' },
+  { id: 'cebraspe', nome: 'Cebraspe', sigla: 'CE', cor: 'verde' },
+  { id: 'fgv', nome: 'FGV', sigla: 'FG', cor: 'laranja' },
+  { id: 'fcc', nome: 'FCC', sigla: 'FC', cor: 'prata' },
+  { id: 'vunesp', nome: 'Vunesp', sigla: 'VU', cor: 'bronze' },
+  { id: 'outra', nome: 'Outra ou ainda não sei', sigla: '?', cor: 'ouro' }
+] as const;
+const CHAVE_BANCA = 'trilha-banca';
+export const bancaEscolhida = () => { try { return localStorage.getItem(CHAVE_BANCA) || ''; } catch { return ''; } };
+
+const SIMBOLOS = ['∧', '∨', '¬', '→', '∴', '≡', 'V', 'F', '↔', '∀'];
+
+// texto que aparece letra por letra (leitores de tela recebem tudo de uma vez)
+function Digitando({ texto }: { texto: string }) {
+  const [n, setN] = useState(0);
+  useEffect(() => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { setN(texto.length); return; }
+    setN(0); let i = 0;
+    const t = setInterval(() => { i += 1; setN(i); if (i >= texto.length) clearInterval(t); }, 28);
+    return () => clearInterval(t);
+  }, [texto]);
+  return <><span className="sr">{texto}</span><span className="digita" aria-hidden="true"><span className="digita-fantasma">{texto}</span><span className="digita-vis">{texto.slice(0, n)}</span></span></>;
+}
+
+// a Lumi fala em um balão; o texto do balão é o título da tela
+function Fala({ texto, humor = 'falando', menor }: { texto: string; humor?: 'falando' | 'acenando' | 'feliz' | 'pensando'; menor?: boolean }) {
+  return (
+    <div className={'bv-fala' + (menor ? ' menor' : '')}>
+      <Lumi humor={humor} tamanho={menor ? 70 : 150} className="bv-fala-lumi" />
+      <h1 id="bv-titulo" tabIndex={-1} className="balao balao-esquerda"><Digitando texto={texto} /></h1>
+    </div>
+  );
+}
 
 export default function BoasVindas({ onFim, irPara }: { onFim: (comecar: boolean) => void; irPara: (r: string) => void }) {
+  // 0 abertura · 1 oi · 2 turma · 3 banca · 4 meta · 5 lembrete (só no app)
   const [passo, setPasso] = useState(0);
   const [meta, setMeta] = useState(META_PADRAO);
   const [hora, setHora] = useState(19);
+  const [banca, setBanca] = useState(bancaEscolhida());
   const [aviso, setAviso] = useState('');
-  const total = APP ? 3 : 2;
+  const total = APP ? 5 : 4;
 
   useEffect(() => { document.getElementById('bv-titulo')?.focus(); }, [passo]);
 
   function concluir(comecar: boolean) { marcar(); mudarMeta(meta); onFim(comecar); }
+  function escolherBanca(id: string) {
+    setBanca(id); som('toque');
+    try { localStorage.setItem(CHAVE_BANCA, id); } catch { /* ok */ }
+    setTimeout(() => setPasso(4), 220);
+  }
   async function lembrete(ativar: boolean) {
     if (ativar) {
       const r = await salvarLembrete({ ativo: true, hora });
@@ -46,37 +78,68 @@ export default function BoasVindas({ onFim, irPara }: { onFim: (comecar: boolean
     concluir(true);
   }
 
+  if (passo === 0) {
+    return (
+      <div className="bv bv-abertura" role="dialog" aria-modal="true" aria-labelledby="bv-titulo">
+        <div className="palco" aria-hidden="true">
+          {SIMBOLOS.map((c, k) => <span key={k} className="flutua" style={{ left: [4, 86, 20, 70, 38, 93, 12, 58, 28, 78][k] + '%', animationDelay: -k * 1.7 + 's', fontSize: 18 + (k % 3) * 8 + 'px' }}>{c}</span>)}
+          <div className="palco-chao" />
+          <Ve humor="feliz" tamanho={92} className="palco-ve" />
+          <Lumi humor="acenando" tamanho={118} className="palco-lumi" />
+          <Efe humor="piscando" tamanho={92} className="palco-efe" />
+        </div>
+        <div className="bv-abertura-texto">
+          <h1 id="bv-titulo" tabIndex={-1}>Raciocínio Lógico do zero, jogando.</h1>
+          <p className="lead">Lições de 5 minutos, grátis, feitas para concursos. Aprenda errando sem medo e suba no ranking.</p>
+        </div>
+        <div className="bv-base">
+          <button type="button" className="btn btn-ok largo" onClick={() => { som('toque'); setPasso(1); }}>Começar agora</button>
+          <button type="button" className="btn largo" onClick={() => { marcar(); onFim(false); irPara('entrar'); }}>Já tenho conta</button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bv" role="dialog" aria-modal="true" aria-labelledby="bv-titulo">
       <div className="bv-topo">
-        {passo > 0 ? <button type="button" className="fechar" aria-label="Voltar" onClick={() => setPasso(passo - 1)}>‹</button> : <span className="bv-espaco" />}
-        <div className="bv-pontos" role="img" aria-label={'Passo ' + (passo + 1) + ' de ' + total}>{Array.from({ length: total }, (_, k) => <i key={k} className={k <= passo ? 'on' : ''} />)}</div>
+        <button type="button" className="fechar" aria-label="Voltar" onClick={() => setPasso(passo - 1)}>‹</button>
+        <div className="bv-progresso" role="progressbar" aria-label="Apresentação" aria-valuemin={1} aria-valuemax={total} aria-valuenow={passo}><span style={{ width: (passo / total) * 100 + '%' }} /></div>
         <button type="button" className="link bv-pular" onClick={() => concluir(false)}>Pular</button>
       </div>
 
       <div className="bv-corpo" key={passo}>
-        {passo === 0 && <>
-          <Ilustracao />
-          <h1 id="bv-titulo" tabIndex={-1}>Raciocínio Lógico do zero, jogando</h1>
-          <ul className="bv-lista">
-            <li><Icone nome="relogio" tamanho={34} /><div><strong>Lições de 5 minutos</strong><small>Uma ideia por tela, na ordem certa.</small></div></li>
-            <li><Icone nome="venn" tamanho={34} /><div><strong>Aprenda praticando</strong><small>Experimente, erre sem medo e veja a explicação.</small></div></li>
-            <li><Icone nome="xp" tamanho={34} /><div><strong>XP, ofensiva e ranking</strong><small>Estude um pouco todo dia e suba na liga.</small></div></li>
-          </ul>
+        {passo === 1 && <div className="bv-centro"><Fala humor="acenando" texto="Oi! Eu sou a Lumi, a lâmpada das ideias. Vou te guiar na Trilha do RLM!" /></div>}
+        {passo === 2 && <div className="bv-centro">
+          <Fala texto="Estes são o Vê e o Efe. Um sempre diz a verdade… o outro, nem sempre. Descobrir quem tem razão é com você!" menor />
+          <div className="bv-turma" aria-hidden="true">
+            <figure><Ve humor="acenando" tamanho={104} className="entra" /><figcaption>Vê<small>a Verdade</small></figcaption></figure>
+            <figure><Efe humor="feliz" tamanho={104} className="entra atraso" /><figcaption>Efe<small>o Falso</small></figcaption></figure>
+          </div>
+        </div>}
+        {passo === 3 && <>
+          <Fala texto="Para qual banca você estuda?" humor="pensando" menor />
+          <div className="bv-bancas" role="radiogroup" aria-labelledby="bv-titulo">
+            {BANCAS.map((b) => (
+              <button key={b.id} type="button" role="radio" aria-checked={banca === b.id} className={'bv-banca' + (banca === b.id ? ' sel' : '')} onClick={() => escolherBanca(b.id)}>
+                <Selo simbolo={b.sigla} cor={b.cor} tamanho={44} /><strong>{b.nome}</strong>
+              </button>
+            ))}
+          </div>
         </>}
-        {passo === 1 && <>
-          <h1 id="bv-titulo" tabIndex={-1}>Qual vai ser sua meta diária?</h1>
-          <p className="lead">Dá para mudar quando quiser no painel.</p>
-          <div className="bv-metas" role="radiogroup" aria-label="Meta diária">
+        {passo === 4 && <>
+          <Fala texto="Qual vai ser sua meta diária?" humor="feliz" menor />
+          <div className="bv-metas" role="radiogroup" aria-labelledby="bv-titulo">
             {METAS.map((m) => (
               <button key={m.xp} type="button" role="radio" aria-checked={meta === m.xp} className={'bv-meta' + (meta === m.xp ? ' sel' : '')} onClick={() => { setMeta(m.xp); som('toque'); }}>
                 <strong>{m.nome}{m.rec && <em>recomendada</em>}</strong><span>{m.tempo}</span><b>{m.xp} XP</b>
               </button>
             ))}
           </div>
+          <p className="nota">Dá para mudar quando quiser no painel.</p>
         </>}
-        {passo === 2 && <>
-          <h1 id="bv-titulo" tabIndex={-1}>Quer um lembrete para não perder a ofensiva?</h1>
+        {passo === 5 && <>
+          <Fala texto="Quer um lembrete para não perder a ofensiva?" humor="feliz" menor />
           <p className="lead">Uma notificação por dia, no horário que você escolher.</p>
           <div className="bv-horas" role="radiogroup" aria-label="Horário do lembrete">
             {HORAS.map((h) => <button key={h} type="button" role="radio" aria-checked={hora === h} className={'chip-b' + (hora === h ? ' sel' : '')} onClick={() => setHora(h)}>{h}h</button>)}
@@ -86,12 +149,10 @@ export default function BoasVindas({ onFim, irPara }: { onFim: (comecar: boolean
       </div>
 
       <div className="bv-base">
-        {passo === 0 && <>
-          <button type="button" className="btn btn-ok largo" onClick={() => setPasso(1)}>Começar agora</button>
-          <button type="button" className="btn largo" onClick={() => { marcar(); onFim(false); irPara('entrar'); }}>Já tenho conta</button>
-        </>}
-        {passo === 1 && <button type="button" className="btn btn-ok largo" onClick={() => (APP ? setPasso(2) : concluir(true))}>{APP ? 'Continuar' : 'Começar a 1ª lição'}</button>}
-        {passo === 2 && <>
+        {(passo === 1 || passo === 2) && <button type="button" className="btn btn-ok largo" onClick={() => setPasso(passo + 1)}>Continuar</button>}
+        {passo === 3 && <p className="nota bv-dica">Toque na sua banca para continuar.</p>}
+        {passo === 4 && <button type="button" className="btn btn-ok largo" onClick={() => (APP ? setPasso(5) : concluir(true))}>{APP ? 'Continuar' : 'Começar a 1ª lição'}</button>}
+        {passo === 5 && <>
           <button type="button" className="btn btn-ok largo" onClick={() => void lembrete(true)}>Ativar lembrete às {hora}h</button>
           <button type="button" className="btn largo" onClick={() => void lembrete(false)}>Agora não</button>
         </>}

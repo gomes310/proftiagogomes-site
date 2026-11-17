@@ -49,10 +49,12 @@ with sync_playwright() as p:
     toques[0] = 0
     # caminho mais curto para a 1ª ideia da lição 1
     if pg.locator('.bv').count():
-        auditar_tela(pg, '00-boas-vindas')
-        tocar('.bv-base .btn-ok'); auditar_tela(pg, '00b-meta')
-        tocar('.bv-base .btn-ok')
-        if pg.locator('.bv').count(): auditar_tela(pg, '00c-lembrete'); tocar('.bv-base .btn:not(.btn-ok)')
+        for k in range(8):
+            if not pg.locator('.bv').count(): break
+            auditar_tela(pg, '00-boas-vindas-%d' % k)
+            if pg.locator('.bv-banca').count(): tocar('.bv-banca >> nth=0'); pg.wait_for_timeout(300); continue
+            if pg.locator('.bv-horas').count(): tocar('.bv-base .btn:not(.btn-ok)'); continue
+            tocar('.bv-base .btn-ok')
     else: tocar('.no.atual')
     pg.wait_for_selector('.licao.aberta')
     r['tarefas']['T1 começar a 1ª lição (com boas-vindas)'] = {'toques': toques[0], 'segundos': round(time.time() - t0, 1), 'botao_comecar_visivel_sem_rolar': acima}

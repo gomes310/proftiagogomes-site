@@ -28,6 +28,7 @@ export interface Estado {
   diasEscudo: string[]; // dias salvos por escudo
   srs: Record<string, { cx: number; prox: string; erros: number }>; // revisão espaçada por questão "licao-indice"
   recordeRelampago: number;
+  baus: number[]; // unidades cujo baú já foi aberto
   atualizado: number;
 }
 
@@ -51,7 +52,7 @@ function novo(): Estado {
   return {
     v: 2, xp: 0, estrelas: {}, ofensiva: 0, maiorOfensiva: 0, ultimoDia: null, xpDia: {}, respostas: 0, acertos: 0,
     maiorCombo: 0, perfeitas: 0, licoesFeitas: 0, meta: META_PADRAO,
-    missoes: { dia: diaLocal(), feitas: [], combo: 0, licoes: 0, perfeitas: 0 }, conquistas: {}, moedas: 0, escudos: 0, diasEscudo: [], srs: {}, recordeRelampago: 0, atualizado: 0
+    missoes: { dia: diaLocal(), feitas: [], combo: 0, licoes: 0, perfeitas: 0 }, conquistas: {}, moedas: 0, escudos: 0, diasEscudo: [], srs: {}, recordeRelampago: 0, baus: [], atualizado: 0
   };
 }
 
@@ -81,6 +82,7 @@ export function normalizar(bruto: unknown): Estado {
   if (s.conquistas && typeof s.conquistas === 'object') for (const [k, v] of Object.entries(s.conquistas)) if (typeof v === 'string' && k.length < 40) e.conquistas[k] = v;
   e.atualizado = num(s.atualizado, 1e14);
   e.moedas = num(s.moedas, 1e6); e.escudos = Math.min(2, num(s.escudos, 2)); e.recordeRelampago = num(s.recordeRelampago, 1000);
+  e.baus = Array.isArray(s.baus) ? [...new Set(s.baus.filter((u) => Number.isInteger(u) && u >= 0 && u < UNIDADES.length))] : [];
   e.diasEscudo = Array.isArray(s.diasEscudo) ? s.diasEscudo.filter((d) => typeof d === 'string').slice(-60) : [];
   if (s.srs && typeof s.srs === 'object') for (const [k, v] of Object.entries(s.srs)) {
     if (/^\d+-\d+$/.test(k) && v && typeof v === 'object') e.srs[k] = { cx: Math.min(5, Math.max(1, num(v.cx, 5) || 1)), prox: normalizaDia(v.prox) || diaLocal(), erros: num(v.erros, 1000) };
@@ -277,6 +279,18 @@ export function mesclar(a: Estado, b: Estado): Estado {
   for (const [k, v] of Object.entries(outro.conquistas)) if (!r.conquistas[k]) r.conquistas[k] = v;
   for (const [k, v] of Object.entries(outro.srs)) if (!r.srs[k]) r.srs[k] = v;
   r.recordeRelampago = Math.max(a.recordeRelampago, b.recordeRelampago);
+  r.baus = [...new Set([...a.baus, ...b.baus])];
   r.atualizado = Math.max(a.atualizado, b.atualizado);
   return r;
+}
+
+// Baú da unidade: fica no meio do caminho e abre quando as lições antes dele estão feitas
+export const MOEDAS_BAU = 20;
+export const posicaoBau = (u: number) => Math.ceil(UNIDADES[u].licoes.length / 2) - 1; // abre depois desta posição
+export const bauLiberado = (e: Estado, u: number) => UNIDADES[u].licoes.slice(0, posicaoBau(u) + 1).every((i) => e.estrelas[i] != null);
+export function abrirBau(u: number): number {
+  const e = normalizar(estado);
+  if (e.baus.includes(u) || !bauLiberado(e, u)) return 0;
+  e.baus.push(u); e.moedas += MOEDAS_BAU; e.atualizado = Date.now(); definir(e);
+  return MOEDAS_BAU;
 }
