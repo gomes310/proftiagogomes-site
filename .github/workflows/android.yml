@@ -10,7 +10,7 @@ on:
     paths: ['trilha-app/**', 'app/**', '.github/workflows/android.yml']
 
 permissions:
-  contents: read
+  contents: write  # para publicar o APK de teste em Releases
 
 concurrency:
   group: android
@@ -68,3 +68,12 @@ jobs:
           name: trilha-do-rlm-android
           path: saida/
           retention-days: 30
+
+      - name: Publicar APK de teste (link fixo para baixar no celular)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp saida/TrilhaDoRLM-teste-v*.apk TrilhaDoRLM.apk
+          gh release view app-teste >/dev/null 2>&1 || gh release create app-teste --prerelease --title "Trilha do RLM — versão de teste" --notes "APK para instalar direto no Android e testar antes da Play Store. Atualizado a cada mudança no app."
+          gh release upload app-teste TrilhaDoRLM.apk --clobber
+          gh release edit app-teste --notes "APK para instalar direto no Android e testar antes da Play Store. Versão ${VERSAO_NOME}, gerada em $(date -u +%d/%m/%Y)."
