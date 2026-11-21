@@ -1,0 +1,6031 @@
+{
+ "fonte": "Material do Prof. Tiago Gomes (e-books de questões), conferido questão por questão; resoluções escritas para a Trilha",
+ "questoes": [
+  {
+   "id": "mat-cat-001",
+   "banca": "IADES",
+   "tema": "Proposições categóricas",
+   "enunciado": "Qual das proposições a seguir é a negação da proposição: “Todo policial militar é um exímio atirador.”?",
+   "alternativas": [
+    [
+     "a",
+     "Todo policial militar não é um exímio atirador"
+    ],
+    [
+     "b",
+     "Nenhum policial militar é um exímio atirador"
+    ],
+    [
+     "c",
+     "Pelo menos um policial militar é um exímio atirador"
+    ],
+    [
+     "d",
+     "Nenhum policial militar não é um exímio atirador"
+    ],
+    [
+     "e",
+     "Algum policial militar não é um exímio atirador"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Para negar \"todo\", basta um caso contrário: \"Algum policial militar não é um exímio atirador\". A letra B (\"nenhum\") é o erro clássico: ela exagera a negação."
+  },
+  {
+   "id": "mat-cat-002",
+   "banca": "CEBRASPE",
+   "tema": "Proposições categóricas",
+   "enunciado": "Se a informação “Todas as casas das ruas A e B foram visitadas.” é falsa, então",
+   "alternativas": [
+    [
+     "a",
+     "todas as casas da rua A não foram visitadas ou todas as casas da rua B não foram visitadas"
+    ],
+    [
+     "b",
+     "alguma casa da rua A não foi visitada ou alguma casa da rua B não foi visitada"
+    ],
+    [
+     "c",
+     "pelo menos uma casa da rua A não foi visitada e pelo menos uma casa da rua B não foi visitada"
+    ],
+    [
+     "d",
+     "nenhuma casa da rua A foi visitada e nenhuma casa da rua B foi visitada"
+    ],
+    [
+     "e",
+     "todas as casas da rua A não foram visitadas ou todas as casas da rua B não foram visitadas"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "A frase é \"todas as casas de A foram visitadas E todas as de B foram visitadas\". Negando: troque \"e\" por \"ou\" e negue cada parte (\"todas\" vira \"alguma… não\"). Fica: alguma casa de A não foi visitada OU alguma casa de B não foi visitada."
+  },
+  {
+   "id": "mat-cat-003",
+   "banca": "CEBRASPE",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negação de “Algum agente que trabalha no distrito policial tem tipo sanguíneo igual a O−” é",
+   "alternativas": [
+    [
+     "a",
+     "“Todo agente que trabalha no distrito policial tem tipo sanguíneo igual a O+”"
+    ],
+    [
+     "b",
+     "“Algum agente que trabalha no distrito policial tem tipo sanguíneo diferente de O−”"
+    ],
+    [
+     "c",
+     "“Todo agente que trabalha no distrito policial tem tipo sanguíneo diferente de O−”"
+    ],
+    [
+     "d",
+     "“Algum agente que trabalha no distrito policial tem tipo sanguíneo igual a O+”"
+    ],
+    [
+     "e",
+     "“Todo agente que trabalha no distrito policial tem tipo sanguíneo igual a O−”"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Negação de \"algum… é\" é \"nenhum… é\", que é o mesmo que \"todo… não é\". \"Nenhum agente tem O−\" = \"Todo agente tem tipo sanguíneo diferente de O−\". Os dados sobre tempo de serviço não interessam aqui."
+  },
+  {
+   "id": "mat-cat-004",
+   "banca": "CEBRASPE",
+   "tema": "Proposições categóricas",
+   "enunciado": "Julgue o item a seguir, relativos a raciocínio lógico.\nA negação da afirmação “Todos os amigos de Bianca são naturais de São Paulo” é: “Nenhum amigo de Bianca é natural de São Paulo”.",
+   "alternativas": [
+    [
+     "c",
+     "Certo"
+    ],
+    [
+     "e",
+     "Errado"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Errado. A negação de \"todos são\" é \"pelo menos um não é\": \"Algum amigo de Bianca não é natural de São Paulo\". \"Nenhum\" não é a negação."
+  },
+  {
+   "id": "mat-cat-005",
+   "banca": "IDIB",
+   "tema": "Proposições categóricas",
+   "enunciado": "Assinale a alternativa que apresenta a negação da proposição: “todos os meus concorrentes nesta sala estão olhando para mim neste momento”.",
+   "alternativas": [
+    [
+     "a",
+     "Nenhum dos meus concorrentes nesta sala está olhando para mim neste momento"
+    ],
+    [
+     "b",
+     "Existe pelo menos um dos meus concorrentes nesta sala que está olhando para mim neste momento"
+    ],
+    [
+     "c",
+     "Existe pelo menos um dos meus concorrentes nesta sala que não está olhando para mim neste momento"
+    ],
+    [
+     "d",
+     "Todos os meus concorrentes nesta sala não estão olhando para mim neste momento"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Negar \"todos estão olhando\" é dizer que existe pelo menos um que não está olhando. Letra C."
+  },
+  {
+   "id": "mat-cat-006",
+   "banca": "FGV",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere verdadeira a afirmação:\n“Todo vegetal verde é saudável.” É correto concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Todo vegetal saudável é verde"
+    ],
+    [
+     "b",
+     "Todo vegetal que não é saudável não é verde"
+    ],
+    [
+     "c",
+     "Todo vegetal que não é verde não é saudável"
+    ],
+    [
+     "d",
+     "Alguns vegetais verdes não são saudáveis"
+    ],
+    [
+     "e",
+     "Alguns vegetais que não são saudáveis são verdes"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "\"Todo vegetal verde é saudável\" equivale a \"se é verde, é saudável\". A contrapositiva também vale: \"se não é saudável, não é verde\". Letra B."
+  },
+  {
+   "id": "mat-cat-007",
+   "banca": "IBFC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere a proposição:\n“Todo pesquisador é estudioso.” Assinale a alternativa que não apresenta uma negação da proposição anterior.",
+   "alternativas": [
+    [
+     "a",
+     "Existe algum pesquisador que não é estudioso"
+    ],
+    [
+     "b",
+     "Algum pesquisador não é estudioso"
+    ],
+    [
+     "c",
+     "Pelo menos um pesquisador não é estudioso"
+    ],
+    [
+     "d",
+     "Existe pesquisador que não é estudioso"
+    ],
+    [
+     "e",
+     "Nenhum pesquisador é estudioso"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "As letras A a D dizem a mesma coisa: existe pesquisador que não é estudioso (é a negação). \"Nenhum pesquisador é estudioso\" não é a negação. Letra E."
+  },
+  {
+   "id": "mat-cat-008",
+   "banca": "VUNESP",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere verdadeiras as seguintes afirmações:\nI. Todos os tutores são professores.\nII. Alguns coordenadores são professores.\nA partir dessas afirmações, é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "há coordenadores que são tutores"
+    ],
+    [
+     "b",
+     "há tutores que não são professores"
+    ],
+    [
+     "c",
+     "há professores que são tutores"
+    ],
+    [
+     "d",
+     "todos os coordenadores são professores"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Os tutores estão dentro do círculo dos professores. Se existe tutor, então existe professor que é tutor. As outras não são garantidas: os coordenadores podem estar fora dos tutores. Letra C."
+  },
+  {
+   "id": "mat-cat-009",
+   "banca": "QUADRIX",
+   "tema": "Proposições categóricas",
+   "enunciado": "Em uma orquestra sinfônica, todos os pianistas tocam violino. Alguns coristas são pianistas. Diante do exposto, é possível afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "todos os coristas tocam violino"
+    ],
+    [
+     "b",
+     "nenhum corista toca violino"
+    ],
+    [
+     "c",
+     "todos os coristas que não são pianistas tocam violino"
+    ],
+    [
+     "d",
+     "alguns pianistas são coristas"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Se alguns coristas são pianistas, então alguns pianistas são coristas: o \"algum\" pode ser lido nos dois sentidos. Letra D."
+  },
+  {
+   "id": "mat-cat-010",
+   "banca": "IBADE",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negação da proposição: ´Todas as lâmpadas estão acesas` é:",
+   "alternativas": [
+    [
+     "a",
+     "todas as lâmpadas estão apagadas"
+    ],
+    [
+     "b",
+     "apenas uma das lâmpadas está apagada"
+    ],
+    [
+     "c",
+     "apenas uma das lâmpadas está acesa"
+    ],
+    [
+     "d",
+     "pelo menos uma lâmpada está apagada"
+    ],
+    [
+     "e",
+     "pelo menos uma lâmpada está acesa"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Para \"todas estão acesas\" ser falsa, basta uma apagada: \"pelo menos uma lâmpada está apagada\". Letra D."
+  },
+  {
+   "id": "mat-cat-011",
+   "banca": "IBADE",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere as seguintes proposições:\n- Vila Velha é uma cidade localizada no Espírito Santo.\n- Todo morador de Vila Velha gosta de praia.\n- João não gosta de praia.\nPode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "João mora no Espírito Santo"
+    ],
+    [
+     "b",
+     "João não mora em Vila Velha"
+    ],
+    [
+     "c",
+     "João gosta de cachoeira"
+    ],
+    [
+     "d",
+     "João não mora no Espírito Santo"
+    ],
+    [
+     "e",
+     "João mora em Vila Velha"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Todo morador de Vila Velha gosta de praia. João não gosta, então ele não pode estar no círculo dos moradores de Vila Velha. Mas pode morar em outra cidade do Espírito Santo. Letra B."
+  },
+  {
+   "id": "mat-cat-013",
+   "banca": "FCC",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negativa da afirmação \"Todos os homens carregam todas suas malas\" é",
+   "alternativas": [
+    [
+     "a",
+     "Nenhum homem carrega todas suas malas"
+    ],
+    [
+     "b",
+     "Todos os homens carregam apenas uma de suas malas"
+    ],
+    [
+     "c",
+     "Pelo menos um homem não carrega nenhuma de suas malas"
+    ],
+    [
+     "d",
+     "Todos os homens não carregam nenhuma de suas malas"
+    ],
+    [
+     "e",
+     "Pelo menos um homem não carrega todas suas malas"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Negar \"todos carregam todas as malas\" é dizer que pelo menos um homem não carrega todas as suas malas. Letra E. A letra C (\"não carrega nenhuma\") exagera."
+  },
+  {
+   "id": "mat-cat-015",
+   "banca": "IBFC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Uma empresa é especialista na fabricação de três tipos de produtos, eles aqui serão chamados de tipo A, tipo B e tipo C. Considere que \"Algum B é C\", que \"Algum A é B\" e \"Nenhum C é A\" e assinale a alternativa correta.",
+   "alternativas": [
+    [
+     "a",
+     "\"Algum produto do tipo A é também do tipo C\" é uma afirmação correta"
+    ],
+    [
+     "b",
+     "\"Algum produto do tipo C não é do tipo B\" é uma afirmação falsa"
+    ],
+    [
+     "c",
+     "\"Algum produto do tipo B não é do tipo A\" é uma afirmação correta"
+    ],
+    [
+     "d",
+     "\"Todo produto do tipo A não é do tipo C\" é uma afirmação falsa"
+    ],
+    [
+     "e",
+     "\"Nenhum produto do tipo B é do tipo C\" é uma afirmação correta"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Os B que são C não podem ser A, porque nenhum C é A. Como existe B que é C, existe B que não é A. Letra C."
+  },
+  {
+   "id": "mat-cat-016",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere as seguintes proposições verdadeiras:\nI. Todo eletricista estuda física.\nII. Algumas pessoas que estudam matemática também estudam física.\nIII. Maria estuda física.\nDisso, pode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Maria pode ser uma eletricista"
+    ],
+    [
+     "b",
+     "Maria certamente é uma eletricista"
+    ],
+    [
+     "c",
+     "Maria certamente não é uma eletricista"
+    ],
+    [
+     "d",
+     "Maria não estudou matemática"
+    ],
+    [
+     "e",
+     "Maria estudou matemática"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Maria estuda física. O círculo dos eletricistas está dentro do círculo de quem estuda física, mas há gente que estuda física e não é eletricista. Então Maria pode ser eletricista, sem certeza. Letra A."
+  },
+  {
+   "id": "mat-cat-018",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negação da proposição “Todos os técnicos de informática são gaúchos” é:",
+   "alternativas": [
+    [
+     "a",
+     "Nenhum técnico de informática é gaúcho"
+    ],
+    [
+     "b",
+     "Os técnicos de informática são gaúchos"
+    ],
+    [
+     "c",
+     "Os gaúchos não são técnicos de informática"
+    ],
+    [
+     "d",
+     "Algum técnico de informática não é gaúcho"
+    ],
+    [
+     "e",
+     "É impossível afirmar qual seja a negação da proposição"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Negação de \"todos são\" é \"algum não é\": \"Algum técnico de informática não é gaúcho\". Letra D."
+  },
+  {
+   "id": "mat-cat-019",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere as seguintes proposições verdadeiras:\nI. Todo L é M.\nII. Alguns N são L.\nIII. João é N.\nDisso, pode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "João certamente é L"
+    ],
+    [
+     "b",
+     "João certamente não é L"
+    ],
+    [
+     "c",
+     "João é M, porém não é L"
+    ],
+    [
+     "d",
+     "João não é M, apenas N"
+    ],
+    [
+     "e",
+     "João pode ser L e M"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "João é N. Alguns N são L, e todo L é M. Nada garante que João está entre os N que são L, mas é possível. Ele pode ser L e M. Letra E."
+  },
+  {
+   "id": "mat-cat-021",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere as seguintes proposições verdadeiras:\nI. Todo motorista também sabe operar máquinas.\nII. Há zeladores que também são motoristas.\nIII. Fagundes é um operador de máquina.\nDisso pode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Fagundes é certamente apenas operador de máquina"
+    ],
+    [
+     "b",
+     "Fagundes certamente não é zelador"
+    ],
+    [
+     "c",
+     "Fagundes certamente não é motorista"
+    ],
+    [
+     "d",
+     "Em hipótese alguma Fagundes é motorista"
+    ],
+    [
+     "e",
+     "Fagundes pode ser motorista e zelador"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Fagundes opera máquinas. Todo motorista opera máquinas, mas nem todo operador é motorista. Então ele pode ser motorista e também zelador, sem certeza. Letra E."
+  },
+  {
+   "id": "mat-cat-022",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere as seguintes proposições verdadeiras:\nI. Todos os fiscais de obra de Imbé sabem matemática.\nII. Alguns fiscais de obra de Imbé gostam de estudar literatura.\nIII. Miguel é um fiscal de obras em Imbé.\nDisso, pode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Miguel gosta de estudar literatura"
+    ],
+    [
+     "b",
+     "Miguel gosta de estudar literatura e sabe matemática"
+    ],
+    [
+     "c",
+     "Miguel certamente não sabe matemática"
+    ],
+    [
+     "d",
+     "Miguel certamente sabe matemática"
+    ],
+    [
+     "e",
+     "Miguel certamente não gosta de estudar literatura"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Miguel é fiscal de obras, e todos os fiscais sabem matemática. Então ele certamente sabe matemática. Sobre literatura, só \"alguns\" gostam: nada é certo. Letra D."
+  },
+  {
+   "id": "mat-cat-024",
+   "banca": "VUNESP",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negação de uma afirmação é uma ferramenta importante em várias áreas.\nVamos supor que seja necessário fazer a negação lógica da seguinte afirmação:\nTodos os envolvidos são culpados e devem ser punidos.\nUma das possibilidades está contida na alternativa:",
+   "alternativas": [
+    [
+     "a",
+     "Existe envolvido inocente e que não deve ser punido"
+    ],
+    [
+     "b",
+     "Nenhum dos envolvidos é culpado ou deve ser punido"
+    ],
+    [
+     "c",
+     "Existe envolvido que não é culpado ou que não deve ser punido"
+    ],
+    [
+     "d",
+     "Todos os envolvidos não são culpados e não devem ser punidos"
+    ],
+    [
+     "e",
+     "Nenhum dos envolvidos não é culpado ou não deve ser punido"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "A frase é \"todos são culpados E devem ser punidos\". Negar \"todos\" dá \"existe um que não…\", e negar o \"e\" dá \"ou\". Fica: existe envolvido que não é culpado ou que não deve ser punido. Letra C."
+  },
+  {
+   "id": "mat-cat-025",
+   "banca": "VUNESP",
+   "tema": "Proposições categóricas",
+   "enunciado": "Em determinado município, alguns engenheiros são professores e todo professor é concursado. Sendo assim, nesse município, é verdade que",
+   "alternativas": [
+    [
+     "a",
+     "todo concursado é engenheiro"
+    ],
+    [
+     "b",
+     "todo engenheiro é concursado"
+    ],
+    [
+     "c",
+     "todo concursado é professor"
+    ],
+    [
+     "d",
+     "não existe professor que é engenheiro"
+    ],
+    [
+     "e",
+     "existe concursado que é engenheiro"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Alguns engenheiros são professores, e todo professor é concursado. Esses engenheiros-professores são concursados. Logo, existe concursado que é engenheiro. Letra E."
+  },
+  {
+   "id": "mat-cat-027",
+   "banca": "AOCP",
+   "tema": "Proposições categóricas",
+   "enunciado": "Se todo funcionário público é concursado e nenhum concursado é autônomo, então é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "todo concursado é um funcionário público"
+    ],
+    [
+     "b",
+     "nenhum concursado é funcionário público"
+    ],
+    [
+     "c",
+     "todo autônomo é concursado"
+    ],
+    [
+     "d",
+     "nenhum funcionário público é autônomo"
+    ],
+    [
+     "e",
+     "todo funcionário público é autônomo"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Funcionário público está dentro de concursado, e concursado não toca em autônomo. Então nenhum funcionário público é autônomo. Letra D."
+  },
+  {
+   "id": "mat-cat-028",
+   "banca": "CEBRASPE",
+   "tema": "Proposições categóricas",
+   "enunciado": "Julgue o item seguinte, relativo a lógica proposicional e a lógica de primeira ordem.\nA negação da proposição “Todas as reuniões devem ser gravadas por mídias digitais” é corretamente expressa por “Nenhuma reunião deve ser gravada por mídias digitais”.",
+   "alternativas": [
+    [
+     "c",
+     "Certo"
+    ],
+    [
+     "e",
+     "Errado"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Errado. A negação de \"todas devem ser gravadas\" é \"alguma reunião não deve ser gravada\". \"Nenhuma\" não é a negação."
+  },
+  {
+   "id": "mat-cat-029",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere as seguintes proposições:\nI. Todo jogador de futebol gosta de ouvir música.\nII. Algumas pessoas que têm veículos importados jogam futebol.\nIII. Marcelo gosta de ouvir música.\nDisso pode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Marcelo pode ser um jogador de futebol"
+    ],
+    [
+     "b",
+     "Marcelo certamente é um jogador de futebol"
+    ],
+    [
+     "c",
+     "Marcelo tem um veículo importado"
+    ],
+    [
+     "d",
+     "Marcelo não tem um veículo importado"
+    ],
+    [
+     "e",
+     "Marcelo joga futebol e tem um veículo importado"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Marcelo gosta de música. Todo jogador gosta de música, mas há quem goste de música sem jogar futebol. Então Marcelo pode ser jogador, sem certeza. Letra A."
+  },
+  {
+   "id": "mat-cat-030",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere as seguintes proposições verdadeiras:\nI. Todos os vigilantes sanitários conhecem a legislação brasileira.\nII. Marco é conhecedor da legislação brasileira.\nDisso pode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Marco é um vigilante sanitário em Sananduva"
+    ],
+    [
+     "b",
+     "Marco também conhece a legislação da argentina"
+    ],
+    [
+     "c",
+     "Marco conhece pouco a legislação brasileira"
+    ],
+    [
+     "d",
+     "Marco pode ser um vigilante sanitário"
+    ],
+    [
+     "e",
+     "Marco certamente é um vigilante sanitário"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Todo vigilante conhece a legislação, mas há quem conheça sem ser vigilante. Marco pode ser vigilante sanitário, sem certeza. Letra D."
+  },
+  {
+   "id": "mat-cat-032",
+   "banca": "VUNESP",
+   "tema": "Proposições categóricas",
+   "enunciado": "Na família de Beltrano, todas as mulheres são guardas civis. Logo, é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "se Fulana não é da família de Beltrano, então ela não é guarda civil"
+    ],
+    [
+     "b",
+     "se Fulana não é da família de Beltrano, então ela é guarda civil"
+    ],
+    [
+     "c",
+     "se Fulana é da família de Beltrano, então ela não é guarda civil"
+    ],
+    [
+     "d",
+     "se Fulana é guarda civil, então ela é da família de Beltrano"
+    ],
+    [
+     "e",
+     "se Fulana não é guarda civil, então ela não é da família de Beltrano"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "\"Toda mulher da família é guarda civil\" equivale a \"se é da família, é guarda\". A contrapositiva também vale: \"se não é guarda civil, não é da família\". Letra E."
+  },
+  {
+   "id": "mat-cat-033",
+   "banca": "CEBRASPE",
+   "tema": "Proposições categóricas",
+   "enunciado": "O quadro de servidores de transporte escolar de determinada prefeitura é formado por motoristas e monitores, apenas. A respeito desses servidores, sabe-se que:\n• alguns motoristas gostam de futebol;\n• todos os monitores gostam de futebol;\n• todos os servidores que gostam de futebol também gostam de voleibol.\nCom base nessas informações, sabendo-se que Pedro é servidor desse quadro e não gosta de voleibol, conclui-se que Pedro é",
+   "alternativas": [
+    [
+     "a",
+     "motorista e gosta de futebol"
+    ],
+    [
+     "b",
+     "motorista e não gosta de futebol"
+    ],
+    [
+     "c",
+     "monitor e gosta de futebol"
+    ],
+    [
+     "d",
+     "monitor e não gosta de futebol"
+    ],
+    [
+     "e",
+     "monitor, mas não se sabe se ele gosta ou não de futebol"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Quem gosta de futebol gosta de vôlei. Pedro não gosta de vôlei, então não gosta de futebol. Todo monitor gosta de futebol, então Pedro não é monitor: é motorista. Letra B."
+  },
+  {
+   "id": "mat-cat-034",
+   "banca": "CEBRASPE",
+   "tema": "Proposições categóricas",
+   "enunciado": "Certa prefeitura dispõe de 10 motoristas. Sabe-se que todos esses motoristas gostam de viajar e que 6 desses motoristas usam óculos.\nConsiderando-se essa situação hipotética, é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "todo motorista que gosta de viajar usa óculos"
+    ],
+    [
+     "b",
+     "todo motorista que usa óculos não gosta de viajar"
+    ],
+    [
+     "c",
+     "existe motorista que não usa óculos e não gosta de viajar"
+    ],
+    [
+     "d",
+     "existe motorista que usa óculos e não gosta de viajar"
+    ],
+    [
+     "e",
+     "existe motorista que usa óculos e gosta de viajar"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Todos os 10 gostam de viajar e 6 usam óculos. Esses 6 usam óculos e gostam de viajar. Letra E."
+  },
+  {
+   "id": "mat-cat-035",
+   "banca": "CEBRASPE",
+   "tema": "Proposições categóricas",
+   "enunciado": "A respeito dos servidores que trabalham em certa prefeitura, sabe-se que:\n• todos os servidores do setor de manutenção usam luvas;\n• todos os servidores que usam luvas também usam botas.\nConsiderando-se essas informações, conclui-se que, nessa prefeitura,",
+   "alternativas": [
+    [
+     "a",
+     "todos os servidores que usam botas também usam luvas"
+    ],
+    [
+     "b",
+     "todos os servidores que usam luvas são do setor de manutenção"
+    ],
+    [
+     "c",
+     "todos os servidores que usam botas são do setor de manutenção"
+    ],
+    [
+     "d",
+     "todos os servidores do setor de manutenção usam botas"
+    ],
+    [
+     "e",
+     "todos os servidores que não usam luvas também não usam botas"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Manutenção está dentro de \"usa luvas\", que está dentro de \"usa botas\". Então todos da manutenção usam botas. Letra D."
+  },
+  {
+   "id": "mat-cat-036",
+   "banca": "ACCESS",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere verdadeira a seguinte proposição: “Todos os candidatos estudiosos foram aprovados no concurso público.” De acordo com essa proposição, a única opção que sempre será considerada verdadeira é:",
+   "alternativas": [
+    [
+     "a",
+     "se Gustavo não foi aprovado no concurso público, então ele não é estudioso"
+    ],
+    [
+     "b",
+     "se Marina foi aprovada no concurso público, então ela é estudiosa"
+    ],
+    [
+     "c",
+     "se Amanda não é estudiosa, então ela não foi aprovada no concurso público"
+    ],
+    [
+     "d",
+     "Amanda foi aprovada no concurso público"
+    ],
+    [
+     "e",
+     "Amanda foi reprovada no concurso público"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "\"Todo estudioso foi aprovado\" equivale a \"se é estudioso, foi aprovado\". A contrapositiva é: se não foi aprovado, não é estudioso. Letra A."
+  },
+  {
+   "id": "mat-cat-037",
+   "banca": "ACCESS",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere verdadeiras as proposições abaixo:\nJúlio é universitário e atleta;\nTodos os cozinheiros são universitários;\nNão existe cozinheiro que seja atleta.\nConsidere também as seguintes representações:\nA= Conjunto dos atletas;\nB=Conjunto dos universitários;\nC=Conjunto dos cozinheiros.\nCom base nas proposições e nas representações indicadas, é correto afirmar que:",
+   "alternativas": [
+    [
+     "a",
+     "Júlio ∈B∩C"
+    ],
+    [
+     "b",
+     "Júlio ∈C"
+    ],
+    [
+     "c",
+     "Júlio ∈B"
+    ],
+    [
+     "d",
+     "B∩C = ∅"
+    ],
+    [
+     "e",
+     "A∩C ≠ ∅"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Júlio é universitário (é dito direto). Ele é atleta e nenhum cozinheiro é atleta, então Júlio não está em C. Só a letra C é garantida: Júlio ∈ B."
+  },
+  {
+   "id": "mat-cat-038",
+   "banca": "ACCESS",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negação lógica de “Todo professor é licenciado.” é:",
+   "alternativas": [
+    [
+     "a",
+     "Nenhum licenciado é professor"
+    ],
+    [
+     "b",
+     "Algum professor não é licenciado"
+    ],
+    [
+     "c",
+     "Não existe licenciado que não seja professor"
+    ],
+    [
+     "d",
+     "Nenhum professor é licenciado"
+    ],
+    [
+     "e",
+     "Algum professor é licenciado"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Negação de \"todo professor é licenciado\" é \"algum professor não é licenciado\". Letra B."
+  },
+  {
+   "id": "mat-cat-039",
+   "banca": "CONSULPLAN",
+   "tema": "Proposições categóricas",
+   "enunciado": "Analise as afirmações sobre os funcionários de um determinado hospital:\n• todo médico é responsável;\n• não há enfermeiro e não há anestesista que não seja responsável; e,\n• todo homem, se não for enfermeiro, ou é médico ou é anestesista.\nPortanto, tem-se, necessariamente que:",
+   "alternativas": [
+    [
+     "a",
+     "Todo homem é responsável"
+    ],
+    [
+     "b",
+     "Todo responsável é homem"
+    ],
+    [
+     "c",
+     "Algum enfermeiro é anestesista"
+    ],
+    [
+     "d",
+     "Todo responsável é enfermeiro ou anestesista"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Pegue um homem qualquer. Se ele é enfermeiro, é responsável. Se não é, então é médico ou anestesista, e os dois são responsáveis. Em qualquer caso, é responsável. Letra A."
+  },
+  {
+   "id": "mat-cat-040",
+   "banca": "QUADRIX",
+   "tema": "Proposições categóricas",
+   "enunciado": "Todos os alunos de Fidalgo acertaram todas as questões de raciocínio lógico no concurso do CREMERS. Sabendo que a proposição acima é verdadeira, assinale a alternativa correta.",
+   "alternativas": [
+    [
+     "a",
+     "Fidalgo não acertou todas as questões de raciocínio lógico"
+    ],
+    [
+     "b",
+     "Se Marlene não é aluna de Fidalgo, então ela não acertou todas as questões de raciocínio lógico"
+    ],
+    [
+     "c",
+     "Fidalgo acertou todas as questões de raciocínio lógico"
+    ],
+    [
+     "d",
+     "Se Manoel não acertou todas as questões de raciocínio lógico, então ele não é aluno de Fidalgo"
+    ],
+    [
+     "e",
+     "Se Beatriz acertou todas as questões de raciocínio lógico, então ela é aluna de Fidalgo"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "\"Todo aluno de Fidalgo acertou tudo\" equivale a \"se é aluno, acertou\". A contrapositiva também vale: se Manoel não acertou tudo, ele não é aluno de Fidalgo. Letra D."
+  },
+  {
+   "id": "mat-cat-041",
+   "banca": "IDIB",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere que, em um colégio, são verdadeiras as afirmações:\nToda criança é magra.\nExistem crianças feias.\nÉ correto concluir que, neste colégio,",
+   "alternativas": [
+    [
+     "a",
+     "toda criança magra é feia"
+    ],
+    [
+     "b",
+     "alguma criança magra é feia"
+    ],
+    [
+     "c",
+     "toda criança feia não é magra"
+    ],
+    [
+     "d",
+     "alguma criança não é magra"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Existem crianças feias, e toda criança é magra. Essas crianças feias também são magras. Logo, alguma criança magra é feia. Letra B."
+  },
+  {
+   "id": "mat-cat-042",
+   "banca": "AOCP",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere como verdadeiras as seguintes afirmações: “todo agente penitenciário deve ter uma CNH (Carteira Nacional de Habilitação) de categoria no mínimo AB” e “toda pessoa que possui uma CNH de categoria no mínimo AB possui o nível de escolaridade de ensino médio.” Sabendo que Flávio tem uma CNH de categoria no mínimo AB e que Gustavo possui o nível de escolaridade de ensino médio, é sempre verdadeiro que",
+   "alternativas": [
+    [
+     "a",
+     "Flávio é um agente penitenciário"
+    ],
+    [
+     "b",
+     "Flávio não possui o nível de escolaridade de ensino médio"
+    ],
+    [
+     "c",
+     "Gustavo tem uma CNH de categoria no mínimo AB"
+    ],
+    [
+     "d",
+     "Gustavo é um agente penitenciário"
+    ],
+    [
+     "e",
+     "Flávio tem o nível de escolaridade de ensino médio"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Flávio tem CNH AB, e toda pessoa com CNH AB tem ensino médio. Então Flávio tem ensino médio. Sobre Gustavo nada se conclui. Letra E."
+  },
+  {
+   "id": "mat-cat-043",
+   "banca": "Legalle",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negação da proposição k: Toda laranja deste cesto está boa é:",
+   "alternativas": [
+    [
+     "a",
+     "Toda laranja deste cesto não está boa"
+    ],
+    [
+     "b",
+     "Alguma laranja deste cesto está boa"
+    ],
+    [
+     "c",
+     "Existe pelo menos uma laranja que está boa"
+    ],
+    [
+     "d",
+     "Alguma laranja deste cesto não está boa"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Negar \"toda laranja está boa\" é dizer que alguma laranja não está boa. Letra D."
+  },
+  {
+   "id": "mat-cat-044",
+   "banca": "Legalle",
+   "tema": "Proposições categóricas",
+   "enunciado": "A alternativa em que consta uma proposição com um quantificador particular e afirmativo é:",
+   "alternativas": [
+    [
+     "a",
+     "Algum bosque possui um número grande de flores"
+    ],
+    [
+     "b",
+     "Algum bosque não possui um número grande de flores"
+    ],
+    [
+     "c",
+     "Todo o bosque possui um número grande de flores"
+    ],
+    [
+     "d",
+     "Nenhum bosque possui um número grande de flores"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "\"Algum\" é particular, e a frase sem \"não\" é afirmativa. Letra A."
+  },
+  {
+   "id": "mat-cat-045",
+   "banca": "SELECON",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere verdadeiras as seguintes proposições:\n∙ Nenhum professor é mentiroso.\n∙ Alguns advogados são mentirosos.\nPode-se corretamente concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Alguns professores são advogados"
+    ],
+    [
+     "b",
+     "Alguns advogados são professores"
+    ],
+    [
+     "c",
+     "Nenhum professor é advogado"
+    ],
+    [
+     "d",
+     "Alguns advogados não são professores"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Os advogados mentirosos não podem ser professores, porque nenhum professor mente. Como existem advogados mentirosos, alguns advogados não são professores. Letra D."
+  },
+  {
+   "id": "mat-cat-047",
+   "banca": "IBADE",
+   "tema": "Proposições categóricas",
+   "enunciado": "Na cidade Feliz, todos os habitantes são felizes. Sabendo que nenhuma pessoa mal-humorada é feliz, podemos concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "alguns habitantes da cidade Feliz são mal-humorados"
+    ],
+    [
+     "b",
+     "só é mal-humorado quem mora na cidade Feliz"
+    ],
+    [
+     "c",
+     "na cidade Feliz há habitantes mal-humorados"
+    ],
+    [
+     "d",
+     "na cidade Feliz não há habitantes mal-humorados"
+    ],
+    [
+     "e",
+     "todas as pessoas que não moram na cidade Feliz são mal-humoradas"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Todo habitante é feliz, e nenhum mal-humorado é feliz. Então nenhum habitante da cidade Feliz é mal-humorado. Letra D."
+  },
+  {
+   "id": "mat-cat-048",
+   "banca": "ITAME",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere a seguinte afirmação:\n√ Todas as cunhadas de Ana são morenas.\nDessa afirmação, pode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Ana é morena"
+    ],
+    [
+     "b",
+     "Ana não é morena"
+    ],
+    [
+     "c",
+     "Se Maria é cunhada de Ana, então ela não é morena"
+    ],
+    [
+     "d",
+     "Se Maria é cunhada de Ana, então ela é morena"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "\"Todas as cunhadas de Ana são morenas\": se Maria é cunhada de Ana, Maria é morena. Sobre a própria Ana nada se diz. Letra D."
+  },
+  {
+   "id": "mat-cat-050",
+   "banca": "CEFETMINAS",
+   "tema": "Proposições categóricas",
+   "enunciado": "Senhor José quer fazer um churrasco de confraternização de final de ano de sua empresa em um sábado do mês de dezembro. Seu sócio João não concorda, pois afirma que “todo sábado do mês de dezembro chove”. José aceitou então fazer a confraternização em novembro, porém, apostou com João que, se naquele ano corrente a afirmativa de João fosse falsa, no ano seguinte a confraternização aconteceria em dezembro.\nPara que José ganhe a aposta, é necessário, naquele ano corrente, durante o mês de dezembro",
+   "alternativas": [
+    [
+     "a",
+     "chover todos os sábados"
+    ],
+    [
+     "b",
+     "algum sábado não chover"
+    ],
+    [
+     "c",
+     "não chover todos os sábados"
+    ],
+    [
+     "d",
+     "não chover em apenas um sábado"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "José ganha se \"todo sábado chove\" for falsa. Para isso, basta que em algum sábado não chova. Letra B."
+  },
+  {
+   "id": "mat-cat-051",
+   "banca": "CEFETMINAS",
+   "tema": "Proposições categóricas",
+   "enunciado": "Numa reunião de professores, um deles afirma que “todos os alunos das turmas A e B ficaram com nota maior ou igual a 75 em Matemática”. Porém, ao verificar esses resultados, esse professor observou que a sua afirmação não era verdadeira.\nAssim, podemos concluir corretamente que",
+   "alternativas": [
+    [
+     "a",
+     "todos os alunos dessas turmas obtiveram nota abaixo de 75 em Matemática"
+    ],
+    [
+     "b",
+     "todos os alunos de uma dessas turmas obtiveram nota abaixo de 75 em Matemática"
+    ],
+    [
+     "c",
+     "pelo menos um aluno de cada turma obteve nota menor do que 75 em Matemática"
+    ],
+    [
+     "d",
+     "pelo menos um aluno de uma dessas turmas obteve nota menor do que 75 em Matemática"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "A afirmação \"todos das turmas A e B tiraram 75 ou mais\" é falsa. Então pelo menos um aluno de uma das turmas tirou menos de 75. Não precisa ser um de cada turma. Letra D."
+  },
+  {
+   "id": "mat-cat-052",
+   "banca": "CONSULPLAN",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere que todas as pessoas que são bem-sucedidas acordam cedo. Se Pedro é uma pessoa que acorda cedo e João é bem-sucedido, pode-se afirmar certamente que:",
+   "alternativas": [
+    [
+     "a",
+     "Pedro e João acordam cedo"
+    ],
+    [
+     "b",
+     "Pedro e João são bem-sucedidos"
+    ],
+    [
+     "c",
+     "Pedro é bem-sucedido e João acorda cedo"
+    ],
+    [
+     "d",
+     "Nem Pedro é bem-sucedido nem João acorda cedo"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "João é bem-sucedido, e todo bem-sucedido acorda cedo: João acorda cedo. Pedro acorda cedo (é dado). Então os dois acordam cedo. Letra A."
+  },
+  {
+   "id": "mat-cat-053",
+   "banca": "MÉTODO",
+   "tema": "Proposições categóricas",
+   "enunciado": "Todas as vezes que Pedro escuta músicas dos Beatles com sua amiga Maria, ele dança com ela. Quando Pedro dança com Maria, ela sorri. Portanto, é válido concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Toda vez que Pedro dança , Maria sorri"
+    ],
+    [
+     "b",
+     "Toda as vezes que Pedro escuta Beatles ele dança"
+    ],
+    [
+     "c",
+     "Maria sempre dança escutando Beatles"
+    ],
+    [
+     "d",
+     "Maria sorri quando ouve Beatles com Pedro"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Ouvir Beatles com Maria leva Pedro a dançar com ela, e quando ele dança com Maria, ela sorri. Encadeando: quando ouve Beatles com Pedro, Maria sorri. Letra D."
+  },
+  {
+   "id": "mat-cat-054",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Todos os piratas são marinheiros. Assim, conclui-se que:",
+   "alternativas": [
+    [
+     "a",
+     "O conjunto dos piratas contém o conjunto dos marinheiros"
+    ],
+    [
+     "b",
+     "O conjunto dos marinheiros contém o conjunto dos piratas"
+    ],
+    [
+     "c",
+     "Todos os marinheiros são piratas"
+    ],
+    [
+     "d",
+     "Algum pirata não é marinheiro"
+    ],
+    [
+     "e",
+     "O conjunto dos marinheiros está contido no conjunto dos piratas"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "O círculo dos piratas fica dentro do círculo dos marinheiros. Ou seja, o conjunto dos marinheiros contém o dos piratas. Letra B."
+  },
+  {
+   "id": "mat-cat-057",
+   "banca": "IBFC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Todo advogado é formado. Nenhum formado usa celular. Podemos concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Algum advogado usa celular"
+    ],
+    [
+     "b",
+     "Algum advogado não é formado"
+    ],
+    [
+     "c",
+     "Algum formado usa celular"
+    ],
+    [
+     "d",
+     "Pode haver formado que não é advogado"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Advogado está dentro de formado, e formado não toca em quem usa celular. As letras A, B e C contradizem isso. Só a D é possível: pode haver formado que não é advogado."
+  },
+  {
+   "id": "mat-cat-058",
+   "banca": "IBFC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Se “Alguns cantores são líricos” e “Todos os líricos são românticos”, então, necessariamente:",
+   "alternativas": [
+    [
+     "a",
+     "Todo romântico é lírico"
+    ],
+    [
+     "b",
+     "Todo lírico é cantor"
+    ],
+    [
+     "c",
+     "Algum cantor é romântico"
+    ],
+    [
+     "d",
+     "Nenhum romântico é lírico"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Os cantores líricos são românticos, porque todo lírico é romântico. Como alguns cantores são líricos, algum cantor é romântico. Letra C."
+  },
+  {
+   "id": "mat-cat-059",
+   "banca": "FAUEL",
+   "tema": "Proposições categóricas",
+   "enunciado": "Todos os moradores do município de Cidadópolis gostam de comer batata. Assinale a alternativa correta.",
+   "alternativas": [
+    [
+     "a",
+     "Existem moradores de Cidadópolis que não gostam de comer batata"
+    ],
+    [
+     "b",
+     "Se alguém não gosta de batata, não mora em Cidadópolis"
+    ],
+    [
+     "c",
+     "Todas as pessoas que gostam de comer batata moram em Cidadópolis"
+    ],
+    [
+     "d",
+     "Se alguém não mora em Cidadópolis, não gosta de batata"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "\"Todo morador gosta de batata\" equivale a \"se mora, gosta\". A contrapositiva também vale: se não gosta de batata, não mora em Cidadópolis. Letra B."
+  },
+  {
+   "id": "mat-cat-060",
+   "banca": "CPCON",
+   "tema": "Proposições categóricas",
+   "enunciado": "Abaixo, apresentam-se duas proposições verdadeiras seguidas de duas conclusões numeradas.\nProposições:\n“Todo leão é um mamífero.”\n“Alguns mamíferos são terrestres.”\nConclusões:\nI- Todo leão é terrestre.\nII- Alguns terrestres são mamíferos.\nAssinale a alternativa CORRETA, que confirme relação lógica entre as proposições dadas e as respectivas conclusões.",
+   "alternativas": [
+    [
+     "a",
+     "Nenhuma conclusão segue logicamente das proposições acima"
+    ],
+    [
+     "b",
+     "Somente a conclusão I segue logicamente das proposições acima"
+    ],
+    [
+     "c",
+     "Apenas a conclusão II segue logicamente das proposições acima"
+    ],
+    [
+     "d",
+     "As conclusões I e II seguem logicamente das proposições acima"
+    ],
+    [
+     "e",
+     "É impossível determinar quais conclusões seguem logicamente das proposições acima"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "I não segue: há mamíferos não terrestres, e o leão pode estar entre eles. II segue: \"alguns mamíferos são terrestres\" é o mesmo que \"alguns terrestres são mamíferos\". Letra C."
+  },
+  {
+   "id": "mat-cat-061",
+   "banca": "IDIB",
+   "tema": "Proposições categóricas",
+   "enunciado": "Sejam as afirmações:\nI. Todo lutador é forte.\nII. Existem lutadores magros.\nConsiderando que as duas afirmativas sejam verdadeiras, é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "todo lutador magro não é forte"
+    ],
+    [
+     "b",
+     "todo lutador forte é magro"
+    ],
+    [
+     "c",
+     "algum lutador magro não é forte"
+    ],
+    [
+     "d",
+     "algum lutador forte é magro"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Existem lutadores magros, e todo lutador é forte. Esses lutadores magros são fortes. Então algum lutador forte é magro. Letra D."
+  },
+  {
+   "id": "mat-cat-063",
+   "banca": "IDIB",
+   "tema": "Proposições categóricas",
+   "enunciado": "Sabendo que alguns brasileiros gostam de jiló e nenhuma criança gosta de jiló, é possível concluir com absoluta certeza que",
+   "alternativas": [
+    [
+     "a",
+     "algum brasileiro não é criança"
+    ],
+    [
+     "b",
+     "nenhuma criança é brasileira"
+    ],
+    [
+     "c",
+     "alguma criança é brasileira"
+    ],
+    [
+     "d",
+     "algum brasileiro é criança"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Os brasileiros que gostam de jiló não podem ser crianças, porque nenhuma criança gosta de jiló. Logo, algum brasileiro não é criança. Letra A."
+  },
+  {
+   "id": "mat-cat-065",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negação da seguinte proposição “todo catarinense é brasileiro” está corretamente apresentada na alternativa:",
+   "alternativas": [
+    [
+     "a",
+     "Todo catarinense não é brasileiro"
+    ],
+    [
+     "b",
+     "Pelo menos um catarinense não é brasileiro"
+    ],
+    [
+     "c",
+     "Todo brasileiro é catarinense"
+    ],
+    [
+     "d",
+     "Algum brasileiro não é catarinense"
+    ],
+    [
+     "e",
+     "Pelo menos um brasileiro é catarinense"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Negação de \"todo catarinense é brasileiro\": pelo menos um catarinense não é brasileiro. Letra B."
+  },
+  {
+   "id": "mat-cat-066",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negação da sentença: Pelo menos um morador do condomínio não participou da assembleia ordinária é equivalente à sentença:",
+   "alternativas": [
+    [
+     "a",
+     "Algum morador do condomínio participou da assembleia ordinária"
+    ],
+    [
+     "b",
+     "Todos moradores do condomínio não participaram da assembleia ordinária"
+    ],
+    [
+     "c",
+     "Todos moradores do condomínio participaram da assembleia ordinária"
+    ],
+    [
+     "d",
+     "Nenhum morador do condomínio participou da assembleia ordinária"
+    ],
+    [
+     "e",
+     "Nem todos os moradores do condomínio não participaram da assembleia ordinária"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Negar \"pelo menos um não participou\" é dizer que ninguém deixou de participar, ou seja, todos participaram. Letra C."
+  },
+  {
+   "id": "mat-cat-067",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "A alternativa que apresenta uma relação de números naturais na qual a sentença algum número é par é falsa é:",
+   "alternativas": [
+    [
+     "a",
+     "4, 10, 12, 26, 32"
+    ],
+    [
+     "b",
+     "26, 27, 28, 29, 30"
+    ],
+    [
+     "c",
+     "13, 15, 17, 19, 21"
+    ],
+    [
+     "d",
+     "2, 4, 6, 9"
+    ],
+    [
+     "e",
+     "52, 18, 26, 38, 46"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "\"Algum número é par\" é falsa quando nenhum número da lista é par. Em 13, 15, 17, 19, 21 todos são ímpares. Letra C."
+  },
+  {
+   "id": "mat-cat-068",
+   "banca": "FCC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere que “ um profissional é formado pela Faculdade X” seja uma condição suficiente para “ele presta serviço para a empresa E”. É correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "a maioria dos profissionais que trabalham para a empresa E são formados pela Faculdade X"
+    ],
+    [
+     "b",
+     "somente os profissionais que são formados pela Faculdade X prestam serviços para a empresa E"
+    ],
+    [
+     "c",
+     "um profissional que não é formado pela Faculdade X não presta serviço para a empresa E"
+    ],
+    [
+     "d",
+     "qualquer profissional que presta serviço para a empresa E é formado pela Faculdade X"
+    ],
+    [
+     "e",
+     "não existe um profissional formado pela Faculdade X e que não presta serviços para a Empresa E"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "\"Ser formado em X é suficiente para prestar serviço a E\": todo formado em X presta serviço a E. Então não existe formado em X que não preste serviço. Letra E."
+  },
+  {
+   "id": "mat-cat-069",
+   "banca": "FCC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere a seguinte proposição: “Todos os profissionais formados pela Faculdade Alfa estão empregados.”. Admitindo que ela seja falsa, então certamente",
+   "alternativas": [
+    [
+     "a",
+     "Todos profissionais formados pela Faculdade Alfa estão desempregados"
+    ],
+    [
+     "b",
+     "Existe pelo menos um profissional formado pela Faculdade Alfa que não está empregado"
+    ],
+    [
+     "c",
+     "Se o profissional Roberto está desempregado, então ele é formado pela Faculdade Alfa"
+    ],
+    [
+     "d",
+     "Nenhum profissional formado pela Faculdade Alfa está empregado"
+    ],
+    [
+     "e",
+     "Alguns profissionais formados pela Faculdade Alfa estão empregados"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Se \"todos estão empregados\" é falsa, então pelo menos um formado pela Alfa não está empregado. Letra B."
+  },
+  {
+   "id": "mat-cat-070",
+   "banca": "FCC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Seja a seguinte proposição: “ Se um profissional é formado em Administração, então ele está apto a realizar determinado trabalho.” Pode-se afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "somente quem é formado em Administração está apto a realizar determinado trabalho"
+    ],
+    [
+     "b",
+     "a maioria dos profissionais que estão aptos a realizar determinado trabalho são formados em Administração"
+    ],
+    [
+     "c",
+     "se Roberto está apto a realizar determinado trabalho, conclui-se que ele é formado em Administração"
+    ],
+    [
+     "d",
+     "é possível que exista um profissional que está apto a realizar determinado trabalho e não seja formado em Administração"
+    ],
+    [
+     "e",
+     "se Miguel não é formado em Administração, conclui-se que ele não está apto a realizar determinado trabalho"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "\"Se é formado em Administração, está apto\" não impede que outras pessoas também estejam aptas. Então é possível existir alguém apto que não seja formado em Administração. Letra D."
+  },
+  {
+   "id": "mat-cat-071",
+   "banca": "FCC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Em uma escola de línguas, todos os professores que falam alemão falam, também, inglês, e nenhum dos professores que fala inglês fala italiano. Sobre os professores dessa escola de línguas, é correto afirmar que todos os que",
+   "alternativas": [
+    [
+     "a",
+     "falam alemão falam, também, italiano"
+    ],
+    [
+     "b",
+     "falam italiano não falam alemão"
+    ],
+    [
+     "c",
+     "falam italiano falam, também, alemão"
+    ],
+    [
+     "d",
+     "não falam italiano falam alemão"
+    ],
+    [
+     "e",
+     "não falam alemão falam italiano"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Alemão está dentro de inglês, e inglês não toca em italiano. Então quem fala italiano não fala inglês e, por isso, não fala alemão. Letra B."
+  },
+  {
+   "id": "mat-cat-072",
+   "banca": "IADES",
+   "tema": "Proposições categóricas",
+   "enunciado": "Sabe-se que existe pelo menos um acriano que é arquiteto. Sabe-se ainda que todo acriano é brasileiro. Segue-se, portanto, necessariamente que",
+   "alternativas": [
+    [
+     "a",
+     "todo brasileiro é arquiteto"
+    ],
+    [
+     "b",
+     "todo brasileiro é acriano"
+    ],
+    [
+     "c",
+     "algum acriano é brasileiro"
+    ],
+    [
+     "d",
+     "nenhum brasileiro é arquiteto"
+    ],
+    [
+     "e",
+     "algum acriano não é brasileiro"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Existe um acriano arquiteto, e todo acriano é brasileiro. Esse acriano é brasileiro, então algum acriano é brasileiro. Letra C."
+  },
+  {
+   "id": "mat-cat-073",
+   "banca": "FCC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere as seguintes afirmações:\nI. Todo amapaense é brasileiro.\nII. Todo brasileiro é sul-americano.\nEntão, é correto afirmar:",
+   "alternativas": [
+    [
+     "a",
+     "Todo brasileiro é amapaense"
+    ],
+    [
+     "b",
+     "Todo sul-americano é brasileiro"
+    ],
+    [
+     "c",
+     "Existe amapaense que não é brasileiro"
+    ],
+    [
+     "d",
+     "Existe brasileiro que não é sul-americano"
+    ],
+    [
+     "e",
+     "É possível que exista um sul-americano que não seja amapaense"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Amapaense está dentro de brasileiro, que está dentro de sul-americano. As letras A a D contradizem isso. A E é possível: pode haver sul-americano que não é amapaense."
+  },
+  {
+   "id": "mat-cat-074",
+   "banca": "FCC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Dentre os funcionários de uma determinada agência bancária, os gerentes são todos casados e têm filhos. Nenhum funcionário casado mora na capital, mas há funcionários que moram na capital e têm filhos. Nessas condições,",
+   "alternativas": [
+    [
+     "a",
+     "nenhum funcionário que tem filhos é casado"
+    ],
+    [
+     "b",
+     "todos os funcionários que têm filhos são casados"
+    ],
+    [
+     "c",
+     "há gerentes que moram na capital"
+    ],
+    [
+     "d",
+     "todos os funcionários que têm filhos moram na capital"
+    ],
+    [
+     "e",
+     "nenhum funcionário que mora na capital é gerente"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Gerente é casado, e nenhum casado mora na capital. Então nenhum gerente mora na capital. Dito ao contrário: nenhum funcionário que mora na capital é gerente. Letra E."
+  },
+  {
+   "id": "mat-cat-075",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Analise as seguintes afirmações:\nI. Todo arquiteto gosta de Matemática.\nII. Todas as pessoas que gostam de Matemática são cientistas.\nCom base nas sentenças acima, é sempre verdade que:",
+   "alternativas": [
+    [
+     "a",
+     "Há arquitetos que não são cientistas"
+    ],
+    [
+     "b",
+     "Há pessoas que gostam de Matemática e não são cientistas"
+    ],
+    [
+     "c",
+     "Todo arquiteto também é um cientista"
+    ],
+    [
+     "d",
+     "Todas as pessoas que gostam de Matemática também são arquitetos"
+    ],
+    [
+     "e",
+     "Todos os cientistas são arquitetos"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Arquiteto está dentro de \"gosta de Matemática\", que está dentro de cientista. Então todo arquiteto é cientista. Letra C."
+  },
+  {
+   "id": "mat-cat-076",
+   "banca": "QUADRIX",
+   "tema": "Proposições categóricas",
+   "enunciado": "No quadro de funcionários de uma faculdade, todos os professores são especialistas, e todos os especialistas são mestres. O coordenador do curso é especialista. Então, pode-se afirmar certamente que:",
+   "alternativas": [
+    [
+     "a",
+     "o coordenador do curso é professor"
+    ],
+    [
+     "b",
+     "o coordenador do curso não é professor"
+    ],
+    [
+     "c",
+     "o coordenador do curso é mestre"
+    ],
+    [
+     "d",
+     "o coordenador do curso não é mestre"
+    ],
+    [
+     "e",
+     "o coordenador do curso é doutor"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "O coordenador é especialista, e todo especialista é mestre. Então o coordenador é mestre. Se ele é professor, não dá para saber. Letra C."
+  },
+  {
+   "id": "mat-cat-077",
+   "banca": "QUADRIX",
+   "tema": "Proposições categóricas",
+   "enunciado": "Em um escritório de advogados, alguns funcionários têm contrato especial. Todos os funcionários que têm contrato especial recebem um bônus se a empresa ganha um caso. Então, necessariamente:",
+   "alternativas": [
+    [
+     "a",
+     "se a empresa ganha um caso, todos os funcionários recebem bônus"
+    ],
+    [
+     "b",
+     "todo funcionário que recebe bônus tem contrato especial"
+    ],
+    [
+     "c",
+     "se a empresa ganha um caso, alguns funcionários recebem bônus"
+    ],
+    [
+     "d",
+     "se a empresa não ganha um caso, todos os funcionários recebem bônus"
+    ],
+    [
+     "e",
+     "se a empresa não ganha um caso, alguns funcionários recebem bônus"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Existem funcionários com contrato especial, e todos eles recebem bônus se a empresa ganha. Então, se a empresa ganha, alguns funcionários recebem bônus. Letra C."
+  },
+  {
+   "id": "mat-cat-078",
+   "banca": "QUADRIX",
+   "tema": "Proposições categóricas",
+   "enunciado": "Alguns alunos do curso de Direito são bolsistas. Todos os alunos da faculdade que obtiveram aproveitamento acima de 90% no vestibular são bolsistas. Então, é necessariamente verdade que:",
+   "alternativas": [
+    [
+     "a",
+     "alguns alunos do curso de Direito obtiveram aproveitamento acima de 90% no vestibular"
+    ],
+    [
+     "b",
+     "nenhum aluno do curso de Direito obteve aproveitamento acima de 90% no vestibular"
+    ],
+    [
+     "c",
+     "todos os alunos do curso de Direito obtiveram aproveitamento acima de 90% no vestibular"
+    ],
+    [
+     "d",
+     "todos os alunos bolsistas são alunos do curso de Direito"
+    ],
+    [
+     "e",
+     "alguns alunos bolsistas obtiveram aproveitamento acima de 90% no vestibular"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Quem teve mais de 90% é bolsista. A letra E fala de bolsistas que tiveram mais de 90%, e eles existem. Letra E. As outras ligam Direito ao aproveitamento sem garantia."
+  },
+  {
+   "id": "mat-cat-079",
+   "banca": "QUADRIX",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere-se que:\nI. todo estudante de Matemática é inteligente.\nII. Juliana é estudante de Biologia.\nPode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Juliana não é inteligente"
+    ],
+    [
+     "b",
+     "todas as pessoas inteligentes são estudantes de Matemática"
+    ],
+    [
+     "c",
+     "Juliana pode ser inteligente"
+    ],
+    [
+     "d",
+     "nenhum estudante de Biologia é inteligente"
+    ],
+    [
+     "e",
+     "Juliana é estudante de Matemática"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Juliana estuda Biologia. A regra fala só de quem estuda Matemática e não impede que outras pessoas sejam inteligentes. Juliana pode ser inteligente. Letra C."
+  },
+  {
+   "id": "mat-cat-084",
+   "banca": "FUNRIO",
+   "tema": "Proposições categóricas",
+   "enunciado": "Supondo que todas as afirmações são verdadeiras, analise-as a seguir:\nTodos os professores são estudiosos.\nMauricio é professor de história.\nNenhum professor de história leciona geografia.\nPortanto, é correto o que se afirma em:",
+   "alternativas": [
+    [
+     "a",
+     "Maurício leciona história e geografia"
+    ],
+    [
+     "b",
+     "Maurício é estudioso e não leciona geografia"
+    ],
+    [
+     "c",
+     "Nenhum professor de história é estudioso e leciona geografia"
+    ],
+    [
+     "d",
+     "Nenhum professor de geografia é estudioso"
+    ],
+    [
+     "e",
+     "Mauricio pertence ao conjunto dos professores de geografia"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Maurício é professor, então é estudioso. É professor de história, e nenhum professor de história leciona geografia, então ele não leciona geografia. Letra B."
+  },
+  {
+   "id": "mat-cat-086",
+   "banca": "IAUPE",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negação lógica da afirmação “Todos os livros podem ensinar alguma lição” é a seguinte:",
+   "alternativas": [
+    [
+     "a",
+     "Nenhum livro pode ensinar nada"
+    ],
+    [
+     "b",
+     "Existe algum livro que não ensina nada"
+    ],
+    [
+     "c",
+     "Nenhum livro é vazio de ensinamentos"
+    ],
+    [
+     "d",
+     "Todos os livros são vazios de ensinamentos"
+    ],
+    [
+     "e",
+     "Alguns livros ensinam alguma lição"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Negar \"todos podem ensinar alguma lição\" é dizer que existe algum livro que não ensina nada. Letra B."
+  },
+  {
+   "id": "mat-cat-089",
+   "banca": "AOCP",
+   "tema": "Proposições categóricas",
+   "enunciado": "Qual das seguintes alternativas apresenta a contraditória da afirmação: “Todo condenado é culpado.”?",
+   "alternativas": [
+    [
+     "a",
+     "“Todo condenado não é culpado.”"
+    ],
+    [
+     "b",
+     "“Algum culpado é condenado.”"
+    ],
+    [
+     "c",
+     "“Algum condenado não é culpado.”"
+    ],
+    [
+     "d",
+     "“Algum condenado é culpado.”"
+    ],
+    [
+     "e",
+     "“Todo culpado é condenado.”"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "A contraditória de \"todo condenado é culpado\" é \"algum condenado não é culpado\". Letra C."
+  },
+  {
+   "id": "mat-cat-090",
+   "banca": "AOCP",
+   "tema": "Proposições categóricas",
+   "enunciado": "Dada a afirmação: “Todo político é corrupto.”, assinale a alternativa que seja uma afirmação logicamente equivalente.",
+   "alternativas": [
+    [
+     "a",
+     "“Todo corrupto é político.”"
+    ],
+    [
+     "b",
+     "“Quem não é político não é corrupto.”"
+    ],
+    [
+     "c",
+     "“Um homem é político ou é corrupto.”"
+    ],
+    [
+     "d",
+     "“Um homem não é corrupto ou não é político.”"
+    ],
+    [
+     "e",
+     "“Todos que não são corruptos não são políticos.”"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "\"Todo político é corrupto\" equivale a \"se é político, é corrupto\", e a contrapositiva \"se não é corrupto, não é político\" tem o mesmo sentido. Letra E."
+  },
+  {
+   "id": "mat-cat-091",
+   "banca": "AOCP",
+   "tema": "Proposições categóricas",
+   "enunciado": "Assinale a alternativa que apresenta um argumento lógico válido.",
+   "alternativas": [
+    [
+     "a",
+     "Todos os mamutes estão extintos e não há elefantes extintos, logo nenhum elefante é um mamute"
+    ],
+    [
+     "b",
+     "Todas as meninas jogam vôlei e Jonas não é uma menina, então Jonas não joga vôlei"
+    ],
+    [
+     "c",
+     "Em São Paulo, moram muitos retirantes e João é um retirante, logo João mora em São Paulo"
+    ],
+    [
+     "d",
+     "Não existem policiais corruptos e Paulo não é corrupto, então Paulo é policial"
+    ],
+    [
+     "e",
+     "Todo bolo é de chocolate e Maria fez um bolo, logo Maria não fez um bolo de chocolate"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Mamute está dentro de \"extinto\", e nenhum elefante é extinto. Então nenhum elefante é mamute: o argumento é válido. Nas outras, a conclusão não é garantida pelas premissas. Letra A."
+  },
+  {
+   "id": "mat-cat-092",
+   "banca": "IBGP",
+   "tema": "Proposições categóricas",
+   "enunciado": "“Todos os concurseiros são brasileiros.” Desta forma, é CORRETO afirmar que:",
+   "alternativas": [
+    [
+     "a",
+     "O conjunto dos concurseiros contém o conjunto dos brasileiros"
+    ],
+    [
+     "b",
+     "Todos os brasileiros são concurseiros"
+    ],
+    [
+     "c",
+     "Algum concurseiro não é republicano"
+    ],
+    [
+     "d",
+     "O conjunto dos brasileiros contém o conjunto dos concurseiros"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "\"Todos os concurseiros são brasileiros\" põe o círculo dos concurseiros dentro do dos brasileiros. Ou seja, o conjunto dos brasileiros contém o dos concurseiros. Letra D."
+  },
+  {
+   "id": "mat-cat-094",
+   "banca": "VUNESP",
+   "tema": "Proposições categóricas",
+   "enunciado": "Todos os MAGNÂNIMOS são FELIZES. Alguns BENFEITORES são MAGNÂNIMOS, mas não todos. Há FELIZ que é BENFEITOR. A partir dessas afirmações, é logicamente correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "qualquer BENFEITOR é FELIZ"
+    ],
+    [
+     "b",
+     "os MAGNÂNIMOS que não são FELIZES, são BENFEITORES"
+    ],
+    [
+     "c",
+     "os BENFEITORES que são MAGNÂNIMOS, não são FELIZES"
+    ],
+    [
+     "d",
+     "todos os BENFEITORES que são MAGNÂNIMOS são FELIZES"
+    ],
+    [
+     "e",
+     "os FELIZES que não são MAGNÂNIMOS são BENFEITORES"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Todo magnânimo é feliz. Então os benfeitores que são magnânimos também são felizes. Letra D."
+  },
+  {
+   "id": "mat-cat-095",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negação da proposição “Nenhum outono é quente em Gramado” é:",
+   "alternativas": [
+    [
+     "a",
+     "Algum outono é quente em Gramado"
+    ],
+    [
+     "b",
+     "Todos os outonos são quentes em Gramado"
+    ],
+    [
+     "c",
+     "Se é outono então é quente em Gramado"
+    ],
+    [
+     "d",
+     "É outono e está quente em Gramado"
+    ],
+    [
+     "e",
+     "É outono se e somente se é quente em Gramado"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Negação de \"nenhum… é\" é \"algum… é\": \"Algum outono é quente em Gramado\". Letra A."
+  },
+  {
+   "id": "mat-cat-096",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "Considere as seguintes proposições:\nI. Gramado é uma cidade localizada no estado do Rio Grande do Sul.\nII. Todo morador do Rio Grande do Sul gosta de churrasco.\nIII. Pedro gosta de churrasco.\nA partir das proposições anteriores, é possível concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Pedro não mora em Gramado"
+    ],
+    [
+     "b",
+     "Pedro mora em Gramado"
+    ],
+    [
+     "c",
+     "Pedro pode ser morador de Gramado"
+    ],
+    [
+     "d",
+     "Pedro mora no Rio Grande do Sul"
+    ],
+    [
+     "e",
+     "Pedro não mora no Rio Grande do Sul"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Pedro gosta de churrasco. Todo gaúcho gosta, mas não só os gaúchos. Então Pedro pode morar em Gramado, sem certeza. Letra C."
+  },
+  {
+   "id": "mat-cat-098",
+   "banca": "FUNDATEC",
+   "tema": "Proposições categóricas",
+   "enunciado": "A negação da sentença algum assistente social acompanhou o julgamento está na alternativa:",
+   "alternativas": [
+    [
+     "a",
+     "Algum assistente social não acompanhou o julgamento"
+    ],
+    [
+     "b",
+     "Todos os assistentes sociais acompanharam o julgamento"
+    ],
+    [
+     "c",
+     "Nem todos os assistentes sociais acompanharam o julgamento"
+    ],
+    [
+     "d",
+     "Nenhum assistente social acompanhou o julgamento"
+    ],
+    [
+     "e",
+     "Pelo menos um assistente social não acompanhou o julgamento"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Negação de \"algum assistente social acompanhou\" é \"nenhum assistente social acompanhou\". Letra D."
+  },
+  {
+   "id": "mat-imp-001",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere verdadeiras as afirmações I, II e III.\nI. Se Francisco é mecânico, então Geraldo é encanador.\nII. Se Heitor é vendedor, então Geraldo não é encanador.\nIII. Se Heitor não é vendedor, então José é pedreiro.\nConsidere falsidade a afirmação a seguir.\nIV. Se Lucas é eletricista, então José é pedreiro.\nA partir dessas informações, é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Lucas não é eletricista"
+    ],
+    [
+     "b",
+     "Geraldo é encanador"
+    ],
+    [
+     "c",
+     "Francisco não é mecânico"
+    ],
+    [
+     "d",
+     "José é pedreiro"
+    ],
+    [
+     "e",
+     "Heitor não é vendedor"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Comece pela falsa: uma condicional só é falsa em V → F. Em IV, Lucas é eletricista e José não é pedreiro. Em III, \"não pedreiro\" obriga Heitor a ser vendedor. Em II, Geraldo não é encanador. Em I, Francisco não é mecânico. Letra C."
+  },
+  {
+   "id": "mat-imp-002",
+   "banca": "IADES",
+   "tema": "Implicação lógica",
+   "enunciado": "Se o Ten PM J. B. está de serviço de oficial-de-dia, então o Sgt PM B. J. não está de serviço de adjunto ao oficial-de-dia. Se o Sgt PM B. J. não está de serviço de adjunto ao oficial-de-dia, então o Sd PM J. J. não está na ronda ostensiva. Se o Sd PM J. J. não está na ronda ostensiva, então o cabo PM B. B. não está de motorista de dia.\nSe o cabo PM B. B. está de motorista de dia, é correto concluir que o",
+   "alternativas": [
+    [
+     "a",
+     "Sgt PM B. J. não está de serviço de adjunto ao oficial-de-dia"
+    ],
+    [
+     "b",
+     "Ten PM J. B. não está de serviço de oficial-de-dia"
+    ],
+    [
+     "c",
+     "Sd PM J. J. não está na ronda ostensiva"
+    ],
+    [
+     "d",
+     "Ten PM J. B. está de serviço de oficial-de-dia e o Sd PM J. J. não está na ronda ostensiva"
+    ],
+    [
+     "e",
+     "Ten PM J. B. está de serviço de oficial-de-dia"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Parta do fato: o cabo está de motorista. A última frase, pela contrapositiva, dá que o Sd está na ronda. A anterior dá que o Sgt está de adjunto. A primeira dá que o Ten não está de oficial-de-dia. Letra B."
+  },
+  {
+   "id": "mat-imp-003",
+   "banca": "FGV",
+   "tema": "Implicação lógica",
+   "enunciado": "Sabe-se que a sentença “Se a camisa é branca, então a calça é branca” é FALSA e a sentença “Se o sapato é preto, então a camisa não é branca” é VERDADEIRA.\nÉ correto concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "a camisa é branca, a calça não é branca e o sapato não é preto;"
+    ],
+    [
+     "b",
+     "a camisa é branca, a calça não é branca e o sapato é preto;"
+    ],
+    [
+     "c",
+     "a camisa não é branca, a calça é branca e o sapato não é preto;"
+    ],
+    [
+     "d",
+     "a camisa não é branca, a calça é branca e o sapato é preto;"
+    ],
+    [
+     "e",
+     "a camisa não é branca, a calça não é branca e o sapato é preto"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "A condicional falsa obriga a camisa branca (V) e a calça não branca (F). Na segunda, a camisa é branca, então \"camisa não é branca\" é F. Para a frase ser verdadeira, o sapato não pode ser preto. Letra A."
+  },
+  {
+   "id": "mat-imp-004",
+   "banca": "QUADRIX",
+   "tema": "Implicação lógica",
+   "enunciado": "1) Faço uma doação ou compro um carro.\n2) Se compro um carro, então não viajo de avião.\n3) Se viajo de avião, então vou para a Flórida.\n4) Se não viajo de avião, então assisto a filmes.\nConsiderando as afirmações lógicas acima, julgue o item.\nSe compro um carro, então não faço uma doação.",
+   "alternativas": [
+    [
+     "c",
+     "Certo"
+    ],
+    [
+     "e",
+     "Errado"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Errado. \"Faço doação ou compro carro\" permite as duas coisas juntas. Nada obriga a não doar quando compro o carro."
+  },
+  {
+   "id": "mat-imp-005",
+   "banca": "QUADRIX",
+   "tema": "Implicação lógica",
+   "enunciado": "1) Faço uma doação ou compro um carro.\n2) Se compro um carro, então não viajo de avião.\n3) Se viajo de avião, então vou para a Flórida.\n4) Se não viajo de avião, então assisto a filmes.\nConsiderando as afirmações lógicas acima, julgue o item.\nSe não faço uma doação, então assisto a filmes.",
+   "alternativas": [
+    [
+     "c",
+     "Certo"
+    ],
+    [
+     "e",
+     "Errado"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Certo. Se não faço doação, pela frase 1 compro o carro. Pela 2, não viajo de avião. Pela 4, assisto a filmes."
+  },
+  {
+   "id": "mat-imp-006",
+   "banca": "QUADRIX",
+   "tema": "Implicação lógica",
+   "enunciado": "1) Faço uma doação ou compro um carro.\n2) Se compro um carro, então não viajo de avião.\n3) Se viajo de avião, então vou para a Flórida.\n4) Se não viajo de avião, então assisto a filmes.\nConsiderando as afirmações lógicas acima, julgue o item.\nSe assisto a filmes, então compro um carro.",
+   "alternativas": [
+    [
+     "c",
+     "Certo"
+    ],
+    [
+     "e",
+     "Errado"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Errado. Assistir a filmes não obriga a comprar carro: posso não ter viajado por outro motivo e ter feito a doação."
+  },
+  {
+   "id": "mat-imp-007",
+   "banca": "QUADRIX",
+   "tema": "Implicação lógica",
+   "enunciado": "1) Faço uma doação ou compro um carro.\n2) Se compro um carro, então não viajo de avião.\n3) Se viajo de avião, então vou para a Flórida.\n4) Se não viajo de avião, então assisto a filmes.\nConsiderando as afirmações lógicas acima, julgue o item.\nSe viajo de avião, então faço uma doação.",
+   "alternativas": [
+    [
+     "c",
+     "Certo"
+    ],
+    [
+     "e",
+     "Errado"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Certo. Se viajo de avião, pela contrapositiva da 2 não compro carro. Pela 1, então faço a doação."
+  },
+  {
+   "id": "mat-imp-008",
+   "banca": "AOCP",
+   "tema": "Implicação lógica",
+   "enunciado": "Quatro aviões de transporte de passageiros, identificados por A, B, C e D, estão sobrevoando um aeroporto e aguardando uma mensagem da torre de comando, a qual informará em qual pista cada avião deve pousar. Na torre de comando, verificadas as variáveis para cada um dos aviões, foi constatado que:\n• se o avião A não deve pousar na pista 3, então o avião B não deve pousar na pista 2;\n• se o avião B não deve pousar na pista 2, então o avião C deve pousar na pista 3;\n• se o avião C deve pousar na pista 3, então o avião D não deve pousar na pista 1.\nApós analisar essas condicionais, a mensagem foi enviada para cada um dos aviões, sendo que, nessa mensagem, foi determinado que o avião D deve pousar na pista 1. Com base nessas informações, é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "o avião A não deve pousar na pista 3"
+    ],
+    [
+     "b",
+     "o avião A deve pousar na pista 1"
+    ],
+    [
+     "c",
+     "o avião B deve pousar na pista 2"
+    ],
+    [
+     "d",
+     "o avião A deve pousar na pista 2"
+    ],
+    [
+     "e",
+     "o avião B não deve pousar na pista 2"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "D pousa na pista 1. Pela contrapositiva da 3ª, C não pousa na 3. Pela 2ª, B pousa na 2. Letra C."
+  },
+  {
+   "id": "mat-imp-009",
+   "banca": "CEBRASPE",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere a situação hipotética seguinte, que aborda compreensão de estruturas lógicas.\nNo processo de manutenção de um computador, as seguintes afirmações são válidas:\np: se aumentar o tamanho da memória ou instalar um novo antivírus, então a velocidade da Internet aumentará;\nq: se a velocidade da Internet aumentar, então os aplicativos abrirão mais rapidamente.\nConcluída a manutenção, foi verificado que a velocidade da Internet não aumentou.\nNessa situação, é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "os aplicativos não abrirão mais rápido"
+    ],
+    [
+     "b",
+     "o tamanho da memória não foi aumentado e também não foi instalado um novo antivírus"
+    ],
+    [
+     "c",
+     "ou o tamanho da memória não foi aumentado ou um novo antivírus não foi instalado"
+    ],
+    [
+     "d",
+     "o tamanho da memória pode ter sido aumentado, mas um novo antivírus não foi instalado"
+    ],
+    [
+     "e",
+     "um novo antivírus pode ter sido instalado, mas o tamanho da memória não foi aumentado"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "A velocidade não aumentou. Pela contrapositiva de p, não aconteceu \"aumentar memória OU instalar antivírus\". Negar o \"ou\" dá: nem aumentou a memória, nem instalou antivírus. Letra B."
+  },
+  {
+   "id": "mat-imp-010",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "As afirmações a seguir são verdadeiras.\nI. Carlos é dentista ou é fisiologista.\nII. Carlos não é fisiologista ou é psicólogo.\nIII. Carlos é dentista ou é psicólogo.\nIV. Carlos não é psicólogo.\nA partir dessas afirmações, é verdade que Carlos é",
+   "alternativas": [
+    [
+     "a",
+     "apenas dentista"
+    ],
+    [
+     "b",
+     "apenas fisiologista"
+    ],
+    [
+     "c",
+     "dentista e psicólogo"
+    ],
+    [
+     "d",
+     "dentista e fisiologista"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "IV: não é psicólogo. II: então não é fisiologista. I: então é dentista. Ele é apenas dentista. Letra A."
+  },
+  {
+   "id": "mat-imp-011",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Se a temperatura cair, então precisarei me agasalhar. Se me agasalhar, então não poderei correr. Se puder correr, então não chegarei tarde. A temperatura caiu. Desse modo, é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "não corri e precisei me agasalhar"
+    ],
+    [
+     "b",
+     "corri e não cheguei tarde"
+    ],
+    [
+     "c",
+     "não corri e não precisei me agasalhar"
+    ],
+    [
+     "d",
+     "cheguei tarde e precisei me agasalhar"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "A temperatura caiu, então precisei me agasalhar. Agasalhado, não pude correr. Sobre chegar tarde, nada se sabe. Letra A."
+  },
+  {
+   "id": "mat-imp-012",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Se o meu salário aumentar, então ou comprarei uma bicicleta ou comprarei uma moto. O meu salário aumentou. Então é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "se comprei a bicicleta, então não comprei a moto"
+    ],
+    [
+     "b",
+     "se não comprei a moto, então não comprei a bicicleta"
+    ],
+    [
+     "c",
+     "comprei a moto e comprei a bicicleta"
+    ],
+    [
+     "d",
+     "não comprei a bicicleta e não comprei a moto"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "O salário aumentou, então \"ou bicicleta ou moto\" (só uma das duas) é verdadeira. Se comprei a bicicleta, não comprei a moto. Letra A."
+  },
+  {
+   "id": "mat-imp-013",
+   "banca": "FEPESE",
+   "tema": "Implicação lógica",
+   "enunciado": "Se Gisele não é persistente e José é ousado, então Tiago é trapaceiro. Se Tiago é trapaceiro, então Beatriz não é bonita. Sabe-se que Beatriz é bonita.\nLogo, podemos afirmar, corretamente, que:",
+   "alternativas": [
+    [
+     "a",
+     "Tiago é trapaceiro"
+    ],
+    [
+     "b",
+     "Gisele não é persistente"
+    ],
+    [
+     "c",
+     "Gisele não é persistente e José é ousado"
+    ],
+    [
+     "d",
+     "Gisele é persistente e José não é ousado"
+    ],
+    [
+     "e",
+     "Gisele é persistente ou José não é ousado"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Beatriz é bonita, então Tiago não é trapaceiro (contrapositiva). Então \"Gisele não é persistente e José é ousado\" é falsa. Negar o \"e\": Gisele é persistente ou José não é ousado. Letra E."
+  },
+  {
+   "id": "mat-imp-014",
+   "banca": "FEPESE",
+   "tema": "Implicação lógica",
+   "enunciado": "Se ventou no fim de semana, então João e José surfaram. Porém, se choveu no fim de semana, então João não surfou. Ora, sabe-se que João não surfou.\nLogo, podemos afirmar corretamente que:",
+   "alternativas": [
+    [
+     "a",
+     "Ventou e não choveu no fim de semana"
+    ],
+    [
+     "b",
+     "Não ventou no fim de semana"
+    ],
+    [
+     "c",
+     "Choveu no fim de semana"
+    ],
+    [
+     "d",
+     "Choveu e não ventou no fim de semana"
+    ],
+    [
+     "e",
+     "Não choveu e não ventou no fim de semana"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "João não surfou, então \"João e José surfaram\" é falsa. Pela contrapositiva da 1ª, não ventou. A chuva fica indefinida. Letra B."
+  },
+  {
+   "id": "mat-imp-015",
+   "banca": "FEPESE",
+   "tema": "Implicação lógica",
+   "enunciado": "Se Rafael é alto e Antônio não é pessimista, então Joana é produtiva. Se Joana é produtiva, então Marta é trabalhadora. Sabe-se que Marta não é trabalhadora.\nLogo, podemos concluir, corretamente, que:",
+   "alternativas": [
+    [
+     "a",
+     "Rafael é alto e Antônio não é pessimista"
+    ],
+    [
+     "b",
+     "Rafael não é alto ou Antônio é pessimista"
+    ],
+    [
+     "c",
+     "Rafael não é alto e Antônio é pessimista"
+    ],
+    [
+     "d",
+     "Rafael não é alto"
+    ],
+    [
+     "e",
+     "Antônio é pessimista"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Marta não é trabalhadora, então Joana não é produtiva. Então \"Rafael é alto e Antônio não é pessimista\" é falsa. Negar o \"e\": Rafael não é alto ou Antônio é pessimista. Letra B."
+  },
+  {
+   "id": "mat-imp-016",
+   "banca": "IBADE",
+   "tema": "Implicação lógica",
+   "enunciado": "Se a parede não é branca, então o cachorro late. Se a parede é branca então o canário não canta. Ora, o canário canta. Logo:",
+   "alternativas": [
+    [
+     "a",
+     "a parede não é branca e o cachorro não late"
+    ],
+    [
+     "b",
+     "a parede não é branca e o cachorro late"
+    ],
+    [
+     "c",
+     "a parede é branca e o cachorro não late"
+    ],
+    [
+     "d",
+     "a parede é branca e o cachorro late"
+    ],
+    [
+     "e",
+     "se o canário canta então o cachorro não late"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "O canário canta, então a parede não é branca (contrapositiva da 2ª). Pela 1ª, o cachorro late. Letra B."
+  },
+  {
+   "id": "mat-imp-017",
+   "banca": "IBADE",
+   "tema": "Implicação lógica",
+   "enunciado": "Como ou durmo. Bebo ou não como. Jogo ou não durmo. Ora, não jogo. Portanto:",
+   "alternativas": [
+    [
+     "a",
+     "não bebo e como"
+    ],
+    [
+     "b",
+     "durmo e bebo"
+    ],
+    [
+     "c",
+     "como e bebo"
+    ],
+    [
+     "d",
+     "durmo e não bebo"
+    ],
+    [
+     "e",
+     "não jogo e não bebo"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Não jogo. Em \"jogo ou não durmo\", então não durmo. Em \"como ou durmo\", então como. Em \"bebo ou não como\", então bebo. Letra C."
+  },
+  {
+   "id": "mat-imp-018",
+   "banca": "IBADE",
+   "tema": "Implicação lógica",
+   "enunciado": "Ana é irmã da Bruna ou é amiga da Cláudia. Ana é prima da Dani ou não é irmã da Bruna. Ana é amiga da Fernanda ou não é amiga da Cláudia. Se Ana não é amiga da Fernanda, então:",
+   "alternativas": [
+    [
+     "a",
+     "Ana é irmã da Bruna e prima da Dani"
+    ],
+    [
+     "b",
+     "Ana não é prima da Dani e é amiga da Bruna"
+    ],
+    [
+     "c",
+     "Ana é amiga da Fernanda e amiga da Cláudia"
+    ],
+    [
+     "d",
+     "Ana é amiga da Cláudia e não é irmã da Bruna"
+    ],
+    [
+     "e",
+     "Ana é prima da Fernanda e é irmã da Dani"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Ana não é amiga da Fernanda. Pela 3ª, não é amiga da Cláudia. Pela 1ª, é irmã da Bruna. Pela 2ª, é prima da Dani. Letra A."
+  },
+  {
+   "id": "mat-imp-019",
+   "banca": "FCC",
+   "tema": "Implicação lógica",
+   "enunciado": "Em um circo, todo trapezista é também malabarista. Sabendo que, nesse circo, se um artista é contorcionista e não é equilibrista, então ele não é malabarista, é correto concluir que se um artista é trapezista, então ele",
+   "alternativas": [
+    [
+     "a",
+     "não é contorcionista nem equilibrista"
+    ],
+    [
+     "b",
+     "não é malabarista"
+    ],
+    [
+     "c",
+     "é equilibrista ou não é contorcionista"
+    ],
+    [
+     "d",
+     "é equilibrista ou contorcionista"
+    ],
+    [
+     "e",
+     "é malabarista e não é equilibrista"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Trapezista é malabarista. Malabarista não pode ser \"contorcionista e não equilibrista\" (contrapositiva). Negar esse \"e\" dá: é equilibrista ou não é contorcionista. Letra C."
+  },
+  {
+   "id": "mat-imp-020",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere verdadeiras as afirmações:\nI. Felipe não é humorista.\nII. Se André é estudioso, então Bruno não é atleta.\nIII. Se Bruno não é atleta, então Carla é atriz.\nIV. Se Débora é cantora, então Carla não é atriz.\nV. Se Enzo é escritor, então André é estudioso.\nVI. Se Débora não é cantora, então Felipe é humorista.\nA partir dessas informações, é verdade que",
+   "alternativas": [
+    [
+     "a",
+     "André é estudioso"
+    ],
+    [
+     "b",
+     "Carla é atriz"
+    ],
+    [
+     "c",
+     "Débora não é cantora"
+    ],
+    [
+     "d",
+     "Bruno não é atleta"
+    ],
+    [
+     "e",
+     "Enzo não é escritor"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Comece pela simples: Felipe não é humorista. Pela VI, Débora é cantora. Pela IV, Carla não é atriz. Pela III, Bruno é atleta. Pela II, André não é estudioso. Pela V, Enzo não é escritor. Letra E."
+  },
+  {
+   "id": "mat-imp-021",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Sabe-se que as proposições “Se João é estudioso, então João passou na prova” e “João é estudioso” são verdadeiras. Disso, pode-se concluir que é verdade que:",
+   "alternativas": [
+    [
+     "a",
+     "João não fez a prova"
+    ],
+    [
+     "b",
+     "João não passou na prova"
+    ],
+    [
+     "c",
+     "João passou na prova"
+    ],
+    [
+     "d",
+     "João não é estudioso e passou na prova"
+    ],
+    [
+     "e",
+     "João não é estudioso"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Modus ponens: a condição (João é estudioso) aconteceu, então a consequência também. João passou na prova. Letra C."
+  },
+  {
+   "id": "mat-imp-022",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as seguintes proposições verdadeiras:\nI. Se Paulo estuda, então a prova foi fácil.\nII. A prova foi fácil.\nDisso, pode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "A proposição “Paulo estuda” é obrigatoriamente verdadeira"
+    ],
+    [
+     "b",
+     "A proposição “Paulo estuda” é obrigatoriamente falsa"
+    ],
+    [
+     "c",
+     "A proposição “Paulo estuda” pode ser ou verdadeira ou falsa"
+    ],
+    [
+     "d",
+     "A proposição “Paulo estuda” se trata de um exemplo de tautologia"
+    ],
+    [
+     "e",
+     "A proposição “Paulo estuda” se trata de um exemplo de contradição"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "A consequência ser verdadeira não diz nada sobre a condição. \"Paulo estuda\" pode ser V ou F. Letra C."
+  },
+  {
+   "id": "mat-imp-023",
+   "banca": "IDIB",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as seguintes afirmativas:\nI.Se Pedro é alto, então Daniel é baixo.\nII.Se Daniel é baixo, então Rafael é forte.\nIII.Se Rafael é forte, então Michelle foi aprovada.\nIV.Michelle não foi aprovada.\nPortanto, é valido concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Pedro é alto"
+    ],
+    [
+     "b",
+     "Daniel é baixo"
+    ],
+    [
+     "c",
+     "Rafael não é forte e Daniel não é baixo"
+    ],
+    [
+     "d",
+     "Rafael é forte e Pedro é alto"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Michelle não foi aprovada. Pela contrapositiva da III, Rafael não é forte. Pela II, Daniel não é baixo. Pela I, Pedro não é alto. Letra C."
+  },
+  {
+   "id": "mat-imp-024",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Se fulano é interessado e trabalhador, então ele é bem- sucedido. Se sicrano é desonesto e preguiçoso, então ele não é bemsucedido. Sabe-se que fulano e sicrano são bem-sucedidos. Logo, é verdade que",
+   "alternativas": [
+    [
+     "a",
+     "sicrano é honesto e trabalhador"
+    ],
+    [
+     "b",
+     "fulano é interessado e trabalhador"
+    ],
+    [
+     "c",
+     "sicrano é honesto ou não é preguiçoso"
+    ],
+    [
+     "d",
+     "fulano e sicrano são trabalhadores"
+    ],
+    [
+     "e",
+     "fulano e sicrano são honestos"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Sicrano é bem-sucedido, então \"desonesto e preguiçoso\" é falsa. Negar o \"e\": sicrano é honesto ou não é preguiçoso. Sobre fulano, nada se conclui. Letra C."
+  },
+  {
+   "id": "mat-imp-025",
+   "banca": "CEBRASPE",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere que as seguintes proposições sejam verdadeiras.\nP: “Se o processo foi relatado e foi assinado, então ele foi discutido em reunião”.\nQ: “Se o processo não foi relatado, então ele não foi assinado”.\nCom base nessas informações, julgue o item a seguir.\nA proposição “Se o processo não foi discutido em reunião, então ele não foi assinado” é verdadeira.",
+   "alternativas": [
+    [
+     "c",
+     "Certo"
+    ],
+    [
+     "e",
+     "Errado"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Certo. Se não foi discutido, por P não foi \"relatado e assinado\". Se foi relatado, então não foi assinado. Se não foi relatado, por Q também não foi assinado. Nos dois casos, não foi assinado."
+  },
+  {
+   "id": "mat-imp-026",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se João estuda, então João passou na prova é uma proposição verdadeira. Sabe-se que João não passou na prova, logo:",
+   "alternativas": [
+    [
+     "a",
+     "João estudou"
+    ],
+    [
+     "b",
+     "João não estudou"
+    ],
+    [
+     "c",
+     "João mora em Sananduva"
+    ],
+    [
+     "d",
+     "João faz vários concursos públicos"
+    ],
+    [
+     "e",
+     "João não é servidor público"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Modus tollens: a consequência (passar) não aconteceu, então a condição (estudar) também não. Letra B."
+  },
+  {
+   "id": "mat-imp-027",
+   "banca": "CEBRASPE",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as seguintes proposições.\n• P: \"Se Paulo é fiscal, então João é motorista.\"\n• Q: \"Maria é enfermeira ou João é motorista.\" Sabendo-se que a proposição P é verdadeira e que a proposição Q é falsa, é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Maria não é enfermeira, João não é motorista e Paulo não é fiscal"
+    ],
+    [
+     "b",
+     "Maria não é enfermeira, João é motorista e Paulo é fiscal"
+    ],
+    [
+     "c",
+     "Maria é enfermeira, João não é motorista e Paulo não é fiscal"
+    ],
+    [
+     "d",
+     "Maria é enfermeira, João não é motorista e Paulo é fiscal"
+    ],
+    [
+     "e",
+     "Maria não é enfermeira, João não é motorista e Paulo é fiscal"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Q falsa: o \"ou\" só é falso com tudo F, então Maria não é enfermeira e João não é motorista. P verdadeira com \"João motorista\" F obriga Paulo a não ser fiscal. Letra A."
+  },
+  {
+   "id": "mat-imp-028",
+   "banca": "CEBRASPE",
+   "tema": "Implicação lógica",
+   "enunciado": "Paulo, Pedro e João têm, cada um, uma única profissão.\nSabe-se que:\n• se Paulo é pedreiro, então Pedro não é porteiro;\n• se Pedro não é porteiro, então João é encanador.\nCom base nessas informações, sabendo-se que João não é encanador, conclui-se que",
+   "alternativas": [
+    [
+     "a",
+     "Pedro é porteiro e Paulo não é pedreiro"
+    ],
+    [
+     "b",
+     "Pedro é porteiro e Paulo é pedreiro"
+    ],
+    [
+     "c",
+     "Pedro não é porteiro e Paulo é pedreiro"
+    ],
+    [
+     "d",
+     "Pedro não é porteiro, mas não se sabe se Paulo é ou não pedreiro"
+    ],
+    [
+     "e",
+     "Pedro é porteiro, mas não se sabe se Paulo é ou não pedreiro"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "João não é encanador. Pela contrapositiva da 2ª, Pedro é porteiro. Pela 1ª, Paulo não é pedreiro. Letra A."
+  },
+  {
+   "id": "mat-imp-029",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as afirmações e seus respectivos valores lógicos.\nI. Se Paulo é a favor do projeto, então Roberto não é. VERDADEIRA.\nII. Se Sócrates é a favor do projeto, então Tadeu é. VERDADEIRA.\nIII. Paulo não é a favor do projeto e Uriel é. FALSA.\nIV. Virgílio é a favor do projeto e Tadeu é. FALSA.\nV. Sócrates é a favor do projeto e Roberto é. VERDADEIRA.\nA partir dessas informações é verdadeira a proposição:",
+   "alternativas": [
+    [
+     "a",
+     "Se Virgílio não é a favor do projeto, então Paulo é"
+    ],
+    [
+     "b",
+     "Se Uriel é a favor do projeto, então Virgílio é"
+    ],
+    [
+     "c",
+     "Tadeu é a favor do projeto e Paulo é"
+    ],
+    [
+     "d",
+     "Se Roberto é a favor do projeto, então Uriel é"
+    ],
+    [
+     "e",
+     "Se Uriel não é a favor do projeto, então Tadeu não é"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "V é \"e\" verdadeiro: Sócrates e Roberto são a favor. I: Paulo não é. II: Tadeu é. IV falsa com Tadeu V: Virgílio não é. III falsa com \"Paulo não é\" V: Uriel não é. B: Uriel (F) → Virgílio (F) = V. Letra B."
+  },
+  {
+   "id": "mat-imp-030",
+   "banca": "IBADE",
+   "tema": "Implicação lógica",
+   "enunciado": "Observe as pro posições compostas abaixo:\nI – Carlos é amigo de Caio e irmão de Clara;\nII – Se Carlos é amigo de Caio, então é irmão de Clara;\nIII – Caio é primo de Charles e colega de Clara.\nSabe-se que o valor lógico das proposições I e II é F (falso) e o valor lógico da proposição III é V (verdadeiro). Com base nestas informações, é correto afirmar que:",
+   "alternativas": [
+    [
+     "a",
+     "Carlos é amigo de Caio e Caio não é colega de Clara"
+    ],
+    [
+     "b",
+     "Carlos não é amigo de Caio e irmão de Clara"
+    ],
+    [
+     "c",
+     "Carlos é irmão de Clara"
+    ],
+    [
+     "d",
+     "Carlos é amigo de Caio e Caio é colega de Clara"
+    ],
+    [
+     "e",
+     "Caio não é primo de Charles"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "II falsa: Carlos é amigo de Caio e não é irmão de Clara. III verdadeira: Caio é primo de Charles e colega de Clara. Então \"Carlos é amigo de Caio e Caio é colega de Clara\" é V. Letra D."
+  },
+  {
+   "id": "mat-imp-031",
+   "banca": "IDIB",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere que as duas afirmações a seguir são falsas:\nI. Se André é cantor, então Bruna é bailarina.\nII. Bruna não é bailarina e Carlos é pintor.\nAnalisando as duas proposições, é possível concluir corretamente que",
+   "alternativas": [
+    [
+     "a",
+     "Bruna é bailarina"
+    ],
+    [
+     "b",
+     "Carlos é pintor"
+    ],
+    [
+     "c",
+     "André não é cantor"
+    ],
+    [
+     "d",
+     "André é cantor"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "I falsa (V → F): André é cantor e Bruna não é bailarina. Letra D."
+  },
+  {
+   "id": "mat-imp-032",
+   "banca": "FUNCERN",
+   "tema": "Implicação lógica",
+   "enunciado": "As seguintes afirmativas são falsas: “se o prédio é alto, então a casa é feia”, e “o cachorro é esperto ou o gato é dorminhoco”, então",
+   "alternativas": [
+    [
+     "a",
+     "o prédio é alto, a casa é feia, o cachorro é esperto e o gato é dorminhoco"
+    ],
+    [
+     "b",
+     "o prédio é alto, a casa não é feia, o cachorro é esperto e o gato não é dorminhoco"
+    ],
+    [
+     "c",
+     "o prédio é alto, a casa não é feia, o cachorro não é esperto e o gato não é dorminhoco"
+    ],
+    [
+     "d",
+     "o prédio não é alto, a casa é feia, o cachorro é esperto e o gato é dorminhoco"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Condicional falsa: o prédio é alto e a casa não é feia. \"Ou\" falso: o cachorro não é esperto e o gato não é dorminhoco. Letra C."
+  },
+  {
+   "id": "mat-imp-033",
+   "banca": "IDIB",
+   "tema": "Implicação lógica",
+   "enunciado": "Caso amanhã seja sábado, hoje meu neto dormirá mais tarde. Ora, amanhã será sábado. Então é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "meu neto não dormirá"
+    ],
+    [
+     "b",
+     "meu neto dormirá mais tarde hoje"
+    ],
+    [
+     "c",
+     "é capaz de meu neto dormir mais tarde hoje"
+    ],
+    [
+     "d",
+     "meu neto somente dorme tarde na véspera de sábado"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Modus ponens: amanhã será sábado, então hoje o neto dormirá mais tarde. Letra B."
+  },
+  {
+   "id": "mat-imp-034",
+   "banca": "IDIB",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as seguintes afirmações:\nI. Se eu treinar, então eu não vou perder.\nII. Ou eu descanso, ou eu treino.\nIII. Eu perdi.\nPortanto, podemos concluir que",
+   "alternativas": [
+    [
+     "a",
+     "eu treinei"
+    ],
+    [
+     "b",
+     "eu descansei"
+    ],
+    [
+     "c",
+     "eu descansei e também treinei"
+    ],
+    [
+     "d",
+     "eu treinei, e não perdi"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Eu perdi, então não treinei (contrapositiva da I). Em \"ou descanso, ou treino\", então descansei. Letra B."
+  },
+  {
+   "id": "mat-imp-035",
+   "banca": "IDIB",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere que todas as afirmações a seguir são verdadeiras:\nI. Ana é bonita.\nII. Se Carlos usa boné, então Bruno é pequeno.\nIII. Se Bruno é pequeno, então Ana não é bonita.\nIV. Ou Carlos usa boné, ou Duda come chocolate.\nPode-se concluir corretamente que",
+   "alternativas": [
+    [
+     "a",
+     "Bruno é pequeno"
+    ],
+    [
+     "b",
+     "Duda come chocolate"
+    ],
+    [
+     "c",
+     "Carlos usa boné"
+    ],
+    [
+     "d",
+     "Ana não é bonita"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Ana é bonita. Pela III, Bruno não é pequeno. Pela II, Carlos não usa boné. Pela IV, Duda come chocolate. Letra B."
+  },
+  {
+   "id": "mat-imp-036",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as afirmações e a atribuição de seus respectivos valores lógicos.\nI. Tiago foi à escola ou Denise ficou dormindo. Afirmação VERDADEIRA.\nII. Fernando praticou natação, e Juliana fez a lição de casa. Afirmação FALSA.\nIII. Caio não foi trabalhar ou Tiago não foi à escola. Afirmação VERDADEIRA.\nIV. Se Marcos estava doente, então Denise ficou dormindo. Afirmação FALSA.\nV. Ou Caio não foi trabalhar ou Juliana não fez a lição de casa. Afirmação VERDADEIRA.\nA partir dessas informações, é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Juliana não fez a lição de casa ou Fernando praticou natação"
+    ],
+    [
+     "b",
+     "Tiago foi à escola, e Marcos não estava doente"
+    ],
+    [
+     "c",
+     "Ou Denise não ficou dormindo ou Fernando não praticou natação"
+    ],
+    [
+     "d",
+     "Juliana fez a lição de casa ou Denise ficou dormindo"
+    ],
+    [
+     "e",
+     "Se Tiago foi à escola, então Caio foi trabalhar"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "IV falsa: Marcos estava doente e Denise não dormiu. I: Tiago foi à escola. III: Caio não foi trabalhar. V (ou… ou…): Juliana fez a lição. II falsa: Fernando não nadou. D: \"Juliana fez ou Denise dormiu\" = V ou F = V. Letra D."
+  },
+  {
+   "id": "mat-imp-037",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as seguintes hipóteses:\nNego que Pedro é advogado ou vereador. Mas se Pedro assinou o contrato, então Pedro é advogado.\nDeduzimos que:",
+   "alternativas": [
+    [
+     "a",
+     "Pedro é vereador"
+    ],
+    [
+     "b",
+     "Pedro é vereador e assinou o contrato"
+    ],
+    [
+     "c",
+     "Pedro é vereador e não assinou o contrato"
+    ],
+    [
+     "d",
+     "Pedro não é vereador e assinou o contrato"
+    ],
+    [
+     "e",
+     "Pedro não é vereador e não assinou o contrato"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "\"Nego que Pedro é advogado ou vereador\": ele não é nenhum dos dois. Pela contrapositiva da 2ª, não sendo advogado, não assinou o contrato. Letra E."
+  },
+  {
+   "id": "mat-imp-038",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Analise as quatro afirmações abaixo, sabendo que a primeira delas é FALSA e as demais são VERDADEIRAS, e assinale a alternativa correta.\n∙ Cláudio é jogador ou Márcia não é psiquiatra.\n∙ Se Marcelo é bancário, então Cláudio não é jogador.\n∙ Ou Paulo é médico, ou Márcia é psiquiatra, mas não ambos.\n∙ Cláudio é jogador ou Fábio é engenheiro.",
+   "alternativas": [
+    [
+     "a",
+     "Fábio não é engenheiro ou Márcia não é psiquiatra"
+    ],
+    [
+     "b",
+     "Marcelo é bancário ou Fábio é engenheiro"
+    ],
+    [
+     "c",
+     "Márcia é psiquiatra e Marcelo não é bancário"
+    ],
+    [
+     "d",
+     "Paulo é médico e Fábio não é engenheiro"
+    ],
+    [
+     "e",
+     "Se Cláudio não é jogador, então Paulo é médico"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "A 1ª é falsa: Cláudio não é jogador e Márcia é psiquiatra. Pela 3ª, Paulo não é médico. Pela 4ª, Fábio é engenheiro. Então \"Marcelo é bancário ou Fábio é engenheiro\" é V. Letra B."
+  },
+  {
+   "id": "mat-imp-039",
+   "banca": "FCC",
+   "tema": "Implicação lógica",
+   "enunciado": "Sempre que eu passo na frente da casa de Rosa, o cão late. Se o cão late, então o gato mia, o bebê chora e o guarda apita.\nQuando o bebê chora e a babá não está em casa, a mãe não dorme. Se a mãe dorme e a babá não está em casa, então",
+   "alternativas": [
+    [
+     "a",
+     "não passo na casa de Rosa e o guarda não apita"
+    ],
+    [
+     "b",
+     "o cão não late e o guarda não apita"
+    ],
+    [
+     "c",
+     "não passo na casa de Rosa e o cão não late"
+    ],
+    [
+     "d",
+     "passo na casa de Rosa e o gato não mia"
+    ],
+    [
+     "e",
+     "o cão não late e o gato não mia"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "A mãe dorme e a babá não está. Se o bebê chorasse, a mãe não dormiria; então o bebê não chorou. Então o cão não latiu. Então não passei na casa de Rosa. Letra C."
+  },
+  {
+   "id": "mat-imp-041",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se Joana é alta então Marcos é baixo. Se Marcos é baixo então Pedro é atleta. Se Pedro é atleta então Maria passa na prova.\nSabe-se que Maria não passa na prova. Portanto, é válido concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Pedro é atleta e Marcos é baixo"
+    ],
+    [
+     "b",
+     "Pedro não é atleta e Joana não é alta"
+    ],
+    [
+     "c",
+     "Maria passa na prova e Pedro não é atleta"
+    ],
+    [
+     "d",
+     "Marcos é baixo"
+    ],
+    [
+     "e",
+     "Joana é alta"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Maria não passa. Pela contrapositiva da 3ª, Pedro não é atleta. Pela 2ª, Marcos não é baixo. Pela 1ª, Joana não é alta. Letra B."
+  },
+  {
+   "id": "mat-imp-042",
+   "banca": "QUADRIX",
+   "tema": "Implicação lógica",
+   "enunciado": "No departamento de material gráfico de uma faculdade, há, entre outras, as seguintes regras:\n- Se for utilizada a impressora A, então a impressão é colorida.\n- Se o material não for destinado a marketing, a impressão não pode ser colorida.\nDeterminado material não é destinado a marketing; então, necessariamente:",
+   "alternativas": [
+    [
+     "a",
+     "a impressão é colorida"
+    ],
+    [
+     "b",
+     "a impressão pode ser colorida"
+    ],
+    [
+     "c",
+     "é utilizada a impressora A"
+    ],
+    [
+     "d",
+     "não é utilizada a impressora A"
+    ],
+    [
+     "e",
+     "a impressão não pode ser colorida, e é utilizada a impressora A"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "O material não é de marketing, então a impressão não é colorida. Pela contrapositiva da 1ª, não foi usada a impressora A. Letra D."
+  },
+  {
+   "id": "mat-imp-043",
+   "banca": "QUADRIX",
+   "tema": "Implicação lógica",
+   "enunciado": "Amanda está planejando o próximo passo de sua carreira. Ela sabe que receberá um aumento se, e somente se, fizer uma pósgraduação ou obtiver um certificado de proficiência em alguma língua. Pode-se afirmar certamente que:",
+   "alternativas": [
+    [
+     "a",
+     "se Amanda não recebeu um aumento, então ela não fez pós-graduação"
+    ],
+    [
+     "b",
+     "se Amanda recebeu um aumento, então ela fez pós-graduação"
+    ],
+    [
+     "c",
+     "se Amanda recebeu um aumento, então ela fez pós-graduação e obteve um certificado de proficiência em alguma língua"
+    ],
+    [
+     "d",
+     "se Amanda obteve um certificado de proficiência em alguma língua, então ela fez pós-graduação"
+    ],
+    [
+     "e",
+     "se Amanda não recebeu um aumento, então ela obteve um certificado de proficiência em outra língua"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Aumento ↔ (pós ou certificado). Sem aumento, nem pós nem certificado. Então, se não recebeu aumento, não fez pós. Letra A."
+  },
+  {
+   "id": "mat-imp-044",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Se o dia está quente, então estou de camiseta. Ou estou de camiseta ou estou de meia. Se estou de meia, então estou de gravata. O dia está quente se, e somente se, não estou de sapato. O dia não está quente e não estou de gravata, logo",
+   "alternativas": [
+    [
+     "a",
+     "não estou de camiseta e não estou de meia, mas estou de sapato"
+    ],
+    [
+     "b",
+     "não estou de camiseta, mas estou de sapato e estou de meia"
+    ],
+    [
+     "c",
+     "estou de sapato e camiseta, mas não estou de meia"
+    ],
+    [
+     "d",
+     "não estou de sapato, não estou de meia e não estou de camiseta"
+    ],
+    [
+     "e",
+     "estou de sapato, estou de meia e estou de camiseta"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Sem gravata, não estou de meia (contrapositiva). Em \"ou camiseta ou meia\", então estou de camiseta. O dia não está quente e \"quente ↔ não estou de sapato\", então estou de sapato. Letra C."
+  },
+  {
+   "id": "mat-imp-045",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as afirmações e seus respectivos valores lógicos.\nI. Se Ana é bonita, então Beatriz é simpática. Afirmação FALSA.\nII. Beatriz é simpática ou Cláudia é orgulhosa. Afirmação VERDADEIRA.\nIII. Se Ester é humilde, então Daniela é arrogante. Afirmação FALSA.\nA partir dessas afirmações e seus respectivos valores lógicos, é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "Ana é bonita e Cláudia não é orgulhosa"
+    ],
+    [
+     "b",
+     "Beatriz é simpática e Daniela não é arrogante"
+    ],
+    [
+     "c",
+     "Ester não é humilde e Ana é bonita"
+    ],
+    [
+     "d",
+     "Ana é bonita e Ester é humilde"
+    ],
+    [
+     "e",
+     "Daniela é arrogante e Beatriz é simpática"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "I falsa: Ana é bonita e Beatriz não é simpática. III falsa: Ester é humilde e Daniela não é arrogante. Letra D."
+  },
+  {
+   "id": "mat-imp-046",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as afirmações e o respectivo valor lógico atribuído a cada uma delas.\nI. Aldo é bravo ou Beto é tranquilo. Afirmação VERDADEIRA.\nII. Carlos não é dorminhoco e Duda é ligeiro. Afirmação FALSA.\nIII. Beto é tranquilo e Enzo não é calado. Afirmação FALSA.\nIV. Se Duda é ligeiro, então Enzo é calado. Afirmação FALSA.\nA partir dessas informações, é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "Beto é tranquilo"
+    ],
+    [
+     "b",
+     "Carlos é dorminhoco"
+    ],
+    [
+     "c",
+     "Aldo não é bravo"
+    ],
+    [
+     "d",
+     "Enzo é calado"
+    ],
+    [
+     "e",
+     "Duda não é ligeiro"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "IV falsa: Duda é ligeiro e Enzo não é calado. II falsa com \"Duda é ligeiro\" V: a outra parte é F, então Carlos é dorminhoco. Letra B."
+  },
+  {
+   "id": "mat-imp-047",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as afirmações a seguir e os respectivos valores lógicos atribuídos a cada uma.\nI. Francisco é pragmático e Geraldo é indeciso. Afirmação FALSA.\nII. Geraldo não é indeciso ou Humberto é enfático. Afirmação VERADADEIRA.\nIII. Se Ítalo não é confuso, então Geraldo não é indeciso. Afirmação FALSA.\nIV. Jairo é confiante ou Francisco não é pragmático. Afirmação VERDADEIRA.\nV. Se Humberto é enfático, então Jairo não é confiante. Afirmação FALSA.\nA partir dessas informações é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Jairo não é confiante"
+    ],
+    [
+     "b",
+     "Geraldo não é indeciso"
+    ],
+    [
+     "c",
+     "Humberto é enfático"
+    ],
+    [
+     "d",
+     "Francisco é pragmático"
+    ],
+    [
+     "e",
+     "Ítalo é confuso"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "V falsa: Humberto é enfático e Jairo é confiante. Letra C. (III falsa também mostra que Ítalo não é confuso.)"
+  },
+  {
+   "id": "mat-imp-048",
+   "banca": "IAUPE",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as seguintes afirmações:\nI. Se Antônio nasceu na Alemanha ou se José é brasileiro, então o edital é válido, e os documentos estão em ordem.\nII. Se Antônio ou José tem acesso ao prédio, então José é brasileiro.\nIII. Os documentos NÃO estão em ordem Nessas condições, pode-se logicamente concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Antônio tem acesso ao prédio"
+    ],
+    [
+     "b",
+     "Antônio não tem acesso ao prédio"
+    ],
+    [
+     "c",
+     "o edital é válido"
+    ],
+    [
+     "d",
+     "o edital não é válido"
+    ],
+    [
+     "e",
+     "José é brasileiro"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Os documentos não estão em ordem, então a consequência de I é falsa. Então \"Antônio nasceu na Alemanha ou José é brasileiro\" é falsa: José não é brasileiro. Pela II, nem Antônio nem José têm acesso. Letra B."
+  },
+  {
+   "id": "mat-imp-049",
+   "banca": "IAUPE",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as seguintes afirmações:\nA) Se eu estudar, então não sou reprovado.\nB) Ou eu jogo, ou eu estudo.\nC) Eu fui reprovado.\nNessas condições, é possível concluir logicamente que",
+   "alternativas": [
+    [
+     "a",
+     "eu joguei"
+    ],
+    [
+     "b",
+     "eu estudei"
+    ],
+    [
+     "c",
+     "eu estudei e também joguei"
+    ],
+    [
+     "d",
+     "eu nem joguei nem estudei"
+    ],
+    [
+     "e",
+     "eu estudei, mas não joguei"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Fui reprovado, então não estudei (contrapositiva da A). Em \"ou jogo, ou estudo\", então joguei. Letra A."
+  },
+  {
+   "id": "mat-imp-050",
+   "banca": "IAUPE",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as seguintes afirmações:\nI. Se o email foi enviado e se o destinatário leu o email, então o processo foi finalizado ou o documento foi validado (ou ambos).\nII. Se o email não foi enviado, então o supervisor será advertido.\nIII. Se o destinatário não leu o email, então o supervisor será advertido.\nIV. O processo não foi finalizado.\nV. O documento foi invalidado.\nNessas condições, pode-se logicamente concluir que o",
+   "alternativas": [
+    [
+     "a",
+     "supervisor será advertido"
+    ],
+    [
+     "b",
+     "supervisor não será advertido"
+    ],
+    [
+     "c",
+     "email não foi enviado"
+    ],
+    [
+     "d",
+     "edital foi enviado"
+    ],
+    [
+     "e",
+     "destinatário leu o email"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "O processo não foi finalizado e o documento não foi validado, então a consequência de I é falsa. Então não ocorreu \"enviado e lido\": ou não foi enviado, ou não foi lido. Pela II ou pela III, o supervisor será advertido. Letra A."
+  },
+  {
+   "id": "mat-imp-051",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as afirmações e o respectivo valor lógico atribuído a cada uma delas.\nI. Ada é alegre e Bete é amigável. Afirmação FALSA.\nII. Carla é faladora ou Dina é compreensiva. Afirmação VERDADEIRA.\nIII. Se Ada é alegre, então Dina é compreensiva. Afirmação FALSA.\nIV. Bete é amigável ou Elen é calada. Afirmação VERDADEIRA.\nA partir dessas informações é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "Bete é amigável"
+    ],
+    [
+     "b",
+     "Dina é compreensiva"
+    ],
+    [
+     "c",
+     "Elen é calada"
+    ],
+    [
+     "d",
+     "Ada não é alegre"
+    ],
+    [
+     "e",
+     "Carla não é faladora"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "III falsa: Ada é alegre e Dina não é compreensiva. I falsa com Ada alegre: Bete não é amigável. IV: então Elen é calada. Letra C."
+  },
+  {
+   "id": "mat-imp-052",
+   "banca": "AOCP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere como sendo verdadeira a afirmação: “Se Wedson é perito criminal, ele é médico.”. Considere, também, como falsa a afirmação: “Wedson é médico e perito criminal.”. Qual das seguintes alternativas apresenta necessariamente uma verdade?",
+   "alternativas": [
+    [
+     "a",
+     "“Wedson não é médico.”"
+    ],
+    [
+     "b",
+     "“Wedson não é perito criminal.”"
+    ],
+    [
+     "c",
+     "“Wedson é médico.”"
+    ],
+    [
+     "d",
+     "“Wedson é perito criminal.”"
+    ],
+    [
+     "e",
+     "“Wedson não é médico e nem perito criminal.”"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Se Wedson fosse perito, seria médico, e \"médico e perito\" seria V, mas ela é falsa. Então ele não é perito. Letra B."
+  },
+  {
+   "id": "mat-imp-053",
+   "banca": "AOCP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere verdadeiras as seguintes afirmações:\nI. sou policial ou não sou Legista;\nII. sou Médico ou sou Legista;\nIII. sou perito ou não sou Médico.\nSe não sou policial, então,",
+   "alternativas": [
+    [
+     "a",
+     "não sou perito e sou médico"
+    ],
+    [
+     "b",
+     "sou perito e sou médico"
+    ],
+    [
+     "c",
+     "sou legista e sou perito"
+    ],
+    [
+     "d",
+     "não sou policial e não sou perito"
+    ],
+    [
+     "e",
+     "sou legista e não sou perito"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Não sou policial. Pela I, não sou legista. Pela II, sou médico. Pela III, sou perito. Letra B."
+  },
+  {
+   "id": "mat-imp-054",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere que a afirmação: ‘Ana é médica ou Beatriz é advogada’ seja verdadeira; que a afirmação: ‘Se Cláudio é professor, então Ana é médica’ seja falsa. Nessa situação, é logicamente correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "Beatriz é advogada e Cláudio é professor"
+    ],
+    [
+     "b",
+     "Beatriz não é advogada e Cláudio é professor"
+    ],
+    [
+     "c",
+     "Ana é médica ou Cláudio não é professor"
+    ],
+    [
+     "d",
+     "Beatriz não é advogada e Ana não é médica"
+    ],
+    [
+     "e",
+     "Ana é médica e Cláudio não é professor"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "A condicional é falsa: Cláudio é professor e Ana não é médica. No \"ou\" verdadeiro, então Beatriz é advogada. Letra A."
+  },
+  {
+   "id": "mat-imp-055",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se João estuda então João passa na prova. Se João passa na prova então João é nomeado. Se João é nomeado então João fica feliz. Sabe-se que João não está feliz, logo conclui-se que:",
+   "alternativas": [
+    [
+     "a",
+     "João é nomeado"
+    ],
+    [
+     "b",
+     "João passa na prova"
+    ],
+    [
+     "c",
+     "João estudou"
+    ],
+    [
+     "d",
+     "João não é nomeado e João estudou"
+    ],
+    [
+     "e",
+     "João não estudou e não passou na prova"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "João não está feliz. Voltando pelas contrapositivas: não foi nomeado, não passou, não estudou. Letra E."
+  },
+  {
+   "id": "mat-imp-056",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Suponha que se as verduras foram lavadas, então a salada será servida no almoço. Entretanto, se a salada for servida no almoço, então não haverá sobremesa. Há sobremesa no almoço, portanto:",
+   "alternativas": [
+    [
+     "a",
+     "A salada não foi servida no almoço, entretanto as verduras foram lavadas"
+    ],
+    [
+     "b",
+     "A salada foi servida no almoço, mas as verduras não foram lavadas"
+    ],
+    [
+     "c",
+     "A salada foi servida no almoço e as verduras foram lavadas"
+    ],
+    [
+     "d",
+     "A salada não foi servida no almoço e as verduras não foram lavadas"
+    ],
+    [
+     "e",
+     "A salada foi servida no almoço"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Há sobremesa, então a salada não foi servida (contrapositiva da 2ª). Então as verduras não foram lavadas. Letra D."
+  },
+  {
+   "id": "mat-imp-057",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se o cão late então o gato mia. Se o gato mia então o galo canta. Se o galo canta então a criança acorda. Sabe-se que é verdade que a criança não acorda, logo conclui-se que:",
+   "alternativas": [
+    [
+     "a",
+     "O galo não canta e o cão não late"
+    ],
+    [
+     "b",
+     "O galo canta e o cão late"
+    ],
+    [
+     "c",
+     "O gato mia e o cão late"
+    ],
+    [
+     "d",
+     "O gato não mia e o cão late"
+    ],
+    [
+     "e",
+     "A criança não acorda e o gato mia"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "A criança não acorda. Então o galo não canta, o gato não mia e o cão não late. Letra A."
+  },
+  {
+   "id": "mat-imp-058",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Uma empresa turística tem dois carros de modelos e cores diferentes. É verdade que o Gol é vermelho ou branco, mas o Fiesta e o Gol não são vermelhos, então deduzimos que:",
+   "alternativas": [
+    [
+     "a",
+     "Gol é vermelho"
+    ],
+    [
+     "b",
+     "Gol é branco"
+    ],
+    [
+     "c",
+     "Fiesta é vermelho"
+    ],
+    [
+     "d",
+     "Fiesta é branco"
+    ],
+    [
+     "e",
+     "Gol é azul"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "O Gol não é vermelho. Em \"vermelho ou branco\", então é branco. Letra B."
+  },
+  {
+   "id": "mat-imp-059",
+   "banca": "QUADRIX",
+   "tema": "Implicação lógica",
+   "enunciado": "P: Fátima não joga futebol e Luiz ouve música.\nQ: Luiz corre ou Fátima dorme.\nR: P ‐> Q.\nA partir das proposições acima, julgue o item.\nSe Luiz não corre, então a proposição R é falsa.",
+   "alternativas": [
+    [
+     "c",
+     "Certo"
+    ],
+    [
+     "e",
+     "Errado"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Errado. Se Luiz não corre, Q ainda pode ser verdadeira (se Fátima dorme). Então R não é necessariamente falsa."
+  },
+  {
+   "id": "mat-imp-060",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere verdadeiras as seguintes afirmações:\nI. Se Pedro é pedreiro e José não é encanador então Mário não é eletricista.\nII. Luiz é chaveiro ou Mário é eletricista.\nIII. Se Luiz é chaveiro então José é encanador.\nIV. José não é encanador.\nA partir dessas informações, pode-se concluir corretamente que:",
+   "alternativas": [
+    [
+     "a",
+     "Luiz é chaveiro e Pedro é pedreiro"
+    ],
+    [
+     "b",
+     "Mário não é eletricista e Luiz não é chaveiro"
+    ],
+    [
+     "c",
+     "Mário é eletricista e Luiz é chaveiro"
+    ],
+    [
+     "d",
+     "Pedro não é pedreiro e Luiz não é chaveiro"
+    ],
+    [
+     "e",
+     "Pedro é pedreiro e Mário é eletricista"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "IV: José não é encanador. III: Luiz não é chaveiro. II: Mário é eletricista. Em I, \"Mário não é eletricista\" é F, então a condição é F: Pedro não é pedreiro (José não ser encanador já é V). Letra D."
+  },
+  {
+   "id": "mat-imp-061",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Renato, Roberto e Rui são três irmãos, e as seguintes sentenças sobre eles são verdadeiras:\nI. Ou Renato ou Roberto é o mais rico dos três.\nII. Ou Rui é o mais rico dos três ou Renato é o mais pobre dos três.\nA partir dessas informações, pode-se concluir corretamente que",
+   "alternativas": [
+    [
+     "a",
+     "Renato é o mais rico e Roberto, o mais pobre"
+    ],
+    [
+     "b",
+     "Renato é o mais rico e Rui, o mais pobre"
+    ],
+    [
+     "c",
+     "Roberto é o mais rico e Renato, o mais pobre"
+    ],
+    [
+     "d",
+     "Roberto é o mais pobre e Rui, o mais rico"
+    ],
+    [
+     "e",
+     "Rui é o mais rico e Renato, o mais pobre"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Por I, o mais rico é Renato ou Roberto, então Rui não é. Por II, Renato é o mais pobre. Então Roberto é o mais rico. Letra C."
+  },
+  {
+   "id": "mat-imp-062",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere verdadeiras as afirmações a seguir.\nI. Se Pedro foi dormir, então Rafael não chegou no horário.\nII. Se André chegou em casa, então Pedro foi dormir.\nIII. Se André não chegou em casa, então Francisco não tinha dinheiro.\nIV. Francisco tinha dinheiro.\nA partir dessas afirmações, é correto afirmar que",
+   "alternativas": [
+    [
+     "a",
+     "André não chegou em casa e Pedro foi dormir"
+    ],
+    [
+     "b",
+     "Rafael chegou no horário ou Francisco não tinha dinheiro"
+    ],
+    [
+     "c",
+     "Pedro não foi dormir ou André chegou em casa"
+    ],
+    [
+     "d",
+     "Rafael não chegou no horário e André não chegou em casa"
+    ],
+    [
+     "e",
+     "Francisco tinha dinheiro e Rafael chegou no horário"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Francisco tinha dinheiro. Pela III, André chegou em casa. Pela II, Pedro foi dormir. Então \"Pedro não foi dormir ou André chegou em casa\" = F ou V = V. Letra C."
+  },
+  {
+   "id": "mat-imp-063",
+   "banca": "IADES",
+   "tema": "Implicação lógica",
+   "enunciado": "Antônia possui uma calça, uma camisa e um vestido, todos de cores diferentes, entre azul, branca ou vermelha. Sabe-se que:\n1) ou a calça é azul, ou o vestido é azul;\n2) ou a camisa é azul, ou a calça é branca;\n3) ou a calça é branca, ou o vestido é branco.\nNesse caso, as cores da calça, da camisa e do vestido são, respectivamente,",
+   "alternativas": [
+    [
+     "a",
+     "branca, vermelha e azul"
+    ],
+    [
+     "b",
+     "vermelha, azul e branca"
+    ],
+    [
+     "c",
+     "branca, azul e vermelha"
+    ],
+    [
+     "d",
+     "azul, vermelha e branca"
+    ],
+    [
+     "e",
+     "vermelha, branca e azul"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Se a calça fosse azul, a camisa não poderia ser azul, e pela 2 a calça seria branca: impossível. Então o vestido é azul. Pela 3, a calça é branca e a camisa é vermelha. Letra A."
+  },
+  {
+   "id": "mat-imp-064",
+   "banca": "IADES",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as premissas a seguir.\n1) Se o instrumento está afinado, eu toco bem.\n2) Se o público aplaude, eu fico feliz.\n3) Se eu toco bem, consigo dinheiro.\n4) Se eu consigo dinheiro, me caso ou compro uma bicicleta.\nSabendo-se que eu não me casei e não fiquei feliz, assinale a alternativa correta.",
+   "alternativas": [
+    [
+     "a",
+     "O público não aplaudiu"
+    ],
+    [
+     "b",
+     "O instrumento não estava afinado"
+    ],
+    [
+     "c",
+     "Eu não consegui dinheiro"
+    ],
+    [
+     "d",
+     "Eu não toquei bem"
+    ],
+    [
+     "e",
+     "Eu não comprei uma bicicleta"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Não fiquei feliz, então o público não aplaudiu (contrapositiva da 2). Sobre a bicicleta nada se sabe, então a cadeia 1-3-4 não se fecha. Letra A."
+  },
+  {
+   "id": "mat-imp-065",
+   "banca": "FCC",
+   "tema": "Implicação lógica",
+   "enunciado": "Aos domingos,\n− como pizza no jantar ou não tomo açaí,\n− corro ou jogo futebol e\n− tomo açaí ou não corro.\nSe, no último domingo, não joguei futebol, então",
+   "alternativas": [
+    [
+     "a",
+     "corri e não comi pizza no jantar"
+    ],
+    [
+     "b",
+     "não corri e comi pizza no jantar"
+    ],
+    [
+     "c",
+     "não comi pizza no jantar e não tomei açaí"
+    ],
+    [
+     "d",
+     "não corri e não tomei açaí"
+    ],
+    [
+     "e",
+     "corri e tomei açaí"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Não joguei futebol, então corri. Em \"tomo açaí ou não corro\", então tomei açaí. Em \"pizza ou não tomo açaí\", então comi pizza. Letra E."
+  },
+  {
+   "id": "mat-imp-066",
+   "banca": "NC UFPR",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as seguintes afirmações:\n– Se você não sente algo ao ouvir Bob Marley, então você está morto.\n– Se você está morto, então você não pode escolher o que quer ouvir.\n– Você pode escolher o que quer ouvir.\nA partir dessas afirmações, é correto concluir que você:",
+   "alternativas": [
+    [
+     "a",
+     "não sente nada ao ouvir Bob Marley porque você está morto"
+    ],
+    [
+     "b",
+     "não pode escolher ouvir Bob Marley"
+    ],
+    [
+     "c",
+     "sente algo ao ouvir Bob Marley"
+    ],
+    [
+     "d",
+     "não sente algo ao ouvir Bob Marley e não pode escolher o que quer ouvir"
+    ],
+    [
+     "e",
+     "não está morto porque sente algo ao ouvir Bob Marley"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Você pode escolher, então não está morto (contrapositiva da 2ª). Então você sente algo (contrapositiva da 1ª). Letra C."
+  },
+  {
+   "id": "mat-imp-067",
+   "banca": "NC UFPR",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere verdadeiras as seguintes proposições:\nSe está chovendo, então faz frio.\nO mar não está calmo ou posso mergulhar.\nEstá chovendo ou o mar está calmo.\nDessas proposições, conclui-se corretamente que:",
+   "alternativas": [
+    [
+     "a",
+     "faz frio ou posso mergulhar"
+    ],
+    [
+     "b",
+     "está chovendo e posso mergulhar"
+    ],
+    [
+     "c",
+     "o mar está calmo"
+    ],
+    [
+     "d",
+     "não faz frio e não posso mergulhar"
+    ],
+    [
+     "e",
+     "se faz frio, então está chovendo"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Está chovendo ou o mar está calmo. Se chove, faz frio. Se o mar está calmo, posso mergulhar. Em qualquer caso: faz frio ou posso mergulhar. Letra A."
+  },
+  {
+   "id": "mat-imp-068",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere verdadeiras as afirmações.\nI. Se Arnaldo é grosseiro, então Beatriz é gentil.\nII. Se Cátia é educada, então Arnaldo não é grosseiro.\nIII. Se Arnaldo não é grosseiro, então Deise é amável.\nIV. Deise não é amável.\nA partir dessas afirmações, é correto concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Beatriz não é gentil ou Cátia é educada"
+    ],
+    [
+     "b",
+     "Arnaldo é grosseiro e Cátia é educada"
+    ],
+    [
+     "c",
+     "Beatriz não é gentil ou Cátia não é educada"
+    ],
+    [
+     "d",
+     "Cátia é educada ou Arnaldo não é grosseiro"
+    ],
+    [
+     "e",
+     "Beatriz é gentil e Arnaldo não é grosseiro"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Deise não é amável. Pela III, Arnaldo é grosseiro. Pela I, Beatriz é gentil. Pela II, Cátia não é educada. C: \"Beatriz não é gentil ou Cátia não é educada\" = F ou V = V. Letra C."
+  },
+  {
+   "id": "mat-imp-069",
+   "banca": "FCC",
+   "tema": "Implicação lógica",
+   "enunciado": "Todo sábado, Sabrina\n− vai ao parque ou vai ao cinema,\n− acorda cedo ou não vai ao parque e\n− janta fora ou não vai ao cinema.\nSe, no último sábado, não jantou fora, então, é verdade que Sabrina",
+   "alternativas": [
+    [
+     "a",
+     "acordou cedo e foi ao parque"
+    ],
+    [
+     "b",
+     "foi ao parque e ao cinema"
+    ],
+    [
+     "c",
+     "acordou cedo e foi ao cinema"
+    ],
+    [
+     "d",
+     "não foi ao parque, nem ao cinema"
+    ],
+    [
+     "e",
+     "não acordou cedo e não foi ao cinema"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Não jantou fora, então não foi ao cinema. Então foi ao parque. Então acordou cedo. Letra A."
+  },
+  {
+   "id": "mat-imp-070",
+   "banca": "FCC",
+   "tema": "Implicação lógica",
+   "enunciado": "João não viaja no feriado, caso Joana esteja na capital ou o time de João não jogue. Se João viajou no feriado, então",
+   "alternativas": [
+    [
+     "a",
+     "Joana não estava na capital e o time de João jogou"
+    ],
+    [
+     "b",
+     "Joana estava na capital ou o time de João não jogou"
+    ],
+    [
+     "c",
+     "Joana não estava na capital e o time de João não jogou"
+    ],
+    [
+     "d",
+     "Joana estava na capital e o time de João não jogou"
+    ],
+    [
+     "e",
+     "Joana não estava na capital ou o time de João jogou"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "(Joana na capital ou time não joga) → João não viaja. João viajou, então a condição é falsa: Joana não estava na capital e o time jogou. Letra A."
+  },
+  {
+   "id": "mat-imp-071",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se faz sol então é verão. Se for verão então está quente. Se está quente então se compra sorvete. Sabe-se que não é comprado sorvete. Portanto, é válido concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Não é verão e não faz sol"
+    ],
+    [
+     "b",
+     "É inverno e faz sol"
+    ],
+    [
+     "c",
+     "Não é verão e faz sol"
+    ],
+    [
+     "d",
+     "É primavera e não faz sol"
+    ],
+    [
+     "e",
+     "Está quente e faz sol"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Não se compra sorvete. Voltando pelas contrapositivas: não está quente, não é verão, não faz sol. Letra A."
+  },
+  {
+   "id": "mat-imp-072",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se é inverno em Paraí, então faz frio. Se faz frio, Maria usa colete. Se Maria usa colete, então Maria pode sair de casa. Sabe-se que Maria não pode sair de casa. Disso conclui-se que:",
+   "alternativas": [
+    [
+     "a",
+     "Não faz frio e não é inverno em Paraí"
+    ],
+    [
+     "b",
+     "Maria usa colete e faz frio"
+    ],
+    [
+     "c",
+     "Faz frio e é inverno em Paraí"
+    ],
+    [
+     "d",
+     "Maria não usa colete e faz frio"
+    ],
+    [
+     "e",
+     "Maria usa colete e é inverno em Paraí"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Maria não sai. Então não usa colete, não faz frio, não é inverno. Letra A."
+  },
+  {
+   "id": "mat-imp-073",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se João estuda, então Maria fica feliz. Se Maria fica feliz, então Antônio fica feliz.\nSabe-se que Antônio não fica feliz, então:",
+   "alternativas": [
+    [
+     "a",
+     "Maria fica feliz"
+    ],
+    [
+     "b",
+     "Maria fica feliz e João estuda"
+    ],
+    [
+     "c",
+     "Maria não fica feliz e João não estuda"
+    ],
+    [
+     "d",
+     "Maria não fica feliz"
+    ],
+    [
+     "e",
+     "João estuda"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Antônio não fica feliz. Então Maria não fica feliz e João não estuda. Letra C."
+  },
+  {
+   "id": "mat-imp-074",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se chove em Tapejara, então faz frio. Se faz frio, então Carla usa blusa de lã. Se Carla usa blusa de lã, então Carla vai ao cinema.\nSabe-se que Carla não vai ao cinema. Disso pode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Chove em Tapejara e Carla usa blusa de lã"
+    ],
+    [
+     "b",
+     "Carla não usa blusa de lã e chove em Tapejara"
+    ],
+    [
+     "c",
+     "Carla usa blusa de lã e faz frio"
+    ],
+    [
+     "d",
+     "Não faz frio e não chove em Tapejara"
+    ],
+    [
+     "e",
+     "Faz frio e chove em Tapejara"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Carla não vai ao cinema. Então não usa lã, não faz frio, não chove. Letra D."
+  },
+  {
+   "id": "mat-imp-075",
+   "banca": "FCC",
+   "tema": "Implicação lógica",
+   "enunciado": "Em uma festa, se Carlos está acompanhado ou está feliz, canta e dança. Se, na última festa em que esteve, não dançou, então Carlos, necessariamente,",
+   "alternativas": [
+    [
+     "a",
+     "não estava acompanhado, mas estava feliz"
+    ],
+    [
+     "b",
+     "estava acompanhado, mas não estava feliz"
+    ],
+    [
+     "c",
+     "não estava acompanhado, nem feliz"
+    ],
+    [
+     "d",
+     "não cantou"
+    ],
+    [
+     "e",
+     "cantou"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Não dançou, então \"canta e dança\" é falsa. Então a condição é falsa: Carlos não estava acompanhado nem feliz. Letra C."
+  },
+  {
+   "id": "mat-imp-076",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as afirmações:\nI. Paula não é pontual.\nII. Se Carlos é caprichoso, então Mateus é metódico.\nIII. Se Glória é gentil, então Cristina é criativa.\nIV. Se Mateus não é metódico ou Cristina é criativa, então Paula é pontual.\nA partir dessas afirmações, é correto concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Mateus não é metódico, e Glória é gentil"
+    ],
+    [
+     "b",
+     "Glória é gentil, e Carlos não é caprichoso"
+    ],
+    [
+     "c",
+     "Cristina é criativa, e Mateus é metódico"
+    ],
+    [
+     "d",
+     "Carlos é caprichoso, e Cristina não é criativa"
+    ],
+    [
+     "e",
+     "Glória não é gentil, e Mateus é metódico"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Paula não é pontual, então a condição de IV é falsa: Mateus é metódico e Cristina não é criativa. Pela III, Glória não é gentil. Letra E."
+  },
+  {
+   "id": "mat-imp-077",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as afirmações:\nI. Daniel é passista ou Jorge não é baterista.\nII. Se Jorge não é baterista ou Ivone é rainha da bateria, então Manoel é mestre-sala.\nIII. Se Carla não é porta-bandeira, então Ivone é rainha da bateria.\nIV. Manoel é mestre-sala ou Janete é carnavalesca.\nDentre essas afirmações, sabe-se que apenas a afirmação (IV) é uma afirmação falsa.\nA partir dessas informações, é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Janete é carnavalesca"
+    ],
+    [
+     "b",
+     "Carla não é porta-bandeira"
+    ],
+    [
+     "c",
+     "Jorge não é baterista"
+    ],
+    [
+     "d",
+     "Daniel é passista"
+    ],
+    [
+     "e",
+     "Ivone é rainha da bateria"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "IV falsa: Manoel não é mestre-sala e Janete não é carnavalesca. Pela II, Jorge é baterista e Ivone não é rainha. Pela III, Carla é porta-bandeira. Pela I, Daniel é passista. Letra D."
+  },
+  {
+   "id": "mat-imp-078",
+   "banca": "IDECAN",
+   "tema": "Implicação lógica",
+   "enunciado": "Se Davi é surfista, então Ana não é bailarina. Bruno não é jogador de futebol ou Cinthia não é ginasta. Sabendo-se que Cinthia é ginasta e que Ana é bailarina, pode-se concluir corretamente que",
+   "alternativas": [
+    [
+     "a",
+     "Bruno é jogador de futebol e Davi é surfista"
+    ],
+    [
+     "b",
+     "Bruno é jogador de futebol e Davi não é surfista"
+    ],
+    [
+     "c",
+     "Bruno não é jogador de futebol e Davi é surfista"
+    ],
+    [
+     "d",
+     "se Bruno não é jogador de futebol, então Davi é surfista"
+    ],
+    [
+     "e",
+     "Bruno não é jogador de futebol e Davi não é surfista"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Cinthia é ginasta, então \"Bruno não é jogador\" precisa ser V. Ana é bailarina, então Davi não é surfista (contrapositiva). Letra E."
+  },
+  {
+   "id": "mat-imp-079",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as afirmações e cada respectivo valor lógico:\nI. Se André é atento, então Elton é eclético. VERDADEIRA.\nII. Se Bruno é brilhante, então André é atento. VERDADEIRA.\nIII. Se Carla não é cuidadosa, então Daniel não é dedicado. VERDADEIRA.\nIV. Se Elton é eclético, então Fernanda é famosa. VERDADEIRA.\nV. Se Daniel é dedicado, então Elton é eclético. FALSA.\nVI. Se Elton não é eclético, então Gerson é ganancioso. VERDADEIRA.\nA partir dessas afirmações, é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Gerson não é ganancioso ou Bruno é brilhante"
+    ],
+    [
+     "b",
+     "Fernanda é famosa e André é atento"
+    ],
+    [
+     "c",
+     "Bruno não é brilhante ou Elton é eclético"
+    ],
+    [
+     "d",
+     "Daniel não é dedicado e Fernanda não é famosa"
+    ],
+    [
+     "e",
+     "Carla não é cuidadosa ou Gerson não é ganancioso"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "V falsa: Daniel é dedicado e Elton não é eclético. Pela I, André não é atento. Pela II, Bruno não é brilhante. Então \"Bruno não é brilhante ou Elton é eclético\" = V. Letra C."
+  },
+  {
+   "id": "mat-imp-080",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se Marcos estuda, então Marcos passa na prova. Se Marcos passa na prova, então sua família fica feliz. Sabe-se que a família de Marcos não está feliz. Portanto, conclui-se que:",
+   "alternativas": [
+    [
+     "a",
+     "Marcos mudou de cidade"
+    ],
+    [
+     "b",
+     "Marcos estudou"
+    ],
+    [
+     "c",
+     "Marcos passa na prova"
+    ],
+    [
+     "d",
+     "Marcos não passa na prova e Marcos não estudou"
+    ],
+    [
+     "e",
+     "Marcos passa na prova e Marcos estudou"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "A família não está feliz. Então Marcos não passa e não estudou. Letra D."
+  },
+  {
+   "id": "mat-imp-081",
+   "banca": "IDIB",
+   "tema": "Implicação lógica",
+   "enunciado": "Em uma sala de aula, o professor instiga os alunos com problemas de raciocínio lógico relacionando as cores dos carros e seus proprietários. Desta forma, o professor repassou aos alunos as afirmativas verdadeiras a seguir:\nI. Ou Bruno tem um carro rosa, ou Cinthia não tem um carro verde.\nII. Se Daniel tem um carro amarelo, então Ana não tem um carro azul.\nIII. Se Bruno tem um carro rosa, então Ana tem um carro azul.\nIV. Cinthia tem um carro verde.\nCom base nas afirmações anteriores, pode-se concluir com certeza que:",
+   "alternativas": [
+    [
+     "a",
+     "Se Ana não tem um carro azul, então Bruno não tem um carro rosa"
+    ],
+    [
+     "b",
+     "Bruno não tem um carro rosa ou Daniel tem um carro amarelo"
+    ],
+    [
+     "c",
+     "Ana não tem um carro azul e Daniel não tem um carro amarelo"
+    ],
+    [
+     "d",
+     "Cinthia tem um carro verde e Ana não tem um carro azul"
+    ],
+    [
+     "e",
+     "Se Cinthia tem um carro verde, então Ana não tem um carro azul"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Cinthia tem carro verde. Pela I, Bruno tem carro rosa. Pela III, Ana tem carro azul. A letra A é a contrapositiva da III, sempre verdadeira. As outras dão F com esses valores. Letra A."
+  },
+  {
+   "id": "mat-imp-083",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as afirmações e cada respectivo valor lógico:\nI. Se Paulo é analista de segurança, então Marcela é engenheira de software. VERDADEIRA\nII. Marcela não é engenheira de software ou Juliana é programadora. VERDADEIRA\nIII. Se Rafael é desenvolvedor de aplicativos, então Juliana é programadora. FALSA\nIV. Paulo é analista de segurança ou Caio é administrador de sistemas. VERDADEIRA.\nV. Se Gisele é arquiteta de redes, então Rafael não é desenvolvedor de aplicativos. VERDADEIRA.\nA partir dessas afirmações, é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Gisele é arquiteta de redes e Marcela não é engenheira de software"
+    ],
+    [
+     "b",
+     "Se Juliana não é programadora, então Rafael não é desenvolvedor de aplicativos"
+    ],
+    [
+     "c",
+     "Se Marcela é engenheira de software, então Caio não é administrador de sistemas"
+    ],
+    [
+     "d",
+     "Juliana é programadora ou Paulo é analista de segurança"
+    ],
+    [
+     "e",
+     "Paulo é analista de segurança e Gisele não é arquiteta de redes"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "III falsa: Rafael é desenvolvedor e Juliana não é programadora. II: Marcela não é engenheira. I: Paulo não é analista. IV: Caio é administrador. C: Marcela (F) → … = V. Letra C."
+  },
+  {
+   "id": "mat-imp-084",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "As duas afirmações a seguir são verdadeiras.\nSe hoje eu trabalho, então amanhã eu descanso.\nAmanhã eu não descanso.\nCom base nelas, conclui-se corretamente que",
+   "alternativas": [
+    [
+     "a",
+     "hoje eu não trabalho"
+    ],
+    [
+     "b",
+     "hoje eu trabalho"
+    ],
+    [
+     "c",
+     "ontem eu não trabalhei"
+    ],
+    [
+     "d",
+     "ontem eu descansei"
+    ],
+    [
+     "e",
+     "amanhã eu não trabalharei"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Modus tollens: amanhã não descanso, então hoje não trabalho. Letra A."
+  },
+  {
+   "id": "mat-imp-085",
+   "banca": "IBADE",
+   "tema": "Implicação lógica",
+   "enunciado": "Observe as proposições a seguir e repare que elas constituem quatro premissas de um argumento.\n• Cadu não é um funcionário do IBGE.\n• Se Rodrigo é um agente censitário supervisor, então Cadu é um funcionário do IBGE.\n• Se Viviane não é uma agente censitária municipal, então Rodrigo é um agente censitário supervisor.\n• Helaine é uma recenseadora, ou Viviane não é uma agente censitária municipal, ou Cadu é um funcionário do IBGE.\nA conclusão destas proposições que torna esse argumento verdadeiro é que:",
+   "alternativas": [
+    [
+     "a",
+     "Helaine não é uma recenseadora e Rodrigo não é um agente censitário supervisor"
+    ],
+    [
+     "b",
+     "Cadu não é um funcionário do IBGE e Rodrigo é um agente censitário supervisor"
+    ],
+    [
+     "c",
+     "Helaine é uma recenseadora e Viviane é uma agente censitária municipal"
+    ],
+    [
+     "d",
+     "Viviane não é uma agente censitária municipal e Rodrigo é um agente censitário supervisor"
+    ],
+    [
+     "e",
+     "Rodrigo não é um agente censitário supervisor e Viviane não é uma agente censitária municipal"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Cadu não é do IBGE. Pela 2ª, Rodrigo não é supervisor. Pela 3ª, Viviane é agente municipal. Na 4ª sobra \"Helaine é recenseadora\". Letra C."
+  },
+  {
+   "id": "mat-imp-086",
+   "banca": "FUNDEP",
+   "tema": "Implicação lógica",
+   "enunciado": "Vítor, Matheus e José foram a uma roda de samba, cada um na companhia de uma amiga. Ao final do samba, os três amigos e as três amigas encontraram um conhecido comum a todos, que perguntou com quem haviam ido ao samba. As seguintes respostas foram ditas:\nGabriela: “Eu estava acompanhada do Vítor”.\nMatheus: “Se eu não estivesse acompanhado com Fernanda, Gabriela estaria com Vítor”.\nJosé: “Ou Matheus estava acompanhado de Gabriela ou Vítor estava com Léa”.\nSabendo-se que apenas Gabriela não falou a verdade, é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Matheus estava com Gabriela, e Vítor, com Léa"
+    ],
+    [
+     "b",
+     "Matheus estava com Gabriela, e José, com Fernanda"
+    ],
+    [
+     "c",
+     "Vítor estava com Fernanda, e José, com Gabriela"
+    ],
+    [
+     "d",
+     "Vítor estava com Léa, e José, com Gabriela"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Só Gabriela mente: ela não estava com Vítor. A frase de Matheus é V com consequência falsa, então ele estava com Fernanda. Pela de José, Vítor estava com Léa. Sobra José com Gabriela. Letra D."
+  },
+  {
+   "id": "mat-imp-087",
+   "banca": "CEFETMINAS",
+   "tema": "Implicação lógica",
+   "enunciado": "Em uma loja de fast food há 5 atendentes que fazem escala de trabalho. A gerente dessa loja, recém-chegada, ainda não entende bem como funciona a escala, e o supervisor afirma o seguinte:\n- Se Amanda trabalhar durante o dia, então Joyce trabalha à noite.\n- Se Joyce não trabalhar à noite, então Carlos trabalha no fim de semana.\nSabe-se que Carlos não trabalhou no fi m de semana.\nConsiderando as duas proposições condicionais citadas pelo supervisor como verdadeiras, então é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Joyce trabalhou à noite"
+    ],
+    [
+     "b",
+     "Joyce não trabalhou à noite"
+    ],
+    [
+     "c",
+     "Amanda trabalhou durante o dia"
+    ],
+    [
+     "d",
+     "Amanda não trabalhou durante o dia"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Carlos não trabalhou no fim de semana. Pela contrapositiva da 2ª, Joyce trabalhou à noite. Letra A."
+  },
+  {
+   "id": "mat-imp-089",
+   "banca": "FCC",
+   "tema": "Implicação lógica",
+   "enunciado": "O inspetor de uma escola percebeu uma porta quebrada e identificou, pelas imagens do sistema de segurança, que foi pelo menos um dentre 4 alunos o responsável pelo dano. Ele sabe que:\n− se Gustavo não teve participação, então Henrique teve;\n− entre Henrique e Igor, exatamente um teve participação;\n− João teve participação se, e somente se, Igor teve participação.\nPara não prejudicar seus amigos, João, falando a verdade, assumiu ter participação, o que permite concluir que todos os responsáveis pelo dano foram",
+   "alternativas": [
+    [
+     "a",
+     "João e Gustavo"
+    ],
+    [
+     "b",
+     "João e Henrique"
+    ],
+    [
+     "c",
+     "João e Igor"
+    ],
+    [
+     "d",
+     "João, Gustavo e Igor"
+    ],
+    [
+     "e",
+     "João, Gustavo e Henrique"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "João participou, então Igor participou (↔). Pela 2ª, Henrique não participou. Pela 1ª, Gustavo participou. Letra D."
+  },
+  {
+   "id": "mat-imp-090",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se chove, então faz frio. Se faz frio, então João toma chocolate quente. Sabe-se que João não toma chocolate quente. Portanto, é válido concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Chove em Porto Alegre"
+    ],
+    [
+     "b",
+     "João toma refrigerante"
+    ],
+    [
+     "c",
+     "Chove em Campo Bom"
+    ],
+    [
+     "d",
+     "Faz frio e chove"
+    ],
+    [
+     "e",
+     "Não faz frio e não chove"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "João não toma chocolate. Então não faz frio e não chove. Letra E."
+  },
+  {
+   "id": "mat-imp-091",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se estudo, então passo na prova. Se passo na prova, então sou nomeado. Se sou nomeado, então vou trabalhar em Salto do Jacuí. Sabe-se que não vou trabalhar em Salto do Jacuí. Disso pode-se concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "Não sou nomeado e estudo"
+    ],
+    [
+     "b",
+     "Não passo na prova e sou nomeado"
+    ],
+    [
+     "c",
+     "Não passo na prova e não sou nomeado"
+    ],
+    [
+     "d",
+     "Estudo e sou nomeado"
+    ],
+    [
+     "e",
+     "Passo na prova e estudo"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Não vou trabalhar lá. Então não sou nomeado, não passo e não estudo. Letra C."
+  },
+  {
+   "id": "mat-imp-092",
+   "banca": "IDECAN",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as proposições a seguir verdadeiras:\nI. Gabriel é estudante.\nII. Bianca não é criança.\nCom base nas informações anteriores, é possível afirmar com certeza que",
+   "alternativas": [
+    [
+     "a",
+     "Gabriel é estudante e Bianca é criança"
+    ],
+    [
+     "b",
+     "se Gabriel é estudante, então Bianca é criança"
+    ],
+    [
+     "c",
+     "Gabriel é criança e Bianca não é estudante"
+    ],
+    [
+     "d",
+     "Gabriel é estudante ou Bianca é criança"
+    ],
+    [
+     "e",
+     "Gabriel é estudante e criança"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Gabriel é estudante (V). Um \"ou\" com uma parte verdadeira já é verdadeiro. Letra D."
+  },
+  {
+   "id": "mat-imp-093",
+   "banca": "IDIB",
+   "tema": "Implicação lógica",
+   "enunciado": "Um policial, ao investigar um crime, obteve as seguintes informações verdadeiras:\nI. “Se Ana cometeu o crime, então Bruno é culpado”.\nII. “Ana é culpada ou Carlos é culpado”.\nIII. “Se Carlos cometeu o crime, então Bruno e inocente”.\nIV. “Se Bruno é inocente, então Ana é culpada”.\nCom base nas informações obtidas, é possível afirmar que:",
+   "alternativas": [
+    [
+     "a",
+     "Ana, Bruno e Carlos são inocentes"
+    ],
+    [
+     "b",
+     "Ana e Bruno são culpados"
+    ],
+    [
+     "c",
+     "Ana e Carlos são inocentes"
+    ],
+    [
+     "d",
+     "Bruno e Carlos são culpados"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Se Carlos fosse culpado, Bruno seria inocente, então Ana seria culpada, então Bruno seria culpado: contradição. Então Carlos é inocente, Ana é culpada (II) e Bruno é culpado (I). Letra B."
+  },
+  {
+   "id": "mat-imp-094",
+   "banca": "PRÓ-MUNICÍPIO",
+   "tema": "Implicação lógica",
+   "enunciado": "Observe as premissas\nP1: Se nado, não posso estudar.\nP2: Nado ou passo em Matemática.\nP3: Nadei.\n_____________________________ Logo, passei em Matemática Sobre a lógica da conclusão em negrito acima marque a alternativa correta:",
+   "alternativas": [
+    [
+     "a",
+     "Nada se pode afirmar sobre o estudo ou se a pessoa passou em Matemática;"
+    ],
+    [
+     "b",
+     "A validade do argumento é verdadeira e a pessoa passou em Matemática;"
+    ],
+    [
+     "c",
+     "O argumento não é válido o que representa um sofisma;"
+    ],
+    [
+     "d",
+     "O argumento é válido o que representa um sofisma"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Nadei, e \"nado ou passo\" já fica verdadeira só com \"nado\". Nada obriga a ter passado em Matemática. O argumento não é válido (sofisma). Letra C."
+  },
+  {
+   "id": "mat-imp-095",
+   "banca": "UNESC",
+   "tema": "Implicação lógica",
+   "enunciado": "Os irmãos Bem-Aventura, Bruno, Hugo, Edison, Fernando e Enio, prestaram um concurso público. Sabe-se que, se Hugo estudou, Edison foi aprovado; se Enio foi aprovado, Hugo estudou; se Bruno não estudou, Fernando também não estudou; Se Bruno estudou, Enio foi aprovado. Sabe-se que Fernando estudou. Então:",
+   "alternativas": [
+    [
+     "a",
+     "Enio não foi aprovado"
+    ],
+    [
+     "b",
+     "Fernando foi aprovado"
+    ],
+    [
+     "c",
+     "Hugo foi aprovado"
+    ],
+    [
+     "d",
+     "Edison foi aprovado"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Fernando estudou, então Bruno estudou. Então Enio foi aprovado, então Hugo estudou, então Edison foi aprovado. Letra D."
+  },
+  {
+   "id": "mat-imp-096",
+   "banca": "UNESC",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere verdadeiras as afirmações a seguir:\nI - Se Vivi é costureira, então Verônica não é advogada\nII - Se Verinha é bailarina, então Verônica é advogada\nIII - Virna é professora\nIV - Ou Verinha é bailarina, ou Virna não é professora.\nCom base nessas afirmações podemos concluir corretamente que:",
+   "alternativas": [
+    [
+     "a",
+     "Se Virna é professora, então Verônica não é advogada"
+    ],
+    [
+     "b",
+     "Se Verônica não é advogada, então Verinha não é bailarina"
+    ],
+    [
+     "c",
+     "Virna é professora e Verônica não é advogada"
+    ],
+    [
+     "d",
+     "Verônica não é advogada ou Vivi é costureira"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Virna é professora, então pela IV Verinha é bailarina. A letra B é a contrapositiva da II, sempre verdadeira. Letra B."
+  },
+  {
+   "id": "mat-imp-097",
+   "banca": "FUNDATEC",
+   "tema": "Implicação lógica",
+   "enunciado": "Se chove em Novo Horizonte, então as ruas ficam alagadas. Se as ruas ficam alagadas então Joana não pode ir ao cinema. Sabese que Joana pode ir ao cinema. Portanto, é válido concluir que:",
+   "alternativas": [
+    [
+     "a",
+     "As ruas ficaram alagadas"
+    ],
+    [
+     "b",
+     "Joana mora em Novo Horizonte"
+    ],
+    [
+     "c",
+     "Choveu em Novo Horizonte"
+    ],
+    [
+     "d",
+     "Não choveu em Novo Horizonte"
+    ],
+    [
+     "e",
+     "Joana gosta de ir ao cinema"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Joana pode ir ao cinema. Então as ruas não alagaram e não choveu. Letra D."
+  },
+  {
+   "id": "mat-imp-098",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere falsidades as duas proposições a seguir:\nI. Ana concorre ao cargo de auditora fiscal ou Jorge concorre ao cargo de professor.\nII. Se Carlos está fazendo a prova, então ele está concorrendo ao cargo de auditor fiscal.\nCom base nas informações apresentadas, assinale a alternativa que contém uma proposição necessariamente verdadeira.",
+   "alternativas": [
+    [
+     "a",
+     "Ana não concorre ao cargo de auditora fiscal e Carlos concorre ao cargo de professor"
+    ],
+    [
+     "b",
+     "Carlos não está fazendo a prova e Jorge não concorre ao cargo de professor"
+    ],
+    [
+     "c",
+     "Carlos está fazendo a prova ou Jorge concorre ao cargo de professor"
+    ],
+    [
+     "d",
+     "Ana concorre ao cargo de professora e Jorge concorre ao cargo de auditor fiscal"
+    ],
+    [
+     "e",
+     "Carlos concorre ao cargo de auditor fiscal ou Ana concorre ao cargo de professor"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "I falsa: Ana não concorre e Jorge não concorre. II falsa: Carlos está fazendo a prova e não concorre a auditor. Então \"Carlos está fazendo a prova ou Jorge…\" = V. Letra C."
+  },
+  {
+   "id": "mat-imp-100",
+   "banca": "VUNESP",
+   "tema": "Implicação lógica",
+   "enunciado": "Considere as afirmações a seguir e o respectivo valor lógico atribuído a cada uma.\nI. Eliana é programadora ou Carlos é analista. VERDADEIRA.\nII. Bruno é agente administrativo ou Denise é chefe de departamento. VERDADEIRA.\nIII. Se Ana é supervisora, então Bruno é agente administrativo. FALSA.\nIV. Denise é chefe de departamento e Eliana é programadora. FALSA.\nA partir dessas informações, é correto concluir que",
+   "alternativas": [
+    [
+     "a",
+     "Bruno é agente administrativo"
+    ],
+    [
+     "b",
+     "Ana não é supervisora"
+    ],
+    [
+     "c",
+     "Denise não é chefe de departamento"
+    ],
+    [
+     "d",
+     "Carlos é analista"
+    ],
+    [
+     "e",
+     "Eliana é programadora"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "III falsa: Ana é supervisora e Bruno não é agente. II: Denise é chefe. IV falsa com Denise V: Eliana não é programadora. I: Carlos é analista. Letra D."
+  },
+  {
+   "id": "mat-pfc-001",
+   "banca": "CETREDE",
+   "tema": "Princípios da contagem",
+   "enunciado": "Quantos anagramas da palavra TUDO começam com uma consoante e terminam com uma vogal?",
+   "alternativas": [
+    [
+     "a",
+     "4"
+    ],
+    [
+     "b",
+     "8"
+    ],
+    [
+     "c",
+     "16"
+    ],
+    [
+     "d",
+     "32"
+    ],
+    [
+     "e",
+     "64"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "TUDO tem 2 consoantes (T, D) e 2 vogais (U, O). Primeira letra: 2 opções. Última: 2. As duas do meio trocam de lugar: 2 × 1. Total 2 × 2 × 2 = 8. Letra B."
+  },
+  {
+   "id": "mat-pfc-002",
+   "banca": "CETREDE",
+   "tema": "Princípios da contagem",
+   "enunciado": "Quantos números de dois algarismos distintos podem ser formados com os números: 0,1,2,3,4,5,6,7,8,9?",
+   "alternativas": [
+    [
+     "a",
+     "33"
+    ],
+    [
+     "b",
+     "45"
+    ],
+    [
+     "c",
+     "81"
+    ],
+    [
+     "d",
+     "99"
+    ],
+    [
+     "e",
+     "112"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Dezena: 9 opções (não pode ser 0). Unidade: 9 (qualquer, menos a já usada). 9 × 9 = 81. Letra C."
+  },
+  {
+   "id": "mat-pfc-005",
+   "banca": "OBJETIVA",
+   "tema": "Princípios da contagem",
+   "enunciado": "Considerando-se os algarismos 1, 3, 5, 7 e 9, ao todo, quantas senhas de cinco dígitos podem ser formadas utilizando-se apenas esses algarismos?",
+   "alternativas": [
+    [
+     "a",
+     "3.125"
+    ],
+    [
+     "b",
+     "3.525"
+    ],
+    [
+     "c",
+     "3.725"
+    ],
+    [
+     "d",
+     "4.125"
+    ],
+    [
+     "e",
+     "4.525"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Cada um dos 5 dígitos pode ser qualquer um dos 5 algarismos (pode repetir): 5 × 5 × 5 × 5 × 5 = 3.125. Letra A."
+  },
+  {
+   "id": "mat-pfc-006",
+   "banca": "IADES",
+   "tema": "Princípios da contagem",
+   "enunciado": "Suponha que, em determinada cidade, o Batalhão Metropolitano da Polícia Militar possui seis companhias; cada uma dessas companhias possui cinco pelotões e cada um desses pelotões possui seis destacamentos. Quantos destacamentos possui o Batalhão Metropolitano?",
+   "alternativas": [
+    [
+     "a",
+     "17"
+    ],
+    [
+     "b",
+     "120"
+    ],
+    [
+     "c",
+     "150"
+    ],
+    [
+     "d",
+     "180"
+    ],
+    [
+     "e",
+     "200"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Princípio multiplicativo: 6 companhias × 5 pelotões × 6 destacamentos = 180. Letra D."
+  },
+  {
+   "id": "mat-pfc-007",
+   "banca": "FAFIPA",
+   "tema": "Princípios da contagem",
+   "enunciado": "Uma família com 7 integrantes vão viajar, mas antes, resolveram tirar uma foto para guardar de lembrança. Sentados num banco, de quantas maneiras diferentes essa foto poderá ser tirada?",
+   "alternativas": [
+    [
+     "a",
+     "8020"
+    ],
+    [
+     "b",
+     "5040"
+    ],
+    [
+     "c",
+     "4050"
+    ],
+    [
+     "d",
+     "2080"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "7 pessoas em 7 lugares: 7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5.040. Letra B."
+  },
+  {
+   "id": "mat-pfc-009",
+   "banca": "SELECON",
+   "tema": "Princípios da contagem",
+   "enunciado": "Usando-se todas as letras da palavra CATARINA é possível obter exatamente n senhas com oitos letras que terminam por consoante. A soma dos algarismos de n é igual a:",
+   "alternativas": [
+    [
+     "a",
+     "9"
+    ],
+    [
+     "b",
+     "12"
+    ],
+    [
+     "c",
+     "15"
+    ],
+    [
+     "d",
+     "18"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "CATARINA tem 8 letras com o A repetido 3 vezes. Última letra: uma das 4 consoantes (C, T, R, N). As outras 7 letras (com 3 A) se arrumam de 7!/3! = 840 jeitos. n = 4 × 840 = 3.360, e 3 + 3 + 6 + 0 = 12. Letra B."
+  },
+  {
+   "id": "mat-pfc-011",
+   "banca": "IDIB",
+   "tema": "Princípios da contagem",
+   "enunciado": "Ao abrir uma conta corrente em um aplicativo de um banco digital, é solicitado ao cliente que cadastre uma senha de quatro dígitos com a seguinte recomendação: os quatro dígitos são necessariamente numéricos e posições adjacentes não podem ter o mesmo algarismo. Desta forma, a quantidade máxima de possibilidades para criação dessa senha é de",
+   "alternativas": [
+    [
+     "a",
+     "7.290 possibilidades"
+    ],
+    [
+     "b",
+     "10.000 possibilidades"
+    ],
+    [
+     "c",
+     "8.100 possibilidades"
+    ],
+    [
+     "d",
+     "5.184 possibilidades"
+    ],
+    [
+     "e",
+     "5.040 possibilidades"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "1º dígito: 10 opções. Cada um dos seguintes não pode repetir o vizinho anterior: 9 opções. 10 × 9 × 9 × 9 = 7.290. Letra A."
+  },
+  {
+   "id": "mat-pfc-012",
+   "banca": "AOCP",
+   "tema": "Princípios da contagem",
+   "enunciado": "O total de maneiras possíveis de se classificar três produtos, sendo que cada produto pode ser classificado como tipo I, tipo II ou de ambos os tipos, é igual a",
+   "alternativas": [
+    [
+     "a",
+     "9"
+    ],
+    [
+     "b",
+     "18"
+    ],
+    [
+     "c",
+     "27"
+    ],
+    [
+     "d",
+     "36"
+    ],
+    [
+     "e",
+     "45"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Cada produto tem 3 classificações possíveis (I, II ou ambos): 3 × 3 × 3 = 27. Letra C."
+  },
+  {
+   "id": "mat-pfc-013",
+   "banca": "AOCP",
+   "tema": "Princípios da contagem",
+   "enunciado": "Uma pessoa deseja fazer uma doação em dinheiro para alguma entidade assistencial de sua cidade, sendo que essa doação pode ser enviada para uma das três entidades beneficentes localizadas no bairro A ou para uma das quatro Organizações Não Governamentais (ONGs) localizadas no bairro B. O total de formas pelas quais essa pessoa pode efetuar tal doação é igual a",
+   "alternativas": [
+    [
+     "a",
+     "7"
+    ],
+    [
+     "b",
+     "12"
+    ],
+    [
+     "c",
+     "34"
+    ],
+    [
+     "d",
+     "15"
+    ],
+    [
+     "e",
+     "10"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "É uma escolha OU outra: 3 + 4 = 7 (princípio aditivo). Letra A."
+  },
+  {
+   "id": "mat-pfc-014",
+   "banca": "IBFC",
+   "tema": "Princípios da contagem",
+   "enunciado": "Em uma prateleira de uma biblioteca, deseja-se dispor 4 livros de maneiras distintas. Sabendo que a prateleira possui 10 espaços em que os livros podem ser colocados, assinale a alternativa que apresenta corretamente a quantidade de maneiras que esses livros podem ser dispostos nessa prateleira.",
+   "alternativas": [
+    [
+     "a",
+     "3628800"
+    ],
+    [
+     "b",
+     "5040"
+    ],
+    [
+     "c",
+     "151200"
+    ],
+    [
+     "d",
+     "720"
+    ],
+    [
+     "e",
+     "24"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "4 livros em 10 espaços, a ordem importa: 10 × 9 × 8 × 7 = 5.040. Letra B."
+  },
+  {
+   "id": "mat-pfc-015",
+   "banca": "CEBRASPE",
+   "tema": "Princípios da contagem",
+   "enunciado": "Em um sistema de acesso a uma rede de computadores, os usuários devem cadastrar uma senha de 6 dígitos, que deve ser formada da seguinte maneira:\n• os 2 primeiros dígitos devem ser letras minúsculas distintas, escolhidas entre as 26 letras do alfabeto;\n• os demais 4 dígitos da senha devem ser números inteiros entre 0 e 9, admitindo-se repetição.\nNessa situação, a quantidade de senhas diferentes que podem ser formadas é igual a",
+   "alternativas": [
+    [
+     "a",
+     "3.674"
+    ],
+    [
+     "b",
+     "5.690"
+    ],
+    [
+     "c",
+     "1.965.600"
+    ],
+    [
+     "d",
+     "3.276.000"
+    ],
+    [
+     "e",
+     "6.500.000"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Letras distintas: 26 × 25. Quatro números com repetição: 10 × 10 × 10 × 10. 650 × 10.000 = 6.500.000. Letra E."
+  },
+  {
+   "id": "mat-pfc-017",
+   "banca": "FEPESE",
+   "tema": "Princípios da contagem",
+   "enunciado": "Sete atletas disputam uma prova de natação, com iguais chances de vencer.\nDe quantos modos diferentes pode ocorrer a chegada dos quatro primeiros colocados?",
+   "alternativas": [
+    [
+     "a",
+     "Mais de 900"
+    ],
+    [
+     "b",
+     "Mais de 850 e menos de 900"
+    ],
+    [
+     "c",
+     "Mais de 800 e menos de 850"
+    ],
+    [
+     "d",
+     "Mais de 750 e menos de 800"
+    ],
+    [
+     "e",
+     "Menos de 750"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Ordem dos 4 primeiros entre 7: 7 × 6 × 5 × 4 = 840. Letra C."
+  },
+  {
+   "id": "mat-pfc-018",
+   "banca": "Unifil",
+   "tema": "Princípios da contagem",
+   "enunciado": "Quantos são os anagramas da palavra ÂNGULO que começam com a letra Â?",
+   "alternativas": [
+    [
+     "a",
+     "90"
+    ],
+    [
+     "b",
+     "120"
+    ],
+    [
+     "c",
+     "240"
+    ],
+    [
+     "d",
+     "720"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Com o Â fixo no início, as outras 5 letras se permutam: 5! = 120. Letra B."
+  },
+  {
+   "id": "mat-pfc-020",
+   "banca": "IBADE",
+   "tema": "Princípios da contagem",
+   "enunciado": "Dois casais posam para uma fotografia. De quantas maneiras podem realizar a fotografia, se cada casal deve permanecer junto?",
+   "alternativas": [
+    [
+     "a",
+     "2"
+    ],
+    [
+     "b",
+     "3"
+    ],
+    [
+     "c",
+     "4"
+    ],
+    [
+     "d",
+     "6"
+    ],
+    [
+     "e",
+     "8"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Cada casal vira um bloco: os 2 blocos trocam de lugar (2!), e dentro de cada bloco o casal troca (2 × 2). 2 × 2 × 2 = 8. Letra E."
+  },
+  {
+   "id": "mat-pfc-021",
+   "banca": "IBADE",
+   "tema": "Princípios da contagem",
+   "enunciado": "Há 4 caminhos para ir de uma cidade A para a cidade B e 6 caminhos para ir de B para outra cidade C. Qual o número de possibilidades para se ir de A para C passando por B?",
+   "alternativas": [
+    [
+     "a",
+     "10"
+    ],
+    [
+     "b",
+     "16"
+    ],
+    [
+     "c",
+     "20"
+    ],
+    [
+     "d",
+     "24"
+    ],
+    [
+     "e",
+     "32"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "De A para B: 4 caminhos; de B para C: 6. Os dois trechos acontecem juntos: 4 × 6 = 24. Letra D."
+  },
+  {
+   "id": "mat-pfc-024",
+   "banca": "IBADE",
+   "tema": "Princípios da contagem",
+   "enunciado": "A quantidade de números pares de três algarismos distintos que podem ser formados com os algarismos 1, 2, 3, 4, 5, 7, 9 é:",
+   "alternativas": [
+    [
+     "a",
+     "98"
+    ],
+    [
+     "b",
+     "72"
+    ],
+    [
+     "c",
+     "343"
+    ],
+    [
+     "d",
+     "210"
+    ],
+    [
+     "e",
+     "60"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Para ser par, o último algarismo é 2 ou 4: 2 opções. Sobram 6 para a centena e 5 para a dezena. 2 × 6 × 5 = 60. Letra E."
+  },
+  {
+   "id": "mat-pfc-025",
+   "banca": "IBADE",
+   "tema": "Princípios da contagem",
+   "enunciado": "Se jogarmos quatro dados de 6 faces simultaneamente, de todas as combinações possíveis de resultado, em quantas o quarto dado terá como resultado um 6?",
+   "alternativas": [
+    [
+     "a",
+     "1.296"
+    ],
+    [
+     "b",
+     "216"
+    ],
+    [
+     "c",
+     "120"
+    ],
+    [
+     "d",
+     "60"
+    ],
+    [
+     "e",
+     "300"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "O 4º dado está fixo no 6 (1 opção). Os outros três têm 6 cada: 6 × 6 × 6 × 1 = 216. Letra B."
+  },
+  {
+   "id": "mat-pfc-026",
+   "banca": "DÉDALUS",
+   "tema": "Princípios da contagem",
+   "enunciado": "Em uma biblioteca há uma estante com livros escolares de diferentes áreas. São 10 livros da área de Exatas, 8 livros da área de Biológicas e 12 livros da área de Humanas. O número de modos diferentes que se pode escolher desta estante um conjunto de 3 livros de áreas diferentes é:",
+   "alternativas": [
+    [
+     "a",
+     "540"
+    ],
+    [
+     "b",
+     "320"
+    ],
+    [
+     "c",
+     "445"
+    ],
+    [
+     "d",
+     "872"
+    ],
+    [
+     "e",
+     "960"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "Um livro de cada área: 10 × 8 × 12 = 960. Letra E."
+  },
+  {
+   "id": "mat-pfc-027",
+   "banca": "DÉDALUS",
+   "tema": "Princípios da contagem",
+   "enunciado": "Uma senha deve ser formada por duas letras distintas (escolhidas dentre as 26 letras do alfabeto) seguidas por três algarismos distintos, conforme ilustrado abaixo:\n(letra) (letra) (algarismo) (algarismo) (algarismo) O número de senhas que podem ser criadas com tal configuração é:",
+   "alternativas": [
+    [
+     "a",
+     "500.000"
+    ],
+    [
+     "b",
+     "676.000"
+    ],
+    [
+     "c",
+     "468.000"
+    ],
+    [
+     "d",
+     "820.000"
+    ],
+    [
+     "e",
+     "780.000"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Letras distintas: 26 × 25. Algarismos distintos: 10 × 9 × 8. 650 × 720 = 468.000. Letra C."
+  },
+  {
+   "id": "mat-pfc-028",
+   "banca": "ITAME",
+   "tema": "Princípios da contagem",
+   "enunciado": "Um torneio estadual de futebol é disputado por 12 equipes que jogam entre si, em ida e volta. Portanto, o número de partidas disputadas nesse torneio é igual a:",
+   "alternativas": [
+    [
+     "a",
+     "132"
+    ],
+    [
+     "b",
+     "136"
+    ],
+    [
+     "c",
+     "142"
+    ],
+    [
+     "d",
+     "146"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Ida e volta: cada par de times joga duas vezes, com mando trocado, então a ordem importa. 12 × 11 = 132. Letra A."
+  },
+  {
+   "id": "mat-pfc-029",
+   "banca": "CONSULPLAN",
+   "tema": "Princípios da contagem",
+   "enunciado": "O funcionamento de um secador de cabelos é ajustado através de dois botões. Em um deles há três opções diferentes de temperatura, enquanto no outro há três opções diferentes de velocidade. Por meio destes botões, de quantos modos distintos é possível ajustar o funcionamento do secador?",
+   "alternativas": [
+    [
+     "a",
+     "6"
+    ],
+    [
+     "b",
+     "9"
+    ],
+    [
+     "c",
+     "18"
+    ],
+    [
+     "d",
+     "36"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "3 temperaturas × 3 velocidades = 9. Letra B."
+  },
+  {
+   "id": "mat-pfc-031",
+   "banca": "ITAME",
+   "tema": "Princípios da contagem",
+   "enunciado": "Usando seis dos algarismos 1, 2, 3, 4, 5, 6 e 7 sem repeti-los, a quantidade de números pares que podem ser formados é igual à:",
+   "alternativas": [
+    [
+     "a",
+     "840"
+    ],
+    [
+     "b",
+     "960"
+    ],
+    [
+     "c",
+     "2160"
+    ],
+    [
+     "d",
+     "2520"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "Números de 6 algarismos distintos escolhidos entre 7. Para ser par, o último é 2, 4 ou 6: 3 opções. Os outros 5 lugares: 6 × 5 × 4 × 3 × 2 = 720. 3 × 720 = 2.160. Letra C."
+  },
+  {
+   "id": "mat-pfc-032",
+   "banca": "GUALIMP",
+   "tema": "Princípios da contagem",
+   "enunciado": "Flávia e seus amigos montaram um clube. Eles desejam construir uma bandeira para representar esse clube. Para fazer a bandeira, compraram um tecido de tamanho retangular e fizeram 6 listras verticais iguais. Compraram também 4 potes de tintas diferentes. Eles desejam pintar cada listra com apenas uma cor, e querem que as listras adjacentes possuam cores diferentes. De quantas formas diferentes Flávia e seus amigos podem fazer essa bandeira?",
+   "alternativas": [
+    [
+     "a",
+     "1.728"
+    ],
+    [
+     "b",
+     "432"
+    ],
+    [
+     "c",
+     "1.296"
+    ],
+    [
+     "d",
+     "972"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "1ª listra: 4 cores. Cada uma das 5 seguintes não pode repetir a vizinha: 3 opções. 4 × 3⁵ = 4 × 243 = 972. Letra D."
+  },
+  {
+   "id": "mat-pfc-034",
+   "banca": "CONSULPLAN",
+   "tema": "Princípios da contagem",
+   "enunciado": "Observe os algarismos a seguir:\n0 1 3 4 6 7 A quantidade de números de três dígitos, maiores que 300 que podem ser formados utilizando os algarismos anteriores, sem repeti-los é:",
+   "alternativas": [
+    [
+     "a",
+     "60"
+    ],
+    [
+     "b",
+     "80"
+    ],
+    [
+     "c",
+     "100"
+    ],
+    [
+     "d",
+     "464"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Para passar de 300, a centena é 3, 4, 6 ou 7: 4 opções. Dezena: 5 (pode o 0). Unidade: 4. 4 × 5 × 4 = 80. Letra B."
+  },
+  {
+   "id": "mat-pfc-035",
+   "banca": "ACCESS",
+   "tema": "Princípios da contagem",
+   "enunciado": "Um anagrama é uma transposição de letras de uma palavra que possibilita formar outra palavra. Exemplo: MOAR, AMOR e ROMA são exemplos de anagramas formados coma as letras A, M, R e O.\nA esse respeito, o número de anagramas da palavra PLACA é",
+   "alternativas": [
+    [
+     "a",
+     "120"
+    ],
+    [
+     "b",
+     "60"
+    ],
+    [
+     "c",
+     "30"
+    ],
+    [
+     "d",
+     "15"
+    ],
+    [
+     "e",
+     "5"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "PLACA tem 5 letras com o A repetido 2 vezes: 5!/2! = 120/2 = 60. Letra B."
+  },
+  {
+   "id": "mat-pfc-036",
+   "banca": "CONSULPLAN",
+   "tema": "Princípios da contagem",
+   "enunciado": "Todos os funcionários de uma empresa possuem um número de inscrição, gerado por um programa em seu crachá. Este número identifica o funcionário quando o crachá é inserido no portão de entrada e saída da empresa. Todos os números gerados são terminados em 5, são formados por 6 algarismos distintos e não começam com zero. Quantos números de inscrições podem ser gerados?",
+   "alternativas": [
+    [
+     "a",
+     "13.440"
+    ],
+    [
+     "b",
+     "14.340"
+    ],
+    [
+     "c",
+     "14.430"
+    ],
+    [
+     "d",
+     "31.440"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Último fixo no 5. Primeiro: não pode ser 0 nem 5, sobram 8. Depois 8, 7, 6 e 5 para os do meio. 8 × 8 × 7 × 6 × 5 = 13.440. Letra A."
+  },
+  {
+   "id": "mat-pfc-037",
+   "banca": "IBADE",
+   "tema": "Princípios da contagem",
+   "enunciado": "Considere as condições abaixo:\nos quatro primeiros dígitos devem ser algarismos distintos dentre {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};\no último dígito deve ser um símbolo dentre {!, *, #}.\nO número de senhas distintas de 5 dígitos possíveis é de :",
+   "alternativas": [
+    [
+     "a",
+     "9.072"
+    ],
+    [
+     "b",
+     "30.240"
+    ],
+    [
+     "c",
+     "12.960"
+    ],
+    [
+     "d",
+     "15.120"
+    ],
+    [
+     "e",
+     "3.024"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Quatro algarismos distintos: 10 × 9 × 8 × 7 = 5.040. Símbolo: 3. 5.040 × 3 = 15.120. Letra D."
+  },
+  {
+   "id": "mat-pfc-038",
+   "banca": "Legalle",
+   "tema": "Princípios da contagem",
+   "enunciado": "Considere as letras da palavra NUIOL. Fixando-se a letra L no início desta palavra, o número de anagramas possíveis de serem constituídos é:",
+   "alternativas": [
+    [
+     "a",
+     "36"
+    ],
+    [
+     "b",
+     "24"
+    ],
+    [
+     "c",
+     "18"
+    ],
+    [
+     "d",
+     "14"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "Com o L fixo no início, as outras 4 letras (N, U, I, O) se permutam: 4! = 24. Letra B."
+  },
+  {
+   "id": "mat-pfc-039",
+   "banca": "Legalle",
+   "tema": "Princípios da contagem",
+   "enunciado": "Ana foi ao mercado para escolher entre um tipo de doce ou um tipo de massa salgada. Sabendo que havia 17 produtos doces e 20 produtos de massa salgada, o número de modos diferentes que ela poderia escolher esses produtos é:",
+   "alternativas": [
+    [
+     "a",
+     "340"
+    ],
+    [
+     "b",
+     "240"
+    ],
+    [
+     "c",
+     "40"
+    ],
+    [
+     "d",
+     "37"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Ela escolhe um doce OU uma massa: 17 + 20 = 37 (princípio aditivo). Letra D."
+  },
+  {
+   "id": "mat-pfc-040",
+   "banca": "ITAME",
+   "tema": "Princípios da contagem",
+   "enunciado": "Suponha que uma senha para acessar um programa de computador, seja composta por duas letras do alfabeto e três algarismos, nesta ordem. Nessas condições, a quantidade de senhas que podem ser formadas com essa quantidade de letras e esses algarismos, é igual à:",
+   "alternativas": [
+    [
+     "a",
+     "546.000 senhas"
+    ],
+    [
+     "b",
+     "590.000 senhas"
+    ],
+    [
+     "c",
+     "643.040 senhas"
+    ],
+    [
+     "d",
+     "676.000 senhas"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Letras podem repetir: 26 × 26. Algarismos também: 10 × 10 × 10. 676 × 1.000 = 676.000. Letra D."
+  },
+  {
+   "id": "mat-pfc-041",
+   "banca": "ITAME",
+   "tema": "Princípios da contagem",
+   "enunciado": "Quatro estudantes chegaram atrasados para um curso de formação ampliada. No auditório, só restam 8 cadeiras desocupadas.\nDessa forma, a quantidade de maneiras distintas de ocupação dessas cadeiras é igual à:",
+   "alternativas": [
+    [
+     "a",
+     "210 maneiras"
+    ],
+    [
+     "b",
+     "336 maneiras"
+    ],
+    [
+     "c",
+     "1.680 maneiras"
+    ],
+    [
+     "d",
+     "1.780 maneiras"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "4 estudantes em 8 cadeiras, a ordem importa: 8 × 7 × 6 × 5 = 1.680. Letra C."
+  },
+  {
+   "id": "mat-pfc-042",
+   "banca": "SELECON",
+   "tema": "Princípios da contagem",
+   "enunciado": "No armário de João, há exatamente 7 camisas e 6 gravatas para uma determinada festa. Ele escolherá duas dessas peças, sendo uma camisa e uma gravata. O número máximo de escolhas distintas possíveis que ele poderá fazer é igual a:",
+   "alternativas": [
+    [
+     "a",
+     "6"
+    ],
+    [
+     "b",
+     "13"
+    ],
+    [
+     "c",
+     "26"
+    ],
+    [
+     "d",
+     "42"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "Uma camisa E uma gravata: 7 × 6 = 42. Letra D."
+  },
+  {
+   "id": "mat-pfc-043",
+   "banca": "SELECON",
+   "tema": "Princípios da contagem",
+   "enunciado": "Considere p o número total de anagramas da palavra SAPEZAL, e q apenas o número de anagramas que possuem todas as consoantes juntas. A razão p/q é igual a:",
+   "alternativas": [
+    [
+     "a",
+     "7/2"
+    ],
+    [
+     "b",
+     "70/3"
+    ],
+    [
+     "c",
+     "35/4"
+    ],
+    [
+     "d",
+     "24/5"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "SAPEZAL tem 7 letras com A duas vezes: p = 7!/2! = 2.520. Com as consoantes S, P, Z, L juntas num bloco: o bloco se arruma de 4! = 24 jeitos, e bloco + A, E, A são 4 itens com A repetido, 4!/2! = 12. q = 24 × 12 = 288. p/q = 2.520/288 = 35/4. Letra C."
+  },
+  {
+   "id": "mat-pfc-044",
+   "banca": "OBJETIVA",
+   "tema": "Princípios da contagem",
+   "enunciado": "Juliana quer vestir uma calça e uma camisa. Sabendo-se que ela tem 5 calças e 6 camisas, de quantas maneiras diferentes ela pode fazer essa escolha?",
+   "alternativas": [
+    [
+     "a",
+     "15"
+    ],
+    [
+     "b",
+     "10"
+    ],
+    [
+     "c",
+     "20"
+    ],
+    [
+     "d",
+     "12"
+    ],
+    [
+     "e",
+     "30"
+    ]
+   ],
+   "gabarito": "e",
+   "resolucao": "5 calças × 6 camisas = 30. Letra E."
+  },
+  {
+   "id": "mat-pfc-046",
+   "banca": "ITAME",
+   "tema": "Princípios da contagem",
+   "enunciado": "A quantidade de maneiras distintas que sete pessoas podem sentar um ao lado da outra, numa fila no cinema, é de:",
+   "alternativas": [
+    [
+     "a",
+     "5 040 maneiras"
+    ],
+    [
+     "b",
+     "3 700 maneiras"
+    ],
+    [
+     "c",
+     "720 maneiras"
+    ],
+    [
+     "d",
+     "520 maneiras"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "7 pessoas em fila: 7! = 5.040. Letra A."
+  },
+  {
+   "id": "mat-pfc-047",
+   "banca": "IBADE",
+   "tema": "Princípios da contagem",
+   "enunciado": "A quantidade de números distintos obtidos da permutação dos algarismos do número 65957 é:",
+   "alternativas": [
+    [
+     "a",
+     "30"
+    ],
+    [
+     "b",
+     "60"
+    ],
+    [
+     "c",
+     "90"
+    ],
+    [
+     "d",
+     "120"
+    ],
+    [
+     "e",
+     "240"
+    ]
+   ],
+   "gabarito": "b",
+   "resolucao": "65957 tem 5 algarismos com o 5 repetido 2 vezes: 5!/2! = 60. Letra B."
+  },
+  {
+   "id": "mat-pfc-048",
+   "banca": "UNESC",
+   "tema": "Princípios da contagem",
+   "enunciado": "Marco Aurélio recebeu a seguinte tarefa: com os algarismos 0, 1, 2, 3, 4 e 5 ele tem que escrever a maior quantidade de números ímpares de três algarismos distintos. Quantos números ímpares de três algarismos distintos Marco Aurélio poderá formar?",
+   "alternativas": [
+    [
+     "a",
+     "48"
+    ],
+    [
+     "b",
+     "55"
+    ],
+    [
+     "c",
+     "60"
+    ],
+    [
+     "d",
+     "75"
+    ]
+   ],
+   "gabarito": "a",
+   "resolucao": "Ímpar: o último é 1, 3 ou 5 (3 opções). Primeiro: não pode ser 0 nem o último, sobram 4. Meio: 4. 3 × 4 × 4 = 48. Letra A."
+  },
+  {
+   "id": "mat-pfc-049",
+   "banca": "We Do",
+   "tema": "Princípios da contagem",
+   "enunciado": "Assinale a alternativa que indica a quantidade de anagramas que se pode obter a partir da palavra ENGENHARIA:",
+   "alternativas": [
+    [
+     "a",
+     "435.600"
+    ],
+    [
+     "b",
+     "436.500"
+    ],
+    [
+     "c",
+     "436.050"
+    ],
+    [
+     "d",
+     "453.600"
+    ],
+    [
+     "e",
+     "453.060"
+    ]
+   ],
+   "gabarito": "d",
+   "resolucao": "ENGENHARIA tem 10 letras, com E, N e A duas vezes cada: 10!/(2! × 2! × 2!) = 3.628.800/8 = 453.600. Letra D."
+  },
+  {
+   "id": "mat-pfc-050",
+   "banca": "MSM",
+   "tema": "Princípios da contagem",
+   "enunciado": "Quantos anagramas da palavra MALETA começam por consoante?",
+   "alternativas": [
+    [
+     "a",
+     "2.160"
+    ],
+    [
+     "b",
+     "360"
+    ],
+    [
+     "c",
+     "180"
+    ],
+    [
+     "d",
+     "15"
+    ]
+   ],
+   "gabarito": "c",
+   "resolucao": "MALETA: 3 consoantes (M, L, T) para a primeira letra. As outras 5 letras têm A duas vezes: 5!/2! = 60. 3 × 60 = 180. Letra C."
+  }
+ ]
+}

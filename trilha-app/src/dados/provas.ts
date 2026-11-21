@@ -3,6 +3,7 @@
 import bruto from '../../../data/questoes.json';
 import apostilaProposicoes from './provas-proposicoes.json';
 import revisadas from './provas-revisadas.json';
+import doMaterial from './provas-material.json';
 
 export type QuestaoProva = {
   id: string;
@@ -48,7 +49,9 @@ const DA_APOSTILA: QuestaoProva[] = (apostilaProposicoes as unknown as { questoe
 // questões revisadas uma a uma (gabarito conferido com o comentário de professor), com resolução escrita
 type Revisada = { id: string; banca: string; tema: string; enunciado: string; alternativas: [string, string][]; gabarito: string; resolucao: string };
 const REVISADAS: QuestaoProva[] = (revisadas as unknown as { questoes: Revisada[] }).questoes.map((q) => ({ ...q, fonte: 'revisada' }));
-export const PROVAS: QuestaoProva[] = [...REVISADAS, ...DO_CANAL, ...DA_APOSTILA];
+// questões dos e-books do professor (categóricas, implicação lógica, contagem), conferidas uma a uma, com resolução escrita
+const DO_MATERIAL: QuestaoProva[] = (doMaterial as unknown as { questoes: Revisada[] }).questoes.map((q) => ({ ...q, fonte: 'material' }));
+export const PROVAS: QuestaoProva[] = [...REVISADAS, ...DO_MATERIAL, ...DO_CANAL, ...DA_APOSTILA];
 
 const contar = (xs: string[]) => [...xs.reduce((m, x) => m.set(x, (m.get(x) || 0) + 1), new Map<string, number>())].sort((a, b) => b[1] - a[1]);
 export const BANCAS_PROVA = contar(PROVAS.map((q) => q.banca));

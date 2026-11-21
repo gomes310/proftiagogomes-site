@@ -276,5 +276,85 @@ export const CONTEUDO: ConteudoExtra[] = [
     },
     pares: [["\"x + 2 = 5\"", "aberta"], ["\"Esta frase é falsa.\"", "paradoxo"], ["\"3 + 2 = 5\"", "fechada"], ["\"Ela é alta.\"", "sujeito indefinido"]],
     caderno: { regras: ["Aberta: variável ou sujeito indefinido (x, ele, ela). Não é proposição.", "Dando valor à variável, vira proposição (fechada).", "Paradoxos não são proposições."], dica: "\"Ele\", \"ela\" ou \"isso\" sem referência deixam a frase aberta, mesmo sem nenhum x." }
+  },
+  { // 27 Todo, algum e nenhum
+    imersao: {
+      exemplos: [["\"Todo A é B\"", "universal afirmativa"], ["\"Nenhum A é B\"", "universal negativa"], ["\"Algum A é B\"", "particular afirmativa"], ["\"Algum A não é B\"", "particular negativa"]],
+      pergunta: "O que torna uma proposição categórica \"particular\"?",
+      opcoes: ["Ter a palavra \"não\"", "Falar de alguns (algum, existe, pelo menos um)", "Falar de todos"],
+      c: 1, e: "Particular fala de parte do grupo: algum, existe, pelo menos um. Universal fala do grupo inteiro: todo, nenhum."
+    },
+    pares: [["todo", "universal afirmativa"], ["nenhum", "universal negativa"], ["algum… é", "particular afirmativa"], ["algum… não é", "particular negativa"]],
+    caderno: { regras: ["Universal: todo, qualquer, nenhum. Particular: algum, existe, pelo menos um.", "Afirmativa: sem \"não\". Negativa: com \"não\" (ou \"nenhum\").", "\"Todo A é B\": círculo A dentro de B. \"Nenhum A é B\": círculos separados. \"Algum A é B\": círculos que se cruzam."], dica: "\"Algum A é B\" vale nos dois sentidos (algum B é A). \"Todo A é B\" não: não dá para inverter para \"todo B é A\"." }
+  },
+  { // 28 Negar e trocar categóricas
+    imersao: {
+      exemplos: [["Todo A é B", "Algum A não é B"], ["Nenhum A é B", "Algum A é B"], ["Algum A é B", "Nenhum A é B"], ["Algum A não é B", "Todo A é B"]],
+      pergunta: "O que acontece com o quantificador quando você nega?",
+      opcoes: ["Ele continua igual", "Universal vira particular e particular vira universal", "Tudo vira \"nenhum\""],
+      c: 1, e: "A negação troca o tipo: todo ↔ algum… não, nenhum ↔ algum."
+    },
+    pares: [["Todo A é B", "negação: algum A não é B"], ["Nenhum A é B", "negação: algum A é B"], ["Algum A é B", "negação: nenhum A é B"], ["Todo A é B", "equivale: se não é B, não é A"]],
+    caderno: { regras: ["~(Todo A é B) = Algum A não é B.", "~(Nenhum A é B) = Algum A é B. ~(Algum A é B) = Nenhum A é B.", "\"Todo A é B\" = \"se é A, é B\" = \"se não é B, não é A\". \"Nenhum A é B\" = \"Todo A não é B\"."], dica: "Pegadinha clássica: a negação de \"todo\" NÃO é \"nenhum\". Para derrubar um \"todo\", basta um caso contrário." }
+  },
+  { // 29 Silogismos: o que dá para concluir
+    imersao: {
+      exemplos: [["Todo A é B + Todo B é C", "Todo A é C (vale)"], ["Algum A é B + Algum B é C", "nada garantido"], ["Nenhum A é B + Algum C é B", "Algum C não é A (vale)"]],
+      pergunta: "Quando uma conclusão vale?",
+      opcoes: ["Quando ela pode ser verdade", "Quando ela é verdade em todos os desenhos possíveis", "Quando parece lógica"],
+      c: 1, e: "Válido é o que não depende do desenho: em qualquer jeito de desenhar as premissas, a conclusão aparece."
+    },
+    pares: [["dois \"algum\"", "nada se conclui"], ["premissa negativa", "conclusão negativa"], ["Todo A é B + x não é B", "x não é A"], ["Todo A é B + x é B", "x pode ser A"]],
+    caderno: { regras: ["Desenhe as premissas e teste todos os desenhos possíveis.", "Duas premissas particulares (algum) não garantem conclusão. Duas negativas também não.", "Se uma premissa é negativa, a conclusão é negativa. Se uma é particular, a conclusão é particular."], dica: "\"Pode ser\" é diferente de \"certamente\". Se a pessoa está no círculo maior, ela pode estar ou não no menor." }
+  },
+  { // 30 Implicação tipo 1: comece pelo fato
+    imersao: {
+      exemplos: [["\"p\" sozinha, verdadeira", "p = V (fato)"], ["\"p e q\" verdadeira", "p = V e q = V"], ["\"p ou q\" falsa", "p = F e q = F"], ["\"p → q\" falsa", "p = V e q = F"]],
+      pergunta: "O que essas quatro situações têm em comum?",
+      opcoes: ["Só têm um jeito de acontecer", "São todas falsas", "São todas condicionais"],
+      c: 0, e: "São os pontos de partida do tipo 1: cada uma trava o valor das partes."
+    },
+    pares: [["simples verdadeira", "fato direto"], ["\"e\" verdadeiro", "tudo V"], ["\"ou\" falso", "tudo F"], ["condicional falsa", "V → F"]],
+    caderno: { regras: ["Tipo 1: comece por uma simples, um \"e\" verdadeiro, um \"ou\" falso ou uma condicional falsa.", "Do fato, substitua nas outras frases, uma de cada vez.", "Na condicional verdadeira: se o fim é F, o começo é F (contrapositiva)."], dica: "Considere todas as premissas verdadeiras, a não ser que a banca diga que alguma é falsa." }
+  },
+  { // 31 Implicação tipo 2: encadeando condicionais
+    imersao: {
+      exemplos: [["A → B e B → C", "A → C"], ["A ∨ B", "~A → B"], ["A → B", "~B → ~A"]],
+      pergunta: "Para que servem essas trocas no tipo 2?",
+      opcoes: ["Para encaixar as frases numa cadeia", "Para achar um fato simples", "Para negar as premissas"],
+      c: 0, e: "Sem fato travado, você reescreve as frases como condicionais e liga uma na outra."
+    },
+    pares: [["A → B, B → C", "A → C"], ["A ∨ B", "~A → B"], ["A → B", "~B → ~A"], ["B → A", "recíproca: não vale"]],
+    caderno: { regras: ["Tipo 2: só compostas. Reescreva tudo como condicional.", "\"p ou q\" vira \"se não p, então q\". \"p → q\" também vale como \"~q → ~p\".", "Ligue os elos: p → q → r dá p → r. Nunca volte do fim para o começo (recíproca)."], dica: "Para julgar \"se X, então Y\", suponha X e veja se a cadeia chega obrigatoriamente em Y." }
+  },
+  { // 32 Princípio multiplicativo
+    imersao: {
+      exemplos: [["2 sucos e 3 lanches", "2 × 3 = 6 combos"], ["3 portas e 2 escadas", "3 × 2 = 6 caminhos"], ["4 cores, 2 tamanhos", "4 × 2 = 8 camisetas"]],
+      pergunta: "Quando escolhas acontecem juntas (uma E outra), o que se faz?",
+      opcoes: ["Somar", "Multiplicar", "Subtrair"],
+      c: 1, e: "Cada opção da primeira etapa combina com todas da segunda: multiplica."
+    },
+    pares: [["etapa E etapa", "multiplica"], ["pode repetir", "opções iguais em cada etapa"], ["sem repetir", "uma opção a menos por etapa"], ["3 × 4", "12 combinações"]],
+    caderno: { regras: ["Etapas que acontecem juntas (E): multiplique.", "Desenhe um traço por etapa: _ × _ × _.", "Distintos: cada etapa perde uma opção. Pode repetir: todas têm o total."], dica: "Comece pela etapa com restrição (ex.: a dezena que não pode ser 0, o último dígito que tem que ser par)." }
+  },
+  { // 33 Somar ou multiplicar? E o fatorial
+    imersao: {
+      exemplos: [["um doce OU um salgado (3 e 4)", "3 + 4 = 7"], ["um doce E um salgado (3 e 4)", "3 × 4 = 12"], ["4 pessoas em fila", "4! = 24"]],
+      pergunta: "Quando se soma em vez de multiplicar?",
+      opcoes: ["Quando a escolha é uma OU outra", "Quando há muitas opções", "Quando a ordem importa"],
+      c: 0, e: "\"Ou\" (só uma das escolhas acontece) soma. \"E\" (as duas acontecem) multiplica."
+    },
+    pares: [["uma OU outra", "soma"], ["uma E outra", "multiplica"], ["4!", "24"], ["n objetos em fila", "n!"]],
+    caderno: { regras: ["\"Ou\": soma. \"E\": multiplica.", "n! = n × (n − 1) × … × 1. 4! = 24, 5! = 120, 6! = 720, 7! = 5.040.", "n pessoas em fila: n!. Só k posições entre n: n × (n − 1) × … (k fatores)."], dica: "Itens que precisam ficar juntos viram um bloco: conte os blocos e depois multiplique pelas trocas dentro de cada bloco." }
+  },
+  { // 34 Anagramas, repetições e restrições
+    imersao: {
+      exemplos: [["AMOR (todas diferentes)", "4! = 24"], ["OVO (O repete 2 vezes)", "3!/2! = 3"], ["ARARA (A 3 vezes, R 2 vezes)", "5!/(3! × 2!) = 10"]],
+      pergunta: "Por que se divide quando há letras repetidas?",
+      opcoes: ["Porque trocar letras iguais de lugar não cria anagrama novo", "Porque a palavra fica menor", "Porque é regra da banca"],
+      c: 0, e: "Trocar os dois O de OVO dá a mesma palavra. A divisão tira essas contagens repetidas."
+    },
+    pares: [["letras diferentes", "n!"], ["letra repetida k vezes", "divide por k!"], ["começa com…", "fixa e permuta o resto"], ["OVO", "3"]],
+    caderno: { regras: ["Anagramas com letras diferentes: n!.", "Com repetição: n! dividido pelo fatorial de cada repetição.", "Restrição primeiro: fixe as posições obrigatórias e permute só o que sobrou."], dica: "Letras juntas (ex.: vogais juntas) viram um bloco. Conte o bloco como uma letra e multiplique pelas arrumações dentro dele." }
   }
 ];

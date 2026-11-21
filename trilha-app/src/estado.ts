@@ -191,7 +191,7 @@ export function missoesDoDia(dia = diaLocal()): Missao[] {
 // ---------- conquistas ----------
 export interface Conquista { id: string; nome: string; desc: string; simbolo: string; cor: 'ouro' | 'prata' | 'bronze' | 'verde' | 'azul' | 'laranja'; ok: (e: Estado) => boolean }
 // símbolo de cada unidade: conjuntos, conectivos, argumentação (portanto) e raciocínio aplicado
-export const SIMBOLO_UNIDADE = ['∪', '∧', 'VF', '≡', '∴', '?', '#', '31'];
+export const SIMBOLO_UNIDADE = ['∪', '∧', 'VF', '≡', '∴', '?', '#', '31', '∃', 'n!'];
 export const CONQUISTAS: Conquista[] = [
   { id: 'primeira', nome: 'Primeiro passo', desc: 'Concluiu a primeira lição', simbolo: '1º', cor: 'verde', ok: (e) => e.licoesFeitas >= 1 },
   { id: 'perfeita', nome: 'Gabaritou', desc: 'Fez uma lição sem errar nada', simbolo: '≡', cor: 'ouro', ok: (e) => e.perfeitas >= 1 },

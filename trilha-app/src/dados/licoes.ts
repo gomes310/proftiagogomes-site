@@ -5,10 +5,12 @@ export const UNIDADES: Unidade[] = [
     { id: "proposicoes", nome: "Proposições e conectivos", desc: "A linguagem da lógica", selo: "Lógico de carteirinha", licoes: [1, 24, 25, 13, 26, 14], niveis: [[1, 24], [25, 13], [26, 14]], temas: ["Proposições e conectivos"], cor: { p: "#7442C8", e: "#4E2690", c: "#EEE6FA" } },
     { id: "tabela", nome: "Tabela-verdade", desc: "Valores lógicos, tautologia e contradição", selo: "Rei da tabela", licoes: [2, 4, 15], niveis: [[2], [4], [15]], temas: ["Tabela-verdade", "Tautologia, contradição e contingência", "Ordem de precedência dos conectivos"], cor: { p: "#0F766E", e: "#0A4F4A", c: "#DDF3F0" } },
     { id: "equivalencias", nome: "Equivalências e negações", desc: "Dizer o mesmo de outro jeito e negar certo", selo: "Sem pegadinha", licoes: [3, 16, 17], niveis: [[3], [16], [17]], temas: ["Equivalências e negações"], cor: { p: "#B02A6B", e: "#7A1A4A", c: "#FBE4EF" } },
-    { id: "argumentos", nome: "Argumentos e diagramas", desc: "Conclusões que valem e as que não valem", selo: "Argumentador", licoes: [5, 6, 18], niveis: [[5], [6], [18]], temas: [], cor: { p: "#4D7C0F", e: "#335309", c: "#EAF3D9" } },
+    { id: "argumentos", nome: "Argumentos e implicação lógica", desc: "Do fato à conclusão, passo a passo", selo: "Argumentador", licoes: [6, 30, 31, 18], niveis: [[6], [30], [31, 18]], temas: ["Implicação lógica"], cor: { p: "#4D7C0F", e: "#335309", c: "#EAF3D9" } },
     { id: "associacao", nome: "Associação, verdades e mentiras", desc: "Tabelas, pistas e quem está mentindo", selo: "Detetive lógico", licoes: [7, 19, 20], niveis: [[7], [19], [20]], temas: ["Verdades e mentiras"], cor: { p: "#C2410C", e: "#8A2C06", c: "#FDE8DC" } },
     { id: "sequencias", nome: "Sequências lógicas", desc: "Números, letras e padrões", selo: "Caçador de padrões", licoes: [8, 21, 22], niveis: [[8], [21], [22]], temas: ["Sequências lógicas"], cor: { p: "#0A6E8C", e: "#064A5F", c: "#DDF0F6" } },
-    { id: "pombos", nome: "Casa dos pombos e calendários", desc: "Pior caso, datas e dias da semana", selo: "Mestre do calendário", licoes: [9, 10, 23], niveis: [[9], [10], [23]], temas: ["Princípio da casa dos pombos", "Datas e calendários"], cor: { p: "#96580A", e: "#663B05", c: "#F8ECD9" } }
+    { id: "pombos", nome: "Casa dos pombos e calendários", desc: "Pior caso, datas e dias da semana", selo: "Mestre do calendário", licoes: [9, 10, 23], niveis: [[9], [10], [23]], temas: ["Princípio da casa dos pombos", "Datas e calendários"], cor: { p: "#96580A", e: "#663B05", c: "#F8ECD9" } },
+    { id: "categoricas", nome: "Proposições categóricas", desc: "Todo, algum, nenhum e diagramas", selo: "Senhor dos quantificadores", licoes: [27, 5, 28, 29], niveis: [[27], [5, 28], [29]], temas: ["Proposições categóricas"], cor: { p: "#C0262D", e: "#86161B", c: "#FCE4E4" } },
+    { id: "contagem", nome: "Princípios da contagem", desc: "Multiplicar, somar, fatorial e anagramas", selo: "Contador oficial", licoes: [32, 33, 34], niveis: [[32], [33], [34]], temas: ["Princípios da contagem"], cor: { p: "#4F46E5", e: "#3730A3", c: "#E6E5FB" } }
   ];
 // variáveis CSS com as cores do tema (para usar em style={...})
 export const varsTema = (t: number) => { const c = UNIDADES[t].cor; return { '--u': c.p, '--u-escuro': c.e, '--u-claro': c.c } as React.CSSProperties; };
@@ -220,6 +222,86 @@ export const LICOES: Licao[] = [
         { p: "\"x + y = 10\" é uma proposição?", o: ["Sim: é falsa", "Só quando x for igual a y", "Não: é uma sentença aberta", "Sim: é verdadeira"], c: 2, e: "Sem valores para x e y, não dá para dizer se é verdadeira ou falsa." },
         { p: "(Banca CEBRASPE) Quantas destas são proposições? I. Esta frase é falsa. II. O TCE/AC tem como função fiscalizar o orçamento do estado do Acre. III. Quantos são os conselheiros do TCE/AC?", o: ["1", "2", "3", "Nenhuma"], c: 0, e: "Só a II. A I é um paradoxo e a III é uma pergunta. Por isso o item \"há exatamente 2 proposições\" foi julgado errado." },
         { p: "Qual destas é uma proposição?", o: ["x > 3", "Ela é muito inteligente.", "x > 3, para x = 5", "Esta frase é falsa."], c: 2, e: "Com x = 5 a sentença fecha: 5 > 3 é verdadeira." }
+      ] },
+    { titulo: "Todo, algum e nenhum", teoria: ["Proposição categórica usa um quantificador: todo, algum (existe, pelo menos um) ou nenhum.", "Universais: \"Todo A é B\" e \"Nenhum A é B\". Particulares: \"Algum A é B\" e \"Algum A não é B\".", "Afirmativa não tem \"não\"; negativa tem. \"Algum A não é B\" é particular negativa."],
+      exemplo: "\"Todos os atletas são saudáveis\" é universal afirmativa. \"Alguns atletas não são saudáveis\" é particular negativa.",
+      questoes: [
+        { p: "\"Nenhum gato é verde.\" Essa proposição é:", o: ["Particular negativa", "Particular afirmativa", "Universal negativa", "Universal afirmativa"], c: 2, e: "\"Nenhum\" fala de todos os gatos (universal) e nega (negativa)." },
+        { p: "(Banca Legalle) Qual tem quantificador particular e afirmativo?", o: ["Algum bosque não possui muitas flores.", "Todo bosque possui muitas flores.", "Nenhum bosque possui muitas flores.", "Algum bosque possui muitas flores."], c: 3, e: "\"Algum\" é particular, e a frase não tem \"não\": afirmativa." },
+        { p: "\"Pelo menos um aluno faltou\" tem o mesmo sentido de:", o: ["Algum aluno faltou.", "Todo aluno faltou.", "Nenhum aluno faltou.", "Algum aluno não faltou."], c: 0, e: "\"Pelo menos um\", \"existe\" e \"algum\" são o mesmo quantificador." },
+        { p: "\"Todo médico é formado.\" No diagrama:", o: ["Os círculos são iguais.", "O círculo dos médicos fica dentro do dos formados.", "O dos formados fica dentro do dos médicos.", "Os círculos não se tocam."], c: 1, e: "Todo médico está entre os formados, mas pode haver formado que não é médico." },
+        { p: "\"Nenhum peixe é mamífero.\" No diagrama:", o: ["Os círculos se cruzam.", "O dos mamíferos fica dentro do dos peixes.", "Os círculos não se tocam.", "O dos peixes fica dentro do dos mamíferos."], c: 2, e: "\"Nenhum\" significa que os conjuntos não têm nada em comum." },
+        { p: "\"Alguns professores são poetas.\" Então, com certeza:", o: ["Todo poeta é professor.", "Todo professor é poeta.", "Alguns professores não são poetas.", "Alguns poetas são professores."], c: 3, e: "\"Algum A é B\" vale nos dois sentidos: algum B é A. As outras não são garantidas." }
+      ] },
+    { titulo: "Negar e trocar categóricas", teoria: ["Negação de \"Todo A é B\": \"Algum A não é B\" (existe, pelo menos um… não é).", "Negação de \"Nenhum A é B\": \"Algum A é B\". Negação de \"Algum A é B\": \"Nenhum A é B\".", "Equivalente a \"Todo A é B\": \"Se é A, é B\" e \"Se não é B, não é A\". \"Nenhum A é B\" = \"Todo A não é B\"."],
+      exemplo: "\"Todos os peixes vivem no mar\" é negada por \"Existe peixe que não vive no mar\".",
+      questoes: [
+        { p: "(Banca IADES) Negação de \"Todo policial militar é um exímio atirador\":", o: ["Algum policial militar não é um exímio atirador.", "Nenhum policial militar é um exímio atirador.", "Todo policial militar não é um exímio atirador.", "Pelo menos um policial militar é um exímio atirador."], c: 0, e: "Para derrubar o \"todo\", basta um caso contrário. \"Nenhum\" exagera." },
+        { p: "Negação de \"Nenhum outono é quente\":", o: ["Nenhum outono é frio.", "Algum outono é quente.", "Todo outono é quente.", "Algum outono não é quente."], c: 1, e: "Para derrubar o \"nenhum\", basta existir um." },
+        { p: "Negação de \"Algum assistente social acompanhou o julgamento\":", o: ["Todos acompanharam.", "Nem todos acompanharam.", "Nenhum assistente social acompanhou o julgamento.", "Algum assistente social não acompanhou."], c: 2, e: "Negar \"existe\" é dizer que não existe nenhum." },
+        { p: "(Banca FGV) \"Todo vegetal verde é saudável.\" Também é verdade que:", o: ["Todo vegetal saudável é verde.", "Todo vegetal que não é verde não é saudável.", "Alguns vegetais verdes não são saudáveis.", "Todo vegetal que não é saudável não é verde."], c: 3, e: "É a contrapositiva: \"se não é saudável, não é verde\"." },
+        { p: "\"Nenhum recifense é carioca\" equivale a:", o: ["Todo recifense não é carioca.", "Algum recifense não é carioca.", "Todo carioca é recifense.", "Algum recifense é carioca."], c: 0, e: "\"Nenhum A é B\" = \"Todo A não é B\"." },
+        { p: "(Banca CEBRASPE) Se \"Todas as casas das ruas A e B foram visitadas\" é falsa, então:", o: ["Todas as casas de A não foram visitadas.", "Alguma casa de A não foi visitada ou alguma casa de B não foi visitada.", "Nenhuma casa foi visitada.", "Alguma casa de A e alguma casa de B não foram visitadas."], c: 1, e: "Nega o \"todas\" (alguma… não) e troca o \"e\" por \"ou\"." }
+      ] },
+    { titulo: "Silogismos: o que dá para concluir", teoria: ["Desenhe as premissas com círculos e veja o que acontece em TODOS os desenhos possíveis.", "Uma conclusão só vale se for verdadeira em todos os desenhos. Se depende do desenho, a resposta é \"pode ser\".", "Atalhos: duas premissas com \"algum\" não garantem nada; se uma premissa tem \"não\", a conclusão também tem."],
+      exemplo: "\"Nenhum professor é mentiroso\" e \"Alguns advogados são mentirosos\": os advogados mentirosos não são professores, então alguns advogados não são professores.",
+      questoes: [
+        { p: "(Banca VUNESP) \"Todos os tutores são professores\" e \"Alguns coordenadores são professores\". Conclui-se que:", o: ["Todos os coordenadores são professores.", "Há tutores que não são professores.", "Há professores que são tutores.", "Há coordenadores que são tutores."], c: 2, e: "Os tutores estão dentro dos professores. Os coordenadores podem nem tocar nos tutores." },
+        { p: "(Banca SELECON) \"Nenhum professor é mentiroso\" e \"Alguns advogados são mentirosos\". Conclui-se que:", o: ["Alguns advogados são professores.", "Nenhum professor é advogado.", "Alguns professores são advogados.", "Alguns advogados não são professores."], c: 3, e: "Os advogados mentirosos ficam fora do círculo dos professores." },
+        { p: "(Banca FUNDATEC) \"Todo eletricista estuda física\" e \"Maria estuda física\". Então:", o: ["Maria pode ser eletricista.", "Maria certamente é eletricista.", "Maria certamente não é eletricista.", "Maria não estuda Matemática."], c: 0, e: "Maria está em \"estuda física\", que é maior que \"eletricista\". Ela pode estar dentro ou fora." },
+        { p: "\"Alguns médicos são poliglotas\" e \"Alguns professores são poliglotas\". Conclusão: \"Alguns médicos são professores\". O argumento é:", o: ["Válido", "Inválido"], c: 1, e: "Os médicos poliglotas podem ser outros, diferentes dos professores poliglotas. Com dois \"algum\", nada é garantido." },
+        { p: "(Banca IBADE) \"Todo morador de Vila Velha gosta de praia\" e \"João não gosta de praia\". Conclui-se que:", o: ["João mora em Vila Velha.", "João gosta de cachoeira.", "João não mora em Vila Velha.", "João não mora no Espírito Santo."], c: 2, e: "Quem não gosta de praia está fora do círculo, então não é morador de Vila Velha. Pode morar em outra cidade do ES." },
+        { p: "(Banca FCC) \"Todo amapaense é brasileiro\" e \"Todo brasileiro é sul-americano\". É correto afirmar:", o: ["Todo sul-americano é brasileiro.", "Existe amapaense que não é brasileiro.", "Todo brasileiro é amapaense.", "É possível existir sul-americano que não seja amapaense."], c: 3, e: "Os círculos ficam um dentro do outro: amapaense ⊂ brasileiro ⊂ sul-americano." }
+      ] },
+    { titulo: "Implicação tipo 1: comece pelo fato", teoria: ["Tipo 1: há um ponto de partida \"travado\", que só tem um jeito de acontecer.", "Pontos de partida: uma proposição simples, um \"e\" verdadeiro (tudo V), um \"ou\" falso (tudo F) ou uma condicional falsa (V → F).", "Do ponto de partida, vá substituindo nas outras frases, uma por vez, como num efeito dominó."],
+      exemplo: "\"Se Joana é dentista, montou o consultório. Joana não montou o consultório.\" O fato é \"não montou\"; pela contrapositiva, Joana não é dentista.",
+      questoes: [
+        { p: "(Banca IBADE) \"Se a parede não é branca, o cachorro late. Se a parede é branca, o canário não canta. O canário canta.\" Logo:", o: ["A parede não é branca e o cachorro late.", "A parede é branca e o cachorro late.", "A parede não é branca e o cachorro não late.", "A parede é branca e o cachorro não late."], c: 0, e: "O fato é \"o canário canta\". Então a parede não é branca, e o cachorro late." },
+        { p: "(Banca IDIB) \"Se André é cantor, Bruna é bailarina\" é FALSA. Então:", o: ["Nada se conclui.", "André é cantor e Bruna não é bailarina.", "André não é cantor.", "Bruna é bailarina."], c: 1, e: "A condicional só é falsa em V → F." },
+        { p: "(Banca IBADE) \"Como ou durmo. Bebo ou não como. Jogo ou não durmo. Ora, não jogo.\" Portanto:", o: ["Não bebo e como.", "Durmo e não bebo.", "Como e bebo.", "Durmo e bebo."], c: 2, e: "Não jogo → não durmo → como → bebo." },
+        { p: "\"Rui canta e dança\" é verdadeira, e \"Se Rui dança, Lia toca\" também. Então:", o: ["Lia não toca.", "Rui não canta.", "Nada se conclui.", "Lia toca."], c: 3, e: "\"E\" verdadeiro: Rui dança. Pela condicional, Lia toca." },
+        { p: "(Banca CEBRASPE) \"Paulo fiscal → João motorista\" é V e \"Maria enfermeira ou João motorista\" é F. Então:", o: ["Maria não é enfermeira, João não é motorista e Paulo não é fiscal.", "Maria é enfermeira e Paulo é fiscal.", "João é motorista.", "Paulo é fiscal."], c: 0, e: "\"Ou\" falso: tudo F. Com João não motorista, Paulo não pode ser fiscal." },
+        { p: "(Banca VUNESP) \"Se a temperatura cair, me agasalho. Se me agasalho, não corro. A temperatura caiu.\" Então:", o: ["Cheguei tarde.", "Não corri e me agasalhei.", "Corri e não cheguei tarde.", "Não corri e não me agasalhei."], c: 1, e: "O fato é a queda da temperatura: agasalho, e então não corro." }
+      ] },
+    { titulo: "Implicação tipo 2: encadeando condicionais", teoria: ["Tipo 2: não há fato travado, só compostas. A resposta costuma ser outra composta (condicional ou \"ou\").", "Ligue as condicionais em cadeia: se p → q e q → r, então p → r. Use a contrapositiva para encaixar os elos.", "Para julgar um item \"se X, então Y\": suponha X verdadeiro e veja se as premissas obrigam Y."],
+      exemplo: "\"Se compro um carro, não viajo de avião. Se não viajo de avião, assisto a filmes.\" Encadeando: \"Se compro um carro, assisto a filmes\".",
+      questoes: [
+        { p: "\"Se A, então B. Se B, então C.\" Conclui-se que:", o: ["A é verdadeira.", "Se não A, então não C.", "Se A, então C.", "Se C, então A."], c: 2, e: "É a cadeia (silogismo hipotético): A leva a B, que leva a C." },
+        { p: "(Banca QUADRIX) \"1) Faço doação ou compro carro. 2) Se compro carro, não viajo de avião. 4) Se não viajo de avião, assisto a filmes.\" Julgue: \"Se não faço doação, assisto a filmes.\"", o: ["Certo", "Errado"], c: 0, e: "Sem doação, compro o carro (1). Então não viajo (2). Então assisto a filmes (4)." },
+        { p: "(Banca QUADRIX) Com as mesmas frases, julgue: \"Se assisto a filmes, então compro um carro.\"", o: ["Certo", "Errado"], c: 1, e: "Assistir a filmes é o fim da cadeia; não obriga a voltar ao começo." },
+        { p: "(Banca NC UFPR) \"Se chove, faz frio. O mar não está calmo ou posso mergulhar. Chove ou o mar está calmo.\" Conclui-se:", o: ["Se faz frio, chove.", "Faz frio ou posso mergulhar.", "Chove e posso mergulhar.", "O mar está calmo."], c: 1, e: "Se chove, faz frio; se o mar está calmo, posso mergulhar. Como um dos dois acontece, vale \"frio ou mergulho\"." },
+        { p: "(Banca FCC) \"Todo trapezista é malabarista. Se é contorcionista e não equilibrista, não é malabarista.\" Se é trapezista, então:", o: ["é contorcionista e não equilibrista", "não é equilibrista", "é equilibrista ou não é contorcionista", "não é malabarista"], c: 2, e: "Trapezista → malabarista → não (contorcionista e não equilibrista) = não contorcionista ou equilibrista." },
+        { p: "\"Se Paulo é pedreiro, Pedro não é porteiro. Se Pedro não é porteiro, João é encanador.\" Qual conclusão é válida?", o: ["Se João é encanador, Paulo é pedreiro.", "Paulo é pedreiro.", "Se Pedro é porteiro, João é encanador.", "Se João não é encanador, Paulo não é pedreiro."], c: 3, e: "A cadeia dá \"Paulo pedreiro → João encanador\". A contrapositiva também vale." }
+      ] },
+    { titulo: "Princípio multiplicativo", teoria: ["Se uma escolha acontece E depois outra, multiplique as possibilidades de cada etapa.", "Desenhe um traço para cada etapa e escreva quantas opções há em cada uma: _ × _ × _.", "Atenção: \"distintos\" ou \"sem repetir\" diminui as opções a cada etapa; \"pode repetir\" mantém."],
+      exemplo: "3 camisas e 4 calças: 3 × 4 = 12 jeitos de se vestir.",
+      questoes: [
+        { p: "(Banca OBJETIVA) Juliana tem 5 calças e 6 camisas. De quantos jeitos ela escolhe uma calça e uma camisa?", o: ["30", "11", "20", "15"], c: 0, e: "Uma calça E uma camisa: 5 × 6 = 30." },
+        { p: "(Banca IBADE) 4 caminhos de A para B e 6 de B para C. Quantos caminhos de A para C passando por B?", o: ["16", "24", "10", "20"], c: 1, e: "Os dois trechos acontecem: 4 × 6 = 24." },
+        { p: "Quantas senhas de 3 dígitos (0 a 9) existem, podendo repetir?", o: ["30", "999", "1.000", "720"], c: 2, e: "10 × 10 × 10 = 1.000." },
+        { p: "E se os 3 dígitos forem distintos?", o: ["1.000", "30", "504", "720"], c: 3, e: "10 × 9 × 8 = 720: cada etapa perde uma opção." },
+        { p: "(Banca Consulplan) Um secador tem 3 temperaturas e 3 velocidades. Quantos ajustes?", o: ["9", "6", "18", "27"], c: 0, e: "3 × 3 = 9." },
+        { p: "(Banca CETREDE) Quantos números de 2 algarismos distintos podem ser formados com 0, 1, …, 9?", o: ["45", "81", "90", "100"], c: 1, e: "A dezena não pode ser 0: 9 opções. A unidade: 9 (os 10 menos o já usado). 9 × 9 = 81." }
+      ] },
+    { titulo: "Somar ou multiplicar? E o fatorial", teoria: ["\"OU\" (uma opção ou outra, não as duas): some. \"E\" (as duas acontecem): multiplique.", "Fatorial: n! = n × (n − 1) × … × 1. Ex.: 4! = 24, 5! = 120, 6! = 720, 7! = 5.040.", "Arrumar n pessoas (ou objetos) diferentes em fila: n! jeitos (permutação)."],
+      exemplo: "5 pessoas numa fila: 5! = 5 × 4 × 3 × 2 × 1 = 120 jeitos.",
+      questoes: [
+        { p: "(Banca AOCP) Doar para uma de 3 entidades do bairro A OU uma de 4 ONGs do bairro B. Quantas opções?", o: ["34", "15", "7", "12"], c: 2, e: "É uma OU outra: 3 + 4 = 7." },
+        { p: "(Banca Legalle) 17 doces ou 20 salgados: de quantos modos escolher um produto?", o: ["340", "40", "240", "37"], c: 3, e: "Princípio aditivo: 17 + 20 = 37." },
+        { p: "Quanto vale 5!?", o: ["120", "25", "60", "15"], c: 0, e: "5 × 4 × 3 × 2 × 1 = 120." },
+        { p: "(Banca FAFIPA) 7 pessoas sentam num banco para uma foto. Quantos jeitos?", o: ["2.520", "5.040", "720", "49"], c: 1, e: "7! = 5.040." },
+        { p: "(Banca FEPESE) 7 atletas: de quantos modos podem chegar os 4 primeiros?", o: ["28", "35", "840", "5.040"], c: 2, e: "Só 4 posições: 7 × 6 × 5 × 4 = 840." },
+        { p: "(Banca IBADE) Dois casais posam para uma foto, cada casal junto. Quantos jeitos?", o: ["4", "24", "2", "8"], c: 3, e: "Os 2 blocos trocam de lugar (2!) e cada casal troca por dentro (2 × 2): 2 × 2 × 2 = 8." }
+      ] },
+    { titulo: "Anagramas, repetições e restrições", teoria: ["Anagrama é cada jeito de reordenar as letras de uma palavra. Letras todas diferentes: n!.", "Letras repetidas: divida pelo fatorial de cada repetição. ARARA: 5!/(3! × 2!) = 10.", "Restrição primeiro: fixe as letras obrigatórias (começa com…, termina com…) e permute o resto."],
+      exemplo: "AMOR tem 4! = 24 anagramas; ROMA e MORA são dois deles.",
+      questoes: [
+        { p: "Quantos anagramas tem a palavra SOL?", o: ["6", "3", "9", "27"], c: 0, e: "3 letras diferentes: 3! = 6." },
+        { p: "(Banca ACCESS) Quantos anagramas tem PLACA?", o: ["24", "60", "120", "30"], c: 1, e: "5 letras com o A duas vezes: 5!/2! = 60." },
+        { p: "(Banca Unifil) Quantos anagramas de ÂNGULO começam com Â?", o: ["240", "90", "120", "720"], c: 2, e: "Fixe o Â e permute as outras 5: 5! = 120." },
+        { p: "(Banca CETREDE) Anagramas de TUDO que começam com consoante e terminam com vogal:", o: ["4", "16", "24", "8"], c: 3, e: "2 consoantes × 2 vogais × 2! do meio = 8." },
+        { p: "(Banca MSM) Anagramas de MALETA que começam por consoante:", o: ["180", "360", "2.160", "60"], c: 0, e: "3 consoantes para o início; as outras 5 letras têm A duas vezes: 5!/2! = 60. 3 × 60 = 180." },
+        { p: "(Banca IBADE) Quantos números distintos se formam permutando os algarismos de 65957?", o: ["24", "60", "120", "30"], c: 1, e: "5 algarismos com o 5 repetido: 5!/2! = 60." }
       ] }
   ];
 
@@ -278,6 +360,22 @@ export const EXTRA: Extra[] = [
     { ex: ["\"João é professor, mas Pedro é advogado.\" Qual é o conectivo?", "Conjunção (∧). O \"mas\" tem o mesmo valor lógico do \"e\"."],
       vf: { t: "\"Todo nordestino é brasileiro\" é uma proposição categórica.", v: true, e: "Ela usa o quantificador \"todo\"." } },
     { ex: ["\"Só sei que nada sei\" é proposição?", "Não. É um paradoxo: se fosse verdade que a pessoa nada sabe, ela não saberia nem isso."],
-      vf: { t: "\"2 + x = 10, para x = 8\" é uma sentença fechada.", v: true, e: "A variável recebeu valor: 2 + 8 = 10, que é verdadeira." } }
+      vf: { t: "\"2 + x = 10, para x = 8\" é uma sentença fechada.", v: true, e: "A variável recebeu valor: 2 + 8 = 10, que é verdadeira." } },
+    { ex: ["\"Existem ministros que não são advogados.\" Qual é o tipo?", "Particular negativa: \"existem\" é particular, e o \"não\" a torna negativa. É o mesmo que \"Algum ministro não é advogado\"."],
+      vf: { t: "\"Qualquer engenheiro sabe Matemática\" é uma universal afirmativa.", v: true, e: "\"Qualquer\" tem o mesmo sentido de \"todo\"." } },
+    { ex: ["Qual é a negação de \"Todos os candidatos estão presentes\"?", "\"Pelo menos um candidato não está presente.\" Não é \"nenhum está presente\": isso exagera."],
+      vf: { t: "A negação de \"Todos os amigos de Bianca são paulistas\" é \"Nenhum amigo de Bianca é paulista\".", v: false, e: "A negação é \"Algum amigo de Bianca não é paulista\"." } },
+    { ex: ["\"Alguns corintianos são chatos\" e \"Todos os corintianos são fanáticos\". Conclusão: \"Alguns fanáticos são chatos\". Vale?", "Vale. Os corintianos chatos estão dentro dos fanáticos, então existem fanáticos chatos."],
+      vf: { t: "De \"Todo A é B\" e \"Algum C é B\" dá para concluir que \"Algum C é A\".", v: false, e: "Os C que são B podem estar fora de A. Faça o desenho com C cruzando só a parte de B fora de A." } },
+    { ex: ["\"Ana estuda ou trabalha\" é falsa. O que se sabe?", "Tudo: Ana não estuda e não trabalha. O \"ou\" só é falso quando as duas partes são falsas."],
+      vf: { t: "\"Se p, então q\" verdadeira e \"p\" verdadeira garantem que q é verdadeira.", v: true, e: "Começando com V, a condicional só é verdadeira se terminar em V." } },
+    { ex: ["\"Se o ar está seco, a temperatura cai.\" Dá para concluir \"se a temperatura cai, o ar está seco\"?", "Não. Isso é a recíproca, que não equivale. A temperatura pode cair por outro motivo."],
+      vf: { t: "De \"p ou q\" pode-se escrever \"se não p, então q\".", v: true, e: "Se uma das partes do \"ou\" falha, a outra tem que valer." } },
+    { ex: ["Uma placa tem 2 letras (26 opções cada) e 1 número (0 a 9). Quantas placas?", "26 × 26 × 10 = 6.760. Letras podem repetir, então cada etapa tem 26."],
+      vf: { t: "Para escolher um prato E uma bebida, somamos as opções.", v: false, e: "Com \"E\" (as duas escolhas acontecem), multiplicamos." } },
+    { ex: ["Quanto é 6!/4!?", "6 × 5 = 30. O 4! se cancela: 6! = 6 × 5 × 4!."],
+      vf: { t: "Arrumar 4 livros diferentes numa estante dá 4! = 24 jeitos.", v: true, e: "Primeiro lugar: 4 opções, depois 3, 2 e 1." } },
+    { ex: ["Quantos anagramas tem BANANA?", "6 letras com A três vezes e N duas vezes: 6!/(3! × 2!) = 720/12 = 60."],
+      vf: { t: "OVO tem 3! = 6 anagramas.", v: false, e: "O O se repete: 3!/2! = 3 (OVO, OOV, VOO)." } }
   ];
 

@@ -2243,5 +2243,764 @@
     "e": "Anda 1 dia: domingo."
    }
   }
+ ],
+ "27": [
+  {
+   "titulo": "Os quatro tipos",
+   "conceito": "Uma **proposição categórica** diz quantos de um grupo têm uma característica. Ela usa **todo**, **nenhum** ou **algum**.",
+   "exemplos": [
+    {
+     "t": "Todo atleta é saudável.",
+     "r": "universal afirmativa",
+     "ok": true,
+     "porque": "Fala de todos os atletas e afirma."
+    },
+    {
+     "t": "Nenhum atleta é saudável.",
+     "r": "universal negativa",
+     "ok": true,
+     "porque": "Fala de todos e nega."
+    },
+    {
+     "t": "Algum atleta é saudável.",
+     "r": "particular afirmativa",
+     "ok": true,
+     "porque": "Fala de parte dos atletas e afirma."
+    },
+    {
+     "t": "Algum atleta não é saudável.",
+     "r": "particular negativa",
+     "ok": true,
+     "porque": "Fala de parte e nega."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Existem candidatos que não estudaram.\" É:",
+    "o": [
+     "particular negativa",
+     "universal negativa",
+     "particular afirmativa"
+    ],
+    "c": 0,
+    "dica": "\"Existem\" fala de todos ou de alguns? E tem \"não\"?",
+    "e": "\"Existem\" = algum (particular), e o \"não\" torna negativa."
+   }
+  },
+  {
+   "titulo": "Palavras com o mesmo sentido",
+   "conceito": "**Algum** = **existe** = **pelo menos um**. **Todo** = **qualquer** = **cada**. As bancas trocam as palavras para confundir.",
+   "exemplos": [
+    {
+     "t": "Existe policial que é atirador.",
+     "r": "Algum policial é atirador.",
+     "ok": true,
+     "porque": "Mesmo sentido."
+    },
+    {
+     "t": "Qualquer servidor tem crachá.",
+     "r": "Todo servidor tem crachá.",
+     "ok": true,
+     "porque": "Mesmo sentido."
+    },
+    {
+     "t": "Pelo menos um aluno faltou.",
+     "r": "Algum aluno faltou.",
+     "ok": true,
+     "porque": "Mesmo sentido."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Cada funcionário recebeu um brinde\" tem o mesmo sentido de:",
+    "o": [
+     "Todo funcionário recebeu um brinde.",
+     "Algum funcionário recebeu um brinde.",
+     "Nenhum funcionário recebeu um brinde."
+    ],
+    "c": 0,
+    "dica": "\"Cada\" fala de um ou de todos?",
+    "e": "\"Cada\" fala de todos, um por um: é universal."
+   }
+  },
+  {
+   "titulo": "Desenhando com círculos",
+   "conceito": "Cada tipo vira um desenho. **Todo A é B**: A dentro de B. **Nenhum A é B**: círculos separados. **Algum A é B**: círculos que se cruzam.",
+   "exemplos": [
+    {
+     "t": "Todo pirata é marinheiro.",
+     "r": "piratas dentro de marinheiros",
+     "ok": true,
+     "porque": "Pode haver marinheiro que não é pirata."
+    },
+    {
+     "t": "Nenhum peixe é mamífero.",
+     "r": "círculos separados",
+     "ok": true,
+     "porque": "Os grupos não têm nada em comum."
+    },
+    {
+     "t": "Algum médico é poliglota.",
+     "r": "círculos que se cruzam",
+     "ok": true,
+     "porque": "Há pelo menos um na parte comum."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Todo carioca é brasileiro.\" Qual frase é garantida?",
+    "o": [
+     "O conjunto dos brasileiros contém o dos cariocas.",
+     "Todo brasileiro é carioca.",
+     "Os dois conjuntos são iguais."
+    ],
+    "c": 0,
+    "dica": "Quem fica dentro de quem?",
+    "e": "Os cariocas ficam dentro dos brasileiros; o contrário não é garantido."
+   }
+  }
+ ],
+ "28": [
+  {
+   "titulo": "Negando o \"todo\"",
+   "conceito": "Para mostrar que **\"Todo A é B\"** é falsa, basta **um** A que não seja B. A negação é **\"Algum A não é B\"**.",
+   "exemplos": [
+    {
+     "t": "Todos os peixes vivem no mar.",
+     "r": "Existe peixe que não vive no mar.",
+     "ok": true,
+     "porque": "Um peixe de rio já derruba a frase."
+    },
+    {
+     "t": "Todo policial é atirador.",
+     "r": "Nenhum policial é atirador.",
+     "ok": false,
+     "porque": "\"Nenhum\" exagera: não é a negação."
+    }
+   ],
+   "suaVez": {
+    "p": "Negação de \"Todas as lâmpadas estão acesas\":",
+    "o": [
+     "Pelo menos uma lâmpada está apagada.",
+     "Todas as lâmpadas estão apagadas.",
+     "Nenhuma lâmpada está acesa."
+    ],
+    "c": 0,
+    "dica": "Quantas lâmpadas apagadas bastam para a frase ser falsa?",
+    "e": "Basta uma apagada."
+   }
+  },
+  {
+   "titulo": "Negando \"nenhum\" e \"algum\"",
+   "conceito": "**\"Nenhum A é B\"** é negada por **\"Algum A é B\"**. E **\"Algum A é B\"** é negada por **\"Nenhum A é B\"**. Uma desmente a outra.",
+   "exemplos": [
+    {
+     "t": "Nenhum carro é movido a etanol.",
+     "r": "Algum carro é movido a etanol.",
+     "ok": true,
+     "porque": "Basta existir um carro a etanol."
+    },
+    {
+     "t": "Algum aluno colou.",
+     "r": "Nenhum aluno colou.",
+     "ok": true,
+     "porque": "A negação de \"existe\" é \"não existe nenhum\"."
+    }
+   ],
+   "suaVez": {
+    "p": "Negação de \"Algum vereador faltou\":",
+    "o": [
+     "Nenhum vereador faltou.",
+     "Algum vereador não faltou.",
+     "Todo vereador faltou."
+    ],
+    "c": 0,
+    "dica": "Qual frase desmente \"existe pelo menos um que faltou\"?",
+    "e": "Só \"nenhum faltou\" desmente."
+   }
+  },
+  {
+   "titulo": "Dizendo o mesmo de outro jeito",
+   "conceito": "**\"Todo A é B\"** equivale a **\"Se é A, é B\"** e a **\"Se não é B, não é A\"**. E **\"Nenhum A é B\"** equivale a **\"Todo A não é B\"**.",
+   "exemplos": [
+    {
+     "t": "Todo recifense é pernambucano.",
+     "r": "Quem não é pernambucano não é recifense.",
+     "ok": true,
+     "porque": "É a contrapositiva."
+    },
+    {
+     "t": "Todo recifense é pernambucano.",
+     "r": "Todo pernambucano é recifense.",
+     "ok": false,
+     "porque": "Inverter sem negar muda o sentido."
+    },
+    {
+     "t": "Nenhum natalense é pernambucano.",
+     "r": "Todo natalense não é pernambucano.",
+     "ok": true,
+     "porque": "Mesmo sentido."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Todo político é corrupto\" equivale a:",
+    "o": [
+     "Todos que não são corruptos não são políticos.",
+     "Todo corrupto é político.",
+     "Quem não é político não é corrupto."
+    ],
+    "c": 0,
+    "dica": "Inverta e negue as duas partes.",
+    "e": "Contrapositiva: se não é corrupto, não é político."
+   }
+  }
+ ],
+ "29": [
+  {
+   "titulo": "Desenhe e encaixe",
+   "conceito": "Desenhe cada premissa com círculos e **encaixe** os desenhos. A conclusão certa é a que aparece **em qualquer** desenho possível.",
+   "exemplos": [
+    {
+     "t": "Todo A é B e todo B é C.",
+     "r": "Todo A é C.",
+     "ok": true,
+     "porque": "A fica dentro de B, que fica dentro de C."
+    },
+    {
+     "t": "Todo pianista toca violino. Alguns coristas são pianistas.",
+     "r": "Alguns coristas tocam violino.",
+     "ok": true,
+     "porque": "Os coristas pianistas estão dentro de \"toca violino\"."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Todo professor é especialista\" e \"todo especialista é mestre\". O coordenador é especialista. Então ele:",
+    "o": [
+     "é mestre",
+     "é professor",
+     "não é professor"
+    ],
+    "c": 0,
+    "dica": "Em qual círculo ele está? Esse círculo fica dentro de qual?",
+    "e": "Especialista está dentro de mestre. Se ele é professor, não dá para saber."
+   }
+  },
+  {
+   "titulo": "\"Pode ser\" × \"certamente\"",
+   "conceito": "Se alguém está no círculo **maior**, ele **pode** estar no menor, mas não **certamente**. Se está **fora** do maior, está **fora** do menor também.",
+   "exemplos": [
+    {
+     "t": "Todo motorista opera máquinas. Fagundes opera máquinas.",
+     "r": "Fagundes pode ser motorista.",
+     "ok": true,
+     "porque": "Está no círculo maior: pode estar no menor."
+    },
+    {
+     "t": "Todo morador gosta de praia. João não gosta de praia.",
+     "r": "João não é morador.",
+     "ok": true,
+     "porque": "Fora do maior, fora do menor."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Todo vigilante conhece a lei\" e \"Marco conhece a lei\". Então:",
+    "o": [
+     "Marco pode ser vigilante.",
+     "Marco certamente é vigilante.",
+     "Marco certamente não é vigilante."
+    ],
+    "c": 0,
+    "dica": "Marco está no círculo maior ou no menor?",
+    "e": "Ele está no maior (\"conhece a lei\"). Pode ou não ser vigilante."
+   }
+  },
+  {
+   "titulo": "Quando nada se conclui",
+   "conceito": "Com **duas premissas \"algum\"**, nada é garantido. Com **duas negativas**, também não. E se uma premissa é **negativa**, a conclusão também é.",
+   "exemplos": [
+    {
+     "t": "Alguns médicos são poliglotas. Alguns professores são poliglotas.",
+     "r": "Alguns médicos são professores?",
+     "ok": false,
+     "porque": "Não dá: podem ser poliglotas diferentes."
+    },
+    {
+     "t": "Nenhum professor mente. Alguns advogados mentem.",
+     "r": "Alguns advogados não são professores.",
+     "ok": true,
+     "porque": "Premissa negativa, conclusão negativa."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Algum jogador é educador\" e \"Algum educador é graduado\". Conclui-se que algum jogador é graduado?",
+    "o": [
+     "Não: nada é garantido",
+     "Sim, sempre",
+     "Sim, se houver muitos jogadores"
+    ],
+    "c": 0,
+    "dica": "Quantos \"algum\" há nas premissas?",
+    "e": "Duas particulares: nenhuma conclusão é garantida."
+   }
+  }
+ ],
+ "30": [
+  {
+   "titulo": "Ache o ponto de partida",
+   "conceito": "No **tipo 1**, uma frase só tem **um jeito** de acontecer: uma **simples**, um **\"e\" verdadeiro**, um **\"ou\" falso** ou uma **condicional falsa**. Comece por ela.",
+   "exemplos": [
+    {
+     "t": "\"Lia estuda e trabalha\" é V.",
+     "r": "estuda = V, trabalha = V",
+     "ok": true,
+     "porque": "\"E\" verdadeiro: tudo V."
+    },
+    {
+     "t": "\"Lia estuda ou trabalha\" é F.",
+     "r": "estuda = F, trabalha = F",
+     "ok": true,
+     "porque": "\"Ou\" falso: tudo F."
+    },
+    {
+     "t": "\"Se chove, molha\" é F.",
+     "r": "chove = V, molha = F",
+     "ok": true,
+     "porque": "Condicional falsa: V → F."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se o prédio é alto, a casa é feia\" é falsa. Então:",
+    "o": [
+     "O prédio é alto e a casa não é feia.",
+     "O prédio não é alto.",
+     "A casa é feia."
+    ],
+    "c": 0,
+    "dica": "Quando a condicional é falsa?",
+    "e": "Só em V → F: prédio alto e casa não feia."
+   }
+  },
+  {
+   "titulo": "Efeito dominó",
+   "conceito": "Descoberto um valor, **leve-o para as outras frases**. Cada frase verdadeira obriga a próxima.",
+   "exemplos": [
+    {
+     "t": "Não jogo. \"Jogo ou não durmo.\"",
+     "r": "não durmo",
+     "ok": true,
+     "porque": "O \"ou\" precisa de uma parte V."
+    },
+    {
+     "t": "Não durmo. \"Como ou durmo.\"",
+     "r": "como",
+     "ok": true,
+     "porque": "De novo, falta a parte V."
+    },
+    {
+     "t": "Como. \"Bebo ou não como.\"",
+     "r": "bebo",
+     "ok": true,
+     "porque": "Fim da cadeia."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Ana é bonita. Se Bruno é pequeno, Ana não é bonita. Se Carlos usa boné, Bruno é pequeno.\" Então:",
+    "o": [
+     "Carlos não usa boné.",
+     "Carlos usa boné.",
+     "Bruno é pequeno."
+    ],
+    "c": 0,
+    "dica": "Comece pelo fato: Ana é bonita.",
+    "e": "Ana bonita → Bruno não é pequeno → Carlos não usa boné."
+   }
+  },
+  {
+   "titulo": "A contrapositiva na cadeia",
+   "conceito": "Na condicional verdadeira, se o **fim é F**, o **começo é F**. É o que faz a cadeia andar \"de trás para frente\".",
+   "exemplos": [
+    {
+     "t": "Se A, então B. Se B, então C. C é F.",
+     "r": "B = F e A = F",
+     "ok": true,
+     "porque": "Cada fim F derruba o começo."
+    },
+    {
+     "t": "Se Joana é dentista, montou o consultório. Não montou.",
+     "r": "Joana não é dentista.",
+     "ok": true,
+     "porque": "Contrapositiva."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se estudo, passo. Se passo, sou nomeado. Não fui nomeado.\" Então:",
+    "o": [
+     "Não passei e não estudei.",
+     "Estudei e não passei.",
+     "Passei."
+    ],
+    "c": 0,
+    "dica": "Ande de trás para frente.",
+    "e": "Não nomeado → não passou → não estudou."
+   }
+  }
+ ],
+ "31": [
+  {
+   "titulo": "Tudo vira condicional",
+   "conceito": "Sem fato travado, reescreva as frases como **condicionais**. **\"p ou q\"** vira **\"se não p, então q\"**. E toda condicional tem a **contrapositiva**.",
+   "exemplos": [
+    {
+     "t": "Faço doação ou compro carro.",
+     "r": "Se não faço doação, compro carro.",
+     "ok": true,
+     "porque": "Se uma parte do \"ou\" falha, a outra vale."
+    },
+    {
+     "t": "Se viajo, vou à Flórida.",
+     "r": "Se não vou à Flórida, não viajo.",
+     "ok": true,
+     "porque": "Contrapositiva."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Carlos é dentista ou fisiologista\" equivale a:",
+    "o": [
+     "Se Carlos não é dentista, é fisiologista.",
+     "Se Carlos é dentista, não é fisiologista.",
+     "Carlos é dentista e fisiologista."
+    ],
+    "c": 0,
+    "dica": "Se a primeira parte do \"ou\" falha, o que acontece?",
+    "e": "\"p ou q\" = \"se não p, então q\"."
+   }
+  },
+  {
+   "titulo": "Monte a cadeia",
+   "conceito": "Encaixe o **fim** de uma condicional no **começo** de outra: **p → q** e **q → r** dão **p → r**.",
+   "exemplos": [
+    {
+     "t": "Compro carro → não viajo. Não viajo → assisto filmes.",
+     "r": "Compro carro → assisto filmes",
+     "ok": true,
+     "porque": "O elo \"não viajo\" liga as duas."
+    },
+    {
+     "t": "Corina lê → conta histórias. Conta histórias → João sorri.",
+     "r": "Corina lê → João sorri",
+     "ok": true,
+     "porque": "Mesma ideia."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se A, então B\" e \"se B, então C\". Qual é válida?",
+    "o": [
+     "Se A, então C.",
+     "Se C, então A.",
+     "Se B, então A."
+    ],
+    "c": 0,
+    "dica": "Siga as setas no sentido em que elas apontam.",
+    "e": "A → B → C: A leva a C."
+   }
+  },
+  {
+   "titulo": "Julgando o item",
+   "conceito": "Para julgar **\"se X, então Y\"**: suponha **X verdadeiro** e siga a cadeia. Se chegar **obrigatoriamente** em Y, está **certo**. Andar contra as setas é erro.",
+   "exemplos": [
+    {
+     "t": "Se viajo de avião, faço doação?",
+     "r": "Certo",
+     "ok": true,
+     "porque": "Viajo → não compro carro (contrapositiva) → faço doação (pelo \"ou\")."
+    },
+    {
+     "t": "Se assisto a filmes, compro um carro?",
+     "r": "Errado",
+     "ok": false,
+     "porque": "Andou contra as setas: filmes era o fim da cadeia."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se o ar está seco, a temperatura cai.\" Julgue: \"Se a temperatura cai, o ar está seco.\"",
+    "o": [
+     "Errado",
+     "Certo"
+    ],
+    "c": 0,
+    "dica": "Você está seguindo a seta ou andando contra ela?",
+    "e": "É a recíproca: não é garantida."
+   }
+  }
+ ],
+ "32": [
+  {
+   "titulo": "Etapas que se multiplicam",
+   "conceito": "Se a escolha tem **etapas** que acontecem **juntas** (uma **E** outra), **multiplique** o número de opções de cada uma.",
+   "exemplos": [
+    {
+     "t": "3 camisas e 4 calças",
+     "r": "3 × 4 = 12",
+     "ok": true,
+     "porque": "Cada camisa combina com as 4 calças."
+    },
+    {
+     "t": "2 entradas, 3 pratos, 2 sobremesas",
+     "r": "2 × 3 × 2 = 12",
+     "ok": true,
+     "porque": "Três etapas."
+    }
+   ],
+   "suaVez": {
+    "p": "5 sabores de sorvete e 3 coberturas. Quantas combinações de 1 sabor e 1 cobertura?",
+    "o": [
+     "15",
+     "8",
+     "53"
+    ],
+    "c": 0,
+    "dica": "Escolhe um sabor E uma cobertura.",
+    "e": "5 × 3 = 15."
+   }
+  },
+  {
+   "titulo": "Um traço para cada posição",
+   "conceito": "Para senhas, placas e números, desenhe **um traço por posição** e escreva as opções. **Pode repetir**: todas têm o total.",
+   "exemplos": [
+    {
+     "t": "Senha de 4 dígitos, pode repetir",
+     "r": "10 × 10 × 10 × 10 = 10.000",
+     "ok": true,
+     "porque": "Cada posição tem 10 opções."
+    },
+    {
+     "t": "Senha de 5 dígitos só com 1, 3, 5, 7, 9",
+     "r": "5⁵ = 3.125",
+     "ok": true,
+     "porque": "Cada posição tem 5 opções."
+    }
+   ],
+   "suaVez": {
+    "p": "Senha de 2 letras (26 opções), podendo repetir. Quantas?",
+    "o": [
+     "676",
+     "52",
+     "650"
+    ],
+    "c": 0,
+    "dica": "Dois traços, cada um com 26.",
+    "e": "26 × 26 = 676."
+   }
+  },
+  {
+   "titulo": "Sem repetir e restrições",
+   "conceito": "**Distintos** = a cada posição, **uma opção a menos**. E comece **pela restrição**: o primeiro algarismo não pode ser 0, o último tem que ser par…",
+   "exemplos": [
+    {
+     "t": "3 dígitos distintos",
+     "r": "10 × 9 × 8 = 720",
+     "ok": true,
+     "porque": "Cada um usado sai da lista."
+    },
+    {
+     "t": "2 algarismos distintos (0 a 9)",
+     "r": "9 × 9 = 81",
+     "ok": true,
+     "porque": "Dezena sem o 0: 9. Unidade: 10 − 1 = 9."
+    }
+   ],
+   "suaVez": {
+    "p": "Com 1, 2, 3, 4, 5, quantos números de 2 algarismos distintos são pares?",
+    "o": [
+     "8",
+     "10",
+     "20"
+    ],
+    "c": 0,
+    "dica": "Comece pelo último: ele tem que ser 2 ou 4.",
+    "e": "Último: 2 opções. Primeiro: 4 restantes. 2 × 4 = 8."
+   }
+  }
+ ],
+ "33": [
+  {
+   "titulo": "\"Ou\" soma, \"e\" multiplica",
+   "conceito": "Se a pessoa escolhe **uma coisa OU outra** (só uma acontece), **some**. Se escolhe **uma E outra**, **multiplique**.",
+   "exemplos": [
+    {
+     "t": "3 entidades OU 4 ONGs",
+     "r": "3 + 4 = 7",
+     "ok": true,
+     "porque": "Só uma doação."
+    },
+    {
+     "t": "7 camisas E 6 gravatas",
+     "r": "7 × 6 = 42",
+     "ok": true,
+     "porque": "Escolhe as duas peças."
+    }
+   ],
+   "suaVez": {
+    "p": "Viajar de ônibus (3 horários) OU de avião (2 voos). Quantas opções?",
+    "o": [
+     "5",
+     "6",
+     "1"
+    ],
+    "c": 0,
+    "dica": "A pessoa vai de ônibus e de avião, ou só de um?",
+    "e": "É um OU outro: 3 + 2 = 5."
+   }
+  },
+  {
+   "titulo": "O fatorial",
+   "conceito": "**n!** (lê-se \"n fatorial\") é **n × (n − 1) × … × 1**. Ele conta os jeitos de **arrumar n coisas diferentes em fila**.",
+   "exemplos": [
+    {
+     "t": "3 pessoas em fila",
+     "r": "3! = 6",
+     "ok": true,
+     "porque": "3 × 2 × 1."
+    },
+    {
+     "t": "7 pessoas num banco",
+     "r": "7! = 5.040",
+     "ok": true,
+     "porque": "7 × 6 × 5 × 4 × 3 × 2 × 1."
+    }
+   ],
+   "suaVez": {
+    "p": "De quantos jeitos 4 livros diferentes ficam numa prateleira?",
+    "o": [
+     "24",
+     "16",
+     "4"
+    ],
+    "c": 0,
+    "dica": "Primeiro lugar: 4 opções, depois 3…",
+    "e": "4! = 24."
+   }
+  },
+  {
+   "titulo": "Só alguns lugares e blocos",
+   "conceito": "Se só **k posições** serão ocupadas, pare a multiplicação nelas: **7 × 6 × 5 × 4** para 4 lugares. Quem fica **junto** vira **um bloco**.",
+   "exemplos": [
+    {
+     "t": "7 atletas, pódio de 4",
+     "r": "7 × 6 × 5 × 4 = 840",
+     "ok": true,
+     "porque": "Só 4 posições."
+    },
+    {
+     "t": "2 casais juntos",
+     "r": "2! × 2 × 2 = 8",
+     "ok": true,
+     "porque": "Blocos trocam, e cada casal troca por dentro."
+    }
+   ],
+   "suaVez": {
+    "p": "8 cadeiras livres e 4 estudantes. Quantos jeitos de sentar?",
+    "o": [
+     "1.680",
+     "32",
+     "40.320"
+    ],
+    "c": 0,
+    "dica": "Cada estudante escolhe uma cadeira ainda livre.",
+    "e": "8 × 7 × 6 × 5 = 1.680."
+   }
+  }
+ ],
+ "34": [
+  {
+   "titulo": "Anagramas de letras diferentes",
+   "conceito": "**Anagrama** é cada jeito de **reordenar** as letras. Se todas as letras são **diferentes**, são **n!** anagramas.",
+   "exemplos": [
+    {
+     "t": "SOL",
+     "r": "3! = 6",
+     "ok": true,
+     "porque": "SOL, SLO, OSL, OLS, LSO, LOS."
+    },
+    {
+     "t": "AMOR",
+     "r": "4! = 24",
+     "ok": true,
+     "porque": "ROMA, MORA e RAMO estão entre eles."
+    }
+   ],
+   "suaVez": {
+    "p": "Quantos anagramas tem a palavra LIVRO?",
+    "o": [
+     "120",
+     "24",
+     "25"
+    ],
+    "c": 0,
+    "dica": "São 5 letras diferentes.",
+    "e": "5! = 120."
+   }
+  },
+  {
+   "titulo": "Letras repetidas",
+   "conceito": "Com letra **repetida**, trocar as iguais de lugar não cria anagrama novo. **Divida** pelo fatorial de cada repetição.",
+   "exemplos": [
+    {
+     "t": "OVO",
+     "r": "3!/2! = 3",
+     "ok": true,
+     "porque": "O O repete 2 vezes."
+    },
+    {
+     "t": "PLACA",
+     "r": "5!/2! = 60",
+     "ok": true,
+     "porque": "O A repete 2 vezes."
+    },
+    {
+     "t": "ARARA",
+     "r": "5!/(3! × 2!) = 10",
+     "ok": true,
+     "porque": "A 3 vezes e R 2 vezes."
+    }
+   ],
+   "suaVez": {
+    "p": "Quantos anagramas tem ASA?",
+    "o": [
+     "3",
+     "6",
+     "2"
+    ],
+    "c": 0,
+    "dica": "Quantas vezes o A aparece?",
+    "e": "3!/2! = 3: ASA, AAS, SAA."
+   }
+  },
+  {
+   "titulo": "Restrição primeiro",
+   "conceito": "Se o anagrama **começa** ou **termina** com algo, **fixe** essa letra e permute só o **resto**.",
+   "exemplos": [
+    {
+     "t": "ÂNGULO começando com Â",
+     "r": "5! = 120",
+     "ok": true,
+     "porque": "Fixou o Â; sobram 5 letras."
+    },
+    {
+     "t": "TUDO: consoante no início e vogal no fim",
+     "r": "2 × 2! × 2 = 8",
+     "ok": true,
+     "porque": "2 consoantes, 2 vogais e 2 letras no meio."
+    }
+   ],
+   "suaVez": {
+    "p": "Quantos anagramas de CASO começam com C?",
+    "o": [
+     "6",
+     "24",
+     "4"
+    ],
+    "c": 0,
+    "dica": "Fixe o C. Quantas letras sobram?",
+    "e": "Sobram A, S, O: 3! = 6."
+   }
+  }
  ]
 }

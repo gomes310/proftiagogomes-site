@@ -21,7 +21,11 @@ const EMBLEMAS: React.ReactNode[] = [
   // Sequências: barras crescentes e um "?"
   <g key="6"><g fill="#fff"><rect x="2.5" y="14" width="3.6" height="7" rx="1" /><rect x="7.6" y="10" width="3.6" height="11" rx="1" /><rect x="12.7" y="6" width="3.6" height="15" rx="1" /><circle cx="19.6" cy="19.6" r="1.3" /></g><path d="M17.6 7.6a2.1 2.1 0 1 1 3 1.9c-.8.4-1 .9-1 1.7v2.4" {...T} strokeWidth={2} /></g>,
   // Casa dos pombos e calendários: folha de calendário com uma "casa" de 2 pombos
-  <g key="7"><g {...T} strokeWidth={1.9}><rect x="2.5" y="4.5" width="19" height="17" rx="2.5" /><path d="M7.5 2.5v4M16.5 2.5v4M2.5 10h19M12 10v11.5M2.5 15.7h19" /></g><g fill="#fff"><circle cx="5.6" cy="12.9" r="1.3" /><circle cx="8.9" cy="12.9" r="1.3" /></g></g>
+  <g key="7"><g {...T} strokeWidth={1.9}><rect x="2.5" y="4.5" width="19" height="17" rx="2.5" /><path d="M7.5 2.5v4M16.5 2.5v4M2.5 10h19M12 10v11.5M2.5 15.7h19" /></g><g fill="#fff"><circle cx="5.6" cy="12.9" r="1.3" /><circle cx="8.9" cy="12.9" r="1.3" /></g></g>,
+  // Proposições categóricas: círculo pequeno dentro do grande ("todo A é B") com o ∃
+  <g key="8"><g {...T}><circle cx="12" cy="12" r="9.5" /><circle cx="9.5" cy="13.5" r="4.2" /></g><path d="M15.2 4.8h3.8v6.4h-3.8M15.6 8h3" {...T} strokeWidth={1.8} /></g>,
+  // Princípios da contagem: árvore de possibilidades (1 → 2 → 4)
+  <g key="9"><g {...T} strokeWidth={1.9}><path d="M4 12h4M8 12l5-6M8 12l5 6M13 6h3l4-2.5M16 6l4 2.5M13 18h3l4-2.5M16 18l4 2.5" /></g><g fill="#fff"><circle cx="4" cy="12" r="2" /><circle cx="13" cy="6" r="1.7" /><circle cx="13" cy="18" r="1.7" /></g></g>
 ];
 
 export function EmblemaTema({ t, tamanho = 48, className = '' }: { t: number; tamanho?: number; className?: string }) {
