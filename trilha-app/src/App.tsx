@@ -49,7 +49,7 @@ export default function App() {
   }, []);
   useEffect(() => { if (sessao) void sincronizarAgora().catch(() => {}); }, [sessao?.token]);
   useEffect(() => {
-    document.title = { '': 'Trilha do RLM', praticar: 'Praticar · Trilha do RLM', provas: 'Questões de prova · Trilha do RLM', ranking: 'Ranking · Trilha do RLM', painel: 'Meu painel · Trilha do RLM', entrar: 'Entrar · Trilha do RLM' }[rota];
+    document.title = { '': 'Trilha do RLM', praticar: 'Praticar · Trilha do RLM', provas: 'Questões de Concursos · Trilha do RLM', ranking: 'Ranking · Trilha do RLM', painel: 'Meu painel · Trilha do RLM', entrar: 'Entrar · Trilha do RLM' }[rota];
   }, [rota]);
 
   const irPara = (r: string) => { location.hash = r ? '#/' + r : '#/'; };

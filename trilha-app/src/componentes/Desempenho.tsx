@@ -9,7 +9,7 @@ export function proximoPasso(e: Estado, t: number) {
   if (prox !== undefined) return 'Próximo: ' + LICOES[prox].titulo + ' · ' + NOMES_NIVEL[nivelDaLicao(prox)];
   if (n >= 4) return 'Tema dominado. Revise de vez em quando para não esquecer.';
   const d = desempenhoProvaTema(e, t);
-  if (d.questoes) { const f = faltamParaProva(d); return 'Questões de prova: ' + (f === 1 ? 'falta 1 acerto' : 'faltam ' + f + ' acertos') + ' para 70%'; }
+  if (d.questoes) { const f = faltamParaProva(d); return 'Questões de Concursos: ' + (f === 1 ? 'falta 1 acerto' : 'faltam ' + f + ' acertos') + ' para 70%'; }
   const faltam = u.licoes.filter((i) => e.estrelas[i] !== 3).length;
   return 'Revisão final: ' + faltam + (faltam === 1 ? ' lição' : ' lições') + ' sem 3 estrelas';
 }
@@ -23,7 +23,7 @@ export default function Desempenho({ e, irPara }: { e: Estado; irPara: (r: strin
   return (
     <section className="card desempenho" aria-labelledby="des-t">
       <h2 id="des-t">Seus temas</h2>
-      <p className="nota">Cada cor é um tema. Os degraus mostram seu nível: Básico, Intermediário, Avançado e a coroa de Pronto para a prova (70% nas questões reais).</p>
+      <p className="nota">Cada cor é um tema. Os degraus mostram seu nível: Básico, Intermediário, Avançado e a coroa de Pronto para a prova (70% nas questões de concursos).</p>
 
       {fraco && (
         <div className="ponto-fraco" style={varsTema(fraco.t)}>

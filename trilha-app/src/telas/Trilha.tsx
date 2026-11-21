@@ -74,7 +74,7 @@ function EscolherTema({ onEscolher, irPara }: { onEscolher: (t: number) => void;
   return (
     <section className="temas" aria-labelledby="temas-t">
       <h1 id="temas-t">O que você quer aprender?</h1>
-      <p className="lead">Escolha um tema. Cada um tem sua trilha, do básico ao avançado, terminando em questões reais de prova. Você pode trocar quando quiser.</p>
+      <p className="lead">Escolha um tema. Cada um tem sua trilha, do básico ao avançado, terminando em questões de concursos. Você pode trocar quando quiser.</p>
       <ul className="temas-grade">
         {UNIDADES.map((u, t) => {
           const n = nivelTema(e, t);
@@ -171,7 +171,7 @@ export default function Trilha({ abrir, irPara, iniciar }: { abrir: (i: number) 
                   <li key="prova" style={estilo}>
                     {avancadoFeito && atual === undefined && n < 4 && <span className="comecar" aria-hidden="true">PROVA</span>}
                     <button type="button" className={'no no-prova' + (avancadoFeito ? (n >= 4 ? '' : ' atual') : ' bloqueado')} aria-disabled={!avancadoFeito}
-                      aria-label={(temQ ? 'Questões de prova de ' + u.nome : 'Revisão final de ' + u.nome) + (avancadoFeito ? '' : ', bloqueado: termine o nível avançado')}
+                      aria-label={(temQ ? 'Questões de Concursos de ' + u.nome : 'Revisão final de ' + u.nome) + (avancadoFeito ? '' : ', bloqueado: termine o nível avançado')}
                       onClick={(ev) => {
                         if (!avancadoFeito) { tremer(ev.currentTarget); return; }
                         if (temQ) irPara('provas/' + encodeURIComponent(u.temas[0]));
@@ -179,7 +179,7 @@ export default function Trilha({ abrir, irPara, iniciar }: { abrir: (i: number) 
                       }}>
                       {avancadoFeito ? <Icone nome="precisao" tamanho={32} /> : CADEADO}
                     </button>
-                    <span className="no-nome">{temQ ? prova.questoes + ' questões de prova' : 'Revisão final do tema'}</span>
+                    <span className="no-nome">{temQ ? 'Questões de Concursos' : 'Revisão final do tema'}</span>
                     {temQ && prova.tentativas > 0 && n < 4 && <span className="no-sub">{Math.round(prova.taxa * 100)}% de acerto · {faltamParaProva(prova) === 1 ? 'falta 1 acerto' : 'faltam ' + faltamParaProva(prova) + ' acertos'} para 70%</span>}
                     {temQ && prova.tentativas > 0 && n >= 4 && <span className="no-sub">{Math.round(prova.taxa * 100)}% de acerto · pronto para a prova!</span>}
                   </li>

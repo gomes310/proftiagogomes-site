@@ -1,0 +1,1148 @@
+{
+ "0": [
+  {
+   "titulo": "Conjunto e elemento",
+   "conceito": "**Conjunto** é uma coleção de elementos, escrita entre **chaves**: {1, 2, 3}. Para dizer que um elemento está no conjunto, usamos **∈** (\"pertence\"). Se não está, **∉**.",
+   "exemplos": [
+    {
+     "t": "A = {1, 2, 3}",
+     "r": "2 ∈ A",
+     "ok": true,
+     "porque": "O 2 aparece dentro das chaves."
+    },
+    {
+     "t": "A = {1, 2, 3}",
+     "r": "5 ∉ A",
+     "ok": false,
+     "porque": "O 5 não aparece em A."
+    }
+   ],
+   "suaVez": {
+    "p": "B = {a, e, i, o, u}. Qual afirmação é verdadeira?",
+    "o": [
+     "e ∈ B",
+     "b ∈ B",
+     "B tem 4 elementos"
+    ],
+    "c": 0,
+    "dica": "Procure a letra que aparece dentro das chaves.",
+    "e": "A letra e está em B. O b não está, e B tem 5 elementos."
+   }
+  },
+  {
+   "titulo": "União e interseção",
+   "conceito": "**União (∪)**: junta tudo, sem repetir. **Interseção (∩)**: fica só com o que está **nos dois** ao mesmo tempo.",
+   "exemplos": [
+    {
+     "t": "{1, 2} ∪ {2, 3}",
+     "r": "{1, 2, 3}",
+     "ok": true,
+     "porque": "Juntou tudo; o 2 aparece uma vez só."
+    },
+    {
+     "t": "{1, 2} ∩ {2, 3}",
+     "r": "{2}",
+     "ok": true,
+     "porque": "Só o 2 está nos dois conjuntos."
+    }
+   ],
+   "suaVez": {
+    "p": "{a, b, c} ∩ {b, c, d} =",
+    "o": [
+     "{b, c}",
+     "{a, b, c, d}",
+     "{a, d}"
+    ],
+    "c": 0,
+    "dica": "Interseção: o que aparece nos dois.",
+    "e": "b e c estão nos dois conjuntos."
+   }
+  },
+  {
+   "titulo": "Diferença e subconjuntos",
+   "conceito": "**A − B**: o que está em A e **não** está em B. E um conjunto com **n** elementos tem **2ⁿ** subconjuntos.",
+   "exemplos": [
+    {
+     "t": "{1, 2, 3} − {3, 4}",
+     "r": "{1, 2}",
+     "ok": true,
+     "porque": "Tirei de A o que também está em B (o 3)."
+    },
+    {
+     "t": "{a, b}",
+     "r": "4 subconjuntos",
+     "ok": true,
+     "porque": "{ }, {a}, {b} e {a, b}: 2² = 4."
+    }
+   ],
+   "suaVez": {
+    "p": "Quantos subconjuntos tem {1, 2, 3}?",
+    "o": [
+     "8",
+     "6",
+     "3"
+    ],
+    "c": 0,
+    "dica": "São 3 elementos: calcule 2³.",
+    "e": "2³ = 8, contando o vazio e o próprio conjunto."
+   }
+  }
+ ],
+ "1": [
+  {
+   "titulo": "Proposição afirma alguma coisa",
+   "conceito": "**Proposição** é uma frase **declarativa**: ela afirma (ou nega) alguma coisa. Por isso, sempre dá para julgar se ela é **verdadeira (V)** ou **falsa (F)**.",
+   "exemplos": [
+    {
+     "t": "\"Brasília é a capital do Brasil.\"",
+     "r": "Proposição · V",
+     "ok": true,
+     "porque": "Afirma um fato, e o fato é verdadeiro."
+    },
+    {
+     "t": "\"O Sol gira em torno da Terra.\"",
+     "r": "Proposição · F",
+     "ok": true,
+     "porque": "Também afirma algo. É falsa, mas continua sendo proposição."
+    },
+    {
+     "t": "\"Arthur não dirige.\"",
+     "r": "Proposição",
+     "ok": true,
+     "porque": "Frase negativa também afirma algo: que ele não dirige."
+    }
+   ],
+   "suaVez": {
+    "p": "Qual destas frases é uma proposição?",
+    "o": [
+     "\"Campo Grande fica em Mato Grosso do Sul.\"",
+     "\"Que calor!\"",
+     "\"Você já estudou hoje?\""
+    ],
+    "c": 0,
+    "dica": "Procure a frase que afirma algo que dá para conferir.",
+    "e": "Ela afirma um fato que pode ser julgado (é verdadeiro)."
+   }
+  },
+  {
+   "titulo": "O que NÃO é proposição",
+   "conceito": "Se não dá para dizer se é V ou F, **não é proposição**. Fique de olho em **perguntas**, **exclamações** e **ordens**.",
+   "exemplos": [
+    {
+     "t": "\"Que horas são?\"",
+     "r": "Pergunta",
+     "ok": false,
+     "porque": "Uma pergunta não afirma nada."
+    },
+    {
+     "t": "\"Que dia lindo!\"",
+     "r": "Exclamação",
+     "ok": false,
+     "porque": "Expressa emoção, não um fato."
+    },
+    {
+     "t": "\"Feche a porta.\"",
+     "r": "Ordem",
+     "ok": false,
+     "porque": "Manda fazer algo; não é V nem F."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Estude para a prova de sábado.\" É proposição?",
+    "o": [
+     "Não: é uma ordem",
+     "Sim: é verdadeira",
+     "Sim: é falsa"
+    ],
+    "c": 0,
+    "dica": "A frase afirma algo ou manda alguém fazer algo?",
+    "e": "É uma ordem (frase imperativa). Ordens não são julgadas V ou F."
+   }
+  },
+  {
+   "titulo": "Mais três pegadinhas",
+   "conceito": "Também **não** são proposições: **frases sem verbo**, **sentenças abertas** (com x, \"ele\", \"ela\" sem dizer quem) e **paradoxos**.",
+   "exemplos": [
+    {
+     "t": "\"Um belo exemplo de vida.\"",
+     "r": "Sem verbo",
+     "ok": false,
+     "porque": "Não afirma nada: falta o verbo."
+    },
+    {
+     "t": "\"x + 2 = 5\"",
+     "r": "Sentença aberta",
+     "ok": false,
+     "porque": "Depende do valor de x."
+    },
+    {
+     "t": "\"Esta frase é falsa.\"",
+     "r": "Paradoxo",
+     "ok": false,
+     "porque": "Se fosse V, seria F, e vice-versa."
+    }
+   ],
+   "suaVez": {
+    "p": "Qual destas NÃO é proposição?",
+    "o": [
+     "\"Ele é o melhor jogador do time.\"",
+     "\"Pelé foi jogador de futebol.\"",
+     "\"2 + 3 = 6\""
+    ],
+    "c": 0,
+    "dica": "Uma delas tem um sujeito que a gente não sabe quem é.",
+    "e": "\"Ele\" não diz quem é: é sentença aberta. \"2 + 3 = 6\" é falsa, mas é proposição."
+   }
+  }
+ ],
+ "2": [
+  {
+   "titulo": "Quantas linhas?",
+   "conceito": "A tabela-verdade testa **todas as combinações** de V e F. Com **n** proposições simples, são **2ⁿ linhas**.",
+   "exemplos": [
+    {
+     "t": "p e q",
+     "r": "2² = 4 linhas",
+     "ok": true,
+     "porque": "VV, VF, FV e FF."
+    },
+    {
+     "t": "p, q e r",
+     "r": "2³ = 8 linhas",
+     "ok": true,
+     "porque": "Cada letra nova dobra o número de linhas."
+    }
+   ],
+   "suaVez": {
+    "p": "Quantas linhas tem a tabela de uma proposição com p, q, r e s?",
+    "o": [
+     "16",
+     "8",
+     "4"
+    ],
+    "c": 0,
+    "dica": "São 4 letras: calcule 2⁴.",
+    "e": "2⁴ = 16 linhas."
+   }
+  },
+  {
+   "titulo": "Montando as colunas",
+   "conceito": "Na primeira coluna, coloque **metade V e metade F**. Na seguinte, alterne em blocos **pela metade** do tamanho. Assim nenhuma combinação se repete.",
+   "exemplos": [
+    {
+     "t": "coluna p (4 linhas)",
+     "r": "V V F F",
+     "ok": true,
+     "porque": "Metade V, metade F."
+    },
+    {
+     "t": "coluna q (4 linhas)",
+     "r": "V F V F",
+     "ok": true,
+     "porque": "Alterna de um em um."
+    }
+   ],
+   "suaVez": {
+    "p": "Com p = V V F F e q = V F V F, a 2ª linha é:",
+    "o": [
+     "p = V e q = F",
+     "p = F e q = V",
+     "p = V e q = V"
+    ],
+    "c": 0,
+    "dica": "Olhe o 2º valor de cada coluna.",
+    "e": "Na 2ª linha, p vale V e q vale F."
+   }
+  },
+  {
+   "titulo": "Calculando a última coluna",
+   "conceito": "Em cada linha, aplique a regra do conectivo. A mais cobrada: **p → q** só é **F** na linha **V → F**.",
+   "exemplos": [
+    {
+     "t": "p = V, q = V",
+     "r": "p → q = V",
+     "ok": true,
+     "porque": "V → V."
+    },
+    {
+     "t": "p = V, q = F",
+     "r": "p → q = F",
+     "ok": false,
+     "porque": "É o único caso falso."
+    },
+    {
+     "t": "p = F, q = F",
+     "r": "p → q = V",
+     "ok": true,
+     "porque": "Começou com F: é V."
+    }
+   ],
+   "suaVez": {
+    "p": "Na tabela de p → q (4 linhas), quantas linhas dão F?",
+    "o": [
+     "1",
+     "2",
+     "3"
+    ],
+    "c": 0,
+    "dica": "Lembre o caso \"Vera Fischer\".",
+    "e": "Só a linha V → F."
+   }
+  }
+ ],
+ "3": [
+  {
+   "titulo": "Negando o \"e\"",
+   "conceito": "Para negar **p e q**: troque o **e** por **ou** e negue as **duas** partes. ~(p ∧ q) = ~p ∨ ~q.",
+   "exemplos": [
+    {
+     "t": "\"Ana canta e dança.\"",
+     "r": "Ana não canta ou não dança.",
+     "ok": true,
+     "porque": "Basta uma parte falhar para o \"e\" cair."
+    },
+    {
+     "t": "\"Estudo e trabalho.\"",
+     "r": "Não estudo ou não trabalho.",
+     "ok": true,
+     "porque": "Trocou e por ou, negou tudo."
+    }
+   ],
+   "suaVez": {
+    "p": "A negação de \"Rui é alto e magro\" é:",
+    "o": [
+     "Rui não é alto ou não é magro.",
+     "Rui não é alto e não é magro.",
+     "Rui é baixo e gordo."
+    ],
+    "c": 0,
+    "dica": "Troque o \"e\" por \"ou\".",
+    "e": "Negar \"e\" vira \"ou\", negando as duas partes."
+   }
+  },
+  {
+   "titulo": "Negando o \"ou\"",
+   "conceito": "Para negar **p ou q**: troque o **ou** por **e** e negue as duas. ~(p ∨ q) = ~p ∧ ~q.",
+   "exemplos": [
+    {
+     "t": "\"Vou ao cinema ou ao teatro.\"",
+     "r": "Não vou ao cinema e não vou ao teatro.",
+     "ok": true,
+     "porque": "Para o \"ou\" ser falso, as duas partes têm de falhar."
+    }
+   ],
+   "suaVez": {
+    "p": "A negação de \"Lia viaja ou trabalha\" é:",
+    "o": [
+     "Lia não viaja e não trabalha.",
+     "Lia não viaja ou não trabalha.",
+     "Lia viaja e trabalha."
+    ],
+    "c": 0,
+    "dica": "Troque o \"ou\" por \"e\".",
+    "e": "Negar \"ou\" vira \"e\", negando as duas partes."
+   }
+  },
+  {
+   "titulo": "Negando o \"se…, então…\"",
+   "conceito": "Negar **se p, então q**: **mantenha** a primeira parte, troque por **e** e **negue** a segunda. ~(p → q) = p ∧ ~q.",
+   "exemplos": [
+    {
+     "t": "\"Se estudo, passo.\"",
+     "r": "Estudo e não passo.",
+     "ok": true,
+     "porque": "É o único jeito de a promessa ser quebrada."
+    }
+   ],
+   "suaVez": {
+    "p": "A negação de \"Se chove, levo guarda-chuva\" é:",
+    "o": [
+     "Chove e não levo guarda-chuva.",
+     "Não chove e levo guarda-chuva.",
+     "Se não chove, não levo guarda-chuva."
+    ],
+    "c": 0,
+    "dica": "Mantenha a 1ª parte e negue a 2ª.",
+    "e": "Chove (mantida) e não levo guarda-chuva (negada)."
+   }
+  }
+ ],
+ "5": [
+  {
+   "titulo": "Todo A é B",
+   "conceito": "**Todo A é B**: desenhe o círculo A **inteiro dentro** do círculo B.",
+   "exemplos": [
+    {
+     "t": "\"Todo médico é formado.\"",
+     "r": "médicos dentro de formados",
+     "ok": true,
+     "porque": "Não existe médico fora do círculo dos formados."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Todo gato é mamífero.\" Mimi é um gato. Então:",
+    "o": [
+     "Mimi é mamífero.",
+     "Mimi pode não ser mamífero.",
+     "Todo mamífero é gato."
+    ],
+    "c": 0,
+    "dica": "Onde fica Mimi no desenho?",
+    "e": "Mimi está no círculo dos gatos, que fica dentro do dos mamíferos."
+   }
+  },
+  {
+   "titulo": "Algum A é B",
+   "conceito": "**Algum A é B**: os círculos **se cruzam**. Existe pelo menos um elemento nos dois.",
+   "exemplos": [
+    {
+     "t": "\"Algum aluno é atleta.\"",
+     "r": "círculos com uma parte em comum",
+     "ok": true,
+     "porque": "Pelo menos um aluno também é atleta."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Algum servidor é músico\" garante que:",
+    "o": [
+     "Existe pelo menos um servidor músico.",
+     "Todo servidor é músico.",
+     "Nenhum músico é servidor."
+    ],
+    "c": 0,
+    "dica": "\"Algum\" significa \"pelo menos um\".",
+    "e": "Só está garantido que existe ao menos um."
+   }
+  },
+  {
+   "titulo": "Nenhum A é B",
+   "conceito": "**Nenhum A é B**: círculos **separados**, sem nada em comum.",
+   "exemplos": [
+    {
+     "t": "\"Nenhum peixe é ave.\"",
+     "r": "círculos separados",
+     "ok": true,
+     "porque": "Nada é peixe e ave ao mesmo tempo."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Nenhum réptil é mamífero.\" Então:",
+    "o": [
+     "Nenhum mamífero é réptil.",
+     "Algum mamífero é réptil.",
+     "Todo réptil é mamífero."
+    ],
+    "c": 0,
+    "dica": "Se os círculos estão separados, vale nos dois sentidos.",
+    "e": "Círculos separados: nenhum elemento é dos dois."
+   }
+  }
+ ],
+ "7": [
+  {
+   "titulo": "Monte a tabela",
+   "conceito": "Coloque as **pessoas nas linhas** e as **características nas colunas**. Cada pista vira um ✓ ou um ✗ numa casa.",
+   "exemplos": [
+    {
+     "t": "Ana, Bia e Caio × carro, moto e bike",
+     "r": "tabela 3 × 3",
+     "ok": true,
+     "porque": "9 casas para marcar."
+    }
+   ],
+   "suaVez": {
+    "p": "Com 4 pessoas e 4 cidades, quantas casas tem a tabela?",
+    "o": [
+     "16",
+     "8",
+     "4"
+    ],
+    "c": 0,
+    "dica": "Multiplique linhas por colunas.",
+    "e": "4 × 4 = 16 casas."
+   }
+  },
+  {
+   "titulo": "Pistas diretas e negativas",
+   "conceito": "Pista **direta** (\"Bia tem a moto\") marca **✓**. Pista **negativa** (\"Ana não tem carro\") marca **✗**.",
+   "exemplos": [
+    {
+     "t": "\"Bia tem a moto.\"",
+     "r": "✓ em Bia × moto",
+     "ok": true,
+     "porque": "A pista afirma diretamente."
+    },
+    {
+     "t": "\"Ana não tem carro.\"",
+     "r": "✗ em Ana × carro",
+     "ok": false,
+     "porque": "A pista elimina uma opção."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Caio não mora em Campo Grande.\" Na tabela, você marca:",
+    "o": [
+     "✗ em Caio × Campo Grande",
+     "✓ em Caio × Campo Grande",
+     "Nada"
+    ],
+    "c": 0,
+    "dica": "A pista afirma ou elimina?",
+    "e": "É uma pista negativa: elimina a opção."
+   }
+  },
+  {
+   "titulo": "Um ✓ por linha e por coluna",
+   "conceito": "Cada pessoa tem **uma** característica, e cada característica é de **uma** pessoa. Marcou ✓? Complete o resto da linha e da coluna com ✗.",
+   "exemplos": [
+    {
+     "t": "Linha de Ana: ✗ ✗ e uma vazia",
+     "r": "a vazia é ✓",
+     "ok": true,
+     "porque": "Só sobrou uma opção para Ana."
+    }
+   ],
+   "suaVez": {
+    "p": "Ana não tem carro nem moto; as opções são carro, moto e bike. Ana tem:",
+    "o": [
+     "bike",
+     "carro",
+     "não dá para saber"
+    ],
+    "c": 0,
+    "dica": "Elimine e veja o que sobra.",
+    "e": "Sobrou só a bike."
+   }
+  }
+ ],
+ "8": [
+  {
+   "titulo": "Olhe a diferença",
+   "conceito": "Comece calculando a **diferença** entre termos vizinhos. Se ela for sempre a mesma, basta somar.",
+   "exemplos": [
+    {
+     "t": "2, 5, 8, 11",
+     "r": "+3 sempre → 14",
+     "ok": true,
+     "porque": "A diferença é constante: soma 3."
+    }
+   ],
+   "suaVez": {
+    "p": "7, 12, 17, 22, … Qual é o próximo?",
+    "o": [
+     "27",
+     "26",
+     "32"
+    ],
+    "c": 0,
+    "dica": "Quanto soma de um termo para o outro?",
+    "e": "Soma 5: 22 + 5 = 27."
+   }
+  },
+  {
+   "titulo": "Diferenças que crescem",
+   "conceito": "Se a diferença muda, veja se **as próprias diferenças** formam um padrão.",
+   "exemplos": [
+    {
+     "t": "2, 5, 10, 17",
+     "r": "+3, +5, +7 → +9 = 26",
+     "ok": true,
+     "porque": "As diferenças crescem de 2 em 2."
+    }
+   ],
+   "suaVez": {
+    "p": "1, 2, 4, 7, 11, … Qual é o próximo?",
+    "o": [
+     "16",
+     "15",
+     "14"
+    ],
+    "c": 0,
+    "dica": "Escreva as diferenças: +1, +2, +3…",
+    "e": "+1, +2, +3, +4, +5: 11 + 5 = 16."
+   }
+  },
+  {
+   "titulo": "Multiplicação",
+   "conceito": "Se a soma não explica, teste **multiplicar**: cada termo pode ser o anterior vezes um número.",
+   "exemplos": [
+    {
+     "t": "3, 6, 12, 24",
+     "r": "× 2 → 48",
+     "ok": true,
+     "porque": "Cada termo é o dobro do anterior."
+    }
+   ],
+   "suaVez": {
+    "p": "2, 6, 18, 54, … Qual é o próximo?",
+    "o": [
+     "162",
+     "108",
+     "72"
+    ],
+    "c": 0,
+    "dica": "Por quanto cada termo é multiplicado?",
+    "e": "Multiplica por 3: 54 × 3 = 162."
+   }
+  }
+ ],
+ "9": [
+  {
+   "titulo": "A ideia",
+   "conceito": "Se há **mais pombos do que casas**, pelo menos uma casa fica com **dois** pombos.",
+   "exemplos": [
+    {
+     "t": "4 pombos, 3 casas",
+     "r": "alguma casa tem 2",
+     "ok": true,
+     "porque": "Não dá para ficar um em cada."
+    }
+   ],
+   "suaVez": {
+    "p": "Num grupo de 13 pessoas, é garantido que duas fazem aniversário no mesmo mês?",
+    "o": [
+     "Sim",
+     "Não",
+     "Só se forem parentes"
+    ],
+    "c": 0,
+    "dica": "Quantos meses existem?",
+    "e": "12 meses e 13 pessoas: algum mês se repete."
+   }
+  },
+  {
+   "titulo": "Pense no pior caso",
+   "conceito": "Para **garantir**, imagine o **azar máximo**: tudo dá errado até o último momento. A resposta é esse pior caso **+ 1**.",
+   "exemplos": [
+    {
+     "t": "meias de 3 cores, garantir um par",
+     "r": "3 + 1 = 4",
+     "ok": true,
+     "porque": "Pior caso: uma de cada cor. A 4ª repete."
+    }
+   ],
+   "suaVez": {
+    "p": "Uma gaveta tem meias de 5 cores. Quantas tirar, no escuro, para garantir um par da mesma cor?",
+    "o": [
+     "6",
+     "5",
+     "10"
+    ],
+    "c": 0,
+    "dica": "Pior caso: uma de cada cor.",
+    "e": "5 diferentes no pior caso; a 6ª repete uma cor."
+   }
+  },
+  {
+   "titulo": "Garantir mais de dois",
+   "conceito": "Para garantir **k iguais**: pegue **(k − 1) de cada tipo** e some 1.",
+   "exemplos": [
+    {
+     "t": "3 iguais, 4 cores",
+     "r": "2 × 4 + 1 = 9",
+     "ok": true,
+     "porque": "Pior caso: 2 de cada cor = 8."
+    }
+   ],
+   "suaVez": {
+    "p": "Bolas de 2 cores. Quantas tirar para garantir 3 da mesma cor?",
+    "o": [
+     "5",
+     "4",
+     "6"
+    ],
+    "c": 0,
+    "dica": "Pior caso: 2 de cada cor.",
+    "e": "2 + 2 = 4 no pior caso; a 5ª completa 3."
+   }
+  }
+ ],
+ "13": [
+  {
+   "titulo": "\"E\" (∧): só V se as duas forem V",
+   "conceito": "A conjunção **p ∧ q** só é **verdadeira** quando **as duas** partes são verdadeiras. Basta uma falsa para tudo ficar F.",
+   "exemplos": [
+    {
+     "t": "V ∧ V",
+     "r": "V",
+     "ok": true,
+     "porque": "As duas são verdadeiras."
+    },
+    {
+     "t": "V ∧ F",
+     "r": "F",
+     "ok": false,
+     "porque": "Uma falsa já derruba."
+    },
+    {
+     "t": "F ∧ F",
+     "r": "F",
+     "ok": false,
+     "porque": "Nenhuma é verdadeira."
+    }
+   ],
+   "suaVez": {
+    "p": "\"2 é par e 3 é par.\" Essa frase é:",
+    "o": [
+     "F",
+     "V"
+    ],
+    "c": 0,
+    "dica": "3 é par?",
+    "e": "A segunda parte é F, então o \"e\" é F."
+   }
+  },
+  {
+   "titulo": "\"Ou\" (∨): só F se as duas forem F",
+   "conceito": "A disjunção **p ∨ q** é **verdadeira** se **pelo menos uma** parte for verdadeira. Só é F quando as duas são F.",
+   "exemplos": [
+    {
+     "t": "V ∨ F",
+     "r": "V",
+     "ok": true,
+     "porque": "Basta uma verdadeira."
+    },
+    {
+     "t": "F ∨ F",
+     "r": "F",
+     "ok": false,
+     "porque": "Nenhuma verdadeira."
+    }
+   ],
+   "suaVez": {
+    "p": "\"2 é par ou 3 é par.\" Essa frase é:",
+    "o": [
+     "V",
+     "F"
+    ],
+    "c": 0,
+    "dica": "Uma das partes é verdadeira?",
+    "e": "\"2 é par\" é V, e isso basta para o \"ou\"."
+   }
+  },
+  {
+   "titulo": "\"Se…, então…\" (→): só F em V → F",
+   "conceito": "A condicional **p → q** só é **falsa** quando a primeira parte é **V** e a segunda é **F**. Em todos os outros casos, é V.",
+   "exemplos": [
+    {
+     "t": "V → V",
+     "r": "V",
+     "ok": true,
+     "porque": "Promessa cumprida."
+    },
+    {
+     "t": "V → F",
+     "r": "F",
+     "ok": false,
+     "porque": "Promessa quebrada: o único caso falso."
+    },
+    {
+     "t": "F → V",
+     "r": "V",
+     "ok": true,
+     "porque": "A condição não aconteceu, então a promessa não foi quebrada."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se 2 + 2 = 5, então eu sou astronauta.\" Essa frase é:",
+    "o": [
+     "V",
+     "F"
+    ],
+    "c": 0,
+    "dica": "A primeira parte é V ou F?",
+    "e": "Começa com F. Condicional que começa com F é sempre V."
+   }
+  },
+  {
+   "titulo": "\"Ou… ou…\" (⊻) e \"se e somente se\" (↔)",
+   "conceito": "**p ⊻ q** é V quando **exatamente uma** é V. **p ↔ q** é V quando as duas têm **o mesmo valor**.",
+   "exemplos": [
+    {
+     "t": "V ⊻ F",
+     "r": "V",
+     "ok": true,
+     "porque": "Exatamente uma é verdadeira."
+    },
+    {
+     "t": "V ⊻ V",
+     "r": "F",
+     "ok": false,
+     "porque": "As duas: no \"ou… ou…\" não pode."
+    },
+    {
+     "t": "F ↔ F",
+     "r": "V",
+     "ok": true,
+     "porque": "Valores iguais."
+    }
+   ],
+   "suaVez": {
+    "p": "p e q são verdadeiras. Quanto vale p ↔ q?",
+    "o": [
+     "V",
+     "F"
+    ],
+    "c": 0,
+    "dica": "Os valores são iguais?",
+    "e": "V e V são iguais: o bicondicional é V."
+   }
+  }
+ ],
+ "14": [
+  {
+   "titulo": "\"Mas\", \"embora\", \"porém\" valem \"e\"",
+   "conceito": "Essas palavras mudam o tom, mas para a lógica são uma **conjunção (∧)**.",
+   "exemplos": [
+    {
+     "t": "\"Chove, mas não faz frio.\"",
+     "r": "c ∧ ~f",
+     "ok": true,
+     "porque": "\"Mas\" = \"e\"."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Estudei, porém não passei.\" (e: estudei; p: passei)",
+    "o": [
+     "e ∧ ~p",
+     "e ∨ ~p",
+     "e → ~p"
+    ],
+    "c": 0,
+    "dica": "\"Porém\" vale qual conectivo?",
+    "e": "\"Porém\" vale \"e\": e ∧ ~p."
+   }
+  },
+  {
+   "titulo": "\"Nem… nem…\"",
+   "conceito": "**\"Nem p nem q\"** nega as duas partes ao mesmo tempo: **~p ∧ ~q**.",
+   "exemplos": [
+    {
+     "t": "\"Não estudo nem trabalho.\"",
+     "r": "~e ∧ ~t",
+     "ok": true,
+     "porque": "Não estudo E não trabalho."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Rui não fuma nem bebe.\" (f: fuma; b: bebe)",
+    "o": [
+     "~f ∧ ~b",
+     "~f ∨ ~b",
+     "~(f ∧ b)"
+    ],
+    "c": 0,
+    "dica": "\"Nem… nem…\" nega as duas.",
+    "e": "Rui não fuma e não bebe: ~f ∧ ~b."
+   }
+  },
+  {
+   "titulo": "Quem vai antes da seta?",
+   "conceito": "A **condição** vai **antes** da seta. Atenção: em \"q, **se** p\" a condição está no fim. O **suficiente** vai antes; o **necessário**, depois.",
+   "exemplos": [
+    {
+     "t": "\"Se estudo, passo.\"",
+     "r": "e → p",
+     "ok": true,
+     "porque": "A condição (estudo) vai antes."
+    },
+    {
+     "t": "\"Passo se estudo.\"",
+     "r": "e → p",
+     "ok": true,
+     "porque": "O \"se\" marca a condição, mesmo no fim da frase."
+    },
+    {
+     "t": "\"Estudar é necessário para passar.\"",
+     "r": "p → e",
+     "ok": true,
+     "porque": "Necessário vai depois: se passou, estudou."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Viajo se tirar férias.\" (v: viajo; f: tiro férias)",
+    "o": [
+     "f → v",
+     "v → f",
+     "v ∧ f"
+    ],
+    "c": 0,
+    "dica": "O que vem depois do \"se\" é a condição.",
+    "e": "A condição é tirar férias: f → v."
+   }
+  }
+ ],
+ "24": [
+  {
+   "titulo": "Princípio da identidade",
+   "conceito": "**Identidade**: o que é verdadeiro é verdadeiro; o que é falso é falso. Uma proposição **não muda de valor** no meio do raciocínio.",
+   "exemplos": [
+    {
+     "t": "\"2 + 2 = 4\" é V",
+     "r": "continua V",
+     "ok": true,
+     "porque": "Durante toda a questão, ela vale V."
+    },
+    {
+     "t": "\"O gelo é quente\" é F",
+     "r": "continua F",
+     "ok": true,
+     "porque": "Não vira V só porque seria conveniente."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Brasília é a capital\" é V no início da questão. Mais à frente, ela vale:",
+    "o": [
+     "V",
+     "F",
+     "Pode mudar"
+    ],
+    "c": 0,
+    "dica": "Uma proposição pode mudar de valor?",
+    "e": "Pelo princípio da identidade, continua V."
+   }
+  },
+  {
+   "titulo": "Princípio da não contradição",
+   "conceito": "**Não contradição**: nenhuma proposição é **V e F ao mesmo tempo**.",
+   "exemplos": [
+    {
+     "t": "\"Choveu e não choveu\", no mesmo lugar e hora",
+     "r": "impossível",
+     "ok": false,
+     "porque": "Seria V e F ao mesmo tempo."
+    },
+    {
+     "t": "\"A banana é doce\" e \"a mesma banana é amarga\"",
+     "r": "contradição",
+     "ok": false,
+     "porque": "Quem diz isso se contradiz."
+    }
+   ],
+   "suaVez": {
+    "p": "Qual princípio impede uma proposição de ser V e F ao mesmo tempo?",
+    "o": [
+     "Não contradição",
+     "Identidade",
+     "Terceiro excluído"
+    ],
+    "c": 0,
+    "dica": "O nome já diz: não pode se contradizer.",
+    "e": "É o princípio da não contradição."
+   }
+  },
+  {
+   "titulo": "Princípio do terceiro excluído",
+   "conceito": "**Terceiro excluído**: toda proposição é **V ou F**. Não existe uma terceira opção, como \"talvez\". Por isso a lógica é **bivalente** (dois valores).",
+   "exemplos": [
+    {
+     "t": "\"Hoje é sábado.\"",
+     "r": "V ou F",
+     "ok": true,
+     "porque": "Ou é sábado, ou não é."
+    },
+    {
+     "t": "\"Talvez\"",
+     "r": "não existe",
+     "ok": false,
+     "porque": "Não há valor \"talvez\" na lógica bivalente."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Uma proposição ou é V ou é F, sem outra possibilidade.\" Esse é o princípio:",
+    "o": [
+     "do terceiro excluído",
+     "da não contradição",
+     "da identidade"
+    ],
+    "c": 0,
+    "dica": "Qual princípio \"exclui\" uma terceira opção?",
+    "e": "O terceiro excluído elimina qualquer terceiro valor."
+   }
+  }
+ ],
+ "25": [
+  {
+   "titulo": "Simples: uma ideia só",
+   "conceito": "**Proposição simples** traz **uma única ideia**. Costuma ser representada por uma letra: p, q, r…",
+   "exemplos": [
+    {
+     "t": "\"Pedro é alto.\"",
+     "r": "Simples (p)",
+     "ok": true,
+     "porque": "Uma ideia: a altura de Pedro."
+    },
+    {
+     "t": "\"Maria é turista.\"",
+     "r": "Simples (q)",
+     "ok": true,
+     "porque": "Uma ideia só."
+    }
+   ],
+   "suaVez": {
+    "p": "Qual destas é simples?",
+    "o": [
+     "\"Ana é médica.\"",
+     "\"Ana é médica e Rui é dentista.\"",
+     "\"Se chove, Ana fica em casa.\""
+    ],
+    "c": 0,
+    "dica": "Conte quantas ideias cada frase tem.",
+    "e": "Só \"Ana é médica\" tem uma ideia."
+   }
+  },
+  {
+   "titulo": "Composta: ideias ligadas",
+   "conceito": "**Proposição composta** junta duas ou mais ideias com um **conectivo**: e, ou, se… então…, se e somente se.",
+   "exemplos": [
+    {
+     "t": "\"Pedro é alto e Maria é turista.\"",
+     "r": "Composta (e)",
+     "ok": true,
+     "porque": "Duas ideias ligadas por \"e\"."
+    },
+    {
+     "t": "\"Maria e Pedro são turistas.\"",
+     "r": "Composta",
+     "ok": true,
+     "porque": "Sujeito duplo = duas ideias: Maria é turista e Pedro é turista."
+    }
+   ],
+   "suaVez": {
+    "p": "\"João e Ana passaram no concurso.\" É:",
+    "o": [
+     "Composta",
+     "Simples",
+     "Não é proposição"
+    ],
+    "c": 0,
+    "dica": "Quantas pessoas a frase julga?",
+    "e": "São duas ideias: João passou e Ana passou."
+   }
+  },
+  {
+   "titulo": "Os 5 conectivos",
+   "conceito": "**e** (∧) conjunção · **ou** (∨) disjunção · **ou… ou…** (⊻) disjunção exclusiva · **se…, então…** (→) condicional · **se, e somente se** (↔) bicondicional.",
+   "exemplos": [
+    {
+     "t": "\"Estudo e trabalho.\"",
+     "r": "∧ conjunção",
+     "ok": true,
+     "porque": "\"e\" (e também \"mas\")."
+    },
+    {
+     "t": "\"Ou vou à praia, ou fico em casa.\"",
+     "r": "⊻ disjunção exclusiva",
+     "ok": true,
+     "porque": "Só uma das duas acontece."
+    },
+    {
+     "t": "\"Se chover, então fico em casa.\"",
+     "r": "→ condicional",
+     "ok": true,
+     "porque": "\"se…, então…\""
+    }
+   ],
+   "suaVez": {
+    "p": "\"Comprarei a casa se, e somente se, eu passar.\" Usa qual conectivo?",
+    "o": [
+     "↔ bicondicional",
+     "→ condicional",
+     "∧ conjunção"
+    ],
+    "c": 0,
+    "dica": "Procure a expressão \"se, e somente se\".",
+    "e": "\"Se, e somente se\" é o bicondicional (↔)."
+   }
+  }
+ ],
+ "26": [
+  {
+   "titulo": "Sentença aberta",
+   "conceito": "**Sentença aberta** tem algo indefinido: uma **variável** (x, y) ou um sujeito vago (**ele**, **ela**). Sem saber quem ou quanto, não dá para julgar.",
+   "exemplos": [
+    {
+     "t": "\"x + 1 = 7\"",
+     "r": "Aberta",
+     "ok": false,
+     "porque": "Depende de x."
+    },
+    {
+     "t": "\"Ela é médica.\"",
+     "r": "Aberta",
+     "ok": false,
+     "porque": "Quem é ela?"
+    }
+   ],
+   "suaVez": {
+    "p": "Qual é sentença aberta?",
+    "o": [
+     "\"y é maior que 10.\"",
+     "\"12 é maior que 10.\"",
+     "\"Ana é maior de idade.\""
+    ],
+    "c": 0,
+    "dica": "Procure uma letra sem valor.",
+    "e": "y não tem valor definido."
+   }
+  },
+  {
+   "titulo": "Fechando a sentença",
+   "conceito": "Quando a variável **recebe um valor** (ou o sujeito é identificado), a sentença **fecha** e vira proposição.",
+   "exemplos": [
+    {
+     "t": "\"x + 1 = 7, para x = 6\"",
+     "r": "Fechada · V",
+     "ok": true,
+     "porque": "6 + 1 = 7."
+    },
+    {
+     "t": "\"x + 1 = 7, para x = 2\"",
+     "r": "Fechada · F",
+     "ok": true,
+     "porque": "2 + 1 = 3. É falsa, mas é proposição."
+    }
+   ],
+   "suaVez": {
+    "p": "\"x > 5, para x = 3\" é:",
+    "o": [
+     "Proposição falsa",
+     "Sentença aberta",
+     "Proposição verdadeira"
+    ],
+    "c": 0,
+    "dica": "Substitua x por 3.",
+    "e": "3 > 5 é falso, mas agora dá para julgar: é proposição."
+   }
+  },
+  {
+   "titulo": "Paradoxos",
+   "conceito": "**Paradoxo** é uma frase que se contradiz: se for V, vira F; se for F, vira V. Por isso **não é proposição**.",
+   "exemplos": [
+    {
+     "t": "\"Esta frase é falsa.\"",
+     "r": "Paradoxo",
+     "ok": false,
+     "porque": "Não há valor possível."
+    },
+    {
+     "t": "\"Só sei que nada sei.\"",
+     "r": "Paradoxo",
+     "ok": false,
+     "porque": "Se nada sabe, não saberia nem isso."
+    }
+   ],
+   "suaVez": {
+    "p": "Quantas são proposições? I. \"Esta frase é falsa.\" II. \"O Acre fica na Região Norte.\" III. \"Quantos estados há no Brasil?\"",
+    "o": [
+     "1",
+     "2",
+     "3"
+    ],
+    "c": 0,
+    "dica": "Elimine o paradoxo e a pergunta.",
+    "e": "Só a II é proposição."
+   }
+  }
+ ]
+}

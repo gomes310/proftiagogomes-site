@@ -1,0 +1,379 @@
+{
+"fonte": "Questões selecionadas no TEC Concursos: sem anuladas, sem desatualizadas, com comentário de professor conferido; resoluções escritas para a Trilha",
+"questoes": [
+{
+"id": "tec-66527",
+"tec": 66527,
+"banca": "ESAF",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Entre as opções abaixo, a única com valor lógico verdadeiro é:",
+"alternativas": [
+[
+"a",
+"Se Roma é a capital da Itália, Londres é a capital da França."
+],
+[
+"b",
+"Se Londres é a capital da Inglaterra, Paris não é a capital da França."
+],
+[
+"c",
+"Roma é a capital da Itália e Londres é a capital da França ou Paris é a capital da França."
+],
+[
+"d",
+"Roma é a capital da Itália e Londres é a capital da França ou Paris é a capital da Inglaterra."
+],
+[
+"e",
+"Roma é a capital da Itália e Londres não é a capital da Inglaterra."
+]
+],
+"gabarito": "c",
+"resolucao": "Sem parênteses, resolva primeiro o \"e\" e depois o \"ou\".\nA) V → F = F.\nB) V → F = F (Paris é a capital da França, então \"não é\" é F).\nC) (V e F) ou V = F ou V = V.\nD) (V e F) ou F = F ou F = F.\nE) V e F = F.\nSó a C é verdadeira."
+},
+{
+"id": "tec-80160",
+"tec": 80160,
+"banca": "CEBRASPE",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Julgue o item a seguir tendo como base a seguinte proposição P: \"Se eu for barrado pela lei da ficha limpa, não poderei ser candidato nessas eleições, e se eu não registrar minha candidatura dentro do prazo, não concorrerei a nenhum cargo nessas eleições\".\nSimbolicamente, a proposição P pode ser expressa na forma (p → q) ∧ (r → s), em que p, q, r e s são proposições convenientes e os símbolos → e ∧ representam, respectivamente, os conectivos lógicos \"se..., então\" e \"e\".",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "c",
+"resolucao": "A frase tem duas condicionais ligadas por \"e\":\n[se sou barrado, então não sou candidato] e [se não registro, então não concorro].\nIsso é exatamente (p → q) ∧ (r → s). Certo."
+},
+{
+"id": "tec-297108",
+"tec": 297108,
+"banca": "CESGRANRIO",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Sejam p1, p2, p3, p4, p5 e c proposições verdadeiras.\nAssim, é FALSA",
+"alternativas": [
+[
+"a",
+"p1 ∧ p2 ∧ p3 ∧ p4 ∧ p5 → c"
+],
+[
+"b",
+"¬c → ¬p1 ∨ ¬p2 ∨ ¬p3 ∨ ¬p4 ∨ ¬p5"
+],
+[
+"c",
+"¬p1 ∨ ¬p2 ∨ ¬p3 ∨ ¬p4 ∨ ¬p5 ∧ c"
+],
+[
+"d",
+"¬p1 ∨ ¬p2 ∨ ¬p3 ∨ ¬p4 ∨ ¬p5 ∨ c"
+],
+[
+"e",
+"p1 ∨ p2 ∨ p3 ∨ p4 ∨ p5 ∨ ¬c"
+]
+],
+"gabarito": "c",
+"resolucao": "Todas valem V. Ordem: ¬, depois ∧, depois ∨, depois →.\nC) primeiro ¬p5 ∧ c = F ∧ V = F; depois F ∨ F ∨ F ∨ F ∨ F = F. É a falsa.\nA) V → V = V. B) começa com ¬c = F, e condicional que começa com F é V. D) termina com \"∨ c\" (V): V. E) tem p1 (V) num \"ou\": V."
+},
+{
+"id": "tec-324157",
+"tec": 324157,
+"banca": "CEBRASPE",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Um estudante de direito, com o objetivo de sistematizar o seu estudo, criou sua própria legenda, na qual identificava, por letras, algumas afirmações relevantes quanto à disciplina estudada e as vinculava por meio de sentenças (proposições). No seu vocabulário particular constava, por exemplo:\nP: Cometeu o crime A.\nQ: Cometeu o crime B.\nR: Será punido, obrigatoriamente, com a pena de reclusão no regime fechado.\nS: Poderá optar pelo pagamento de fiança.\nAo revisar seus escritos, o estudante, apesar de não recordar qual era o crime B, lembrou que ele era inafiançável.\nCaso as proposições R e S se refiram à mesma pessoa e a um único crime, então, independentemente das valorações de R e S como verdadeiras ou falsas, a proposição R ∧ S → Q será sempre falsa.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e",
+"resolucao": "Pela ordem de precedência, R ∧ S → Q é (R ∧ S) → Q.\nSe a pessoa cometeu o crime B, Q é V, e uma condicional que termina em V é sempre verdadeira.\nEntão a proposição pode ser verdadeira: não é \"sempre falsa\". Errado."
+},
+{
+"id": "tec-337164",
+"tec": 337164,
+"banca": "ESAF",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Sabendo que os valores lógicos das proposições simples p e q são, respectivamente, a verdade e a falsidade, assinale o item que apresenta a proposição composta cujo valor lógico é a verdade.",
+"alternativas": [
+[
+"a",
+"~p ∨ q → q"
+],
+[
+"b",
+"p ∨ q → q"
+],
+[
+"c",
+"p → q"
+],
+[
+"d",
+"p ↔ q"
+],
+[
+"e",
+"q ∧ (p ∨ q)"
+]
+],
+"gabarito": "a",
+"resolucao": "p = V e q = F. Resolva o \"ou\" antes da seta.\nA) (~p ∨ q) → q = (F ∨ F) → F = F → F = V.\nB) (V ∨ F) → F = V → F = F.\nC) V → F = F. D) V ↔ F = F. E) F ∧ (V ∨ F) = F ∧ V = F.\nResposta: A."
+},
+{
+"id": "tec-737445",
+"tec": 737445,
+"banca": "CPCON UEPB",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Sejam os símbolos ∼, ∨, → e ↔, respectivamente, dos seguintes conectivos lógicos: negação, disjunção, condicional e bicondicional. Considere as proposições p, q e r a seguir:\np: A Terra é um planeta\nq: O Sol não é uma estrela\nr: A Lua é uma estrela\nPode-se afirmar sobre o valor lógico da proposição composta S: p → ∼r ↔ p ∨ q",
+"alternativas": [
+[
+"a",
+"S não tem valor lógico"
+],
+[
+"b",
+"o valor lógico de S é falsidade"
+],
+[
+"c",
+"não é possível determinar o valor lógico de S"
+],
+[
+"d",
+"S é verdadeiro e falso ao mesmo tempo"
+],
+[
+"e",
+"o valor lógico de S é a verdade"
+]
+],
+"gabarito": "e",
+"resolucao": "Valores: p = V, q = F (o Sol é estrela), r = F (a Lua não é estrela), então ∼r = V.\nOrdem: ∼, ∨, →, ↔. Fica S = (p → ∼r) ↔ (p ∨ q).\n(V → V) ↔ (V ∨ F) = V ↔ V = V. Resposta: E."
+},
+{
+"id": "tec-823331",
+"tec": 823331,
+"banca": "QUADRIX",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "No que se refere à estrutura lógica, julgue o item.\nO valor-verdade da expressão lógica (2 > 3) ↔ (1 < 0) → (3 ≠ 4) é F.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "c",
+"resolucao": "(2 > 3) é F, (1 < 0) é F e (3 ≠ 4) é V.\nA seta (→) é resolvida antes do ↔: F ↔ (F → V) = F ↔ V = F.\nO item diz que o valor é F: Certo."
+},
+{
+"id": "tec-885828",
+"tec": 885828,
+"banca": "COPEVE-UFAL",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Se os valores lógicos (V, se verdadeiro; F, se falso) das proposições (A → B) ∧ C e C ∨ B → A são verdadeiros, então os valores lógicos das proposições A, B e C são, respectivamente,",
+"alternativas": [
+[
+"a",
+"VFF."
+],
+[
+"b",
+"VVF."
+],
+[
+"c",
+"FFF."
+],
+[
+"d",
+"VFV."
+],
+[
+"e",
+"VVV."
+]
+],
+"gabarito": "e",
+"resolucao": "(A → B) ∧ C é V: então C = V e (A → B) = V.\nC ∨ B → A é (C ∨ B) → A. Como C = V, a primeira parte é V, e para a condicional ser V, A tem de ser V.\nCom A = V e A → B = V, B também é V. Resposta: VVV (E)."
+},
+{
+"id": "tec-2291379",
+"tec": 2291379,
+"banca": "INSTITUTO CIDADES",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Marque a alternativa incorreta sobre a precedência dos conectivos lógicos.",
+"alternativas": [
+[
+"a",
+"A negação tem precedência sobre a conjunção."
+],
+[
+"b",
+"A bicondicional tem precedência sobre a condicional."
+],
+[
+"c",
+"A disjunção tem precedência sobre a condicional."
+],
+[
+"d",
+"A negação tem precedência sobre a disjunção."
+]
+],
+"gabarito": "b",
+"resolucao": "A ordem é: 1º negação (~), 2º conjunção (∧), 3º disjunção (∨), 4º condicional (→), 5º bicondicional (↔).\nA bicondicional é a última, então ela não tem precedência sobre a condicional. A incorreta é a B."
+},
+{
+"id": "tec-3483224",
+"tec": 3483224,
+"banca": "VUNESP",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Assim como existe a ordem de precedência nas operações em expressões numéricas e algébricas, existe a ordem de precedência na interpretação de uma proposição lógica composta.\nDessa forma, a correta interpretação da proposição p ∨ q → r ↔ s ∧ t é:",
+"alternativas": [
+[
+"a",
+"(p ∨ q) → (r ↔ (s ∧ t))."
+],
+[
+"b",
+"((p ∨ q) → r) ↔ (s ∧ t)."
+],
+[
+"c",
+"((p ∨ q) → (r ↔ s)) ∧ t."
+],
+[
+"d",
+"(p ∨ q) → ((r ↔ s) ∧ t)."
+],
+[
+"e",
+"(p ∨ (q → r)) ↔ (s ∧ t)."
+]
+],
+"gabarito": "b",
+"resolucao": "Coloque os parênteses na ordem: primeiro ∧ (s ∧ t), depois ∨ (p ∨ q), depois → ((p ∨ q) → r) e, por último, o ↔ junta tudo.\nResultado: ((p ∨ q) → r) ↔ (s ∧ t). Resposta: B."
+},
+{
+"id": "tec-3492528",
+"tec": 3492528,
+"banca": "VUNESP",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Para simplificar a escrita (suprimir parênteses), é definida uma ordem de precedência das operações lógicas, de maneira a permitir identificar o conectivo principal de uma proposição, de modo a poder nomeá-la.\nDadas as proposições simples p, q, r e s, a proposição\n∼∼p ∨ q → r ∧ (s ↔ ∼q ∨ ∼p)\né uma",
+"alternativas": [
+[
+"a",
+"negação."
+],
+[
+"b",
+"disjunção."
+],
+[
+"c",
+"condicional."
+],
+[
+"d",
+"conjunção."
+],
+[
+"e",
+"bicondicional."
+]
+],
+"gabarito": "c",
+"resolucao": "O conectivo principal é o último a ser resolvido.\nO parêntese é resolvido à parte. Fora dele, a ordem é: negações, depois o ∧ (r ∧ (...)), depois o ∨ (∼∼p ∨ q) e, por último, a seta.\nComo a seta fica por último, a proposição é uma condicional. Resposta: C."
+},
+{
+"id": "tec-3969760",
+"tec": 3969760,
+"banca": "CEBRASPE",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Considere três proposições — p, q e r — cujos valores lógicos sejam, respectivamente, verdadeiro, falso e verdadeiro. Nesse caso, é correto concluir que a proposição composta p ∧ q ∨ r → ~p ∧ r tem valor lógico falso.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "c",
+"resolucao": "p = V, q = F, r = V. Coloque os parênteses pela ordem (~, ∧, ∨, →):\n((p ∧ q) ∨ r) → ((~p) ∧ r)\n((V ∧ F) ∨ V) → (F ∧ V) = (F ∨ V) → F = V → F = F.\nO valor é falso: Certo."
+},
+{
+"id": "tec-3991179",
+"tec": 3991179,
+"banca": "IDCAP",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "Os operadores lógicos se classificam em disjunção, conjunção e negação. A conjunção utiliza um operador com o seguinte tipo e prioridade, respectivamente:",
+"alternativas": [
+[
+"a",
+"Unário e 1"
+],
+[
+"b",
+"Binário e 2"
+],
+[
+"c",
+"Unário e 2"
+],
+[
+"d",
+"Binário e 1"
+]
+],
+"gabarito": "b",
+"resolucao": "A conjunção (∧) liga duas proposições: é binária.\nNa ordem de precedência, vem em 2º lugar, logo depois da negação (que é unária e tem prioridade 1). Resposta: B."
+},
+{
+"id": "tec-4085636",
+"tec": 4085636,
+"banca": "CEBRASPE",
+"tema": "Ordem de precedência dos conectivos",
+"enunciado": "P: \"Chove na Serra Gaúcha.\"\nQ: \"Faz frio em Porto Alegre.\"\nR: \"Venta em Canoas.\"\nConsiderando as proposições P, Q e R precedentes e que a proposição composta \"Se chove na Serra Gaúcha, então faz frio em Porto Alegre ou venta em Canoas.\" tem valor lógico falso, assinale a opção que também tem valor lógico falso, com base nos valores lógicos de P, Q e R.",
+"alternativas": [
+[
+"a",
+"∼P ∧ Q ∨ ∼R"
+],
+[
+"b",
+"∼Q ∨ ∼R → P"
+],
+[
+"c",
+"∼P ∧ Q ∧ R"
+],
+[
+"d",
+"∼P → ∼Q ∧ ∼R"
+]
+],
+"gabarito": "c",
+"resolucao": "A condicional é falsa só em V → F: então P = V e (Q ou R) = F, logo Q = F e R = F.\nA) (F ∧ F) ∨ V = V. B) (V ∨ V) → V = V. C) F ∧ F ∧ F = F. D) F → (V ∧ V) = V.\nA única falsa é a C."
+}
+]
+}

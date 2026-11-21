@@ -2,11 +2,13 @@
 // Fonte única: data/questoes.json (gerado das descrições dos vídeos). Só entram as completas e sem figura.
 import bruto from '../../../data/questoes.json';
 import apostilaProposicoes from './provas-proposicoes.json';
+import revisadas from './provas-revisadas.json';
 
 export type QuestaoProva = {
   id: string;
   video?: string; // id do vídeo de resolução no YouTube, quando existe
   fonte?: string;
+  resolucao?: string; // resolução escrita e conferida
   banca: string;
   ano?: number;
   orgao?: string;
@@ -43,7 +45,10 @@ type Apostila = { id: string; banca: string; ano: number | null; orgao: string; 
 const DA_APOSTILA: QuestaoProva[] = (apostilaProposicoes as unknown as { questoes: Apostila[] }).questoes.map((q) => ({
   ...q, ano: q.ano ?? undefined, enunciado: q.enunciado.trim(), alternativas: q.alternativas.map(([l, t]) => [l, t.trim()] as [string, string]), fonte: 'apostila'
 }));
-export const PROVAS: QuestaoProva[] = [...DO_CANAL, ...DA_APOSTILA];
+// questões revisadas uma a uma (gabarito conferido com o comentário de professor), com resolução escrita
+type Revisada = { id: string; banca: string; tema: string; enunciado: string; alternativas: [string, string][]; gabarito: string; resolucao: string };
+const REVISADAS: QuestaoProva[] = (revisadas as unknown as { questoes: Revisada[] }).questoes.map((q) => ({ ...q, fonte: 'revisada' }));
+export const PROVAS: QuestaoProva[] = [...REVISADAS, ...DO_CANAL, ...DA_APOSTILA];
 
 const contar = (xs: string[]) => [...xs.reduce((m, x) => m.set(x, (m.get(x) || 0) + 1), new Map<string, number>())].sort((a, b) => b[1] - a[1]);
 export const BANCAS_PROVA = contar(PROVAS.map((q) => q.banca));
