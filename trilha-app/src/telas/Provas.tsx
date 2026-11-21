@@ -21,7 +21,7 @@ function PilulaTema({ tema }: { tema: string }) {
 }
 const LETRA = (l: string) => l.toUpperCase();
 const embaralhar = <T,>(a: T[]) => { const r = [...a]; for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; } return r; };
-const fonte = (q: QuestaoProva) => [q.banca, q.ano, q.orgao].filter(Boolean).join(' · ');
+const fonte = (q: QuestaoProva) => 'Banca ' + q.banca; // só a banca, sem ano nem órgão
 
 // Vídeo da resolução: só carrega o YouTube quando o aluno toca (página leve e sem rastreio antes do clique)
 export function VideoResolucao({ id, titulo }: { id: string; titulo: string }) {
