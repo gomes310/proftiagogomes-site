@@ -1144,5 +1144,1104 @@
     "e": "Só a II é proposição."
    }
   }
+ ],
+ "11": [
+  {
+   "titulo": "O que é n(A)",
+   "conceito": "**n(A)** é a **quantidade de elementos** do conjunto A. Conte cada elemento uma vez só.",
+   "exemplos": [
+    {
+     "t": "A = {2, 4, 6}",
+     "r": "n(A) = 3",
+     "ok": true,
+     "porque": "Três elementos: 2, 4 e 6."
+    },
+    {
+     "t": "B = {a, b, c, d, e}",
+     "r": "n(B) = 5",
+     "ok": true,
+     "porque": "Cinco letras."
+    },
+    {
+     "t": "C = { }",
+     "r": "n(C) = 0",
+     "ok": true,
+     "porque": "O conjunto vazio não tem elementos."
+    }
+   ],
+   "suaVez": {
+    "p": "D = {1, 3, 5, 7}. Quanto vale n(D)?",
+    "o": [
+     "4",
+     "7",
+     "16"
+    ],
+    "c": 0,
+    "dica": "Conte quantos elementos aparecem entre as chaves.",
+    "e": "São 4 elementos: 1, 3, 5 e 7."
+   }
+  },
+  {
+   "titulo": "Contando a união",
+   "conceito": "Para contar **A ∪ B**, não basta somar n(A) + n(B): quem está **nos dois** seria contado **duas vezes**. Por isso: **n(A ∪ B) = n(A) + n(B) − n(A ∩ B)**.",
+   "exemplos": [
+    {
+     "t": "A = {1, 2, 3} e B = {3, 4}",
+     "r": "3 + 2 − 1 = 4",
+     "ok": true,
+     "porque": "O 3 está nos dois. De fato, A ∪ B = {1, 2, 3, 4}."
+    },
+    {
+     "t": "30 leem jornal, 25 leem revista, 10 leem os dois",
+     "r": "30 + 25 − 10 = 45",
+     "ok": true,
+     "porque": "Os 10 que leem os dois tinham sido contados duas vezes."
+    }
+   ],
+   "suaVez": {
+    "p": "n(A) = 12, n(B) = 9 e n(A ∩ B) = 4. Quanto vale n(A ∪ B)?",
+    "o": [
+     "17",
+     "21",
+     "25"
+    ],
+    "c": 0,
+    "dica": "Some e desconte a interseção.",
+    "e": "12 + 9 − 4 = 17."
+   }
+  },
+  {
+   "titulo": "\"Só A\" e \"nenhum\"",
+   "conceito": "**Só A** = n(A) − n(A ∩ B). **Nenhum** = total − n(A ∪ B). No diagrama, preencha primeiro a **interseção**.",
+   "exemplos": [
+    {
+     "t": "n(A) = 18 e n(A ∩ B) = 10",
+     "r": "só A = 8",
+     "ok": true,
+     "porque": "18 − 10 = 8 estão só em A."
+    },
+    {
+     "t": "50 pessoas; 41 usam algum dos apps",
+     "r": "nenhum = 9",
+     "ok": true,
+     "porque": "50 − 41 = 9 não usam nenhum."
+    }
+   ],
+   "suaVez": {
+    "p": "Numa turma de 40, 25 fazem inglês, 20 fazem espanhol e 10 fazem os dois. Quantos não fazem nenhum?",
+    "o": [
+     "5",
+     "15",
+     "35"
+    ],
+    "c": 0,
+    "dica": "Calcule primeiro quantos fazem pelo menos um.",
+    "e": "Pelo menos um: 25 + 20 − 10 = 35. Nenhum: 40 − 35 = 5."
+   }
+  }
+ ],
+ "12": [
+  {
+   "titulo": "Comece pelo centro",
+   "conceito": "Com três conjuntos, o diagrama tem **7 regiões**. Preencha primeiro o **centro**: quem está nos três ao mesmo tempo.",
+   "exemplos": [
+    {
+     "t": "10 pessoas estão em A, B e C",
+     "r": "centro = 10",
+     "ok": true,
+     "porque": "É o primeiro número que vai no diagrama."
+    }
+   ],
+   "suaVez": {
+    "p": "Num diagrama de 3 conjuntos, qual região se preenche primeiro?",
+    "o": [
+     "O centro (os três)",
+     "A parte \"só A\"",
+     "A parte de fora"
+    ],
+    "c": 0,
+    "dica": "Qual região faz parte de todas as interseções?",
+    "e": "O centro faz parte de todas as interseções; começando por ele, as contas fecham."
+   }
+  },
+  {
+   "titulo": "Faixas de dois",
+   "conceito": "A faixa \"A e B, **sem C**\" é a interseção de A e B **menos o centro**: n(A ∩ B) − n(A ∩ B ∩ C).",
+   "exemplos": [
+    {
+     "t": "n(A ∩ B) = 5 e centro = 2",
+     "r": "A e B, sem C = 3",
+     "ok": true,
+     "porque": "5 − 2 = 3."
+    }
+   ],
+   "suaVez": {
+    "p": "n(B ∩ C) = 7 e n(A ∩ B ∩ C) = 3. Quantos estão em B e C, mas não em A?",
+    "o": [
+     "4",
+     "10",
+     "3"
+    ],
+    "c": 0,
+    "dica": "Tire o centro da interseção.",
+    "e": "7 − 3 = 4."
+   }
+  },
+  {
+   "titulo": "A fórmula dos três",
+   "conceito": "**n(A ∪ B ∪ C) = n(A) + n(B) + n(C) − n(A ∩ B) − n(A ∩ C) − n(B ∩ C) + n(A ∩ B ∩ C)**. Some os três, tire as interseções de dois e devolva o centro.",
+   "exemplos": [
+    {
+     "t": "10, 8 e 6; interseções 3, 2 e 2; centro 1",
+     "r": "10 + 8 + 6 − 3 − 2 − 2 + 1 = 18",
+     "ok": true,
+     "porque": "18 estão em pelo menos um conjunto."
+    }
+   ],
+   "suaVez": {
+    "p": "n(A) = 15, n(B) = 12, n(C) = 10, interseções de dois: 5, 4 e 3, centro: 2. Quanto vale n(A ∪ B ∪ C)?",
+    "o": [
+     "27",
+     "25",
+     "37"
+    ],
+    "c": 0,
+    "dica": "Some 15 + 12 + 10, tire 5 + 4 + 3 e devolva 2.",
+    "e": "37 − 12 + 2 = 27."
+   }
+  }
+ ],
+ "4": [
+  {
+   "titulo": "Tautologia",
+   "conceito": "**Tautologia** é a proposição que dá **V em todas as linhas** da tabela, não importa o valor das partes.",
+   "exemplos": [
+    {
+     "t": "p ∨ ~p",
+     "r": "sempre V",
+     "ok": true,
+     "porque": "\"Chove ou não chove\": uma das duas sempre acontece."
+    },
+    {
+     "t": "p → p",
+     "r": "sempre V",
+     "ok": true,
+     "porque": "Nunca acontece V → F."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Hoje é sábado ou hoje não é sábado.\" É:",
+    "o": [
+     "Tautologia",
+     "Contradição",
+     "Contingência"
+    ],
+    "c": 0,
+    "dica": "Existe algum caso em que ela seja falsa?",
+    "e": "Uma das partes é sempre V: é tautologia."
+   }
+  },
+  {
+   "titulo": "Contradição",
+   "conceito": "**Contradição** é a proposição que dá **F em todas as linhas**.",
+   "exemplos": [
+    {
+     "t": "p ∧ ~p",
+     "r": "sempre F",
+     "ok": false,
+     "porque": "\"Chove e não chove\": impossível."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Ana é médica e Ana não é médica.\" É:",
+    "o": [
+     "Contradição",
+     "Tautologia",
+     "Contingência"
+    ],
+    "c": 0,
+    "dica": "Ela pode ser verdadeira em algum caso?",
+    "e": "Nunca é verdadeira: contradição."
+   }
+  },
+  {
+   "titulo": "Contingência",
+   "conceito": "**Contingência** tem **V e F** na última coluna: o valor depende do caso.",
+   "exemplos": [
+    {
+     "t": "p ∧ q",
+     "r": "V só numa linha",
+     "ok": true,
+     "porque": "Às vezes V, às vezes F."
+    },
+    {
+     "t": "p → q",
+     "r": "F só em V → F",
+     "ok": true,
+     "porque": "Depende de p e de q."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se chove, levo guarda-chuva.\" É:",
+    "o": [
+     "Contingência",
+     "Tautologia",
+     "Contradição"
+    ],
+    "c": 0,
+    "dica": "O valor depende de chover e de levar?",
+    "e": "Pode ser V ou F conforme o caso: contingência."
+   }
+  }
+ ],
+ "15": [
+  {
+   "titulo": "Comece pelo caso \"travado\"",
+   "conceito": "Quando o enunciado diz o valor de uma composta, procure a que **só tem um jeito** de acontecer: condicional **falsa** (V → F), **\"e\" verdadeiro** (tudo V) ou **\"ou\" falso** (tudo F).",
+   "exemplos": [
+    {
+     "t": "\"Se Ana viaja, Beto fica\" é F",
+     "r": "Ana viaja = V; Beto fica = F",
+     "ok": true,
+     "porque": "Condicional falsa só em V → F."
+    },
+    {
+     "t": "\"Rui canta e dança\" é V",
+     "r": "canta = V; dança = V",
+     "ok": true,
+     "porque": "\"E\" verdadeiro: as duas V."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Lia estuda ou trabalha\" é falsa. Então:",
+    "o": [
+     "Lia não estuda e não trabalha.",
+     "Lia estuda.",
+     "Lia trabalha."
+    ],
+    "c": 0,
+    "dica": "Quando o \"ou\" é falso?",
+    "e": "O \"ou\" só é falso com as duas partes falsas."
+   }
+  },
+  {
+   "titulo": "Propague os valores",
+   "conceito": "Descoberto um valor, **use-o nas outras frases**, como num sudoku.",
+   "exemplos": [
+    {
+     "t": "p ∧ q é V; q → r é F",
+     "r": "q = V, então r = F",
+     "ok": true,
+     "porque": "Do \"e\", q = V. Uma condicional falsa que começa com V exige r = F."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se chove, o jogo é adiado\" é V, e \"chove\" é V. O jogo foi adiado?",
+    "o": [
+     "Sim",
+     "Não",
+     "Não dá para saber"
+    ],
+    "c": 0,
+    "dica": "Começando com V, como a condicional pode ser V?",
+    "e": "Só V → V: o jogo foi adiado."
+   }
+  },
+  {
+   "titulo": "Quantas linhas?",
+   "conceito": "Na tabela-verdade, conte as **letras diferentes** (não os conectivos): com **n** letras, são **2ⁿ** linhas.",
+   "exemplos": [
+    {
+     "t": "(p ∧ q) → (r ∨ s)",
+     "r": "4 letras → 16 linhas",
+     "ok": true,
+     "porque": "2⁴ = 16."
+    },
+    {
+     "t": "p ∨ ~p",
+     "r": "1 letra → 2 linhas",
+     "ok": true,
+     "porque": "Só aparece o p."
+    }
+   ],
+   "suaVez": {
+    "p": "Quantas linhas tem a tabela de (p → q) ∧ (q ∨ r)?",
+    "o": [
+     "8",
+     "16",
+     "4"
+    ],
+    "c": 0,
+    "dica": "Conte as letras diferentes: p, q e r.",
+    "e": "3 letras: 2³ = 8."
+   }
+  }
+ ],
+ "16": [
+  {
+   "titulo": "Contrapositiva",
+   "conceito": "**p → q** equivale a **~q → ~p**: **inverta** a ordem e **negue** as duas partes.",
+   "exemplos": [
+    {
+     "t": "\"Se chove, molha.\"",
+     "r": "Se não molhou, não choveu.",
+     "ok": true,
+     "porque": "Mesma informação, dita do outro lado."
+    },
+    {
+     "t": "\"Se é ouro, brilha.\"",
+     "r": "Se não brilha, não é ouro.",
+     "ok": true,
+     "porque": "Inverteu e negou."
+    }
+   ],
+   "suaVez": {
+    "p": "Equivale a \"Se estudo, passo\":",
+    "o": [
+     "Se não passo, não estudo.",
+     "Se passo, estudo.",
+     "Se não estudo, não passo."
+    ],
+    "c": 0,
+    "dica": "Inverta a ordem e negue as duas partes.",
+    "e": "É a contrapositiva: ~passo → ~estudo."
+   }
+  },
+  {
+   "titulo": "A forma com \"ou\"",
+   "conceito": "**p → q** também equivale a **~p ∨ q**: negue a primeira parte e troque a seta por **ou**.",
+   "exemplos": [
+    {
+     "t": "\"Se chove, levo guarda-chuva.\"",
+     "r": "Não chove ou levo guarda-chuva.",
+     "ok": true,
+     "porque": "Negou a 1ª parte e trocou → por \"ou\"."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se Ana viaja, Rui fica\" equivale a:",
+    "o": [
+     "Ana não viaja ou Rui fica.",
+     "Ana viaja ou Rui fica.",
+     "Ana viaja e Rui não fica."
+    ],
+    "c": 0,
+    "dica": "Negue a primeira parte e use \"ou\".",
+    "e": "~p ∨ q: \"Ana não viaja ou Rui fica\"."
+   }
+  },
+  {
+   "titulo": "Cuidado: a recíproca não vale",
+   "conceito": "Trocar só a ordem (**q → p**, a recíproca) ou só negar (**~p → ~q**, a contrária) **não** dá frase equivalente.",
+   "exemplos": [
+    {
+     "t": "\"Se é carioca, é brasileiro.\"",
+     "r": "\"Se é brasileiro, é carioca.\" não equivale",
+     "ok": false,
+     "porque": "Há brasileiros que não são cariocas."
+    }
+   ],
+   "suaVez": {
+    "p": "Qual NÃO equivale a \"Se é médico, é formado\"?",
+    "o": [
+     "Se é formado, é médico.",
+     "Se não é formado, não é médico.",
+     "Não é médico ou é formado."
+    ],
+    "c": 0,
+    "dica": "Qual delas só troca a ordem, sem negar?",
+    "e": "Essa é a recíproca: não equivale."
+   }
+  }
+ ],
+ "17": [
+  {
+   "titulo": "Negando o \"ou\": nem… nem…",
+   "conceito": "Negar **p ou q** dá **nem p nem q**: ~p ∧ ~q.",
+   "exemplos": [
+    {
+     "t": "\"Vou ao cinema ou ao teatro.\"",
+     "r": "Não vou ao cinema nem ao teatro.",
+     "ok": true,
+     "porque": "As duas partes negadas, ligadas por \"e\"."
+    }
+   ],
+   "suaVez": {
+    "p": "A negação de \"Ana canta ou dança\" é:",
+    "o": [
+     "Ana não canta e não dança.",
+     "Ana não canta ou não dança.",
+     "Ana canta e dança."
+    ],
+    "c": 0,
+    "dica": "Negar \"ou\" vira \"e\".",
+    "e": "~(c ∨ d) = ~c ∧ ~d."
+   }
+  },
+  {
+   "titulo": "Negando quantificadores",
+   "conceito": "**Todo** vira **algum… não**. **Algum** vira **nenhum**. **Nenhum** vira **algum**.",
+   "exemplos": [
+    {
+     "t": "\"Todo aluno estudou.\"",
+     "r": "Algum aluno não estudou.",
+     "ok": true,
+     "porque": "Basta um contraexemplo."
+    },
+    {
+     "t": "\"Algum candidato passou.\"",
+     "r": "Nenhum candidato passou.",
+     "ok": true,
+     "porque": "Negar \"algum\" é dizer que nenhum."
+    },
+    {
+     "t": "\"Nenhum gato é preto.\"",
+     "r": "Algum gato é preto.",
+     "ok": true,
+     "porque": "Basta um gato preto para derrubar o \"nenhum\"."
+    }
+   ],
+   "suaVez": {
+    "p": "A negação de \"Todo servidor é pontual\" é:",
+    "o": [
+     "Algum servidor não é pontual.",
+     "Nenhum servidor é pontual.",
+     "Todo servidor é impontual."
+    ],
+    "c": 0,
+    "dica": "Para derrubar o \"todo\", basta um.",
+    "e": "Negação de \"todo\" = \"algum… não\"."
+   }
+  },
+  {
+   "titulo": "Negando o \"se, e somente se\"",
+   "conceito": "Negar **p ↔ q** dá **ou p, ou q**: exatamente uma das duas acontece.",
+   "exemplos": [
+    {
+     "t": "\"Ana casa se, e somente se, Beto aceita.\"",
+     "r": "Ou Ana casa, ou Beto aceita.",
+     "ok": true,
+     "porque": "Na negação, exatamente uma das duas acontece."
+    }
+   ],
+   "suaVez": {
+    "p": "A negação de \"Viajo se, e somente se, tiver férias\" é:",
+    "o": [
+     "Ou viajo, ou tenho férias.",
+     "Não viajo e não tenho férias.",
+     "Se viajo, não tenho férias."
+    ],
+    "c": 0,
+    "dica": "Negar ↔ vira \"ou… ou…\".",
+    "e": "~(p ↔ q) = p ⊻ q."
+   }
+  }
+ ],
+ "6": [
+  {
+   "titulo": "Modus ponens",
+   "conceito": "De **se p, então q** e **p**, conclui-se **q**.",
+   "exemplos": [
+    {
+     "t": "\"Se chove, molha.\" + \"Choveu.\"",
+     "r": "Molhou.",
+     "ok": true,
+     "porque": "A condição aconteceu, então a consequência também."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se Rui é juiz, é formado. Rui é juiz.\" Conclui-se:",
+    "o": [
+     "Rui é formado.",
+     "Rui não é formado.",
+     "Nada."
+    ],
+    "c": 0,
+    "dica": "A condição aconteceu?",
+    "e": "Modus ponens: a consequência vem junto."
+   }
+  },
+  {
+   "titulo": "Modus tollens",
+   "conceito": "De **se p, então q** e **não q**, conclui-se **não p**.",
+   "exemplos": [
+    {
+     "t": "\"Se chove, molha.\" + \"Não molhou.\"",
+     "r": "Não choveu.",
+     "ok": true,
+     "porque": "Se tivesse chovido, teria molhado."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se estudo, passo. Não passei.\" Conclui-se:",
+    "o": [
+     "Não estudei.",
+     "Estudei.",
+     "Nada."
+    ],
+    "c": 0,
+    "dica": "A consequência não aconteceu.",
+    "e": "Modus tollens: nega q, nega p."
+   }
+  },
+  {
+   "titulo": "O que NÃO se conclui",
+   "conceito": "Com **se p, então q** e **q**, nada se conclui sobre p. Com **não p**, nada se conclui sobre q.",
+   "exemplos": [
+    {
+     "t": "\"Se chove, molha.\" + \"Molhou.\"",
+     "r": "nada sobre a chuva",
+     "ok": false,
+     "porque": "Pode ter molhado por outro motivo."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se Ana passa, viaja. Ana viajou.\" Conclui-se:",
+    "o": [
+     "Nada sobre Ana ter passado.",
+     "Ana passou.",
+     "Ana não passou."
+    ],
+    "c": 0,
+    "dica": "Ela pode viajar por outro motivo?",
+    "e": "Confirmar a consequência não prova a condição."
+   }
+  }
+ ],
+ "18": [
+  {
+   "titulo": "Argumento válido",
+   "conceito": "Um argumento é **válido** quando, **se as premissas forem verdadeiras, a conclusão é obrigatoriamente verdadeira**.",
+   "exemplos": [
+    {
+     "t": "Se chove, molha. Choveu. Logo, molhou.",
+     "r": "Válido",
+     "ok": true,
+     "porque": "Modus ponens."
+    },
+    {
+     "t": "Se chove, molha. Não molhou. Logo, não choveu.",
+     "r": "Válido",
+     "ok": true,
+     "porque": "Modus tollens."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se estudo, passo. Estudei. Logo, passei.\" O argumento é:",
+    "o": [
+     "Válido",
+     "Inválido"
+    ],
+    "c": 0,
+    "dica": "Partiu da condição?",
+    "e": "É modus ponens: válido."
+   }
+  },
+  {
+   "titulo": "As duas falácias clássicas",
+   "conceito": "**Afirmar o consequente** (p → q e q, logo p) e **negar o antecedente** (p → q e ~p, logo ~q) são **inválidos**.",
+   "exemplos": [
+    {
+     "t": "Se chove, molha. Molhou. Logo, choveu.",
+     "r": "Falácia",
+     "ok": false,
+     "porque": "Pode ter molhado por outro motivo."
+    },
+    {
+     "t": "Se chove, molha. Não choveu. Logo, não molhou.",
+     "r": "Falácia",
+     "ok": false,
+     "porque": "Alguém pode ter molhado a rua."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Se é ouro, brilha. Brilha. Logo, é ouro.\" O argumento é:",
+    "o": [
+     "Inválido",
+     "Válido"
+    ],
+    "c": 0,
+    "dica": "Vidro também brilha?",
+    "e": "É afirmar o consequente: inválido."
+   }
+  },
+  {
+   "titulo": "Outros argumentos válidos",
+   "conceito": "**Silogismo disjuntivo**: p ou q; não p; logo q. **Encadeamento**: p → q e q → r; logo p → r.",
+   "exemplos": [
+    {
+     "t": "Vou de ônibus ou de metrô. Não fui de ônibus.",
+     "r": "Fui de metrô.",
+     "ok": true,
+     "porque": "Eliminou uma opção."
+    },
+    {
+     "t": "Se A, então B. Se B, então C. A.",
+     "r": "Logo, C.",
+     "ok": true,
+     "porque": "A leva a B, que leva a C."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Ou Lia está em casa ou no trabalho. Lia não está em casa.\" Conclui-se:",
+    "o": [
+     "Lia está no trabalho.",
+     "Lia está em casa.",
+     "Nada."
+    ],
+    "c": 0,
+    "dica": "Elimine a opção negada.",
+    "e": "Silogismo disjuntivo."
+   }
+  }
+ ],
+ "10": [
+  {
+   "titulo": "A semana se repete a cada 7 dias",
+   "conceito": "Para achar o dia da semana daqui a N dias, divida **N por 7** e ande o **resto**.",
+   "exemplos": [
+    {
+     "t": "Hoje é segunda; daqui a 10 dias",
+     "r": "10 ÷ 7 = 1, resto 3 → quinta",
+     "ok": true,
+     "porque": "Ande 3 dias a partir de segunda."
+    },
+    {
+     "t": "Hoje é quinta; daqui a 14 dias",
+     "r": "resto 0 → quinta",
+     "ok": true,
+     "porque": "Múltiplo de 7: mesmo dia da semana."
+    }
+   ],
+   "suaVez": {
+    "p": "Hoje é sábado. Que dia será daqui a 9 dias?",
+    "o": [
+     "Segunda",
+     "Domingo",
+     "Sábado"
+    ],
+    "c": 0,
+    "dica": "9 ÷ 7 dá resto 2.",
+    "e": "Sábado + 2 dias = segunda."
+   }
+  },
+  {
+   "titulo": "Ano comum e bissexto",
+   "conceito": "Ano comum: **365 dias = 52 semanas + 1 dia**. Bissexto: **366 dias = 52 semanas + 2 dias**.",
+   "exemplos": [
+    {
+     "t": "1º de janeiro num domingo, ano comum",
+     "r": "no ano seguinte: segunda",
+     "ok": true,
+     "porque": "A data anda 1 dia da semana."
+    }
+   ],
+   "suaVez": {
+    "p": "Hoje é terça. Que dia será daqui a 365 dias?",
+    "o": [
+     "Quarta",
+     "Terça",
+     "Quinta"
+    ],
+    "c": 0,
+    "dica": "365 ÷ 7 dá resto 1.",
+    "e": "Anda 1 dia: quarta."
+   }
+  },
+  {
+   "titulo": "Contando para trás",
+   "conceito": "Para dias no passado, faça a mesma divisão e **volte** o resto.",
+   "exemplos": [
+    {
+     "t": "Hoje é quarta; há 15 dias",
+     "r": "15 ÷ 7 resto 1 → terça",
+     "ok": true,
+     "porque": "Volte 1 dia."
+    }
+   ],
+   "suaVez": {
+    "p": "Hoje é sexta. Que dia foi há 8 dias?",
+    "o": [
+     "Quinta",
+     "Sábado",
+     "Sexta"
+    ],
+    "c": 0,
+    "dica": "8 ÷ 7 dá resto 1; volte 1 dia.",
+    "e": "Sexta − 1 dia = quinta."
+   }
+  }
+ ],
+ "19": [
+  {
+   "titulo": "Quem fala a verdade e quem mente",
+   "conceito": "Quem **sempre fala a verdade** só diz frases **V**. Quem **sempre mente** só diz frases **F**.",
+   "exemplos": [
+    {
+     "t": "O mentiroso diz: \"Está chovendo.\"",
+     "r": "então não está chovendo",
+     "ok": true,
+     "porque": "Tudo o que ele diz é falso."
+    }
+   ],
+   "suaVez": {
+    "p": "Um mentiroso diz: \"Eu tenho um carro.\" Então:",
+    "o": [
+     "Ele não tem carro.",
+     "Ele tem carro.",
+     "Não dá para saber."
+    ],
+    "c": 0,
+    "dica": "A frase de um mentiroso é V ou F?",
+    "e": "Se ele mente, a frase é falsa."
+   }
+  },
+  {
+   "titulo": "Teste uma hipótese",
+   "conceito": "**Suponha** que alguém fala a verdade e veja se aparece **contradição**. Se aparecer, a suposição estava errada.",
+   "exemplos": [
+    {
+     "t": "Pedro: \"Eu e João mentimos.\"",
+     "r": "Pedro mente; João fala a verdade",
+     "ok": true,
+     "porque": "Se Pedro falasse a verdade, ele seria mentiroso: contradição."
+    }
+   ],
+   "suaVez": {
+    "p": "Ana diz: \"Eu sou mentirosa.\" Quem pode dizer essa frase?",
+    "o": [
+     "Ninguém",
+     "Só quem fala a verdade",
+     "Só quem mente"
+    ],
+    "c": 0,
+    "dica": "Teste as duas hipóteses.",
+    "e": "As duas hipóteses dão contradição."
+   }
+  },
+  {
+   "titulo": "Frases contraditórias",
+   "conceito": "Duas frases **contraditórias** (uma nega a outra) têm valores opostos: **exatamente uma é V**.",
+   "exemplos": [
+    {
+     "t": "\"Fui eu.\" × \"Não foi ele.\" (falando da mesma pessoa)",
+     "r": "uma V, outra F",
+     "ok": true,
+     "porque": "Uma é a negação da outra."
+    }
+   ],
+   "suaVez": {
+    "p": "Léo diz \"Fui eu\" e Rui diz \"Não foi o Léo\". Quantas dessas frases são verdadeiras?",
+    "o": [
+     "Exatamente uma",
+     "As duas",
+     "Nenhuma"
+    ],
+    "c": 0,
+    "dica": "Uma frase nega a outra?",
+    "e": "São contraditórias: exatamente uma é V."
+   }
+  }
+ ],
+ "20": [
+  {
+   "titulo": "Comece pelas pistas diretas",
+   "conceito": "A pista que **afirma** algo vira ✓ e já preenche com ✗ o resto da linha e da coluna.",
+   "exemplos": [
+    {
+     "t": "\"Mel fez INSS.\"",
+     "r": "✓ em Mel × INSS",
+     "ok": true,
+     "porque": "Mel não fez as outras provas, e ninguém mais fez INSS."
+    }
+   ],
+   "suaVez": {
+    "p": "Lia, Mel e Nina fizeram TJ, TRT e INSS, uma cada. Mel fez INSS. Quem pode ter feito TJ?",
+    "o": [
+     "Lia ou Nina",
+     "Só Mel",
+     "Ninguém"
+    ],
+    "c": 0,
+    "dica": "Mel já está ocupada.",
+    "e": "Sobram Lia e Nina para TJ e TRT."
+   }
+  },
+  {
+   "titulo": "Use as pistas negativas",
+   "conceito": "A pista que **nega** vira ✗. Quando sobrar uma única opção, ela é o ✓.",
+   "exemplos": [
+    {
+     "t": "\"Lia não fez TJ.\" (Mel fez INSS)",
+     "r": "Lia fez TRT; Nina fez TJ",
+     "ok": true,
+     "porque": "Para Lia sobrou só TRT."
+    }
+   ],
+   "suaVez": {
+    "p": "Pedro, Rui e Saulo moram nas casas 1, 2 e 3. Pedro mora na 2, e a casa de Rui tem número maior que a de Saulo. Onde mora Rui?",
+    "o": [
+     "Na 3",
+     "Na 1",
+     "Na 2"
+    ],
+    "c": 0,
+    "dica": "Sobram as casas 1 e 3.",
+    "e": "Rui tem a maior das duas: casa 3."
+   }
+  },
+  {
+   "titulo": "Pistas de comparação",
+   "conceito": "\"Mais novo que\", \"mais alto que\": quem é comparado **não pode** ser a outra pessoa da frase.",
+   "exemplos": [
+    {
+     "t": "\"Beto é mais novo que o professor.\"",
+     "r": "Beto não é o professor",
+     "ok": true,
+     "porque": "Ninguém é mais novo que si mesmo."
+    }
+   ],
+   "suaVez": {
+    "p": "\"Caio é mais alto que o engenheiro.\" Então:",
+    "o": [
+     "Caio não é o engenheiro.",
+     "Caio é o engenheiro.",
+     "Caio é o mais baixo."
+    ],
+    "c": 0,
+    "dica": "Alguém pode ser mais alto que si mesmo?",
+    "e": "A comparação já elimina Caio como engenheiro."
+   }
+  }
+ ],
+ "21": [
+  {
+   "titulo": "Letras viram números",
+   "conceito": "Troque cada letra pela **posição no alfabeto** (A = 1, B = 2… Z = 26) e procure o padrão.",
+   "exemplos": [
+    {
+     "t": "A, C, E, G",
+     "r": "1, 3, 5, 7 → 9 = I",
+     "ok": true,
+     "porque": "Soma 2."
+    },
+    {
+     "t": "B, E, H",
+     "r": "2, 5, 8 → 11 = K",
+     "ok": true,
+     "porque": "Soma 3."
+    }
+   ],
+   "suaVez": {
+    "p": "D, H, L, … Qual é a próxima letra?",
+    "o": [
+     "P",
+     "O",
+     "Q"
+    ],
+    "c": 0,
+    "dica": "Em números: 4, 8, 12…",
+    "e": "Soma 4: 16 = P."
+   }
+  },
+  {
+   "titulo": "Ciclos: use o resto",
+   "conceito": "Se a sequência se repete em blocos, divida a posição pelo **tamanho do bloco** e use o **resto**.",
+   "exemplos": [
+    {
+     "t": "A, B, C, A, B, C… 10º termo",
+     "r": "10 ÷ 3 = 3, resto 1 → A",
+     "ok": true,
+     "porque": "Resto 1: primeiro do bloco."
+    }
+   ],
+   "suaVez": {
+    "p": "Na sequência sol, lua, sol, lua…, qual é o 15º termo?",
+    "o": [
+     "sol",
+     "lua"
+    ],
+    "c": 0,
+    "dica": "Bloco de 2: veja o resto de 15 ÷ 2.",
+    "e": "Resto 1: primeiro do bloco, sol."
+   }
+  },
+  {
+   "titulo": "Resto zero",
+   "conceito": "**Resto 0** significa o **último** elemento do bloco.",
+   "exemplos": [
+    {
+     "t": "A, B, C… 9º termo",
+     "r": "resto 0 → C",
+     "ok": true,
+     "porque": "9 é múltiplo de 3: último do bloco."
+    }
+   ],
+   "suaVez": {
+    "p": "Verde, amarelo, vermelho, verde… Qual é a 12ª cor?",
+    "o": [
+     "Vermelho",
+     "Verde",
+     "Amarelo"
+    ],
+    "c": 0,
+    "dica": "12 ÷ 3 dá resto 0.",
+    "e": "Resto 0: último do bloco, vermelho."
+   }
+  }
+ ],
+ "22": [
+  {
+   "titulo": "Fibonacci",
+   "conceito": "Em algumas sequências, cada termo é a **soma dos dois anteriores**.",
+   "exemplos": [
+    {
+     "t": "1, 1, 2, 3, 5",
+     "r": "3 + 5 = 8",
+     "ok": true,
+     "porque": "Soma dos dois anteriores."
+    }
+   ],
+   "suaVez": {
+    "p": "2, 3, 5, 8, 13, … Qual é o próximo?",
+    "o": [
+     "21",
+     "18",
+     "26"
+    ],
+    "c": 0,
+    "dica": "Some os dois últimos.",
+    "e": "8 + 13 = 21."
+   }
+  },
+  {
+   "titulo": "Sequências intercaladas",
+   "conceito": "Às vezes são **duas sequências misturadas**: separe as posições ímpares das pares.",
+   "exemplos": [
+    {
+     "t": "3, 10, 5, 20, 7, 30",
+     "r": "ímpares: 3, 5, 7 · pares: 10, 20, 30",
+     "ok": true,
+     "porque": "Cada uma tem a sua regra."
+    }
+   ],
+   "suaVez": {
+    "p": "1, 50, 2, 40, 3, 30, … Qual é o próximo?",
+    "o": [
+     "4",
+     "20",
+     "5"
+    ],
+    "c": 0,
+    "dica": "O próximo é uma posição ímpar.",
+    "e": "Posições ímpares: 1, 2, 3 → 4."
+   }
+  },
+  {
+   "titulo": "Ordem de teste",
+   "conceito": "Teste nesta ordem: **diferença constante**, **multiplicação**, **soma dos anteriores**, **intercalada**.",
+   "exemplos": [
+    {
+     "t": "2, 6, 18, 54",
+     "r": "× 3 → 162",
+     "ok": true,
+     "porque": "A diferença muda, mas a multiplicação é constante."
+    }
+   ],
+   "suaVez": {
+    "p": "5, 10, 20, 40, … Qual é o próximo?",
+    "o": [
+     "80",
+     "60",
+     "45"
+    ],
+    "c": 0,
+    "dica": "Diferença ou multiplicação?",
+    "e": "Multiplica por 2: 80."
+   }
+  }
+ ],
+ "23": [
+  {
+   "titulo": "Garantir k iguais",
+   "conceito": "Para **garantir k iguais**: pior caso de **(k − 1) de cada tipo**, mais 1.",
+   "exemplos": [
+    {
+     "t": "meias de 3 cores, garantir 4 iguais",
+     "r": "3 × 3 + 1 = 10",
+     "ok": true,
+     "porque": "Pior caso: 3 de cada cor."
+    }
+   ],
+   "suaVez": {
+    "p": "Bolas de 4 cores. Quantas tirar para garantir 3 da mesma cor?",
+    "o": [
+     "9",
+     "8",
+     "12"
+    ],
+    "c": 0,
+    "dica": "Pior caso: 2 de cada cor.",
+    "e": "2 × 4 + 1 = 9."
+   }
+  },
+  {
+   "titulo": "Ano bissexto",
+   "conceito": "Ano **bissexto** é divisível por **4**. Mas, se terminar em **00**, só é bissexto se for divisível por **400**.",
+   "exemplos": [
+    {
+     "t": "2024",
+     "r": "bissexto",
+     "ok": true,
+     "porque": "Divisível por 4."
+    },
+    {
+     "t": "1900",
+     "r": "não é bissexto",
+     "ok": false,
+     "porque": "Termina em 00 e não é divisível por 400."
+    },
+    {
+     "t": "2000",
+     "r": "bissexto",
+     "ok": true,
+     "porque": "Divisível por 400."
+    }
+   ],
+   "suaVez": {
+    "p": "Qual destes anos é bissexto?",
+    "o": [
+     "2028",
+     "2100",
+     "2027"
+    ],
+    "c": 0,
+    "dica": "Teste por 4; se terminar em 00, por 400.",
+    "e": "2028 é divisível por 4."
+   }
+  },
+  {
+   "titulo": "A mesma data no ano seguinte",
+   "conceito": "De um ano para o seguinte, a mesma data anda **1 dia** da semana (ou **2**, se passar por um 29 de fevereiro).",
+   "exemplos": [
+    {
+     "t": "1º/jan/2023 foi domingo (2023 é comum)",
+     "r": "1º/jan/2024: segunda",
+     "ok": true,
+     "porque": "Andou 1 dia."
+    }
+   ],
+   "suaVez": {
+    "p": "Em 2025, 10 de maio caiu num sábado. Em 2026 (sem 29 de fevereiro no meio), 10 de maio cai num:",
+    "o": [
+     "domingo",
+     "sábado",
+     "segunda"
+    ],
+    "c": 0,
+    "dica": "Sem 29 de fevereiro, anda quantos dias?",
+    "e": "Anda 1 dia: domingo."
+   }
+  }
  ]
 }
