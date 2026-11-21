@@ -333,7 +333,7 @@ export function mesclar(a: Estado, b: Estado): Estado {
 
 // Baú da unidade: fica no meio do caminho e abre quando as lições antes dele estão feitas
 export const MOEDAS_BAU = 20;
-export const posicaoBau = (u: number) => Math.ceil(UNIDADES[u].licoes.length / 2) - 1; // abre depois desta posição
+export const posicaoBau = (u: number) => UNIDADES[u].niveis[0].length + UNIDADES[u].niveis[1].length - 1; // baú no fim do intermediário
 export const bauLiberado = (e: Estado, u: number) => UNIDADES[u].licoes.slice(0, posicaoBau(u) + 1).every((i) => e.estrelas[i] != null);
 export function abrirBau(u: number): number {
   const e = normalizar(estado);

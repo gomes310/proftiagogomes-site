@@ -118,7 +118,7 @@ function Simulado({ questoes, onFim }: { questoes: QuestaoProva[]; onFim: () => 
                         <span><strong>Questão {k + 1}</strong> <PilulaTema tema={x.tema} /><small>{ok ? 'Acertou' : resp[x.id] ? 'Você marcou ' + LETRA(resp[x.id]) + ', gabarito ' + LETRA(x.gabarito) : 'Em branco, gabarito ' + LETRA(x.gabarito)}</small></span>
                       </summary>
                       <p className="sim-enun">{x.enunciado}</p>
-                      <VideoResolucao id={x.id} titulo={'questão ' + (k + 1)} />
+                      {x.video && <VideoResolucao id={x.video} titulo={'questão ' + (k + 1)} />}
                     </details>
                   </li>
                 );
@@ -208,7 +208,7 @@ export default function Provas({ irPara, temaInicial }: { irPara: (r: string) =>
     <div className="provas">
       <p className="voltar"><button type="button" className="link" onClick={() => irPara('praticar')}>‹ Praticar</button></p>
       <h1>Questões de prova</h1>
-      <p className="lead">{PROVAS.length} questões de concursos reais, todas resolvidas em vídeo pelo Prof. Tiago Gomes.</p>
+      <p className="lead">{PROVAS.length} questões de concursos reais selecionadas pelo Prof. Tiago Gomes. {PROVAS.filter((x) => x.video).length} delas têm resolução em vídeo.</p>
 
       <div className="prova-stats" role="list">
         <div role="listitem"><b>{resolvidas.length}<small>/{PROVAS.length}</small></b><span>resolvidas</span></div>
@@ -261,7 +261,8 @@ export default function Provas({ irPara, temaInicial }: { irPara: (r: string) =>
               {ganho > 0 && <span className="chip">+{ganho} XP</span>}
             </div>
           )}
-          {revelar && <VideoResolucao id={q.id} titulo={q.tema} />}
+          {revelar && q.video && <VideoResolucao id={q.video} titulo={q.tema} />}
+          {revelar && !q.video && <p className="nota">Gabarito oficial da banca · questão da apostila do Prof. Tiago Gomes.</p>}
           <div className="prova-acoes">
             {revelar
               ? <button type="button" className="btn btn-ok largo" onClick={proxima}>Próxima questão</button>

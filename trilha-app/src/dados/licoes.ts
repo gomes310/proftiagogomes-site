@@ -2,7 +2,7 @@
 import type { Unidade, Licao, Extra } from './tipos';
 export const UNIDADES: Unidade[] = [
     { id: "conjuntos", nome: "Conjuntos", desc: "União, interseção, Venn e contagem", selo: "Mestre dos conjuntos", licoes: [0, 11, 12], niveis: [[0], [11], [12]], temas: [], cor: { p: "#2F5BD3", e: "#1D3A8F", c: "#E3EAFC" } },
-    { id: "proposicoes", nome: "Proposições e conectivos", desc: "A linguagem da lógica", selo: "Lógico de carteirinha", licoes: [1, 13, 14], niveis: [[1], [13], [14]], temas: ["Proposições e conectivos"], cor: { p: "#7442C8", e: "#4E2690", c: "#EEE6FA" } },
+    { id: "proposicoes", nome: "Proposições e conectivos", desc: "A linguagem da lógica", selo: "Lógico de carteirinha", licoes: [1, 24, 25, 13, 26, 14], niveis: [[1, 24], [25, 13], [26, 14]], temas: ["Proposições e conectivos"], cor: { p: "#7442C8", e: "#4E2690", c: "#EEE6FA" } },
     { id: "tabela", nome: "Tabela-verdade", desc: "Valores lógicos, tautologia e contradição", selo: "Rei da tabela", licoes: [2, 4, 15], niveis: [[2], [4], [15]], temas: ["Tabela-verdade", "Tautologia, contradição e contingência"], cor: { p: "#0F766E", e: "#0A4F4A", c: "#DDF3F0" } },
     { id: "equivalencias", nome: "Equivalências e negações", desc: "Dizer o mesmo de outro jeito e negar certo", selo: "Sem pegadinha", licoes: [3, 16, 17], niveis: [[3], [16], [17]], temas: ["Equivalências e negações"], cor: { p: "#B02A6B", e: "#7A1A4A", c: "#FBE4EF" } },
     { id: "argumentos", nome: "Argumentos e diagramas", desc: "Conclusões que valem e as que não valem", selo: "Argumentador", licoes: [5, 6, 18], niveis: [[5], [6], [18]], temas: [], cor: { p: "#4D7C0F", e: "#335309", c: "#EAF3D9" } },
@@ -22,12 +22,13 @@ export const LICOES: Licao[] = [
         { p: 'Com os mesmos A e B, quanto é A ∪ B?', o: ['{3, 4}', '{1, 2, 5}', '{1, 2, 3, 4, 5}', '{1, 2}'], c: 2, e: 'A união junta todos os elementos, sem repetir: 1, 2, 3, 4 e 5.' },
         { p: 'Quantos subconjuntos tem o conjunto {a, b, c}?', o: ['3', '6', '8', '9'], c: 2, e: 'São 3 elementos, então 2³ = 8 subconjuntos (contando o vazio e o próprio conjunto).' }
       ] },
-    { titulo: 'Proposições', teoria: ['Proposição é uma frase declarativa que pode ser julgada verdadeira (V) ou falsa (F).', 'Perguntas, ordens e exclamações não são proposições.', 'Conectivos ligam proposições: e (∧), ou (∨), ou… ou… (⊻), se… então (→), se e somente se (↔). A negação é ~.'],
-      exemplo: '"Brasília é a capital do Brasil" é proposição. "Que horas são?" não é.',
+    { titulo: "O que é proposição", teoria: ["Proposição é uma oração declarativa (tem verbo), afirmativa ou negativa, que admite um valor lógico: verdadeiro (V) ou falso (F).", "Não são proposições: perguntas, exclamações, ordens, frases sem verbo, sentenças abertas e paradoxos.", "Frase falsa ou negativa continua sendo proposição: \"2 × 2 = 6\" é proposição (falsa) e \"Arthur não dirige\" também é."],
+      exemplo: "IBFC 2020: entre \"Façam silêncio.\", \"Que cansaço!\", \"Onde está meu chaveiro?\", \"Um belo exemplo de vida.\" e \"Ainda é cedo.\", só a última é proposição.",
       questoes: [
-        { p: 'Qual destas frases é uma proposição?', o: ['Que horas são?', 'Feche a porta!', 'Brasília é a capital do Brasil.', 'Que dia lindo!'], c: 2, e: 'É a única frase declarativa: dá para dizer que é verdadeira.' },
-        { p: '"Estudo e trabalho" é uma proposição:', o: ['simples', 'composta, com conjunção', 'composta, com disjunção', 'que não é proposição'], c: 1, e: 'São duas proposições ligadas pelo "e", que é a conjunção.' },
-        { p: 'Com p = "chove" e q = "fico em casa", como se escreve "Se chove, então fico em casa"?', o: ['p ∧ q', 'p ∨ q', 'p → q', 'p ↔ q'], c: 2, e: '"Se… então" é a condicional, representada por →.' }
+        { p: "(IBFC 2020) Qual destas é uma proposição?", o: ["Que cansaço!", "Um belo exemplo de vida.", "Façam silêncio.", "Ainda é cedo.", "Onde está meu chaveiro?"], c: 3, e: "\"Ainda é cedo\" é declarativa e pode ser julgada V ou F. As outras são, nesta ordem: ordem, exclamação, pergunta e frase sem verbo." },
+        { p: "(QUADRIX 2020) Julgue: a frase \"Que beleza!\" é um exemplo de proposição.", o: ["Certo", "Errado"], c: 1, e: "É uma exclamação: não dá para julgar como verdadeira ou falsa." },
+        { p: "(FUNDATEC 2020) São exemplos de proposições: I. 2 × 2 = 6. II. X + 2 = 0. III. W + Z = Y.", o: ["Apenas I.", "Apenas II.", "Apenas III.", "Apenas I e III.", "I, II e III."], c: 0, e: "Só a I pode ser julgada (é falsa, mas é proposição). II e III têm letras sem valor: são sentenças abertas." },
+        { p: "(FUNDATEC 2020) Qual destas NÃO é uma proposição?", o: ["Não temos café?", "Argentina fica na América do Sul.", "O número 2 é maior que o número 5.", "Arthur não dirige.", "Carlos não come salada."], c: 0, e: "É uma pergunta. Frases negativas, como \"Arthur não dirige\", continuam sendo proposições." }
       ] },
     { titulo: 'Tabela-verdade', teoria: ['A tabela mostra o valor da proposição composta em todas as combinações de V e F.', 'Com n proposições simples, a tabela tem 2ⁿ linhas.', 'Regra mais cobrada: p → q só é falsa quando p é V e q é F.'],
       exemplo: '"Se 2 + 2 = 5, então a Lua é de queijo" é verdadeira: uma condicional que começa com F é sempre verdadeira.',
@@ -195,6 +196,30 @@ export const LICOES: Licao[] = [
         { p: "Um grupo tem 25 pessoas. No mínimo, quantas nasceram no mesmo dia da semana?", o: ["3", "7", "4", "5"], c: 2, e: "Espalhando ao máximo, 3 por dia somam 21. Sobram 4 pessoas, que repetem algum dia: pelo menos um dia tem 4." },
         { p: "Qual destes anos é bissexto?", o: ["2000", "2100", "1900", "2023"], c: 0, e: "2000 termina em 00 e é divisível por 400, então é bissexto. 1900 e 2100 não são divisíveis por 400, e 2023 não é divisível por 4." },
         { p: "1º de janeiro de 2023 foi um domingo. Em que dia caiu 1º de janeiro de 2024?", o: ["Terça", "Segunda", "Domingo", "Sábado"], c: 1, e: "2023 foi ano comum (365 dias = 52 semanas + 1 dia): a data anda 1 dia, de domingo para segunda." }
+      ] },
+    { titulo: "Princípios da lógica", teoria: ["Princípio da identidade: uma proposição verdadeira é verdadeira; uma proposição falsa é falsa.", "Princípio da não contradição: nenhuma proposição pode ser verdadeira e falsa ao mesmo tempo.", "Princípio do terceiro excluído: uma proposição ou é verdadeira ou é falsa; não há terceira possibilidade. Por isso essa lógica é chamada de bivalente."],
+      exemplo: "Quem diz que a banana é doce e depois diz que a mesma banana é amarga se contradiz: viola o princípio da não contradição (URCA 2018).",
+      questoes: [
+        { p: "(PC-SP 2010) São considerados princípios básicos da lógica bivalente:", o: ["Verdade, identidade e não contradição", "Terceiro excluído, identidade e não contradição", "Terceiro excluído, verdade e identidade", "Primeiro excluído, não contradição e identidade"], c: 1, e: "Os três princípios clássicos são identidade, não contradição e terceiro excluído. \"Princípio da verdade\" e \"primeiro excluído\" não existem." },
+        { p: "Qual princípio diz que uma proposição não pode ser verdadeira e falsa ao mesmo tempo?", o: ["Dedução", "Terceiro excluído", "Não contradição", "Identidade"], c: 2, e: "É o princípio da não contradição: dois valores ao mesmo tempo são impossíveis." },
+        { p: "\"Uma proposição ou é verdadeira ou é falsa, não existindo outra possibilidade.\" Esse é o princípio:", o: ["da identidade", "da dedução", "do terceiro excluído", "da não contradição"], c: 2, e: "O terceiro excluído \"exclui\" qualquer terceiro valor, como \"talvez\"." },
+        { p: "(CEBRASPE 2019) Julgue: a lógica bivalente não obedece ao princípio da não contradição.", o: ["Certo", "Errado"], c: 1, e: "A lógica bivalente obedece, sim: uma proposição não assume dois valores lógicos ao mesmo tempo." }
+      ] },
+    { titulo: "Simples, compostas e conectivos", teoria: ["Proposição simples tem uma única ideia: \"Pedro é alto.\" Composta junta duas ou mais ideias por meio de conectivos: \"Pedro é alto e Maria é turista.\"", "Conectivos: conjunção ∧ (\"e\", \"mas\"), disjunção inclusiva ∨ (\"ou\"), disjunção exclusiva ⊻ (\"ou… ou…\"), condicional → (\"se…, então…\") e bicondicional ↔ (\"se, e somente se\").", "Proposições categóricas usam quantificadores: todo, algum e nenhum. Exemplo: \"Todo nordestino é brasileiro\"."],
+      exemplo: "\"Maria é turista\" é simples. \"Maria e Pedro são turistas\" é composta: equivale a \"Maria é turista e Pedro é turista\".",
+      questoes: [
+        { p: "(FUNDATEC 2019) Qual alternativa apresenta uma proposição simples?", o: ["Maria é turista.", "Qual o sobrenome de Pedro?", "Algum entrevistado é turista americano?", "Maria e Pedro são turistas.", "Maria e Pedro são amigos?"], c: 0, e: "Tem uma ideia só. \"Maria e Pedro são turistas\" esconde duas ideias ligadas por \"e\", e as outras duas são perguntas." },
+        { p: "(IUDS 2019) A proposição \"Ou p, ou q\" refere-se a qual conectivo?", o: ["Conjunção", "Disjunção exclusiva", "Disjunção inclusiva", "Condicional"], c: 1, e: "\"Ou… ou…\" é a disjunção exclusiva (⊻): só uma das duas pode acontecer." },
+        { p: "\"Se o Coren zela pelo bom conceito da profissão, então os usuários serão beneficiados\" tem qual estrutura? (UFMT 2019)", o: ["Disjunção", "Conjunção", "Condicional", "Bicondicional"], c: 2, e: "\"Se…, então…\" é a condicional (→)." },
+        { p: "(PRÓ-MUNICÍPIO 2019) Sentenças: \"Feliz aniversário!\", \"João é cozinheiro.\", \"Maria é nadadora ou veterinária.\", \"José é engraçado.\" e \"Qual a sua idade?\". Quantas são proposições simples?", o: ["2", "3", "1", "4"], c: 0, e: "Simples: \"João é cozinheiro\" e \"José é engraçado\". \"Maria é nadadora ou veterinária\" é composta, e as outras duas não são proposições." }
+      ] },
+    { titulo: "Sentenças abertas e paradoxos", teoria: ["Sentença aberta tem uma variável ou um sujeito indefinido (x, y, \"ele\", \"ela\"): \"x + 1 = 7\" e \"Ela é a melhor esposa do mundo\". Não é proposição.", "Quando a variável recebe valor, a sentença fecha e vira proposição: \"2 + x = 10, para x = 8\" é proposição (verdadeira).", "Paradoxos não podem ser valorados: \"Esta frase é falsa\" e \"Só sei que nada sei\" não são proposições."],
+      exemplo: "\"x > 3\" é aberta. \"x > 3, para x = 5\" é fechada e verdadeira.",
+      questoes: [
+        { p: "Qual destas é uma sentença aberta?", o: ["5 + 4 = 8.", "2 + x = 10, para x = 8.", "Pelé nasceu em Minas Gerais.", "Ele foi o melhor aluno da turma."], c: 3, e: "\"Ele\" não diz quem é. Sem saber o sujeito, não dá para julgar. As outras podem ser julgadas V ou F." },
+        { p: "\"x + y = 10\" é uma proposição?", o: ["Sim: é falsa", "Só quando x for igual a y", "Não: é uma sentença aberta", "Sim: é verdadeira"], c: 2, e: "Sem valores para x e y, não dá para dizer se é verdadeira ou falsa." },
+        { p: "(CEBRASPE 2006) Quantas destas são proposições? I. Esta frase é falsa. II. O TCE/AC tem como função fiscalizar o orçamento do estado do Acre. III. Quantos são os conselheiros do TCE/AC?", o: ["1", "2", "3", "Nenhuma"], c: 0, e: "Só a II. A I é um paradoxo e a III é uma pergunta. Por isso o item \"há exatamente 2 proposições\" foi julgado errado." },
+        { p: "Qual destas é uma proposição?", o: ["x > 3", "Ela é muito inteligente.", "x > 3, para x = 5", "Esta frase é falsa."], c: 2, e: "Com x = 5 a sentença fecha: 5 > 3 é verdadeira." }
       ] }
   ];
 
@@ -202,8 +227,8 @@ export const LICOES: Licao[] = [
 export const EXTRA: Extra[] = [
     { ex: ['A = {1, 2, 3, 4} e B = {3, 4, 5}. Quanto é A ∩ B?', 'A ∩ B = {3, 4}: são os elementos que estão nos dois conjuntos ao mesmo tempo.'],
       vf: { t: '{1, 2} ∪ {2, 3} = {2}', v: false, e: 'União junta tudo: {1, 2, 3}. O {2} seria a interseção.' } },
-    { ex: ['"Feche a porta." Isso é uma proposição?', 'Não. É uma ordem: não dá para dizer se é verdadeira ou falsa.'],
-      vf: { t: '"5 é maior que 8" é uma proposição.', v: true, e: 'É uma frase declarativa. Ela é falsa, mas pode ser julgada, então é proposição.' } },
+    { ex: ["\"Use a máscara.\" É proposição?", "Não. É uma ordem (frase imperativa): não pode ser julgada verdadeira ou falsa."],
+      vf: { t: "\"O Brasil não fica na Europa\" é uma proposição.", v: true, e: "Proposição pode ser afirmativa ou negativa. Essa é declarativa e verdadeira." } },
     { ex: ['Quanto vale "Se 2 + 2 = 5, então a Lua é de queijo"?', 'Verdadeira. A condicional só é falsa no caso V → F, e aqui a primeira parte é F.'],
       vf: { t: 'Com 3 proposições simples, a tabela-verdade tem 6 linhas.', v: false, e: 'São 2³ = 8 linhas.' } },
     { ex: ['Qual é a negação de "Se eu estudo, então eu passo"?', '"Eu estudo e não passo." Mantém a primeira parte, troca por "e" e nega a segunda.'],
@@ -247,6 +272,12 @@ export const EXTRA: Extra[] = [
     { ex: ["Como reconhecer uma sequência intercalada?", "Os termos sobem e descem alternadamente, ou as diferenças não têm padrão. Separe as posições ímpares das pares e olhe cada grupo."],
       vf: { t: "Em 1, 1, 2, 3, 5, 8, o próximo termo é 13.", v: true, e: "5 + 8 = 13." } },
     { ex: ["Quantas cartas tirar de um baralho com 4 naipes para garantir 2 do mesmo naipe?", "5. No pior caso, as 4 primeiras são de naipes diferentes; a 5ª obriga a repetir."],
-      vf: { t: "2100 será um ano bissexto.", v: false, e: "Termina em 00 e não é divisível por 400, então não é bissexto." } }
+      vf: { t: "2100 será um ano bissexto.", v: false, e: "Termina em 00 e não é divisível por 400, então não é bissexto." } },
+    { ex: ["Por que \"Esta frase é falsa\" não é proposição?", "Se fosse verdadeira, seria falsa; se fosse falsa, seria verdadeira. Ela quebra os princípios da lógica: é um paradoxo."],
+      vf: { t: "O princípio do terceiro excluído permite um terceiro valor lógico, como \"talvez\".", v: false, e: "É o contrário: ele exclui qualquer terceira opção. Só existem V e F." } },
+    { ex: ["\"João é professor, mas Pedro é advogado.\" Qual é o conectivo?", "Conjunção (∧). O \"mas\" tem o mesmo valor lógico do \"e\"."],
+      vf: { t: "\"Todo nordestino é brasileiro\" é uma proposição categórica.", v: true, e: "Ela usa o quantificador \"todo\"." } },
+    { ex: ["\"Só sei que nada sei\" é proposição?", "Não. É um paradoxo: se fosse verdade que a pessoa nada sabe, ela não saberia nem isso."],
+      vf: { t: "\"2 + x = 10, para x = 8\" é uma sentença fechada.", v: true, e: "A variável recebeu valor: 2 + 8 = 10, que é verdadeira." } }
   ];
 

@@ -1,0 +1,4096 @@
+{
+"fonte": "Apostila \"Proposições - 181 questões com gabarito\", Prof. Tiago Gomes",
+"questoes": [
+{
+"id": "prop-001",
+"banca": "FUNDATEC",
+"ano": 2021,
+"orgao": "CARRIS",
+"tema": "Proposições e conectivos",
+"enunciado": "Dentre as sentenças abaixo, aquela que podemos afirmar ser uma proposição lógica é:",
+"alternativas": [
+[
+"a",
+"A filha de Telma é bonita."
+],
+[
+"b",
+"João é pai de Maria?"
+],
+[
+"c",
+"Porto Alegre é muito longe."
+],
+[
+"d",
+"Isso é verdade?"
+],
+[
+"e",
+"Marcio é mais alto do que Júlio."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-002",
+"banca": "IBFC",
+"ano": 2020,
+"orgao": "CBM BA",
+"tema": "Proposições e conectivos",
+"enunciado": "O conceito mais fundamental de lógica é a proposição. Dentre as afirmações abaixo, assinale a alternativa correta que apresenta uma proposição.",
+"alternativas": [
+[
+"a",
+"Façam silêncio."
+],
+[
+"b",
+"Que cansaço!"
+],
+[
+"c",
+"Onde está meu chaveiro?"
+],
+[
+"d",
+"Um belo exemplo de vida."
+],
+[
+"e",
+"Ainda é cedo."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-003",
+"banca": "QUADRIX",
+"ano": 2020,
+"orgao": "CREFONO 1",
+"tema": "Proposições e conectivos",
+"enunciado": "Sabendo que p, q e r são três proposições, julgue o item. A frase “Que beleza!” é um exemplo de proposição.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-004",
+"banca": "IBADE",
+"ano": 2020,
+"orgao": "IPVV",
+"tema": "Proposições e conectivos",
+"enunciado": "Qual é a proposição INCORRETA?",
+"alternativas": [
+[
+"a",
+"Ou o galo canta ou o cachorro late"
+],
+[
+"b",
+"Tanto o galo canta como o cachorro late"
+],
+[
+"c",
+"O cachorro late quando o galo canta"
+],
+[
+"d",
+"O galo canta independentemente que o cachorro lata"
+],
+[
+"e",
+"Ou galo canta ou o cachorro não late"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-005",
+"banca": "IBFC",
+"ano": 2020,
+"orgao": "EBSERH",
+"tema": "Proposições e conectivos",
+"enunciado": "Analise as sentenças a seguir.\nI. Marie Curie foi a primeira mulher a ganhar um prêmio Nobel.\nII. Os estudos sobre radioatividade são de extrema importância!\nIII. Como os estudos sobre radioatividade são realizados?\nIV. Estude sempre para ampliar os conhecimentos.\nDe acordo com as sentenças apresentadas e sabendo que a uma proposição pode-se atribuir um valor lógico, assinale a alternativa incorreta.",
+"alternativas": [
+[
+"a",
+"A sentença I trata de uma proposição"
+],
+[
+"b",
+"As sentenças II, III e IV não possuem valor lógico atribuível"
+],
+[
+"c",
+"A sentença II não é uma proposição"
+],
+[
+"d",
+"A sentença III é uma sentença interrogativa"
+],
+[
+"e",
+"A sentença IV é uma proposição"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-008",
+"banca": "FUNDATEC",
+"ano": 2020,
+"orgao": "Pref Imbé",
+"tema": "Proposições e conectivos",
+"enunciado": "Chama-se proposição as afirmativas que declaram fatos a que se pode atribuir um valor lógico verdadeiro ou falso e necessitam possuir um sujeito e um predicado. Considerando as sentenças abaixo, assinale a única alternativa que expressa uma proposição.",
+"alternativas": [
+[
+"a",
+"O prato de vidro."
+],
+[
+"b",
+"Boa noite!"
+],
+[
+"c",
+"Onde está a caneta?"
+],
+[
+"d",
+"Boa prova!"
+],
+[
+"e",
+"O céu é azul."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-009",
+"banca": "FUNDATEC",
+"ano": 2020,
+"orgao": "Pref Sananduva",
+"tema": "Proposições e conectivos",
+"enunciado": "Trata-se de um exemplo de proposição simples a sentença mostrada na alternativa:",
+"alternativas": [
+[
+"a",
+"Qual é a atual estação do ano?"
+],
+[
+"b",
+"Basta!"
+],
+[
+"c",
+"João estudou para a prova."
+],
+[
+"d",
+"Ei, você está bem hoje?"
+],
+[
+"e",
+"“óin....”."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-010",
+"banca": "QUADRIX",
+"ano": 2020,
+"orgao": "CRESS 26 (AC)",
+"tema": "Proposições e conectivos",
+"enunciado": "Julgue o item. “É preciso saber viver!” é uma proposição exclamativa.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-011",
+"banca": "IDIB",
+"ano": 2020,
+"orgao": "Pref Colinas do TO",
+"tema": "Proposições e conectivos",
+"enunciado": "As proposições são ditas orações quando apresentam sujeito e predicado.\nAssinale qual alternativa apresenta somente proposições a partir da seguinte relação:\n1. Cinco menos dois é igual a quatro.\n2. Hebe é francesa.\n3. O técnico de Handball.\n4. O nascimento de André.\n5. O triplo de um algarismo.\n6. O dobro de 7 é maior do que 12.",
+"alternativas": [
+[
+"a",
+"1, 2 e 6."
+],
+[
+"b",
+"2, 3 e 4."
+],
+[
+"c",
+"3, 4 e 5."
+],
+[
+"d",
+"1, 2, 5 e 6."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-012",
+"banca": "FUNDATEC",
+"ano": 2020,
+"orgao": "CM Imbé",
+"tema": "Proposições e conectivos",
+"enunciado": "Assinale a alternativa que indica uma proposição simples.",
+"alternativas": [
+[
+"a",
+"Tire sua folga."
+],
+[
+"b",
+"O seu celular tem bateria?"
+],
+[
+"c",
+"O céu fica roxo após as 18 horas."
+],
+[
+"d",
+"Pedro é mais alto que Flávio?"
+],
+[
+"e",
+"Coloque a máscara."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-013",
+"banca": "FUNDATEC",
+"ano": 2020,
+"orgao": "CIGA SC",
+"tema": "Proposições e conectivos",
+"enunciado": "A proposição p equivale à “Ana não dirige moto” e a proposição q equivale à “Heitor administra o mercado”. Assinale a alternativa que apresenta corretamente ~p e ~q, nesta ordem.",
+"alternativas": [
+[
+"a",
+"“Ana dirige apenas carro”; “Heitor não administra o mercado”."
+],
+[
+"b",
+"“Ana dirige moto”; “Heitor administra a farmácia”."
+],
+[
+"c",
+"“Ana administra o mercado”; “Heitor não dirige moto”."
+],
+[
+"d",
+"“Ana dirige moto”; “Heitor não administra o mercado”."
+],
+[
+"e",
+"“Ana não administra o mercado”; “Heitor dirige moto”."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-014",
+"banca": "QUADRIX",
+"ano": 2019,
+"orgao": "FDSBC",
+"tema": "Proposições e conectivos",
+"enunciado": "Das frases a seguir, a única que representa uma proposição é:",
+"alternativas": [
+[
+"a",
+"Ronaldo, venha até aqui, por favor."
+],
+[
+"b",
+"Que tarde agradável!"
+],
+[
+"c",
+"Sim."
+],
+[
+"d",
+"Maria preparou os documentos."
+],
+[
+"e",
+"Onde estão os documentos?"
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-015",
+"banca": "INAZ do Pará",
+"ano": 2019,
+"orgao": "CORE SP",
+"tema": "Proposições e conectivos",
+"enunciado": "Qual das sentenças abaixo é uma sentença aberta?",
+"alternativas": [
+[
+"a",
+"5+4=8."
+],
+[
+"b",
+"O jogo foi bom."
+],
+[
+"c",
+"Pelé é considerado o rei do futebol no Brasil."
+],
+[
+"d",
+"Que dia ensolarado."
+],
+[
+"e",
+"2 + x = 10 para x = 8."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-019",
+"banca": "CEBRASPE",
+"ano": 2019,
+"orgao": "PGE PE",
+"tema": "Proposições e conectivos",
+"enunciado": "Acerca da lógica sentencial, julgue o item que se segue. A lógica bivalente não obedece ao princípio da não contradição, segundo o qual uma proposição não assume simultaneamente valores lógicos distintos.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-021",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "GRAMADOTUR",
+"tema": "Proposições e conectivos",
+"enunciado": "A alternativa que apresenta uma sentença aberta é:",
+"alternativas": [
+[
+"a",
+"Porto Alegre é capital da região sul com surto de sarampo ou catapora."
+],
+[
+"b",
+"Alguma cidade da região sul do Brasil está com surto de sarampo."
+],
+[
+"c",
+"Antônio é o engenheiro responsável pelo projeto de reforma do posto de saúde do município de Gramado."
+],
+[
+"d",
+"Carlos e Antônio são os farmacêuticos responsáveis pela organização do estoque na farmácia do posto de saúde do município de Gramado."
+],
+[
+"e",
+"Gramado tem cobertura total de vacinação de sarampo."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-022",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Gramado",
+"tema": "Proposições e conectivos",
+"enunciado": "A alternativa que apresenta uma proposição simples é:",
+"alternativas": [
+[
+"a",
+"Maria e Pedro são turistas."
+],
+[
+"b",
+"Qual o sobrenome de Pedro?"
+],
+[
+"c",
+"Maria e Pedro são amigos?"
+],
+[
+"d",
+"Algum entrevistado é turista americano?"
+],
+[
+"e",
+"Maria é turista."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-023",
+"banca": "Instituto AOCP",
+"ano": 2019,
+"orgao": "UFPB",
+"tema": "Proposições e conectivos",
+"enunciado": "Em relação às proposições utilizadas na lógica sentencial ou proposicional, informe se é verdadeiro (V) ou falso (F) o que se afirma a seguir e assinale a alternativa com a sequência correta. ( ) Toda proposição é uma oração, com sujeito e predicado. ( ) Toda proposição é uma oração declarativa. ( ) Toda proposição tem um e somente um dos valores lógicos: ou é verdadeira (V) ou é falsa (F), não ambas.",
+"alternativas": [
+[
+"a",
+"V – F – V."
+],
+[
+"b",
+"V – V – F."
+],
+[
+"c",
+"F – F – V."
+],
+[
+"d",
+"F – V – F."
+],
+[
+"e",
+"V – V – V."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-024",
+"banca": "VUNESP",
+"ano": 2019,
+"orgao": "Pref GRU",
+"tema": "Proposições e conectivos",
+"enunciado": "Dentre as sentenças a seguir, aquela que é uma sentença aberta é",
+"alternativas": [
+[
+"a",
+" 3 ⋅ x + 4– x–3–2 ⋅ x = 0"
+],
+[
+"b",
+" 7 + 3 = 11"
+],
+[
+"c",
+" 0 ⋅ x =5"
+],
+[
+"d",
+" 13 ⋅ x = 7"
+],
+[
+"e",
+" 43– 1 = 42"
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-025",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Tapejara",
+"tema": "Proposições e conectivos",
+"enunciado": "Um exemplo de proposição simples é mostrado na alternativa:",
+"alternativas": [
+[
+"a",
+"Qual o seu nome?"
+],
+[
+"b",
+"Affff!!!"
+],
+[
+"c",
+"Snif...Snif..."
+],
+[
+"d",
+"Faça silêncio."
+],
+[
+"e",
+"Dez é um número natural."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-026",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Ronda Alta",
+"tema": "Proposições e conectivos",
+"enunciado": "A alternativa que apresenta um exemplo de proposição é:",
+"alternativas": [
+[
+"a",
+"“Continue a prova do concurso público!”"
+],
+[
+"b",
+"“Pare!”"
+],
+[
+"c",
+"“Afê, quanta besteira!”"
+],
+[
+"d",
+"“Qual o seu nome?”"
+],
+[
+"e",
+"“Antônio mora em Ronda Alta.”"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-027",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Ronda Alta",
+"tema": "Proposições e conectivos",
+"enunciado": "A alternativa que mostra um exemplo de proposição simples é:",
+"alternativas": [
+[
+"a",
+"Chove e faz frio."
+],
+[
+"b",
+"É verão e está quente."
+],
+[
+"c",
+"Por que seu nome é estranho?"
+],
+[
+"d",
+"Se chove, então faz calor."
+],
+[
+"e",
+"Pedro é alto."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-028",
+"banca": "IBGP",
+"ano": 2019,
+"orgao": "Pref Jacutinga",
+"tema": "Proposições e conectivos",
+"enunciado": "Assinale a alternativa que representa uma sentença ABERTA:",
+"alternativas": [
+[
+"a",
+"4 + 4 = 8."
+],
+[
+"b",
+"Carlos possui 5 filhos."
+],
+[
+"c",
+"Clarice é uma excelente professora de História."
+],
+[
+"d",
+"Ela é uma ótima profissional."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-029",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref S das Missões",
+"tema": "Proposições e conectivos",
+"enunciado": "Um exemplo de proposição composta é apresentado na alternativa:",
+"alternativas": [
+[
+"a",
+"Maria é inteligente e Pedro é estudioso."
+],
+[
+"b",
+"Maria é inteligente."
+],
+[
+"c",
+"Pedro é estudioso."
+],
+[
+"d",
+"Qual o seu nome?"
+],
+[
+"e",
+"Meu nome é Rafael."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-030",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Água Santa",
+"tema": "Proposições e conectivos",
+"enunciado": "Sendo a proposição composta p proposição composta é: q, em que “p” é “Nuvens carregadas se formam com grande condensação”; e “q” é “chuva com raios é tempestade”, a leitura da",
+"alternativas": [
+[
+"a",
+"Se nuvens carregadas se formam com grande condensação então chuva com raios é tempestade."
+],
+[
+"b",
+"Nuvens carregadas se formam com grande condensação ou chuva com raios é tempestade."
+],
+[
+"c",
+"Nuvens carregadas se formam com grande condensação e chuva com raios é tempestade."
+],
+[
+"d",
+"Nuvens carregadas se formam com grande condensação se, e somente se, chuva com raios é tempestade."
+],
+[
+"e",
+"Ou nuvens carregadas se formam com grande condensação ou chuva com raios é tempestade."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-031",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Água Santa",
+"tema": "Proposições e conectivos",
+"enunciado": "Proposições são afirmativas que se pode valorar por verdadeiro ou falso. Dentre as alternativas abaixo, assinale a única que não é proposição.",
+"alternativas": [
+[
+"a",
+"O céu é vermelho."
+],
+[
+"b",
+"Motos possuem três rodas."
+],
+[
+"c",
+"Faça a prova com calma!"
+],
+[
+"d",
+"O alfabeto possui 23 letras."
+],
+[
+"e",
+"Destros usam a mão direita."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-032",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Porto Mauá",
+"tema": "Proposições e conectivos",
+"enunciado": "A negação da proposição “Porto Mauá fica no Rio Grande do Sul” é:",
+"alternativas": [
+[
+"a",
+"Porto Mauá fica no Paraná."
+],
+[
+"b",
+"Porto Mauá não fica no Rio Grande do Sul."
+],
+[
+"c",
+"Não é Porto Mauá se fica no Rio Grande do Sul."
+],
+[
+"d",
+"Porto Mauá não fica em Santa Catarina."
+],
+[
+"e",
+"Não é Porto Mauá se não fica no Rio Grande do Sul."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-033",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Quaraí",
+"tema": "Proposições e conectivos",
+"enunciado": "Proposições são afirmativas que podem ser valoradas com verdadeiro ou falso. Qual das opções abaixo é uma proposição?",
+"alternativas": [
+[
+"a",
+"Música clássica não prejudica o estudo?"
+],
+[
+"b",
+"Faça silêncio para favorecer o estudo!"
+],
+[
+"c",
+"Que o silêncio não prejudique a concentração."
+],
+[
+"d",
+"Música clássica não prejudica a concentração."
+],
+[
+"e",
+"O silêncio foi feito para o estudo?"
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-034",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Campo Bom",
+"tema": "Proposições e conectivos",
+"enunciado": "A alternativa que mostra um exemplo de proposição simples, ou seja, uma sentença que tem valor lógico verdadeiro ou falso é:",
+"alternativas": [
+[
+"a",
+"“Ahhhhh!”"
+],
+[
+"b",
+"“Uhuuuu!”"
+],
+[
+"c",
+"“João é alto.”"
+],
+[
+"d",
+"“Qual o seu nome?”"
+],
+[
+"e",
+"“Qual o seu signo?”"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-035",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Maçambará",
+"tema": "Proposições e conectivos",
+"enunciado": "Das alternativas abaixo, todas são preposições simples, EXCETO:",
+"alternativas": [
+[
+"a",
+"João é padeiro."
+],
+[
+"b",
+"Maria joga basquete."
+],
+[
+"c",
+"Vá até a saída."
+],
+[
+"d",
+"Dourado é a cor do sucesso."
+],
+[
+"e",
+"Partidas de futebol duram 34 minutos."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-036",
+"banca": "CEBRASPE",
+"ano": 2019,
+"orgao": "TJ PR",
+"tema": "Proposições e conectivos",
+"enunciado": "Considere as seguintes sentenças.\nI. A ouvidoria da justiça recebe críticas e reclamações relacionadas ao Poder Judiciário do estado.\nII. Nenhuma mulher exerceu a presidência do Brasil até o ano 2018.\nIII. Onde serão alocados os candidatos aprovados no concurso para técnico judiciário do TJ/PR?\nAssinale a opção correta.",
+"alternativas": [
+[
+"a",
+"Apenas a sentença I é proposição."
+],
+[
+"b",
+"Apenas a sentença III é proposição."
+],
+[
+"c",
+"Apenas as sentenças I e II são proposições."
+],
+[
+"d",
+"Apenas as sentenças II e III são proposições."
+],
+[
+"e",
+"Todas as sentenças são proposições."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-037",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref N Horizonte",
+"tema": "Proposições e conectivos",
+"enunciado": "Proposição é uma sentença que podemos valorar por verdadeiro ou falso; caso não seja possível realizar essa valoração, não é uma proposição. Sendo assim, assinale a alternativa que apresenta uma proposição.",
+"alternativas": [
+[
+"a",
+"Escreva direito!"
+],
+[
+"b",
+"Você gosta de azul?"
+],
+[
+"c",
+"Boa sorte!"
+],
+[
+"d",
+"Vamos ao cinema."
+],
+[
+"e",
+"O cachorro mia alto."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-038",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref N Horizonte",
+"tema": "Proposições e conectivos",
+"enunciado": "Proposições são sentenças que se pode valorar com verdadeiro ou falso. Entre as alternativas abaixo, assinale a única que NÃO é proposição.",
+"alternativas": [
+[
+"a",
+"Eletricidade é perigosa."
+],
+[
+"b",
+"Motores não funcionam sem óleo lubrificante."
+],
+[
+"c",
+"Conserte o ar condicionado do carro!"
+],
+[
+"d",
+"Lâmpadas esquentam durante seu uso."
+],
+[
+"e",
+"Gasolina é combustível de veículos automotores."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-039",
+"banca": "IUDS",
+"ano": 2019,
+"orgao": "CREA MG",
+"tema": "Proposições e conectivos",
+"enunciado": "A proposição \"Ou p, ou q\" refere-se a qual conectivo lógico:",
+"alternativas": [
+[
+"a",
+"Disjunção inclusiva"
+],
+[
+"b",
+"Conjunção"
+],
+[
+"c",
+"Disjunção exclusiva"
+],
+[
+"d",
+"Condicional"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-040",
+"banca": "PRÓ-MUNICÍPIO",
+"ano": 2019,
+"orgao": "Pref Massapê",
+"tema": "Proposições e conectivos",
+"enunciado": "Observe as sentenças\nI. “Feliz aniversário!”\nII. “João é cozinheiro.”\nIII. “Maria é nadadora ou veterinária.”\nIV. “O aluno é engraçado.”\nV. “Qual a sua idade?” Sobre as sentenças marque a alternativa correta.",
+"alternativas": [
+[
+"a",
+"Há 2 proposições simples, 1 proposição composta e 2 sentenças que não podem ser consideradas proposições;"
+],
+[
+"b",
+"Há 3 proposições simples, 1 proposição composta e 1 sentença que não pode ser considerada proposição;"
+],
+[
+"c",
+"Há 2 proposições simples, 2 proposições compostas e 1 sentença que não pode ser considerada proposição;"
+],
+[
+"d",
+"Há 1 proposição simples, 2 proposições compostas e 2 sentenças que não podem ser consideradas proposições."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-041",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Vila Lângaro",
+"tema": "Proposições e conectivos",
+"enunciado": "Analise as seguintes assertivas e assinale a única proposição lógica:",
+"alternativas": [
+[
+"a",
+"O telhado é roxo."
+],
+[
+"b",
+"Queremos pintar o telhado de roxo."
+],
+[
+"c",
+"Pinte o telhado de roxo."
+],
+[
+"d",
+"Roxo é uma cor primária?"
+],
+[
+"e",
+"A tinta roxa tem cheiro forte?"
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-042",
+"banca": "IDIB",
+"ano": 2019,
+"orgao": "CREMERJ",
+"tema": "Proposições e conectivos",
+"enunciado": "Proposição é um termo muito usado em lógica para descrever o conteúdo de afirmativas. Analise e julgue as frases a seguir:\nI. Aníbal é médico ou Bernardo é engenheiro.\nII. Que lindo dia!\nIII. Todos os jogadores de futebol receberam medalha.\nIV. Ele é advogado.\nCom relação a proposições, assinale a alternativa correta:",
+"alternativas": [
+[
+"a",
+"Apenas os itens I e III são proposições."
+],
+[
+"b",
+"Apenas os itens I, III e IV são proposições."
+],
+[
+"c",
+"Apenas os itens III e IV são proposições."
+],
+[
+"d",
+"Apenas os itens II e IV são proposições."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-043",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref P das Missões",
+"tema": "Proposições e conectivos",
+"enunciado": "Lista de símbolos: ⇒ Condicional ⇔ Bicondicional ∧ Conector “e” ∨ Conector “ou” ⊻ Conector “ou” exclusivo ¬ Negação da proposição Um exemplo de proposição simples é apresentado na alternativa:",
+"alternativas": [
+[
+"a",
+"Qual o seu nome?"
+],
+[
+"b",
+"Se é verão, então está quente."
+],
+[
+"c",
+"Chove se e somente se é inverno."
+],
+[
+"d",
+"Marcos é um rapaz alto e Maria é uma moça baixa."
+],
+[
+"e",
+"Sete é um número par."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-044",
+"banca": "IDECAN",
+"ano": 2019,
+"orgao": "IF Baiano",
+"tema": "Proposições e conectivos",
+"enunciado": "Sabendo que proposição é o termo usado em lógica para descrever o conteúdo de orações declarativas que podem ser valoradas como verdadeiro ou falso, assinale a alternativa que indique uma proposição lógica.",
+"alternativas": [
+[
+"a",
+"O céu é azul."
+],
+[
+"b",
+"Que dia será realizada a prova?"
+],
+[
+"c",
+"O nome dos jogadores."
+],
+[
+"d",
+"O quadrado de um número."
+],
+[
+"e",
+"Ser ou não ser? Eis a questão!"
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-045",
+"banca": "IBFC",
+"ano": 2019,
+"orgao": "FSA",
+"tema": "Proposições e conectivos",
+"enunciado": "Proposições são sentenças declarativas e podem ser expressadas por palavras ou símbolos.\nNesse sentido, leia as sentenças a seguir.\nI. O auxiliar administrativo controla entrada/ saída de documentos.\nII. O auxiliar de almoxarifado controla os estoques e o auxiliar de compras controla os pedidos.\nIII. O auxiliar de compras é responsável por lançar notas no sistema?\nAssinale a alternativa incorreta.",
+"alternativas": [
+[
+"a",
+"A proposição I é uma proposição simples"
+],
+[
+"b",
+"A proposição II é uma proposição composta"
+],
+[
+"c",
+"A proposição III não é uma proposição"
+],
+[
+"d",
+"A proposição III é uma proposição interrogativa"
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-046",
+"banca": "UFMT",
+"ano": 2019,
+"orgao": "COREN MT",
+"tema": "Proposições e conectivos",
+"enunciado": "Assinale a alternativa que apresenta uma proposição.",
+"alternativas": [
+[
+"a",
+"Vamos combater o sarampo!"
+],
+[
+"b",
+"O Coren-MT é uma autarquia pública federal, autônoma, vinculada ao Poder Executivo?"
+],
+[
+"c",
+"O Conselho Regional de Enfermagem de Mato Grosso (COREN/MT) foi criado em 03/09/1975."
+],
+[
+"d",
+"Enfermeira, aplique a vacina."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-047",
+"banca": "UFMT",
+"ano": 2019,
+"orgao": "COREN MT",
+"tema": "Proposições e conectivos",
+"enunciado": "Considere as sentenças.\nI. Se o COREN zela pelo bom conceito da profissão, então os usuários do sistema de saúde serão beneficiados.\nII.O COREN mantém o registro dos profissionais com exercício na respectiva jurisdição se, e somente se, os profissionais da enfermagem estão habilitados para o exercício da profissão.\nIII.O Conselheiro mais antigo faz parte do Quadro I (Enfermeiros) ou o Conselheiro mais novo faz parte do Quadro II (Técnicos de Enfermagem).\nIV- Os profissionais de Enfermagem com o devido registro estão aptos a exercer a profissão e o COREN expede a carteira profissional. As quatro sentenças apresentam, respectivamente, as seguintes estruturas lógicas:",
+"alternativas": [
+[
+"a",
+"Bicondicional, disjunção, conjunção e condicional."
+],
+[
+"b",
+"Conjunção, condicional, bicondicional e disjunção."
+],
+[
+"c",
+"Disjunção, conjunção, condicional e bicondicional."
+],
+[
+"d",
+"Condicional, bicondicional, disjunção e conjunção."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-048",
+"banca": "IBFC",
+"ano": 2019,
+"orgao": "Pref Candeias",
+"tema": "Proposições e conectivos",
+"enunciado": "Sabe-se que Proposição é toda sentença que pode ser valorada como verdadeira ou falsa podendo ser expressada em palavras ou símbolos. Leia as afirmações a seguir.\nI. A gratidão gera felicidade.\nII. A gratidão gera felicidade e paz interior.\nIII. A gratidão não gera felicidade.\nIV. A gratidão gera felicidade? Com base nessas afirmativas, assinale a alternativa incorreta.",
+"alternativas": [
+[
+"a",
+"A proposição I é uma proposição simples"
+],
+[
+"b",
+"A proposição II é uma proposição composta"
+],
+[
+"c",
+"A proposição III é a negação da proposição I"
+],
+[
+"d",
+"A proposição IV é uma proposição interrogativa"
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-049",
+"banca": "IBFC",
+"ano": 2019,
+"orgao": "Pref Candeias",
+"tema": "Proposições e conectivos",
+"enunciado": "Analise as afirmativas abaixo, de valores Verdadeiro (V) ou Falso (F): ( ) Na frase “Bianca adora colecionar selos”, existem duas proposições simples. ( ) As proposições que compõem uma proposição composta são chamadas de proposição contingencial. ( ) Quando duas proposições simples são interligadas por “ou” a proposição composta será chamada de conjunção. Assinale a alternativa que apresente a sequência correta de cima para baixo.",
+"alternativas": [
+[
+"a",
+"V, V, V"
+],
+[
+"b",
+"V, V, F"
+],
+[
+"c",
+"F, F, F"
+],
+[
+"d",
+"F, F, V"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-050",
+"banca": "IBFC",
+"ano": 2019,
+"orgao": "Pref Candeias",
+"tema": "Proposições e conectivos",
+"enunciado": "Analise as afirmativas abaixo, de valores Verdadeiro (V) ou Falso (F): ( ) Na frase “Bianca procura ter uma alimentação saudável e pratica Yoga”, existem duas proposições simples. ( ) As proposições que compõem uma proposição composta são chamadas de proposições simples. ( ) Quando duas proposições simples são interligadas por “e”, trata-se de uma conjunção. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+"alternativas": [
+[
+"a",
+"V, V, V"
+],
+[
+"b",
+"V, V, F"
+],
+[
+"c",
+"F, F, F"
+],
+[
+"d",
+"F, V, V"
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-051",
+"banca": "Instituto AOCP",
+"ano": 2019,
+"orgao": "CM C Sto Agostinho",
+"tema": "Proposições e conectivos",
+"enunciado": "Em questões de raciocínio lógico, são utilizadas proposições, que são frases que podem ser julgadas como verdadeiras (V) ou falsas (F), mas não como ambas. Assim, assinale a alternativa que apresenta uma proposição.",
+"alternativas": [
+[
+"a",
+"Redija um texto."
+],
+[
+"b",
+"A soma das idades de duas pessoas."
+],
+[
+"c",
+"Neymar Jr. fez 10 gols para o time do Barcelona."
+],
+[
+"d",
+"Qual o percentual de aumento no salário mínimo nos últimos dois anos?"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-052",
+"banca": "Instituto AOCP",
+"ano": 2019,
+"orgao": "CM C Sto Agostinho",
+"tema": "Proposições e conectivos",
+"enunciado": "Em questões de raciocínio lógico, utilizam-se sentenças, que são expressões de um pensamento completo, compostas por um sujeito e por um predicado. Por exemplo, “Joaquim trabalhou ontem no mercado” é uma sentença. Entre os vários tipos de sentenças, existe a “Imperativa”, quando há uma mensagem de ordem. Considerando essa informação, assinale a alternativa que apresenta uma sentença do tipo imperativa.",
+"alternativas": [
+[
+"a",
+"O dia está lindo!"
+],
+[
+"b",
+"O computador não liga."
+],
+[
+"c",
+"Irá chover no próximo domingo?"
+],
+[
+"d",
+"Resolva sua prova com atenção."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-053",
+"banca": "Instituto AOCP",
+"ano": 2019,
+"orgao": "CM C Sto Agostinho",
+"tema": "Proposições e conectivos",
+"enunciado": "Em questões de raciocínio lógico, é comum termos expressões e frases nas quais não conseguimos identificar um sujeito e nem um predicado. Por exemplo, “Quarenta e nove décimos” é uma expressão. Nesse sentido, assinale a alternativa que NÃO apresenta uma expressão.",
+"alternativas": [
+[
+"a",
+"O dobro de um número."
+],
+[
+"b",
+"Vinte e cinco metros e 30 centímetros."
+],
+[
+"c",
+"A altura de Pedro é igual a 1,80m."
+],
+[
+"d",
+"Uma dúzia e meia."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-054",
+"banca": "Instituto AOCP",
+"ano": 2019,
+"orgao": "Pref Umuarama",
+"tema": "Proposições e conectivos",
+"enunciado": "Em raciocínio lógico, denomina-se proposição ou sentença toda oração declarativa que pode ser classificada ou como “verdadeira” ou como “falsa”. Considere as seguintes proposições envolvendo operações e comparações entre números naturais: p: “Oito é diferente de nove.”; q: “quatro é menor que oito.”; r: “Quinze é o quádruplo de três.”; s: “O triplo de nove é igual a vinte e sete.”. Entre essas proposições, a única classificada como “falsa” no conjunto dos números naturais é a proposição",
+"alternativas": [
+[
+"a",
+"s."
+],
+[
+"b",
+"r."
+],
+[
+"c",
+"q."
+],
+[
+"d",
+"p."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-055",
+"banca": "Instituto AOCP",
+"ano": 2019,
+"orgao": "Pref Umuarama",
+"tema": "Proposições e conectivos",
+"enunciado": "Em raciocínio lógico, dadas duas proposições a e b, forma-se uma proposição composta por a com b acrescentando o conectivo “ou” por “a ou b” (“a ∨b”), denominada disjunção das proposições a e b. Considere: (“∨”)entre as duas, representada a: “A altura de Abel é igual a 1,83 m.”; b: “A massa de Abel é inferior a 70 Kg.”. Com base nessas informações, como a disjunção “a ˅b” pode ser descrita?",
+"alternativas": [
+[
+"a",
+"“Se a altura de Abel é igual a 1,83m, então necessariamente a sua massa é igual a 70 Kg.”"
+],
+[
+"b",
+"“Se a massa de Abel é superior a 70 Kg, então necessariamente sua altura é inferior a 1,83m.”"
+],
+[
+"c",
+"“A altura de Abel é igual a 1,83m se, e somente se, sua massa for inferior a 70 Kg.”"
+],
+[
+"d",
+"“A altura de Abel é igual a 1,83 m ou a massa de Abel é inferior a 70 Kg.”"
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-056",
+"banca": "GUALIMP",
+"ano": 2019,
+"orgao": "Pref Porciúncula",
+"tema": "Proposições e conectivos",
+"enunciado": "Analise as proposições a seguir e marque a alternativa correta correspondente:\nI - “8 + 5 = 13” é um exemplo de uma sentença aberta.\nII - Na sentença “17 + x = 10”, o conjunto verdade pode ser definido como V = {-7}.",
+"alternativas": [
+[
+"a",
+"Ambas as proposições estão erradas."
+],
+[
+"b",
+"Ambas as proposições estão corretas."
+],
+[
+"c",
+"Somente a proposição I está correta."
+],
+[
+"d",
+"Somente a proposição II está correta."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-057",
+"banca": "DIRECTA",
+"ano": 2019,
+"orgao": "CM Cosmópolis",
+"tema": "Proposições e conectivos",
+"enunciado": "Em raciocínio lógico é dito que proposição é toda aquela sentença que se pode valorar por verdadeiro ou falso. Das alternativas abaixo, assinale a única que não é uma proposição.",
+"alternativas": [
+[
+"a",
+"Bolas de futebol tem 32 gomos de couro."
+],
+[
+"b",
+"Bolas de vôlei tem 56 gomos de couro."
+],
+[
+"c",
+"Compre uma bola de basquete com gomos."
+],
+[
+"d",
+"Tênis é jogado de trios."
+],
+[
+"e",
+"Bola para jogar golfe é de plástico."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-058",
+"banca": "QUADRIX",
+"ano": 2019,
+"orgao": "CRN 2 (RS)",
+"tema": "Proposições e conectivos",
+"enunciado": "O ninja não tem regras estritas sobre honra e combate. Caio é um samurai. Quem é samurai tem regras estritas sobre honra e combate. Admitindo a veracidade das informações, julgue o item a seguir. As frases “Caio é muito habilidoso com a espada!” e “Você é um ninja?” não são exemplos de proposição.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-059",
+"banca": "FUNDATEC",
+"ano": 2019,
+"orgao": "Pref Coronel Bicaco",
+"tema": "Proposições e conectivos",
+"enunciado": "Lista de símbolos: → Condicional ↔ Bicondicional ∧ Conector “e” ∨ Conector “ou” ⊻ Conector “ou” exclusivo Negação da proposição Das alternativas abaixo, assinale a sentença classificada corretamente como uma proposição simples.",
+"alternativas": [
+[
+"a",
+"Paulo é agente administrativo e Lucas é agente comunitário de saúde."
+],
+[
+"b",
+"Ele é fiscal ambiental."
+],
+[
+"c",
+"Por que Joana não passou no concurso?"
+],
+[
+"d",
+"Boa prova!"
+],
+[
+"e",
+"Maria é auxiliar em saúde bucal."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-060",
+"banca": "Com. Org. (IFSertão)",
+"ano": 2019,
+"orgao": "IF Sertão PE",
+"tema": "Proposições e conectivos",
+"enunciado": "Nas estruturas lógico-matemáticas, uma proposição é definida como “Um conjunto de palavras ou símbolos que exprimem um pensamento de sentido completo”. Indique a alternativa que NÃO apresenta uma proposição, segundo a definição dada.",
+"alternativas": [
+[
+"a",
+"A terra é plana."
+],
+[
+"b",
+"É falso que 2 + 3 = 4."
+],
+[
+"c",
+"7 é maior ou igual a 5."
+],
+[
+"d",
+"Recife é a capital de Pernambuco."
+],
+[
+"e",
+"Sente-se, por favor!"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-061",
+"banca": "UNESC",
+"ano": 2019,
+"orgao": "Pref Laguna",
+"tema": "Proposições e conectivos",
+"enunciado": "Três das quatro frases abaixo tem uma característica lógica em comum.\nI – O senhor Henrique Vidal gosta de pescar.\nII – Que dia é hoje?\nIII – Ele é um excelente advogado.\nIV – A Menina de olhos azuis. A frase que não possui essa característica em comum é a:",
+"alternativas": [
+[
+"a",
+"I"
+],
+[
+"b",
+"II"
+],
+[
+"c",
+"III"
+],
+[
+"d",
+"IV"
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-062",
+"banca": "NUCEPE UESPI",
+"ano": 2019,
+"orgao": "Pref CAP de Campos",
+"tema": "Proposições e conectivos",
+"enunciado": "Qual das sentenças abaixo é uma sentença aberta?",
+"alternativas": [
+[
+"a",
+"Paulo é inteligente."
+],
+[
+"b",
+"Se Marcos é teresinense, então Marcos é piauiense."
+],
+[
+"c",
+"João fala inglês ou francês."
+],
+[
+"d",
+"x + 2 = 5, onde x é um número inteiro."
+],
+[
+"e",
+"Para todo x inteiro, x + 2 = 5."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-063",
+"banca": "CEBRASPE",
+"ano": 2018,
+"orgao": "EMAP",
+"tema": "Proposições e conectivos",
+"enunciado": "Julgue o seguinte item, relativo à lógica proposicional e à lógica de argumentação. A proposição “A construção de portos deveria ser uma prioridade de governo, dado que o transporte de cargas por vias marítimas é uma forma bastante econômica de escoamento de mercadorias.” pode ser representada simbolicamente por PΛQ, em que P e Q são proposições simples adequadamente escolhidas.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-064",
+"banca": "FUNRIO",
+"ano": 2018,
+"orgao": "ALERR",
+"tema": "Proposições e conectivos",
+"enunciado": "Uma expressão consiste numa informação que não cabe julgar se é falsa ou verdadeira. As sentenças são orações com sujeito (o termo a respeito do qual se declara algo) e predicado (o que se declara sobre o sujeito). No caso de uma sentença é possível o julgamento sobre o que está sendo nela declarado, como sendo falso ou verdadeiro. Nesta relação há sentenças e expressões.\n1. Três mais quatorze é menor que dezessete.\n2. Salvador é capital do Estado da Bahia.\n3. O cantor de rock.\n4. A idade de Jesus.\n5. A quinta parte de um número.\n6. O triplo de 15 é maior que 44. É CORRETO afirmar que, nessa relação, são sentenças apenas os itens de números",
+"alternativas": [
+[
+"a",
+"2, 3, 4 e 5."
+],
+[
+"b",
+"3, 4 e 5."
+],
+[
+"c",
+"2, 3 e 4."
+],
+[
+"d",
+"1, 2 e 6."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-065",
+"banca": "AOCP",
+"ano": 2018,
+"orgao": "SECOM PA",
+"tema": "Proposições e conectivos",
+"enunciado": "Define-se uma proposição como sendo uma sentença declarativa cujo conteúdo poderá ser considerado verdadeiro ou falso. Dessa forma, assinale a alternativa que identifica uma proposição.",
+"alternativas": [
+[
+"a",
+"Feliz Aniversário!"
+],
+[
+"b",
+"Que dia é hoje?"
+],
+[
+"c",
+"Se Pedro levantar mais cedo, então ele chegará no horário combinado."
+],
+[
+"d",
+"Leia com mais frequência."
+],
+[
+"e",
+"A idade do jogador multiplicada por R$50,00 será o valor do prêmio."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-066",
+"banca": "IBGP",
+"ano": 2018,
+"orgao": "Pref Sarzedo",
+"tema": "Proposições e conectivos",
+"enunciado": "Acerca das proposições, analise.\nI. A árvore é vermelha.\nPode-se dizer que essa afirmação ou é falsa ou é verdadeira. Portanto, trata-se de uma proposição.\nII. Bom dia! Trata-se de uma saudação. Não podemos dizer que a frase é falsa, nem mesmo que é verdadeira. Portanto, a frase não é uma proposição.\nIII.As informações das proposições possuem valor lógico totalmente verdadeiro ou totalmente falso. Nunca uma proposição será verdadeira e falsa ao mesmo tempo.\nEstá(ão) CORRETA(S) a(s) afirmativa(s).",
+"alternativas": [
+[
+"a",
+"I apenas."
+],
+[
+"b",
+"III apenas."
+],
+[
+"c",
+"I e II apenas."
+],
+[
+"d",
+"I, II e III."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-068",
+"banca": "FUNDATEC",
+"ano": 2018,
+"orgao": "CM Triunfo",
+"tema": "Proposições e conectivos",
+"enunciado": "A alternativa que apresenta uma sentença aberta é:",
+"alternativas": [
+[
+"a",
+"Mário Folha telefonou para o prefeito no dia 14 de julho de 2018."
+],
+[
+"b",
+"Mário Folha e Paulo Rio não telefonaram para o prefeito no dia 14 de julho de 2018."
+],
+[
+"c",
+"Algum vereador telefonou para o prefeito no dia 14 de julho de 2018."
+],
+[
+"d",
+"Se Mário Folha telefonou para o prefeito no dia 14 de julho então o orçamento de 2019 está aprovado."
+],
+[
+"e",
+"Mário Folha ou Paulo Rio telefonou para o prefeito no dia 14 de julho de 2018."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-069",
+"banca": "FUNDATEC",
+"ano": 2018,
+"orgao": "CM Triunfo",
+"tema": "Proposições e conectivos",
+"enunciado": "Quantas das seguintes sentenças são proposições? Meu Deus, que chuva forte! Dia 20 de Setembro comemora-se a Revolução Farroupilha. Qual o significado do feriado de 7 de Setembro? O ônibus escolar está abastecido de combustível. Motorista, calibre os pneus do ônibus.",
+"alternativas": [
+[
+"a",
+"1."
+],
+[
+"b",
+"2."
+],
+[
+"c",
+"3."
+],
+[
+"d",
+"4."
+],
+[
+"e",
+"5."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-070",
+"banca": "IDIB",
+"ano": 2018,
+"orgao": "Pref Farroupilha",
+"tema": "Proposições e conectivos",
+"enunciado": "São proposições, EXCETO.",
+"alternativas": [
+[
+"a",
+"Os professores são legais."
+],
+[
+"b",
+"1 + 2 = 3"
+],
+[
+"c",
+"Faça isto vagarosamente."
+],
+[
+"d",
+"Canadá é um país lindo."
+],
+[
+"e",
+"E) x + 9 = y"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-071",
+"banca": "IDIB",
+"ano": 2018,
+"orgao": "Pref Farroupilha",
+"tema": "Proposições e conectivos",
+"enunciado": "Analise as seguintes afirmativas\nI. x + 1 = 2 - é uma proposição.\nII. Brasília é a capital do Brasil - é uma proposição.\nIII. Você é professor? - não é uma proposição Analisando as afirmativas acima, marque a alternativa correta.",
+"alternativas": [
+[
+"a",
+"Somente as afirmativas I e II estão corretas."
+],
+[
+"b",
+"Somente as afirmativas II e III estão corretas."
+],
+[
+"c",
+"Somente as afirmativas I e III estão corretas."
+],
+[
+"d",
+"Somente a afirmativa I está correta."
+],
+[
+"e",
+"Todas as afirmativas estão corretas."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-072",
+"banca": "Instituto AOCP",
+"ano": 2018,
+"orgao": "UFOB",
+"tema": "Proposições e conectivos",
+"enunciado": "Um dos conceitos iniciais de lógica é o de estruturas lógicas. Em relação às estruturas lógicas, julgue o item a seguir. Denomina-se proposição toda sentença declarativa à qual se pode atribuir um dos valores lógicos: verdadeiro ou falso, nunca ambos. Trata-se, portanto, de uma sentença fechada.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-073",
+"banca": "Instituto AOCP",
+"ano": 2018,
+"orgao": "UFOB",
+"tema": "Proposições e conectivos",
+"enunciado": "Um dos conceitos iniciais de lógica é o de estruturas lógicas. Em relação às estruturas lógicas, julgue o item a seguir. Sentenças exclamativas, interrogativas e imperativas podem ser classificadas como proposições.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-074",
+"banca": "Instituto AOCP",
+"ano": 2018,
+"orgao": "UFOB",
+"tema": "Proposições e conectivos",
+"enunciado": "A lógica matemática envolve compreensão e aplicação de estruturas lógicas. Em relação às estruturas lógicas, julgue o item a seguir. Somente às sentenças declarativas pode-se atribuir valores de verdadeiro ou falso.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-075",
+"banca": "CEBRASPE",
+"ano": 2018,
+"orgao": "BNB",
+"tema": "Proposições e conectivos",
+"enunciado": "Julgue o item que se segue, a respeito de lógica proposicional. A sentença “É justo que toda a população do país seja penalizada pelos erros de seus dirigentes?” é uma proposição lógica composta.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-077",
+"banca": "MS CONCURSOS",
+"ano": 2018,
+"orgao": "CM POA",
+"tema": "Proposições e conectivos",
+"enunciado": "Qual das frases abaixo é uma proposição?",
+"alternativas": [
+[
+"a",
+"Leia com atenção as instruções abaixo."
+],
+[
+"b",
+"Se ele passar no concurso, então ele será servidor da Câmara."
+],
+[
+"c",
+"A prova do concurso é da Câmara de Porto Alegre?"
+],
+[
+"d",
+"Que processo complexo!"
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-078",
+"banca": "MS CONCURSOS",
+"ano": 2018,
+"orgao": "CM POA",
+"tema": "Proposições e conectivos",
+"enunciado": "Qual das frases abaixo não é uma proposição?",
+"alternativas": [
+[
+"a",
+"Florianópolis é a capital do Rio Grande do Sul."
+],
+[
+"b",
+"João é médico ou Carlos é engenheiro."
+],
+[
+"c",
+"Se hoje chover, então eu levarei guarda-chuva."
+],
+[
+"d",
+"Não se esqueça de estudar."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-079",
+"banca": "MS CONCURSOS",
+"ano": 2018,
+"orgao": "CM Itaguara",
+"tema": "Proposições e conectivos",
+"enunciado": "Suponha as frases abaixo:\nI. Wesp não é atleta, pois não é nadadora.\nII. Itaguara é um excelente município para se morar!\nIII. Leia o comando antes de iniciar.\nIV. Dia 07 de setembro é feriado?\nMarque a alternativa correta.",
+"alternativas": [
+[
+"a",
+"Apenas I e IV são proposições."
+],
+[
+"b",
+"Apenas II, III e IV são proposições."
+],
+[
+"c",
+"Apenas I e II são proposições."
+],
+[
+"d",
+"Apenas a I é uma proposição."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-080",
+"banca": "CEV URCA",
+"ano": 2018,
+"orgao": "CM FB",
+"tema": "Proposições e conectivos",
+"enunciado": "Numa discussão entre dois indivíduos, quando um deles se contradiz, o discurso torna-se ininteligível. Por exemplo, se alguém afirma que banana é uma fruta doce, e depois afirma que essa fruta tem gosto amargo, que assim procede entra em contradição, pois desdiz e o que disse anteriormente. Neste caso nega o principio lógico que rege todo e qualquer discurso. Tal princípio é conhecido como:",
+"alternativas": [
+[
+"a",
+"Princípio da não contradição"
+],
+[
+"b",
+"Princípio do terceiro excluído"
+],
+[
+"c",
+"Princípio da identidade"
+],
+[
+"d",
+"Princípio da não identidade"
+],
+[
+"e",
+"Nenhuma opção acima."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-081",
+"banca": "Instituto AOCP",
+"ano": 2017,
+"orgao": "CM Maringá",
+"tema": "Proposições e conectivos",
+"enunciado": "Qual das alternativas a seguir NÃO é uma proposição lógica?",
+"alternativas": [
+[
+"a",
+"A França fica na Europa."
+],
+[
+"b",
+"Silvio é autônomo e não trabalha às segundas-feiras."
+],
+[
+"c",
+"3+8=9"
+],
+[
+"d",
+"As crianças estão com fome ou com sono."
+],
+[
+"e",
+"Você vai trabalhar?"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-082",
+"banca": "Instituto AOCP",
+"ano": 2017,
+"orgao": "CM Maringá",
+"tema": "Proposições e conectivos",
+"enunciado": "Dentre as alternativas a seguir, são proposições lógicas, EXCETO",
+"alternativas": [
+[
+"a",
+"Boa sorte com a sua prova!"
+],
+[
+"b",
+"Uma criança sempre diz a verdade."
+],
+[
+"c",
+"5x2=10"
+],
+[
+"d",
+"À noite, todos os gatos são pardos."
+],
+[
+"e",
+"O número 18 é ímpar."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-083",
+"banca": "CPCON UEPB",
+"ano": 2017,
+"orgao": "Pref Portalegre",
+"tema": "Proposições e conectivos",
+"enunciado": "Das cinco frases abaixo, quatro delas têm uma mesma característica lógica comum, enquanto uma dela NÃO tem essa característica. Aponte-a",
+"alternativas": [
+[
+"a",
+"escreva uma carta."
+],
+[
+"b",
+"que belo rio!"
+],
+[
+"c",
+"um excelente livro de inglês."
+],
+[
+"d",
+"quem ganhou o jogo?"
+],
+[
+"e",
+"existem muitos buracos nas estradas do Brasil."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-084",
+"banca": "CPCON UEPB",
+"ano": 2017,
+"orgao": "Pref Riacho da Cruz",
+"tema": "Proposições e conectivos",
+"enunciado": "Das cinco frases abaixo, quatro delas têm uma mesma característica lógica comum, enquanto uma dela NÃO tem essa característica. Aponte-a",
+"alternativas": [
+[
+"a",
+"escreva uma carta."
+],
+[
+"b",
+"que belo rio!"
+],
+[
+"c",
+"um excelente livro de inglês."
+],
+[
+"d",
+"quem ganhou o jogo?"
+],
+[
+"e",
+"existem muitos buracos nas estradas do Brasil."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-085",
+"banca": "CEBRASPE",
+"ano": 2017,
+"orgao": "CBM AL",
+"tema": "Proposições e conectivos",
+"enunciado": "A respeito de proposições lógicas, julgue o item a seguir. A sentença Soldado, cumpra suas obrigações. é uma proposição simples.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-089",
+"banca": "CEBRASPE",
+"ano": 2017,
+"orgao": "TRF 1",
+"tema": "Proposições e conectivos",
+"enunciado": "Texto CB2A6BBB A maior prova de honestidade que realmente posso dar neste momento é dizer que continuarei sendo o cidadão desonesto que sempre fui. Considerando o texto CB2A6BBB, julgue o item seguinte, concernentes à argumentação e aos tipos de argumentos. A partir da frase apresentada, conclui-se que, não sendo possível provar que o que é enunciado é falso, então o enunciador é, de fato, honesto.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-090",
+"banca": "UFMT",
+"ano": 2017,
+"orgao": "UFSB",
+"tema": "Proposições e conectivos",
+"enunciado": "Assinale a alternativa que NÃO apresenta uma proposição.",
+"alternativas": [
+[
+"a",
+"Jorge Amado nasceu em Itabuna-BA."
+],
+[
+"b",
+"Antônio é produtor de cacau."
+],
+[
+"c",
+"Jorge Amado não foi um grande escritor baiano."
+],
+[
+"d",
+"Queimem os seus livros."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-091",
+"banca": "UFMT",
+"ano": 2017,
+"orgao": "UFSB",
+"tema": "Proposições e conectivos",
+"enunciado": "Assinale a alternativa que apresenta uma proposição.",
+"alternativas": [
+[
+"a",
+"Zélia Gattai nasceu em São Paulo-SP?"
+],
+[
+"b",
+"Viva, Zélia Gattai!"
+],
+[
+"c",
+"Zélia Gattai não foi uma escritora baiana."
+],
+[
+"d",
+"Doem os seus livros."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-092",
+"banca": "Instituto Excelência",
+"ano": 2017,
+"orgao": "Pref Piracicaba",
+"tema": "Proposições e conectivos",
+"enunciado": "Proposição: É uma sentença declarativa, seja ela expressa de forma afirmativa ou negativa, na qual podemos atribuir um valor lógico \"V\" (verdadeiro) ou \"F\" (falso). Uma proposição também pode ser expressa por símbolos. Sendo assim alguns princípios regem as Proposições: Analise os itens abaixo:\nI. - Princípio da Identidade: Uma proposição Verdadeira é Verdadeira, e uma proposição Falsa é Falsa.\nII. - Princípio do Terceiro Excluído: Uma proposição ou é verdadeira ou falsa não existindo uma terceira possibilidade.\nIII. - Princípio da Não-Contradição: Uma proposição não pode ser verdadeira e falsa simultaneamente.\nEstão CORRETOS os itens:",
+"alternativas": [
+[
+"a",
+"Somente os itens I, III."
+],
+[
+"b",
+"Todos os itens."
+],
+[
+"c",
+"Somente os itens II,III."
+],
+[
+"d",
+"Nenhuma das alternativas."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-093",
+"banca": "Instituto Excelência",
+"ano": 2017,
+"orgao": "Pref Guaratinguetá",
+"tema": "Proposições e conectivos",
+"enunciado": "Analise as afirmativas abaixo e assinale a alternativa CORRETA.",
+"alternativas": [
+[
+"a",
+"Segundo o princípio da não contradição, uma proposição pode ser falsa e verdadeira ao mesmo tempo."
+],
+[
+"b",
+"Uma proposição composta formada por duas ou mais proposições será dita uma tautologia se ela for sempre verdadeira, independentemente dos valores lógicos das proposições que a compõem."
+],
+[
+"c",
+"Uma proposição composta formada por duas ou mais proposições será dita uma contradição se ela for sempre falsa, dependendo dos valores lógicos das proposições que a compõem."
+],
+[
+"d",
+"Uma proposição é dita simples quando contém qualquer outra proposição como sua componente."
+],
+[
+"e",
+"Nenhuma das alternativas."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-094",
+"banca": "Instituto Excelência",
+"ano": 2017,
+"orgao": "Pref Guaratinguetá",
+"tema": "Proposições e conectivos",
+"enunciado": "Complete a lacuna a seguir: As operações realizadas sobre preposições são chamadas de....................",
+"alternativas": [
+[
+"a",
+"cálculo proposicional."
+],
+[
+"b",
+"operações lógicas."
+],
+[
+"c",
+"valor lógico."
+],
+[
+"d",
+"conjunção."
+],
+[
+"e",
+"notação lógica."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-095",
+"banca": "QUADRIX",
+"ano": 2017,
+"orgao": "CRF MT",
+"tema": "Proposições e conectivos",
+"enunciado": "Em Lógica Matemática, chamamos de proposição toda sentença declarativa afirmativa que pode ser classificada como verdadeira ou falsa, mas não como verdadeira e falsa simultaneamente. Considere as sentenças abaixo, em que a sigla CRF-MT significa Conselho Regional de Farmácia do Mato Grosso.\nI. A capital do Mato Grosso é Cuiabá.\nII. O CRF-MT possui sede em Uberlândia.\nIII. Não deixe de resolver essa prova com a devida atenção.\nIV. Ele foi o primeiro colocado no concurso do CRF-MT em 2014.\nV. O CRF-MT possui 76 funcionários concursados.\nDiante do exposto, é correto afirmar que, dentre as sentenças acima, aquelas que não podem ser consideradas proposições são somente as identificadas com os algarismos romanos:",
+"alternativas": [
+[
+"a",
+"I, II e III."
+],
+[
+"b",
+"IV e V."
+],
+[
+"c",
+"I, II e V."
+],
+[
+"d",
+"III e IV."
+],
+[
+"e",
+"III, IV e V."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-096",
+"banca": "CEBRASPE",
+"ano": 2016,
+"orgao": "INSS",
+"tema": "Proposições e conectivos",
+"enunciado": "Julgue o item a seguir, relativos a raciocínio lógico e operações com conjuntos. A sentença “Bruna, acesse a Internet e verifique a data da aposentadoria do Sr. Carlos!” é uma proposição composta que pode ser escrita na forma p ^ q.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-098",
+"banca": "MS CONCURSOS",
+"ano": 2016,
+"orgao": "Pref Taquaral",
+"tema": "Proposições e conectivos",
+"enunciado": "Nas alternativas a seguir, apenas uma contém uma proposição. Assinale-a:",
+"alternativas": [
+[
+"a",
+"Venha aqui, por favor."
+],
+[
+"b",
+"Você gosta de ir ao cinema?"
+],
+[
+"c",
+"Reinaldo é um ator famoso."
+],
+[
+"d",
+"Estude bastante para a prova."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-099",
+"banca": "IESES",
+"ano": 2016,
+"orgao": "CRO SC",
+"tema": "Proposições e conectivos",
+"enunciado": "Leia as frases abaixo sobre lógica proposicional:\nI. A frase “Você que uma xícara de café?” é uma proposição.\nII. A frase “Recife é a capital do estado do Amazonas” é uma proposição.\nIII. A frase “João poderá dirigir, se e somente se ele não beber” trata-se de uma bi-implicação.\nIV. A frase “Hoje está chovendo ou é quarta-feira” é uma conjunção. A sequência correta é:",
+"alternativas": [
+[
+"a",
+"Apenas as assertivas II e III estão corretas."
+],
+[
+"b",
+"Apenas as assertivas I, II e IV estão corretas."
+],
+[
+"c",
+"Apenas as assertivas II, III e IV estão corretas."
+],
+[
+"d",
+"Apenas as assertivas I e III estão corretas."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-100",
+"banca": "Instituto AOCP",
+"ano": 2016,
+"orgao": "PM CE",
+"tema": "Proposições e conectivos",
+"enunciado": "Considerando os conhecimentos em Raciocínio Lógico, julgue, como Certo (C) ou Errado (E), o item a seguir. Se J não é maior que K, então J é menor que K.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-101",
+"banca": "CPCON UEPB",
+"ano": 2016,
+"orgao": "Pref Gado Bravo",
+"tema": "Proposições e conectivos",
+"enunciado": "A afirmação: “Ou ele é ou não é professor” está se referindo:",
+"alternativas": [
+[
+"a",
+"Ao princípio da não contradição."
+],
+[
+"b",
+"Ao princípio de liberdade."
+],
+[
+"c",
+"Ao princípio do fim."
+],
+[
+"d",
+"Ao princípio da identidade."
+],
+[
+"e",
+"Ao princípio do terceiro excluído."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-102",
+"banca": "CPCON UEPB",
+"ano": 2016,
+"orgao": "Pref Gado Bravo",
+"tema": "Proposições e conectivos",
+"enunciado": "Das sentenças abaixo, qual pode ser considerada uma proposição lógica?",
+"alternativas": [
+[
+"a",
+"O carro é de cor preta."
+],
+[
+"b",
+"Corra e ganhe a maratona."
+],
+[
+"c",
+"Feliz Natal!"
+],
+[
+"d",
+"Você vai à festa?"
+],
+[
+"e",
+"Abra a janela."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-103",
+"banca": "CPCON UEPB",
+"ano": 2016,
+"orgao": "Pref Sapé",
+"tema": "Proposições e conectivos",
+"enunciado": "Das sentenças:\nI. Todo número inteiro possui o seu simétrico?\nII. A Guerra dos Cem Anos durou mais de cem anos.\nIII. O pico na neblina.\nIV. O Pico da Neblina. É(são) proposição(ões) apenas:",
+"alternativas": [
+[
+"a",
+"III e IV."
+],
+[
+"b",
+"I e II."
+],
+[
+"c",
+"II."
+],
+[
+"d",
+"I e IV."
+],
+[
+"e",
+"I, II e III."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-105",
+"banca": "CPCON UEPB",
+"ano": 2016,
+"orgao": "Pref Sapé",
+"tema": "Proposições e conectivos",
+"enunciado": "Dada a proposição “Descartes nasceu em 1596”, assinale a alternativa que, de acordo com a lógica proposicional, apresenta a sua NEGAÇÃO.",
+"alternativas": [
+[
+"a",
+"“Descartes morreu em 1595”."
+],
+[
+"b",
+"“Descartes nasceu em 1650”."
+],
+[
+"c",
+"“Descartes nasceu no século XVII”."
+],
+[
+"d",
+"“Descartes não nasceu em 1596”."
+],
+[
+"e",
+"“Descartes morreu em 1637, aos 54 anos de idade”."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-106",
+"banca": "CPCON UEPB",
+"ano": 2016,
+"orgao": "Pref Soledade (PB)",
+"tema": "Proposições e conectivos",
+"enunciado": "Das sentenças:\nI. Todo número inteiro possui o seu simétrico?\nII. A Guerra dos Cem Anos durou mais de cem anos.\nIII. O pico na neblina.\nIV. O Pico da Neblina. É(são) proposição(ões) apenas:",
+"alternativas": [
+[
+"a",
+"III e IV."
+],
+[
+"b",
+"I e II."
+],
+[
+"c",
+"II."
+],
+[
+"d",
+"I e IV."
+],
+[
+"e",
+"I, II e III."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-108",
+"banca": "CPCON UEPB",
+"ano": 2016,
+"orgao": "Pref Soledade (PB)",
+"tema": "Proposições e conectivos",
+"enunciado": "Considere as sentenças:\nI. - Luiz Gonzaga é o rei do Baião.\nII. - Saia por onde entrou.\nIII. - Miserável!\nIV. - Quantos anos você tem? Qual(is) delas é(são) exclamativa(s)?",
+"alternativas": [
+[
+"a",
+"Apenas II, III e IV."
+],
+[
+"b",
+"Apenas II e III."
+],
+[
+"c",
+"Apenas I, II e III."
+],
+[
+"d",
+"Apenas III."
+],
+[
+"e",
+"Apenas II."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-109",
+"banca": "IDIB",
+"ano": 2016,
+"orgao": "Pref Novo Gama",
+"tema": "Proposições e conectivos",
+"enunciado": "Acerca dos princípios de raciocínio lógico, analise as seguintes afirmativas:\nI. O princípio da identidade indica que uma proposição verdadeira é verdadeira e que uma proposição falsa é falsa.\nII. O princípio da não contradição indica que nenhuma proposição poderá ser verdadeira e falsa ao mesmo tempo.\nIII. O princípio do terceiro excluído indica que uma proposição poderá assumir um terceiro valor lógico.\nAnalisando as afirmativas acima, marque a alternativa correta.",
+"alternativas": [
+[
+"a",
+"Apenas as afirmativas I e II estão corretas."
+],
+[
+"b",
+"Apenas as afirmativas II e III estão corretas."
+],
+[
+"c",
+"Apenas as afirmativas I e III estão corretas."
+],
+[
+"d",
+"Apenas a afirmativa I está correta."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-110",
+"banca": "IDIB",
+"ano": 2016,
+"orgao": "Pref Novo Gama",
+"tema": "Proposições e conectivos",
+"enunciado": "Das sentenças abaixo, marque aquela que não é uma proposição.",
+"alternativas": [
+[
+"a",
+"Gustavo é médio."
+],
+[
+"b",
+"Que é maior que 21."
+],
+[
+"c",
+"Você foi fazer a prova?"
+],
+[
+"d",
+"O Brasil é um país continental."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-111",
+"banca": "FAUEL",
+"ano": 2016,
+"orgao": "CM SJ dos Pinhais",
+"tema": "Proposições e conectivos",
+"enunciado": "Qual das sentenças declarativas abaixo é uma proposição?",
+"alternativas": [
+[
+"a",
+" 23 > 10"
+],
+[
+"b",
+"O caderno de Maria."
+],
+[
+"c",
+"“Estude mais.”"
+],
+[
+"d",
+"x + y = 10"
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-112",
+"banca": "QUADRIX",
+"ano": 2016,
+"orgao": "CORECON PE",
+"tema": "Proposições e conectivos",
+"enunciado": "Se a economia estiver com recursos plenamente empregados, o aumento de M (quantidade total de moedas) provocará apenas um aumento no P (nível geral de preço). Sobre essa afirmação, é correto afirmar que:",
+"alternativas": [
+[
+"a",
+"trata-se de uma proposição simples compondo uma conjunção lógica."
+],
+[
+"b",
+"contém, pelo menos, uma proposição composta e apresenta uma condicional."
+],
+[
+"c",
+"trata-se de uma proposição simples e apresenta uma conjunção lógica."
+],
+[
+"d",
+"trata-se de uma proposição simples e apresenta uma condicional."
+],
+[
+"e",
+"trata-se de uma proposição simples e apresenta uma disjunção lógica."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-113",
+"banca": "FUNIVERSA",
+"ano": 2015,
+"orgao": "DGAP GO",
+"tema": "Proposições e conectivos",
+"enunciado": "Considerando que uma proposição corresponde a uma sentença bem definida, isto é, que pode ser classificada como verdadeira ou falsa, excluindo-se qualquer outro julgamento, assinale a alternativa em que a sentença apresentada corresponde a uma proposição.",
+"alternativas": [
+[
+"a",
+"Ele foi detido sem ter cometido crime algum?"
+],
+[
+"b",
+"Aquela penitenciária não oferece segurança para o trabalho dos agentes prisionais."
+],
+[
+"c",
+"Os agentes prisionais da penitenciária de Goiânia foram muito bem treinados."
+],
+[
+"d",
+"Fique alerta a qualquer movimentação estranha no pátio do presídio."
+],
+[
+"e",
+"Houve fuga de presidiários, que tragédia!"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-114",
+"banca": "IAUPE",
+"ano": 2015,
+"orgao": "EXP CID",
+"tema": "Proposições e conectivos",
+"enunciado": "Considere as afirmativas:\nI. As pessoas podem viver ao mesmo tempo no passado e no futuro.\nII. O tio do meu irmão é meu tio.\nIII. Todo círculo é semelhante a outro. Do ponto de vista lógico, está CORRETO o que se afirma em",
+"alternativas": [
+[
+"a",
+"I, apenas."
+],
+[
+"b",
+"II, apenas."
+],
+[
+"c",
+"III, apenas."
+],
+[
+"d",
+"II e III, apenas."
+],
+[
+"e",
+"I, II e III."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-115",
+"banca": "COPESE UFPI",
+"ano": 2015,
+"orgao": "Pref Teresina",
+"tema": "Proposições e conectivos",
+"enunciado": "César constrói uma casa se, e somente se, Edson não constrói uma casa. Baseado nessa informação, NÃO se pode afirmar que:",
+"alternativas": [
+[
+"a",
+"César construir uma casa implica que Edson não irá construir uma casa."
+],
+[
+"b",
+"Edson não construir uma casa implica que César irá construir uma casa."
+],
+[
+"c",
+"César não construir uma casa implica que Edson irá construir uma casa."
+],
+[
+"d",
+"Edson construir uma casa implica que César não irá construir uma casa."
+],
+[
+"e",
+"César construir uma casa implica que Edson irá construir uma casa."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-116",
+"banca": "COPEVE (UFAL)",
+"ano": 2015,
+"orgao": "Pref Chã Preta",
+"tema": "Proposições e conectivos",
+"enunciado": "Se A = {0, 2, 4, 6}, B = {1, 2, 3, 4}, C = {2, 3, 4}, D = {6} e E = {3, 6}, então o conjunto E - ((A ∩B) È (C - D)) é igual ao conjunto",
+"alternativas": [
+[
+"a",
+"A."
+],
+[
+"b",
+"B."
+],
+[
+"c",
+"C."
+],
+[
+"d",
+"D."
+],
+[
+"e",
+"E."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-117",
+"banca": "QUADRIX",
+"ano": 2015,
+"orgao": "CRF SP",
+"tema": "Proposições e conectivos",
+"enunciado": "Uma proposição é uma sentença declarativa que será classificada como verdadeira ou falsa Dada às proposições:\nI. Que dia é hoje?\nII. 5 é um número par.\nIII. 3+2=7.\nÉ correto afirmar que são proposições apenas as expressões:",
+"alternativas": [
+[
+"a",
+"I."
+],
+[
+"b",
+"II."
+],
+[
+"c",
+"III."
+],
+[
+"d",
+"I e III."
+],
+[
+"e",
+"II e III."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-118",
+"banca": "VUNESP",
+"ano": 2014,
+"orgao": "PC SP",
+"tema": "Proposições e conectivos",
+"enunciado": "Segundo a lógica aristotélica, as proposições têm como uma de suas propriedades básicas poderem ser verdadeiras ou falsas, isto é, terem um valor de verdade. Assim sendo, a oração “A Terra é um planeta do sistema solar”, por exemplo, é uma proposição verdadeira e a oração “O Sol gira em torno da Terra”, por sua vez, é uma proposição comprovadamente falsa. Mas nem todas as orações são proposições, pois algumas orações não podem ser consideradas nem verdadeiras e nem falsas, como é o caso da oração:",
+"alternativas": [
+[
+"a",
+"O trigo é um cereal cultivável de cuja farinha se produz pão."
+],
+[
+"b",
+"Metais são elementos que não transmitem eletricidade."
+],
+[
+"c",
+"Rogai aos céus para que a humanidade seja mais compassiva."
+],
+[
+"d",
+"O continente euroasiático é o maior continente do planeta."
+],
+[
+"e",
+"Ursos polares são répteis ovíparos que vivem nos trópicos."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-119",
+"banca": "VUNESP",
+"ano": 2014,
+"orgao": "PC SP",
+"tema": "Proposições e conectivos",
+"enunciado": "Um dos princípios fundamentais da lógica é o da não contradição. Segundo este princípio, nenhuma proposição pode ser simultaneamente verdadeira e falsa sob o mesmo aspecto. Uma das razões da importância desse princípio é que ele permite realizar inferências e confrontar descrições diferentes do mesmo acontecimento sem o risco de se chegar a conclusões contraditórias. Assim sendo, o princípio da não contradição",
+"alternativas": [
+[
+"a",
+"fornece pouco auxílio lógico para investigar a legitimidade de descrições."
+],
+[
+"b",
+"permite conciliar descrições contraditórias entre si e relativizar conclusões."
+],
+[
+"c",
+"exibe propriedades lógicas inapropriadas para produzir inferências válidas."
+],
+[
+"d",
+"oferece suporte lógico para realizar inferências adequadas sobre descrições."
+],
+[
+"e",
+"propicia a produção de argumentos inválidos e mutuamente contraditórios."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-120",
+"banca": "VUNESP",
+"ano": 2014,
+"orgao": "PC SP",
+"tema": "Proposições e conectivos",
+"enunciado": "A lógica clássica possui princípios fundamentais que servem de base para a produção de raciocínios válidos. Esses princípios foram inicialmente postulados por Aristóteles (384 a 322 a.C.) e até hoje dão suporte a sistemas lógicos. Tais princípios são os",
+"alternativas": [
+[
+"a",
+"da inferência, da não contradição e do terceiro incluído."
+],
+[
+"b",
+"da diversidade, da dedução e do terceiro incluído."
+],
+[
+"c",
+"da identidade, da inferência e da não contradição."
+],
+[
+"d",
+"da identidade, da não contradição e do terceiro excluído."
+],
+[
+"e",
+"da diversidade, da indução e da não contradição."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-121",
+"banca": "VUNESP",
+"ano": 2014,
+"orgao": "PC SP",
+"tema": "Proposições e conectivos",
+"enunciado": "A proposição pode ser caracterizada como sentença declarativa que admite um, e somente um, valor de verdade (verdadeiro ou falso). Considerando essa definição, assinale a alternativa correta.",
+"alternativas": [
+[
+"a",
+"A sentença exclamativa “Quero comprar um bom carro!” é falsa."
+],
+[
+"b",
+"A sentença declarativa “Choveu no dia do jogo de basquete?” é falsa."
+],
+[
+"c",
+"A sentença exclamativa “Parabéns pelo seu aniversário” é verdadeira."
+],
+[
+"d",
+"A sentença interrogativa “Florianópolis é a capital do Pará?” é verdadeira."
+],
+[
+"e",
+"A sentença declarativa “Brasil é um Estado soberano” é verdadeira."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-122",
+"banca": "VUNESP",
+"ano": 2014,
+"orgao": "PC SP",
+"tema": "Proposições e conectivos",
+"enunciado": "Das alternativas apresentadas, assinale a única que contém uma proposição lógica.",
+"alternativas": [
+[
+"a",
+"Ser um perito criminal ou não ser? Que dúvida!"
+],
+[
+"b",
+"Uma atribuição do perito criminal é analisar documentos em locais de crime."
+],
+[
+"c",
+"O perito criminal também atende ocorrências com vítimas de terrorismo!"
+],
+[
+"d",
+"É verdade que o perito criminal realiza análises no âmbito da criminalística?"
+],
+[
+"e",
+"Instruções especiais para perito criminal."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-124",
+"banca": "INAZ do Pará",
+"ano": 2014,
+"orgao": "BANPARÁ",
+"tema": "Proposições e conectivos",
+"enunciado": "Considere as sentenças abaixo.\nAssinale a opção que contém apenas proposições.\nI. João é amigo de José\nII. Não faça isto\nIII. Feliz ano novo!\nIV. Renata é advogada\nV. 8 + 5",
+"alternativas": [
+[
+"a",
+"I, II e III"
+],
+[
+"b",
+"II, III e IV"
+],
+[
+"c",
+"II, III e V"
+],
+[
+"d",
+"I, III e IV"
+],
+[
+"e",
+"III, IV e V"
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-126",
+"banca": "FDC",
+"ano": 2014,
+"orgao": "AgeRIO",
+"tema": "Proposições e conectivos",
+"enunciado": "Das seguintes sentenças abaixo, a única que não é uma proposição lógica é",
+"alternativas": [
+[
+"a",
+"O sol gira em torno da Terra."
+],
+[
+"b",
+"Paris é a capital da França."
+],
+[
+"c",
+"Química é uma ciência."
+],
+[
+"d",
+"Execute seu trabalho com atenção."
+],
+[
+"e",
+"O Brasil possui 5 regiões."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-127",
+"banca": "CONSULPAM",
+"ano": 2014,
+"orgao": "Pref Pentecoste",
+"tema": "Proposições e conectivos",
+"enunciado": "Considere as frases:\nI. A expressão - (x-y) tem como resultado um número não positivo.\nII. Ela é uma dançarina excepcional.",
+"alternativas": [
+[
+"a",
+"I é uma sentença aberta."
+],
+[
+"b",
+"II é uma sentença fechada."
+],
+[
+"c",
+"I é uma sentença fechada."
+],
+[
+"d",
+"I e II são sentenças abertas."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-128",
+"banca": "EPL Concursos",
+"ano": 2014,
+"orgao": "Pref Piracicaba",
+"tema": "Proposições e conectivos",
+"enunciado": "Analisando as alternativas abaixo, assinale a sentença na qual não é considerada uma proposição:",
+"alternativas": [
+[
+"a",
+"Prometo que estudarei todo final de semana."
+],
+[
+"b",
+"O hexaedro possuiu 12 arestas."
+],
+[
+"c",
+"Você sairá de carro hoje?"
+],
+[
+"d",
+"Toda função bijetora possui inversa."
+],
+[
+"e",
+"Está frio."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-129",
+"banca": "FUNDATEC",
+"ano": 2014,
+"orgao": "PGE RS",
+"tema": "Proposições e conectivos",
+"enunciado": "Considere as seguintes sentenças:\nI. Está chovendo.\nII. Pedro é médico ou Paula é engenheira.\nIII. Faça o seu trabalho em silêncio.\nIV. Quem fez isso?\nAnalisando as sentenças acima, é correto afirmar que:",
+"alternativas": [
+[
+"a",
+"Apenas II não é uma proposição."
+],
+[
+"b",
+"Apenas I e II são proposições."
+],
+[
+"c",
+"Apenas I e III não são proposições."
+],
+[
+"d",
+"I, III e IV não são proposições."
+],
+[
+"e",
+"I, II e III são proposições."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-130",
+"banca": "QUADRIX",
+"ano": 2014,
+"orgao": "CRN 3",
+"tema": "Proposições e conectivos",
+"enunciado": "Das afirmativas a seguir, assinale a única que apresenta uma proposição lógica.",
+"alternativas": [
+[
+"a",
+"Uma alimentação saudável é um dos princípios básicos para uma vida saudável."
+],
+[
+"b",
+"Reflita sobre sua saúde!"
+],
+[
+"c",
+"Já pensou como vai sua saúde?"
+],
+[
+"d",
+"Seja qual for seu ritmo de vida, aprenda a se exercitar sempre."
+],
+[
+"e",
+"31 de março: dia da saúde e nutrição."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-131",
+"banca": "FUNCEFET",
+"ano": 2014,
+"orgao": "CBM RJ",
+"tema": "Proposições e conectivos",
+"enunciado": "Considerando p e q proposi□ções, analise as alternativas e marque a incorreta.",
+"alternativas": [
+[
+"a",
+"A proposi□ção ¬p tem sempre o valor oposto de p, isto □é, ¬p □é verdadeira quando p □é falsa e ¬p □é falsa quando p é□ verdadeira;"
+],
+[
+"b",
+"Uma proposi□ção pode ser verdadeira e falsa ao mesmo tempo;"
+],
+[
+"c",
+"Chama-se proposi□ção ou senten□ça toda ora□ção declarativa que pode ser classificada de verdadeira ou de falsa;"
+],
+[
+"d",
+"Chama-se proposi□ção simples ou proposi□ção atômica aquela que não cont□ém nenhuma outra proposi□ção como parte integrante de si mesma;"
+],
+[
+"e",
+"Chamam-se conectivos, palavras que se usam para formar novas proposi□ções a partir de outras."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-134",
+"banca": "SMA-RJ (antiga FJG)",
+"ano": 2013,
+"orgao": "Pref RJ",
+"tema": "Proposições e conectivos",
+"enunciado": "A alternativa que apresenta uma sentença que, do ponto de vista lógico, pode ser considerada uma proposição é:",
+"alternativas": [
+[
+"a",
+"Quantas multas você já levou?"
+],
+[
+"b",
+"Meu Deus!"
+],
+[
+"c",
+"Vou passar nesse concurso."
+],
+[
+"d",
+"Faça uma boa prova."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-135",
+"banca": "FUNDATEC",
+"ano": 2013,
+"orgao": "IRGA",
+"tema": "Proposições e conectivos",
+"enunciado": "Considere as seguintes sentenças:\nI. João viajou ontem.\nII. Vamos estudar!\nIII. O número -2 é um número natural. Levando-se em conta o conceito de proposição, pode-se concluir que:",
+"alternativas": [
+[
+"a",
+"I é uma proposição categórica."
+],
+[
+"b",
+"II é uma proposição verdadeira."
+],
+[
+"c",
+"I e III são proposições."
+],
+[
+"d",
+"II e III são proposições lógicas."
+],
+[
+"e",
+"I, II e III são proposições falsas."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-136",
+"banca": "INCAB (ex-FUNCAB)",
+"ano": 2013,
+"orgao": "PC ES",
+"tema": "Proposições e conectivos",
+"enunciado": "Assinale a alternativa que contém uma proposição com valor lógico verdadeiro.",
+"alternativas": [
+[
+"a",
+"Só existe um único número natural par que é primo."
+],
+[
+"b",
+"Vila Velha é a capital do Espírito Santo."
+],
+[
+"c",
+"O número -5 é menor que o número -7."
+],
+[
+"d",
+"A soma de 2+(-3)é igual a 5."
+],
+[
+"e",
+"Uma tonelada tem 1000 gramas."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-137",
+"banca": "QUADRIX",
+"ano": 2013,
+"orgao": "CRMV SP",
+"tema": "Proposições e conectivos",
+"enunciado": "Na proposição \" Eu estudo, mas não consigo passar na prova\" , o conectivo lógico é:",
+"alternativas": [
+[
+"a",
+"disjunção exclusiva"
+],
+[
+"b",
+"conjunção"
+],
+[
+"c",
+"disjunção inclusiva"
+],
+[
+"d",
+"condicional"
+],
+[
+"e",
+"não condicional"
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-138",
+"banca": "QUADRIX",
+"ano": 2013,
+"orgao": "CORE RS",
+"tema": "Proposições e conectivos",
+"enunciado": "Silogismo é um raciocínio estruturado que parte de duas premissas (proposições), das quais, por dedução, se conclui uma terceira. É exemplo de uma proposição:",
+"alternativas": [
+[
+"a",
+"Bom dia!"
+],
+[
+"b",
+"Alguma ligação para mim?"
+],
+[
+"c",
+"Desmarque meus compromissos, por favor."
+],
+[
+"d",
+"Ele não sabe o que diz."
+],
+[
+"e",
+"Lia é ótima funcionária."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-140",
+"banca": "QUADRIX",
+"ano": 2013,
+"orgao": "CRTR 10",
+"tema": "Proposições e conectivos",
+"enunciado": "Sobre conjunto- verdade (Vp) de uma sentença aberta (p(x)) em um conjunto A, podemos afirmar que:",
+"alternativas": [
+[
+"a",
+"E o conjunto de todas as variáveis de A."
+],
+[
+"b",
+"É uma sentença aberta verdadeira no conjunto A para todas as variáveis do conjunto."
+],
+[
+"c",
+"E o conjunto de variáveis pertencente a A para as quais a proposição p(x) é falsa."
+],
+[
+"d",
+"E o conjunto de variáveis pertencente a A para as quais a proposição p(x) é verdadeira."
+],
+[
+"e",
+"É uma sentença aberta falsa no conjunto A para todas as variáveis do conjunto."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-141",
+"banca": "QUADRIX",
+"ano": 2013,
+"orgao": "CRQ 4 (SP)",
+"tema": "Proposições e conectivos",
+"enunciado": "Uma questão de lógica do tipo múltipla escolha, com apenas uma alternativa correta, apresentava as seguintes alternativas:\nI. A afirmação é verdadeira.\nII. A negação da afirmação é falsa.\nIII. A contra positiva da afirmação é verdadeira.\nIV. A afirmação é verdadeira e a contra positiva é falsa.\nV. A afirmação é falsa ou a sua negação é verdadeira. Podemos afirmar que a alternativa certa era:",
+"alternativas": [
+[
+"a",
+"I"
+],
+[
+"b",
+"II"
+],
+[
+"c",
+"III"
+],
+[
+"d",
+"IV"
+],
+[
+"e",
+"V"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-143",
+"banca": "UERR",
+"ano": 2013,
+"orgao": "PM RR",
+"tema": "Proposições e conectivos",
+"enunciado": "Qual das sentenças declarativas abaixo NÃO é uma proposição?",
+"alternativas": [
+[
+"a",
+"O Brasil é o maior país da América do Sul."
+],
+[
+"b",
+"Todos os paulistas são brasileiros."
+],
+[
+"c",
+"Um ano tem 365 dias."
+],
+[
+"d",
+"A baleia é um peixe."
+],
+[
+"e",
+"-5 > 2."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-144",
+"banca": "UERR",
+"ano": 2013,
+"orgao": "PM RR",
+"tema": "Proposições e conectivos",
+"enunciado": "Uma sentença aberta pode ser transformada numa proposição se for atribuído valor a uma variável. Dada a sentença aberta p(y): y2 > 10, assinale o valor a ser atribuído para tornar a proposição p(y) verdadeira:",
+"alternativas": [
+[
+"a",
+"x = 4"
+],
+[
+"b",
+"y = -2"
+],
+[
+"c",
+"y = 1"
+],
+[
+"d",
+"x = 0"
+],
+[
+"e",
+"y = 5"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-145",
+"banca": "CEBRASPE",
+"ano": 2012,
+"orgao": "TJ AC",
+"tema": "Proposições e conectivos",
+"enunciado": "Considerando que as proposições lógicas sejam representadas por letras maiúsculas, julgue o próximo item, relativo a lógica proposicional e de argumentação. A sentença “A justiça e a lei nem sempre andam pelos mesmos caminhos” pode ser representada simbolicamente por P∧Q, em que as proposições P e Q são convenientemente escolhidas.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-146",
+"banca": "IAUPE",
+"ano": 2012,
+"orgao": "JUCEPE",
+"tema": "Proposições e conectivos",
+"enunciado": "Na lógica sentencial, uma sentença (ou proposição) é uma frase que pode ser julgada apenas como Verdadeira (V) ou Falsa (F).\nConsiderando essas informações, quais dos itens a seguir formam uma sentença?\nI. Onze é menor que um.\nII. Está chovendo?\nIII. Ela é brasileira.\nIV. Existem formas de vida terrestre, aérea e aquática.\nAssinale a alternativa CORRETA.",
+"alternativas": [
+[
+"a",
+"Somente I é uma sentença."
+],
+[
+"b",
+"Somente II e III são sentenças."
+],
+[
+"c",
+"Somente I e IV são sentenças."
+],
+[
+"d",
+"Somente IV é uma sentença."
+],
+[
+"e",
+"Todas elas, I, II, III e IV, são sentenças."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-147",
+"banca": "COPEVE (UFAL)",
+"ano": 2012,
+"orgao": "MPE AL",
+"tema": "Proposições e conectivos",
+"enunciado": "Dadas as sentenças abaixo,\nI. Vá estudar ou monte o seu próprio negocio!\nII. Existem políticos que não são honestos.\nIII. Será que meu professor é competente? é correto afirmar que",
+"alternativas": [
+[
+"a",
+"apenas II não é uma proposição."
+],
+[
+"b",
+"apenas I e III não são proposições."
+],
+[
+"c",
+"apenas I e III são proposições."
+],
+[
+"d",
+"I, II e III não são proposições."
+],
+[
+"e",
+"I, II e III são proposições."
+]
+],
+"gabarito": "b"
+},
+{
+"id": "prop-148",
+"banca": "AJURI",
+"ano": 2012,
+"orgao": "EMHUR",
+"tema": "Proposições e conectivos",
+"enunciado": "Em relação à lógica, assinale a única alternativa falsa:",
+"alternativas": [
+[
+"a",
+"as fórmulas da linguagem da lógica proposicional são construídas a partir dos símbolos do alfabeto;"
+],
+[
+"b",
+"são métodos para determinação da validade de fórmulas da lógica proposicional: método da tabela verdade, da árvore semântica e da negação ou absurdo;"
+],
+[
+"c",
+"o alfabeto da lógica proposicional é constituído por: símbolos de acentuação, símbolos de verdade, símbolos proposicionais e de conectivos proposicionais;"
+],
+[
+"d",
+"uma fórmula H é uma tautologia ou é válida quando qualquer interpretação I interpreta H como sendo verdadeira. I [H] = T para toda interpretação I."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-149",
+"banca": "COPEVE (UFAL)",
+"ano": 2012,
+"orgao": "Pref Maceió",
+"tema": "Proposições e conectivos",
+"enunciado": "Considere as seguintes frases.\nI. Ela foi a melhor atriz do mundo em 2012.\nII. x+y é um número racional.\nIII. Marcos Pereira foi o secretário de Educação do estado de Alagoas em 2011.\nAssinale a única opção verdadeira",
+"alternativas": [
+[
+"a",
+"I e II são sentenças abertas."
+],
+[
+"b",
+"I e III são sentenças abertas."
+],
+[
+"c",
+"II e III são sentenças abertas."
+],
+[
+"d",
+"Apenas a sentença I é aberta."
+],
+[
+"e",
+"Apenas a sentença II é aberta."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-150",
+"banca": "FADESP",
+"ano": 2012,
+"orgao": "CDP",
+"tema": "Proposições e conectivos",
+"enunciado": "Os princípios lógicos da Não Contradição e do Terceiro Excluído dizem, respectivamente, que",
+"alternativas": [
+[
+"a",
+"“Uma proposição não pode ser verdadeira e falsa ao mesmo tempo” e “Uma proposição ou é verdadeira ou é falsa”."
+],
+[
+"b",
+"“A negação de uma proposição falsa é verdadeira” e “A negação de uma proposição verdadeira é falsa”."
+],
+[
+"c",
+"“Não se pode contradizer o que é verdadeiro” e “Se houver três proposições, a terceira será falsa”."
+],
+[
+"d",
+"“Uma proposição ou é verdadeira ou é falsa” e “Uma proposição não pode ser verdadeira e falsa ao mesmo tempo”."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-151",
+"banca": "COPEVE (UFAL)",
+"ano": 2012,
+"orgao": "Pref SJ Tapera",
+"tema": "Proposições e conectivos",
+"enunciado": "Sejam dadas as seguintes sentenças,\nI. 3-y >= 9\nII. ½ + ½ = 1\nIII. Todo homem é mortal qual opção abaixo é correta?",
+"alternativas": [
+[
+"a",
+"Apenas I é sentença aberta."
+],
+[
+"b",
+"Apenas III é sentença aberta."
+],
+[
+"c",
+"Apenas II e III são sentenças abertas."
+],
+[
+"d",
+"Apenas I e II são sentenças abertas."
+],
+[
+"e",
+"Todas são sentenças abertas."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-152",
+"banca": "QUADRIX",
+"ano": 2012,
+"orgao": "CFP",
+"tema": "Proposições e conectivos",
+"enunciado": "Considere as afirmações a seguir.\nI. O quadrado da hipotenusa é igual à soma dos quadrados dos catetos.\nII. Coma bem devagar.\nIII. Se você comer devagar, então ficará mais satisfeito.\nIV. A soma dos ângulos internos de um triângulo é igual a 180°.\nV. Já!\nDentre as cinco afirmações, quantas delas são proposições?",
+"alternativas": [
+[
+"a",
+"4"
+],
+[
+"b",
+"2"
+],
+[
+"c",
+"1"
+],
+[
+"d",
+"3"
+],
+[
+"e",
+"5"
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-153",
+"banca": "COPEVE (UFAL)",
+"ano": 2012,
+"orgao": "Pref Palmeira Índios",
+"tema": "Proposições e conectivos",
+"enunciado": "Sejam dadas as seguintes sentenças,\nI. 3-y >= 9\nII. ½ + ½ = 1\nIII. Todo homem é mortal qual opção abaixo é correta?",
+"alternativas": [
+[
+"a",
+"Apenas I é sentença aberta."
+],
+[
+"b",
+"Apenas III é sentença aberta."
+],
+[
+"c",
+"Apenas II e III são sentenças abertas."
+],
+[
+"d",
+"Apenas I e II são sentenças abertas."
+],
+[
+"e",
+"Todas são sentenças abertas."
+]
+],
+"gabarito": "a"
+},
+{
+"id": "prop-154",
+"banca": "CEBRASPE",
+"ano": 2011,
+"orgao": "TRE ES",
+"tema": "Proposições e conectivos",
+"enunciado": "Entende-se por proposição todo conjunto de palavras ou símbolos que exprimem um pensamento de sentido completo, isto é, que afirmam fatos ou exprimam juízos a respeito de determinados entes. Na lógica bivalente, esse juízo, que é conhecido como valor lógico da proposição, pode ser verdadeiro (V) ou falso (F), sendo objeto de estudo desse ramo da lógica apenas as proposições que atendam ao princípio da não contradição, em que uma proposição não pode ser simultaneamente verdadeira e falsa; e ao princípio do terceiro excluído, em que os únicos valores lógicos possíveis para uma proposição são verdadeiro e falso. Com base nessas informações, julgue o item a seguir. Segundo os princípios da não contradição e do terceiro excluído, a uma proposição pode ser atribuído um e somente um valor lógico.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-155",
+"banca": "CEBRASPE",
+"ano": 2011,
+"orgao": "TRE ES",
+"tema": "Proposições e conectivos",
+"enunciado": "Entende-se por proposição todo conjunto de palavras ou símbolos que exprimem um pensamento de sentido completo, isto é, que afirmam fatos ou exprimam juízos a respeito de determinados entes. Na lógica bivalente, esse juízo, que é conhecido como valor lógico da proposição, pode ser verdadeiro (V) ou falso (F), sendo objeto de estudo desse ramo da lógica apenas as proposições que atendam ao princípio da não contradição, em que uma proposição não pode ser simultaneamente verdadeira e falsa; e ao princípio do terceiro excluído, em que os únicos valores lógicos possíveis para uma proposição são verdadeiro e falso. Com base nessas informações, julgue o item a seguir. A frase \"Que dia maravilhoso!\" consiste em uma proposição objeto de estudo da lógica bivalente.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-162",
+"banca": "CEBRASPE",
+"ano": 2009,
+"orgao": "TRT 17",
+"tema": "Proposições e conectivos",
+"enunciado": "Texto para o item. Denomina-se proposição toda frase que pode ser julgada como verdadeira — V — ou falsa — F —, mas não como V e F simultaneamente. As proposições simples são aquelas que não contêm mais de uma proposição como parte. As proposições compostas são construídas a partir de outras proposições, usando-se símbolos lógicos e parênteses para evitar ambiguidades. As proposições são usualmente simbolizadas por letras maiúsculas do alfabeto: A, B, C etc. Uma proposição composta na forma A ∨B, chamada disjunção, é lida como “A ou B” e tem valor lógico F se A e B são F, e V, nos demais casos. Uma proposição composta na forma A∧B, chamada conjunção, é lida como “A e B” e tem valor lógico V se A e B são V, e F, nos demais casos. Uma proposição composta na forma A→B, chamada implicação, é lida como “se A, então B” e tem valor lógico F se A é V e B é F, e V, nos demais casos. Além disso, ¬A, que simboliza a negação da proposição A, é V se A for F, e é F se A for V. A partir do texto, julgue o item a seguir. Na sequência de frases abaixo, há três proposições. Quantos tribunais regionais do trabalho há na região Sudeste do Brasil? O TRT/ES lançou edital para preenchimento de 200 vagas. Se o candidato estudar muito, então ele será aprovado no concurso do TRT/ES. Indivíduo com 50 anos de idade ou mais não poderá se inscrever no concurso do TRT/ES.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-163",
+"banca": "FCC",
+"ano": 2009,
+"orgao": "TCE-GO",
+"tema": "Proposições e conectivos",
+"enunciado": "Uma proposição de uma linguagem é uma expressão de tal linguagem que pode ser classificada como verdadeira ou falsa. Com base nessa definição, analise as seguintes expressões:\nI. 3 + 8 < 13\nII. Que horas são?\nIII. Existe um número inteiro x tal que 2x > −5.\nIV. Os tigres são mamíferos.\nV. 36 é divisível por 7.\nVI. x + y = 5 É correto afirmar que são proposições APENAS as expressões",
+"alternativas": [
+[
+"a",
+"I e IV."
+],
+[
+"b",
+"I e V."
+],
+[
+"c",
+"II, IV e VI."
+],
+[
+"d",
+"III, IV e V."
+],
+[
+"e",
+"I, III, IV e V."
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-164",
+"banca": "CEBRASPE",
+"ano": 2009,
+"orgao": "SEDF",
+"tema": "Proposições e conectivos",
+"enunciado": "Na lógica sentencial, uma proposição é uma sentença declarativa que pode ser julgada como verdadeira ou falsa, mas não como verdadeira e falsa simultaneamente. As proposições são representadas por letras maiúsculas A, B, C, D etc. Como operações lógicas sobre proposições, a proposição “A ou B” só será falsa se as duas proposições A e B forem falsas; a proposição “Se A, então B” só será falsa se a proposição A for verdadeira e a B for falsa. Uma sequência de proposições é denominada correta se a última proposição, como consequência das anteriores, for verdadeira, sempre que as anteriores o forem. Nesse caso, a última proposição é denominada conclusão e as anteriores, premissas. Julgue o item subsequente, com relação às definições apresentadas no texto acima. Considere as seguintes sentenças. (i) Apresente ao diretor da escola, em tempo hábil, todos os documentos que ainda não foram assinados. (ii) Carlos, como secretário escolar, coordena e executa as tarefas decorrentes dos encargos da Secretaria. (iii)Organize e mantenha em dia as cópias de leis, regulamentos, diretrizes, portarias e todos os outros documentos. É correto afirmar que, entre as sentenças apresentadas, apenas uma delas é proposição.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-165",
+"banca": "FCC",
+"ano": 2009,
+"orgao": "PM BA",
+"tema": "Proposições e conectivos",
+"enunciado": "Define-se sentença como qualquer oração que tem sujeito (o termo a respeito do qual se declara alguma coisa) e predicado (o que se declara sobre o sujeito). Na relação que segue há expressões e sentenças:\n1. Tomara que chova!\n2. Que horas são?\n3. Três vezes dois são cinco.\n4. Quarenta e dois detentos.\n5. Policiais são confiáveis.\n6. Exercícios físicos são saudáveis.\nDe acordo com a definição dada, é correto afirmar que, dos itens da relação acima, são sentenças APENAS os de números",
+"alternativas": [
+[
+"a",
+"1, 3 e 5."
+],
+[
+"b",
+"2, 3 e 5."
+],
+[
+"c",
+"3, 5 e 6."
+],
+[
+"d",
+"4 e 6."
+],
+[
+"e",
+"5 e 6."
+]
+],
+"gabarito": "c"
+},
+{
+"id": "prop-172",
+"banca": "CEBRASPE",
+"ano": 2008,
+"orgao": "IAPEN AC",
+"tema": "Proposições e conectivos",
+"enunciado": "Texto para o item Uma proposição é uma afirmação que pode ser julgada como verdadeira — V —, ou falsa — F —, mas não como ambas. Uma proposição é denominada simples quando não contém nenhuma outra proposição como parte de si mesma, e é denominada composta quando for formada pela combinação de duas ou mais proposições simples. De acordo com as informações contidas no texto, julgue o item a seguir. A frase “Você sabe que horas são?” é uma proposição.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-173",
+"banca": "CEBRASPE",
+"ano": 2008,
+"orgao": "IAPEN AC",
+"tema": "Proposições e conectivos",
+"enunciado": "Texto para o item Uma proposição é uma afirmação que pode ser julgada como verdadeira — V —, ou falsa — F —, mas não como ambas. Uma proposição é denominada simples quando não contém nenhuma outra proposição como parte de si mesma, e é denominada composta quando for formada pela combinação de duas ou mais proposições simples. De acordo com as informações contidas no texto, julgue o item a seguir. A frase “Se o mercúrio é mais leve que a água, então o planeta Terra é azul”, não é considerada uma proposição composta.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-174",
+"banca": "CEBRASPE",
+"ano": 2007,
+"orgao": "BB",
+"tema": "Proposições e conectivos",
+"enunciado": "Na lógica sentencial, denomina-se proposição uma frase que pode ser julgada como verdadeira (V) ou falsa (F), mas não, como ambas. Assim, frases como “Como está o tempo hoje?” e “Esta frase é falsa” não são proposições porque a primeira é pergunta e a segunda não pode ser nem V nem F. As proposições são representadas simbolicamente por letras maiúsculas do alfabeto — A, B, C etc. Uma proposição da forma “A ou B” é F se A e B forem F, caso contrário é V; e uma proposição da forma “Se A então B” é F se A for V e B for F, caso contrário é V. Um raciocínio lógico considerado correto é formado por uma seqüência de proposições tais que a última proposição é verdadeira sempre que as proposições anteriores na seqüência forem verdadeiras. Considerando as informações contidas no texto acima, julgue o item subseqüente. Na lista de frases apresentadas a seguir, há exatamente três proposições. “A frase dentro destas aspas é uma mentira.” A expressão X + Y é positiva. O valor de √4+ 3 = 7. Pelé marcou dez gols para a seleção brasileira. O que é isto?",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-177",
+"banca": "FCC",
+"ano": 2006,
+"orgao": "SEFAZ SP",
+"tema": "Proposições e conectivos",
+"enunciado": "Das cinco frases abaixo, quatro delas têm uma mesma característica lógica em comum, enquanto uma delas não tem essa característica.\nI. Que belo dia!\nII. Um excelente livro de raciocínio lógico.\nIII. O jogo terminou empatado?\nIV. Existe vida em outros planetas do universo.\nV. Escreva uma poesia. A frase que não possui essa característica comum é a",
+"alternativas": [
+[
+"a",
+"I."
+],
+[
+"b",
+"II."
+],
+[
+"c",
+"III."
+],
+[
+"d",
+"IV."
+],
+[
+"e",
+"V."
+]
+],
+"gabarito": "d"
+},
+{
+"id": "prop-178",
+"banca": "CEBRASPE",
+"ano": 2006,
+"orgao": "MPE TO",
+"tema": "Proposições e conectivos",
+"enunciado": "Uma proposição é uma afirmativa que pode ser interpretada como verdadeira (V) ou falsa (F), mas não de ambas as formas. As proposições são usualmente simbolizadas por letras maiúsculas, P, Q, R , por exemplo. Proposições compostas podem ser construídas nas formas P∧Q, P∨Q, P→Q e ¬P, cujas leituras são, respectivamente, P e Q, P ou Q, P implica Q (ou, se P então Q) e não P. A interpretação de P∧Q é V se P e Q forem ambas V, caso contrário, é F; a interpretação de P∨Q é F se P e Q forem ambas F, caso contrário, é V; a interpretação de P→Q é F se P for V e Q for F, caso contrário, é V; e finalmente, a interpretação de ¬P é F se P for V, e é V se P for F. Duas proposições são equivalentes quando todas as suas possíveis interpretações são iguais. As seguintes proposições constituem formas sintáticas corretas de argumento.\nI [(P→Q)∧(Q → R)] → (P → R)\nII [¬ Q∧(P → Q)] → ¬P As proposições (P → R), em I, e ¬P, em II, são chamadas conclusões do argumento, e as demais proposições são premissas. Um argumento é válido se a conclusão for V, sempre que as premissas forem V. Com base nessas informações, julgue o item subseqüente. Na lista abaixo, há exatamente três proposições. • Faça suas tarefas. • Ele é um procurador de justiça muito competente. • Celina não terminou seu trabalho. • Esta proposição é falsa. • O número 1.024 é uma potência de 2.",
+"alternativas": [
+[
+"c",
+"Certo"
+],
+[
+"e",
+"Errado"
+]
+],
+"gabarito": "e"
+},
+{
+"id": "prop-179",
+"banca": "FCC",
+"ano": 2006,
+"orgao": "TCE-PB",
+"tema": "Proposições e conectivos",
+"enunciado": "Sabe-se que sentenças são orações com sujeito (o termo a respeito do qual se declara algo) e predicado (o que se declara sobre o sujeito). Na relação seguinte há expressões e sentenças:\n1. Três mais nove é igual a doze.\n2. Pelé é brasileiro.\n3. O jogador de futebol.\n4. A idade de Maria.\n5. A metade de um número.\n6. O triplo de 15 é maior do que 10.\nÉ correto afirmar que, na relação dada, são sentenças apenas os itens de números",
+"alternativas": [
+[
+"a",
+"1, 2 e 6."
+],
+[
+"b",
+"2, 3 e 4."
+],
+[
+"c",
+"3, 4 e 5."
+],
+[
+"d",
+"1, 2, 5 e 6."
+],
+[
+"e",
+"2, 3, 4 e 5."
+]
+],
+"gabarito": "a"
+}
+]
+}

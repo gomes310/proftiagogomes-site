@@ -38,7 +38,7 @@ export default function Praticar({ iniciar, irPara }: { iniciar: (tipo: 'revisao
         <div className="pratica-ico"><Icone nome="precisao" tamanho={32} /></div>
         <div className="pratica-txt">
           <h2 id="prov-t">Questões de prova</h2>
-          <p>{PROVAS.length} questões reais de concursos ({BANCAS_PROVA.slice(0, 3).map(([b]) => b).join(', ')} e outras), com resolução em vídeo e simulado cronometrado.</p>
+          <p>{PROVAS.length} questões reais de concursos ({BANCAS_PROVA.slice(0, 3).map(([b]) => b).join(', ')} e outras), muitas com resolução em vídeo, e simulado cronometrado.</p>
         </div>
         <button type="button" className="btn btn-pri" onClick={() => irPara('provas')}>Resolver questões</button>
       </section>

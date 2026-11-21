@@ -13,8 +13,8 @@ import Lumi, { Efe, Ve } from '../componentes/Lumi';
 import { Icone, Selo } from '../componentes/Icones';
 import { SIMBOLO_UNIDADE } from '../estado';
 import { EmblemaTema, EscadaNivel } from '../componentes/Tema';
-import { NOME_NIVEL_ALUNO, temaDaLicao } from '../estado';
-import { varsTema } from '../dados/licoes';
+import { NOME_NIVEL_ALUNO, nivelDaLicao, temaDaLicao } from '../estado';
+import { NOMES_NIVEL, varsTema } from '../dados/licoes';
 import { BotaoLeitura, BotaoMicrofone, LumiFalando, useLeituraAuto } from '../componentes/Voz';
 
 type Passo = { tipo: 'imersao' } | { tipo: 'ideia'; t: string; k: number } | { tipo: 'lab' } | { tipo: 'pares' } | { tipo: 'exemplo' } | { tipo: 'vf' };
@@ -125,7 +125,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
   if (etapa === 'aprenda') {
     const topo = (
       <div className="passo-topo">
-        <p className="rotulo">Lição {idx + 1} de {LICOES.length} · {L.titulo}</p>
+        <p className="rotulo">{UNIDADES[temaDaLicao(idx)].nome} · {NOMES_NIVEL[nivelDaLicao(idx)]} · {L.titulo}</p>
         {passo > 0 && <button type="button" className="voltar" onClick={() => setPasso(passo - 1)}>‹ Voltar</button>}
       </div>
     );

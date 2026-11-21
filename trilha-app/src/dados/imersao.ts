@@ -17,15 +17,15 @@ export const CONTEUDO: ConteudoExtra[] = [
     pares: [['A ∪ B', 'junta tudo'], ['A ∩ B', 'só o comum'], ['A − B', 'só de A'], ['{ }', 'conjunto vazio']],
     caderno: { regras: ['União (∪): junta tudo, sem repetir.', 'Interseção (∩): só o que está nos dois.', 'Diferença (A − B): está em A e não está em B.', 'n elementos → 2ⁿ subconjuntos.'], dica: 'Desenhe o diagrama de Venn e preencha do centro (interseção) para fora.' }
   },
-  { // 1 Proposições
+  { // O que é proposição
     imersao: {
-      exemplos: [['"O Brasil fica na América."', 'é proposição'], ['"Que horas são?"', 'não é'], ['"2 + 2 = 5"', 'é proposição'], ['"Feche a janela!"', 'não é']],
-      pergunta: 'O que as frases que são proposição têm em comum?',
-      opcoes: ['Dá para dizer se são verdadeiras ou falsas', 'São todas verdadeiras', 'São frases curtas'],
-      c: 0, e: 'Proposição é a frase que pode ser julgada V ou F, mesmo que seja falsa, como "2 + 2 = 5". Perguntas e ordens não podem ser julgadas.'
+      exemplos: [["\"O Brasil fica na América.\"", "é proposição"], ["\"Que horas são?\"", "não é"], ["\"2 + 2 = 5\"", "é proposição"], ["\"Feche a janela!\"", "não é"]],
+      pergunta: "O que as frases que são proposição têm em comum?",
+      opcoes: ["São todas verdadeiras", "Dá para dizer se são verdadeiras ou falsas", "São frases curtas"],
+      c: 1, e: "Proposição é a oração declarativa que pode ser julgada V ou F, mesmo que seja falsa, como \"2 + 2 = 5\". Perguntas e ordens não podem ser julgadas."
     },
-    pares: [['∧', 'e'], ['∨', 'ou'], ['→', 'se… então'], ['↔', 'se e somente se']],
-    caderno: { regras: ['Proposição: frase declarativa que pode ser V ou F.', 'Não são proposições: perguntas, ordens, exclamações e sentenças abertas (x + 2 = 5).', 'Conectivos: ∧ e, ∨ ou, ⊻ ou… ou…, → se… então, ↔ se e somente se, ~ não.'], dica: 'Se a frase tem uma variável sem valor (x, ele, ela), ela é aberta e não é proposição.' }
+    pares: [["\"Que lindo!\"", "exclamação"], ["\"Feche a porta.\"", "ordem"], ["\"x + 1 = 7\"", "sentença aberta"], ["\"Só sei que nada sei.\"", "paradoxo"]],
+    caderno: { regras: ["Proposição: oração declarativa, com verbo, que pode ser V ou F.", "Não são: perguntas, exclamações, ordens, frases sem verbo, sentenças abertas e paradoxos.", "Frase falsa ou negativa continua sendo proposição."], dica: "Pergunte: \"dá para dizer se isso é verdade ou mentira?\" Se sim, é proposição." }
   },
   { // 2 Tabela-verdade
     imersao: {
@@ -246,5 +246,35 @@ export const CONTEUDO: ConteudoExtra[] = [
     },
     pares: [["ano comum", "data anda 1 dia"], ["ano bissexto", "data anda 2 dias"], ["1900", "não foi bissexto"], ["2000", "foi bissexto"]],
     caderno: { regras: ["Garantir k iguais: (k − 1) × tipos + 1.", "Bissexto: divisível por 4; se terminar em 00, só se for divisível por 400.", "A data anda 1 dia da semana em ano comum e 2 em ano bissexto."], dica: "Em problemas de \"garantir\", pense sempre no azar máximo: tudo dá errado até a última retirada." }
+  },
+  { // Princípios da lógica
+    imersao: {
+      exemplos: [["\"Brasília é a capital do Brasil.\"", "só pode ser V"], ["\"2 + 2 = 5\"", "só pode ser F"], ["\"Choveu e não choveu, no mesmo lugar e hora.\"", "impossível ser V"]],
+      pergunta: "Quantos valores lógicos uma proposição tem ao mesmo tempo?",
+      opcoes: ["Três: V, F ou talvez", "Dois: V e F", "Exatamente um: V ou F"],
+      c: 2, e: "Cada proposição tem exatamente um valor: V ou F (terceiro excluído), nunca os dois juntos (não contradição)."
+    },
+    pares: [["identidade", "V é V, F é F"], ["não contradição", "nunca V e F juntos"], ["terceiro excluído", "ou V ou F"], ["lógica bivalente", "só dois valores"]],
+    caderno: { regras: ["Identidade: o que é V é V; o que é F é F.", "Não contradição: nunca V e F ao mesmo tempo.", "Terceiro excluído: ou V ou F, sem terceira opção.", "Lógica bivalente: só dois valores, V e F."], dica: "Nomes que não existem, como \"primeiro excluído\" e \"princípio da verdade\", são as pegadinhas mais comuns." }
+  },
+  { // Simples, compostas e conectivos
+    imersao: {
+      exemplos: [["\"Pedro é alto.\"", "simples"], ["\"Pedro é alto e Ana é baixa.\"", "composta"], ["\"Se chove, então molha.\"", "composta"]],
+      pergunta: "O que torna uma proposição composta?",
+      opcoes: ["Ser verdadeira", "Ser uma frase longa", "Ter um conectivo ligando duas ideias"],
+      c: 2, e: "Composta é a que junta ideias com conectivos (e, ou, se… então…). O tamanho da frase não importa."
+    },
+    pares: [["∧", "e / mas"], ["∨", "ou"], ["⊻", "ou… ou…"], ["↔", "se, e somente se"]],
+    caderno: { regras: ["Simples: uma ideia. Composta: ideias ligadas por conectivo.", "∧ e/mas · ∨ ou · ⊻ ou… ou… · → se…, então… · ↔ se, e somente se.", "Categóricas: todo, algum, nenhum."], dica: "Sujeito duplo (\"Maria e Pedro são turistas\") já forma uma composta: são duas ideias." }
+  },
+  { // Sentenças abertas e paradoxos
+    imersao: {
+      exemplos: [["\"x + 1 = 7\"", "aberta"], ["\"x + 1 = 7, para x = 6\"", "fechada (V)"], ["\"Ela é médica.\"", "aberta"], ["\"Ana é médica.\"", "fechada"]],
+      pergunta: "O que fecha uma sentença aberta?",
+      opcoes: ["Dar valor à variável ou dizer quem é o sujeito", "Transformar em pergunta", "Colocar ponto final"],
+      c: 0, e: "Sem saber quem é \"ela\" ou quanto vale x, não há como julgar. Definindo isso, a frase vira proposição."
+    },
+    pares: [["\"x + 2 = 5\"", "aberta"], ["\"Esta frase é falsa.\"", "paradoxo"], ["\"3 + 2 = 5\"", "fechada"], ["\"Ela é alta.\"", "sujeito indefinido"]],
+    caderno: { regras: ["Aberta: variável ou sujeito indefinido (x, ele, ela). Não é proposição.", "Dando valor à variável, vira proposição (fechada).", "Paradoxos não são proposições."], dica: "\"Ele\", \"ela\" ou \"isso\" sem referência deixam a frase aberta, mesmo sem nenhum x." }
   }
 ];

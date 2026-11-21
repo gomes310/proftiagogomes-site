@@ -674,3 +674,5 @@ a.nivel-barra { color: inherit; text-decoration: none; min-height: 44px; display
 .prova-tema { color: var(--tinta-2); }
 .tema-caminho .guia { top: 54px; }
 @media (max-width: 420px) { .topo-tema .emblema { display: none; } }
+.nivel-chip { white-space: nowrap; }
+@media (max-width: 420px) { .tema-trilha .unidade-cab { grid-template-columns: auto 1fr; } .tema-trilha .btn-caderno { grid-column: 1 / -1; flex-direction: row; min-height: 44px; } }

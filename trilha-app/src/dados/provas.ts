@@ -1,9 +1,12 @@
 // Questões de concursos resolvidas em vídeo no canal do Prof. Tiago Gomes.
 // Fonte única: data/questoes.json (gerado das descrições dos vídeos). Só entram as completas e sem figura.
 import bruto from '../../../data/questoes.json';
+import apostilaProposicoes from './provas-proposicoes.json';
 
 export type QuestaoProva = {
-  id: string; // id do vídeo no YouTube
+  id: string;
+  video?: string; // id do vídeo de resolução no YouTube, quando existe
+  fonte?: string;
   banca: string;
   ano?: number;
   orgao?: string;
@@ -18,12 +21,13 @@ type Bruta = { video: string; banca?: string | null; ano?: number | null; orgao?
 
 const limpar = (t: string) => t.replace(/\s+/g, ' ').trim();
 
-export const PROVAS: QuestaoProva[] = ((bruto as { questoes: Bruta[] }).questoes)
+const DO_CANAL: QuestaoProva[] = ((bruto as { questoes: Bruta[] }).questoes)
   .filter((q) => q.video && q.enunciado && q.alternativas && q.alternativas.length >= 2 && q.gabarito
     && !(q.lacunas || []).some((l) => /figura|imagem|tabela/i.test(l))
     && q.alternativas.some(([l]) => l.toLowerCase() === String(q.gabarito).toLowerCase()))
   .map((q) => ({
     id: q.video,
+    video: q.video,
     banca: q.banca || 'Banca não informada',
     ano: q.ano ?? undefined,
     orgao: q.orgao ?? undefined,
@@ -33,6 +37,13 @@ export const PROVAS: QuestaoProva[] = ((bruto as { questoes: Bruta[] }).questoes
     gabarito: String(q.gabarito).toLowerCase(),
     numero: q.numero_serie ?? undefined
   }));
+
+// apostila do professor: 181 questões de proposições com gabarito (sem vídeo)
+type Apostila = { id: string; banca: string; ano: number | null; orgao: string; tema: string; enunciado: string; alternativas: [string, string][]; gabarito: string };
+const DA_APOSTILA: QuestaoProva[] = (apostilaProposicoes as unknown as { questoes: Apostila[] }).questoes.map((q) => ({
+  ...q, ano: q.ano ?? undefined, enunciado: q.enunciado.trim(), alternativas: q.alternativas.map(([l, t]) => [l, t.trim()] as [string, string]), fonte: 'apostila'
+}));
+export const PROVAS: QuestaoProva[] = [...DO_CANAL, ...DA_APOSTILA];
 
 const contar = (xs: string[]) => [...xs.reduce((m, x) => m.set(x, (m.get(x) || 0) + 1), new Map<string, number>())].sort((a, b) => b[1] - a[1]);
 export const BANCAS_PROVA = contar(PROVAS.map((q) => q.banca));
