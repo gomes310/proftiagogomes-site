@@ -29,6 +29,8 @@ export interface Estado {
   srs: Record<string, { cx: number; prox: string; erros: number }>; // revisão espaçada por questão "licao-indice"
   recordeRelampago: number;
   baus: number[]; // unidades cujo baú já foi aberto
+  provas: Record<string, { t: number; a: number; u: 0 | 1 }>; // questões de prova: tentativas, acertos, última certa?
+  simulados: { d: number; a: number; n: number; s: number }[]; // data, acertos, total, segundos (últimos 20)
   atualizado: number;
 }
 
@@ -52,7 +54,7 @@ function novo(): Estado {
   return {
     v: 2, xp: 0, estrelas: {}, ofensiva: 0, maiorOfensiva: 0, ultimoDia: null, xpDia: {}, respostas: 0, acertos: 0,
     maiorCombo: 0, perfeitas: 0, licoesFeitas: 0, meta: META_PADRAO,
-    missoes: { dia: diaLocal(), feitas: [], combo: 0, licoes: 0, perfeitas: 0 }, conquistas: {}, moedas: 0, escudos: 0, diasEscudo: [], srs: {}, recordeRelampago: 0, baus: [], atualizado: 0
+    missoes: { dia: diaLocal(), feitas: [], combo: 0, licoes: 0, perfeitas: 0 }, conquistas: {}, moedas: 0, escudos: 0, diasEscudo: [], srs: {}, recordeRelampago: 0, baus: [], provas: {}, simulados: [], atualizado: 0
   };
 }
 
@@ -83,6 +85,9 @@ export function normalizar(bruto: unknown): Estado {
   e.atualizado = num(s.atualizado, 1e14);
   e.moedas = num(s.moedas, 1e6); e.escudos = Math.min(2, num(s.escudos, 2)); e.recordeRelampago = num(s.recordeRelampago, 1000);
   e.baus = Array.isArray(s.baus) ? [...new Set(s.baus.filter((u) => Number.isInteger(u) && u >= 0 && u < UNIDADES.length))] : [];
+  e.provas = {};
+  if (s.provas && typeof s.provas === 'object') for (const [k, v] of Object.entries(s.provas)) { const x = v as { t?: number; a?: number; u?: number }; if (/^[\w-]{6,20}$/.test(k) && x) e.provas[k] = { t: Math.max(0, Math.floor(Number(x.t) || 0)), a: Math.max(0, Math.floor(Number(x.a) || 0)), u: x.u ? 1 : 0 }; }
+  e.simulados = Array.isArray(s.simulados) ? s.simulados.filter((x) => x && Number.isFinite(x.d) && Number.isFinite(x.a) && Number.isFinite(x.n)).slice(-20) : [];
   e.diasEscudo = Array.isArray(s.diasEscudo) ? s.diasEscudo.filter((d) => typeof d === 'string').slice(-60) : [];
   if (s.srs && typeof s.srs === 'object') for (const [k, v] of Object.entries(s.srs)) {
     if (/^\d+-\d+$/.test(k) && v && typeof v === 'object') e.srs[k] = { cx: Math.min(5, Math.max(1, num(v.cx, 5) || 1)), prox: normalizaDia(v.prox) || diaLocal(), erros: num(v.erros, 1000) };
@@ -164,7 +169,9 @@ export const CONQUISTAS: Conquista[] = [
   { id: 'relampago', nome: 'Raio', desc: '10 acertos no desafio relâmpago', simbolo: '↯', cor: 'ouro', ok: (e) => e.recordeRelampago >= 10 },
   { id: 'revisor', nome: 'Memória de elefante', desc: 'Levou 10 questões à caixa 3 da revisão', simbolo: '↻', cor: 'verde', ok: (e) => Object.values(e.srs).filter((v) => v.cx >= 3).length >= 10 },
   { id: 'trilha', nome: 'Trilha completa', desc: 'Terminou as 11 lições', simbolo: '∀', cor: 'ouro', ok: (e) => Object.keys(e.estrelas).length === LICOES.length },
-  { id: 'estrelas', nome: 'Colecionador', desc: 'Todas as lições com 3 estrelas', simbolo: '★', cor: 'ouro', ok: (e) => LICOES.every((_, i) => e.estrelas[i] === 3) }
+  { id: 'estrelas', nome: 'Colecionador', desc: 'Todas as lições com 3 estrelas', simbolo: '★', cor: 'ouro', ok: (e) => LICOES.every((_, i) => e.estrelas[i] === 3) },
+  { id: 'prova10', nome: 'Concurseiro', desc: 'Acerte 10 questões de prova', simbolo: '10', cor: 'azul', ok: (e) => Object.values(e.provas || {}).filter((p) => p.a > 0).length >= 10 },
+  { id: 'aprovado', nome: 'Aprovado!', desc: 'Tire 70% ou mais em um simulado', simbolo: '✓', cor: 'ouro', ok: (e) => (e.simulados || []).some((x) => x.n >= 5 && x.a / x.n >= 0.7) }
 ];
 
 // ---------- eventos ----------
@@ -280,6 +287,9 @@ export function mesclar(a: Estado, b: Estado): Estado {
   for (const [k, v] of Object.entries(outro.srs)) if (!r.srs[k]) r.srs[k] = v;
   r.recordeRelampago = Math.max(a.recordeRelampago, b.recordeRelampago);
   r.baus = [...new Set([...a.baus, ...b.baus])];
+  r.provas = { ...a.provas };
+  for (const [k, v] of Object.entries(b.provas)) { const x = r.provas[k]; r.provas[k] = !x || v.t > x.t ? v : x; }
+  r.simulados = [...a.simulados, ...b.simulados.filter((x) => !a.simulados.some((y) => y.d === x.d))].sort((x, y) => x.d - y.d).slice(-20);
   r.atualizado = Math.max(a.atualizado, b.atualizado);
   return r;
 }
@@ -293,4 +303,37 @@ export function abrirBau(u: number): number {
   if (e.baus.includes(u) || !bauLiberado(e, u)) return 0;
   e.baus.push(u); e.moedas += MOEDAS_BAU; e.atualizado = Date.now(); definir(e);
   return MOEDAS_BAU;
+}
+
+// Questões de prova (banco do canal): cada resposta conta para o histórico, XP e meta do dia
+export function registrarProva(id: string, ok: boolean, valeXp = true) {
+  const e = normalizar(estado);
+  const p = e.provas[id] || { t: 0, a: 0, u: 0 };
+  e.provas[id] = { t: p.t + 1, a: p.a + (ok ? 1 : 0), u: ok ? 1 : 0 };
+  let ganho = 0;
+  if (valeXp) {
+    const hoje = diaLocal();
+    ganho = ok ? (p.t === 0 ? 5 : 2) : 1; // vale mais acertar de primeira
+    if (e.ultimoDia !== hoje) { e.ofensiva = e.ultimoDia === diaAntes(hoje) ? e.ofensiva + 1 : 1; e.ultimoDia = hoje; }
+    e.maiorOfensiva = Math.max(e.maiorOfensiva, e.ofensiva);
+    e.xp += ganho; e.xpDia[hoje] = (e.xpDia[hoje] || 0) + ganho;
+    if (ok) e.moedas += 1;
+    for (const c of CONQUISTAS) if (!e.conquistas[c.id] && c.ok(e)) e.conquistas[c.id] = hoje;
+  }
+  e.atualizado = Date.now(); definir(e);
+  return ganho;
+}
+export function registrarSimulado(respostas: { id: string; ok: boolean }[], segundos: number) {
+  const e = normalizar(estado);
+  const hoje = diaLocal();
+  const a = respostas.filter((x) => x.ok).length;
+  for (const x of respostas) { const p = e.provas[x.id] || { t: 0, a: 0, u: 0 }; e.provas[x.id] = { t: p.t + 1, a: p.a + (x.ok ? 1 : 0), u: x.ok ? 1 : 0 }; }
+  const ganho = a * 4 + 10;
+  if (e.ultimoDia !== hoje) { e.ofensiva = e.ultimoDia === diaAntes(hoje) ? e.ofensiva + 1 : 1; e.ultimoDia = hoje; }
+  e.maiorOfensiva = Math.max(e.maiorOfensiva, e.ofensiva);
+  e.xp += ganho; e.xpDia[hoje] = (e.xpDia[hoje] || 0) + ganho; e.moedas += a;
+  e.simulados = [...e.simulados, { d: Date.now(), a, n: respostas.length, s: Math.round(segundos) }].slice(-20);
+  for (const c of CONQUISTAS) if (!e.conquistas[c.id] && c.ok(e)) e.conquistas[c.id] = hoje;
+  e.atualizado = Date.now(); definir(e);
+  return ganho;
 }

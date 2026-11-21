@@ -10,13 +10,15 @@ import { Meta, Missoes, Status } from './componentes/Widgets';
 import { sincronizarAgora, useSessao } from './api';
 import { APP } from './plataforma';
 import { Icone } from './componentes/Icones';
+import Provas from './telas/Provas';
 import BoasVindas, { jaViuBoasVindas } from './telas/BoasVindas';
 import { aoVoltar } from './nativo';
 import { obter } from './estado';
 
-const ROTAS = ['', 'praticar', 'ranking', 'painel', 'entrar'] as const;
+const ROTAS = ['', 'praticar', 'provas', 'ranking', 'painel', 'entrar'] as const;
 type Rota = (typeof ROTAS)[number];
-const lerRota = (): Rota => { const r = location.hash.replace(/^#\/?/, '') as Rota; return ROTAS.includes(r) ? r : ''; };
+const lerRota = (): Rota => { const r = location.hash.replace(/^#\/?/, '').split('/')[0] as Rota; return ROTAS.includes(r) ? r : ''; };
+const lerTema = () => { const p = location.hash.replace(/^#\/?/, '').split('/'); return p[0] === 'provas' && p[1] ? decodeURIComponent(p[1]) : ''; };
 
 const ICONES: Record<string, React.ReactNode> = {
   '': <Icone nome="trilha" tamanho={26} />,
@@ -47,7 +49,7 @@ export default function App() {
   }, []);
   useEffect(() => { if (sessao) void sincronizarAgora().catch(() => {}); }, [sessao?.token]);
   useEffect(() => {
-    document.title = { '': 'Trilha do RLM', praticar: 'Praticar · Trilha do RLM', ranking: 'Ranking · Trilha do RLM', painel: 'Meu painel · Trilha do RLM', entrar: 'Entrar · Trilha do RLM' }[rota];
+    document.title = { '': 'Trilha do RLM', praticar: 'Praticar · Trilha do RLM', provas: 'Questões de prova · Trilha do RLM', ranking: 'Ranking · Trilha do RLM', painel: 'Meu painel · Trilha do RLM', entrar: 'Entrar · Trilha do RLM' }[rota];
   }, [rota]);
 
   const irPara = (r: string) => { location.hash = r ? '#/' + r : '#/'; };
@@ -66,7 +68,7 @@ export default function App() {
       <div className="wrap-largo grade-app">
         <nav className="nav-lateral" aria-label="Trilha">
           {itens.map(([r, nome]) => (
-            <a key={r} href={'#/' + r} className={rota === r ? 'ativo' : ''} aria-current={rota === r ? 'page' : undefined}>{ICONES[r]}<span>{nome}</span></a>
+            <a key={r} href={'#/' + r} className={rota === r || (r === 'praticar' && rota === 'provas') ? 'ativo' : ''} aria-current={rota === r ? 'page' : undefined}>{ICONES[r]}<span>{nome}</span></a>
           ))}
           {!sessao && <a href="#/entrar" className={'entrar-link' + (rota === 'entrar' ? ' ativo' : '')}>Entrar</a>}
         </nav>
@@ -74,6 +76,7 @@ export default function App() {
         <main id="conteudo">
           {rota === '' && <Trilha abrir={setLicao} irPara={irPara} />}
           {rota === 'praticar' && <Praticar irPara={irPara} iniciar={(tipo, ids) => setSessao2({ tipo, ids, n: Date.now() })} />}
+          {rota === 'provas' && <Provas irPara={irPara} temaInicial={lerTema()} key={lerTema()} />}
           {rota === 'ranking' && <Ranking irPara={irPara} />}
           {rota === 'painel' && <Painel irPara={irPara} />}
           {rota === 'entrar' && <Entrar irPara={irPara} />}
@@ -94,7 +97,7 @@ export default function App() {
 
       <nav className="nav-inferior" aria-label="Trilha">
         {itens.map(([r, nome]) => (
-          <a key={r} href={'#/' + r} className={rota === r ? 'ativo' : ''} aria-current={rota === r ? 'page' : undefined}>{ICONES[r]}<span>{nome}</span></a>
+          <a key={r} href={'#/' + r} className={rota === r || (r === 'praticar' && rota === 'provas') ? 'ativo' : ''} aria-current={rota === r ? 'page' : undefined}>{ICONES[r]}<span>{nome}</span></a>
         ))}
       </nav>
 

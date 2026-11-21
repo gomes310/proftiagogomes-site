@@ -5,6 +5,7 @@ import { apagarConta, mudarApelido, sair, useSessao, ErroApi } from '../api';
 import { IconeEstrela, IconeFogo, Meta, Missoes } from '../componentes/Widgets';
 import { Icone, Selo } from '../componentes/Icones';
 import { InterruptorLeitura } from '../componentes/Voz';
+import Desempenho from '../componentes/Desempenho';
 import { falar } from '../voz';
 import { APP } from '../plataforma';
 import { lerLembrete, salvarLembrete } from '../nativo';
@@ -161,6 +162,8 @@ export default function Painel({ irPara }: { irPara: (r: string) => void }) {
       </div>
 
       <div className="so-celular"><Meta /><Missoes /></div>
+
+      <Desempenho e={e} irPara={irPara} />
 
       <Calendario />
 

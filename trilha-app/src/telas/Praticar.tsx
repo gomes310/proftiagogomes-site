@@ -5,6 +5,7 @@ import { CONTEUDO } from '../dados/imersao';
 import { PRECO_ESCUDO, comprarEscudo, questoesParaRevisar, useEstado } from '../estado';
 import Lumi from '../componentes/Lumi';
 import { Icone } from '../componentes/Icones';
+import { BANCAS_PROVA, PROVAS } from '../dados/provas';
 import { som } from '../som';
 
 function sortear<T>(a: T[], n: number) { const r = [...a]; for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; } return r.slice(0, n); }
@@ -24,6 +25,7 @@ export default function Praticar({ iniciar, irPara }: { iniciar: (tipo: 'revisao
         <h2>Primeiro, uma lição</h2>
         <p>A prática usa o que você já estudou. Conclua a primeira lição da trilha para liberar a revisão, o desafio relâmpago e o caderno de regras.</p>
         <button type="button" className="btn btn-ok" onClick={() => irPara('')}>Ir para a trilha</button>
+        <p className="nota">Já estuda para concurso? <button type="button" className="link" onClick={() => irPara('provas')}>Vá direto às {PROVAS.length} questões de prova</button>.</p>
       </div>
     </div>
   );
@@ -31,6 +33,15 @@ export default function Praticar({ iniciar, irPara }: { iniciar: (tipo: 'revisao
   return (
     <div className="praticar">
       <h1>Praticar</h1>
+
+      <section className="card pratica-card destaque-provas" aria-labelledby="prov-t">
+        <div className="pratica-ico"><Icone nome="precisao" tamanho={32} /></div>
+        <div className="pratica-txt">
+          <h2 id="prov-t">Questões de prova</h2>
+          <p>{PROVAS.length} questões reais de concursos ({BANCAS_PROVA.slice(0, 3).map(([b]) => b).join(', ')} e outras), com resolução em vídeo e simulado cronometrado.</p>
+        </div>
+        <button type="button" className="btn btn-pri" onClick={() => irPara('provas')}>Resolver questões</button>
+      </section>
 
       <section className="card pratica-card destaque-rev" aria-labelledby="rev-t">
         <div className="pratica-ico"><Icone nome="revisao" tamanho={32} /></div>
