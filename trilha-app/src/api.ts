@@ -96,3 +96,27 @@ ouvirMudancas((e: Estado) => {
     } catch { /* fica salvo no aparelho e sobe na próxima vez */ }
   });
 });
+
+// ---------- comunidade: relatos dos testadores ----------
+export type TipoRelato = 'questao' | 'explicacao' | 'ideia' | 'app';
+export type StatusRelato = 'novo' | 'votacao' | 'fazendo' | 'feito' | 'arquivado';
+export interface Relato { id: number; criado: number; tipo: TipoRelato; onde: string; texto: string; status: StatusRelato; titulo: string | null; resposta: string | null; atualizado: number; apelido?: string | null; contexto?: string | null; votos?: number }
+export interface Ideia { id: number; titulo: string; resposta: string | null; status: StatusRelato; votos: number; meu: number }
+export interface Comunidade { ideias: Ideia[]; feitos: { id: number; titulo: string; resposta: string | null; atualizado: number }[]; totalResolvidos: number; admin: boolean }
+
+export function enviarRelato(tipo: TipoRelato, onde: string, texto: string) {
+  const contexto = {
+    versao: __VERSAO__,
+    plataforma: (globalThis as { Capacitor?: unknown }).Capacitor ? 'android' : 'web',
+    tela: location.hash || '#/',
+    largura: innerWidth,
+    navegador: navigator.userAgent.slice(0, 160)
+  };
+  return chamar<{ ok: true; id: number; comConta: boolean }>('/relatos', { corpo: { tipo, onde, texto, contexto } });
+}
+export const meusRelatos = () => chamar<{ relatos: Relato[] }>('/relatos');
+export const buscarComunidade = () => chamar<Comunidade>('/comunidade');
+export const votarIdeia = (id: number) => chamar<{ ok: true; meu: boolean; votos: number }>('/comunidade/votar', { corpo: { id } });
+export const relatosParaModerar = (status: StatusRelato) => chamar<{ relatos: Relato[]; contagem: Partial<Record<StatusRelato, number>> }>('/comunidade/moderar?status=' + status);
+export const moderarRelato = (id: number, status: StatusRelato, titulo?: string, resposta?: string) =>
+  chamar<{ ok: true }>('/comunidade/moderar', { corpo: { id, status, titulo, resposta } });

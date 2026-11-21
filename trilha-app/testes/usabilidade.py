@@ -67,7 +67,7 @@ with sync_playwright() as p:
     for _ in range(60):
         if pg.locator('.fim').count(): break
         if pg.locator('.revelar').count(): tocar('.revelar'); continue
-        if 'Sua vez' in (pg.locator('.contador').first.inner_text() if pg.locator('.contador').count() else '') and pg.locator('.opcoes .opcao:not([disabled])').count() and not pg.locator('.licao-base.acerto').count():
+        if 'Sua vez' in (pg.locator('.mp-fase').first.inner_text() if pg.locator('.mp-fase').count() else '') and pg.locator('.opcoes .opcao:not([disabled])').count() and not pg.locator('.licao-base.acerto').count():
             if not r['telas'].get('02c-sua-vez'): auditar_tela(pg, '02c-sua-vez')
             tocar('.opcoes .opcao:not([disabled]) >> nth=0'); continue
         if pg.locator('.imersao').count() and pg.locator('.opcoes .opcao:not([disabled])').count():

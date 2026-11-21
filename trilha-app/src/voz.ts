@@ -34,7 +34,7 @@ export function falavel(bruto: string): string {
 export function textoDoBloco(el: Element | null): string {
   if (!el) return '';
   const c = el.cloneNode(true) as Element;
-  c.querySelectorAll('[aria-hidden="true"], .sr, svg, .nao-ler, button.btn-ouvir').forEach((n) => n.remove());
+  c.querySelectorAll('[aria-hidden="true"], .sr, svg, .nao-ler, button.btn-ouvir, .rotulo, .contador, .ex-rotulo, .revelar, .voltar, .passo-topo').forEach((n) => n.remove());
   c.querySelectorAll('.opcoes .opcao, .vf .opcao').forEach((o, k) => o.prepend((o.closest('.vf') ? '' : 'Alternativa ' + (k + 1) + ': ')));
   c.querySelectorAll('p, li, h1, h2, h3, h4, .opcao, button, div, td, th, tr, strong').forEach((n) => n.append('. '));
   return falavel(c.textContent || '');

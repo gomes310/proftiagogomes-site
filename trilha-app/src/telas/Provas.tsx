@@ -1,6 +1,7 @@
 // Questões de prova: banco de questões reais de concursos, resolvidas em vídeo no canal.
 // Inspirado no que QConcursos e TEC fazem bem (filtros por banca/assunto, caderno de erros, simulado),
 // com o diferencial da resolução em vídeo do próprio professor.
+import { BotaoReportar } from '../componentes/Reportar';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { BANCAS_PROVA, BANCA_DO_PERFIL, PROVAS, TEMAS_PROVA, type QuestaoProva } from '../dados/provas';
 import { registrarProva, registrarSimulado, useEstado } from '../estado';
@@ -264,6 +265,7 @@ export default function Provas({ irPara, temaInicial }: { irPara: (r: string) =>
           {revelar && q.video && <VideoResolucao id={q.video} titulo={q.tema} />}
           {revelar && q.resolucao && <div className="resolucao"><strong>Resolução</strong><p>{q.resolucao}</p></div>}
           {revelar && !q.video && !q.resolucao && <p className="nota">Gabarito oficial da banca.</p>}
+          {revelar && <BotaoReportar onde={'Questão ' + q.id + ' (Banca ' + q.banca + ', ' + q.tema + ')'} classe="link-relato" rotulo />}
           <div className="prova-acoes">
             {revelar
               ? <button type="button" className="btn btn-ok largo" onClick={proxima}>Próxima questão</button>

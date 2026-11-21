@@ -25,6 +25,8 @@ export const onRequestDelete = rota(async ({ request, env }) => {
     env.DB.prepare('DELETE FROM xp_semana WHERE usuario_id = ?').bind(u.id),
     env.DB.prepare('DELETE FROM xp_dia WHERE usuario_id = ?').bind(u.id),
     env.DB.prepare('DELETE FROM sessoes WHERE usuario_id = ?').bind(u.id),
+    env.DB.prepare('DELETE FROM votos WHERE usuario_id = ?').bind(u.id),
+    env.DB.prepare('UPDATE relatos SET usuario_id = NULL WHERE usuario_id = ?').bind(u.id),
     env.DB.prepare('DELETE FROM usuarios WHERE id = ?').bind(u.id)
   ]);
   return json(200, { ok: true }, request);

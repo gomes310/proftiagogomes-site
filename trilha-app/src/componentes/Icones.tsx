@@ -6,7 +6,7 @@ export type NomeIcone =
   | 'ofensiva' | 'xp' | 'estrela' | 'moeda' | 'escudo'
   | 'trilha' | 'praticar' | 'ranking' | 'painel'
   | 'missao' | 'missaoFeita' | 'revisao' | 'relampago' | 'caderno' | 'cadeado' | 'verdade'
-  | 'som' | 'semSom' | 'voz' | 'microfone' | 'relogio' | 'venn' | 'nivel' | 'meta' | 'loja' | 'precisao';
+  | 'som' | 'semSom' | 'voz' | 'microfone' | 'relogio' | 'venn' | 'nivel' | 'meta' | 'loja' | 'precisao' | 'bandeira' | 'comunidade';
 
 const L = { fill: 'none', stroke: 'currentColor', strokeWidth: 2.2, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
 
@@ -57,6 +57,10 @@ const DESENHOS: Record<NomeIcone, ReactNode> = {
   meta: <><path d="M5.5 21V3.5" stroke="#172238" strokeWidth="2.2" strokeLinecap="round" /><path d="M5.5 4h12.5l-2.6 4.2 2.6 4.3H5.5z" fill="#E8590C" /><path d="m9.2 6 2 3.9 2-3.9" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></>,
   loja: <><g {...L}><path d="M5 8h14l-1.2 12.5H6.2z" /><path d="M9 8V6.5a3 3 0 0 1 6 0V8" /></g><g fill="currentColor"><circle cx="12" cy="12.2" r="1.1" /><circle cx="10.3" cy="15.4" r="1.1" /><circle cx="13.7" cy="15.4" r="1.1" /></g></>,
   // alvo com "≡" (equivalente, acertou em cheio)
+  // bandeira de aviso com "?": algo aqui merece uma olhada
+  bandeira: <g {...L}><path d="M5.5 21V3.5" /><path d="M5.5 4.5h12l-2.4 4 2.4 4h-12" /><path d="M10.2 7.1a1.5 1.5 0 1 1 1.9 1.4c-.4.2-.6.5-.6.9" strokeWidth="1.6" /></g>,
+  // três pessoas ligadas como um grafo: a comunidade
+  comunidade: <g {...L}><circle cx="12" cy="6" r="2.6" /><circle cx="5.5" cy="16.5" r="2.6" /><circle cx="18.5" cy="16.5" r="2.6" /><path d="M10.6 8.3 7 14.2M13.4 8.3l3.6 5.9M8.1 16.5h7.8" /></g>,
   precisao: <><circle cx="12" cy="12" r="9" fill="#FDE7D2" stroke="#E8590C" strokeWidth="2" /><path d="M8 9.5h8M8 12h8M8 14.5h8" stroke="#E8590C" strokeWidth="2" strokeLinecap="round" /></>
 };
 

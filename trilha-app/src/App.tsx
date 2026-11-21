@@ -11,11 +11,12 @@ import { sincronizarAgora, useSessao } from './api';
 import { APP } from './plataforma';
 import { Icone } from './componentes/Icones';
 import Provas from './telas/Provas';
+import Comunidade from './telas/Comunidade';
 import BoasVindas, { jaViuBoasVindas } from './telas/BoasVindas';
 import { aoVoltar } from './nativo';
 import { obter } from './estado';
 
-const ROTAS = ['', 'praticar', 'provas', 'ranking', 'painel', 'entrar'] as const;
+const ROTAS = ['', 'praticar', 'provas', 'ranking', 'comunidade', 'painel', 'entrar'] as const;
 type Rota = (typeof ROTAS)[number];
 const lerRota = (): Rota => { const r = location.hash.replace(/^#\/?/, '').split('/')[0] as Rota; return ROTAS.includes(r) ? r : ''; };
 const lerTema = () => { const p = location.hash.replace(/^#\/?/, '').split('/'); return p[0] === 'provas' && p[1] ? decodeURIComponent(p[1]) : ''; };
@@ -24,6 +25,7 @@ const ICONES: Record<string, React.ReactNode> = {
   '': <Icone nome="trilha" tamanho={26} />,
   praticar: <Icone nome="praticar" tamanho={26} />,
   ranking: <Icone nome="ranking" tamanho={26} />,
+  comunidade: <Icone nome="comunidade" tamanho={26} />,
   painel: <Icone nome="painel" tamanho={26} />
 };
 
@@ -49,11 +51,11 @@ export default function App() {
   }, []);
   useEffect(() => { if (sessao) void sincronizarAgora().catch(() => {}); }, [sessao?.token]);
   useEffect(() => {
-    document.title = { '': 'Trilha do RLM', praticar: 'Praticar · Trilha do RLM', provas: 'Questões de Concursos · Trilha do RLM', ranking: 'Ranking · Trilha do RLM', painel: 'Meu painel · Trilha do RLM', entrar: 'Entrar · Trilha do RLM' }[rota];
+    document.title = { '': 'Trilha do RLM', praticar: 'Praticar · Trilha do RLM', provas: 'Questões de Concursos · Trilha do RLM', ranking: 'Ranking · Trilha do RLM', comunidade: 'Comunidade · Trilha do RLM', painel: 'Meu painel · Trilha do RLM', entrar: 'Entrar · Trilha do RLM' }[rota];
   }, [rota]);
 
   const irPara = (r: string) => { location.hash = r ? '#/' + r : '#/'; };
-  const itens: [Rota, string][] = [['', 'Trilha'], ['praticar', 'Praticar'], ['ranking', 'Ranking'], ['painel', sessao ? 'Meu painel' : 'Painel']];
+  const itens: [Rota, string][] = [['', 'Trilha'], ['praticar', 'Praticar'], ['ranking', 'Ranking'], ['comunidade', 'Comunidade'], ['painel', sessao ? 'Meu painel' : 'Painel']];
 
   return (
     <div className={'app' + (APP ? ' no-app' : '')}>
@@ -78,6 +80,7 @@ export default function App() {
           {rota === 'praticar' && <Praticar irPara={irPara} iniciar={(tipo, ids) => setSessao2({ tipo, ids, n: Date.now() })} />}
           {rota === 'provas' && <Provas irPara={irPara} temaInicial={lerTema()} key={lerTema()} />}
           {rota === 'ranking' && <Ranking irPara={irPara} />}
+          {rota === 'comunidade' && <Comunidade irPara={irPara} />}
           {rota === 'painel' && <Painel irPara={irPara} />}
           {rota === 'entrar' && <Entrar irPara={irPara} />}
         </main>

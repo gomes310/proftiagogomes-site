@@ -16,6 +16,7 @@ import { SIMBOLO_UNIDADE } from '../estado';
 import { EmblemaTema, EscadaNivel } from '../componentes/Tema';
 import { NOME_NIVEL_ALUNO, nivelDaLicao, temaDaLicao } from '../estado';
 import { NOMES_NIVEL, varsTema } from '../dados/licoes';
+import { BotaoReportar } from '../componentes/Reportar';
 import { BotaoLeitura, BotaoMicrofone, LumiFalando, useLeituraAuto } from '../componentes/Voz';
 
 type Passo = { tipo: 'conceito'; k: number } | { tipo: 'suavez'; k: number } | { tipo: 'resumo' } | { tipo: 'lab' } | { tipo: 'pares' } | { tipo: 'vf' };
@@ -116,7 +117,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
     const f = (e: KeyboardEvent) => {
       const t = (e.target as HTMLElement).tagName;
       if (e.key === 'Escape') { onFechar(); return; }
-      if (t === 'INPUT' || (t === 'BUTTON' && e.key === 'Enter')) return;
+      if (t === 'INPUT' || t === 'TEXTAREA' || (t === 'BUTTON' && e.key === 'Enter')) return;
       if (e.key === 'Enter' && acaoOk) { e.preventDefault(); acaoRef.current?.click(); }
       else if (etapa === 'questao' && !verificado && /^[1-4]$/.test(e.key)) { const k = Number(e.key) - 1; if (k < fila[0].q.o.length) setEscolha(k); }
     };
@@ -127,35 +128,50 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
   // ---------- telas ----------
   let corpo: React.ReactNode = null;
   if (etapa === 'aprenda') {
+    const tema = temaDaLicao(idx);
     const topo = (
-      <div className="passo-topo">
-        <p className="rotulo">{UNIDADES[temaDaLicao(idx)].nome} · {NOMES_NIVEL[nivelDaLicao(idx)]} · {L.titulo}</p>
+      <div className="passo-topo nao-ler">
+        <span className="pilula-tema"><EmblemaTema t={tema} tamanho={22} />{UNIDADES[tema].nome} · {NOMES_NIVEL[nivelDaLicao(idx)]}</span>
         {passo > 0 && <button type="button" className="voltar" onClick={() => setPasso(passo - 1)}>‹ Voltar</button>}
+      </div>
+    );
+    const mapa = (atual: number, fase: string) => (
+      <div className="mapa-passos nao-ler" role="img" aria-label={'Passo ' + (atual + 1) + ' de ' + guia.length + ', ' + fase}>
+        {guia.map((_, k) => (
+          <span key={k} className={'mp-hex' + (k < atual ? ' feito' : k === atual ? ' atual' : '')}>{k < atual ? <Icone nome="verdade" tamanho={14} /> : k + 1}</span>
+        ))}
+        <span className="mp-fase">{fase}</span>
       </div>
     );
     if (p.tipo === 'conceito') {
       const g = guia[p.k];
-      corpo = <>{topo}<p className="contador">Passo {p.k + 1} de {guia.length} · Entenda</p>
-        <div className="guia-cab"><Lumi humor="falando" tamanho={52} className="guia-lumi" /><h2 id="licao-titulo">{g.titulo}</h2></div>
-        <p className="conceito" dangerouslySetInnerHTML={{ __html: marcar(g.conceito) }} />
+      corpo = <>{topo}{mapa(p.k, 'Entenda')}
+        <h2 id="licao-titulo" className="guia-titulo">{g.titulo}</h2>
+        <div className="lumi-fala">
+          <Lumi humor="falando" tamanho={84} className="lumi-fala-lumi" />
+          <p className="conceito balao" dangerouslySetInnerHTML={{ __html: marcar(g.conceito) }} />
+        </div>
         {g.exemplos.length > 0 && <>
-          <p className="ex-rotulo">{g.exemplos.length === 1 ? 'Exemplo' : 'Exemplos'}</p>
-          <ol className="ex-lista">
+          <ol className="ex-lista" aria-label={g.exemplos.length === 1 ? 'Exemplo' : 'Exemplos'}>
             {g.exemplos.slice(0, vistos).map((x, k) => (
               <li key={k} className={'ex-item' + (x.ok === false ? ' nao' : '')}>
-                <div className="ex-linha"><span className="ex-frase">{x.t}</span><b className="ex-tag">{x.r}</b></div>
-                <small className="ex-porque">{x.porque}</small>
+                <span className="ex-num" aria-hidden="true">{k + 1}</span>
+                <div className="ex-conteudo">
+                  <div className="ex-linha"><span className="ex-frase">{x.t}</span><b className="ex-tag">{x.ok === false ? '✗ ' : ''}{x.r}</b></div>
+                  <small className="ex-porque">{x.porque}</small>
+                </div>
               </li>
             ))}
           </ol>
-          {vistos < g.exemplos.length && <button type="button" className="revelar" onClick={() => { som('toque'); setVistos(vistos + 1); }}>Ver o próximo exemplo ({vistos + 1} de {g.exemplos.length})</button>}
+          {vistos < g.exemplos.length && <button type="button" className="revelar" onClick={() => { som('toque'); setVistos(vistos + 1); }}>
+            <span className="revelar-ic" aria-hidden="true">+</span>{vistos === 0 ? 'Ver o primeiro exemplo' : 'Ver o próximo exemplo'} <small>({vistos + 1} de {g.exemplos.length})</small></button>}
         </>}
       </>;
     } else if (p.tipo === 'suavez') {
       const sv = guia[p.k].suaVez!;
       const ordem = sv.o.map((_, k) => (k + idx + p.k) % sv.o.length);
-      corpo = <>{topo}<p className="contador">Passo {p.k + 1} de {guia.length} · Sua vez</p>
-        <h2 id="licao-titulo">{sv.p}</h2>
+      corpo = <>{topo}{mapa(p.k, 'Sua vez')}
+        <div className="sua-vez"><Lumi humor="pensando" tamanho={64} className="lumi-fala-lumi" /><div><span className="sua-vez-faixa nao-ler">Sua vez!</span><h2 id="licao-titulo">{sv.p}</h2></div></div>
         <div className="opcoes" role="group" aria-label="Sua resposta">
           {ordem.map((k, pos) => {
             const cls = acertou && k === sv.c ? ' certa' : erradas.includes(k) ? ' errada' : '';
@@ -165,8 +181,8 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
           })}
         </div></>;
     } else if (p.tipo === 'resumo') {
-      corpo = <>{topo}<p className="contador">Resumo</p>
-        <div className="guia-cab"><Lumi humor="feliz" tamanho={52} className="guia-lumi" /><h2 id="licao-titulo">O que você aprendeu</h2></div>
+      corpo = <>{topo}{mapa(guia.length, 'Resumo')}
+        <div className="guia-cab"><Lumi humor="festa" tamanho={72} className="guia-lumi" /><h2 id="licao-titulo">O que você aprendeu</h2></div>
         <ul className="resumo-lista">{C.caderno.regras.map((t, k) => <li key={k}><Icone nome="verdade" tamanho={18} /><span>{t}</span></li>)}</ul>
         <p className="resumo-dica"><strong>Dica do professor:</strong> {C.caderno.dica}</p>
         <p className="nota">Esse resumo fica guardado no Caderno de regras, na aba Praticar.</p></>;
@@ -249,6 +265,9 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
   else if (etapa === 'aprenda' && p.tipo === 'vf' && vf !== null) retorno = <><strong>{vf === E.vf.v ? 'Isso! Agora é hora de praticar.' : 'Quase! A resposta é ' + (E.vf.v ? 'verdadeiro' : 'falso') + '.'}</strong><Html h={E.vf.e} /></>;
   else if (etapa === 'aprenda' && p.tipo === 'conceito' && vistos < guia[p.k].exemplos.length) retorno = <span className="dica-base">Leia o exemplo e toque para ver o próximo.</span>;
 
+  const ondeRelato = 'Lição ' + (idx + 1) + ' (' + L.titulo + ') · ' + (etapa === 'aprenda'
+    ? (p.tipo === 'conceito' || p.tipo === 'suavez' ? 'passo ' + (p.k + 1) + ' "' + guia[p.k].titulo + '"' + (p.tipo === 'suavez' ? ' (Sua vez)' : '') : p.tipo)
+    : etapa === 'questao' ? 'exercício: ' + (verificado ? verificado.item : fila[0]).q.p.replace(/<[^>]+>/g, '').slice(0, 120) : 'fim');
   const chaveTela = etapa + '-' + passo + '-' + fila.length + (resultado ? '-fim' : '');
   useLeituraAuto(chaveTela, base ? chaveTela + base + (verificado ? respondidas : '') : '');
   return (
@@ -257,6 +276,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
         <button className="fechar" type="button" onClick={onFechar} aria-label="Sair da lição">×</button>
         <div className="trilho" aria-hidden="true"><span style={{ width: progresso * 100 + '%' }} /></div>
         {combo >= 2 && etapa === 'questao' && <span className="combo" aria-label={combo + ' acertos seguidos'}><Icone nome="ofensiva" tamanho={22} />{combo}</span>}
+        <BotaoReportar onde={ondeRelato} />
         <BotaoLeitura />
         <button className="fechar som" type="button" aria-pressed={sons} aria-label={sons ? 'Desligar sons' : 'Ligar sons'} onClick={() => setSons(alternarSom())}><Icone nome={sons ? 'som' : 'semSom'} /></button>
       </div>
