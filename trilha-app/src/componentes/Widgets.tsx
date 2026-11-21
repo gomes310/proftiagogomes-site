@@ -1,16 +1,24 @@
 import { Icone } from './Icones';
-import { CONQUISTAS, XP_NIVEL, missoesDoDia, mudarMeta, nivelDe, totalEstrelas, useEstado, xpHoje } from '../estado';
+import { CONQUISTAS, NOME_NIVEL_ALUNO, missoesDoDia, mudarMeta, nivelTema, totalEstrelas, useEstado, xpHoje } from '../estado';
+import { UNIDADES } from '../dados/licoes';
 
 export const IconeFogo = () => <Icone nome="ofensiva" />;
 export const IconeEstrela = () => <Icone nome="estrela" />;
 
 export function Status() {
   const e = useEstado();
-  const nivel = nivelDe(e.xp);
+  const nt = e.tema >= 0 ? nivelTema(e, e.tema) : 0;
   return (
     <div className="status-linha" aria-label="Seu progresso">
       <span className="chip" title={'Dias seguidos estudando' + (e.escudos ? ' · ' + e.escudos + ' escudo(s) guardado(s)' : '')}><IconeFogo />{e.ofensiva}{e.escudos > 0 && <Icone nome="escudo" tamanho={16} className="mini-escudo" />}<span className="sr">&nbsp;{e.ofensiva === 1 ? 'dia seguido' : 'dias seguidos'}</span></span>
-      <div className="nivel-barra"><small>Nível {nivel} · {e.xp} XP</small><div className="trilho" aria-hidden="true"><span style={{ width: (e.xp % XP_NIVEL) / XP_NIVEL * 100 + '%' }} /></div></div>
+      {e.tema >= 0 ? (
+        <a className="nivel-barra" href="#/" title="Seu nível neste tema">
+          <small><strong>{UNIDADES[e.tema].nome}</strong> · {NOME_NIVEL_ALUNO[nt]}</small>
+          <div className="trilho" aria-hidden="true"><span style={{ width: (nt / 4) * 100 + '%' }} /></div>
+        </a>
+      ) : (
+        <div className="nivel-barra"><small>{e.xp} XP · escolha um tema para começar</small><div className="trilho" aria-hidden="true"><span style={{ width: '0%' }} /></div></div>
+      )}
       <span className="chips-dir">
         <span className="chip" title="Estrelas conquistadas"><IconeEstrela />{totalEstrelas(e)}<span className="sr">&nbsp;estrelas</span></span>
         <a className="chip" href="#/praticar" title="Moedas (use na loja da aba Praticar)"><Icone nome="moeda" />{e.moedas}<span className="sr">&nbsp;moedas</span></a>

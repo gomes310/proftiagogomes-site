@@ -55,7 +55,9 @@ with sync_playwright() as p:
             if pg.locator('.bv-banca').count(): tocar('.bv-banca >> nth=0'); pg.wait_for_timeout(300); continue
             if pg.locator('.bv-horas').count(): tocar('.bv-base .btn:not(.btn-ok)'); continue
             tocar('.bv-base .btn-ok')
-    else: tocar('.no.atual')
+    if pg.locator('.temas-grade').count():
+        auditar_tela(pg, '01-escolher-tema'); tocar('.tema-card >> nth=0'); auditar_tela(pg, '01b-trilha-do-tema')
+    tocar('.no.atual')
     pg.wait_for_selector('.licao.aberta')
     r['tarefas']['T1 começar a 1ª lição (com boas-vindas)'] = {'toques': toques[0], 'segundos': round(time.time() - t0, 1), 'botao_comecar_visivel_sem_rolar': acima}
     auditar_tela(pg, '02-licao-ideia')

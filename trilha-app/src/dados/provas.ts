@@ -40,15 +40,3 @@ export const TEMAS_PROVA = contar(PROVAS.map((q) => q.tema));
 
 // banca escolhida na apresentação → nome no banco de questões
 export const BANCA_DO_PERFIL: Record<string, string> = { idecan: 'IDECAN', cebraspe: 'CEBRASPE', fgv: 'FGV', fcc: 'FCC', vunesp: 'VUNESP' };
-
-// lições da trilha ↔ temas do banco (para o desempenho por assunto)
-export const ASSUNTOS: { nome: string; licoes: number[]; temas: string[] }[] = [
-  { nome: 'Conjuntos', licoes: [0], temas: [] },
-  { nome: 'Proposições e conectivos', licoes: [1], temas: ['Proposições e conectivos'] },
-  { nome: 'Tabela-verdade', licoes: [2, 4], temas: ['Tabela-verdade', 'Tautologia, contradição e contingência'] },
-  { nome: 'Equivalências e negações', licoes: [3], temas: ['Equivalências e negações'] },
-  { nome: 'Argumentos e diagramas', licoes: [5, 6], temas: [] },
-  { nome: 'Associação, verdades e mentiras', licoes: [7], temas: ['Verdades e mentiras'] },
-  { nome: 'Sequências lógicas', licoes: [8], temas: ['Sequências lógicas'] },
-  { nome: 'Casa dos pombos e calendários', licoes: [9, 10], temas: ['Princípio da casa dos pombos', 'Datas e calendários'] }
-];

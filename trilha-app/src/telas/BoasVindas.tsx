@@ -158,7 +158,7 @@ export default function BoasVindas({ onFim, irPara }: { onFim: (comecar: boolean
       <div className="bv-base">
         {(passo === 1 || passo === 2) && <button type="button" className="btn btn-ok largo" onClick={() => setPasso(passo + 1)}>Continuar</button>}
         {passo === 3 && <p className="nota bv-dica">Toque na sua banca para continuar.</p>}
-        {passo === 4 && <button type="button" className="btn btn-ok largo" onClick={() => (APP ? setPasso(5) : concluir(true))}>{APP ? 'Continuar' : 'Começar a 1ª lição'}</button>}
+        {passo === 4 && <button type="button" className="btn btn-ok largo" onClick={() => (APP ? setPasso(5) : concluir(true))}>{APP ? 'Continuar' : 'Escolher meu tema'}</button>}
         {passo === 5 && <>
           <button type="button" className="btn btn-ok largo" onClick={() => void lembrete(true)}>Ativar lembrete às {hora}h</button>
           <button type="button" className="btn largo" onClick={() => void lembrete(false)}>Agora não</button>

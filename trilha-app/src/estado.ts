@@ -2,6 +2,7 @@
 // Compatível com o formato da versão 1 (chave 'trilha-rlm-v1').
 import { useSyncExternalStore } from 'react';
 import { LICOES, UNIDADES } from './dados/licoes';
+import { PROVAS } from './dados/provas';
 
 export const XP_NIVEL = 60;
 export const META_PADRAO = 30;
@@ -29,6 +30,7 @@ export interface Estado {
   srs: Record<string, { cx: number; prox: string; erros: number }>; // revisão espaçada por questão "licao-indice"
   recordeRelampago: number;
   baus: number[]; // unidades cujo baú já foi aberto
+  tema: number; // tema escolhido (-1 = ainda não escolheu)
   provas: Record<string, { t: number; a: number; u: 0 | 1 }>; // questões de prova: tentativas, acertos, última certa?
   simulados: { d: number; a: number; n: number; s: number }[]; // data, acertos, total, segundos (últimos 20)
   atualizado: number;
@@ -54,7 +56,7 @@ function novo(): Estado {
   return {
     v: 2, xp: 0, estrelas: {}, ofensiva: 0, maiorOfensiva: 0, ultimoDia: null, xpDia: {}, respostas: 0, acertos: 0,
     maiorCombo: 0, perfeitas: 0, licoesFeitas: 0, meta: META_PADRAO,
-    missoes: { dia: diaLocal(), feitas: [], combo: 0, licoes: 0, perfeitas: 0 }, conquistas: {}, moedas: 0, escudos: 0, diasEscudo: [], srs: {}, recordeRelampago: 0, baus: [], provas: {}, simulados: [], atualizado: 0
+    missoes: { dia: diaLocal(), feitas: [], combo: 0, licoes: 0, perfeitas: 0 }, conquistas: {}, moedas: 0, escudos: 0, diasEscudo: [], srs: {}, recordeRelampago: 0, baus: [], tema: -1, provas: {}, simulados: [], atualizado: 0
   };
 }
 
@@ -85,6 +87,7 @@ export function normalizar(bruto: unknown): Estado {
   e.atualizado = num(s.atualizado, 1e14);
   e.moedas = num(s.moedas, 1e6); e.escudos = Math.min(2, num(s.escudos, 2)); e.recordeRelampago = num(s.recordeRelampago, 1000);
   e.baus = Array.isArray(s.baus) ? [...new Set(s.baus.filter((u) => Number.isInteger(u) && u >= 0 && u < UNIDADES.length))] : [];
+  e.tema = Number.isInteger(s.tema) && (s.tema as number) >= 0 && (s.tema as number) < UNIDADES.length ? (s.tema as number) : -1;
   e.provas = {};
   if (s.provas && typeof s.provas === 'object') for (const [k, v] of Object.entries(s.provas)) { const x = v as { t?: number; a?: number; u?: number }; if (/^[\w-]{6,20}$/.test(k) && x) e.provas[k] = { t: Math.max(0, Math.floor(Number(x.t) || 0)), a: Math.max(0, Math.floor(Number(x.a) || 0)), u: x.u ? 1 : 0 }; }
   e.simulados = Array.isArray(s.simulados) ? s.simulados.filter((x) => x && Number.isFinite(x.d) && Number.isFinite(x.a) && Number.isFinite(x.n)).slice(-20) : [];
@@ -126,7 +129,33 @@ export function useEstado() {
 
 // ---------- derivados ----------
 export const nivelDe = (xp: number) => Math.floor(xp / XP_NIVEL) + 1;
-export const liberada = (e: Estado, i: number) => i === 0 || e.estrelas[i - 1] != null;
+// Cada tema tem sua própria trilha: a 1ª lição de todo tema já começa liberada; as outras pedem a anterior do mesmo tema.
+export const temaDaLicao = (i: number) => Math.max(0, UNIDADES.findIndex((u) => u.licoes.includes(i)));
+export const nivelDaLicao = (i: number) => UNIDADES[temaDaLicao(i)].niveis.findIndex((n) => n.includes(i));
+export const liberada = (e: Estado, i: number) => {
+  const u = UNIDADES[temaDaLicao(i)], k = u.licoes.indexOf(i);
+  return k <= 0 || e.estrelas[u.licoes[k - 1]] != null;
+};
+// Nível do aluno no tema: 0 novo · 1 básico · 2 intermediário · 3 avançado · 4 pronto para a prova
+export function desempenhoProvaTema(e: Estado, t: number) {
+  const temas = UNIDADES[t].temas;
+  let tent = 0, ac = 0, qs = 0;
+  for (const q of PROVAS) if (temas.includes(q.tema)) { qs++; const p = e.provas[q.id]; if (p) { tent += p.t; ac += p.a; } }
+  return { questoes: qs, tentativas: tent, acertos: ac, taxa: tent ? ac / tent : 0 };
+}
+export function nivelTema(e: Estado, t: number) {
+  const u = UNIDADES[t];
+  let n = 0;
+  for (const nv of u.niveis) { if (nv.every((i) => e.estrelas[i] != null)) n++; else break; }
+  if (n === 3) {
+    const d = desempenhoProvaTema(e, t);
+    const pronto = d.questoes ? d.tentativas >= 3 && d.taxa >= 0.7 : u.licoes.every((i) => e.estrelas[i] === 3);
+    if (pronto) n = 4;
+  }
+  return n;
+}
+export const NOME_NIVEL_ALUNO = ['Novo no tema', 'Básico', 'Intermediário', 'Avançado', 'Pronto para a prova'] as const;
+export function escolherTema(t: number) { const e = normalizar(estado); e.tema = t; e.atualizado = Date.now(); definir(e); }
 export const totalEstrelas = (e: Estado) => Object.values(e.estrelas).reduce((s, n) => s + n, 0);
 export const xpHoje = (e: Estado) => e.xpDia[diaLocal()] || 0;
 export function ultimos7(e: Estado) {
@@ -156,7 +185,7 @@ export function missoesDoDia(dia = diaLocal()): Missao[] {
 // ---------- conquistas ----------
 export interface Conquista { id: string; nome: string; desc: string; simbolo: string; cor: 'ouro' | 'prata' | 'bronze' | 'verde' | 'azul' | 'laranja'; ok: (e: Estado) => boolean }
 // símbolo de cada unidade: conjuntos, conectivos, argumentação (portanto) e raciocínio aplicado
-export const SIMBOLO_UNIDADE = ['∪', '∧', '∴', '#'];
+export const SIMBOLO_UNIDADE = ['∪', '∧', 'VF', '≡', '∴', '?', '#', '31'];
 export const CONQUISTAS: Conquista[] = [
   { id: 'primeira', nome: 'Primeiro passo', desc: 'Concluiu a primeira lição', simbolo: '1º', cor: 'verde', ok: (e) => e.licoesFeitas >= 1 },
   { id: 'perfeita', nome: 'Gabaritou', desc: 'Fez uma lição sem errar nada', simbolo: '≡', cor: 'ouro', ok: (e) => e.perfeitas >= 1 },
@@ -165,10 +194,10 @@ export const CONQUISTAS: Conquista[] = [
   { id: 'ofensiva3', nome: 'Pegando o ritmo', desc: '3 dias seguidos estudando', simbolo: '3d', cor: 'laranja', ok: (e) => e.maiorOfensiva >= 3 },
   { id: 'ofensiva7', nome: 'Uma semana firme', desc: '7 dias seguidos estudando', simbolo: '7d', cor: 'laranja', ok: (e) => e.maiorOfensiva >= 7 },
   { id: 'xp300', nome: '300 XP', desc: 'Juntou 300 pontos de experiência', simbolo: 'Σ', cor: 'azul', ok: (e) => e.xp >= 300 },
-  ...UNIDADES.map((u, k) => ({ id: 'unidade' + (k + 1), nome: u.selo, desc: 'Fechou a ' + u.nome.split(' · ')[0], simbolo: SIMBOLO_UNIDADE[k], cor: 'prata' as const, ok: (e: Estado) => u.licoes.every((i) => e.estrelas[i] != null) })),
+  ...UNIDADES.map((u, k) => ({ id: 'unidade' + (k + 1), nome: u.selo, desc: 'Concluiu o tema ' + u.nome, simbolo: SIMBOLO_UNIDADE[k], cor: 'prata' as const, ok: (e: Estado) => u.licoes.every((i) => e.estrelas[i] != null) })),
   { id: 'relampago', nome: 'Raio', desc: '10 acertos no desafio relâmpago', simbolo: '↯', cor: 'ouro', ok: (e) => e.recordeRelampago >= 10 },
   { id: 'revisor', nome: 'Memória de elefante', desc: 'Levou 10 questões à caixa 3 da revisão', simbolo: '↻', cor: 'verde', ok: (e) => Object.values(e.srs).filter((v) => v.cx >= 3).length >= 10 },
-  { id: 'trilha', nome: 'Trilha completa', desc: 'Terminou as 11 lições', simbolo: '∀', cor: 'ouro', ok: (e) => Object.keys(e.estrelas).length === LICOES.length },
+  { id: 'trilha', nome: 'Trilha completa', desc: 'Terminou todas as lições de todos os temas', simbolo: '∀', cor: 'ouro', ok: (e) => Object.keys(e.estrelas).length === LICOES.length },
   { id: 'estrelas', nome: 'Colecionador', desc: 'Todas as lições com 3 estrelas', simbolo: '★', cor: 'ouro', ok: (e) => LICOES.every((_, i) => e.estrelas[i] === 3) },
   { id: 'prova10', nome: 'Concurseiro', desc: 'Acerte 10 questões de prova', simbolo: '10', cor: 'azul', ok: (e) => Object.values(e.provas || {}).filter((p) => p.a > 0).length >= 10 },
   { id: 'aprovado', nome: 'Aprovado!', desc: 'Tire 70% ou mais em um simulado', simbolo: '✓', cor: 'ouro', ok: (e) => (e.simulados || []).some((x) => x.n >= 5 && x.a / x.n >= 0.7) }
@@ -287,6 +316,7 @@ export function mesclar(a: Estado, b: Estado): Estado {
   for (const [k, v] of Object.entries(outro.srs)) if (!r.srs[k]) r.srs[k] = v;
   r.recordeRelampago = Math.max(a.recordeRelampago, b.recordeRelampago);
   r.baus = [...new Set([...a.baus, ...b.baus])];
+  r.tema = a.tema >= 0 ? a.tema : b.tema;
   r.provas = { ...a.provas };
   for (const [k, v] of Object.entries(b.provas)) { const x = r.provas[k]; r.provas[k] = !x || v.t > x.t ? v : x; }
   r.simulados = [...a.simulados, ...b.simulados.filter((x) => !a.simulados.some((y) => y.d === x.d))].sort((x, y) => x.d - y.d).slice(-20);

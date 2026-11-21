@@ -116,5 +116,135 @@ export const CONTEUDO: ConteudoExtra[] = [
     },
     pares: [['7 dias', 'mesmo dia'], ['8 dias', '+1 dia'], ['ano comum', '+1 dia da semana'], ['ano bissexto', '+2 dias da semana']],
     caderno: { regras: ['Divida os dias por 7 e use o resto.', 'Ano comum = 52 semanas + 1 dia.', 'Bissexto = 52 semanas + 2 dias (fevereiro com 29).'], dica: 'Conte o resto a partir do dia de hoje: resto 0 é o mesmo dia.' }
+  },
+  { // 11 Contando elementos
+    imersao: {
+      exemplos: [["n(A) = 5, n(B) = 4, nada em comum", "n(A ∪ B) = 9"], ["n(A) = 5, n(B) = 4, 1 em comum", "n(A ∪ B) = 8"], ["n(A) = 5, n(B) = 4, 3 em comum", "n(A ∪ B) = 6"]],
+      pergunta: "O que acontece com a união quando a interseção cresce?",
+      opcoes: ["Fica sempre igual a 9", "Aumenta junto com a interseção", "Diminui: a interseção é descontada uma vez"],
+      c: 2, e: "n(A ∪ B) = n(A) + n(B) − n(A ∩ B). Quem está nos dois seria contado duas vezes; por isso se subtrai."
+    },
+    pares: [["n(A ∪ B)", "pelo menos um"], ["n(A ∩ B)", "os dois"], ["n(A) − n(A ∩ B)", "só A"], ["total − n(A ∪ B)", "nenhum"]],
+    caderno: { regras: ["n(A ∪ B) = n(A) + n(B) − n(A ∩ B).", "Só A = n(A) − n(A ∩ B).", "Nenhum = total − n(A ∪ B)."], dica: "Comece o diagrama pelo centro (a interseção) e vá para fora." }
+  },
+  { // 12 Três conjuntos
+    imersao: {
+      exemplos: [["A ∩ B ∩ C", "o centro do diagrama"], ["A ∩ B, sem C", "a faixa entre A e B"], ["só A", "a parte de A sem os outros"]],
+      pergunta: "Por onde se começa a preencher o diagrama de três conjuntos?",
+      opcoes: ["Pelas partes de \"só\"", "Pelo centro, onde estão os três", "Pelo total de pessoas"],
+      c: 1, e: "O centro faz parte de todas as interseções. Preenchido primeiro, ele permite descontar certo as faixas de dois e depois as de \"só\"."
+    },
+    pares: [["A ∩ B ∩ C", "os três"], ["complementar de A", "fora de A"], ["(A ∩ B) − C", "A e B, sem C"], ["A ∪ B ∪ C", "pelo menos um"]],
+    caderno: { regras: ["n(A ∪ B ∪ C) = soma dos três − interseções de dois + os três.", "Preencha o diagrama do centro para fora.", "Complementar: tudo do universo que não está no conjunto."], dica: "Quando o enunciado diz \"exatamente dois\", ele não inclui quem está nos três." }
+  },
+  { // 13 Valor lógico dos conectivos
+    imersao: {
+      exemplos: [["V ou F", "V"], ["F ou V", "V"], ["V ou V", "V"], ["F ou F", "F"]],
+      pergunta: "Quando o \"ou\" dá falso?",
+      opcoes: ["Quando as duas são verdadeiras", "Só quando as duas partes são falsas", "Quando uma das partes é falsa"],
+      c: 1, e: "O \"ou\" comum precisa de apenas uma parte verdadeira. Só dá F quando as duas são F."
+    },
+    pares: [["∧", "V só com V e V"], ["∨", "F só com F e F"], ["⊻", "V com exatamente uma V"], ["↔", "V com valores iguais"]],
+    caderno: { regras: ["∧: V só se as duas forem V.", "∨: F só se as duas forem F.", "⊻: V se exatamente uma for V.", "→: F só em V → F.", "↔: V quando os valores são iguais."], dica: "Decore o único caso \"diferente\" de cada conectivo: é ele que a banca cobra." }
+  },
+  { // 14 Traduzindo frases para símbolos
+    imersao: {
+      exemplos: [["\"Se estudo, passo.\"", "e → p"], ["\"Passo se estudo.\"", "e → p"], ["\"Estudar é suficiente para passar.\"", "e → p"]],
+      pergunta: "Nas três frases, o que fica antes da seta?",
+      opcoes: ["Sempre a primeira palavra da frase", "A condição: o que vem depois do \"se\" ou o que é \"suficiente\"", "A consequência"],
+      c: 1, e: "A ordem das palavras engana. Antes da seta vai a condição: o que vem depois do \"se\" ou o que é \"suficiente\"."
+    },
+    pares: [["nem p nem q", "~p ∧ ~q"], ["p, mas q", "p ∧ q"], ["q, se p", "p → q"], ["p somente se q", "p → q (somente se)"]],
+    caderno: { regras: ["Nem p nem q: ~p ∧ ~q.", "Mas, embora, porém: valem \"e\".", "Suficiente vai antes da seta; necessário vai depois.", "\"p somente se q\" = p → q."], dica: "Reescreva a frase no formato \"Se…, então…\" antes de traduzir." }
+  },
+  { // 15 Descobrindo valores lógicos
+    imersao: {
+      exemplos: [["p → q é falsa", "p = V e q = F"], ["p ∧ q é verdadeira", "p = V e q = V"], ["p ∨ q é falsa", "p = F e q = F"]],
+      pergunta: "O que esses três casos têm em comum?",
+      opcoes: ["Cada um só acontece de um jeito", "São todos tautologias", "Todos dão sempre V"],
+      c: 0, e: "São os casos \"travados\": cada um só acontece com uma combinação de valores. Comece por eles para descobrir o resto."
+    },
+    pares: [["p → q falsa", "p V e q F"], ["p ∧ q verdadeira", "p V e q V"], ["p ∨ q falsa", "p F e q F"], ["p ↔ q falsa", "valores diferentes"]],
+    caderno: { regras: ["Condicional falsa: V → F.", "\"E\" verdadeiro: tudo V.", "\"Ou\" falso: tudo F.", "Comece pela informação que só tem um jeito de acontecer."], dica: "Anote o valor ao lado de cada letra e vá propagando, como num sudoku." }
+  },
+  { // 16 Equivalências da condicional
+    imersao: {
+      exemplos: [["Se chove, molha.", "Se não molhou, não choveu."], ["Se é ouro, brilha.", "Se não brilha, não é ouro."], ["Se passo, comemoro.", "Se não comemorei, não passei."]],
+      pergunta: "O que foi feito para chegar às frases da direita?",
+      opcoes: ["Só negou a primeira parte", "Trocou \"se\" por \"e\"", "Inverteu a ordem e negou as duas partes"],
+      c: 2, e: "Essa é a contrapositiva (~q → ~p). Ela diz exatamente o mesmo que a condicional original."
+    },
+    pares: [["contrapositiva", "~q → ~p"], ["~p ∨ q", "equivale a p → q"], ["p ↔ q", "ida e volta"], ["recíproca", "q → p (não equivale)"]],
+    caderno: { regras: ["p → q = ~q → ~p (contrapositiva).", "p → q = ~p ∨ q.", "p ↔ q = (p → q) ∧ (q → p).", "Recíproca e contrária não são equivalentes."], dica: "Contrapositiva: inverta e negue. Forma com \"ou\": negue a primeira e troque a seta por \"ou\"." }
+  },
+  { // 17 Negações difíceis
+    imersao: {
+      exemplos: [["Todo A é B", "Algum A não é B"], ["Algum A é B", "Nenhum A é B"], ["Nenhum A é B", "Algum A é B"]],
+      pergunta: "Qual é o padrão dessas negações?",
+      opcoes: ["Trocar sempre por \"todo\"", "Dizer o mínimo que derruba a frase original", "Trocar sempre por \"nenhum\""],
+      c: 1, e: "Para negar, mostre o mínimo que derruba a frase: um contraexemplo derruba o \"todo\", e \"nenhum\" derruba o \"algum\"."
+    },
+    pares: [["~(p ∨ q)", "nem p nem q"], ["~(p ↔ q)", "ou p ou q"], ["negação de \"todo\"", "algum… não"], ["negação de \"algum\"", "nenhum"]],
+    caderno: { regras: ["~(p ∨ q) = ~p ∧ ~q.", "~(p ↔ q) = p ⊻ q.", "~(p → q) = p ∧ ~q.", "Todo ↔ algum… não; algum ↔ nenhum."], dica: "A negação de \"todo\" nunca é \"nenhum\": essa é uma das pegadinhas favoritas das bancas." }
+  },
+  { // 18 Argumento válido ou falácia?
+    imersao: {
+      exemplos: [["p → q e p, logo q", "válido"], ["p → q e ~q, logo ~p", "válido"], ["p → q e q, logo p", "falácia"], ["p → q e ~p, logo ~q", "falácia"]],
+      pergunta: "O que as duas falácias têm em comum?",
+      opcoes: ["Confirmam a segunda parte ou negam a primeira", "Usam \"e\" em vez de \"se\"", "Têm conclusões sempre verdadeiras"],
+      c: 0, e: "Só vale partir da primeira parte (modus ponens) ou negar a segunda (modus tollens). Confirmar q ou negar p não garante nada."
+    },
+    pares: [["modus ponens", "p → q, p, logo q"], ["modus tollens", "p → q, ~q, logo ~p"], ["afirmar o consequente", "falácia"], ["silogismo disjuntivo", "p ∨ q, ~p, logo q"]],
+    caderno: { regras: ["Válidos: modus ponens, modus tollens, silogismo disjuntivo e silogismo hipotético.", "Falácias: afirmar o consequente e negar o antecedente.", "\"Algum\" no meio não liga as pontas do argumento."], dica: "Na dúvida, procure um contraexemplo: premissas verdadeiras e conclusão falsa. Achou? É inválido." }
+  },
+  { // 19 Verdades e mentiras
+    imersao: {
+      exemplos: [["\"Fui eu\" × \"Não foi ele\"", "uma V, outra F"], ["\"Choveu\" × \"Não choveu\"", "uma V, outra F"], ["\"Todos vieram\" × \"Alguém faltou\"", "uma V, outra F"]],
+      pergunta: "O que acontece com duas frases contraditórias?",
+      opcoes: ["As duas podem ser falsas", "As duas são verdadeiras", "Exatamente uma é verdadeira"],
+      c: 2, e: "Uma é a negação da outra, então sempre uma é V e a outra é F. Isso destrava muitos problemas de verdade e mentira."
+    },
+    pares: [["sempre diz a verdade", "só frases V"], ["sempre mente", "só frases F"], ["frases contraditórias", "uma V, outra F"], ["\"Eu sou mentiroso\"", "ninguém pode dizer"]],
+    caderno: { regras: ["Suponha um caso e procure contradição.", "Frases contraditórias: exatamente uma é verdadeira.", "\"Eu sou mentiroso\" não pode ser dito por ninguém."], dica: "Quando o enunciado diz \"só um fala a verdade\", procure duas frases contraditórias: a verdade está numa delas." }
+  },
+  { // 20 Associação com várias pistas
+    imersao: {
+      exemplos: [["Linha com ✗, ✗ e um espaço vazio", "o vazio vira ✓"], ["Coluna com um ✓", "o resto vira ✗"], ["Linha com ✗, vazio e ✗", "o do meio vira ✓"]],
+      pergunta: "Qual é a regra da tabela?",
+      opcoes: ["Cada linha e cada coluna tem um único ✓", "Uma linha pode ter vários ✓", "A tabela começa cheia de ✓"],
+      c: 0, e: "Um único ✓ por linha e por coluna. Marcou um ✓? Preencha ✗ no resto da linha e da coluna."
+    },
+    pares: [["pista direta", "marca ✓"], ["pista negativa", "marca ✗"], ["sobrou uma opção", "vira ✓"], ["marcou ✓", "✗ no resto da linha"]],
+    caderno: { regras: ["Pistas diretas primeiro, negativas depois.", "Um ✓ por linha e por coluna.", "A cada ✓, complete os ✗ e releia as pistas."], dica: "Pistas de comparação (\"mais novo que\", \"à esquerda de\") eliminam duas pessoas de uma vez: a das pontas." }
+  },
+  { // 21 Letras e ciclos
+    imersao: {
+      exemplos: [["7º termo de A, B, C, …", "resto 1: A"], ["8º termo de A, B, C, …", "resto 2: B"], ["9º termo de A, B, C, …", "resto 0: C"]],
+      pergunta: "Como achar um termo distante de uma sequência que se repete?",
+      opcoes: ["Usar o resto da divisão pelo tamanho do ciclo", "Escrever todos os termos", "Multiplicar a posição pelo ciclo"],
+      c: 0, e: "O resto diz a posição dentro do bloco. Resto 0 é o último do bloco."
+    },
+    pares: [["A", "1ª letra"], ["J", "10ª letra"], ["T", "20ª letra"], ["Z", "26ª letra"]],
+    caderno: { regras: ["Letras viram números: A = 1, …, Z = 26.", "Ciclos: use o resto da divisão pelo tamanho do bloco.", "Resto 0 = último do bloco."], dica: "Escreva o alfabeto numerado na margem da prova: economiza tempo e evita erro." }
+  },
+  { // 22 Sequências que dependem dos anteriores
+    imersao: {
+      exemplos: [["depois de 2, 3", "vem 5"], ["depois de 3, 5", "vem 8"], ["depois de 5, 8", "vem 13"]],
+      pergunta: "Qual é a regra?",
+      opcoes: ["Multiplica sempre por 2", "Soma sempre 2", "Cada termo é a soma dos dois anteriores"],
+      c: 2, e: "É a sequência de Fibonacci. Nas provas ela aparece disfarçada, começando com outros números."
+    },
+    pares: [["Fibonacci", "soma dos dois anteriores"], ["multiplicação constante", "vezes o mesmo número"], ["intercalada", "duas regras alternadas"], ["diferença constante", "soma sempre o mesmo"]],
+    caderno: { regras: ["Fibonacci: soma dos dois anteriores.", "Intercalada: separe posições ímpares e pares.", "Ordem de teste: diferença, multiplicação, soma dos anteriores, intercalada."], dica: "Se as diferenças entre os termos formam uma sequência conhecida, a resposta está nela." }
+  },
+  { // 23 Pior caso e anos bissextos
+    imersao: {
+      exemplos: [["garantir 2 iguais com 3 cores", "1 × 3 + 1 = 4"], ["garantir 3 iguais com 3 cores", "2 × 3 + 1 = 7"], ["garantir 4 iguais com 3 cores", "3 × 3 + 1 = 10"]],
+      pergunta: "Qual é a regra para garantir k itens iguais?",
+      opcoes: ["(k − 1) × número de tipos + 1", "número de tipos + k", "k × número de tipos"],
+      c: 0, e: "No pior caso você pega (k − 1) de cada tipo sem completar k. A próxima retirada obriga a completar."
+    },
+    pares: [["ano comum", "data anda 1 dia"], ["ano bissexto", "data anda 2 dias"], ["1900", "não foi bissexto"], ["2000", "foi bissexto"]],
+    caderno: { regras: ["Garantir k iguais: (k − 1) × tipos + 1.", "Bissexto: divisível por 4; se terminar em 00, só se for divisível por 400.", "A data anda 1 dia da semana em ano comum e 2 em ano bissexto."], dica: "Em problemas de \"garantir\", pense sempre no azar máximo: tudo dá errado até a última retirada." }
   }
 ];

@@ -74,7 +74,7 @@ export default function App() {
         </nav>
 
         <main id="conteudo">
-          {rota === '' && <Trilha abrir={setLicao} irPara={irPara} />}
+          {rota === '' && <Trilha abrir={setLicao} irPara={irPara} iniciar={(ids) => setSessao2({ tipo: 'revisao', ids, n: Date.now() })} />}
           {rota === 'praticar' && <Praticar irPara={irPara} iniciar={(tipo, ids) => setSessao2({ tipo, ids, n: Date.now() })} />}
           {rota === 'provas' && <Provas irPara={irPara} temaInicial={lerTema()} key={lerTema()} />}
           {rota === 'ranking' && <Ranking irPara={irPara} />}
@@ -104,7 +104,7 @@ export default function App() {
       {!APP && <footer className="wrap-largo rodape">Trilha gratuita do Prof. Tiago Gomes · <a href="/privacidade.html">Privacidade</a></footer>}
       {sessao2 && <Sessao key={sessao2.n} tipo={sessao2.tipo} ids={sessao2.ids} onFechar={() => setSessao2(null)} />}
       {licao !== null && <TelaLicao key={licao} idx={licao} onFechar={() => setLicao(null)} />}
-      {boasVindas && licao === null && <BoasVindas irPara={irPara} onFim={(comecar) => { setBoasVindas(false); if (comecar) setLicao(0); }} />}
+      {boasVindas && licao === null && <BoasVindas irPara={irPara} onFim={() => { setBoasVindas(false); irPara(''); }} />}
     </div>
   );
 }

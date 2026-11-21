@@ -156,7 +156,7 @@ export default function Painel({ irPara }: { irPara: (r: string) => void }) {
 
       <div className="kpis">
         <div className="card kpi"><IconeFogo /><b>{e.ofensiva}</b><small>{e.ofensiva === 1 ? 'dia seguido' : 'dias seguidos'}<br />recorde {e.maiorOfensiva}</small></div>
-        <div className="card kpi"><Icone nome="xp" /><b>{e.xp}</b><small>XP total<br />nível {nivel}</small></div>
+        <div className="card kpi"><Icone nome="xp" /><b>{e.xp}</b><small>XP total<br />vale no ranking</small></div>
         <div className="card kpi"><IconeEstrela /><b>{totalEstrelas(e)}</b><small>de {LICOES.length * 3} estrelas</small></div>
         <div className="card kpi"><Icone nome="precisao" /><b>{precisao === null ? '—' : precisao + '%'}</b><small>de acertos<br />{e.respostas} respostas</small></div>
       </div>
@@ -180,24 +180,8 @@ export default function Painel({ irPara }: { irPara: (r: string) => void }) {
           </label>
         </div>
         <Grafico7 />
-        <div className="nivel-barra largo"><small>Nível {nivel}: faltam {XP_NIVEL - (e.xp % XP_NIVEL)} XP para o nível {nivel + 1}</small><div className="trilho" aria-hidden="true"><span style={{ width: (e.xp % XP_NIVEL) / XP_NIVEL * 100 + '%' }} /></div></div>
       </section>
 
-      <section className="card" aria-labelledby="prog-t">
-        <h2 id="prog-t">Progresso na trilha · {feitas} de {LICOES.length} lições</h2>
-        <ul className="unidades-prog">
-          {UNIDADES.map((u) => {
-            const n = u.licoes.filter((i) => e.estrelas[i] != null).length;
-            const est = u.licoes.reduce((s, i) => s + (e.estrelas[i] || 0), 0);
-            return (
-              <li key={u.nome}>
-                <div><strong>{u.nome.split(' · ')[1]}</strong><small>{n}/{u.licoes.length} lições · {est}/{u.licoes.length * 3} estrelas</small></div>
-                <div className="trilho fino" aria-hidden="true"><span style={{ width: (n / u.licoes.length) * 100 + '%' }} /></div>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
 
       <section className="card" aria-labelledby="conq-t">
         <h2 id="conq-t">Conquistas · {CONQUISTAS.filter((c) => e.conquistas[c.id]).length} de {CONQUISTAS.length}</h2>
