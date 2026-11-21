@@ -1,6 +1,7 @@
 import { Icone } from './Icones';
 import { CONQUISTAS, NOME_NIVEL_ALUNO, missoesDoDia, mudarMeta, nivelTema, totalEstrelas, useEstado, xpHoje } from '../estado';
-import { UNIDADES } from '../dados/licoes';
+import { UNIDADES, varsTema } from '../dados/licoes';
+import { EmblemaTema } from './Tema';
 
 export const IconeFogo = () => <Icone nome="ofensiva" />;
 export const IconeEstrela = () => <Icone nome="estrela" />;
@@ -12,8 +13,8 @@ export function Status() {
     <div className="status-linha" aria-label="Seu progresso">
       <span className="chip" title={'Dias seguidos estudando' + (e.escudos ? ' · ' + e.escudos + ' escudo(s) guardado(s)' : '')}><IconeFogo />{e.ofensiva}{e.escudos > 0 && <Icone nome="escudo" tamanho={16} className="mini-escudo" />}<span className="sr">&nbsp;{e.ofensiva === 1 ? 'dia seguido' : 'dias seguidos'}</span></span>
       {e.tema >= 0 ? (
-        <a className="nivel-barra" href="#/" title="Seu nível neste tema">
-          <small><strong>{UNIDADES[e.tema].nome}</strong> · {NOME_NIVEL_ALUNO[nt]}</small>
+        <a className="nivel-barra" href="#/" title="Seu nível neste tema" style={varsTema(e.tema)}>
+          <small className="topo-tema"><EmblemaTema t={e.tema} tamanho={18} /><strong>{UNIDADES[e.tema].nome}</strong> · {NOME_NIVEL_ALUNO[nt]}</small>
           <div className="trilho" aria-hidden="true"><span style={{ width: (nt / 4) * 100 + '%' }} /></div>
         </a>
       ) : (

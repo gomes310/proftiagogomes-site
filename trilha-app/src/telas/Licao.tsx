@@ -12,6 +12,9 @@ import Pares from '../componentes/Pares';
 import Lumi, { Efe, Ve } from '../componentes/Lumi';
 import { Icone, Selo } from '../componentes/Icones';
 import { SIMBOLO_UNIDADE } from '../estado';
+import { EmblemaTema, EscadaNivel } from '../componentes/Tema';
+import { NOME_NIVEL_ALUNO, temaDaLicao } from '../estado';
+import { varsTema } from '../dados/licoes';
 import { BotaoLeitura, BotaoMicrofone, LumiFalando, useLeituraAuto } from '../componentes/Voz';
 
 type Passo = { tipo: 'imersao' } | { tipo: 'ideia'; t: string; k: number } | { tipo: 'lab' } | { tipo: 'pares' } | { tipo: 'exemplo' } | { tipo: 'vf' };
@@ -180,6 +183,15 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
     const u = r.unidadeFechada !== null ? UNIDADES[r.unidadeFechada] : null;
     const compart = encodeURIComponent((u ? 'Ganhei o selo "' + u.selo + '" na' : 'Estou fazendo a') + ' Trilha do RLM, grátis, do Prof. Tiago Gomes: https://proftiagogomes.com.br/trilha/');
     corpo = <div className="fim">
+      {r.nivelTemaDepois > r.nivelTemaAntes && (
+        <div className="marco" role="status">
+          <EmblemaTema t={r.tema} tamanho={56} />
+          <div>
+            <strong>Novo nível em {UNIDADES[r.tema].nome}!</strong>
+            <small><EscadaNivel t={r.tema} n={r.nivelTemaDepois} tamanho={40} /> Agora você é <b>{NOME_NIVEL_ALUNO[r.nivelTemaDepois]}</b>{r.nivelTemaDepois === 3 ? '. Falta o nível Prova!' : r.nivelTemaDepois < 3 ? '. O próximo nível já está liberado.' : ''}</small>
+          </div>
+        </div>
+      )}
       <div className="fim-turma" aria-hidden="true">
         <Ve humor={r.estrelas >= 2 ? 'festa' : 'feliz'} tamanho={62} className="entra" />
         <Lumi humor={r.estrelas === 3 ? 'festa' : 'feliz'} tamanho={88} />
@@ -187,15 +199,15 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
       </div>
       <p className="grande" role="img" aria-label={r.estrelas + ' de 3 estrelas'}>{[0, 1, 2].map((i) => <Icone key={i} nome="estrela" tamanho={52} className={i < r.estrelas ? '' : 'apagada'} />)}</p>
       <h2 id="licao-titulo">{r.estrelas === 3 ? 'Lição perfeita!' : 'Lição concluída!'}</h2>
+      {r.estrelas < 3 && <p className="quase">{total - acertosPrimeira - (r.estrelas === 2 ? 0 : 1) <= 1 ? 'Faltou 1 acerto de primeira' : 'Faltaram ' + (total - acertosPrimeira - (r.estrelas === 2 ? 0 : 1)) + ' acertos de primeira'} para {r.estrelas === 2 ? '3' : '2'} estrelas. Dá para refazer a lição quando quiser.</p>}
       <div className="placar">
         <div><b>+{r.ganho + r.bonusMissoes}</b><small>XP</small></div>
         <div><b>+{r.moedas}</b><small>moedas</small></div>
         <div><b>{acertosPrimeira}/{total}</b><small>de primeira</small></div>
         <div><b>{Math.round(acertosPrimeira / total * 100)}%</b><small>precisão</small></div>
       </div>
-      {(r.nivelDepois > r.nivelAntes || r.metaBatida || r.missoesConcluidas.length > 0 || r.novasConquistas.length > 0) && (
+      {(r.metaBatida || r.missoesConcluidas.length > 0 || r.novasConquistas.length > 0) && (
         <ul className="ganhos" aria-label="O que você ganhou">
-          {r.nivelDepois > r.nivelAntes && <li className="destaque"><Icone nome="nivel" tamanho={20} /> Nível {r.nivelDepois}!</li>}
           {r.metaBatida && <li><Icone nome="meta" tamanho={20} /> Meta do dia batida</li>}
           {r.missoesConcluidas.map((m) => <li key={m.id}><Icone nome="missaoFeita" tamanho={20} /> {m.titulo} <small>+{m.bonus} XP</small></li>)}
           {r.novasConquistas.map((c) => <li key={c.id}><Selo simbolo={c.simbolo} cor={c.cor} tamanho={22} /> {c.nome}</li>)}
@@ -218,7 +230,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
   const chaveTela = etapa + '-' + passo + '-' + fila.length + (resultado ? '-fim' : '');
   useLeituraAuto(chaveTela, base ? chaveTela + base + (verificado ? respondidas : '') : '');
   return (
-    <div className="licao aberta" role="dialog" aria-modal="true" aria-labelledby="licao-titulo">
+    <div style={varsTema(temaDaLicao(idx))} className="licao aberta" role="dialog" aria-modal="true" aria-labelledby="licao-titulo">
       <div className="licao-topo">
         <button className="fechar" type="button" onClick={onFechar} aria-label="Sair da lição">×</button>
         <div className="trilho" aria-hidden="true"><span style={{ width: progresso * 100 + '%' }} /></div>
@@ -232,7 +244,7 @@ export default function TelaLicao({ idx, onFechar }: { idx: number; onFechar: ()
         {base && retorno && <span className="reacao" aria-hidden="true">{base === ' acerto' ? <Ve key="ve" humor="festa" tamanho={64} /> : <Efe key="efe" humor="ops" tamanho={64} />}</span>}
         <div className="retorno" aria-live="polite">{avisoVoz ? <span className="aviso-voz">{avisoVoz}</span> : retorno}</div>
         {etapa !== 'fim' && !resultado && <BotaoMicrofone acao={() => acaoRef.current && !acaoRef.current.disabled && acaoRef.current.click()} aviso={setAvisoVoz} />}
-        <button ref={acaoRef} className="btn btn-ok" type="button" disabled={!acaoOk} onClick={acao}>{acaoTexto}</button>
+        <button ref={acaoRef} className={'btn btn-ok' + (resultado ? ' btn-tema' : '')} type="button" disabled={!acaoOk} onClick={acao}>{acaoTexto}</button>
       </div></div>
     </div>
   );

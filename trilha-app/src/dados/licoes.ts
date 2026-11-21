@@ -1,15 +1,17 @@
 // Conteúdo da trilha: unidades e lições (portado da versão 1).
 import type { Unidade, Licao, Extra } from './tipos';
 export const UNIDADES: Unidade[] = [
-    { id: "conjuntos", nome: "Conjuntos", desc: "União, interseção, Venn e contagem", selo: "Mestre dos conjuntos", licoes: [0, 11, 12], niveis: [[0], [11], [12]], temas: [] },
-    { id: "proposicoes", nome: "Proposições e conectivos", desc: "A linguagem da lógica", selo: "Lógico de carteirinha", licoes: [1, 13, 14], niveis: [[1], [13], [14]], temas: ["Proposições e conectivos"] },
-    { id: "tabela", nome: "Tabela-verdade", desc: "Valores lógicos, tautologia e contradição", selo: "Rei da tabela", licoes: [2, 4, 15], niveis: [[2], [4], [15]], temas: ["Tabela-verdade", "Tautologia, contradição e contingência"] },
-    { id: "equivalencias", nome: "Equivalências e negações", desc: "Dizer o mesmo de outro jeito e negar certo", selo: "Sem pegadinha", licoes: [3, 16, 17], niveis: [[3], [16], [17]], temas: ["Equivalências e negações"] },
-    { id: "argumentos", nome: "Argumentos e diagramas", desc: "Conclusões que valem e as que não valem", selo: "Argumentador", licoes: [5, 6, 18], niveis: [[5], [6], [18]], temas: [] },
-    { id: "associacao", nome: "Associação, verdades e mentiras", desc: "Tabelas, pistas e quem está mentindo", selo: "Detetive lógico", licoes: [7, 19, 20], niveis: [[7], [19], [20]], temas: ["Verdades e mentiras"] },
-    { id: "sequencias", nome: "Sequências lógicas", desc: "Números, letras e padrões", selo: "Caçador de padrões", licoes: [8, 21, 22], niveis: [[8], [21], [22]], temas: ["Sequências lógicas"] },
-    { id: "pombos", nome: "Casa dos pombos e calendários", desc: "Pior caso, datas e dias da semana", selo: "Mestre do calendário", licoes: [9, 10, 23], niveis: [[9], [10], [23]], temas: ["Princípio da casa dos pombos", "Datas e calendários"] }
+    { id: "conjuntos", nome: "Conjuntos", desc: "União, interseção, Venn e contagem", selo: "Mestre dos conjuntos", licoes: [0, 11, 12], niveis: [[0], [11], [12]], temas: [], cor: { p: "#2F5BD3", e: "#1D3A8F", c: "#E3EAFC" } },
+    { id: "proposicoes", nome: "Proposições e conectivos", desc: "A linguagem da lógica", selo: "Lógico de carteirinha", licoes: [1, 13, 14], niveis: [[1], [13], [14]], temas: ["Proposições e conectivos"], cor: { p: "#7442C8", e: "#4E2690", c: "#EEE6FA" } },
+    { id: "tabela", nome: "Tabela-verdade", desc: "Valores lógicos, tautologia e contradição", selo: "Rei da tabela", licoes: [2, 4, 15], niveis: [[2], [4], [15]], temas: ["Tabela-verdade", "Tautologia, contradição e contingência"], cor: { p: "#0F766E", e: "#0A4F4A", c: "#DDF3F0" } },
+    { id: "equivalencias", nome: "Equivalências e negações", desc: "Dizer o mesmo de outro jeito e negar certo", selo: "Sem pegadinha", licoes: [3, 16, 17], niveis: [[3], [16], [17]], temas: ["Equivalências e negações"], cor: { p: "#B02A6B", e: "#7A1A4A", c: "#FBE4EF" } },
+    { id: "argumentos", nome: "Argumentos e diagramas", desc: "Conclusões que valem e as que não valem", selo: "Argumentador", licoes: [5, 6, 18], niveis: [[5], [6], [18]], temas: [], cor: { p: "#4D7C0F", e: "#335309", c: "#EAF3D9" } },
+    { id: "associacao", nome: "Associação, verdades e mentiras", desc: "Tabelas, pistas e quem está mentindo", selo: "Detetive lógico", licoes: [7, 19, 20], niveis: [[7], [19], [20]], temas: ["Verdades e mentiras"], cor: { p: "#C2410C", e: "#8A2C06", c: "#FDE8DC" } },
+    { id: "sequencias", nome: "Sequências lógicas", desc: "Números, letras e padrões", selo: "Caçador de padrões", licoes: [8, 21, 22], niveis: [[8], [21], [22]], temas: ["Sequências lógicas"], cor: { p: "#0A6E8C", e: "#064A5F", c: "#DDF0F6" } },
+    { id: "pombos", nome: "Casa dos pombos e calendários", desc: "Pior caso, datas e dias da semana", selo: "Mestre do calendário", licoes: [9, 10, 23], niveis: [[9], [10], [23]], temas: ["Princípio da casa dos pombos", "Datas e calendários"], cor: { p: "#96580A", e: "#663B05", c: "#F8ECD9" } }
   ];
+// variáveis CSS com as cores do tema (para usar em style={...})
+export const varsTema = (t: number) => { const c = UNIDADES[t].cor; return { '--u': c.p, '--u-escuro': c.e, '--u-claro': c.c } as React.CSSProperties; };
 export const NOMES_NIVEL = ['Básico', 'Intermediário', 'Avançado', 'Prova'] as const;
 
 export const LICOES: Licao[] = [

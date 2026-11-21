@@ -1,19 +1,18 @@
 // Trilha por tema: o aluno escolhe o tema e sobe do básico ao avançado, terminando nas questões de prova.
 import { useEffect, useRef, useState } from 'react';
-import { LICOES, NOMES_NIVEL, UNIDADES } from '../dados/licoes';
+import { LICOES, NOMES_NIVEL, UNIDADES, varsTema } from '../dados/licoes';
+import { EmblemaTema, EscadaNivel } from '../componentes/Tema';
 import {
-  MOEDAS_BAU, NOME_NIVEL_ALUNO, SIMBOLO_UNIDADE, abrirBau, bauLiberado, desempenhoProvaTema, escolherTema, liberada, nivelTema, useEstado
+  MOEDAS_BAU, NOME_NIVEL_ALUNO, abrirBau, bauLiberado, desempenhoProvaTema, faltamParaProva, escolherTema, liberada, nivelTema, useEstado
 } from '../estado';
 import { useSessao } from '../api';
 import { APP } from '../plataforma';
-import { Icone, Selo, type CorSelo } from '../componentes/Icones';
+import { Icone } from '../componentes/Icones';
 import Lumi, { Efe, Ve, Balao, type Humor } from '../componentes/Lumi';
 import { som } from '../som';
 
 const CADEADO = <Icone nome="cadeado" tamanho={30} />;
 const OK = <Icone nome="verdade" tamanho={30} />;
-const CORES = ['verde', 'azul', 'roxo', 'laranja'];
-const COR_NIVEL: CorSelo[] = ['cinza', 'bronze', 'prata', 'azul', 'ouro'];
 const ZIGUE = [0, -1, 0, 1]; // deslocamento dos nós no caminho
 
 // quem acompanha cada tema e o que diz quando o aluno toca nele
@@ -82,13 +81,13 @@ function EscolherTema({ onEscolher, irPara }: { onEscolher: (t: number) => void;
           const feitas = u.licoes.filter((i) => e.estrelas[i] != null).length;
           return (
             <li key={u.id}>
-              <button type="button" className={'tema-card' + (e.tema === t ? ' atual' : '')} onClick={() => { som('toque'); onEscolher(t); }}
+              <button type="button" style={varsTema(t)} className={'tema-card' + (e.tema === t ? ' atual' : '')} onClick={() => { som('toque'); onEscolher(t); }}
                 aria-label={u.nome + '. ' + NOME_NIVEL_ALUNO[n] + '. ' + feitas + ' de ' + u.licoes.length + ' lições.'}>
-                <Selo simbolo={SIMBOLO_UNIDADE[t]} cor={COR_NIVEL[n]} tamanho={56} />
+                <EmblemaTema t={t} tamanho={58} />
                 <strong>{u.nome}</strong>
                 <small>{u.desc}</small>
                 <span className="tema-nivel">{n === 0 && nada && t === 0 ? 'Comece por aqui' : NOME_NIVEL_ALUNO[n]}</span>
-                <span className="tema-trilho" aria-hidden="true">{[1, 2, 3, 4].map((k) => <i key={k} className={k <= n ? 'on' : ''} />)}</span>
+                <EscadaNivel t={t} n={n} />
               </button>
             </li>
           );
@@ -126,12 +125,13 @@ export default function Trilha({ abrir, irPara, iniciar }: { abrir: (i: number) 
 
   return (
     <>
-      <section className={'unidade tema-trilha unidade-' + CORES[t % CORES.length]}>
+      <section className="unidade tema-trilha" style={varsTema(t)}>
         <div className="unidade-cab">
-          <div>
+          <EmblemaTema t={t} tamanho={54} className="cab-emblema" />
+          <div className="cab-texto">
             <p className="unidade-num">Tema {t + 1} de {UNIDADES.length}</p>
             <h1 className="tema-titulo">{u.nome}</h1>
-            <span className={'selo' + (n >= 3 ? ' ganho' : '')}><Selo simbolo={SIMBOLO_UNIDADE[t]} cor={COR_NIVEL[n]} tamanho={20} />Seu nível: {NOME_NIVEL_ALUNO[n]}</span>
+            <span className="nivel-chip"><EscadaNivel t={t} n={n} tamanho={38} />{NOME_NIVEL_ALUNO[n]}</span>
           </div>
           <button type="button" className="btn-caderno" onClick={() => { som('toque'); setEscolhendo(true); }}><Icone nome="trilha" tamanho={22} />Trocar tema</button>
         </div>
@@ -180,7 +180,8 @@ export default function Trilha({ abrir, irPara, iniciar }: { abrir: (i: number) 
                       {avancadoFeito ? <Icone nome="precisao" tamanho={32} /> : CADEADO}
                     </button>
                     <span className="no-nome">{temQ ? prova.questoes + ' questões de prova' : 'Revisão final do tema'}</span>
-                    {temQ && prova.tentativas > 0 && <span className="no-sub">{Math.round(prova.taxa * 100)}% de acerto · meta: 70%</span>}
+                    {temQ && prova.tentativas > 0 && n < 4 && <span className="no-sub">{Math.round(prova.taxa * 100)}% de acerto · {faltamParaProva(prova) === 1 ? 'falta 1 acerto' : 'faltam ' + faltamParaProva(prova) + ' acertos'} para 70%</span>}
+                    {temQ && prova.tentativas > 0 && n >= 4 && <span className="no-sub">{Math.round(prova.taxa * 100)}% de acerto · pronto para a prova!</span>}
                   </li>
                 );
               }

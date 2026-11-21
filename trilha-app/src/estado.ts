@@ -143,6 +143,12 @@ export function desempenhoProvaTema(e: Estado, t: number) {
   for (const q of PROVAS) if (temas.includes(q.tema)) { qs++; const p = e.provas[q.id]; if (p) { tent += p.t; ac += p.a; } }
   return { questoes: qs, tentativas: tent, acertos: ac, taxa: tent ? ac / tent : 0 };
 }
+// quantos acertos seguidos ainda faltam para chegar a 70% (com pelo menos 3 respostas)
+export function faltamParaProva(d: { tentativas: number; acertos: number }) {
+  let k = 0;
+  while (k < 200 && !((d.tentativas + k) >= 3 && (d.acertos + k) / (d.tentativas + k) >= 0.7)) k++;
+  return k;
+}
 export function nivelTema(e: Estado, t: number) {
   const u = UNIDADES[t];
   let n = 0;
@@ -230,12 +236,13 @@ export function registrarResposta(ok: boolean, combo: number, id?: string) {
 export interface ResultadoLicao {
   moedas: number;
   ganho: number; bonusMissoes: number; estrelas: number; nivelAntes: number; nivelDepois: number;
-  primeiraVez: boolean; unidadeFechada: number | null; novasConquistas: Conquista[]; missoesConcluidas: Missao[]; metaBatida: boolean;
+  primeiraVez: boolean; unidadeFechada: number | null; tema: number; nivelTemaAntes: number; nivelTemaDepois: number; novasConquistas: Conquista[]; missoesConcluidas: Missao[]; metaBatida: boolean;
 }
 
 export function registrarLicao(idx: number, acertosPrimeira: number, total: number): ResultadoLicao {
   const e = normalizar(estado);
   const hoje = diaLocal();
+  const tema = temaDaLicao(idx), nivelTemaAntes = nivelTema(e, tema);
   const estrelas = acertosPrimeira === total ? 3 : acertosPrimeira === total - 1 ? 2 : 1;
   const primeiraVez = e.estrelas[idx] == null;
   let ganho = acertosPrimeira * 10 + (estrelas === 3 ? 5 : 0);
@@ -270,7 +277,7 @@ export function registrarLicao(idx: number, acertosPrimeira: number, total: numb
   e.atualizado = Date.now();
   definir(e);
   return {
-    moedas, ganho, bonusMissoes: bonus, estrelas, nivelAntes, nivelDepois: nivelDe(e.xp), primeiraVez, unidadeFechada,
+    moedas, ganho, bonusMissoes: bonus, estrelas, nivelAntes, nivelDepois: nivelDe(e.xp), primeiraVez, unidadeFechada, tema, nivelTemaAntes, nivelTemaDepois: nivelTema(e, tema),
     novasConquistas: novas, missoesConcluidas: concluidas, metaBatida: !metaAntes && (e.xpDia[hoje] || 0) >= e.meta
   };
 }

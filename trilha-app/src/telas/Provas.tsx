@@ -6,11 +6,19 @@ import { BANCAS_PROVA, BANCA_DO_PERFIL, PROVAS, TEMAS_PROVA, type QuestaoProva }
 import { registrarProva, registrarSimulado, useEstado } from '../estado';
 import { bancaEscolhida } from './BoasVindas';
 import { Icone } from '../componentes/Icones';
+import { EmblemaTema } from '../componentes/Tema';
+import { UNIDADES, varsTema } from '../dados/licoes';
 import Lumi from '../componentes/Lumi';
 import { BotaoLeitura, BotaoMicrofone, useLeituraAuto } from '../componentes/Voz';
 import { som } from '../som';
 
 type Modo = 'todas' | 'novas' | 'erradas';
+// etiqueta colorida com a cor do tema da trilha a que a questão pertence
+function PilulaTema({ tema }: { tema: string }) {
+  const t = UNIDADES.findIndex((u) => u.temas.includes(tema));
+  if (t < 0) return <span className="pilula-tema sem">{tema}</span>;
+  return <span className="pilula-tema" style={varsTema(t)}><EmblemaTema t={t} tamanho={20} />{tema}</span>;
+}
 const LETRA = (l: string) => l.toUpperCase();
 const embaralhar = <T,>(a: T[]) => { const r = [...a]; for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; } return r; };
 const fonte = (q: QuestaoProva) => [q.banca, q.ano, q.orgao].filter(Boolean).join(' · ');
@@ -107,7 +115,7 @@ function Simulado({ questoes, onFim }: { questoes: QuestaoProva[]; onFim: () => 
                     <details>
                       <summary>
                         <span className="sim-marca" aria-hidden="true">{ok ? <Icone nome="verdade" tamanho={18} /> : '✗'}</span>
-                        <span><strong>Questão {k + 1}</strong> · {x.tema}<small>{ok ? 'Acertou' : resp[x.id] ? 'Você marcou ' + LETRA(resp[x.id]) + ', gabarito ' + LETRA(x.gabarito) : 'Em branco, gabarito ' + LETRA(x.gabarito)}</small></span>
+                        <span><strong>Questão {k + 1}</strong> <PilulaTema tema={x.tema} /><small>{ok ? 'Acertou' : resp[x.id] ? 'Você marcou ' + LETRA(resp[x.id]) + ', gabarito ' + LETRA(x.gabarito) : 'Em branco, gabarito ' + LETRA(x.gabarito)}</small></span>
                       </summary>
                       <p className="sim-enun">{x.enunciado}</p>
                       <VideoResolucao id={x.id} titulo={'questão ' + (k + 1)} />
@@ -244,7 +252,7 @@ export default function Provas({ irPara, temaInicial }: { irPara: (r: string) =>
       ) : (
         <article className="card prova-q" id="prova-q" aria-labelledby="prova-enun">
           <p className="rotulo">{Math.min(idx, lista.length - 1) + 1} de {lista.length} · {fonte(q)}</p>
-          <p className="prova-tema">{q.tema}{e.provas[q.id] && !revelar ? (e.provas[q.id].u ? ' · você já acertou' : ' · você errou antes') : ''}</p>
+          <p className="prova-tema"><PilulaTema tema={q.tema} />{e.provas[q.id] && !revelar ? (e.provas[q.id].u ? ' · você já acertou' : ' · você errou antes') : ''}</p>
           <h2 id="prova-enun" className="enunciado">{q.enunciado}</h2>
           <Alternativas q={q} escolha={escolha} revelar={revelar} onEscolher={(l) => { som('toque'); setEscolha(l); }} />
           {revelar && (

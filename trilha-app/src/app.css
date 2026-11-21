@@ -618,3 +618,59 @@ button.btn-caderno:hover { background: rgba(255,255,255,.12); }
 a.nivel-barra { color: inherit; text-decoration: none; min-height: 44px; display: flex; flex-direction: column; justify-content: center; }
 .nivel-sep span { width: min(100%, 520px); margin: 0 auto; }
 .tema-caminho .guia { top: 210px; }
+
+/* ===== Identidade por tema (cor = tema, degraus = nível) ===== */
+.emblema { display: block; flex: none; overflow: visible; }
+.tema-card { border-top: 5px solid var(--u); }
+.tema-card .tema-nivel { color: var(--u-escuro); }
+.tema-card.atual { border-color: var(--u); background: var(--u-claro); }
+.tema-card:hover { background: var(--u-claro); }
+.escada { display: block; flex: none; }
+.tema-trilha .unidade-cab { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; }
+.cab-emblema .emblema, .unidade-cab .emblema { filter: drop-shadow(0 0 0 #fff); }
+.unidade-cab .emblema path:nth-child(2) { stroke: #fff; }
+.nivel-chip { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--u-escuro); font-weight: 700; font-size: 14px; padding: 5px 10px 5px 8px; border-radius: 99px; }
+.tema-caminho { background: var(--u-claro); border-radius: 22px; padding: 4px 8px 18px; margin-top: 14px; }
+.nivel-sep span { color: var(--u-escuro); }
+.nivel-sep span::before, .nivel-sep span::after { background: color-mix(in srgb, var(--u) 30%, transparent); }
+.nivel-sep.feito span { color: var(--u-escuro); }
+.no-prova { background: var(--u-escuro) !important; box-shadow: 0 7px 0 #1b2333 !important; color: #F2C230; outline: 3px solid #F2C230; outline-offset: -3px; }
+.no-prova.atual { background: var(--marca) !important; box-shadow: 0 7px 0 #C9A92B !important; color: var(--tinta); outline: 0; }
+.no-prova.bloqueado { outline: 0; }
+.no-sub { color: var(--u-escuro); font-weight: 600; }
+.btn-tema { background: var(--u); color: #fff; border: 0; box-shadow: 0 4px 0 var(--u-escuro); }
+.btn-tema:hover { filter: brightness(1.05); }
+/* painel: mapa de temas */
+.ponto-fraco { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; background: var(--u-claro); border: 2px solid var(--u); }
+.ponto-fraco p strong { display: block; color: var(--u-escuro); }
+.ponto-fraco p small { display: block; color: var(--tinta); font-size: 14px; margin-top: 2px; }
+@media (max-width: 480px) { .ponto-fraco { grid-template-columns: auto 1fr; } .ponto-fraco .btn { grid-column: 1 / -1; } }
+.mapa-temas { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+@media (min-width: 700px) { .mapa-temas { grid-template-columns: 1fr 1fr; } }
+.mapa-item { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: center; width: 100%; text-align: left; padding: 12px; border: 2px solid var(--linha); border-left: 6px solid var(--u); border-radius: 14px; background: var(--folha); color: var(--tinta); font: inherit; cursor: pointer; min-height: 72px; }
+.mapa-item:hover, .mapa-item.atual { background: var(--u-claro); }
+.mapa-txt strong { display: block; font-size: 16px; }
+.mapa-nivel { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: var(--u-escuro); margin: 4px 0 2px; }
+.mapa-txt small { display: block; font-size: 14px; color: var(--tinta-2); line-height: 1.35; }
+.mapa-sub { font-size: 16px; margin: 18px 0 8px; }
+.mapa-novos { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+@media (min-width: 700px) { .mapa-novos { grid-template-columns: repeat(3, 1fr); } }
+.novo-item { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 56px; padding: 6px 10px; border: 2px solid var(--linha); border-radius: 12px; background: var(--folha); color: var(--tinta); font: 600 14px var(--fonte); text-align: left; cursor: pointer; line-height: 1.25; }
+.novo-item:hover { background: var(--u-claro); border-color: var(--u); }
+/* pílula de tema nas questões de prova */
+.pilula-tema { display: inline-flex; align-items: center; gap: 6px; background: var(--u-claro); color: var(--u-escuro); font-weight: 700; font-size: 14px; padding: 3px 10px 3px 4px; border-radius: 99px; }
+/* topo */
+.nivel-barra .trilho span { background: var(--u, var(--verde)); }
+.topo-tema { display: inline-flex; align-items: center; gap: 6px; }
+/* marco de nível do tema */
+.marco { display: flex; align-items: center; gap: 14px; text-align: left; margin: 0 auto 14px; max-width: 440px; padding: 14px 16px; border-radius: 16px; background: var(--u-claro); border: 2px solid var(--u); }
+.marco strong { display: block; color: var(--u-escuro); font-size: 18px; }
+.marco small { display: block; font-size: 15px; color: var(--tinta); }
+@media (prefers-reduced-motion: no-preference) { .marco { animation: marco-entra .6s ease-out both; } .marco .emblema { animation: marco-sobe .9s .2s cubic-bezier(.3, 1.6, .5, 1) both; } @keyframes marco-entra { from { opacity: 0; } } @keyframes marco-sobe { from { transform: translateY(14px) scale(.7); } } }
+@media (prefers-reduced-motion: reduce) { .marco { animation: none; } }
+.quase { font-size: 15px; color: var(--tinta-2); margin: -4px 0 10px; }
+.btn.btn-tema { background: var(--u); color: #fff; border-color: var(--u-escuro); box-shadow: 0 4px 0 var(--u-escuro); }
+.pilula-tema.sem { padding-left: 10px; background: var(--papel); color: var(--tinta-2); }
+.prova-tema { color: var(--tinta-2); }
+.tema-caminho .guia { top: 54px; }
+@media (max-width: 420px) { .topo-tema .emblema { display: none; } }
