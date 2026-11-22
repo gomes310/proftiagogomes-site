@@ -1,5 +1,5 @@
 {
- "fonte": "Material do Prof. Tiago Gomes (e-books de questões), conferido questão por questão; resoluções escritas para a Trilha",
+ "fonte": "Material do Prof. Tiago Gomes (e-books de questões), conferido questão por questão; resoluções escritas para a Trilha. Vídeos de resolução do canal do professor ligados às questões das playlists dos e-books.",
  "questoes": [
   {
    "id": "mat-cat-001",
@@ -29,7 +29,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Para negar \"todo\", basta um caso contrário: \"Algum policial militar não é um exímio atirador\". A letra B (\"nenhum\") é o erro clássico: ela exagera a negação."
+   "resolucao": "Para negar \"todo\", basta um caso contrário: \"Algum policial militar não é um exímio atirador\". A letra B (\"nenhum\") é o erro clássico: ela exagera a negação.",
+   "video": "bu1JmXSh6oQ"
   },
   {
    "id": "mat-cat-002",
@@ -59,7 +60,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "A frase é \"todas as casas de A foram visitadas E todas as de B foram visitadas\". Negando: troque \"e\" por \"ou\" e negue cada parte (\"todas\" vira \"alguma… não\"). Fica: alguma casa de A não foi visitada OU alguma casa de B não foi visitada."
+   "resolucao": "A frase é \"todas as casas de A foram visitadas E todas as de B foram visitadas\". Negando: troque \"e\" por \"ou\" e negue cada parte (\"todas\" vira \"alguma… não\"). Fica: alguma casa de A não foi visitada OU alguma casa de B não foi visitada.",
+   "video": "bk7sjAgQif8"
   },
   {
    "id": "mat-cat-003",
@@ -89,7 +91,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Negação de \"algum… é\" é \"nenhum… é\", que é o mesmo que \"todo… não é\". \"Nenhum agente tem O−\" = \"Todo agente tem tipo sanguíneo diferente de O−\". Os dados sobre tempo de serviço não interessam aqui."
+   "resolucao": "Negação de \"algum… é\" é \"nenhum… é\", que é o mesmo que \"todo… não é\". \"Nenhum agente tem O−\" = \"Todo agente tem tipo sanguíneo diferente de O−\". Os dados sobre tempo de serviço não interessam aqui.",
+   "video": "AShcKF6mUDg"
   },
   {
    "id": "mat-cat-004",
@@ -107,7 +110,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Errado. A negação de \"todos são\" é \"pelo menos um não é\": \"Algum amigo de Bianca não é natural de São Paulo\". \"Nenhum\" não é a negação."
+   "resolucao": "Errado. A negação de \"todos são\" é \"pelo menos um não é\": \"Algum amigo de Bianca não é natural de São Paulo\". \"Nenhum\" não é a negação.",
+   "video": "MQtYHSujnI8"
   },
   {
    "id": "mat-cat-005",
@@ -133,7 +137,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Negar \"todos estão olhando\" é dizer que existe pelo menos um que não está olhando. Letra C."
+   "resolucao": "Negar \"todos estão olhando\" é dizer que existe pelo menos um que não está olhando. Letra C.",
+   "video": "AQWYODK8qgw"
   },
   {
    "id": "mat-cat-006",
@@ -163,7 +168,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "\"Todo vegetal verde é saudável\" equivale a \"se é verde, é saudável\". A contrapositiva também vale: \"se não é saudável, não é verde\". Letra B."
+   "resolucao": "\"Todo vegetal verde é saudável\" equivale a \"se é verde, é saudável\". A contrapositiva também vale: \"se não é saudável, não é verde\". Letra B.",
+   "video": "N6L1kYhrO1M"
   },
   {
    "id": "mat-cat-007",
@@ -193,7 +199,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "As letras A a D dizem a mesma coisa: existe pesquisador que não é estudioso (é a negação). \"Nenhum pesquisador é estudioso\" não é a negação. Letra E."
+   "resolucao": "As letras A a D dizem a mesma coisa: existe pesquisador que não é estudioso (é a negação). \"Nenhum pesquisador é estudioso\" não é a negação. Letra E.",
+   "video": "OqMB8bKNqRw"
   },
   {
    "id": "mat-cat-008",
@@ -219,7 +226,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Os tutores estão dentro do círculo dos professores. Se existe tutor, então existe professor que é tutor. As outras não são garantidas: os coordenadores podem estar fora dos tutores. Letra C."
+   "resolucao": "Os tutores estão dentro do círculo dos professores. Se existe tutor, então existe professor que é tutor. As outras não são garantidas: os coordenadores podem estar fora dos tutores. Letra C.",
+   "video": "uhElmK3-WyU"
   },
   {
    "id": "mat-cat-009",
@@ -245,7 +253,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "Se alguns coristas são pianistas, então alguns pianistas são coristas: o \"algum\" pode ser lido nos dois sentidos. Letra D."
+   "resolucao": "Se alguns coristas são pianistas, então alguns pianistas são coristas: o \"algum\" pode ser lido nos dois sentidos. Letra D.",
+   "video": "Yhz4XBn8hcE"
   },
   {
    "id": "mat-cat-010",
@@ -275,7 +284,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "Para \"todas estão acesas\" ser falsa, basta uma apagada: \"pelo menos uma lâmpada está apagada\". Letra D."
+   "resolucao": "Para \"todas estão acesas\" ser falsa, basta uma apagada: \"pelo menos uma lâmpada está apagada\". Letra D.",
+   "video": "pzDAhWzncvE"
   },
   {
    "id": "mat-cat-011",
@@ -305,7 +315,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "Todo morador de Vila Velha gosta de praia. João não gosta, então ele não pode estar no círculo dos moradores de Vila Velha. Mas pode morar em outra cidade do Espírito Santo. Letra B."
+   "resolucao": "Todo morador de Vila Velha gosta de praia. João não gosta, então ele não pode estar no círculo dos moradores de Vila Velha. Mas pode morar em outra cidade do Espírito Santo. Letra B.",
+   "video": "61QzsnOLQ3w"
   },
   {
    "id": "mat-cat-013",
@@ -335,7 +346,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Negar \"todos carregam todas as malas\" é dizer que pelo menos um homem não carrega todas as suas malas. Letra E. A letra C (\"não carrega nenhuma\") exagera."
+   "resolucao": "Negar \"todos carregam todas as malas\" é dizer que pelo menos um homem não carrega todas as suas malas. Letra E. A letra C (\"não carrega nenhuma\") exagera.",
+   "video": "M0epCn7HbYA"
   },
   {
    "id": "mat-cat-015",
@@ -365,7 +377,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Os B que são C não podem ser A, porque nenhum C é A. Como existe B que é C, existe B que não é A. Letra C."
+   "resolucao": "Os B que são C não podem ser A, porque nenhum C é A. Como existe B que é C, existe B que não é A. Letra C.",
+   "video": "n_JxP6WE2HI"
   },
   {
    "id": "mat-cat-016",
@@ -395,7 +408,8 @@
     ]
    ],
    "gabarito": "a",
-   "resolucao": "Maria estuda física. O círculo dos eletricistas está dentro do círculo de quem estuda física, mas há gente que estuda física e não é eletricista. Então Maria pode ser eletricista, sem certeza. Letra A."
+   "resolucao": "Maria estuda física. O círculo dos eletricistas está dentro do círculo de quem estuda física, mas há gente que estuda física e não é eletricista. Então Maria pode ser eletricista, sem certeza. Letra A.",
+   "video": "Dia_m5r9yC0"
   },
   {
    "id": "mat-cat-018",
@@ -425,7 +439,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "Negação de \"todos são\" é \"algum não é\": \"Algum técnico de informática não é gaúcho\". Letra D."
+   "resolucao": "Negação de \"todos são\" é \"algum não é\": \"Algum técnico de informática não é gaúcho\". Letra D.",
+   "video": "-qUFmouSnqU"
   },
   {
    "id": "mat-cat-019",
@@ -455,7 +470,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "João é N. Alguns N são L, e todo L é M. Nada garante que João está entre os N que são L, mas é possível. Ele pode ser L e M. Letra E."
+   "resolucao": "João é N. Alguns N são L, e todo L é M. Nada garante que João está entre os N que são L, mas é possível. Ele pode ser L e M. Letra E.",
+   "video": "7XkB8D-mYNM"
   },
   {
    "id": "mat-cat-021",
@@ -485,7 +501,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Fagundes opera máquinas. Todo motorista opera máquinas, mas nem todo operador é motorista. Então ele pode ser motorista e também zelador, sem certeza. Letra E."
+   "resolucao": "Fagundes opera máquinas. Todo motorista opera máquinas, mas nem todo operador é motorista. Então ele pode ser motorista e também zelador, sem certeza. Letra E.",
+   "video": "iRBADLG4F_Y"
   },
   {
    "id": "mat-cat-022",
@@ -515,7 +532,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "Miguel é fiscal de obras, e todos os fiscais sabem matemática. Então ele certamente sabe matemática. Sobre literatura, só \"alguns\" gostam: nada é certo. Letra D."
+   "resolucao": "Miguel é fiscal de obras, e todos os fiscais sabem matemática. Então ele certamente sabe matemática. Sobre literatura, só \"alguns\" gostam: nada é certo. Letra D.",
+   "video": "oEUXJoFxQ5w"
   },
   {
    "id": "mat-cat-024",
@@ -545,7 +563,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "A frase é \"todos são culpados E devem ser punidos\". Negar \"todos\" dá \"existe um que não…\", e negar o \"e\" dá \"ou\". Fica: existe envolvido que não é culpado ou que não deve ser punido. Letra C."
+   "resolucao": "A frase é \"todos são culpados E devem ser punidos\". Negar \"todos\" dá \"existe um que não…\", e negar o \"e\" dá \"ou\". Fica: existe envolvido que não é culpado ou que não deve ser punido. Letra C.",
+   "video": "aGiLNWO2Gjg"
   },
   {
    "id": "mat-cat-025",
@@ -575,7 +594,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Alguns engenheiros são professores, e todo professor é concursado. Esses engenheiros-professores são concursados. Logo, existe concursado que é engenheiro. Letra E."
+   "resolucao": "Alguns engenheiros são professores, e todo professor é concursado. Esses engenheiros-professores são concursados. Logo, existe concursado que é engenheiro. Letra E.",
+   "video": "dZKMRzEwNDg"
   },
   {
    "id": "mat-cat-027",
@@ -605,7 +625,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "Funcionário público está dentro de concursado, e concursado não toca em autônomo. Então nenhum funcionário público é autônomo. Letra D."
+   "resolucao": "Funcionário público está dentro de concursado, e concursado não toca em autônomo. Então nenhum funcionário público é autônomo. Letra D.",
+   "video": "xiQghfc3d1Y"
   },
   {
    "id": "mat-cat-028",
@@ -623,7 +644,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Errado. A negação de \"todas devem ser gravadas\" é \"alguma reunião não deve ser gravada\". \"Nenhuma\" não é a negação."
+   "resolucao": "Errado. A negação de \"todas devem ser gravadas\" é \"alguma reunião não deve ser gravada\". \"Nenhuma\" não é a negação.",
+   "video": "UmpGudmwQKo"
   },
   {
    "id": "mat-cat-029",
@@ -653,7 +675,8 @@
     ]
    ],
    "gabarito": "a",
-   "resolucao": "Marcelo gosta de música. Todo jogador gosta de música, mas há quem goste de música sem jogar futebol. Então Marcelo pode ser jogador, sem certeza. Letra A."
+   "resolucao": "Marcelo gosta de música. Todo jogador gosta de música, mas há quem goste de música sem jogar futebol. Então Marcelo pode ser jogador, sem certeza. Letra A.",
+   "video": "DsxA5vRiH4c"
   },
   {
    "id": "mat-cat-030",
@@ -683,7 +706,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "Todo vigilante conhece a legislação, mas há quem conheça sem ser vigilante. Marco pode ser vigilante sanitário, sem certeza. Letra D."
+   "resolucao": "Todo vigilante conhece a legislação, mas há quem conheça sem ser vigilante. Marco pode ser vigilante sanitário, sem certeza. Letra D.",
+   "video": "mc-xOPhankE"
   },
   {
    "id": "mat-cat-032",
@@ -713,7 +737,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "\"Toda mulher da família é guarda civil\" equivale a \"se é da família, é guarda\". A contrapositiva também vale: \"se não é guarda civil, não é da família\". Letra E."
+   "resolucao": "\"Toda mulher da família é guarda civil\" equivale a \"se é da família, é guarda\". A contrapositiva também vale: \"se não é guarda civil, não é da família\". Letra E.",
+   "video": "CRza9WVy1EA"
   },
   {
    "id": "mat-cat-033",
@@ -743,7 +768,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "Quem gosta de futebol gosta de vôlei. Pedro não gosta de vôlei, então não gosta de futebol. Todo monitor gosta de futebol, então Pedro não é monitor: é motorista. Letra B."
+   "resolucao": "Quem gosta de futebol gosta de vôlei. Pedro não gosta de vôlei, então não gosta de futebol. Todo monitor gosta de futebol, então Pedro não é monitor: é motorista. Letra B.",
+   "video": "KCWK20QXz8s"
   },
   {
    "id": "mat-cat-034",
@@ -773,7 +799,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Todos os 10 gostam de viajar e 6 usam óculos. Esses 6 usam óculos e gostam de viajar. Letra E."
+   "resolucao": "Todos os 10 gostam de viajar e 6 usam óculos. Esses 6 usam óculos e gostam de viajar. Letra E.",
+   "video": "A9CFqHcFYTM"
   },
   {
    "id": "mat-cat-035",
@@ -803,7 +830,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "Manutenção está dentro de \"usa luvas\", que está dentro de \"usa botas\". Então todos da manutenção usam botas. Letra D."
+   "resolucao": "Manutenção está dentro de \"usa luvas\", que está dentro de \"usa botas\". Então todos da manutenção usam botas. Letra D.",
+   "video": "EO9r1Dc8Vso"
   },
   {
    "id": "mat-cat-036",
@@ -833,7 +861,8 @@
     ]
    ],
    "gabarito": "a",
-   "resolucao": "\"Todo estudioso foi aprovado\" equivale a \"se é estudioso, foi aprovado\". A contrapositiva é: se não foi aprovado, não é estudioso. Letra A."
+   "resolucao": "\"Todo estudioso foi aprovado\" equivale a \"se é estudioso, foi aprovado\". A contrapositiva é: se não foi aprovado, não é estudioso. Letra A.",
+   "video": "8Ghkc3vcdEI"
   },
   {
    "id": "mat-cat-037",
@@ -863,7 +892,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Júlio é universitário (é dito direto). Ele é atleta e nenhum cozinheiro é atleta, então Júlio não está em C. Só a letra C é garantida: Júlio ∈ B."
+   "resolucao": "Júlio é universitário (é dito direto). Ele é atleta e nenhum cozinheiro é atleta, então Júlio não está em C. Só a letra C é garantida: Júlio ∈ B.",
+   "video": "0MVAe2JiTQQ"
   },
   {
    "id": "mat-cat-038",
@@ -893,7 +923,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "Negação de \"todo professor é licenciado\" é \"algum professor não é licenciado\". Letra B."
+   "resolucao": "Negação de \"todo professor é licenciado\" é \"algum professor não é licenciado\". Letra B.",
+   "video": "sKAmf-BQ6Yw"
   },
   {
    "id": "mat-cat-039",
@@ -919,7 +950,8 @@
     ]
    ],
    "gabarito": "a",
-   "resolucao": "Pegue um homem qualquer. Se ele é enfermeiro, é responsável. Se não é, então é médico ou anestesista, e os dois são responsáveis. Em qualquer caso, é responsável. Letra A."
+   "resolucao": "Pegue um homem qualquer. Se ele é enfermeiro, é responsável. Se não é, então é médico ou anestesista, e os dois são responsáveis. Em qualquer caso, é responsável. Letra A.",
+   "video": "PuGomLw-a08"
   },
   {
    "id": "mat-cat-040",
@@ -949,7 +981,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "\"Todo aluno de Fidalgo acertou tudo\" equivale a \"se é aluno, acertou\". A contrapositiva também vale: se Manoel não acertou tudo, ele não é aluno de Fidalgo. Letra D."
+   "resolucao": "\"Todo aluno de Fidalgo acertou tudo\" equivale a \"se é aluno, acertou\". A contrapositiva também vale: se Manoel não acertou tudo, ele não é aluno de Fidalgo. Letra D.",
+   "video": "rd2w7M3q7U8"
   },
   {
    "id": "mat-cat-041",
@@ -975,7 +1008,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "Existem crianças feias, e toda criança é magra. Essas crianças feias também são magras. Logo, alguma criança magra é feia. Letra B."
+   "resolucao": "Existem crianças feias, e toda criança é magra. Essas crianças feias também são magras. Logo, alguma criança magra é feia. Letra B.",
+   "video": "aflmUS2y0S8"
   },
   {
    "id": "mat-cat-042",
@@ -1005,7 +1039,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Flávio tem CNH AB, e toda pessoa com CNH AB tem ensino médio. Então Flávio tem ensino médio. Sobre Gustavo nada se conclui. Letra E."
+   "resolucao": "Flávio tem CNH AB, e toda pessoa com CNH AB tem ensino médio. Então Flávio tem ensino médio. Sobre Gustavo nada se conclui. Letra E.",
+   "video": "EsEstOE21_M"
   },
   {
    "id": "mat-cat-043",
@@ -1031,7 +1066,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "Negar \"toda laranja está boa\" é dizer que alguma laranja não está boa. Letra D."
+   "resolucao": "Negar \"toda laranja está boa\" é dizer que alguma laranja não está boa. Letra D.",
+   "video": "tq2tgALLWo0"
   },
   {
    "id": "mat-cat-044",
@@ -1057,7 +1093,8 @@
     ]
    ],
    "gabarito": "a",
-   "resolucao": "\"Algum\" é particular, e a frase sem \"não\" é afirmativa. Letra A."
+   "resolucao": "\"Algum\" é particular, e a frase sem \"não\" é afirmativa. Letra A.",
+   "video": "iQ90arzm2eE"
   },
   {
    "id": "mat-cat-045",
@@ -1083,7 +1120,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "Os advogados mentirosos não podem ser professores, porque nenhum professor mente. Como existem advogados mentirosos, alguns advogados não são professores. Letra D."
+   "resolucao": "Os advogados mentirosos não podem ser professores, porque nenhum professor mente. Como existem advogados mentirosos, alguns advogados não são professores. Letra D.",
+   "video": "H3z1eXufzPw"
   },
   {
    "id": "mat-cat-047",
@@ -1113,7 +1151,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "Todo habitante é feliz, e nenhum mal-humorado é feliz. Então nenhum habitante da cidade Feliz é mal-humorado. Letra D."
+   "resolucao": "Todo habitante é feliz, e nenhum mal-humorado é feliz. Então nenhum habitante da cidade Feliz é mal-humorado. Letra D.",
+   "video": "AJikC2j9ZYc"
   },
   {
    "id": "mat-cat-048",
@@ -1139,7 +1178,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "\"Todas as cunhadas de Ana são morenas\": se Maria é cunhada de Ana, Maria é morena. Sobre a própria Ana nada se diz. Letra D."
+   "resolucao": "\"Todas as cunhadas de Ana são morenas\": se Maria é cunhada de Ana, Maria é morena. Sobre a própria Ana nada se diz. Letra D.",
+   "video": "iQVGMu6Z3Hk"
   },
   {
    "id": "mat-cat-050",
@@ -1165,7 +1205,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "José ganha se \"todo sábado chove\" for falsa. Para isso, basta que em algum sábado não chova. Letra B."
+   "resolucao": "José ganha se \"todo sábado chove\" for falsa. Para isso, basta que em algum sábado não chova. Letra B.",
+   "video": "vSsPLaB2hMA"
   },
   {
    "id": "mat-cat-051",
@@ -1191,7 +1232,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "A afirmação \"todos das turmas A e B tiraram 75 ou mais\" é falsa. Então pelo menos um aluno de uma das turmas tirou menos de 75. Não precisa ser um de cada turma. Letra D."
+   "resolucao": "A afirmação \"todos das turmas A e B tiraram 75 ou mais\" é falsa. Então pelo menos um aluno de uma das turmas tirou menos de 75. Não precisa ser um de cada turma. Letra D.",
+   "video": "ZQlWlcQRVpU"
   },
   {
    "id": "mat-cat-052",
@@ -2209,7 +2251,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Comece pela falsa: uma condicional só é falsa em V → F. Em IV, Lucas é eletricista e José não é pedreiro. Em III, \"não pedreiro\" obriga Heitor a ser vendedor. Em II, Geraldo não é encanador. Em I, Francisco não é mecânico. Letra C."
+   "resolucao": "Comece pela falsa: uma condicional só é falsa em V → F. Em IV, Lucas é eletricista e José não é pedreiro. Em III, \"não pedreiro\" obriga Heitor a ser vendedor. Em II, Geraldo não é encanador. Em I, Francisco não é mecânico. Letra C.",
+   "video": "_rp0R6G8-r4"
   },
   {
    "id": "mat-imp-002",
@@ -2239,7 +2282,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "Parta do fato: o cabo está de motorista. A última frase, pela contrapositiva, dá que o Sd está na ronda. A anterior dá que o Sgt está de adjunto. A primeira dá que o Ten não está de oficial-de-dia. Letra B."
+   "resolucao": "Parta do fato: o cabo está de motorista. A última frase, pela contrapositiva, dá que o Sd está na ronda. A anterior dá que o Sgt está de adjunto. A primeira dá que o Ten não está de oficial-de-dia. Letra B.",
+   "video": "jnFDa6QZZz8"
   },
   {
    "id": "mat-imp-003",
@@ -2269,7 +2313,8 @@
     ]
    ],
    "gabarito": "a",
-   "resolucao": "A condicional falsa obriga a camisa branca (V) e a calça não branca (F). Na segunda, a camisa é branca, então \"camisa não é branca\" é F. Para a frase ser verdadeira, o sapato não pode ser preto. Letra A."
+   "resolucao": "A condicional falsa obriga a camisa branca (V) e a calça não branca (F). Na segunda, a camisa é branca, então \"camisa não é branca\" é F. Para a frase ser verdadeira, o sapato não pode ser preto. Letra A.",
+   "video": "jCbiGkhK_18"
   },
   {
    "id": "mat-imp-004",
@@ -2287,7 +2332,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Errado. \"Faço doação ou compro carro\" permite as duas coisas juntas. Nada obriga a não doar quando compro o carro."
+   "resolucao": "Errado. \"Faço doação ou compro carro\" permite as duas coisas juntas. Nada obriga a não doar quando compro o carro.",
+   "video": "AQv3_YfyWlo"
   },
   {
    "id": "mat-imp-005",
@@ -2305,7 +2351,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Certo. Se não faço doação, pela frase 1 compro o carro. Pela 2, não viajo de avião. Pela 4, assisto a filmes."
+   "resolucao": "Certo. Se não faço doação, pela frase 1 compro o carro. Pela 2, não viajo de avião. Pela 4, assisto a filmes.",
+   "video": "GEYPgxZSvQg"
   },
   {
    "id": "mat-imp-006",
@@ -2323,7 +2370,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Errado. Assistir a filmes não obriga a comprar carro: posso não ter viajado por outro motivo e ter feito a doação."
+   "resolucao": "Errado. Assistir a filmes não obriga a comprar carro: posso não ter viajado por outro motivo e ter feito a doação.",
+   "video": "9AtpjSqq98I"
   },
   {
    "id": "mat-imp-007",
@@ -2341,7 +2389,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Certo. Se viajo de avião, pela contrapositiva da 2 não compro carro. Pela 1, então faço a doação."
+   "resolucao": "Certo. Se viajo de avião, pela contrapositiva da 2 não compro carro. Pela 1, então faço a doação.",
+   "video": "noBDTD1jPBI"
   },
   {
    "id": "mat-imp-008",
@@ -2371,7 +2420,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "D pousa na pista 1. Pela contrapositiva da 3ª, C não pousa na 3. Pela 2ª, B pousa na 2. Letra C."
+   "resolucao": "D pousa na pista 1. Pela contrapositiva da 3ª, C não pousa na 3. Pela 2ª, B pousa na 2. Letra C.",
+   "video": "wcQNY7hZK5E"
   },
   {
    "id": "mat-imp-009",
@@ -2401,7 +2451,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "A velocidade não aumentou. Pela contrapositiva de p, não aconteceu \"aumentar memória OU instalar antivírus\". Negar o \"ou\" dá: nem aumentou a memória, nem instalou antivírus. Letra B."
+   "resolucao": "A velocidade não aumentou. Pela contrapositiva de p, não aconteceu \"aumentar memória OU instalar antivírus\". Negar o \"ou\" dá: nem aumentou a memória, nem instalou antivírus. Letra B.",
+   "video": "xjjSM0AOh7E"
   },
   {
    "id": "mat-imp-010",
@@ -2427,7 +2478,8 @@
     ]
    ],
    "gabarito": "a",
-   "resolucao": "IV: não é psicólogo. II: então não é fisiologista. I: então é dentista. Ele é apenas dentista. Letra A."
+   "resolucao": "IV: não é psicólogo. II: então não é fisiologista. I: então é dentista. Ele é apenas dentista. Letra A.",
+   "video": "mK3sV02Gfl0"
   },
   {
    "id": "mat-imp-011",
@@ -2453,7 +2505,8 @@
     ]
    ],
    "gabarito": "a",
-   "resolucao": "A temperatura caiu, então precisei me agasalhar. Agasalhado, não pude correr. Sobre chegar tarde, nada se sabe. Letra A."
+   "resolucao": "A temperatura caiu, então precisei me agasalhar. Agasalhado, não pude correr. Sobre chegar tarde, nada se sabe. Letra A.",
+   "video": "0Y_h0eILVYQ"
   },
   {
    "id": "mat-imp-012",
@@ -2479,7 +2532,8 @@
     ]
    ],
    "gabarito": "a",
-   "resolucao": "O salário aumentou, então \"ou bicicleta ou moto\" (só uma das duas) é verdadeira. Se comprei a bicicleta, não comprei a moto. Letra A."
+   "resolucao": "O salário aumentou, então \"ou bicicleta ou moto\" (só uma das duas) é verdadeira. Se comprei a bicicleta, não comprei a moto. Letra A.",
+   "video": "vtzddyJEKnw"
   },
   {
    "id": "mat-imp-013",
@@ -2509,7 +2563,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Beatriz é bonita, então Tiago não é trapaceiro (contrapositiva). Então \"Gisele não é persistente e José é ousado\" é falsa. Negar o \"e\": Gisele é persistente ou José não é ousado. Letra E."
+   "resolucao": "Beatriz é bonita, então Tiago não é trapaceiro (contrapositiva). Então \"Gisele não é persistente e José é ousado\" é falsa. Negar o \"e\": Gisele é persistente ou José não é ousado. Letra E.",
+   "video": "ytExMpdagTs"
   },
   {
    "id": "mat-imp-014",
@@ -2539,7 +2594,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "João não surfou, então \"João e José surfaram\" é falsa. Pela contrapositiva da 1ª, não ventou. A chuva fica indefinida. Letra B."
+   "resolucao": "João não surfou, então \"João e José surfaram\" é falsa. Pela contrapositiva da 1ª, não ventou. A chuva fica indefinida. Letra B.",
+   "video": "rXIAIu37yCI"
   },
   {
    "id": "mat-imp-015",
@@ -2569,7 +2625,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "Marta não é trabalhadora, então Joana não é produtiva. Então \"Rafael é alto e Antônio não é pessimista\" é falsa. Negar o \"e\": Rafael não é alto ou Antônio é pessimista. Letra B."
+   "resolucao": "Marta não é trabalhadora, então Joana não é produtiva. Então \"Rafael é alto e Antônio não é pessimista\" é falsa. Negar o \"e\": Rafael não é alto ou Antônio é pessimista. Letra B.",
+   "video": "L5nE7uralRA"
   },
   {
    "id": "mat-imp-016",
@@ -2599,7 +2656,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "O canário canta, então a parede não é branca (contrapositiva da 2ª). Pela 1ª, o cachorro late. Letra B."
+   "resolucao": "O canário canta, então a parede não é branca (contrapositiva da 2ª). Pela 1ª, o cachorro late. Letra B.",
+   "video": "q-kAveL5480"
   },
   {
    "id": "mat-imp-017",
@@ -2629,7 +2687,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Não jogo. Em \"jogo ou não durmo\", então não durmo. Em \"como ou durmo\", então como. Em \"bebo ou não como\", então bebo. Letra C."
+   "resolucao": "Não jogo. Em \"jogo ou não durmo\", então não durmo. Em \"como ou durmo\", então como. Em \"bebo ou não como\", então bebo. Letra C.",
+   "video": "5cep_Wg3uFc"
   },
   {
    "id": "mat-imp-018",
@@ -2659,7 +2718,8 @@
     ]
    ],
    "gabarito": "a",
-   "resolucao": "Ana não é amiga da Fernanda. Pela 3ª, não é amiga da Cláudia. Pela 1ª, é irmã da Bruna. Pela 2ª, é prima da Dani. Letra A."
+   "resolucao": "Ana não é amiga da Fernanda. Pela 3ª, não é amiga da Cláudia. Pela 1ª, é irmã da Bruna. Pela 2ª, é prima da Dani. Letra A.",
+   "video": "iCT7ikeFlrw"
   },
   {
    "id": "mat-imp-019",
@@ -2689,7 +2749,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Trapezista é malabarista. Malabarista não pode ser \"contorcionista e não equilibrista\" (contrapositiva). Negar esse \"e\" dá: é equilibrista ou não é contorcionista. Letra C."
+   "resolucao": "Trapezista é malabarista. Malabarista não pode ser \"contorcionista e não equilibrista\" (contrapositiva). Negar esse \"e\" dá: é equilibrista ou não é contorcionista. Letra C.",
+   "video": "BkQzjS-8hoo"
   },
   {
    "id": "mat-imp-020",
@@ -2719,7 +2780,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "Comece pela simples: Felipe não é humorista. Pela VI, Débora é cantora. Pela IV, Carla não é atriz. Pela III, Bruno é atleta. Pela II, André não é estudioso. Pela V, Enzo não é escritor. Letra E."
+   "resolucao": "Comece pela simples: Felipe não é humorista. Pela VI, Débora é cantora. Pela IV, Carla não é atriz. Pela III, Bruno é atleta. Pela II, André não é estudioso. Pela V, Enzo não é escritor. Letra E.",
+   "video": "hwWswTGI8jU"
   },
   {
    "id": "mat-imp-021",
@@ -2749,7 +2811,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Modus ponens: a condição (João é estudioso) aconteceu, então a consequência também. João passou na prova. Letra C."
+   "resolucao": "Modus ponens: a condição (João é estudioso) aconteceu, então a consequência também. João passou na prova. Letra C.",
+   "video": "H5-zD7-EYhs"
   },
   {
    "id": "mat-imp-022",
@@ -2779,7 +2842,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "A consequência ser verdadeira não diz nada sobre a condição. \"Paulo estuda\" pode ser V ou F. Letra C."
+   "resolucao": "A consequência ser verdadeira não diz nada sobre a condição. \"Paulo estuda\" pode ser V ou F. Letra C.",
+   "video": "e2aWiJXCfgs"
   },
   {
    "id": "mat-imp-023",
@@ -2805,7 +2869,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Michelle não foi aprovada. Pela contrapositiva da III, Rafael não é forte. Pela II, Daniel não é baixo. Pela I, Pedro não é alto. Letra C."
+   "resolucao": "Michelle não foi aprovada. Pela contrapositiva da III, Rafael não é forte. Pela II, Daniel não é baixo. Pela I, Pedro não é alto. Letra C.",
+   "video": "KGpUpnWBdEc"
   },
   {
    "id": "mat-imp-024",
@@ -2835,7 +2900,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Sicrano é bem-sucedido, então \"desonesto e preguiçoso\" é falsa. Negar o \"e\": sicrano é honesto ou não é preguiçoso. Sobre fulano, nada se conclui. Letra C."
+   "resolucao": "Sicrano é bem-sucedido, então \"desonesto e preguiçoso\" é falsa. Negar o \"e\": sicrano é honesto ou não é preguiçoso. Sobre fulano, nada se conclui. Letra C.",
+   "video": "z_07nrDBz1g"
   },
   {
    "id": "mat-imp-025",
@@ -2853,7 +2919,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Certo. Se não foi discutido, por P não foi \"relatado e assinado\". Se foi relatado, então não foi assinado. Se não foi relatado, por Q também não foi assinado. Nos dois casos, não foi assinado."
+   "resolucao": "Certo. Se não foi discutido, por P não foi \"relatado e assinado\". Se foi relatado, então não foi assinado. Se não foi relatado, por Q também não foi assinado. Nos dois casos, não foi assinado.",
+   "video": "LsJg36JJoMA"
   },
   {
    "id": "mat-imp-026",
@@ -2883,7 +2950,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "Modus tollens: a consequência (passar) não aconteceu, então a condição (estudar) também não. Letra B."
+   "resolucao": "Modus tollens: a consequência (passar) não aconteceu, então a condição (estudar) também não. Letra B.",
+   "video": "z1bX0aMiy2Y"
   },
   {
    "id": "mat-imp-027",
@@ -2943,7 +3011,8 @@
     ]
    ],
    "gabarito": "a",
-   "resolucao": "João não é encanador. Pela contrapositiva da 2ª, Pedro é porteiro. Pela 1ª, Paulo não é pedreiro. Letra A."
+   "resolucao": "João não é encanador. Pela contrapositiva da 2ª, Pedro é porteiro. Pela 1ª, Paulo não é pedreiro. Letra A.",
+   "video": "8XtdnUYxLL4"
   },
   {
    "id": "mat-imp-029",
@@ -2973,7 +3042,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "V é \"e\" verdadeiro: Sócrates e Roberto são a favor. I: Paulo não é. II: Tadeu é. IV falsa com Tadeu V: Virgílio não é. III falsa com \"Paulo não é\" V: Uriel não é. B: Uriel (F) → Virgílio (F) = V. Letra B."
+   "resolucao": "V é \"e\" verdadeiro: Sócrates e Roberto são a favor. I: Paulo não é. II: Tadeu é. IV falsa com Tadeu V: Virgílio não é. III falsa com \"Paulo não é\" V: Uriel não é. B: Uriel (F) → Virgílio (F) = V. Letra B.",
+   "video": "6owoRt-Dv4g"
   },
   {
    "id": "mat-imp-030",
@@ -3029,7 +3099,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "I falsa (V → F): André é cantor e Bruna não é bailarina. Letra D."
+   "resolucao": "I falsa (V → F): André é cantor e Bruna não é bailarina. Letra D.",
+   "video": "yAXntlIs7YA"
   },
   {
    "id": "mat-imp-032",
@@ -3055,7 +3126,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "Condicional falsa: o prédio é alto e a casa não é feia. \"Ou\" falso: o cachorro não é esperto e o gato não é dorminhoco. Letra C."
+   "resolucao": "Condicional falsa: o prédio é alto e a casa não é feia. \"Ou\" falso: o cachorro não é esperto e o gato não é dorminhoco. Letra C.",
+   "video": "Eu6eJ3E5H4A"
   },
   {
    "id": "mat-imp-033",
@@ -3081,7 +3153,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "Modus ponens: amanhã será sábado, então hoje o neto dormirá mais tarde. Letra B."
+   "resolucao": "Modus ponens: amanhã será sábado, então hoje o neto dormirá mais tarde. Letra B.",
+   "video": "zjufbOxNGQg"
   },
   {
    "id": "mat-imp-034",
@@ -3107,7 +3180,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "Eu perdi, então não treinei (contrapositiva da I). Em \"ou descanso, ou treino\", então descansei. Letra B."
+   "resolucao": "Eu perdi, então não treinei (contrapositiva da I). Em \"ou descanso, ou treino\", então descansei. Letra B.",
+   "video": "UEo4-oapj3k"
   },
   {
    "id": "mat-imp-035",
@@ -3133,7 +3207,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "Ana é bonita. Pela III, Bruno não é pequeno. Pela II, Carlos não usa boné. Pela IV, Duda come chocolate. Letra B."
+   "resolucao": "Ana é bonita. Pela III, Bruno não é pequeno. Pela II, Carlos não usa boné. Pela IV, Duda come chocolate. Letra B.",
+   "video": "yEptmmeofDA"
   },
   {
    "id": "mat-imp-036",
@@ -3163,7 +3238,8 @@
     ]
    ],
    "gabarito": "d",
-   "resolucao": "IV falsa: Marcos estava doente e Denise não dormiu. I: Tiago foi à escola. III: Caio não foi trabalhar. V (ou… ou…): Juliana fez a lição. II falsa: Fernando não nadou. D: \"Juliana fez ou Denise dormiu\" = V ou F = V. Letra D."
+   "resolucao": "IV falsa: Marcos estava doente e Denise não dormiu. I: Tiago foi à escola. III: Caio não foi trabalhar. V (ou… ou…): Juliana fez a lição. II falsa: Fernando não nadou. D: \"Juliana fez ou Denise dormiu\" = V ou F = V. Letra D.",
+   "video": "DGbjoU_J1ss"
   },
   {
    "id": "mat-imp-037",
@@ -3193,7 +3269,8 @@
     ]
    ],
    "gabarito": "e",
-   "resolucao": "\"Nego que Pedro é advogado ou vereador\": ele não é nenhum dos dois. Pela contrapositiva da 2ª, não sendo advogado, não assinou o contrato. Letra E."
+   "resolucao": "\"Nego que Pedro é advogado ou vereador\": ele não é nenhum dos dois. Pela contrapositiva da 2ª, não sendo advogado, não assinou o contrato. Letra E.",
+   "video": "RmMByBXt5M8"
   },
   {
    "id": "mat-imp-038",
@@ -3223,7 +3300,8 @@
     ]
    ],
    "gabarito": "b",
-   "resolucao": "A 1ª é falsa: Cláudio não é jogador e Márcia é psiquiatra. Pela 3ª, Paulo não é médico. Pela 4ª, Fábio é engenheiro. Então \"Marcelo é bancário ou Fábio é engenheiro\" é V. Letra B."
+   "resolucao": "A 1ª é falsa: Cláudio não é jogador e Márcia é psiquiatra. Pela 3ª, Paulo não é médico. Pela 4ª, Fábio é engenheiro. Então \"Marcelo é bancário ou Fábio é engenheiro\" é V. Letra B.",
+   "video": "mLxeCurfWwo"
   },
   {
    "id": "mat-imp-039",
@@ -3253,7 +3331,8 @@
     ]
    ],
    "gabarito": "c",
-   "resolucao": "A mãe dorme e a babá não está. Se o bebê chorasse, a mãe não dormiria; então o bebê não chorou. Então o cão não latiu. Então não passei na casa de Rosa. Letra C."
+   "resolucao": "A mãe dorme e a babá não está. Se o bebê chorasse, a mãe não dormiria; então o bebê não chorou. Então o cão não latiu. Então não passei na casa de Rosa. Letra C.",
+   "video": "ZjO_U47zpHc"
   },
   {
    "id": "mat-imp-041",

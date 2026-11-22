@@ -2640,6 +2640,35 @@
     "dica": "Ande de trás para frente.",
     "e": "Não nomeado → não passou → não estudou."
    }
+  },
+  {
+   "titulo": "A frase falsa vira resposta",
+   "conceito": "No fim da reação em cadeia, quase sempre aparece uma frase **falsa**. Para transformar o falso em **verdade**, faça a **negação** dela. É essa negação que estará na alternativa certa.",
+   "exemplos": [
+    {
+     "t": "A cadeia mostrou: \"Tiago é trapaceiro\" é F.",
+     "r": "Tiago não é trapaceiro.",
+     "ok": true,
+     "porque": "Negou a frase falsa: virou verdade."
+    },
+    {
+     "t": "A cadeia mostrou: \"Gisele não é persistente e José é ousado\" é F.",
+     "r": "Gisele é persistente ou José não é ousado.",
+     "ok": true,
+     "porque": "Negar o \"e\": troca por \"ou\" e nega as duas partes."
+    }
+   ],
+   "suaVez": {
+    "p": "A cadeia mostrou que \"o tenente está de serviço de oficial-de-dia\" é FALSA. A alternativa correta é:",
+    "o": [
+     "O tenente não está de serviço de oficial-de-dia.",
+     "O tenente está de serviço de oficial-de-dia.",
+     "Nada se conclui."
+    ],
+    "c": 0,
+    "dica": "Como transformar uma frase falsa em verdadeira?",
+    "e": "Negando a frase falsa, ela vira verdade."
+   }
   }
  ],
  "31": [

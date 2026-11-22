@@ -315,7 +315,7 @@ export const CONTEUDO: ConteudoExtra[] = [
       c: 0, e: "São os pontos de partida do tipo 1: cada uma trava o valor das partes."
     },
     pares: [["simples verdadeira", "fato direto"], ["\"e\" verdadeiro", "tudo V"], ["\"ou\" falso", "tudo F"], ["condicional falsa", "V → F"]],
-    caderno: { regras: ["Tipo 1: comece por uma simples, um \"e\" verdadeiro, um \"ou\" falso ou uma condicional falsa.", "Do fato, substitua nas outras frases, uma de cada vez.", "Na condicional verdadeira: se o fim é F, o começo é F (contrapositiva)."], dica: "Considere todas as premissas verdadeiras, a não ser que a banca diga que alguma é falsa." }
+    caderno: { regras: ["Tipo 1: comece por uma simples, um \"e\" verdadeiro, um \"ou\" falso ou uma condicional falsa.", "Do fato, substitua nas outras frases, uma de cada vez.", "Na condicional verdadeira: se o fim é F, o começo é F (contrapositiva)."], dica: "Reação em cadeia: marque cada valor descoberto e leve para a próxima frase. A frase que terminar falsa, negue: a negação dela é a resposta." }
   },
   { // 31 Implicação tipo 2: encadeando condicionais
     imersao: {
