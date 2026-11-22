@@ -374,6 +374,10 @@ writeFileSync(join(DIST, '_headers'), `/*
 
 /assets/*
   Cache-Control: public, max-age=604800
+
+/assets/canal/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: no-cache
 `);
 
 // IndexNow: avisa Bing e outros buscadores no build de produção da Cloudflare (ligar com INDEXNOW_ATIVO=1)
